@@ -1,0 +1,4 @@
+# El endpoint es publico; la configuracion con la clave, no.
+<FilesMatch "^config\.php$">
+  Require all denied
+</FilesMatch>

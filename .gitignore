@@ -1,0 +1,25 @@
+# ---- Material en bruto ----
+# Los .MOV de camara son 3,3 GB. GitHub rechaza archivos de mas de 100 MB y
+# ademas no hacen falta: lo que publica el sitio son los derivados de
+# assets/video/ (mp4 + webm, 5 MB entre los dos), que si van al repo.
+assets/Videos/
+
+# ---- Secretos ----
+# La clave de la Places API vive aqui y NO se sube. La plantilla sin clave,
+# api/config.example.php, si esta en el repo.
+api/config.php
+
+# ---- Ruido de trabajo ----
+_to_delete/
+"Claude outputs"/
+Claude outputs/
+.claude/
+.vscode/
+__pycache__/
+*.pyc
+
+# ---- macOS ----
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
