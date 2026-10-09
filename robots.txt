@@ -1,0 +1,92 @@
+# robots.txt — inwardpro.com
+#
+# Criterio, pedido por la clienta:
+#   - Google entra a todo.
+#   - GPTBot (el rastreador de ENTRENAMIENTO de OpenAI) bloqueado.
+#   - OAI-SearchBot (el rastreador de BUSQUEDA de ChatGPT) permitido.
+#
+# Y la misma logica aplicada al resto: los rastreadores que alimentan una
+# busqueda —y que por tanto pueden citar y enlazar la pagina— entran; los que
+# solo recogen texto para entrenar un modelo, no. Es lo que distingue GPTBot
+# de OAI-SearchBot y es la regla con la que se decidio cada uno de abajo.
+#
+# Las reglas de robots.txt NO se heredan entre grupos: un User-agent con su
+# propio bloque ignora por completo el grupo *. Por eso Googlebot y los demas
+# permitidos llevan su Allow escrito, aunque parezca redundante.
+
+# ---------- Google ----------
+# Acceso total, incluidos los rastreadores de imagen y video, que son los que
+# hacen falta para que las fotos y el video de la home aparezcan en resultados.
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Video
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /
+
+# Google-Extended controla el uso de la pagina en Gemini y en las respuestas
+# generadas de Google. Se deja ABIERTO a proposito: bloquearlo saca a INWARD
+# de las respuestas de IA de Google, que es justo lo contrario de lo que se
+# busca con el GEO.
+User-agent: Google-Extended
+Allow: /
+
+# ---------- OpenAI ----------
+# Entrenamiento: no.
+User-agent: GPTBot
+Disallow: /
+
+# Busqueda de ChatGPT: si. Es el que permite que ChatGPT cite y enlace la
+# pagina cuando alguien pregunta por inmigracion en Francia.
+User-agent: OAI-SearchBot
+Allow: /
+
+# Visita puntual cuando un usuario pega un enlace en ChatGPT: si.
+User-agent: ChatGPT-User
+Allow: /
+
+# ---------- Otros buscadores y asistentes ----------
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# Busqueda de Perplexity y de Anthropic: citan y enlazan.
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# ---------- Solo entrenamiento: fuera ----------
+User-agent: CCBot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+# ---------- Todo lo demas ----------
+# El endpoint de las resenas es una API interna, no una pagina: no se indexa.
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://inwardpro.com/sitemap.xml
