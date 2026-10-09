@@ -325,7 +325,7 @@
 </script>
 </head>
 <body>
-<p style="position:fixed;left:16px;bottom:16px;z-index:80;margin:0;max-width:min(340px,calc(100vw - 32px));padding:.6rem .85rem;border-radius:12px;background:#ebff76;color:#101010;box-shadow:0 8px 24px -10px rgba(16,16,16,.45);font:500 .74rem/1.45 Jost,system-ui,sans-serif">Traducción en curso. Esta página muestra el texto en francés donde falta el español. (330)</p>
+<p style="position:fixed;left:16px;bottom:16px;z-index:80;margin:0;max-width:min(340px,calc(100vw - 32px));padding:.6rem .85rem;border-radius:12px;background:#ebff76;color:#101010;box-shadow:0 8px 24px -10px rgba(16,16,16,.45);font:500 .74rem/1.45 Jost,system-ui,sans-serif">Traducción en curso. Esta página muestra el texto en francés donde falta el español. (332)</p>
 
 <!-- Los bloques marcados shell:* no se editan aca: salen de index.html y los
      copia tools/sync_shell.py. -->
@@ -559,44 +559,67 @@
       <p class="lead">Vous menez les démarches et nous vous donnons la carte, ou vous nous confiez le dossier entier. <span class="todo" title="Agrupacion propuesta: los dos servicios numerados del documento cuelgan de « Gestion des démarches » y los dos del recuadro de « Conseil et guide ». A confirmar con la cliente.">Regroupement à valider</span></p>
     </div>
 
-    <div class="mode-grid rv">
-      <article class="mode">
-        <div class="mode-h">
-          <span class="mode-k">Autonomie</span>
-          <h3>Conseil et guide pour votre démarche</h3>
-        </div>
-        <p>Vous êtes aventurier et vous voulez faire les démarches d'immigration et d'installation en France en toute indépendance ? Nous vous donnons les éléments et les outils pour naviguer l'administration française en tranquillité.</p>
-        <ul class="mode-list">
-          <li>
-            <b>Conseil, diagnostic du projet et guide sur les démarches à effectuer</b>
-            <p>Partagez votre projet d'installation en France avec nous et trouvons ensemble le visa qui s'adapte le mieux. Partez avec la clarté de savoir quoi faire à chaque étape et réussissez votre demande en indépendance.</p>
-          </li>
-          <li>
-            <b>Vérification du dossier</b>
-            <p>Avant de déposer votre demande de visa, ou après un redépôt suite à un refus, vérifiez votre dossier avec nous pour avoir la certitude d'obtenir une réponse favorable.</p>
-          </li>
-        </ul>
-        <a class="svc-cta" href="#contact">Faire le point sur mon projet <span class="arw">&rsaquo;</span></a>
-      </article>
+    <!-- Selector de dos opciones en vez de dos columnas llenas de texto: se
+         ve un modo a la vez, y dentro de cada modo las prestaciones son filas
+         plegables (titulo a la vista, detalle al abrir). Sin JavaScript el
+         selector no aparece y los dos modos quedan uno al lado del otro, como
+         antes. El modo que abre por defecto es el que marca data-ways. -->
+    <div class="ways rv" data-ways="2">
+      <div class="ways-sw" role="tablist" aria-label="Deux façons de travailler ensemble" hidden>
+        <button class="ways-tab" type="button" role="tab" id="ways-t1" aria-controls="ways-p1">
+          <span class="ways-k">Autonomie</span>
+          <span class="ways-s">Vous menez les démarches</span>
+        </button>
+        <button class="ways-tab" type="button" role="tab" id="ways-t2" aria-controls="ways-p2">
+          <span class="ways-k">Clés en main</span>
+          <span class="ways-s">Vous nous confiez le dossier</span>
+        </button>
+        <span class="ways-ind" aria-hidden="true"></span>
+      </div>
 
-      <article class="mode mode-hi">
-        <div class="mode-h">
-          <span class="mode-k">Clés en main</span>
-          <h3>Gestion des démarches</h3>
-        </div>
-        <p>Laissez-vous porter par une équipe d'experts qui gérera toutes les étapes, pour un résultat positif et en temps record.</p>
-        <ul class="mode-list">
-          <li>
-            <b>Gestion de la demande de visa</b>
-            <p>Nous nous chargeons de la prise de rendez-vous, de la constitution du dossier, du remplissage des formulaires, des demandes préalables et de la validation du visa ou de la demande de carte de séjour à votre arrivée. Le tout avec un contact proche et fluide, pour vous rassurer tout au long des procédures.</p>
-          </li>
-          <li>
-            <b>Visa pour les freelances et créateurs d'entreprise</b>
-            <p>Nous vous accompagnons dès la conception du projet et la constitution du business plan, nous gérons l'obtention de l'avis favorable auprès de l'administration française, la constitution du dossier, la prise de rendez-vous et la validation du visa ou la demande de carte de séjour.</p>
-          </li>
-        </ul>
-        <a class="svc-cta" href="#contact">Confier mon dossier <span class="arw">&rsaquo;</span></a>
-      </article>
+      <div class="mode-grid">
+        <article class="mode" id="ways-p1" aria-labelledby="ways-t1">
+          <div class="mode-main">
+            <div class="mode-h">
+              <span class="mode-k">Autonomie</span>
+              <h3>Conseil et guide pour votre démarche</h3>
+            </div>
+            <p>Vous êtes aventurier et vous voulez faire les démarches d'immigration et d'installation en France en toute indépendance ? Nous vous donnons les éléments et les outils pour naviguer l'administration française en tranquillité.</p>
+            <a class="svc-cta" href="#contact">Faire le point sur mon projet <span class="arw">&rsaquo;</span></a>
+          </div>
+          <div class="mode-list">
+            <details class="mode-it" name="ways-1" open>
+              <summary><span class="mode-n">01</span><b>Conseil, diagnostic du projet et guide sur les démarches à effectuer</b><svg class="mode-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+              <p>Partagez votre projet d'installation en France avec nous et trouvons ensemble le visa qui s'adapte le mieux. Partez avec la clarté de savoir quoi faire à chaque étape et réussissez votre demande en indépendance.</p>
+            </details>
+            <details class="mode-it" name="ways-1">
+              <summary><span class="mode-n">02</span><b>Vérification du dossier</b><svg class="mode-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+              <p>Avant de déposer votre demande de visa, ou après un redépôt suite à un refus, vérifiez votre dossier avec nous pour avoir la certitude d'obtenir une réponse favorable.</p>
+            </details>
+          </div>
+        </article>
+
+        <article class="mode mode-hi" id="ways-p2" aria-labelledby="ways-t2">
+          <div class="mode-main">
+            <div class="mode-h">
+              <span class="mode-k">Clés en main</span>
+              <h3>Gestion des démarches</h3>
+            </div>
+            <p>Laissez-vous porter par une équipe d'experts qui gérera toutes les étapes, pour un résultat positif et en temps record.</p>
+            <a class="svc-cta" href="#contact">Confier mon dossier <span class="arw">&rsaquo;</span></a>
+          </div>
+          <div class="mode-list">
+            <details class="mode-it" name="ways-2" open>
+              <summary><span class="mode-n">01</span><b>Gestion de la demande de visa</b><svg class="mode-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+              <p>Nous nous chargeons de la prise de rendez-vous, de la constitution du dossier, du remplissage des formulaires, des demandes préalables et de la validation du visa ou de la demande de carte de séjour à votre arrivée. Le tout avec un contact proche et fluide, pour vous rassurer tout au long des procédures.</p>
+            </details>
+            <details class="mode-it" name="ways-2">
+              <summary><span class="mode-n">02</span><b>Visa pour les freelances et créateurs d'entreprise</b><svg class="mode-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+              <p>Nous vous accompagnons dès la conception du projet et la constitution du business plan, nous gérons l'obtention de l'avis favorable auprès de l'administration française, la constitution du dossier, la prise de rendez-vous et la validation du visa ou la demande de carte de séjour.</p>
+            </details>
+          </div>
+        </article>
+      </div>
     </div>
   </div>
 </section>

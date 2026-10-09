@@ -1,6 +1,85 @@
 (function(){
   var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  /* ---------- Logos clientes en carrusel ----------
+     Va primero: la copia tiene que existir antes de que el bloque "lo que ya
+     se ve al cargar" recorra los .logos li, o la mitad del carril se quedaria
+     sin su fundido de entrada. La copia es decorativa: aria-hidden y alt
+     vacio, para que un lector de pantalla no lea cada marca dos veces. */
+  if (!reduce) {
+    [].slice.call(document.querySelectorAll("ul.logos")).forEach(function (ul) {
+      var marq = document.createElement("div");
+      var track = document.createElement("div");
+      marq.className = "marq";
+      track.className = "marq-track";
+      ul.parentNode.insertBefore(marq, ul);
+      marq.appendChild(track);
+      track.appendChild(ul);
+      var copy = ul.cloneNode(true);
+      copy.classList.remove("rv");
+      copy.setAttribute("aria-hidden", "true");
+      [].slice.call(copy.querySelectorAll("img")).forEach(function (im) { im.alt = ""; });
+      track.appendChild(copy);
+      /* Velocidad constante en px/s, no duracion fija: con mas marcas el
+         carril se alarga y una duracion fija lo haria correr mas rapido. */
+      function vel() { track.style.setProperty("--marq-dur", Math.max(ul.offsetWidth / 38, 12) + "s"); }
+      vel();
+      addEventListener("load", vel);
+    });
+  }
+
+  /* ---------- Acordeones <details> animados ----------
+     Chrome anima la apertura solo con CSS (::details-content). Safari y
+     Firefox todavia no, y ahi el panel abria y cerraba de golpe. En esos
+     navegadores se anima la altura con la Web Animations API.
+     El atributo name (uno abierto por grupo) se gestiona aca: si lo hiciera
+     el navegador, cerraria la fila anterior de golpe mientras la nueva baja. */
+  var cssDetails = window.CSS && CSS.supports &&
+    CSS.supports("interpolate-size: allow-keywords") && CSS.supports("selector(::details-content)");
+  if (!reduce && !cssDetails && Element.prototype.animate) {
+    var acc = [].slice.call(document.querySelectorAll("details.qa,details.svc,details.mode-it"));
+    acc.forEach(function (d) {
+      d.setAttribute("data-group", d.getAttribute("name") || "");
+      d.removeAttribute("name");
+      d.querySelector("summary").addEventListener("click", function (e) {
+        e.preventDefault();
+        mueve(d, !(d.open && !d._cierra));
+      });
+    });
+    function mueve(d, abrir) {
+      var sum = d.querySelector("summary");
+      var desde = d.offsetHeight;
+      if (d._anim) d._anim.cancel();
+      if (abrir) {
+        var g = d.getAttribute("data-group");
+        if (g) acc.forEach(function (o) {
+          if (o !== d && o.open && o.getAttribute("data-group") === g) mueve(o, false);
+        });
+        d.open = true;
+      }
+      var hasta = abrir ? d.offsetHeight : sum.offsetHeight + (d.offsetHeight - d.clientHeight);
+      d._cierra = !abrir;
+      d.style.overflow = "hidden";
+      var a = d.animate({ height: [desde + "px", hasta + "px"] },
+        { duration: 480, easing: "cubic-bezier(.77,0,.175,1)" });
+      (d._fades || []).forEach(function (x) { x.cancel(); });
+      d._fades = [].slice.call(d.children).filter(function (c) { return c !== sum; })
+        .map(function (c) {
+          return c.animate({ opacity: abrir ? [0, 1] : [1, 0] },
+            { duration: abrir ? 420 : 260, easing: "ease", fill: "both" });
+        });
+      d._anim = a;
+      a.onfinish = function () {
+        if (!abrir) d.open = false;
+        d._cierra = false;
+        d.style.overflow = "";
+        d._anim = null;
+        d._fades.forEach(function (x) { x.cancel(); });
+        d._fades = [];
+      };
+    }
+  }
+
   /* Rail : section active.
      #top est un div de hauteur nulle tout en haut : il ne tombe jamais dans la
      bande centrale du rootMargin. C'est la sentinelle du header qui le pilote. */
@@ -352,6 +431,41 @@
         { threshold: 0.35 }).observe(eng);
     } else { visible = true; }
     if (auto) raf = requestAnimationFrame(late);
+  }
+
+  /* ---------- Particuliers : selector de modo ----------
+     Sin JavaScript los dos modos se ven lado a lado. Con JavaScript aparece
+     el selector y se muestra uno por vez. Pestanas ARIA de libro: flechas
+     para moverse, y solo la activa entra en el orden de tabulacion. */
+  var ways = document.querySelector(".ways");
+  if (ways) {
+    var wTabs = [].slice.call(ways.querySelectorAll(".ways-tab"));
+    var wPanes = wTabs.map(function (t) { return document.getElementById(t.getAttribute("aria-controls")); });
+    function elige(i, foco) {
+      wTabs.forEach(function (t, k) {
+        var on = k === i;
+        t.setAttribute("aria-selected", on ? "true" : "false");
+        t.tabIndex = on ? 0 : -1;
+        wPanes[k].hidden = !on;
+        wPanes[k].setAttribute("role", "tabpanel");
+      });
+      ways.setAttribute("data-sel", String(i + 1));
+      if (foco) wTabs[i].focus();
+    }
+    wTabs.forEach(function (t, k) {
+      t.addEventListener("click", function () { elige(k); });
+      t.addEventListener("keydown", function (e) {
+        var d = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
+        if (!d) return;
+        e.preventDefault();
+        elige((k + d + wTabs.length) % wTabs.length, true);
+      });
+    });
+    ways.querySelector(".ways-sw").hidden = false;
+    ways.setAttribute("data-on", "");
+    elige(Math.max(0, (parseInt(ways.getAttribute("data-ways"), 10) || 1) - 1));
+    /* La pastilla nace ya en su sitio: sin esto se veria deslizarse al cargar. */
+    requestAnimationFrame(function () { ways.setAttribute("data-ready", ""); });
   }
 
   /* ---------- Avis Google ----------
