@@ -1,0 +1,7 @@
+{
+  "_lisezmoi": "Avis affichés tant que l'API Places n'est pas configurée, et filet de sécurité si Google ne répond pas. À remplir en recopiant des avis RÉELS de la fiche https://www.google.com/maps?cid=1377371409426816352 (nom tel qu'il apparaît, texte tel quel). Ne rien inventer : un faux avis est illégal en France (art. L121-4 du code de la consommation) et Google déréférence les fiches qui en publient.",
+  "rating": null,
+  "count": null,
+  "mapsUri": "https://www.google.com/maps?cid=1377371409426816352",
+  "reviews": []
+}

@@ -1,0 +1,2094 @@
+/* ============================================================
+   INWARD - Home (FR). Maquette haute fidelite. Fond blanc.
+   Variante de palette : secondaire (bleu / lila / vert eau / jaune)
+
+   SYSTEME DE FORMES (regle unique) :
+   - Media, cellules et cartes : rectangle a coins arrondis, 18px (--r)
+   - Haut des bandes qui glissent sur le hero : 28px (--r-band)
+   - Champs de formulaire : 10px (--r-sm)
+   - Boutons : pill
+   Aucun autre rayon sur la page. La classe utilitaire est .rounded
+
+   POLICES : Outfit remplace Figerona (titres), Jost remplace Walkway.
+   En production : .woff2 auto-heberges sur O2Switch.
+   Licence : Figerona est "free for personal use" seulement.
+   ============================================================ */
+
+:root{
+  /* ---- Paleta SECUNDARIA del Brand Book ---- */
+  --ground:#ffffff;
+  --surface:#eeeeee;            /* GRIS del Brand Book */
+  --surface-2:#e3e3e6;
+  --text:#101010;               /* NEGRO */
+  --text-2:#3d3d5c;
+  --text-3:#71718f;
+  --accent:#202045;             /* AZUL : accent unique */
+  --on-accent:#ffffff;
+  --accent-soft:rgba(32,32,69,.09);
+  --fill:#202045;
+  --fill-hi:#15152e;
+  --fill-ink:#ffffff;
+  --line:rgba(32,32,69,.15);
+  --line-strong:rgba(32,32,69,.3);
+  /* Borde de caja. Una sola linea para TODAS las cajas de la pagina: celdas
+     del bento, tarjetas del blog, tarjetas de avis, preguntas de la FAQ y el
+     panel del formulario. Mas oscura que --line para que la caja se recorte
+     del fondo en vez de flotar. Si se toca, se tocan todas a la vez, que es
+     justamente el punto. */
+  --line-card:rgba(32,32,69,.24);
+  --panel:#ffffff;
+  --shadow:rgba(32,32,69,.24);
+  --shadow-a:rgba(32,32,69,.45);
+  --hdr-bg:rgba(255,255,255,.82);
+  --tint-1:#55ffd2;             /* VERDE AGUA */
+  /* Verde agua en dos valores. El de marca (#55ffd2) solo sirve sobre oscuro:
+     sobre blanco da 1,26:1 y no se ve. Para fondo claro hace falta una version
+     mas oscura del MISMO tono (163 deg): 3,19:1, que es el minimo de un
+     elemento grafico. La usa el rail cuando cruza las secciones blancas. */
+  --aqua:#55ffd2;
+  --aqua-deep:#12a383;          /* grafico sobre claro : 3,19:1 */
+  --aqua-ink:#0d7d63;           /* texto sobre claro   : 5,09:1 */
+  /* Lila, lo mismo. El de marca (#d2d2ff) da 1,4:1 sobre blanco; la version
+     oscura del mismo tono (240 deg) da 3,23:1, que es lo que necesita la
+     barra de progreso para existir sobre las secciones blancas. */
+  --lilac-deep:#8686e0;         /* grafico sobre claro : 3,23:1 */
+  --tint-ink:#101010;
+  --tint-2:#ebff76;             /* AMARILLO */
+  --tint2-ink:#101010;
+  --tint-3:#d2d2ff;             /* LILA */
+  --tint3-ink:#101010;
+  /* Bandas alternas. Antes eran azul pleno; ahora gris de marca sobre texto
+     oscuro. El azul queda sólo como acento, no como fondo. */
+  --alt:#eeeeee;
+  --alt-ink:#101010;
+  --alt-ink-2:#4d4d6b;
+  --alt-accent:#202045;
+  --alt-label:#71718f;
+  --alt-line:rgba(16,16,16,.14);
+
+  --font-display:"Outfit","Figerona","Helvetica Neue",Arial,sans-serif;
+  --font-body:"Jost","Walkway","Helvetica Neue",Arial,sans-serif;
+  --ease-out:cubic-bezier(.23,1,.32,1);
+  /* Curva simetrica, para los retornos: ni entra de golpe ni frena en seco. */
+  --ease-soft:cubic-bezier(.33,0,.18,1);
+  --ease-io:cubic-bezier(.77,0,.175,1);
+  --pad:clamp(20px,4.5vw,64px);
+  /* Respiro de la franja de logos. Arriba vale esto, abajo el doble: la prueba
+     social tiene que leerse pegada al CTA de empresas, como su respaldo, y
+     separada de la seccion siguiente, que ya es otro tema.
+     Valor fijo a proposito, no relativo al alto de la ventana: es una distancia
+     entre dos piezas concretas, no un ritmo de pagina, y no tiene por que
+     cambiar porque alguien achique el navegador. */
+  --band-gap:65px;
+  --max:1360px;
+  --nav-h:72px;
+  --r:18px;      /* media, cellules, cartes */
+  --r-sm:10px;   /* champs de formulaire */
+  --r-band:28px; /* haut des bandes */
+}
+
+*,*::before,*::after{box-sizing:border-box}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+section[id],div[id]{scroll-margin-top:calc(var(--nav-h) + 12px)}
+#top{scroll-margin-top:0}
+body{
+  margin:0;background:var(--ground);color:var(--text);
+  font-family:var(--font-body);font-weight:450;font-size:17px;line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:clip; /* clip et non hidden : hidden casserait le sticky du hero */
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:500;margin:0;text-wrap:balance}
+h1{font-size:clamp(2.15rem,3.9vw,3.55rem);line-height:1.04;letter-spacing:-.032em}
+h2{font-size:clamp(1.95rem,3.4vw,3rem);line-height:1.06;letter-spacing:-.026em}
+h3{font-size:clamp(1.1rem,1.45vw,1.3rem);line-height:1.26;letter-spacing:-.012em}
+p{margin:0}
+.lead{font-weight:400;font-size:clamp(1.05rem,1.4vw,1.28rem);line-height:1.55;color:var(--text-2)}
+.body-2{color:var(--text-2);font-size:.96rem;line-height:1.6;font-weight:450}
+/* El nombre de la seccion es el unico sitio de la pagina donde el verde agua
+   hace de texto. Sobre claro va la version oscura del tono (5,09:1); los
+   bloques oscuros lo pisan con el verde de marca. */
+.label{font-size:.7rem;font-weight:500;text-transform:uppercase;letter-spacing:.19em;color:var(--aqua-ink)}
+.ft .label,.lp-hero .label,.hero .label{color:var(--aqua)}
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--pad)}
+/* Las pistas de grid traen min-width:auto y un hijo que no encoge las desborda.
+   Es la causa habitual del scroll horizontal en pantallas chicas. */
+.about-grid>*,.b2c-grid>*,.b2c-col>*,.ct-grid>*,.res-head>*,.bento>*,.people>*,
+form>*,.two>*,.fld>*{min-width:0}
+.rounded{border-radius:var(--r)}
+
+/* ---------- BOUTONS ---------- */
+/* Hover: entrada y salida NO duran lo mismo. La transicion escrita en el
+   estado base es la de SALIDA (mas corta, el cursor ya se fue y lo unico que
+   importa es que no quede colgado); la de ENTRADA va dentro de :hover y es
+   mas larga y con curva de desaceleracion, que es donde se nota el trabajo.
+   Y se mueven varias propiedades a la vez —color, sombra, elevacion— en vez
+   de una sola conmutando de golpe. */
+.btn{
+  display:inline-flex;align-items:center;gap:.6em;
+  padding:.86em 1.5em;border-radius:999px;border:1px solid transparent;
+  font-size:.94rem;font-weight:500;cursor:pointer;white-space:nowrap;
+  box-shadow:0 0 0 0 rgba(0,0,0,0);
+  transition:translate 560ms var(--ease-soft),scale 560ms var(--ease-soft),
+             background-color 480ms var(--ease-soft),border-color 480ms var(--ease-soft),
+             color 480ms var(--ease-soft),box-shadow 620ms var(--ease-soft);
+}
+.btn:hover{
+  transition:translate 520ms var(--ease-out),scale 520ms var(--ease-out),
+             background-color 460ms var(--ease-out),border-color 460ms var(--ease-out),
+             color 460ms var(--ease-out),box-shadow 560ms var(--ease-out);
+}
+.btn:active{scale:.975;transition-duration:90ms}
+.btn-primary{background:var(--fill);color:var(--fill-ink);border-color:var(--fill)}
+.btn-ghost{background:transparent;color:var(--text);border-color:var(--line-strong)}
+.btn-solid{background:var(--text);color:var(--ground);border-color:var(--text)}
+@media (hover:hover) and (pointer:fine){
+  .btn:hover{translate:0 -2px}
+  .btn-primary:hover{background:var(--fill-hi);border-color:var(--fill-hi);
+    box-shadow:0 14px 26px -16px var(--shadow-a)}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
+  .btn-solid:hover{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+}
+/* La flecha sale antes que el resto y vuelve despues: el desfase es lo que
+   hace que el gesto se lea como un movimiento y no como un salto. */
+.btn .arw{transition:translate 520ms var(--ease-soft)}
+@media (hover:hover){.btn:hover .arw{translate:4px 0;transition:translate 520ms var(--ease-out) 40ms}}
+
+/* ---------- HOVER DE TARJETA (unico para toda la pagina) ----------
+   Celdas del bento y tarjetas del blog se comportan igual: levantan y
+   proyectan sombra. El borde no sirve como senal comun porque las celdas
+   tintadas no lo tienen, y eso hacia que cada grupo reaccionara distinto.
+   La sombra va tenida con el acento, nunca negra.
+   El levante va en 'translate', no en 'transform': las tarjetas llevan .rv,
+   cuya animacion riseIn es 'both' y queda duenia de transform de forma
+   permanente, asi que un transform en :hover no se renderiza nunca.
+   'translate' es una propiedad independiente y se compone con ella. */
+@media (hover:hover) and (pointer:fine){
+  .cell:hover,.art:hover,.avis-card:hover{
+    translate:0 -6px;
+    box-shadow:0 26px 48px -26px var(--shadow-a);
+    border-color:var(--line-strong);
+    transition:translate 560ms var(--ease-out),box-shadow 620ms var(--ease-out),
+               border-color 460ms var(--ease-out);
+  }
+}
+
+/* ---------- MARQUEUR "A CONFIRMER" ---------- */
+.todo{display:inline;border-bottom:1px dashed var(--accent);color:var(--accent);cursor:help}
+.todo::after{content:"?";font-size:.55em;vertical-align:super;margin-left:.15em;font-weight:600}
+.band-alt .todo{color:var(--accent);border-bottom-color:var(--accent)}
+
+/* ============================================================
+   HEADER + MEGA MENU
+   ============================================================ */
+.hdr{
+  position:fixed;inset:0 0 auto 0;z-index:60;height:var(--nav-h);
+  background:transparent;border-bottom:1px solid transparent;
+  transition:background-color 300ms ease,border-color 300ms ease;
+}
+/* La barra sobre el video NO usa un degradado que se desvanece hacia abajo.
+   Un degradado sin borde inferior se lee como una mancha: no es una pieza, es
+   una sombra puesta ahi para que el texto se vea. La barra es una superficie:
+   ocupa su alto exacto, tiene un filete abajo que la termina, y en vez de
+   tapar la imagen la desenfoca. El video se sigue viendo a traves, movido y
+   suavizado, y la franja se lee como vidrio y no como suciedad.
+   El fondo que queda detras esta medido, no puesto a ojo: ver la nota de
+   contraste mas abajo. */
+.hdr::before{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:0;
+  background:rgba(32,32,69,.52);
+  -webkit-backdrop-filter:blur(18px) saturate(130%);
+          backdrop-filter:blur(18px) saturate(130%);
+  transition:opacity 380ms var(--ease-out);
+}
+/* El velo de la barra se pinta DETRAS del contenido con z-index:-1 y no
+   poniendo el contenido por encima con position:relative. Parece lo mismo y
+   no lo es: al hacer .hdr-in relativo, los paneles del mega menu tomaban ESE
+   bloque como referencia y su left:0/right:0 caia en el borde interior del
+   contenedor, dejando dos franjas de fondo a los costados. Con el velo detras
+   y .hdr-in sin posicionar, la referencia vuelve a ser la barra —que ocupa
+   todo el ancho— y el panel llega de borde a borde.
+   El isolation evita que ese z-index negativo se escape del header. */
+.hdr{isolation:isolate}
+.hdr::before{z-index:-1}
+/* Etat plein : apres le scroll, ou des qu'un mega menu s'ouvre (sinon panneau
+   blanc avec du texte blanc au-dessus de la video). */
+.hdr.is-solid,.hdr:has(.nav:hover),.hdr:has(.nav:focus-within),.hdr:has(.nav[data-open="true"]){
+  background:var(--hdr-bg);border-bottom-color:var(--line);
+  -webkit-backdrop-filter:blur(16px) saturate(150%);
+          backdrop-filter:blur(16px) saturate(150%);
+}
+/* Au-dessus de la video la barre redefinit ses propres tokens : le logo, les
+   liens et la langue suivent tout seuls, aucun blanc code en dur. */
+.hdr:where(:not(.is-solid):not(:has(.nav:hover)):not(:has(.nav:focus-within)):not(:has(.nav[data-open="true"])))::before{opacity:1}
+.hdr:where(:not(.is-solid):not(:has(.nav:hover)):not(:has(.nav:focus-within)):not(:has(.nav[data-open="true"]))){
+  /* El filete cierra la franja por abajo: es lo que la convierte en barra. */
+  border-bottom-color:rgba(255,255,255,.16);
+}
+.hdr:where(:not(.is-solid):not(:has(.nav:hover)):not(:has(.nav:focus-within)):not(:has(.nav[data-open="true"]))){
+  --text:#ffffff;
+  --text-2:rgba(255,255,255,.85);
+  --text-3:rgba(255,255,255,.64);
+  --accent:#ffffff;
+  --accent-soft:rgba(255,255,255,.15);
+  --line:rgba(255,255,255,.26);
+  --line-strong:rgba(255,255,255,.44);
+  --on-accent:#101010;
+}
+/* Sobre el video los idiomas inactivos necesitan mas blanco que el --text-2
+   general: medido, al 85 % daban 4,21:1 y es texto chico. */
+.hdr:where(:not(.is-solid):not(:has(.nav:hover)):not(:has(.nav:focus-within)):not(:has(.nav[data-open="true"]))) .lang a{
+  color:rgba(255,255,255,.94);
+}
+.hdr-in{display:flex;align-items:center;gap:2.2rem;height:var(--nav-h)}
+/* Logo officiel INWARD (assets/img/logo/). Bicolore par tokens :
+   l'isotipo prend l'accent, le mot-symbole prend la couleur du texte.
+   Changer de palette recolore le logo tout seul. */
+.brand{display:flex;align-items:center;flex-shrink:0}
+/* El ancho se calcula, no se deduce. Antes era height + width:auto +
+   aspect-ratio: Chrome y Firefox resuelven el ancho del <svg> a partir del
+   aspect-ratio, pero Safari se queda con el viewport por defecto de un svg
+   sin atributos (300x150) y recorta el logo por la derecha. Multiplicar el
+   alto por la relacion del viewBox (1138/278) da el mismo resultado en los
+   tres y no depende de ninguna heuristica del motor. */
+.logo{display:block;--logo-h:26px;height:var(--logo-h);width:calc(var(--logo-h) * 1138 / 278)}
+.logo-ft{--logo-h:28px}
+.nav{display:flex;align-items:center;gap:.35rem;height:100%;flex:1}
+.nav-foot{display:none}
+.nav-item{position:static;height:100%;display:flex;align-items:center}
+/* Dos de los tres nombres de grupo son <a> (llevan a su landing) y el otro es
+   <button>. Comparten clase para que se vean iguales: text-decoration y font
+   hacen falta porque un enlace no hereda lo mismo que un boton. */
+.nav-btn{
+  background:none;border:0;cursor:pointer;padding:.5rem .8rem;border-radius:999px;
+  font-family:inherit;font-size:.92rem;text-decoration:none;
+  color:var(--text-2);display:flex;align-items:center;gap:.4rem;
+  transition:color 180ms ease,background-color 180ms ease;
+}
+.nav-item:hover .nav-btn,.nav-item:focus-within .nav-btn{color:var(--text);background:var(--accent-soft)}
+.nav-btn .chev{width:9px;height:9px;transition:transform 220ms var(--ease-out)}
+.nav-item:hover .nav-btn .chev{transform:rotate(180deg)}
+.hdr-right{display:flex;align-items:center;gap:.9rem;margin-left:auto;flex-shrink:0}
+
+/* Idioma en texto, sin capsula. Antes era una pastilla al lado del boton de
+   cita: dos capsulas de altura parecida, pegadas, se leen como dos botones y
+   el CTA dejaba de ser el unico sitio donde hacer clic. Y estaban al reves de
+   lo que valen —el idioma se usa una vez por visita, el CTA es la conversion
+   de la pagina—. Cuando dos cosas comparten forma, el usuario espera que
+   compartan comportamiento; el selector no es un boton, asi que no tiene por
+   que parecerlo.
+   Queda una sola capsula en la barra: el CTA. */
+.lang{display:flex;align-items:center;gap:.1rem}
+.lang a{
+  display:block;padding:.3em .45em;border-radius:6px;
+  font-size:.72rem;font-weight:500;letter-spacing:.08em;color:var(--text-2);
+  transition:color 300ms var(--ease-soft);
+}
+/* El activo se marca con color, peso y un subrayado corto, no con un fondo.
+   Tres senales en vez de una: sobre el video, donde el acento es blanco y el
+   contraste de color entre activo e inactivo es minimo, el subrayado es lo
+   que hace el trabajo. */
+.lang a[aria-current="true"]{color:var(--accent);font-weight:600}
+.lang a[aria-current="true"]::after{
+  content:"";position:absolute;left:.45em;right:.45em;bottom:.05em;height:2px;
+  border-radius:2px;background:var(--accent);
+}
+.lang a{position:relative}
+/* Los separadores se dibujan, no se escriben: un ' / ' en el marcado lo leeria
+   el lector de pantalla y lo recogeria el extractor de textos. */
+.lang a + a{position:relative}
+.lang a + a::before{
+  content:"";position:absolute;left:-.1rem;top:50%;translate:0 -50%;
+  width:1px;height:.72em;background:var(--line-strong);
+}
+@media (hover:hover){.lang a:not([aria-current="true"]):hover{color:var(--text)}}
+.lang a:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+
+.mega{
+  position:absolute;left:0;right:0;top:var(--nav-h);
+  background:var(--panel);border-bottom:1px solid var(--line);
+  opacity:0;visibility:hidden;transform:translateY(-8px);
+  transition:opacity 200ms var(--ease-out),transform 220ms var(--ease-out),visibility 0s linear 220ms;
+  box-shadow:0 26px 50px -26px var(--shadow);
+}
+.nav-item:hover .mega,.nav-item:focus-within .mega{opacity:1;visibility:visible;transform:translateY(0);transition-delay:0s}
+/* padding-block, pas le shorthand : `padding` remettait a 0 le padding-inline
+   herite de .wrap et le contenu venait coller les bords du panneau. */
+.mega-in{display:grid;grid-template-columns:1.15fr 1.15fr .9fr;gap:2.6rem;padding-block:2.6rem 2.8rem}
+.mega h4{font-family:var(--font-body);font-size:.72rem;font-weight:500;text-transform:uppercase;letter-spacing:.18em;color:var(--text-3);margin-bottom:1.05rem}
+.mega ul{list-style:none;margin:0;padding:0;display:grid;gap:.15rem}
+.mega li a{
+  display:block;padding:.52rem .7rem;margin-left:-.7rem;border-radius:8px;
+  font-size:.94rem;color:var(--text-2);
+  transition:color 160ms ease,background-color 160ms ease,transform 200ms var(--ease-out);
+}
+@media (hover:hover){.mega li a:hover{color:var(--text);background:var(--accent-soft);transform:translateX(3px)}}
+.mega li a span{display:block;font-size:.78rem;color:var(--text-3);margin-top:.1rem}
+.mega-cta{background:var(--tint-1);border:1px solid var(--line-card);padding:1.5rem;--r:14px;align-self:start;color:var(--tint-ink)}
+.mega-cta p{font-size:.88rem;margin-bottom:1rem}
+.mega-cta .btn-primary{background:var(--accent);color:var(--on-accent);border-color:var(--accent)}
+.nav-item:hover .mega li,.nav-item:focus-within .mega li{animation:megaIn 320ms var(--ease-out) both}
+.mega li:nth-child(2){animation-delay:40ms}
+.mega li:nth-child(3){animation-delay:80ms}
+.mega li:nth-child(4){animation-delay:120ms}
+@keyframes megaIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:999px;padding:.5em .9em;font-size:.85rem;color:var(--text-2);cursor:pointer;transition:color 180ms ease,background-color 180ms ease}
+.burger[aria-expanded="true"]{background:var(--accent-soft);color:var(--text)}
+
+/* ---------- MENU DESPLEGABLE (tablet y telefono) ----------
+   Por debajo de 1080px no entra la navegacion horizontal. El mismo <nav> se
+   convierte en un panel a pantalla completa: no se duplica el marcado, asi que
+   no hay dos menus que puedan quedar desincronizados.
+   En escritorio los mega menus se abren con :hover; aca eso no existe, cada
+   grupo se abre al tocarlo y se marca con data-open en el .nav-item. */
+@media (max-width:1080px){
+  .burger{display:block}
+  .lang{display:none}            /* el selector de idioma vive dentro del menu */
+
+  /* Posicionado contra la barra, no contra la ventana. La barra lleva
+     backdrop-filter cuando esta solida, y eso la convierte en el bloque
+     contenedor de sus hijos fijos: un position:fixed aca queda recortado a los
+     64px de alto de la barra y del panel se ve apenas la primera linea. */
+  .nav{
+    position:absolute;left:0;right:0;top:100%;
+    height:calc(100svh - var(--nav-h));
+    display:block;flex:none;
+    padding:1.4rem var(--pad) 2.4rem;
+    background:var(--panel);border-top:1px solid var(--line);
+    overflow-y:auto;overscroll-behavior:contain;
+    opacity:0;visibility:hidden;transform:translateY(-10px);
+    transition:opacity 220ms var(--ease-out),transform 260ms var(--ease-out),visibility 0s linear 260ms;
+  }
+  .nav[data-open="true"]{opacity:1;visibility:visible;transform:none;transition-delay:0s}
+
+  .nav-item{display:block;height:auto;border-bottom:1px solid var(--line)}
+  .nav-btn{
+    width:100%;justify-content:space-between;
+    padding:1.15rem .2rem;border-radius:0;
+    font-size:1.05rem;color:var(--text);
+  }
+  .nav-item:hover .nav-btn{background:none}
+  .nav-btn .chev{width:12px;height:12px;transition:transform 240ms var(--ease-out)}
+  .nav-item[data-open="true"] .nav-btn .chev{transform:rotate(180deg)}
+  .nav-item:hover .nav-btn .chev{transform:none}
+  .nav-item[data-open="true"]:hover .nav-btn .chev{transform:rotate(180deg)}
+
+  /* El panel deja de flotar y pasa a ser contenido plegado en el flujo. */
+  .mega{
+    position:static;opacity:1;visibility:visible;transform:none;
+    background:none;border:0;box-shadow:none;transition:none;
+    display:grid;grid-template-rows:0fr;
+  }
+  .nav-item[data-open="true"] .mega{grid-template-rows:1fr}
+  @media (prefers-reduced-motion:no-preference){
+    .mega{transition:grid-template-rows 300ms var(--ease-out)}
+  }
+  /* margin-inline:0 es imprescindible: .mega-in hereda 'margin-inline:auto' de
+     .wrap, y un item de grilla con margenes automaticos deja de estirarse y se
+     centra sobre su ancho de contenido. El panel se veia como una columna
+     angosta flotando en el medio. */
+  /* Sangria a los dos lados: el contenido del grupo abierto queda metido
+     respecto del titulo que lo abre, que es lo que muestra la jerarquia, y deja
+     de pegarse al borde del panel. En los dos lados y no solo a la izquierda
+     porque el bloque de llamada ocupa el ancho completo y con un solo lado se
+     veria descentrado. El filete que separa los grupos sigue de lado a lado. */
+  .mega > .wrap{overflow:hidden;min-height:0;padding-inline:1.6rem;max-width:none;margin-inline:0}
+  /* Dos columnas: una sola lista de ocho entradas obliga a un scroll largo y
+     obliga a recordar donde empezaba cada grupo. El bloque de llamada ocupa el
+     ancho completo debajo, que es donde se lee como cierre y no como tercera
+     categoria. */
+  .mega-in{display:grid;grid-template-columns:1fr 1fr;gap:1.8rem 2rem;padding-block:0}
+  .mega-cta{grid-column:1 / -1;margin-top:0}
+  /* El relleno de abajo va en el ultimo hijo, no en la caja recortada: el
+     padding propio del item no lo recorta su propio overflow y el grupo
+     cerrado dejaba ver una franja con el primer titulo adentro. */
+  .mega-in > div:last-child{margin-bottom:1.3rem}
+  .mega h4{margin-bottom:.7rem}
+  .mega li a{padding:.6rem .6rem;margin-left:-.6rem;font-size:1rem}
+  .mega-cta{padding:1.2rem}
+  /* En telefono no entran dos columnas de titulos largos. */
+  @media (max-width:640px){.mega-in{grid-template-columns:1fr;gap:1.5rem}}
+  /* La animacion escalonada de los items es de escritorio: aca el panel ya
+     entero se despliega, y encadenar dos motions a la vez se ve nervioso. */
+  .nav-item:hover .mega li,.nav-item:focus-within .mega li{animation:none}
+
+  .nav-foot{display:block;padding-top:1.6rem}
+  .nav-foot .lang{display:inline-flex}
+}
+@media (max-width:1080px) and (prefers-reduced-motion:reduce){
+  .nav{transition:none}
+}
+/* Aca solo se aprieta lo que queda en la barra: logo, CTA y boton de menu.
+   El CTA se queda en todos los anchos porque es la accion principal del sitio. */
+@media (max-width:620px){
+  .hdr-in{gap:1rem}
+  .hdr-right{gap:.6rem}
+  .hdr-right .btn{padding:.72em 1.05em;font-size:.86rem}
+  .burger{padding:.45em .8em;font-size:.82rem}
+}
+@media (max-width:430px){
+  .logo{height:22px}
+  .hdr-in{gap:.7rem}
+  .hdr-right{gap:.45rem}
+  .hdr-right .btn{padding:.66em .9em;font-size:.82rem}
+  .burger{padding:.42em .72em;font-size:.8rem}
+}
+@media (max-width:359px){          /* iPhone SE de primera generacion y similares */
+  :root{--pad:14px}
+  .hdr-right .btn{padding:.62em .8em;font-size:.79rem}
+}
+
+/* ============================================================
+   HERO - video de fond pleine largeur
+   ============================================================ */
+.hero{
+  position:sticky;top:0;z-index:1;overflow:hidden;
+  background:#0b0b14;                 /* fond de secours pendant le chargement */
+  display:flex;align-items:flex-end;
+  min-height:600px;height:100svh;   /* svh y no vh: en iOS la barra de direcciones hace saltar el layout */
+  padding-top:var(--nav-h);
+}
+.hero-media{position:absolute;inset:0;z-index:0}
+.hero-media video,.hero-media img{width:100%;height:100%;object-fit:cover;object-position:50% 44%}
+/* Voile : le texte doit passer AA sur n'importe quelle image du loop */
+.hero-media::after{
+  content:"";position:absolute;inset:0;
+  /* El velo se concentra abajo, donde esta el texto, y suelta la parte alta de
+     la imagen. Antes era una capa casi pareja que tapaba tambien el edificio y
+     dejaba el hero mucho mas oscuro que el resto de la pagina, que es clara.
+     Las paradas estan calculadas contra el contraste real del texto blanco
+     sobre el video, no a ojo. */
+  background:
+    linear-gradient(to top,rgba(7,7,18,.88) 0%,rgba(7,7,18,.72) 24%,rgba(7,7,18,.58) 46%,rgba(7,7,18,.49) 62%,rgba(7,7,18,.24) 82%,rgba(7,7,18,.12) 100%),
+    linear-gradient(to right,rgba(14,14,30,.46),rgba(14,14,30,0) 58%);
+}
+.hero-in{position:relative;z-index:1;width:100%;padding-bottom:clamp(3rem,8vh,5.5rem)}
+/* El titular del hero tiene su propia escala y su propio corte de linea: es la
+   unica pieza de la pagina que compite con un video a pantalla completa. Con la
+   escala heredada de h1 y tres lineas cortas ocupaba poco mas de un tercio del
+   ancho y el video se comia el titular. Dos lineas largas lo estiran de punta a
+   punta del contenedor. Sin max-width: el corte esta escrito en el marcado y un
+   tope en ch solo podria provocar un tercer salto no previsto. */
+.hero h1{font-size:clamp(2.15rem,5.7vw,5.1rem);max-width:none;color:#fff}
+/* El recorte que hace el reveal de linea cortaba los descendentes: la g de
+   "immigration" quedaba sin cola. La caja gana ese aire por abajo (y lo
+   devuelve con un margen negativo para no mover el interlineado), y el punto
+   de partida de la animacion sube de 105% a 122% para que la linea siga
+   naciendo fuera de la caja ya crecida. */
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.16em;margin-bottom:-.16em}
+.hero h1 .ln i{display:block;font-style:normal;animation:lineUp 900ms var(--ease-out) both}
+.hero h1 .ln:nth-child(2) i{animation-delay:90ms}
+/* Por debajo de 900px esos cortes no entran: dejarlos daria cinco lineas
+   visuales con quiebres en lugares raros. Los tramos pasan a inline, el texto
+   fluye solo y la entrada se anima en bloque, porque una animacion de transform
+   no tiene efecto sobre una caja inline. */
+@media (max-width:900px){
+  .hero h1 .ln,.hero h1 .ln i{display:inline;overflow:visible;animation:none}
+  .hero h1{animation:fadeUp 800ms var(--ease-out) both}
+}
+@keyframes lineUp{from{transform:translateY(122%)}to{transform:none}}
+.hero-sub{max-width:52ch;margin-top:1.5rem;color:rgba(255,255,255,.87);animation:fadeUp 800ms var(--ease-out) 300ms both}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:2rem;animation:fadeUp 800ms var(--ease-out) 400ms both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+/* Cifras sobre el video, debajo de los CTA. Antes eran una banda gris propia:
+   como seccion quedaba enorme y medio vacia. Aca refuerzan el hero en lugar de
+   abrir un bloque nuevo, y la pagina arranca directo en los servicios. */
+.hero-stats{
+  display:flex;flex-wrap:wrap;gap:clamp(1.6rem,4.5vw,4rem);
+  margin-top:clamp(1.8rem,4vh,2.8rem);padding-top:clamp(1.2rem,2.5vh,1.7rem);
+  border-top:1px solid rgba(255,255,255,.24);
+  animation:fadeUp 800ms var(--ease-out) 520ms both;
+}
+.hs-n{
+  font-family:var(--font-display);font-weight:500;color:#fff;
+  font-size:clamp(1.5rem,2.4vw,2.15rem);line-height:1;letter-spacing:-.03em;
+  font-variant-numeric:tabular-nums;
+}
+.hs-l{font-size:.78rem;line-height:1.4;color:rgba(255,255,255,.76);margin-top:.4rem;max-width:20ch}
+.hero .todo{color:#fff;border-bottom-color:rgba(255,255,255,.6)}
+@media (max-width:560px){
+  .hero-stats{gap:1.1rem 2rem}
+  .hs-l{font-size:.72rem;max-width:15ch}
+}
+
+/* Sur la video, le bouton secondaire passe en blanc */
+/* Los dos botones del hero son identicos: las dos audiencias valen lo mismo y
+   el orden ya dice cual va primero. Uno relleno y otro fantasma hacia que el
+   segundo pareciera una opcion de segunda.
+   Y son los UNICOS de la pagina en verde agua con fondo transparente: es el
+   banner, compite contra una imagen a pantalla completa y ahi el verde de
+   marca rinde 15,5:1. En el resto de la pagina, sobre blanco, ese mismo verde
+   da 1,26:1, asi que los demas CTA siguen con el esquema de siempre.
+   Mas grandes que el resto, por la misma razon. */
+.hero .btn{
+  padding:1em 1.8em;font-size:1rem;
+  background:rgba(85,255,210,.1);color:var(--aqua);border-color:var(--aqua);
+}
+@media (hover:hover) and (pointer:fine){
+  .hero .btn:hover{background:rgba(85,255,210,.24);border-color:var(--aqua);color:var(--aqua)}
+}
+
+/* El CTA del header sobre el video iba en violeta de marca, y el violeta sobre
+   una franja oscura es casi el mismo valor: el boton existia como texto pero
+   no como forma. Sobre el video va en blanco, igual que los botones del hero,
+   y vuelve al violeta en cuanto la barra se vuelve clara. */
+.hdr:where(:not(.is-solid):not(:has(.nav:hover)):not(:has(.nav:focus-within)):not(:has(.nav[data-open="true"]))) .hdr-right .btn-primary{background:#fff;border-color:#fff;color:var(--fill)}
+@media (hover:hover) and (pointer:fine){
+  .hdr:where(:not(.is-solid):not(:has(.nav:hover)):not(:has(.nav:focus-within)):not(:has(.nav[data-open="true"]))) .hdr-right .btn-primary:hover{background:var(--tint-1);border-color:var(--tint-1);color:var(--fill)}
+}
+
+@supports (animation-timeline:scroll()){
+  @media (prefers-reduced-motion:no-preference) and (min-width:901px){
+    .hero-in{animation:heroExitCopy linear both;animation-timeline:scroll(root block);animation-range:0 62svh}
+    .hero-media{animation:heroPan linear both;animation-timeline:scroll(root block);animation-range:0 88svh}
+  }
+}
+@keyframes heroExitCopy{to{opacity:0;transform:translateY(-5vh)}}
+@keyframes heroPan{to{transform:scale(1.06)}}
+
+@media (max-width:900px){
+  .hero{position:relative;height:100svh;min-height:520px}
+  .hero-in{padding-block:4rem 3rem}
+}
+
+/* ============================================================
+   BANDES
+   ============================================================ */
+.band{position:relative;z-index:2;background:var(--ground)}
+.band-top{border-radius:var(--r-band) var(--r-band) 0 0;margin-top:-1px}
+/* El padding no es igual en todas: un ritmo identico seccion tras seccion es
+   parte de lo que las hace leer como bloques sueltos. */
+.sec{padding-block:clamp(4.5rem,10vh,7.5rem)}
+/* La franja de logos no tiene padding propio: su respiro sale entero de estas
+   dos reglas, asi la relacion 1:2 esta escrita en un solo lugar y no repartida
+   entre tres selectores. */
+/* Mas ajustada que el resto: el objetivo es que titular, cinco celdas y CTA
+   entren juntos en pantalla. */
+#entreprises{padding-top:clamp(3.2rem,7vh,5rem);padding-bottom:var(--band-gap)}
+#particuliers{padding-block:var(--band-gap) clamp(2rem,4.2vh,3.2rem)}
+#about{padding-block:clamp(3.2rem,7vh,5rem) clamp(3rem,6.5vh,4.5rem)}
+.res{padding-block:clamp(4rem,9vh,6.5rem) clamp(5rem,11vh,8rem)}
+/* Un formulario con seis campos ya es alto de por si; el respiro de la seccion
+   se ajusta para que entre entero en un portatil de 768. */
+#contact{padding-block:clamp(2.4rem,5.6vh,4.2rem) var(--pb,clamp(2.4rem,5.6vh,4.2rem))}
+#faq{padding-block:clamp(2.8rem,6vh,4.4rem) var(--pb,clamp(2.8rem,6vh,4.4rem))}
+/* La ultima seccion antes del pie necesita mas aire abajo que en medio de la
+   pagina: ahi el corte al negro es duro y sin ese respiro el contenido queda
+   apoyado contra el pie.
+   Se resuelve por POSICION y no por id, asi vale para cualquier pagina sin
+   acordarse de cual es la ultima. Y viaja en una variable, no en la propiedad:
+   un #id gana siempre a una clase, asi que una regla .band:has(...) que
+   escribiera padding-bottom no podria pisar a #faq ni a #contact. Las
+   variables no tienen ese problema: se resuelven donde se usan. */
+.band:has(+ .ft){--pb:clamp(8rem,15vh,12rem)}
+.sec:has(+ .ft){padding-bottom:var(--pb)}
+#avis{padding-block:clamp(3rem,6.5vh,4.6rem)}
+/* ---------- Bloque gris de empresas ----------
+   El gris no es solo de #entreprises: arranca tinendo la mitad inferior de
+   avis, cubre empresas y sigue por la franja de logos, que es su prueba social
+   y ya vive pegada a su CTA. Vuelve al blanco dentro del padding superior de
+   particulares.
+   La regla de la pagina es que la transicion la hace el bloque que se va, pero
+   aca el que se va es la franja de logos, de 86px: una rampa de 0,17 de
+   luminancia en 86px banda. Cuando el bloque que se va es un intersticio, la
+   rampa se muda al padding del que llega, porque una rampa necesita largo antes
+   que dueno. */
+/* FONDO UNICO. La pagina es blanca de punta a punta y la unica excepcion es
+   "Nos engagements, votre garantie" (.tinted), que queda en el gris de marca
+   plano. No hay degradados de fondo en ninguna seccion: cada transicion es un
+   corte limpio, y como solo queda un corte en toda la pagina no hay nada que
+   disimular. Las reglas se dejan escritas, apuntando a --ground, para que se
+   vea que es una decision y no una seccion a la que se le olvido el fondo. */
+#avis{background:var(--ground)}
+#entreprises{background:var(--ground)}
+#particuliers{background:var(--ground)}
+/* El ancho lo fija cada elemento, no el contenedor: `62ch` en el contenedor se
+   medía con la tipografía del cuerpo y estrangulaba un titular de 48 px.
+   El titular se mide en `em` (escala con su propio tamaño), el parrafo en `ch`. */
+.sec-head{display:grid;gap:.95rem;margin-bottom:clamp(1.7rem,3.2vw,2.8rem)}
+#entreprises .sec-head{gap:.85rem;margin-bottom:clamp(1.8rem,3vw,2.4rem)}
+.sec-head h2{max-width:18em}
+.sec-head .lead{max-width:56ch}
+
+/* Bandas alternas: dos por pagina (cifras y contacto). Gris, no azul. */
+/* El gris no arranca ni termina con una linea: entra y sale con degradado, asi
+   no hay ningun borde horizontal visible en toda la pagina. Es lo que pedia el
+   brief: continuidad, no bloques apilados. */
+/* La entrada al gris no se hace aca sino en la seccion de arriba, que se va
+   tinendo en toda su mitad inferior: un degradado largo dentro de la seccion de
+   recursos disimula el limite mucho mejor que uno corto encerrado en la seccion
+   gris.
+   La salida si vive aca, por la misma regla: la transicion pertenece al bloque
+   que se esta yendo. Cuando el footer venia justo despues no hacia falta,
+   porque ese corte lo queremos ver; con la FAQ en el medio, el gris terminaba
+   contra el blanco en un filo de 0,145 de luminancia, el unico de la pagina. */
+.band-alt{background:var(--ground);color:var(--alt-ink)}
+.band-alt h2,.band-alt h3{color:var(--alt-ink)}
+.band-alt .lead,.band-alt .body-2{color:var(--alt-ink-2)}
+
+/* ============================================================
+   AVIS GOOGLE
+   ============================================================ */
+/* Familia de maquetado propia: bloque de nota fijo a la izquierda y un carril
+   horizontal de tarjetas a la derecha. El carril no es decorativo: la API
+   devuelve entre una y cinco opiniones y ese numero cambia solo, asi que una
+   grilla de tres se rompe sola en cuanto llegan cuatro. Un carril acepta
+   cualquier cantidad sin recomponer nada y mantiene la seccion en una fila,
+   que es lo que le permite entrar en pantalla. */
+.avis-in{display:grid;grid-template-columns:minmax(190px,240px) 1fr;gap:clamp(1.8rem,4vw,3.4rem);align-items:start}
+.avis-score{display:grid;gap:.55rem;align-content:start}
+.score{display:flex;align-items:baseline;gap:.15rem;font-family:var(--font-display);line-height:1}
+.score-n{font-size:clamp(2.6rem,4.4vw,3.6rem);font-weight:500;letter-spacing:-.03em}
+.score-d{font-size:1.1rem;color:var(--text-3)}
+.stars{display:flex;gap:3px;min-height:15px}
+.stars svg{width:15px;height:15px;display:block}
+.avis-src{
+  display:inline-flex;align-items:center;gap:.5rem;margin-top:.5rem;
+  font-size:.86rem;color:var(--text-2);border-bottom:1px solid var(--line);
+  padding-bottom:.25rem;width:fit-content;transition:color 180ms ease,border-color 180ms ease;
+}
+@media (hover:hover){.avis-src:hover{color:var(--accent);border-color:var(--accent)}}
+
+/* Carril: scroll propio, nunca scroll de pagina. */
+.avis-rail{
+  display:flex;gap:14px;overflow-x:auto;overscroll-behavior-x:contain;
+  scroll-snap-type:x proximity;padding-bottom:.5rem;
+  scrollbar-width:thin;scrollbar-color:var(--line-strong) transparent;
+}
+.avis-rail::-webkit-scrollbar{height:6px}
+.avis-rail::-webkit-scrollbar-thumb{background:var(--line-strong);border-radius:3px}
+.avis-card{
+  flex:0 0 clamp(240px,23vw,290px);scroll-snap-align:start;
+  background:var(--surface);border:1px solid var(--line-card);
+  border-radius:var(--r);padding:1.2rem 1.25rem 1.35rem;
+  display:flex;flex-direction:column;gap:.55rem;
+  box-shadow:0 0 0 0 rgba(0,0,0,0);
+  /* SALIDA. Era de 380 ms con curva de desaceleracion fuerte: la tarjeta
+     pegaba un tiron al final y se leia como un corte. Ahora es mas larga que
+     la entrada y con una curva simetrica, que es la que se usa cuando algo
+     vuelve a su sitio: arranca despacio, no frena en seco. */
+  transition:translate 620ms var(--ease-soft),box-shadow 720ms var(--ease-soft),
+             border-color 560ms var(--ease-soft);
+}
+
+.avis-head{display:flex;align-items:center;gap:.6rem}
+.avis-av{width:32px;height:32px;border-radius:50%;object-fit:cover;background:var(--surface-2);flex-shrink:0}
+.avis-who{display:grid;gap:.1rem;min-width:0}
+.avis-nm{font-family:var(--font-display);font-weight:500;font-size:.9rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* La fecha de la visita es obligatoria por ley en Francia para publicar un
+   avis en linea, no es un adorno: si la API no la trae, no se muestra la
+   tarjeta como opinion verificada. */
+.avis-when{font-size:.74rem;color:var(--text-3)}
+.avis-txt{font-size:.88rem;line-height:1.5;color:var(--text-2);
+  display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
+.avis-empty{font-size:.92rem;color:var(--text-2);max-width:46ch;align-self:center}
+#avis[data-state="ok"] .avis-empty{display:none}
+@media (max-width:820px){
+  .avis-in{grid-template-columns:1fr;gap:1.6rem}
+  .avis-rail{margin-inline:calc(var(--pad) * -1);padding-inline:var(--pad)}
+}
+
+/* ============================================================
+   LOGOS CLIENTS
+   ============================================================ */
+/* Sigue el fondo de empresas, plano. Nunca un degradado propio: cuando la
+   franja tenia su propio degradado gris en medio del blanco, ella misma era la
+   unica costura visible del tramo. */
+.clients{background:var(--ground)}
+/* La prueba social pasaba casi inadvertida: 86px de alto entre dos secciones
+   grandes se lee como un intersticio, no como un bloque. Ahora tiene respiro
+   propio y los logos son un 40 % mas grandes (medidas en los atributos
+   width/height de cada <img>, que es donde vive el equilibrio optico de la
+   fila). Sigue sin fondo: la presencia la da el espacio, no un color. */
+.clients-in{padding-block:clamp(2.4rem,5.5vh,4rem);display:grid;gap:clamp(1.8rem,3.4vw,2.6rem);justify-items:center}
+.clients-h{font-size:.74rem;font-weight:500;text-transform:uppercase;letter-spacing:.19em;color:var(--aqua-ink)}
+.logos{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:clamp(1.8rem,4.2vw,3.9rem)}
+/* Chaque logo porte sa propre taille en attributs width/height, calculee pour
+   equilibrer optiquement la rangee. Les fichiers sont en 2x pour le retina.
+   Gris au repos, couleur au survol : 7 marques heterogenes se lisent comme une. */
+.logos img{filter:grayscale(1);opacity:.72;transition:filter 320ms ease,opacity 320ms ease}
+@media (hover:hover) and (pointer:fine){.logos li:hover img{filter:none;opacity:1}}
+.logos li{display:flex;align-items:center}
+@media (max-width:600px){.logos img{transform:scale(.66)}.logos{gap:.6rem 1.2rem}}
+
+/* ============================================================
+   B2B - texto a la izquierda, listado de servicios a la derecha
+   ============================================================ */
+/* Antes eran cinco cajas en fila, tres de ellas con el fondo pintado. Dos
+   problemas: el color hacia de fondo y no de detalle, y cinco cajas en fila
+   obligan a leer en zigzag cinco bloques que en realidad son una lista.
+   Ahora el titular y su bajada se quedan quietos a la izquierda y los cinco
+   servicios bajan en columna a la derecha, separados por filetes. El color
+   queda en el numero y en el filete que aparece al pasar por encima. */
+.b2b-grid{display:grid;grid-template-columns:.94fr 1.06fr;gap:clamp(2rem,5vw,4.5rem);align-items:start}
+.b2b-grid>*{min-width:0}
+.b2b-txt{display:grid;align-content:start}
+.b2b-txt .sec-head{margin-bottom:clamp(1.4rem,2.6vw,2rem)}
+.b2b-act{display:grid;gap:1rem;justify-items:start}
+.b2b-act .body-2{max-width:36ch}
+
+/* El primer filete lo pone la lista y el resto cada fila: asi la columna
+   empieza y termina cerrada sin una regla aparte para la ultima. */
+.b2b-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.b2b-row{border-bottom:1px solid var(--line)}
+.b2b-row>a{
+  display:grid;grid-template-columns:2.4rem 1fr 1rem;column-gap:.5rem;row-gap:.28rem;
+  padding:1rem .6rem 1.05rem .2rem;position:relative;
+  /* SALIDA mas larga que la entrada, como el resto de la pagina. */
+  transition:background-color 560ms var(--ease-soft),padding-left 560ms var(--ease-soft);
+}
+/* Icono y no numero: una numeracion dice "primero, segundo, tercero" y los
+   cinco servicios valen lo mismo. El icono solo identifica. */
+.b2b-i{
+  grid-column:1;grid-row:1;width:21px;height:21px;margin-top:.12em;
+  color:var(--aqua-deep);transition:color 460ms var(--ease-soft);
+}
+.b2b-t{grid-column:2;grid-row:1;font-family:var(--font-display);font-size:clamp(1rem,1.15vw,1.1rem);font-weight:500;line-height:1.26}
+.b2b-d{grid-column:2;grid-row:2;color:var(--text-2);font-size:.88rem;line-height:1.5;max-width:48ch}
+.b2b-a{
+  grid-column:3;grid-row:1;justify-self:end;color:var(--text-3);font-size:1.05rem;line-height:1.2;
+  transition:translate 560ms var(--ease-soft),color 460ms var(--ease-soft);
+}
+/* El filete de acento crece desde abajo, no aparece entero: un borde que
+   conmuta de golpe es lo unico de la pagina que no tendria entrada. */
+.b2b-row>a::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:2px;
+  background:var(--aqua-deep);scale:1 0;transform-origin:50% 100%;
+  transition:scale 560ms var(--ease-soft);
+}
+@media (hover:hover) and (pointer:fine){
+  .b2b-row>a:hover{background:rgba(85,255,210,.1);padding-left:.9rem}
+  .b2b-row>a:hover::before{scale:1 1;transition:scale 620ms var(--ease-out)}
+  .b2b-row>a:hover .b2b-i,.b2b-row>a:hover .b2b-a{color:var(--aqua-ink)}
+  .b2b-row>a:hover .b2b-a{translate:3px 0}
+}
+.b2b-row>a:focus-visible{outline-offset:-2px}
+@media (max-width:980px){
+  .b2b-grid{grid-template-columns:1fr}
+  .b2b-txt .sec-head{margin-bottom:1.2rem}
+  .b2b-act{margin-bottom:1.8rem}
+}
+
+/* ============================================================
+   B2C - lignes qui s'ouvrent, apercu photo qui change
+   ============================================================ */
+/* Rythme des fonds sur la page, dans l'ordre :
+   bleu plein (chiffres), blanc (B2B), lavande (logos clients), blanc (B2C),
+   lavande (a propos), blanc (ressources), bleu plein (contact), blanc (footer). */
+.tinted{background:var(--surface)}
+.b2c{background:var(--ground)}
+.b2c-grid{display:grid;grid-template-columns:1.25fr .85fr;gap:clamp(2rem,5vw,4.5rem);align-items:stretch}
+.b2c-col{display:grid;align-content:start}
+/* Compacto a proposito: el titular, las cuatro filas y el CTA tienen que
+   entrar juntos en pantalla. */
+.b2c-col .sec-head{gap:.85rem;margin-bottom:clamp(1.3rem,2.4vw,1.9rem)}
+/* ============================================================
+   PARTICULIERS — lista de servicios
+   La lista suelta sobre el fondo no pertenecia a la pagina: el resto son
+   cajas blancas con un filete —el bento, la F&Q, el panel de engagements— y
+   esto eran seis renglones al aire. Pasa a ser un panel de la misma familia,
+   y lo que la distingue de la F&Q es el detalle, no el envase:
+
+     F&Q            numero + chevron que gira 180°, barra de acento VERTICAL
+                    en el canto izquierdo, fila abierta en gris.
+     Particuliers   cruz que gira a ×, filete de acento HORIZONTAL al pie de
+                    la fila con los dos colores repartidos, y la foto de al
+                    lado que cambia con cada fila.
+
+   Los filetes internos van mas claros que el borde del panel: dentro de una
+   caja, una linea al mismo valor que el contorno se lee como si la caja
+   estuviera partida en seis.
+   ============================================================ */
+.rows{
+  background:var(--panel);border:1px solid var(--line-card);
+  border-radius:var(--r);overflow:hidden;
+  --row-line:rgba(32,32,69,.09);
+}
+.row{position:relative;transition:background-color 460ms var(--ease-soft)}
+.row + .row{border-top:1px solid var(--row-line)}
+.row-btn{
+  width:100%;background:none;border:0;cursor:pointer;text-align:left;
+  padding:clamp(.66rem,1.28vw,.84rem) clamp(2.9rem,4.4vw,3.4rem)
+          clamp(.66rem,1.28vw,.84rem) clamp(1.1rem,2.2vw,1.5rem);
+  display:grid;gap:.4rem;
+}
+/* Peso 400 y un cuerpo mas contenido. En la Outfit el 500 a 1,3 rem se lee
+   casi como una negrita, y seis titulos asi seguidos gritan. */
+.row-btn h3{
+  font-weight:400;font-size:clamp(.98rem,1.18vw,1.1rem);line-height:1.34;
+  letter-spacing:-.006em;
+  transition:color 460ms var(--ease-soft);
+}
+.row[data-open="true"] .row-btn h3{color:var(--accent)}
+
+/* Marcador: la cruz sola, que gira a ×. Sin circulo: en una lista de texto
+   era un objeto de mas. */
+.row .mk{
+  /* Centrado con margin y no con translate: translate lo usan las
+     animaciones de entrada de la pagina y no conviene que dos cosas escriban
+     la misma propiedad. */
+  position:absolute;right:clamp(1.1rem,2.2vw,1.5rem);top:50%;margin-top:-7px;
+  width:14px;height:14px;color:var(--text-3);pointer-events:none;
+  transition:color 420ms var(--ease-soft),rotate 560ms var(--ease-out);
+}
+.row[data-open="true"] .mk{color:var(--accent);rotate:45deg;top:clamp(1.4rem,2.4vw,1.75rem);margin-top:0}
+
+/* El filete de acento cierra la fila abierta y ahora es verde agua de punta a
+   punta. Antes eran 56px de verde y el resto violeta. El verde de marca solo
+   no sirve: sobre el gris de la fila abierta da 1,2:1 y el filete desaparece
+   a la derecha. Va de --tint-1 a --aqua-deep, el mismo tono oscurecido: se lee
+   verde agua en todo el ancho y el extremo derecho existe.
+   Se traza con el mismo gesto con el que baja la respuesta. */
+.row::before{
+  content:"";position:absolute;bottom:0;left:0;right:0;height:2px;z-index:1;
+  background:linear-gradient(to right,var(--tint-1),var(--aqua-deep));
+  transform:scaleX(0);transform-origin:left;
+  transition:transform 640ms var(--ease-out);
+}
+.row[data-open="true"]::before{transform:scaleX(1)}
+.row[data-open="true"]{background:var(--surface)}
+@media (hover:hover) and (pointer:fine){
+  .row:not([data-open="true"]):hover{background:color-mix(in srgb,var(--surface) 55%,transparent)}
+  .row:not([data-open="true"]):hover .row-btn h3{color:var(--accent)}
+  .row:not([data-open="true"]):hover .mk{color:var(--accent)}
+}
+.row-btn:focus-visible{outline:2px solid var(--accent);outline-offset:-3px}
+
+.row-body{
+  display:grid;grid-template-rows:0fr;
+  transition:grid-template-rows 520ms var(--ease-io),opacity 420ms var(--ease-soft);
+  opacity:0;
+}
+.row-body>div{overflow:hidden}
+.row-body p{
+  padding:0 clamp(2.9rem,4.4vw,3.4rem) .7rem clamp(1.1rem,2.2vw,1.5rem);
+  max-width:56ch;color:var(--text-2);font-size:.94rem;line-height:1.66;
+}
+
+/* "Voir plus" de cada fila: enlace a la landing de particulares. Es un enlace
+   y no un boton porque en la fila ya hay una jerarquia —titulo, respuesta— y
+   un boton por fila competiria con el CTA de la seccion. */
+/* Alineado con el parrafo, no con el borde del panel. */
+.row-more{
+  justify-self:start;display:inline-flex;align-items:center;gap:.35em;
+  margin:0 0 clamp(.9rem,1.8vw,1.2rem) clamp(1.1rem,2.2vw,1.5rem);
+  font-family:var(--font-display);font-weight:500;font-size:.9rem;color:var(--accent);
+  background-image:linear-gradient(currentColor,currentColor);
+  background-size:0% 1px;background-position:0 100%;background-repeat:no-repeat;
+  transition:background-size 620ms var(--ease-soft);
+}
+.row-more .arw{transition:translate 520ms var(--ease-soft)}
+@media (hover:hover) and (pointer:fine){
+  .row-more:hover{background-size:100% 1px;transition:background-size 420ms var(--ease-out)}
+  .row-more:hover .arw{translate:4px 0}
+}
+.row[data-open="true"] .row-body{grid-template-rows:1fr;opacity:1}
+.b2c-cta{margin-top:clamp(1.2rem,2.2vw,1.6rem)}
+
+/* La foto se estira hasta el alto de la columna de texto en vez de imponer su
+   propio 3/4: si no, sobresale por abajo y parece que se cae de la seccion. */
+.b2c-media{position:relative;align-self:stretch;min-height:460px;background:var(--surface);overflow:hidden}
+.b2c-media img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 34%;
+  opacity:0;filter:blur(6px);transform:scale(1.03);
+  transition:opacity 420ms ease,filter 420ms ease,transform 620ms var(--ease-out);
+}
+.b2c-media img.is-on{opacity:1;filter:blur(0);transform:none}
+.b2c-cta{margin-top:1.7rem;display:flex;flex-wrap:wrap;gap:.9rem;align-items:center}
+/* En una columna la foto cae despues del acordeon, o sea al final de una lista
+   larga y plegable: queda fuera de pantalla y casi nadie llega. Ademas su unica
+   funcion es cambiar al abrir cada fila, y si no se ve al mismo tiempo que la
+   fila no comunica nada. Se oculta entera en vez de dejarla de adorno. */
+@media (max-width:900px){
+  .b2c-grid{grid-template-columns:1fr}
+  .b2c-media{display:none}
+}
+
+/* ============================================================
+   A PROPOS
+   ============================================================ */
+/* Maquetado deliberadamente distinto al de particulares. Alla son dos columnas
+   con una lista de filas separadas por filetes horizontales y una foto al lado
+   del texto. Aca no hay dos columnas: es una pila editorial a todo el ancho,
+   enunciado -> imagen a sangre -> tres pilares separados por filetes
+   VERTICALES -> accion. Eje contrario, y la foto no convive con el texto sino
+   que corta la pagina. Dos secciones seguidas con la misma familia de
+   maquetado se leen como la misma seccion repetida dos veces. */
+.about-intro{display:grid;gap:.95rem;margin-bottom:clamp(1.6rem,3.2vw,2.6rem)}
+.about-intro h2{max-width:20em}
+
+/* ============================================================
+   ENGAGEMENTS — regla horizontal sobre panel
+   El concepto —los seis sobre una escala, la atencion que se desplaza— es el
+   que funciona. Lo que faltaba era cuerpo: todo flotaba sobre el gris de la
+   seccion y el verde agua sobre gris claro casi no se ve (1,3:1 contra el
+   fondo, no alcanza ni para una linea de 3px).
+   Dos decisiones:
+   1. El bloque se apoya en un panel blanco con el mismo borde que las demas
+      cajas de la pagina. La seccion es gris; el panel la recorta y le da
+      presencia sin inventar un lenguaje nuevo.
+   2. Se reparte el trabajo entre los dos acentos. El VIOLETA lleva lo que
+      tiene que leerse —el tramo lleno de la regla, el titulo activo, la
+      declaracion— porque sobre blanco da 15,6:1. El VERDE AGUA se usa donde
+      hay texto oscuro encima: la pastilla del numero activo (13:1 en negro
+      sobre verde). Cada color donde contrasta, en vez de un verde flotando
+      sobre gris.
+   ============================================================ */
+.eng{
+  display:grid;gap:0;
+  background:var(--panel);border:1px solid var(--line-card);border-radius:var(--r);
+  overflow:hidden;
+}
+.eng-list{
+  position:relative;display:grid;grid-template-columns:repeat(6,1fr);
+  border-bottom:1px solid var(--line);
+}
+.eng-tab{
+  position:relative;z-index:1;display:grid;gap:.6rem;align-content:start;
+  background:none;border:0;cursor:pointer;text-align:left;min-width:0;
+  padding:clamp(1rem,2vw,1.4rem) clamp(.7rem,1.3vw,1.1rem) clamp(1.1rem,2.2vw,1.5rem);
+  color:var(--text-3);
+  transition:color 460ms var(--ease-soft),background-color 460ms var(--ease-soft);
+}
+.eng-tab + .eng-tab{box-shadow:inset 1px 0 0 var(--line)}
+/* El numero vive en una pastilla. Apagada es un contorno; activa se rellena
+   de verde agua con el texto oscuro encima, que es donde ese color rinde. */
+.eng-n{
+  justify-self:start;display:grid;place-items:center;min-width:2.1em;
+  padding:.24em .5em;border-radius:999px;border:1px solid var(--line);
+  font-family:var(--font-body);font-size:.7rem;letter-spacing:.08em;
+  transition:background-color 460ms var(--ease-soft),border-color 460ms var(--ease-soft),
+             color 460ms var(--ease-soft);
+}
+.eng-t-l{
+  font-family:var(--font-display);font-weight:400;
+  font-size:clamp(.88rem,1.05vw,1rem);line-height:1.32;text-wrap:balance;
+}
+.eng-tab[aria-selected="true"]{color:var(--text);background:var(--surface)}
+.eng-tab[aria-selected="true"] .eng-n{
+  background:var(--tint-1);border-color:var(--tint-1);color:var(--tint-ink);
+}
+.eng-tab[aria-selected="true"] .eng-t-l{font-weight:500;color:var(--accent)}
+@media (hover:hover) and (pointer:fine){
+  .eng-tab:not([aria-selected="true"]):hover{color:var(--text-2);background:color-mix(in srgb,var(--surface) 55%,transparent)}
+  .eng-tab:not([aria-selected="true"]):hover .eng-n{border-color:var(--line-strong)}
+}
+.eng-tab:focus-visible{outline:2px solid var(--accent);outline-offset:-3px}
+/* La regla vive en el borde inferior de la fila de pestanas: el tramo del
+   compromiso activo se llena en violeta y ese relleno es el temporizador. */
+.eng-ind{
+  position:absolute;bottom:-1px;left:0;height:2px;
+  width:var(--ind-w,120px);translate:var(--ind-x,0px) 0;
+  background:var(--line-strong);
+  transition:translate 560ms var(--ease-out),width 560ms var(--ease-out);
+}
+.eng-ind::after{
+  content:"";position:absolute;inset:0;background:var(--accent);
+  transform-origin:left;transform:scaleX(var(--ind-p,0));
+}
+.eng[data-auto="on"] .eng-ind::after{transition:transform 120ms linear}
+
+.eng-panes{
+  position:relative;min-height:clamp(130px,16vh,180px);
+  padding:clamp(1.5rem,3vw,2.4rem) clamp(1.2rem,2.6vw,2.4rem) clamp(1.6rem,3.2vw,2.6rem);
+  display:grid;align-items:center;
+}
+.eng-pane{animation:engIn 620ms var(--ease-out) both}
+.eng-pane[hidden]{display:none}
+/* La declaracion. El numero enorme y hueco al fondo le da escala a la pieza y
+   ata el panel con la pastilla de arriba. */
+.eng-q{
+  position:relative;z-index:1;max-width:34ch;
+  font-family:var(--font-display);font-weight:400;
+  font-size:clamp(1.3rem,2.3vw,1.95rem);line-height:1.3;color:var(--accent);
+  text-wrap:balance;
+}
+/* El numero hueco va al otro extremo del panel, como marca de agua: dentro
+   del recorte y sin empujar al texto. */
+.eng-pane::before{
+  content:attr(data-n);position:absolute;right:clamp(1rem,3vw,3rem);top:50%;
+  translate:0 -50%;pointer-events:none;
+  font-family:var(--font-display);font-weight:500;
+  font-size:clamp(3.5rem,7vw,6.5rem);line-height:1;
+  /* Relleno y no contorno: a 1px el contorno se veia como un dibujo a mano
+     alzada. Solido y al 14% del violeta pesa lo justo para ser marca de agua
+     sin competir con la declaracion. */
+  color:color-mix(in srgb,var(--accent) 14%,transparent);
+  animation:engNum 800ms var(--ease-out) both;
+}
+@media (max-width:760px){.eng-pane::before{display:none}}
+@keyframes engIn{from{opacity:0;translate:0 10px}to{opacity:1;translate:none}}
+@keyframes engNum{from{opacity:0;translate:0 -30%}to{opacity:1;translate:0 -50%}}
+
+@media (max-width:900px){
+  /* Seis columnas no entran: la fila se vuelve una tira que se arrastra. */
+  .eng-list{grid-template-columns:none;grid-auto-flow:column;
+    grid-auto-columns:minmax(148px,1fr);overflow-x:auto;scrollbar-width:none}
+  .eng-list::-webkit-scrollbar{display:none}
+  .eng-panes{min-height:0}
+}
+.about-act{margin-top:clamp(1.6rem,3.2vw,2.6rem)}
+
+/* ============================================================
+   RESSOURCES
+   ============================================================ */
+.res{background:var(--ground)}
+.res-head{display:flex;flex-wrap:wrap;gap:1.5rem;align-items:flex-end;justify-content:space-between;margin-bottom:2.6rem}
+.arts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+/* El texto va ENCIMA de la foto, no debajo: la tarjeta es la foto. Un velo
+   degradado desde abajo sostiene el texto —medido sobre las tres fotos
+   actuales, el blanco queda por encima de 7:1 en la zona del titular— y el
+   color de cada tarjeta se reserva para dos detalles: el tipo de articulo y
+   el borde que se enciende al pasar por encima. */
+.art{
+  position:relative;aspect-ratio:1/1;overflow:hidden;isolation:isolate;
+  border:1px solid var(--line-card);background:var(--surface-2);
+  box-shadow:0 0 0 0 rgba(0,0,0,0);
+  transition:translate 620ms var(--ease-soft),box-shadow 720ms var(--ease-soft),
+             border-color 560ms var(--ease-soft);
+}
+.art-ph{position:absolute;inset:0;margin:0}
+.art-ph img{width:100%;height:100%;object-fit:cover;transition:scale 900ms var(--ease-soft)}
+.art-ph::after{
+  content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(to top,
+      rgba(8,8,18,.95) 0%, rgba(8,8,18,.88) 26%, rgba(8,8,18,.66) 48%,
+      rgba(8,8,18,.3) 72%, rgba(8,8,18,.06) 100%),
+    rgba(8,8,18,.18);
+}
+.art-b{
+  position:relative;z-index:1;height:100%;
+  display:grid;align-content:end;gap:.55rem;
+  padding:1.4rem 1.4rem 1.5rem;color:#fff;
+}
+.art h3{color:#fff;font-size:1.05rem;line-height:1.32}
+.art .body-2{color:rgba(255,255,255,.84)}
+.art .rd-meta{margin-top:.15rem;font-size:.8rem;color:rgba(255,255,255,.8);display:flex;align-items:center;gap:.4rem}
+.art .todo{color:#fff;border-bottom-color:rgba(255,255,255,.6)}
+/* Un color por tarjeta, de la paleta, usado solo en el rotulo y en el borde. */
+.art{--ov:var(--tint-1)}
+.art-ov1{--ov:var(--tint-1)}
+.art-ov2{--ov:var(--tint-3)}
+.art-ov3{--ov:var(--tint-2)}
+.art .kd{font-size:.7rem;text-transform:uppercase;letter-spacing:.17em;color:var(--ov)}
+@media (hover:hover) and (pointer:fine){
+  .art:hover .art-ph img{scale:1.045;transition:scale 1200ms var(--ease-out)}
+  /* Gana a la regla generica de hover de tarjeta, que pinta el borde gris. */
+  .art:hover{
+    border-color:var(--ov);
+    box-shadow:0 0 0 1px var(--ov),0 26px 48px -26px var(--shadow-a);
+    transition:translate 560ms var(--ease-out),box-shadow 620ms var(--ease-out),
+               border-color 460ms var(--ease-out);
+  }
+}
+@media (max-width:860px){.arts{grid-template-columns:1fr}}
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+/* clip y no hidden: 'overflow:hidden' convierte al elemento en contenedor de
+   scroll, y entonces el 'view()' de todo lo que tiene adentro se mide contra
+   esta seccion en vez de contra la ventana. Como la seccion no scrollea, la
+   linea de tiempo queda inactiva y la animacion nunca corre: el formulario
+   aparecia sin ninguna entrada. 'clip' recorta igual sin crear ese contenedor.
+   Mismo motivo por el que la raiz usa overflow-x:clip. */
+.ct{position:relative;overflow:clip}
+.ct-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(2.2rem,5vw,4.5rem);align-items:start}
+.ct h2{max-width:14ch}
+.ct-info{display:grid;gap:1.4rem;margin-top:2.2rem}
+.ct-info div{display:grid;gap:.25rem}
+.ct-info div>span{font-size:.7rem;text-transform:uppercase;letter-spacing:.17em;color:var(--alt-label)}
+.ct-info p{font-size:1.02rem}
+form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.3rem,2.6vw,1.9rem);--r:20px;display:grid;gap:.8rem;color:var(--text)}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:4px;background:var(--surface-2);padding:4px;border-radius:999px}
+.seg label{position:relative;display:flex;align-items:center;justify-content:center;padding:.55em 1em;border-radius:999px;cursor:pointer;font-size:.88rem;color:var(--text-2);transition:color 200ms ease,background-color 240ms var(--ease-out)}
+.seg input{position:absolute;opacity:0;width:1px;height:1px}
+.seg input:checked + span{color:var(--fill-ink)}
+.seg label:has(input:checked){background:var(--fill)}
+.seg label:has(input:focus-visible){outline:2px solid var(--accent);outline-offset:2px}
+/* Un 'display' en una clase le gana al '[hidden]{display:none}' de la hoja de
+   estilos del navegador, que tiene especificidad cero. Sin esta linea el campo
+   de razon social seguia viendose en el perfil particular aunque el atributo
+   hidden estuviera puesto. Vale para cualquier elemento del sitio. */
+[hidden]{display:none!important}
+.fld{display:grid;gap:.34rem}
+.fld label{font-size:.78rem;color:var(--text-2);letter-spacing:.03em}
+.fld input,.fld select,.fld textarea{
+  background:var(--ground);border:1px solid var(--line-strong);padding:.68em .85em;font-size:.95rem;
+  border-radius:var(--r-sm);width:100%;max-width:100%;
+  transition:border-color 200ms ease,box-shadow 200ms ease;
+}
+.fld input::placeholder,.fld textarea::placeholder{color:var(--text-3)}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.fld textarea{resize:vertical;min-height:64px}
+/* align-items:start es imprescindible. Por defecto las celdas se estiran, y
+   como el campo de email reserva un renglon para el error, era mas alto que el
+   de nombre: el de nombre se estiraba hasta igualarlo y su caja quedaba 11px
+   mas alta y 10px mas abajo que la de al lado. */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:.85rem;align-items:start}
+.fine{font-size:.76rem;color:var(--text-3);line-height:1.5}
+/* Error de campo. Rojo propio, no un token de marca: un mensaje de error tiene
+   que leerse como error y no como acento, y el violeta de INWARD es justamente
+   el color de lo que esta bien (botones, enlaces, foco). */
+.fld-err{font-size:.76rem;line-height:1.4;color:#b3261e;margin-top:.1rem}
+.fld input.is-bad,.fld select.is-bad,.fld textarea.is-bad{border-color:#b3261e}
+.fld input.is-bad:focus,.fld select.is-bad:focus,.fld textarea.is-bad:focus{
+  border-color:#b3261e;box-shadow:0 0 0 3px rgba(179,38,30,.12)}
+/* El aviso ocupa su sitio aunque este vacio: sin esto, al aparecer empuja el
+   boton de envio y el clic cae en otro lado. */
+.fld:has(.fld-err){grid-template-rows:auto auto 1rem}
+@media (max-width:900px){.ct-grid{grid-template-columns:1fr}}
+@media (max-width:560px){.two{grid-template-columns:1fr}}
+
+/* ============================================================
+   FAQ
+   ============================================================ */
+/* <details> nativo y no un boton con JavaScript: se abre sin JS, el teclado y
+   los lectores de pantalla ya saben que es, y el buscador ve las respuestas
+   aunque esten cerradas. */
+.faq{background:var(--ground)}
+.faq .sec-head{margin-bottom:clamp(1.6rem,3vw,2.2rem)}
+.faq-act{margin-top:clamp(1.6rem,3vw,2.4rem)}
+/* ============================================================
+   F&Q
+   Un panel con seis filas separadas por filetes. Sin fondos de color: el
+   color no agrupaba ni jerarquizaba, solo rotaba, y competia con los CTA.
+   Queda un unico acento —la barra de verde agua en el canto de la fila
+   abierta— y el resto es tipografia y aire.
+   ============================================================ */
+.qas{
+  background:var(--panel);border:1px solid var(--line-card);
+  border-radius:var(--r);overflow:hidden;
+}
+.qa{position:relative;transition:background-color 420ms var(--ease-out)}
+.qa + .qa{border-top:1px solid var(--line)}
+.qa summary{
+  list-style:none;cursor:pointer;
+  display:grid;grid-template-columns:auto 1fr auto;align-items:center;
+  gap:clamp(.8rem,1.6vw,1.2rem);
+  padding:clamp(.85rem,1.7vw,1.15rem) clamp(1.15rem,2.4vw,1.7rem);
+  transition:background-color 420ms var(--ease-out),color 420ms var(--ease-out);
+}
+.qa summary::-webkit-details-marker{display:none}
+/* El numero da orden y textura sin meter color: seis preguntas sueltas se
+   leen como una lista, seis numeradas se leen como un indice. */
+.qa-n{
+  font-family:var(--font-body);font-size:.72rem;letter-spacing:.08em;
+  color:var(--accent);opacity:.45;transition:opacity 420ms var(--ease-soft);
+}
+.qa[open] .qa-n{opacity:1}
+/* La barra de acento: siempre esta, escalada a cero. Al abrir crece desde el
+   centro y recorre la fila entera, pregunta y respuesta. */
+.qa::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:3px;z-index:1;
+  background:var(--tint-1);transform:scaleY(0);transform-origin:center;
+  transition:transform 480ms var(--ease-out);
+}
+.qa[open]::before{transform:scaleY(1)}
+/* El fondo va en la fila, no en el sumario: si solo se tinta la pregunta, la
+   respuesta queda flotando sobre el blanco y el bloque abierto se parte. */
+.qa[open]{background:var(--surface)}
+@media (hover:hover) and (pointer:fine){
+  .qa:not([open]):hover{background:var(--surface)}
+}
+.qa summary:focus-visible{outline:2px solid var(--accent);outline-offset:-3px}
+.qa-q{
+  font-family:var(--font-display);font-weight:500;
+  font-size:clamp(1rem,1.25vw,1.12rem);line-height:1.35;
+  transition:color 420ms var(--ease-soft);
+}
+.qa[open] .qa-q{color:var(--accent)}
+.qa-mk{
+  width:14px;height:14px;flex-shrink:0;color:var(--text-3);
+  transition:transform 480ms var(--ease-io),color 420ms var(--ease-out);
+}
+.qa[open] .qa-mk{transform:rotate(180deg);color:var(--accent)}
+.qa-a{
+  padding:.15rem clamp(1.15rem,2.4vw,1.7rem) clamp(1.1rem,2.2vw,1.5rem);
+  /* Alineada con la pregunta, no con el numero. */
+  padding-left:calc(clamp(1.15rem,2.4vw,1.7rem) + 1.55rem + clamp(.8rem,1.6vw,1.2rem));
+  max-width:78ch;
+}
+.qa-a p{color:var(--text-2);font-size:.96rem;line-height:1.62}
+/* El desplegado se anima de verdad. Donde no hay soporte, abre y cierra igual,
+   sin transicion: la funcion nunca depende del efecto. */
+@supports (interpolate-size:allow-keywords){
+  :root{interpolate-size:allow-keywords}
+  .qa::details-content{
+    block-size:0;overflow:clip;opacity:0;
+    transition:block-size 460ms var(--ease-io),opacity 320ms ease,
+               content-visibility 460ms allow-discrete;
+  }
+  .qa[open]::details-content{block-size:auto;opacity:1}
+}
+.faq-act{margin-top:clamp(1.4rem,2.6vw,2rem)}
+/* Animacion del despliegue donde el navegador la soporta. Sin soporte abre de
+   golpe, que es el comportamiento nativo de toda la vida y no rompe nada. */
+@supports (interpolate-size: allow-keywords) {
+  :root{interpolate-size:allow-keywords}
+  @media (prefers-reduced-motion:no-preference){
+    .qa::details-content{
+      block-size:0;overflow:hidden;
+      transition:block-size 300ms var(--ease-out),content-visibility 300ms allow-discrete;
+    }
+    .qa[open]::details-content{block-size:auto}
+  }
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+/* El footer cierra la pagina: negro de marca, con el mismo peso que el header.
+   Borde recto de lado a lado, sin esquinas redondeadas: es el final de la
+   pagina, no un panel apoyado sobre otra seccion. El redondeo lo hacia leer
+   como una tarjeta mas y dejaba dos cunas de gris en las puntas. Se probo
+   tambien con degradado de blanco a negro y quedaba como una nube gris: una
+   rampa larga parece un error de render. */
+.ft{
+  background:#0f0f12;
+  padding-block:clamp(4.5rem,9vh,7rem) 4rem;
+  /* La barra redefine sus tokens, igual que el header sobre el video */
+  --text:#ffffff;
+  --text-2:rgba(255,255,255,.74);
+  --text-3:rgba(255,255,255,.56);
+  /* El violeta de marca no se lee sobre negro, asi que el footer necesita otro
+     acento. Ahora es el lila, que vuelve a la paleta: 13,4:1 sobre el negro del
+     pie, contra 15,6:1 del verde agua que habia antes. Los dos pasan de sobra;
+     el lila ademas no compite con el verde de los CTA. Solo pinta el hover de
+     los enlaces. */
+  --accent:var(--tint-3);
+  --on-accent:#101010;
+  --accent-soft:rgba(255,255,255,.12);
+  --line:rgba(255,255,255,.16);
+  color:var(--text);
+}
+.ft-cols{
+  display:grid;grid-template-columns:1.5fr repeat(4,1fr);gap:2.5rem 2rem;
+  padding-bottom:3.5rem;border-bottom:1px solid var(--line);
+}
+.ft h4{font-family:var(--font-body);font-size:.7rem;font-weight:500;text-transform:uppercase;letter-spacing:.18em;color:var(--text-3);margin-bottom:1.1rem}
+.ft ul{list-style:none;margin:0;padding:0;display:grid;gap:.62rem}
+.ft ul a{font-size:.92rem;color:var(--text-2);transition:color 420ms var(--ease-out)}
+@media (hover:hover){.ft ul a:hover{color:var(--accent)}}
+/* El isotipo del pie va en lila y la palabra en blanco. El isotipo toma
+   --accent y el pie ya redefine el acento en lila para el hover de los
+   enlaces, asi que hereda solo; la regla queda escrita igual para que se vea
+   que es una decision y no un efecto de rebote. 13,1:1 sobre el negro del
+   pie. */
+.logo-ft{height:38px;--accent:var(--tint-3)}
+.ft-brand p{font-size:.92rem;color:var(--text-2);max-width:32ch;margin-top:1.2rem}
+.lang-ft{display:inline-flex;margin-top:1.5rem}
+.ft-legal{display:flex;flex-wrap:wrap;gap:1.4rem;justify-content:space-between;padding-top:1.8rem;font-size:.8rem;color:var(--text-3)}
+.ft-legal nav{display:flex;flex-wrap:wrap;gap:1.4rem}
+@media (hover:hover){.ft-legal a:hover{color:var(--accent)}}
+@media (max-width:900px){.ft-cols{grid-template-columns:1fr 1fr;gap:2.2rem 1.5rem}.logo-ft{height:32px}}
+@media (max-width:520px){.ft-cols{grid-template-columns:1fr}}
+
+/* ============================================================
+   RAIL DE PROGRESSION (hexagones)
+   ============================================================ */
+/* Filet vertical avec un segment actif. Le logo ne se repete pas six fois
+   sur le cote : une marque qu'on repete cesse d'etre une marque. */
+/* A un tercio del margen, no a la mitad: es un indicador anclado a la ventana,
+   no una columna de contenido. Pegado al texto competia con la lectura, y en
+   pantallas anchas el margen crece pero el riel se queda junto al borde, que es
+   donde tiene que estar. El minimo evita que toque el borde a 1241px, el ancho
+   mas angosto en el que todavia se muestra. */
+/* El rail cruza toda la pagina, y la pagina no tiene un solo fondo: arranca
+   sobre el video, sigue sobre blanco y gris, y termina sobre el negro del pie.
+   Un color fijo desaparece en alguna de esas bandas.
+   La solucion no es subir el contraste a lo bruto: el rail invierte sus
+   colores cuando el centro de la ventana —que es donde vive— cae sobre una
+   banda oscura. Lo decide un observer con rootMargin -50%/-50%, que dispara
+   exactamente cuando la banda cubre la linea media. El cambio va con
+   transicion, asi que al cruzar el borde del pie el rail se aclara en vez de
+   saltar. */
+.rail{
+  position:fixed;left:max(16px,calc(var(--pad) / 3));top:50%;transform:translateY(-50%);
+  z-index:50;display:grid;gap:6px;
+  /* Sobre claro el rail es violeta de marca: al 50 % de opacidad no se veia.
+     Las inactivas suben a .62 y engordan medio pixel. */
+  --rail-off:rgba(134,134,224,.6);
+  --rail-on:var(--lilac-deep);
+}
+.rail[data-dark="true"]{
+  --rail-off:rgba(210,210,255,.55);
+  --rail-on:var(--tint-3);
+}
+.rail a{display:block;width:20px;height:26px;position:relative}
+/* Sin contorno ni halo: una marca limpia. El contraste lo da la inversion por
+   banda, no un resplandor alrededor. */
+.rail a::before{
+  content:"";position:absolute;left:9px;top:0;bottom:0;width:2.5px;border-radius:2px;
+  background:var(--rail-off);
+  transition:background-color 700ms var(--ease-out),transform 420ms var(--ease-out);
+  transform-origin:center;
+}
+.rail a[aria-current="true"]::before{background:var(--rail-on);transform:scaleX(2)}
+@media (hover:hover){.rail a:hover::before{background:var(--rail-on)}}
+/* El rail no entra en el pie: se apoya en el. A medida que el pie sube, el
+   rail se levanta y se desvanece, como si lo empujara. El movimiento va atado
+   al scroll y no a un reloj: la linea de tiempo es la entrada del pie en la
+   ventana, asi que el rail sube exactamente al ritmo al que el usuario
+   scrollea, y si vuelve para arriba, baja.
+   El translate del centrado vive en 'transform' y el del empuje en
+   'translate', que son dos propiedades distintas y se componen: por eso la
+   animacion puede tocar una sin pisar la otra. */
+@supports (animation-timeline:view()){
+  @media (prefers-reduced-motion:no-preference){
+    :root{timeline-scope:--ftView}
+    .ft{view-timeline:--ftView block}
+    .rail{
+      animation:railLift linear both;
+      animation-timeline:--ftView;
+      animation-range:entry 18% entry 82%;
+    }
+  }
+}
+@keyframes railLift{
+  from{translate:0 0;opacity:1}
+  to{translate:0 -190px;opacity:0}
+}
+/* Sin soporte de linea de tiempo, el mismo efecto por clase: el observer de
+   main.js marca el rail cuando el pie asoma y la transicion hace el resto. */
+@supports not (animation-timeline:view()){
+  .rail{transition:translate 620ms var(--ease-out),opacity 620ms var(--ease-out)}
+  .rail[data-lift="true"]{translate:0 -190px;opacity:0}
+}
+@media (max-width:1240px){.rail{display:none}}
+
+/* ---------- REVEAL ---------- */
+/* El reveal va atado al scroll donde el navegador lo soporta: el elemento
+   avanza con la rueda en vez de aparecer de golpe al cruzar un umbral. Eso es
+   lo que hace que el scroll se sienta continuo y no por escalones.
+   El IntersectionObserver queda de reserva para los navegadores sin soporte. */
+/* La transicion del reveal de reserva se declara SOLO en los elementos que el
+   JavaScript marca con data-hidden. Estaba en .rv a secas y, dentro del
+   @supports, se anulaba con transition:none — que no anula solo el reveal:
+   anula TODAS las transiciones del elemento. Como las celdas del bento y las
+   tarjetas del blog son .rv, se quedaban sin transicion de salida en el hover
+   y volvian de golpe. */
+.rv[data-hidden]{transition:opacity 700ms var(--ease-out),transform 700ms var(--ease-out)}
+.rv[data-hidden="true"]{opacity:0;transform:translateY(22px)}
+@supports (animation-timeline:view()){
+  @media (prefers-reduced-motion:no-preference){
+    .rv{
+      animation:riseIn linear both;
+      animation-timeline:view();
+      /* 'cover' y no 'entry': el tramo de entrada de un elemento chico dura lo
+         que mide el elemento, o sea nada, y la animacion terminaba antes de
+         que estuviera bien a la vista. 'cover' mide el paso completo por la
+         ventana, asi que el gesto se ve mientras el elemento sube. */
+      animation-range:cover 4% cover 20%;
+    }
+    .rv[data-hidden="true"]{opacity:1;transform:none}
+  }
+}
+/* La opacidad llega a 1 al 55% del recorrido y el desplazamiento sigue hasta
+   el final. Lo que estorba la lectura no es que algo se mueva un poco, es tener
+   que leer texto a medio opacar: asi el texto es legible enseguida y lo unico
+   que queda por resolverse son los ultimos pixeles del movimiento. */
+@keyframes riseIn{from{opacity:0;transform:translateY(18px)}55%{opacity:1}to{opacity:1;transform:none}}
+
+/* ---------- IMPRONTA DE CADA SECCION ----------
+   Lo comun es el encabezado: todos los h2 entran con riseIn, y eso mantiene la
+   pagina hablando un solo idioma. Lo que cambia es el contenido de cada
+   seccion, y no por variar: cada gesto sale de la forma de lo que anima.
+
+     B2B         mosaicos que aterrizan en la grilla (y + escala, escalonado)
+     Clientes    pasar lista: solo opacidad, de izquierda a derecha
+     B2C         filas que se escriben desde el margen (eje horizontal)
+     Nosotras    los retratos se descubren de arriba abajo (sin desplazamiento)
+     Recursos    cascada: cada tarjeta viene de mas lejos que la anterior
+     Contacto    un solo bloque, sin escalonar, recorrido largo
+
+   El escalonado no se hace con animation-delay: con animation-timeline el delay
+   se ignora. Se hace corriendo el animation-range de cada elemento, que ademas
+   ata el retardo al scroll y no al reloj. */
+@supports (animation-timeline:view()){
+  @media (prefers-reduced-motion:no-preference){
+
+    /* --- B2B : les tuiles se posent --- */
+    /* Todas arrancan en 'cover 0' y terminan escalonadas: el orden se lee en
+       los finales, no en los arranques, y asi ninguna sigue moviendose cuando
+       el CTA de la seccion ya asomo por abajo. En ese instante la tuiles estan
+       al 18,4 % de su propio paso por la ventana (medido a 1920x1080, que es
+       el alto que da el techo mas bajo): 18 % es el tope del conjunto. */
+    .b2b-list{animation-name:calmIn;animation-range:cover 0% cover 10%}
+    .b2b-row{animation:settleIn linear both;animation-timeline:view()}
+    .b2b-row:nth-child(1){animation-range:cover 0% cover 11%}
+    .b2b-row:nth-child(2){animation-range:cover 0% cover 13%}
+    .b2b-row:nth-child(3){animation-range:cover 0% cover 15%}
+    .b2b-row:nth-child(4){animation-range:cover 0% cover 16.5%}
+    .b2b-row:nth-child(5){animation-range:cover 0% cover 18%}
+
+    /* --- Clients : on fait l'appel ---
+       Siete marcas heterogeneas moviendose a la vez es ruido. Solo aparecen. */
+    .clients .logos{animation:none}
+    .clients .logos li{animation:fadeIn linear both;animation-timeline:view()}
+    .clients .logos li:nth-child(1){animation-range:cover 6% cover 16%}
+    .clients .logos li:nth-child(2){animation-range:cover 9% cover 19%}
+    .clients .logos li:nth-child(3){animation-range:cover 12% cover 22%}
+    .clients .logos li:nth-child(4){animation-range:cover 15% cover 25%}
+    .clients .logos li:nth-child(5){animation-range:cover 18% cover 28%}
+    .clients .logos li:nth-child(6){animation-range:cover 21% cover 31%}
+    .clients .logos li:nth-child(7){animation-range:cover 24% cover 34%}
+
+    /* --- B2C : el panel se arma fila por fila ---
+       Ya no son renglones sueltos sobre el fondo sino un panel, asi que el
+       gesto es el mismo que en la F&Q: entra el panel como bloque y dentro
+       las filas se encienden en orden. El trazado de filetes de antes ya no
+       tiene sentido —los filetes ahora son bordes internos del panel— y
+       ademas pisaba el ::before del acento. */
+    #particuliers .rows{animation-name:calmIn;animation-range:cover 0% cover 14%}
+    #particuliers .row-btn{animation:fadeIn linear both;animation-timeline:view()}
+    #particuliers .row:nth-of-type(1) .row-btn{animation-range:cover 0% cover 26%}
+    #particuliers .row:nth-of-type(2) .row-btn{animation-range:cover 0% cover 22%}
+    #particuliers .row:nth-of-type(3) .row-btn{animation-range:cover 0% cover 18%}
+    #particuliers .row:nth-of-type(4) .row-btn{animation-range:cover 0% cover 14%}
+    #particuliers .row:nth-of-type(5) .row-btn{animation-range:cover 0% cover 9%}
+    #particuliers .row:nth-of-type(6) .row-btn{animation-range:cover 0% cover 4.5%}
+    #particuliers .b2c-media{animation-name:wipeInRight;animation-range:cover 4% cover 22%}
+
+    /* --- A propos : rien ne bouge, tout apparait ---
+       Sin foto a sangre, la seccion es una lista numerada: un fundido simple
+       es el unico gesto que no compite con la numeracion. */
+    #about .rv{animation-name:fadeIn}
+
+    /* --- Ressources : la cascade ---
+       Cada tarjeta viene de mas lejos que la anterior y todas terminan a la
+       vez: llegan en abanico y se emparejan. */
+    .res .art:nth-child(1){animation-name:cascade1;animation-range:cover 5% cover 21%}
+    .res .art:nth-child(2){animation-name:cascade2;animation-range:cover 5% cover 24%}
+    .res .art:nth-child(3){animation-name:cascade3;animation-range:cover 5% cover 27%}
+
+    /* --- F&Q : el panel se arma fila por fila ---
+       Ya no son seis cajas sueltas, asi que no pueden entrar cada una por un
+       lado: eso rompia la unidad del panel. Entra el panel como bloque y
+       dentro las filas se encienden en orden. El gesto es de armado, no de
+       llegada.
+       Los topes siguen la misma cuenta de siempre: en el instante en que el
+       CTA asoma por abajo la ultima fila esta al 8,6 % de su paso por la
+       ventana, asi que nada sigue animandose cuando el boton ya se ve. */
+    #faq .qas{animation-name:calmIn;animation-range:cover 0% cover 12%}
+    #faq .qa summary{animation:fadeIn linear both;animation-timeline:view()}
+    #faq .qa:nth-child(1) summary{animation-range:cover 0% cover 11%}
+    #faq .qa:nth-child(2) summary{animation-range:cover 0% cover 10.4%}
+    #faq .qa:nth-child(3) summary{animation-range:cover 0% cover 9.8%}
+    #faq .qa:nth-child(4) summary{animation-range:cover 0% cover 9.2%}
+    #faq .qa:nth-child(5) summary{animation-range:cover 0% cover 8.6%}
+    #faq .qa:nth-child(6) summary{animation-range:cover 0% cover 8%}
+
+    /* --- Contact : un seul bloc ---
+       Un formulario que aparece campo por campo se siente inestable. Entra
+       entero, despacio, y con el recorrido mas largo de la pagina. */
+    #contact .rv,#contact form{animation-name:calmIn;animation-range:cover 2% cover 22%}
+  }
+}
+/* Cada gesto se apoya en una propiedad distinta: escala, opacidad, eje
+   horizontal, eje vertical, recorte. Variar solo la distancia de un mismo
+   desplazamiento no se percibe; cambiar que propiedad se mueve, si. */
+@keyframes settleIn{from{opacity:0;transform:translateY(8px) scale(.955)}55%{opacity:1}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes drawLine{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes slideInL{from{opacity:0;transform:translateX(-52px)}55%{opacity:1}to{opacity:1;transform:none}}
+@keyframes slideInR{from{opacity:0;transform:translateX(52px)}55%{opacity:1}to{opacity:1;transform:none}}
+@keyframes wipeInRight{from{opacity:0;transform:translateX(38px)}55%{opacity:1}to{opacity:1;transform:none}}
+@keyframes cascade1{from{opacity:0;transform:translateY(14px)}55%{opacity:1}to{opacity:1;transform:none}}
+@keyframes cascade2{from{opacity:0;transform:translateY(26px)}55%{opacity:1}to{opacity:1;transform:none}}
+@keyframes cascade3{from{opacity:0;transform:translateY(40px)}55%{opacity:1}to{opacity:1;transform:none}}
+@keyframes calmIn{from{opacity:0;transform:translateY(24px)}55%{opacity:1}to{opacity:1;transform:none}}
+
+/* ---------- Lo que ya esta en pantalla al cargar ----------
+   Una animacion atada al scroll no sirve para lo que ya se ve: su progreso
+   depende de cuanto scrolleaste, asi que si el elemento entra en la primera
+   pantalla arranca a medio camino y se queda ahi hasta que el usuario mueve
+   la rueda. Eso era lo que dejaba la franja de marcas invisible.
+
+   No se cambia la linea de tiempo de la animacion: eso deja a Chromium con
+   animaciones en estado 'running' y currentTime null, porque el elemento
+   conserva la ViewTimeline inactiva. Se cancela la animacion y se hace el
+   fundido con una TRANSICION, que empieza y termina cuando uno dice.
+   El escalonado va en el delay y termina alrededor del segundo. */
+@supports (animation-timeline:view()){
+  @media (prefers-reduced-motion:no-preference){
+    [data-onload]{
+      animation:none!important;
+      opacity:0;translate:none;transform:none;
+      transition:opacity 520ms var(--ease-out) var(--dl,0ms);
+    }
+    [data-onload][data-in]{opacity:1}
+  }
+}
+
+/* Impresion y PDF: sin timeline de scroll, todo visible */
+@media print{
+  .rv,.logos li,.row{
+    animation:none!important;opacity:1!important;transform:none!important;clip-path:none!important}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .rv[data-hidden="true"]{opacity:1;transform:none}
+  .hero{position:relative}
+}
+
+/* ============================================================
+   LANDINGS — HERO INTERIOR
+   Misma familia que el hero de la home (foto a sangre, velo, texto blanco
+   encima) pero a media altura y sin sticky: una pagina interior no puede
+   gastar una pantalla entera antes de decir de que habla. El velo esta
+   calculado contra el contraste real del texto, no puesto a ojo.
+   ============================================================ */
+.lp-hero{
+  position:relative;overflow:clip;background:#0b0b14;
+  display:flex;align-items:flex-end;
+  /* min-height y no height: en telefono el titular de tres lineas mas el
+     parrafo son mas altos que el 66 svh y con una altura fija el texto se
+     metia debajo de la barra fija. Asi el hero crece con su contenido y la
+     altura pedida es un piso, no un techo. */
+  min-height:clamp(460px,66svh,660px);
+  padding-top:calc(var(--nav-h) + clamp(1.2rem,3.5vh,2.2rem));
+}
+.lp-hero-media{position:absolute;inset:0;z-index:0}
+.lp-hero-media img{width:100%;height:100%;object-fit:cover;object-position:50% 38%}
+.lp-hero-media::after{
+  content:"";position:absolute;inset:0;
+  background:
+    /* Mas claro que antes: la foto se ve. El velo baja de .9/.8/.68/.5/.4 a
+       .74/.64/.54/.46/.42. Mas claro no se puede: el rotulo verde agua, que
+       es el texto mas pequeno y el que menos contrasta, cae por debajo de
+       4,5:1. Medido ocultando el texto y muestreando el fondo real, no a ojo:
+       la parte de arriba del hero es la clara de la foto y es justo donde
+       viven el rotulo y el titular. */
+    linear-gradient(to top,rgba(7,7,18,.74) 0%,rgba(7,7,18,.64) 30%,rgba(7,7,18,.54) 58%,rgba(7,7,18,.46) 80%,rgba(7,7,18,.42) 100%),
+    /* El texto vive en la columna izquierda, asi que el refuerzo va ahi y no
+       sobre toda la imagen: el rotulo y el titular estan arriba, donde el velo
+       vertical es mas flojo, y con solo el vertical el rotulo quedaba en
+       3,79:1. Medido, no a ojo. */
+    linear-gradient(to right,rgba(14,14,30,.5),rgba(14,14,30,0) 64%);
+}
+.lp-hero-in{position:relative;z-index:1;width:100%;padding-bottom:clamp(2.4rem,6vh,4rem)}
+/* Blanco pleno: al 82 % el rotulo caia a 4,5:1 justo, y es texto chico. */
+.lp-hero .label{color:var(--aqua)}
+.lp-hero h1{font-size:clamp(1.95rem,4.4vw,3.6rem);max-width:19ch;color:#fff;margin-top:.9rem;
+  animation:fadeUp 800ms var(--ease-out) both}
+.lp-hero .lead{max-width:60ch;margin-top:1.2rem;color:rgba(255,255,255,.88);
+  animation:fadeUp 800ms var(--ease-out) 200ms both}
+.lp-hero-ctas{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.8rem;
+  animation:fadeUp 800ms var(--ease-out) 320ms both}
+/* Los dos botones del hero van en blanco, como en la home: el violeta de marca
+   sobre el pie del velo daba 1,05:1 y el boton desaparecia como forma. */
+
+/* Los mismos botones que el banner de la home: verde agua de marca sobre
+   fondo transparente. Las dos clases se igualan a proposito —aqui tampoco
+   hay un CTA que valga mas que el otro— y el color se escribe en los dos
+   estados porque si no gana el .btn-ghost:hover general, que pinta violeta
+   de marca y sobre el hero oscuro desaparece. */
+.lp-hero .btn,.lp-hero .btn-ghost{
+  background:rgba(85,255,210,.1);color:var(--aqua);border-color:var(--aqua);
+}
+@media (hover:hover) and (pointer:fine){
+  .lp-hero .btn:hover,.lp-hero .btn-ghost:hover{
+    background:rgba(85,255,210,.24);border-color:var(--aqua);color:var(--aqua);
+  }
+}
+
+/* ---------- Ritmo de fondos de las landings ----------
+   La misma logica que en la home: bloques largos de un color con rampas en
+   los bordes, nunca franjas sueltas. Una banda gris de 86px entre el hero
+   oscuro y una seccion blanca es una franja; el gris tiene que durar.
+
+     hero oscuro
+     blanco   -> marcas + cuerpo (la rampa al gris la hace el que se va)
+     gris     -> servicios + contacto
+     blanco   -> ultimo tramo de contacto, antes del corte al pie
+
+   Y como en la home, el primer bloque claro arranca con las esquinas
+   redondeadas sobre el hero: es lo que hace que la pagina se lea como una
+   hoja que sube por encima de la imagen. */
+.lp-hero + .clients{background:var(--ground)}
+#agilite{background:var(--ground)}
+/* Con la checklist la columna de texto crecio: el respiro de la seccion se
+   ajusta para que siga entrando entera en un portatil de 800. */
+#agilite{padding-block:clamp(2.4rem,5.2vh,3.8rem)}
+#services{background:var(--ground)}
+
+/* ============================================================
+   LANDINGS — BLOQUE PARTIDO (texto + foto al costado)
+   ============================================================ */
+.lp-split-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(1.8rem,4vw,4rem);align-items:center}
+.lp-split-txt h2{max-width:17em}
+/* El h2 y el parrafo se tocaban: el unico margen era el de .lead y aqui el
+   primer parrafo ya no es un .lead. */
+.lp-split-txt h2 + p{margin-top:1.2rem}
+.lp-split-txt .lead{margin-top:1.2rem}
+.lp-split-txt p + p{margin-top:1rem;color:var(--text-2)}
+.lp-split-act{margin-top:1.5rem}
+.lp-split-media{overflow:hidden;background:var(--surface);aspect-ratio:4/3;min-width:0}
+.lp-split-media img{width:100%;height:100%;object-fit:cover}
+@media (max-width:900px){
+  .lp-split-grid{grid-template-columns:1fr}
+  .lp-split-media{aspect-ratio:16/10}
+}
+
+/* ============================================================
+   LANDINGS — LISTA DE SERVICIOS
+   Cerrado: numero, titulo y la primera frase con el pie difuminado. Abierto:
+   el resto del texto y el CTA propio del servicio. El difuminado es una
+   mascara, no un degradado pintado encima: asi funciona sobre cualquier fondo
+   y no hay que repintarlo si la banda cambia de color.
+   ============================================================ */
+/* Sin acordeon: en una landing de servicios esconder el texto detras de un
+   clic es pedirle al visitante que trabaje para saber que vendemos. Los cinco
+   estan a la vista, cada uno en su caja, con el mismo lenguaje que el bento de
+   la home: fondo blanco sobre la banda gris, filete de caja y redondeo.
+   Dos columnas y el quinto a todo el ancho: cinco cajas en dos columnas dejan
+   un hueco, y un hueco en una grilla se lee como algo que falta. */
+.svc-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.svc-list > .svc:last-child{grid-column:1 / -1}
+#services{padding-block:clamp(2.8rem,6vh,4.6rem)}
+#services .sec-head{margin-bottom:clamp(1.3rem,2.4vw,2rem)}
+.svc{
+  display:grid;align-content:start;gap:.85rem;min-width:0;
+  background:var(--panel);border:1px solid var(--line-card);
+  border-radius:var(--r);padding:clamp(1.3rem,2.4vw,1.75rem);
+  box-shadow:0 0 0 0 rgba(0,0,0,0);
+  transition:translate 620ms var(--ease-soft),box-shadow 720ms var(--ease-soft),
+             border-color 560ms var(--ease-soft);
+}
+@media (hover:hover) and (pointer:fine){
+  .svc:hover{
+    translate:0 -6px;box-shadow:0 26px 48px -26px var(--shadow-a);
+    border-color:var(--line-strong);
+    transition:translate 560ms var(--ease-out),box-shadow 620ms var(--ease-out),
+               border-color 460ms var(--ease-out);
+  }
+}
+.svc-h{display:grid;grid-template-columns:auto 1fr;gap:.85rem;align-items:baseline}
+.svc-n{
+  font-family:var(--font-body);font-size:.72rem;letter-spacing:.08em;
+  color:var(--accent);opacity:.5;
+}
+.svc h3{font-weight:500;font-size:clamp(1.02rem,1.3vw,1.2rem);line-height:1.3;text-wrap:balance}
+.svc-b{display:grid;gap:.6rem;align-content:start;min-width:0}
+.svc-b p{color:var(--text-2);font-size:.94rem;line-height:1.66;max-width:62ch}
+/* El CTA de cada servicio es un enlace, no un boton: cinco botones seguidos
+   compiten entre si y con el CTA principal de la pagina. */
+.svc-cta{
+  justify-self:start;margin-top:.35rem;display:inline-flex;align-items:center;gap:.4em;
+  font-family:var(--font-display);font-weight:500;font-size:.92rem;color:var(--accent);
+  background-image:linear-gradient(currentColor,currentColor);
+  background-size:0% 1px;background-position:0 100%;background-repeat:no-repeat;
+  transition:background-size 620ms var(--ease-soft);
+}
+@media (hover:hover) and (pointer:fine){
+  .svc:hover .svc-cta{background-size:100% 1px;transition:background-size 520ms var(--ease-out)}
+  .svc:hover .svc-cta .arw{translate:4px 0}
+}
+.svc-cta .arw{transition:translate 520ms var(--ease-soft)}
+@media (max-width:820px){
+  .svc-list{grid-template-columns:1fr}
+}
+
+/* Animaciones propias de las landings. Mismo criterio que en la home: nada
+   puede seguir moviendose cuando el CTA de la seccion ya esta a la vista. */
+@supports (animation-timeline:view()){
+  @media (prefers-reduced-motion:no-preference){
+    .lp-split-media{animation-name:wipeInRight;animation-range:cover 4% cover 22%}
+    .svc-list{animation:none}
+    /* Los CTA de esta seccion viven dentro de cada ficha, asi que el limite no
+       es un boton sino la lista entera a la vista: en ese instante la ficha 1
+       esta al 34 % de su paso por la ventana y la 5 al 6 % (1920x1080, el alto
+       que da el techo mas bajo). Los topes se quedan por debajo. */
+    /* Igual que la F&Q y particulares: entra el panel como bloque y dentro
+       las filas se encienden en orden. */
+    .svc-list{animation-name:calmIn;animation-range:cover 0% cover 14%}
+    .svc{animation:fadeIn linear both;animation-timeline:view()}
+    .svc:nth-child(1){animation-range:cover 0% cover 22%}
+    .svc:nth-child(2){animation-range:cover 0% cover 18%}
+    .svc:nth-child(3){animation-range:cover 0% cover 14%}
+    .svc:nth-child(4){animation-range:cover 0% cover 10%}
+    .svc:nth-child(5){animation-range:cover 0% cover 5%}
+  }
+}
+
+/* ============================================================
+   LANDING PARTICULIERS — dos modos de acompanamiento
+   No son dos servicios equivalentes: son dos formas de trabajar, y la pagina
+   tiene que dejar claro cual es cual de un vistazo. Por eso van lado a lado y
+   no en una lista, y la de gestion completa lleva un tinte que la separa: es
+   la que la agencia quiere vender, y la unica diferencia de peso que hay
+   entre las dos.
+   El lenguaje de caja es el mismo del resto: fondo, filete y redondeo, con la
+   elevacion al pasar el mouse.
+   ============================================================ */
+.mode-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:start}
+.mode{
+  display:grid;align-content:start;gap:.9rem;min-width:0;
+  background:var(--panel);border:1px solid var(--line-card);
+  border-radius:var(--r);padding:clamp(1.4rem,2.6vw,2rem);
+  box-shadow:0 0 0 0 rgba(0,0,0,0);
+  transition:translate 620ms var(--ease-soft),box-shadow 720ms var(--ease-soft),
+             border-color 560ms var(--ease-soft);
+}
+@media (hover:hover) and (pointer:fine){
+  .mode:hover{
+    translate:0 -6px;box-shadow:0 26px 48px -26px var(--shadow-a);
+    border-color:var(--line-strong);
+    transition:translate 560ms var(--ease-out),box-shadow 620ms var(--ease-out),
+               border-color 460ms var(--ease-out);
+  }
+}
+/* El tinte no es decorativo: marca la opcion principal. Verde agua con texto
+   oscuro encima, que es donde ese color rinde. */
+.mode-hi{background:var(--tint-1);border-color:var(--tint-1);color:var(--tint-ink)}
+.mode-hi p,.mode-hi .mode-k{color:inherit;opacity:.82}
+.mode-hi .svc-cta{color:var(--tint-ink)}
+.mode-h{display:grid;gap:.5rem}
+.mode-k{
+  font-family:var(--font-body);font-size:.68rem;font-weight:500;
+  text-transform:uppercase;letter-spacing:.16em;color:var(--text-3);
+}
+.mode h3{font-weight:500;font-size:clamp(1.1rem,1.5vw,1.35rem);line-height:1.26}
+.mode > p{color:var(--text-2);font-size:.95rem;line-height:1.66}
+.mode-list{list-style:none;margin:.2rem 0 0;padding:0;display:grid;gap:.9rem}
+.mode-list li{padding-top:.9rem;border-top:1px solid var(--line)}
+.mode-hi .mode-list li{border-top-color:rgba(16,16,16,.16)}
+.mode-list b{
+  display:block;font-family:var(--font-display);font-weight:500;
+  font-size:.98rem;line-height:1.3;margin-bottom:.3rem;
+}
+.mode-list p{color:var(--text-2);font-size:.9rem;line-height:1.62}
+.mode-hi .mode-list p{color:inherit;opacity:.8}
+.mode .svc-cta{margin-top:.4rem}
+@media (hover:hover) and (pointer:fine){
+  .mode:hover .svc-cta{background-size:100% 1px;transition:background-size 520ms var(--ease-out)}
+  .mode:hover .svc-cta .arw{translate:4px 0}
+}
+@media (max-width:860px){.mode-grid{grid-template-columns:1fr}}
+
+/* El ritmo de fondos, con la misma logica que la home y que entreprises:
+   hero oscuro -> blanco (avis + approche) -> gris (servicios + contacto) ->
+   blanco antes del corte al pie. */
+#particuliers-lp{}
+.lp-hero + #avis{background:var(--ground)}
+#approche{background:var(--ground)}
+#services.svcs{background:var(--ground)}
+
+@supports (animation-timeline:view()){
+  @media (prefers-reduced-motion:no-preference){
+    .mode-grid{animation-name:calmIn;animation-range:cover 0% cover 14%}
+    .mode{animation:settleIn linear both;animation-timeline:view()}
+    .mode:nth-child(1){animation-range:cover 0% cover 16%}
+    .mode:nth-child(2){animation-range:cover 0% cover 12%}
+  }
+}
+
+/* ============================================================
+   PAGINAS SIN HERO DE IMAGEN (blog, articulo, videos)
+   ============================================================ */
+/* Estas paginas no tienen un hero oscuro a pantalla completa, asi que la
+   cabecera arranca solida (main.js lo resuelve cuando no hay centinela) y lo
+   unico que hace falta aqui es dejarle sitio a la barra fija. */
+.pg-head{
+  padding-top:calc(var(--nav-h) + clamp(2rem,5vh,3.6rem));
+  padding-bottom:clamp(1.6rem,3.4vh,2.6rem);
+}
+.pg-head .wrap{display:grid;gap:.95rem;justify-items:start}
+.pg-head h1{max-width:18em}
+.pg-head .lead{max-width:62ch}
+
+/* Fil d'Ariane. Visible y no solo en el JSON-LD: el BreadcrumbList que no se
+   corresponde con nada de la pagina es justo lo que Google marca como
+   estructurado enganioso. */
+.crumbs{
+  display:flex;flex-wrap:wrap;align-items:center;gap:.5em;
+  font-size:.8rem;color:var(--text-3);margin-bottom:.3rem;
+}
+.crumbs a{
+  color:var(--text-2);
+  background-image:linear-gradient(currentColor,currentColor);
+  background-size:0% 1px;background-position:0 100%;background-repeat:no-repeat;
+  transition:background-size 520ms var(--ease-soft),color 420ms var(--ease-soft);
+}
+@media (hover:hover){.crumbs a:hover{color:var(--text);background-size:100% 1px;transition:background-size 420ms var(--ease-out)}}
+.crumbs [aria-current="page"]{color:var(--text-3)}
+
+/* Enlace del titulo de una tarjeta de articulo: estira la zona clicable a la
+   tarjeta entera sin envolverla en un <a>, que es lo que convierte la foto y
+   el rotulo en parte del enlace para un lector de pantalla. */
+.art-lnk{color:inherit;text-decoration:none}
+.art-lnk::after{content:"";position:absolute;inset:0;z-index:2}
+
+.art-body{display:grid;gap:1.2rem;max-width:72ch}
+.art-fig{margin:0;overflow:hidden}
+.art-fig img{width:100%;height:auto}
+.art-back a{
+  font-family:var(--font-display);font-weight:500;font-size:.9rem;color:var(--accent);
+  background-image:linear-gradient(currentColor,currentColor);
+  background-size:0% 1px;background-position:0 100%;background-repeat:no-repeat;
+  transition:background-size 620ms var(--ease-soft);
+}
+@media (hover:hover){.art-back a:hover{background-size:100% 1px;transition:background-size 520ms var(--ease-out)}}
+
+/* ---------- Lista de videos ---------- */
+.vid-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:18px}
+.vid-item{
+  position:relative;overflow:hidden;background:var(--ground);
+  border:1px solid var(--line-card);box-shadow:0 0 0 0 rgba(0,0,0,0);
+  transition:translate 620ms var(--ease-soft),box-shadow 720ms var(--ease-soft),
+             border-color 560ms var(--ease-soft);
+}
+.vid-item>a{display:grid}
+.vid-th{margin:0;aspect-ratio:16/9;overflow:hidden;background:var(--surface-2);position:relative}
+.vid-th img{width:100%;height:100%;object-fit:cover;transition:scale 900ms var(--ease-soft)}
+/* Triangulo de lectura dibujado con bordes: ni una imagen ni un icono mas que
+   cargar para una sola forma. */
+.vid-th::after{
+  content:"";position:absolute;left:50%;top:50%;translate:-40% -50%;
+  border-style:solid;border-width:11px 0 11px 18px;
+  border-color:transparent transparent transparent #fff;
+  filter:drop-shadow(0 2px 10px rgba(8,8,18,.55));
+}
+.vid-b{display:grid;gap:.55rem;padding:1.25rem 1.35rem 1.4rem}
+.vid-b h2{font-size:1.08rem;line-height:1.3}
+.vid-b .rd-meta{font-size:.8rem;color:var(--text-3);display:flex;align-items:center;gap:.4rem}
+@media (hover:hover) and (pointer:fine){
+  .vid-item:hover{
+    translate:0 -6px;border-color:var(--aqua-deep);
+    box-shadow:0 26px 48px -26px var(--shadow-a);
+    transition:translate 560ms var(--ease-out),box-shadow 620ms var(--ease-out),
+               border-color 460ms var(--ease-out);
+  }
+  .vid-item:hover .vid-th img{scale:1.045;transition:scale 1200ms var(--ease-out)}
+}
+
+/* ---------- Pagina de un video ---------- */
+.vid-page{display:grid;gap:clamp(1.4rem,3vw,2.2rem);max-width:980px}
+.vid-player{width:100%;height:auto;display:block;background:#0b0b14;border:1px solid var(--line-card)}
+.vid-meta{
+  margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+  gap:1.1rem 1.6rem;border-top:1px solid var(--line);padding-top:1.2rem;
+}
+.vid-meta div{display:grid;gap:.25rem}
+.vid-meta dt{font-size:.7rem;text-transform:uppercase;letter-spacing:.17em;color:var(--text-3)}
+.vid-meta dd{margin:0;font-size:.98rem}
+
+/* El respiro entre la cabecera de pagina y el primer bloque sale de las dos
+   reglas a la vez y se juntaba demasiado aire. La cabecera ya respira; el
+   bloque que la sigue arranca antes. */
+.pg-head + .sec{padding-top:clamp(.8rem,2vh,1.6rem)}
+
+
+/* ============================================================
+   LANDING ENTREPRISES — anadidos
+   ============================================================ */
+/* ---------- Checklist "Ce que vous y gagnez" ---------- */
+/* Sustituye a un parrafo que decia cuatro cosas seguidas. Cada beneficio con
+   su titulo y su linea: se escanea sin leerlo entero, que es para lo que
+   sirve una lista. La marca es un tilde dibujado con dos bordes, no un
+   caracter: un ✓ de texto cambia de forma con la fuente y no se alinea. */
+.chk-h{
+  margin-top:.4rem;font-family:var(--font-body);font-size:.7rem;font-weight:500;
+  text-transform:uppercase;letter-spacing:.19em;color:var(--aqua-ink);
+}
+.chk{list-style:none;margin:.8rem 0 0;padding:0;display:grid;gap:.75rem}
+.chk li{position:relative;padding-left:1.9rem}
+.chk li::before{
+  content:"";position:absolute;left:.15rem;top:.42em;
+  width:.62em;height:.34em;
+  border-left:2px solid var(--aqua-deep);border-bottom:2px solid var(--aqua-deep);
+  rotate:-45deg;
+}
+.chk b{
+  display:block;font-family:var(--font-display);font-weight:500;
+  font-size:.98rem;line-height:1.28;margin-bottom:.1rem;
+}
+.chk span{display:block;color:var(--text-2);font-size:.89rem;line-height:1.5}
+
+/* ---------- Servicios en acordeon ----------
+   Una columna, no dos: cerradas son filas de una linea y una rejilla de dos
+   columnas con filas de distinto alto se descuadra en cuanto se abre una.
+   El panel y los filetes son los mismos de la F&Q y de particulares; lo que
+   distingue a este es la linea de resumen. */
+.svc-list{
+  display:block;background:var(--panel);border:1px solid var(--line-card);
+  border-radius:var(--r);overflow:hidden;--row-line:rgba(32,32,69,.09);
+}
+.svc{
+  display:block;background:none;border:0;border-radius:0;padding:0;
+  box-shadow:none;transition:background-color 460ms var(--ease-soft);
+}
+.svc + .svc{border-top:1px solid var(--row-line)}
+.svc > summary{
+  list-style:none;cursor:pointer;
+  display:grid;grid-template-columns:2.6rem 1fr auto;
+  column-gap:.6rem;row-gap:.25rem;align-items:baseline;
+  padding:clamp(.9rem,1.7vw,1.15rem) clamp(1.1rem,2.2vw,1.5rem);
+}
+.svc > summary::-webkit-details-marker{display:none}
+.svc > summary::marker{content:""}
+.svc .svc-n{grid-column:1;grid-row:1;font-family:var(--font-body);font-size:.72rem;letter-spacing:.08em;color:var(--aqua-deep)}
+.svc-t{
+  grid-column:2;grid-row:1;font-family:var(--font-display);font-weight:500;
+  font-size:clamp(1rem,1.25vw,1.14rem);line-height:1.3;
+  transition:color 460ms var(--ease-soft);
+}
+/* UNA linea y lo que sobre se corta: cerrado, el servicio se presenta; no se
+   lee. Al abrir, el mismo texto aparece completo dentro del cuerpo. */
+.svc-one{
+  grid-column:2;grid-row:2;color:var(--text-2);font-size:.9rem;line-height:1.5;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  transition:opacity 320ms var(--ease-soft);
+}
+.svc-more{
+  grid-column:3;grid-row:1;display:inline-flex;align-items:center;gap:.4em;
+  font-family:var(--font-display);font-weight:500;font-size:.82rem;
+  color:var(--text-3);white-space:nowrap;
+  transition:color 460ms var(--ease-soft);
+}
+/* "Voir plus" / "Voir moins" son dos <span> en el HTML y no un ::before con
+   content: el texto de un pseudoelemento no lo ve el extractor de cadenas y
+   esas dos palabras se quedarian sin traducir en /en/ y /es/. */
+.svc-less-t{display:none}
+.svc[open] > summary .svc-more-t{display:none}
+.svc[open] > summary .svc-less-t{display:inline}
+.svc-mk{width:13px;height:13px;transition:rotate 520ms var(--ease-out)}
+.svc[open] > summary .svc-mk{rotate:180deg}
+.svc[open] > summary .svc-one{display:none}
+.svc[open] > summary .svc-t{color:var(--accent)}
+.svc[open]{background:var(--surface)}
+.svc > summary:focus-visible{outline:2px solid var(--accent);outline-offset:-3px}
+@media (hover:hover) and (pointer:fine){
+  .svc:not([open]):hover{background:color-mix(in srgb,var(--surface) 55%,transparent)}
+  .svc:not([open]):hover .svc-t,.svc:hover .svc-more{color:var(--accent)}
+}
+.svc-b{
+  display:grid;gap:.6rem;align-content:start;min-width:0;
+  padding:0 clamp(1.1rem,2.2vw,1.5rem) clamp(1rem,2vw,1.3rem) calc(2.6rem + clamp(1.1rem,2.2vw,1.5rem) + .6rem);
+}
+/* Primer parrafo del cuerpo = la misma frase del resumen. Cerrado se ve
+   recortada arriba, abierto se ve entera aqui; nunca las dos a la vez. */
+@media (max-width:620px){
+  .svc > summary{grid-template-columns:2.2rem 1fr;row-gap:.35rem}
+  .svc-more{grid-column:2;grid-row:3;justify-self:start}
+  .svc-b{padding-left:calc(2.2rem + clamp(1.1rem,2.2vw,1.5rem) + .6rem)}
+}
+/* Apertura animada donde el navegador lo soporta; donde no, abre de golpe,
+   que es exactamente lo que hacia <details> antes de existir esta regla. */
+@supports (interpolate-size:allow-keywords){
+  .svc::details-content{
+    block-size:0;overflow:clip;opacity:0;
+    transition:block-size 520ms var(--ease-io),opacity 420ms var(--ease-soft),content-visibility 520ms allow-discrete;
+  }
+  .svc[open]::details-content{block-size:auto;opacity:1}
+}
+
+/* ---------- Types de visa ---------- */
+/* Dos filas, dos pesos. Arriba, lo que se puede obtener: cajas en el gris de
+   marca, icono en verde agua. Abajo, lo que se puede hacer: las unicas cajas
+   macizas de la pagina, porque son los tres CTA. La diferencia de peso dice
+   cual es informacion y cual es accion sin un rotulo que lo explique. */
+.vt-grid,.va-grid{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.vt-grid{grid-template-columns:repeat(5,minmax(0,1fr))}
+.va-grid{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:14px}
+.vt,.va{min-width:0}
+.vt{
+  display:grid;justify-items:center;align-content:start;gap:.85rem;
+  text-align:center;background:var(--surface);border:1px solid var(--line-card);
+  border-radius:var(--r);padding:clamp(1.3rem,2.4vw,1.7rem) clamp(.9rem,1.8vw,1.2rem);
+  box-shadow:0 0 0 0 rgba(0,0,0,0);
+  transition:translate 620ms var(--ease-soft),box-shadow 720ms var(--ease-soft),
+             border-color 560ms var(--ease-soft);
+}
+.vt-i{width:26px;height:26px;color:var(--aqua-deep);transition:color 460ms var(--ease-soft)}
+.vt span{font-family:var(--font-display);font-weight:500;font-size:.95rem;line-height:1.3;text-wrap:balance}
+@media (hover:hover) and (pointer:fine){
+  .vt:hover{translate:0 -6px;border-color:var(--aqua-deep);
+    box-shadow:0 26px 48px -26px var(--shadow-a);
+    transition:translate 560ms var(--ease-out),box-shadow 620ms var(--ease-out),
+               border-color 460ms var(--ease-out)}
+}
+.va > a{
+  display:grid;justify-items:center;align-content:center;gap:.75rem;height:100%;
+  text-align:center;background:var(--fill);color:var(--fill-ink);
+  border:1px solid var(--fill);border-radius:var(--r);
+  padding:clamp(1.3rem,2.4vw,1.7rem) clamp(.9rem,1.8vw,1.2rem);
+  box-shadow:0 0 0 0 rgba(0,0,0,0);
+  transition:translate 620ms var(--ease-soft),box-shadow 720ms var(--ease-soft),
+             background-color 560ms var(--ease-soft);
+}
+.va-i{width:26px;height:26px;color:var(--aqua)}
+.va span{font-family:var(--font-display);font-weight:500;font-size:1rem;line-height:1.3}
+@media (hover:hover) and (pointer:fine){
+  .va > a:hover{translate:0 -6px;background:var(--fill-hi);
+    box-shadow:0 26px 48px -26px var(--shadow-a);
+    transition:translate 560ms var(--ease-out),box-shadow 620ms var(--ease-out),
+               background-color 460ms var(--ease-out)}
+}
+@media (max-width:1080px){.vt-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:760px){
+  .vt-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .va-grid{grid-template-columns:1fr}
+}
+
+@supports (animation-timeline:view()){
+  @media (prefers-reduced-motion:no-preference){
+    /* El tope lo marca la fila de CTA: nada se mueve cuando ya esta a la vista. */
+    .vt-grid{animation-name:calmIn;animation-range:cover 0% cover 10%}
+    .vt{animation:settleIn linear both;animation-timeline:view()}
+    .vt:nth-child(1){animation-range:cover 0% cover 10%}
+    .vt:nth-child(2){animation-range:cover 0% cover 12%}
+    .vt:nth-child(3){animation-range:cover 0% cover 14%}
+    .vt:nth-child(4){animation-range:cover 0% cover 16%}
+    .vt:nth-child(5){animation-range:cover 0% cover 18%}
+    .va-grid{animation-name:calmIn;animation-range:cover 0% cover 12%}
+  }
+}
+
+
+/* ---------- "Ils nous font confiance" como seccion entera ----------
+   Variante de la franja de la home, no un bloque nuevo: mismo marcado, misma
+   clase .logos, y lo que cambia es que las marcas pasan de fila a rejilla.
+
+   Sin lineas entre celdas, a proposito. Una rejilla cuadriculada solo se ve
+   bien cuando el numero de marcas es multiplo del numero de columnas: con 7
+   logos y 4 columnas queda una celda vacia con el marco abierto por dos
+   lados. Y el numero va a cambiar —la clienta va a mandar mas marcas—, asi
+   que no puede depender de el. Con aire en vez de filetes, las celdas que
+   sobran son invisibles y la rejilla acepta cualquier cantidad.
+   Las dos lineas que si hay son las del bloque entero, arriba y abajo: esas
+   existen siempre.
+   Cada logo conserva sus medidas propias (el equilibrio optico de la fila
+   esta en los atributos width/height de cada <img>) y la celda lo centra. */
+.logos-grid{
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:clamp(1rem,2.4vw,2rem);
+  padding-block:clamp(1.6rem,3.4vw,2.6rem);
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.logos-grid li{
+  display:flex;align-items:center;justify-content:center;
+  aspect-ratio:16/7;min-width:0;
+}
+@media (max-width:1080px){.logos-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:760px){
+  .logos-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem}
+  .logos-grid img{transform:scale(.8)}
+}
+
+/* La animacion de la franja de la home escalona siete li con nth-child; aqui
+   el numero de marcas va a cambiar, asi que entra la rejilla entera como un
+   bloque y no cada logo por su cuenta. */
+@supports (animation-timeline:view()){
+  @media (prefers-reduced-motion:no-preference){
+    .logos-grid{animation-name:calmIn;animation-range:cover 0% cover 12%}
+    .logos-grid li{animation:none}
+  }
+}
