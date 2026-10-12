@@ -1722,11 +1722,11 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
    LANDING PARTICULIERS — dos modos de acompanamiento
    No son dos servicios equivalentes: son dos formas de trabajar, y la pagina
    tiene que dejar claro cual es cual de un vistazo. Por eso van lado a lado y
-   no en una lista, y la de gestion completa lleva un tinte que la separa: es
-   la que la agencia quiere vender, y la unica diferencia de peso que hay
-   entre las dos.
-   El lenguaje de caja es el mismo del resto: fondo, filete y redondeo, con la
-   elevacion al pasar el mouse.
+   no en una lista. Las dos van en la misma caja blanca: el selector de arriba
+   ya dice cual se esta mirando, asi que pintar una de verde agua era una
+   segunda senal para lo mismo y encima metia un bloque de color del tamanio
+   de media pantalla, justo lo contrario del color como detalle.
+   El lenguaje de caja es el mismo del resto: fondo, filete y redondeo.
    ============================================================ */
 .mode-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:start}
 .mode{
@@ -1734,11 +1734,6 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
   background:var(--panel);border:1px solid var(--line-card);
   border-radius:var(--r);padding:clamp(1.4rem,2.6vw,2rem);
 }
-/* El tinte no es decorativo: marca la opcion principal. Verde agua con texto
-   oscuro encima, que es donde ese color rinde. */
-.mode-hi{background:var(--tint-1);border-color:var(--tint-1);color:var(--tint-ink)}
-.mode-hi .mode-main > p,.mode-hi .mode-k{color:inherit;opacity:.82}
-.mode-hi .svc-cta{color:var(--tint-ink)}
 .mode-main{display:grid;gap:.9rem;align-content:start}
 .mode-h{display:grid;gap:.5rem}
 .mode-k{
@@ -1757,9 +1752,7 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
    largo aparece al abrir. Mismo lenguaje que la F&Q (filete, numero, marca
    que gira) en version compacta, porque viven dentro de un panel. */
 .mode-list{display:grid;align-content:start;min-width:0;border-top:1px solid var(--line)}
-.mode-hi .mode-list{border-top-color:rgba(16,16,16,.16)}
 .mode-it{border-bottom:1px solid var(--line)}
-.mode-hi .mode-it{border-bottom-color:rgba(16,16,16,.16)}
 .mode-it > summary{
   list-style:none;cursor:pointer;
   display:grid;grid-template-columns:auto 1fr auto;gap:.85rem;align-items:baseline;
@@ -1769,7 +1762,6 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
 .mode-it > summary::marker{content:""}
 .mode-it > summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
 .mode-n{font-family:var(--font-body);font-size:.72rem;letter-spacing:.08em;color:var(--aqua-deep)}
-.mode-hi .mode-n{color:inherit;opacity:.6}
 .mode-it b{
   font-family:var(--font-display);font-weight:500;font-size:1rem;line-height:1.32;
   transition:color 420ms var(--ease-soft);
@@ -1778,19 +1770,15 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
   width:13px;height:13px;align-self:center;color:var(--text-3);
   transition:rotate 520ms var(--ease-out),color 420ms var(--ease-soft);
 }
-.mode-hi .mode-mk{color:inherit;opacity:.7}
 .mode-it[open] .mode-mk{rotate:45deg;color:var(--accent)}
 .mode-it[open] b{color:var(--accent)}
-.mode-hi .mode-it[open] b,.mode-hi .mode-it[open] .mode-mk{color:var(--tint-ink);opacity:1}
 @media (hover:hover) and (pointer:fine){
   .mode-it:not([open]) > summary:hover b,.mode-it:not([open]) > summary:hover .mode-mk{color:var(--accent);opacity:1}
-  .mode-hi .mode-it:not([open]) > summary:hover b{color:var(--tint-ink);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
 }
 .mode-it > p{
   color:var(--text-2);font-size:.92rem;line-height:1.62;
   padding:0 1.8rem 1.1rem 1.75rem;
 }
-.mode-hi .mode-it > p{color:inherit;opacity:.82}
 @supports (interpolate-size:allow-keywords){
   @media (prefers-reduced-motion:no-preference){
     .mode-it::details-content{
