@@ -41,17 +41,6 @@
   --shadow-a:rgba(32,32,69,.45);
   --hdr-bg:rgba(255,255,255,.82);
   --tint-1:#55ffd2;             /* VERDE AGUA */
-  /* Verde agua en dos valores. El de marca (#55ffd2) solo sirve sobre oscuro:
-     sobre blanco da 1,26:1 y no se ve. Para fondo claro hace falta una version
-     mas oscura del MISMO tono (163 deg): 3,19:1, que es el minimo de un
-     elemento grafico. La usa el rail cuando cruza las secciones blancas. */
-  --aqua:#55ffd2;
-  --aqua-deep:#12a383;          /* grafico sobre claro : 3,19:1 */
-  --aqua-ink:#0d7d63;           /* texto sobre claro   : 5,09:1 */
-  /* Lila, lo mismo. El de marca (#d2d2ff) da 1,4:1 sobre blanco; la version
-     oscura del mismo tono (240 deg) da 3,23:1, que es lo que necesita la
-     barra de progreso para existir sobre las secciones blancas. */
-  --lilac-deep:#8686e0;         /* grafico sobre claro : 3,23:1 */
   --tint-ink:#101010;
   --tint-2:#ebff76;             /* AMARILLO */
   --tint2-ink:#101010;
@@ -112,8 +101,21 @@ p{margin:0}
 /* El nombre de la seccion es el unico sitio de la pagina donde el verde agua
    hace de texto. Sobre claro va la version oscura del tono (5,09:1); los
    bloques oscuros lo pisan con el verde de marca. */
-.label{font-size:.7rem;font-weight:500;text-transform:uppercase;letter-spacing:.19em;color:var(--aqua-ink)}
-.ft .label,.lp-hero .label,.hero .label{color:var(--aqua)}
+/* NOMBRE DE SECCION. El verde agua de marca sobre blanco da 1,26:1: como
+   texto no existe. Y oscurecerlo es inventarse un color que no esta en la
+   paleta. Asi que el verde deja de ser la tinta y pasa a ser el fondo: letra
+   negra sobre una pastilla verde agua, 16,4:1, con la misma forma que los
+   botones. Una sola regla vale para fondo claro y oscuro: la pastilla no
+   depende de lo que tenga detras.
+   justify-self + width:fit-content porque el rotulo aparece en rejillas, en
+   flex y en flujo normal, y en una rejilla un display:inline-block se
+   bloquifica y se estira a todo el ancho. */
+.label{
+  justify-self:start;width:fit-content;
+  padding:.42em .95em;border-radius:999px;
+  background:var(--tint-1);color:var(--tint-ink);
+  font-size:.7rem;font-weight:500;text-transform:uppercase;letter-spacing:.19em;
+}
 .wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--pad)}
 /* Las pistas de grid traen min-width:auto y un hijo que no encoge las desborda.
    Es la causa habitual del scroll horizontal en pantallas chicas. */
@@ -527,10 +529,10 @@ form>*,.two>*,.fld>*{min-width:0}
    Mas grandes que el resto, por la misma razon. */
 .hero .btn{
   padding:1em 1.8em;font-size:1rem;
-  background:rgba(85,255,210,.1);color:var(--aqua);border-color:var(--aqua);
+  background:rgba(85,255,210,.1);color:var(--tint-1);border-color:var(--tint-1);
 }
 @media (hover:hover) and (pointer:fine){
-  .hero .btn:hover{background:rgba(85,255,210,.24);border-color:var(--aqua);color:var(--aqua)}
+  .hero .btn:hover{background:rgba(85,255,210,.24);border-color:var(--tint-1);color:var(--tint-1)}
 }
 
 /* El CTA del header sobre el video iba en violeta de marca, y el violeta sobre
@@ -706,7 +708,11 @@ form>*,.two>*,.fld>*{min-width:0}
    width/height de cada <img>, que es donde vive el equilibrio optico de la
    fila). Sigue sin fondo: la presencia la da el espacio, no un color. */
 .clients-in{padding-block:clamp(2.4rem,5.5vh,4rem);display:grid;gap:clamp(1.8rem,3.4vw,2.6rem);justify-items:center}
-.clients-h{font-size:.74rem;font-weight:500;text-transform:uppercase;letter-spacing:.19em;color:var(--aqua-ink)}
+.clients-h{
+  width:fit-content;padding:.42em .95em;border-radius:999px;
+  background:var(--tint-1);color:var(--tint-ink);
+  font-size:.74rem;font-weight:500;text-transform:uppercase;letter-spacing:.19em;
+}
 .logos{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:clamp(1.8rem,4.2vw,3.9rem)}
 /* Chaque logo porte sa propre taille en attributs width/height, calculee pour
    equilibrer optiquement la rangee. Les fichiers sont en 2x pour le retina.
@@ -746,7 +752,7 @@ form>*,.two>*,.fld>*{min-width:0}
    cinco servicios valen lo mismo. El icono solo identifica. */
 .b2b-i{
   grid-column:1;grid-row:1;width:21px;height:21px;margin-top:.12em;
-  color:var(--aqua-deep);transition:color 460ms var(--ease-soft);
+  color:var(--tint-1);transition:color 460ms var(--ease-soft);
 }
 .b2b-t{grid-column:2;grid-row:1;font-family:var(--font-display);font-size:clamp(1rem,1.15vw,1.1rem);font-weight:500;line-height:1.26}
 .b2b-d{grid-column:2;grid-row:2;color:var(--text-2);font-size:.88rem;line-height:1.5;max-width:48ch}
@@ -758,13 +764,13 @@ form>*,.two>*,.fld>*{min-width:0}
    conmuta de golpe es lo unico de la pagina que no tendria entrada. */
 .b2b-row>a::before{
   content:"";position:absolute;left:0;top:0;bottom:0;width:2px;
-  background:var(--aqua-deep);scale:1 0;transform-origin:50% 100%;
+  background:var(--tint-1);scale:1 0;transform-origin:50% 100%;
   transition:scale 560ms var(--ease-soft);
 }
 @media (hover:hover) and (pointer:fine){
   .b2b-row>a:hover{background:rgba(85,255,210,.1);padding-left:.9rem}
   .b2b-row>a:hover::before{scale:1 1;transition:scale 620ms var(--ease-out)}
-  .b2b-row>a:hover .b2b-i,.b2b-row>a:hover .b2b-a{color:var(--aqua-ink)}
+  .b2b-row>a:hover .b2b-a{color:var(--accent)}
   .b2b-row>a:hover .b2b-a{translate:3px 0}
 }
 .b2b-row>a:focus-visible{outline-offset:-2px}
@@ -841,12 +847,14 @@ form>*,.two>*,.fld>*{min-width:0}
 /* El filete de acento cierra la fila abierta y ahora es verde agua de punta a
    punta. Antes eran 56px de verde y el resto violeta. El verde de marca solo
    no sirve: sobre el gris de la fila abierta da 1,2:1 y el filete desaparece
-   a la derecha. Va de --tint-1 a --aqua-deep, el mismo tono oscurecido: se lee
-   verde agua en todo el ancho y el extremo derecho existe.
+   a la derecha. Verde agua de marca de punta a punta, sin degradar a ningun
+   tono derivado. Sobre el gris de la fila abierta contrasta poco, y esta
+   bien: el estado abierto ya lo dicen el fondo y la cruz girada, el filete
+   solo lo subraya. Sube a 3px para que se vea como linea de color.
    Se traza con el mismo gesto con el que baja la respuesta. */
 .row::before{
-  content:"";position:absolute;bottom:0;left:0;right:0;height:2px;z-index:1;
-  background:linear-gradient(to right,var(--tint-1),var(--aqua-deep));
+  content:"";position:absolute;bottom:0;left:0;right:0;height:3px;z-index:1;
+  background:var(--tint-1);
   transform:scaleX(0);transform-origin:left;
   transition:transform 640ms var(--ease-out);
 }
@@ -1312,10 +1320,10 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
 .rail{
   position:fixed;left:max(16px,calc(var(--pad) / 3));top:50%;transform:translateY(-50%);
   z-index:50;display:grid;gap:6px;
-  /* Sobre claro el rail es violeta de marca: al 50 % de opacidad no se veia.
-     Las inactivas suben a .62 y engordan medio pixel. */
-  --rail-off:rgba(134,134,224,.6);
-  --rail-on:var(--lilac-deep);
+  /* Sobre claro el rail va en el violeta oscuro de marca. La activa va solida
+     y las inactivas al 45 %, que es lo que las separa sin que compitan. */
+  --rail-off:rgba(32,32,69,.45);
+  --rail-on:var(--accent);
 }
 .rail[data-dark="true"]{
   --rail-off:rgba(210,210,255,.55);
@@ -1575,7 +1583,9 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
 }
 .lp-hero-in{position:relative;z-index:1;width:100%;padding-bottom:clamp(2.4rem,6vh,4rem)}
 /* Blanco pleno: al 82 % el rotulo caia a 4,5:1 justo, y es texto chico. */
-.lp-hero .label{color:var(--aqua)}
+/* El rotulo no necesita excepcion sobre el hero oscuro: la pastilla verde
+   con letra negra funciona igual sobre claro y sobre oscuro. La regla que
+   habia aqui pintaba el texto del mismo verde que la pastilla y lo borraba. */
 .lp-hero h1{font-size:clamp(1.95rem,4.4vw,3.6rem);max-width:19ch;color:#fff;margin-top:.9rem;
   animation:fadeUp 800ms var(--ease-out) both}
 .lp-hero .lead{max-width:60ch;margin-top:1.2rem;color:rgba(255,255,255,.88);
@@ -1591,11 +1601,11 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
    estados porque si no gana el .btn-ghost:hover general, que pinta violeta
    de marca y sobre el hero oscuro desaparece. */
 .lp-hero .btn,.lp-hero .btn-ghost{
-  background:rgba(85,255,210,.1);color:var(--aqua);border-color:var(--aqua);
+  background:rgba(85,255,210,.1);color:var(--tint-1);border-color:var(--tint-1);
 }
 @media (hover:hover) and (pointer:fine){
   .lp-hero .btn:hover,.lp-hero .btn-ghost:hover{
-    background:rgba(85,255,210,.24);border-color:var(--aqua);color:var(--aqua);
+    background:rgba(85,255,210,.24);border-color:var(--tint-1);color:var(--tint-1);
   }
 }
 
@@ -1628,7 +1638,10 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
    primer parrafo ya no es un .lead. */
 .lp-split-txt h2 + p{margin-top:1.2rem}
 .lp-split-txt .lead{margin-top:1.2rem}
-.lp-split-txt p + p{margin-top:1rem;color:var(--text-2)}
+/* :not(.chk-h) porque el rotulo de la checklist tambien es un <p> detras de
+   otro <p>, y esta regla le ganaba por especificidad y le quitaba la tinta
+   negra de la pastilla. */
+.lp-split-txt p + p:not(.chk-h){margin-top:1rem;color:var(--text-2)}
 .lp-split-act{margin-top:1.5rem}
 .lp-split-media{overflow:hidden;background:var(--surface);aspect-ratio:4/3;min-width:0}
 .lp-split-media img{width:100%;height:100%;object-fit:cover}
@@ -1761,7 +1774,11 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
 .mode-it > summary::-webkit-details-marker{display:none}
 .mode-it > summary::marker{content:""}
 .mode-it > summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
-.mode-n{font-family:var(--font-body);font-size:.72rem;letter-spacing:.08em;color:var(--aqua-deep)}
+.mode-n{
+  padding:.2em .5em;border-radius:999px;
+  background:var(--tint-1);color:var(--tint-ink);
+  font-family:var(--font-body);font-size:.68rem;letter-spacing:.06em;
+}
 .mode-it b{
   font-family:var(--font-display);font-weight:500;font-size:1rem;line-height:1.32;
   transition:color 420ms var(--ease-soft);
@@ -1925,7 +1942,7 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
 .vid-b .rd-meta{font-size:.8rem;color:var(--text-3);display:flex;align-items:center;gap:.4rem}
 @media (hover:hover) and (pointer:fine){
   .vid-item:hover{
-    translate:0 -6px;border-color:var(--aqua-deep);
+    translate:0 -6px;border-color:var(--tint-1);
     box-shadow:0 26px 48px -26px var(--shadow-a);
     transition:translate 560ms var(--ease-out),box-shadow 620ms var(--ease-out),
                border-color 460ms var(--ease-out);
@@ -1960,14 +1977,16 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
    caracter: un ✓ de texto cambia de forma con la fuente y no se alinea. */
 .chk-h{
   margin-top:.4rem;font-family:var(--font-body);font-size:.7rem;font-weight:500;
-  text-transform:uppercase;letter-spacing:.19em;color:var(--aqua-ink);
+  text-transform:uppercase;letter-spacing:.19em;
+  width:fit-content;padding:.42em .95em;border-radius:999px;
+  background:var(--tint-1);color:var(--tint-ink);
 }
 .chk{list-style:none;margin:.8rem 0 0;padding:0;display:grid;gap:.75rem}
 .chk li{position:relative;padding-left:1.9rem}
 .chk li::before{
   content:"";position:absolute;left:.15rem;top:.42em;
   width:.62em;height:.34em;
-  border-left:2px solid var(--aqua-deep);border-bottom:2px solid var(--aqua-deep);
+  border-left:2px solid var(--tint-1);border-bottom:2px solid var(--tint-1);
   rotate:-45deg;
 }
 .chk b{
@@ -1998,7 +2017,14 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
 }
 .svc > summary::-webkit-details-marker{display:none}
 .svc > summary::marker{content:""}
-.svc .svc-n{grid-column:1;grid-row:1;font-family:var(--font-body);font-size:.72rem;letter-spacing:.08em;color:var(--aqua-deep)}
+/* Mismo criterio que el rotulo: el numero no se pinta de verde, se apoya en
+   una pastilla verde. Mas chica que la del rotulo porque son dos caracteres. */
+.svc .svc-n{
+  grid-column:1;grid-row:1;justify-self:start;
+  padding:.2em .5em;border-radius:999px;
+  background:var(--tint-1);color:var(--tint-ink);
+  font-family:var(--font-body);font-size:.68rem;letter-spacing:.06em;
+}
 .svc-t{
   grid-column:2;grid-row:1;font-family:var(--font-display);font-weight:500;
   font-size:clamp(1rem,1.25vw,1.14rem);line-height:1.3;
@@ -2081,10 +2107,10 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
   transition:translate 620ms var(--ease-soft),box-shadow 720ms var(--ease-soft),
              border-color 560ms var(--ease-soft);
 }
-.vt-i{width:26px;height:26px;color:var(--aqua-deep);transition:color 460ms var(--ease-soft)}
+.vt-i{width:26px;height:26px;color:var(--tint-1);transition:color 460ms var(--ease-soft)}
 .vt span{font-family:var(--font-display);font-weight:500;font-size:.95rem;line-height:1.3;text-wrap:balance}
 @media (hover:hover) and (pointer:fine){
-  .vt:hover{translate:0 -6px;border-color:var(--aqua-deep);
+  .vt:hover{translate:0 -6px;border-color:var(--tint-1);
     box-shadow:0 26px 48px -26px var(--shadow-a);
     transition:translate 560ms var(--ease-out),box-shadow 620ms var(--ease-out),
                border-color 460ms var(--ease-out)}
@@ -2098,7 +2124,7 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
   transition:translate 620ms var(--ease-soft),box-shadow 720ms var(--ease-soft),
              background-color 560ms var(--ease-soft);
 }
-.va-i{width:26px;height:26px;color:var(--aqua)}
+.va-i{width:26px;height:26px;color:var(--tint-1)}
 .va span{font-family:var(--font-display);font-weight:500;font-size:1rem;line-height:1.3}
 @media (hover:hover) and (pointer:fine){
   .va > a:hover{translate:0 -6px;background:var(--fill-hi);

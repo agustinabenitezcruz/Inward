@@ -1979,3 +1979,41 @@ no es un número fijo.
 
 **Los números de "Nos services" en verde agua**, sin la opacidad del 50 % que
 tenían. Pasan de `--accent` al 50 % a `--aqua-deep` sólido.
+
+---
+
+## Solo colores de la paleta (12/10)
+
+Se eliminan los tres tonos derivados que había inventado para resolver
+contraste: `--aqua-deep` (#12a383), `--aqua-ink` (#0d7d63) y `--lilac-deep`
+(#8686e0). En la hoja no queda ningún hex fuera del Brand Book salvo el rojo
+de error de formulario.
+
+**El verde agua deja de ser tinta y pasa a ser fondo.** El problema de origen:
+#55ffd2 sobre blanco da 1,26:1, así que como texto no existe, y oscurecerlo es
+inventar un color. La solución es darlo vuelta — letra negra sobre una
+pastilla verde agua, **16,4:1**, con la misma forma de píldora que los
+botones. Lo usan el nombre de sección (`.label`), `"Ils nous font confiance"`
+y el rótulo de la checklist.
+
+Una sola regla sirve para fondo claro y oscuro: la pastilla no depende de lo
+que tenga detrás, así que desaparecen las excepciones que había para el hero
+y el pie. Lleva `justify-self:start` **y** `width:fit-content` porque el
+rótulo aparece en rejillas, en flex y en flujo normal, y en una rejilla un
+`display:inline-block` se blockifica y se estira a todo el ancho.
+
+Los números de lista (`.svc-n`, `.mode-n`) usan la misma pastilla, más chica.
+
+**Iconos y filetes** van en el verde agua de marca tal cual. Sobre blanco
+pierden fuerza y es una decisión tomada: antes que inventar un tono, el icono
+se ve flojo. El filete de particulares pasa a 3 px y a un solo color, sin
+degradado a ningún derivado: el estado abierto ya lo dicen el fondo y la cruz
+girada, el filete solo lo subraya.
+
+**La barra de progreso** pasa al violeta oscuro de marca (`--accent`), sólida
+en la activa y al 45 % en las inactivas.
+
+Dos cosas que mordieron al hacerlo, las dos por especificidad:
+`.lp-hero .label` seguía pintando el texto del mismo verde que la pastilla y
+lo borraba; y `.lp-split-txt p + p` le ganaba al rótulo de la checklist —que
+también es un `<p>` detrás de otro `<p>`— y le quitaba la tinta negra.
