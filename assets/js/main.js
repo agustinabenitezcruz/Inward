@@ -446,7 +446,10 @@
         var on = k === i;
         t.setAttribute("aria-selected", on ? "true" : "false");
         t.tabIndex = on ? 0 : -1;
-        wPanes[k].hidden = !on;
+        /* No se usa hidden: los dos paneles comparten celda y el inactivo se
+           funde. aria-hidden + inert lo sacan del lector y del tabulador. */
+        wPanes[k].setAttribute("aria-hidden", on ? "false" : "true");
+        wPanes[k].inert = !on;
         wPanes[k].setAttribute("role", "tabpanel");
       });
       ways.setAttribute("data-sel", String(i + 1));
