@@ -628,4 +628,28 @@
     if (canal) canal.addEventListener("change", function () { canal.classList.remove("is-bad"); });
   }
 
+  /* ---------- Enlaces del menu a una prestacion concreta ----------
+     El menu apunta a filas y acordeones (#gestion-visa, #changement-de-statut,
+     #audit...). Llegar a una fila cerrada obliga a buscarla y abrirla a mano:
+     aca se abre sola, en el modo que corresponda si vive en el selector de
+     particuliers, y se vuelve a centrar porque al abrirse cambia el alto. */
+  function abreDestino() {
+    var id = decodeURIComponent(location.hash.slice(1));
+    var el = id && document.getElementById(id);
+    if (!el) return;
+    var pane = el.closest(".mode");
+    if (pane && ways && wPanes.indexOf(pane) >= 0) elige(wPanes.indexOf(pane));
+    if (el.tagName === "DETAILS" && !el.open) el.open = true;
+    if (el.classList.contains("row") && el.getAttribute("data-open") !== "true") {
+      el.querySelector(".row-btn").click();
+    }
+    if (el.tagName === "DETAILS" || el.classList.contains("row")) {
+      setTimeout(function () {
+        el.scrollIntoView({ block: "center", behavior: reduce ? "auto" : "smooth" });
+      }, 80);
+    }
+  }
+  abreDestino();
+  addEventListener("hashchange", abreDestino);
+
 })();
