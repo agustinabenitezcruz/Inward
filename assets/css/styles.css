@@ -772,6 +772,9 @@ form>*,.two>*,.fld>*{min-width:0}
   transition:scale 520ms var(--ease-out);
 }
 @media (hover:hover) and (pointer:fine){.b2b-row>a:hover .b2b-i{scale:1.08}}
+/* Propuesta: misma lista con los iconos en el violeta oscuro de marca. */
+.b2b-blue .b2b-i{background:var(--fill);color:var(--fill-ink)}
+.b2b-blue .sec-head .todo{justify-self:start;font-size:.8rem}
 .b2b-t{grid-column:2;grid-row:1;font-family:var(--font-display);font-size:clamp(1rem,1.15vw,1.1rem);font-weight:500;line-height:1.26}
 .b2b-d{grid-column:2;grid-row:2;color:var(--text-2);font-size:.88rem;line-height:1.5;max-width:48ch}
 .b2b-a{
@@ -1610,7 +1613,7 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
 /* El rotulo no necesita excepcion sobre el hero oscuro: la pastilla verde
    con letra negra funciona igual sobre claro y sobre oscuro. La regla que
    habia aqui pintaba el texto del mismo verde que la pastilla y lo borraba. */
-.lp-hero h1{font-size:clamp(1.95rem,4.4vw,3.6rem);max-width:19ch;color:#fff;margin-top:var(--label-gap);
+.lp-hero h1{font-size:clamp(1.95rem,4.4vw,3.6rem);max-width:19ch;color:#fff;margin-top:0;
   animation:fadeUp 800ms var(--ease-out) both}
 .lp-hero .lead{max-width:60ch;margin-top:1.2rem;color:rgba(255,255,255,.88);
   animation:fadeUp 800ms var(--ease-out) 200ms both}
@@ -1661,6 +1664,7 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
 /* El h2 y el parrafo se tocaban: el unico margen era el de .lead y aqui el
    primer parrafo ya no es un .lead. */
 .lp-split-txt h2 + p{margin-top:1.2rem}
+.lp-split-txt .label + h2{margin-top:var(--label-gap)}
 .lp-split-txt .lead{margin-top:1.2rem}
 /* :not(.chk-h) porque el rotulo de la checklist tambien es un <p> detras de
    otro <p>, y esta regla le ganaba por especificidad y le quitaba la tinta
