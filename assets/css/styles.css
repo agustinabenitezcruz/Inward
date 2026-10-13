@@ -763,18 +763,15 @@ form>*,.two>*,.fld>*{min-width:0}
 }
 /* Icono y no numero: una numeracion dice "primero, segundo, tercero" y los
    cinco servicios valen lo mismo. El icono solo identifica. */
-/* Verde agua como FONDO del icono, nunca como trazo: #55ffd2 sobre blanco da
-   1,26:1 y el icono no se veia. Trazo negro sobre el circulo, 16,4:1. */
+/* Circulo en el violeta oscuro de marca con el trazo blanco: la clienta lo
+   eligio frente a la variante en verde agua. */
 .b2b-i{
   grid-column:1;grid-row:1;box-sizing:content-box;width:17px;height:17px;padding:7px;
   margin-top:-.28em;border-radius:50%;
-  background:var(--tint-1);color:var(--tint-ink);
+  background:var(--fill);color:var(--fill-ink);
   transition:scale 520ms var(--ease-out);
 }
 @media (hover:hover) and (pointer:fine){.b2b-row>a:hover .b2b-i{scale:1.08}}
-/* Propuesta: misma lista con los iconos en el violeta oscuro de marca. */
-.b2b-blue .b2b-i{background:var(--fill);color:var(--fill-ink)}
-.b2b-blue .sec-head .todo{justify-self:start;font-size:.8rem}
 .b2b-t{grid-column:2;grid-row:1;font-family:var(--font-display);font-size:clamp(1rem,1.15vw,1.1rem);font-weight:500;line-height:1.26}
 .b2b-d{grid-column:2;grid-row:2;color:var(--text-2);font-size:.88rem;line-height:1.5;max-width:48ch}
 .b2b-a{
