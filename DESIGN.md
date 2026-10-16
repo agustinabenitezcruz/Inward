@@ -2017,3 +2017,36 @@ Dos cosas que mordieron al hacerlo, las dos por especificidad:
 `.lp-hero .label` seguía pintando el texto del mismo verde que la pastilla y
 lo borraba; y `.lp-split-txt p + p` le ganaba al rótulo de la checklist —que
 también es un `<p>` detrás de otro `<p>`— y le quitaba la tinta negra.
+
+---
+
+## Favicon que sigue el tema del navegador (16/10)
+
+`favicon.svg` lleva su propia hoja de estilos y su propia consulta de medios:
+
+```svg
+<style>
+  .ico{fill:#202045}
+  @media (prefers-color-scheme:dark){ .ico{fill:#ffffff} }
+</style>
+```
+
+Sobre barra clara el isologo va en el violeta de marca; sobre barra oscura, en
+blanco. Un favicon SVG se evalúa como documento propio, así que esto no
+necesita ni una línea de JavaScript ni un segundo archivo.
+
+El `fill` del `<g>` se deja escrito como atributo **y** la clase lo pisa: un
+motor que no entienda la regla pinta igual el violeta de marca en vez del
+negro por defecto.
+
+**El límite, medido y conocido:** Chromium rasteriza el SVG **una sola vez**,
+con el esquema que esté activo cuando lo descarga, y cachea ese bitmap por
+URL. Si alguien cambia el tema del sistema con la pestaña ya abierta, el icono
+se queda del color anterior hasta que recargue. Firefox y Safari sí lo
+reevalúan. La solución completa serían dos archivos de color fijo
+(`favicon-light.svg` / `favicon-dark.svg`) y cuatro líneas en el `<head>` que
+elijan con `matchMedia` y escuchen el `change`; no se hizo porque el sitio
+evita JavaScript y el caso —cambiar de tema con la pestaña abierta— es raro.
+
+`favicon.ico` sigue siendo el de respaldo para motores sin soporte de SVG, y
+va en violeta fijo.
