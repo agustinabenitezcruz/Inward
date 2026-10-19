@@ -828,10 +828,12 @@ form>*,.two>*,.fld>*{min-width:0}
 .ico-violet{--ico-bg:transparent;--ico-ink:var(--accent)}
 .ico-lilac{--ico-bg:transparent;--ico-ink:var(--tint-3);--hov:var(--tint-3);--hov-bg:rgba(210,210,255,.32)}
 .ico-lilac-gray{--ico-bg:var(--tint-3);--ico-ink:var(--accent);--ico-bd:var(--ico-gray);--hov:var(--tint-3);--hov-bg:rgba(210,210,255,.32)}
-.ico-green-gray{--ico-bg:var(--tint-1);--ico-ink:var(--accent);--ico-bd:var(--ico-gray);--hov:var(--tint-1);--hov-bg:rgba(85,255,210,.14)}
-.ico-yellow-gray{--ico-bg:var(--tint-2);--ico-ink:var(--accent);--ico-bd:var(--ico-gray);--hov:var(--tint-2);--hov-bg:rgba(235,255,118,.28)}
-.ico-violet-lilac{--ico-bd:var(--tint-3);--hov:var(--tint-3);--hov-bg:rgba(210,210,255,.32)}
-.ico-violet-yellow{--ico-bd:var(--tint-2);--hov:var(--tint-2);--hov-bg:rgba(235,255,118,.28)}
+.ico-green-gray{--ico-bg:var(--tint-1);--ico-ink:var(--ico-gray);--hov:var(--tint-1);--hov-bg:rgba(85,255,210,.14)}
+.ico-yellow-gray{--ico-bg:var(--tint-2);--ico-ink:var(--ico-gray);--hov:var(--tint-2);--hov-bg:rgba(235,255,118,.28)}
+.ico-violet-lilac{--ico-ink:var(--tint-3);--hov:var(--tint-3);--hov-bg:rgba(210,210,255,.32)}
+.ico-violet-yellow{--ico-ink:var(--tint-2);--hov:var(--tint-2);--hov-bg:rgba(235,255,118,.28)}
+/* Hover en verde agua para las propuestas 1 y 8 (pedido de la clienta). */
+.hov-green{--hov:var(--tint-1);--hov-bg:rgba(85,255,210,.14)}
 @media (hover:hover) and (pointer:fine){.b2b-row>a:hover .b2b-i{scale:1.08}}
 .b2b-t{grid-column:2;grid-row:1;font-family:var(--font-display);font-size:clamp(1rem,1.15vw,1.1rem);font-weight:500;line-height:1.26}
 .b2b-d{grid-column:2;grid-row:2;color:var(--text-2);font-size:.88rem;line-height:1.5;max-width:48ch}
