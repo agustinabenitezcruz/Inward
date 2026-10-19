@@ -498,10 +498,23 @@
         cuerpo.inert = !on;
       });
     }
+    /* En escritorio basta pasar el mouse: la columna se abre sola. El retardo
+       corto evita que se abran y cierren todas mientras el cursor cruza la
+       fila para llegar a la que de verdad interesa. Al salir no se cierra
+       nada: dejar el panel vacio de golpe se lee como un parpadeo. */
+    var finoHover = window.matchMedia("(hover:hover) and (pointer:fine)");
+    var reloj = null;
     hcols.forEach(function (c, k) {
       c.querySelector(".hcol-btn").addEventListener("click", function () {
+        clearTimeout(reloj);
         abreCol(c.hasAttribute("data-on") ? null : k);
       });
+      c.addEventListener("mouseenter", function () {
+        if (!finoHover.matches || c.hasAttribute("data-on")) return;
+        clearTimeout(reloj);
+        reloj = setTimeout(function () { abreCol(k); }, 90);
+      });
+      c.addEventListener("mouseleave", function () { clearTimeout(reloj); });
     });
     abreCol(null);
   }
