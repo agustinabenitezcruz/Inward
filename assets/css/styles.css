@@ -121,7 +121,7 @@ p{margin:0}
 }
 /* Sobre fondo oscuro (heros y pie) el violeta se pierde contra la foto: un
    contorno claro fino lo despega sin cambiar el color. */
-.lp-hero .label,.hero .label,.ft .label,.hacc .label{box-shadow:inset 0 0 0 1px rgba(255,255,255,.45)}
+.lp-hero .label,.hero .label,.ft .label{box-shadow:inset 0 0 0 1px rgba(255,255,255,.45)}
 .wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--pad)}
 /* Las pistas de grid traen min-width:auto y un hijo que no encoge las desborda.
    Es la causa habitual del scroll horizontal en pantallas chicas. */
@@ -2333,32 +2333,33 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
 
 /* ============================================================
    ACORDEON HORIZONTAL — "Soutien au nouvel arrivant"
-   Panel oscuro con columnas: cerradas son una franja angosta con la cruz
-   arriba y el nombre al pie; la abierta se ensancha y muestra el texto.
+   Columnas que se abren de costado: cerradas son una franja angosta con la
+   cruz arriba y el nombre al pie; la abierta se ensancha y muestra el texto.
    ============================================================ */
-/* El ancho se anima con grid-template-columns y no con un width por columna.
-   Es la unica forma de que las cinco pistas se repartan solas: la condicion
-   para que el navegador interpole es que los dos estados declaren la MISMA
-   cantidad de pistas, y por eso cada data-open escribe las cuatro. */
+/* Panel en el gris de marca y no en blanco: la seccion de arriba ya es un
+   panel blanco sobre pagina blanca, y dos bloques blancos seguidos se leen
+   como uno solo. El gris lo separa sin meter un color nuevo.
+   La columna ABIERTA sale en blanco, al reves que el panel: ese cambio de
+   claro es lo que la destaca, y el verde agua se reserva para el filete y
+   la marca, que es donde se nota siendo poco. */
 .hacc{
-  background:var(--fill);color:var(--fill-ink);
+  background:var(--surface);
+  border:1px solid var(--line-card);
   border-radius:var(--r);overflow:hidden;
-  padding:clamp(1.8rem,4vw,3.2rem) 0 0;
-  /* La pastilla del rotulo y los titulares heredan de aqui: dentro del panel
-     el texto es claro, como en el pie. */
-  --text:#ffffff;
-  --text-2:rgba(255,255,255,.72);
-  --text-3:rgba(255,255,255,.55);
-  --line:rgba(255,255,255,.16);
+  padding:clamp(1.7rem,3.6vw,2.8rem) 0 0;
 }
-.hacc-head{padding-inline:clamp(1.6rem,3.6vw,3rem);display:grid;gap:1rem;justify-items:start}
-.hacc-head h2{color:#fff;max-width:20em}
+.hacc-head{padding-inline:clamp(1.6rem,3.6vw,2.8rem);display:grid;gap:.9rem;justify-items:start}
+.hacc-head h2{max-width:20em}
 
+/* El ancho se anima con grid-template-columns y no con un width por columna.
+   Es la unica forma de que las pistas se repartan solas: la condicion para
+   que el navegador interpole es que los dos estados declaren la MISMA
+   cantidad de pistas, y por eso cada data-open escribe las cuatro. */
 .hacc-cols{
-  margin-top:clamp(1.8rem,4vw,3rem);
+  margin-top:clamp(1.6rem,3.4vw,2.6rem);
   display:grid;grid-template-columns:repeat(4,1fr);
   border-top:1px solid var(--line);
-  min-height:clamp(280px,32vh,340px);
+  min-height:clamp(260px,30vh,320px);
   transition:grid-template-columns 720ms var(--ease-out);
 }
 .hacc[data-open="1"] .hacc-cols{grid-template-columns:2.6fr 1fr 1fr 1fr}
@@ -2369,29 +2370,30 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
 .hcol{
   position:relative;min-width:0;display:grid;align-content:start;
   grid-template-rows:auto 1fr auto;
-  padding:clamp(1.1rem,2.4vw,1.6rem);
+  padding:clamp(1.1rem,2.4vw,1.5rem);
   border-left:1px solid var(--line);
   transition:background-color 620ms var(--ease-soft);
 }
 .hcol:first-child{border-left:0}
-/* El filete de arriba marca la columna abierta: es la unica senal que se ve
-   desde lejos, con la rejilla a medio moverse. */
+.hcol[data-on]{background:var(--panel)}
+/* Filete verde agua: la unica senal que se ve de lejos con la rejilla a
+   medio moverse. Crece desde la izquierda en vez de aparecer de golpe. */
 .hcol::before{
-  content:"";position:absolute;left:0;right:0;top:-1px;height:2px;
+  content:"";position:absolute;left:0;right:0;top:-1px;height:3px;
   background:var(--tint-1);scale:0 1;transform-origin:left;
   transition:scale 620ms var(--ease-soft);
 }
 .hcol[data-on]::before{scale:1 1;transition:scale 720ms var(--ease-out)}
-.hcol[data-on]{background:rgba(255,255,255,.05)}
 
-/* Marca +/x dibujada con dos barras: una gira 90 grados y la cruz se
-   convierte en equis sin cambiar de elemento ni cargar un icono. */
+/* Marca +/x dibujada con dos barras: una gira y la cruz se convierte en
+   equis sin cambiar de elemento ni cargar un icono. */
 .hcol-btn{
   grid-row:1;justify-self:start;
   width:38px;height:38px;padding:0;border-radius:50%;
-  background:none;border:1px solid var(--line);cursor:pointer;
-  display:grid;place-items:center;
-  transition:border-color 520ms var(--ease-soft),background-color 520ms var(--ease-soft);
+  background:none;border:1px solid var(--line-strong);color:var(--text-2);
+  cursor:pointer;display:grid;place-items:center;
+  transition:border-color 520ms var(--ease-soft),background-color 520ms var(--ease-soft),
+             color 520ms var(--ease-soft);
 }
 /* Texto solo para lectores de pantalla: el boton es un circulo sin letras y
    sin esto se anunciaria como "boton" a secas. */
@@ -2401,29 +2403,32 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
 .hcol-mk::before,.hcol-mk::after{
   content:"";position:absolute;inset:50% 0 auto;height:1.5px;margin-top:-.75px;
   background:currentColor;border-radius:1px;
-  transition:rotate 620ms var(--ease-out),opacity 420ms var(--ease-soft);
+  transition:rotate 620ms var(--ease-out);
 }
 .hcol-mk::after{rotate:90deg}
-.hcol[data-on] .hcol-btn{border-color:var(--tint-1);background:rgba(85,255,210,.12);color:var(--tint-1)}
+.hcol[data-on] .hcol-btn{background:var(--tint-1);border-color:var(--tint-1);color:var(--tint-ink)}
 .hcol[data-on] .hcol-mk::before{rotate:45deg}
 .hcol[data-on] .hcol-mk::after{rotate:135deg}
 @media (hover:hover) and (pointer:fine){
-  .hcol:not([data-on]) .hcol-btn:hover{border-color:rgba(255,255,255,.45);background:rgba(255,255,255,.06)}
+  .hcol:not([data-on]) .hcol-btn:hover{border-color:var(--accent);color:var(--accent)}
+  .hcol:not([data-on]):hover{background:rgba(255,255,255,.5)}
 }
-.hcol-btn:focus-visible{outline:2px solid var(--tint-1);outline-offset:3px}
+.hcol-btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+/* El boton cubre la columna entera: en una franja angosta obligar a apuntar
+   al circulo es pedir punteria. El circulo queda como senal, no como blanco. */
+.hcol-btn::after{content:"";position:absolute;inset:0}
 
-/* El cuerpo ocupa la fila del medio y aparece cuando la columna se abre. La
-   columna cerrada es angosta, asi que el texto se oculta con opacidad y se
-   saca del tabulador con inert desde el JavaScript: si se ocultara con
-   display:none, la rejilla daria un salto al reaparecer. */
+/* El cuerpo ocupa la fila del medio. Se oculta con opacidad y no con
+   display:none: la rejilla daria un salto al reaparecer. El JavaScript lo
+   saca del tabulador con inert. */
 .hcol-body{
-  grid-row:2;align-self:start;margin-top:clamp(1.4rem,3vw,2.2rem);
+  grid-row:2;align-self:start;margin-top:clamp(1.3rem,2.8vw,2rem);
   max-width:46ch;opacity:0;pointer-events:none;
   transition:opacity 420ms var(--ease-soft);
 }
 .hcol[data-on] .hcol-body{opacity:1;pointer-events:auto;transition:opacity 620ms var(--ease-out) 180ms}
-.hcol-body h3{color:#fff;font-weight:400;font-size:clamp(1.15rem,1.7vw,1.45rem);line-height:1.25}
-.hcol-body p{margin-top:.9rem;color:var(--text-2);font-size:.95rem;line-height:1.66}
+.hcol-body h3{font-weight:500;font-size:clamp(1.1rem,1.6vw,1.35rem);line-height:1.26}
+.hcol-body p{margin-top:.85rem;color:var(--text-2);font-size:.95rem;line-height:1.66}
 
 /* El nombre al pie: es lo unico que se lee de una columna cerrada. */
 .hcol-k{
@@ -2434,15 +2439,11 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
   transition:color 520ms var(--ease-soft),opacity 420ms var(--ease-soft);
 }
 .hcol[data-on] .hcol-k{opacity:0}
-@media (hover:hover) and (pointer:fine){.hcol:not([data-on]):hover .hcol-k{color:#fff}}
-
-/* El boton cubre la columna entera: en una franja de 90px obligar a apuntar
-   al circulo es pedir punteria. El circulo queda como senal, no como blanco. */
-.hcol-btn::after{content:"";position:absolute;inset:0}
+@media (hover:hover) and (pointer:fine){.hcol:not([data-on]):hover .hcol-k{color:var(--text)}}
 
 /* ---------- Telefono y tablet ----------
-   Una rejilla de cuatro columnas de 90px no existe en 390px de ancho: pasa a
-   lista vertical y el cuerpo se abre hacia abajo, con el mismo gesto. */
+   Una rejilla de cuatro columnas angostas no existe en 390px de ancho: pasa
+   a lista vertical y el cuerpo se abre hacia abajo, con el mismo gesto. */
 @media (max-width:860px){
   .hacc-cols,
   .hacc[data-open="1"] .hacc-cols,.hacc[data-open="2"] .hacc-cols,
@@ -2455,9 +2456,10 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
     border-left:0;border-top:1px solid var(--line);
   }
   .hcol:first-child{border-top:0}
+  .hcol::before{height:2px}
   .hcol-btn{grid-row:1;grid-column:1}
   .hcol-k{grid-row:1;grid-column:2;align-self:center;opacity:1}
-  .hcol[data-on] .hcol-k{opacity:1;color:#fff}
+  .hcol[data-on] .hcol-k{opacity:1;color:var(--text)}
   .hcol-body{
     grid-row:2;grid-column:2;margin-top:0;
     display:grid;grid-template-rows:0fr;
@@ -2465,6 +2467,7 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
   }
   .hcol-body > *{overflow:hidden}
   .hcol[data-on] .hcol-body{grid-template-rows:1fr;margin-top:.9rem}
+  .hcol[data-on] .hcol-body h3{display:none}
 }
 
 @supports (animation-timeline:view()){

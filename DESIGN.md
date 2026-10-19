@@ -2169,9 +2169,18 @@ la abre al llegar.
 
 ## Soutien au nouvel arrivant: acordeón horizontal (19/10)
 
-Rediseñada a partir de una referencia que mandó la clienta: panel oscuro con
-columnas que se abren **de costado**. Cerradas son una franja angosta con la
-cruz arriba y el nombre al pie; la abierta se ensancha y muestra el texto.
+La disposición sale de una referencia que mandó la clienta: columnas que se
+abren **de costado**. Cerradas son una franja angosta con la cruz arriba y el
+nombre al pie; la abierta se ensancha y muestra el texto.
+
+La referencia era un panel azul oscuro y así se probó primero: no funcionó.
+Va en el **gris de marca**, texto negro, y el verde agua sólo en el filete
+superior de la columna abierta y en el círculo activo. La columna abierta sale
+en **blanco**, al revés que el panel: ese cambio de claro es lo que la
+destaca, sin gastar color.
+
+El panel no es blanco porque la sección de arriba ya es un panel blanco sobre
+página blanca, y dos bloques blancos seguidos se leen como uno solo.
 
 **El ancho se anima con `grid-template-columns`**, no con un `width` por
 columna. La condición para que el navegador interpole es que los dos estados
@@ -2183,21 +2192,10 @@ El cuerpo de una columna cerrada **sigue en el DOM** —el buscador lo ve— y s
 oculta con opacidad, no con `display:none`, que haría saltar la rejilla al
 reaparecer. Se saca del tabulador con `inert`.
 
-La marca +/× son dos barras y una rotación: ningún icono que cargar.
-
-El botón cubre la columna entera con un `::after`; en una franja de 200 px
-obligar a apuntar al círculo es pedir puntería. El círculo queda como señal,
-no como blanco.
+La marca +/× son dos barras y una rotación: ningún icono que cargar. Y el
+botón cubre la columna entera con un `::after`: en una franja angosta obligar
+a apuntar al círculo es pedir puntería.
 
 En teléfono la rejilla de cuatro columnas no existe: pasa a lista vertical con
 el mismo gesto, el nombre al lado del botón y el cuerpo abriéndose hacia abajo
 con `grid-template-rows: 0fr → 1fr`.
-
-Es el **tercer** lenguaje de lista de la página, a propósito: los visas
-enumeran (pastilla con número), este recorre. Y el panel oscuro corta el
-blanco justo antes de la F&Q.
-
-**Un detalle que mordió:** la clienta había cambiado `.label` a pastilla azul
-con texto blanco, así que sobre este panel —también azul— desaparecía. Existía
-ya una regla que le pone un filete blanco sobre fondos oscuros
-(`.lp-hero`, `.hero`, `.ft`); se le añadió `.hacc`.
