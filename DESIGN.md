@@ -2110,32 +2110,22 @@ pasó a ser la bajada. Antes era el rótulo, que es más chico.
 
 ---
 
-## Particuliers: dos servicios y nada más (19/10)
+## Particuliers: textos nuevos de "Nos services" (19/10)
 
-La sección tenía dos paneles grandes lado a lado, cada uno con su acordeón
-interno de dos prestaciones, y por encima un selector de pestañas con
-indicador deslizante. Tres niveles de jerarquía para decir dos cosas.
+Se probó a reducir la sección a dos filas de un acordeón simple y la clienta
+prefirió el diseño anterior, así que vuelve tal cual: selector de dos modos,
+dos paneles y dentro de cada uno sus dos prestaciones plegables. Lo único que
+cambia es el texto.
 
-Ahora son **dos filas** del mismo acordeón `.svc` que usa la landing de
-empresas: cerrado se ve sólo el número y el título, y al abrir aparece el
-texto resumido que mandó la clienta. Ocupa el ancho entero de la sección.
-591 px.
+- Los títulos de los dos modos pasan a **"Conseil et guide"** y
+  **"Gestion et prise en charge"**. El segundo venía como
+  "gestion / Prise en charge"; una barra en un título queda rara.
+- Los cuatro cuerpos se reemplazan por los dos párrafos que mandó la clienta
+  por servicio. Encajan uno a uno con las prestaciones que ya existían:
+  párrafo 1 del servicio 1 → *Conseil, diagnostic et guide*; párrafo 2 →
+  *Vérification du dossier*; y lo mismo en el servicio 2 con *Gestion de la
+  demande de visa* y *freelances et créateurs d'entreprise*.
 
-Se borró el bloque `.ways*` / `.mode*` entero —unas 180 líneas de CSS que solo
-servían aquí— y las 35 de JavaScript del selector de pestañas. La sección
-nueva no necesita ni una regla propia.
-
-Los dos `id` se conservan a propósito: `#gestion-visa` lo usan el mega menú y
-el pie, y `abreDestino()` sigue abriendo la fila al llegar por el ancla
-(comprobado). `#freelances` y `#verification` desaparecen porque sus dos
-prestaciones quedaron fusionadas en los textos nuevos; el único enlace que
-apuntaba a `#freelances` (el menú, "Profession libérale et entrepreneur") se
-repunta a `#gestion-visa`, que es donde ahora vive ese contenido.
-
-**Una decisión de redacción:** la clienta escribió el segundo título como
-"gestion / Prise en charge". Una barra en un título queda rara, así que va
-como "Gestion et prise en charge" — cambiar la conjunción es una palabra.
-
-Los dos CTA ("Faire le point sur mon projet" / "Confier mon dossier") se
-mantienen dentro de cada fila abierta: son texto ya aprobado y sin ellos la
-sección de servicios se quedaba sin salida a contacto.
+Se conservan los rótulos del selector (Autonomie / Clés en main), las frases
+de entrada de cada panel y los dos CTA: la clienta mandó el texto de los
+servicios, no el del envoltorio.

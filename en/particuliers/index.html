@@ -325,7 +325,7 @@
 </script>
 </head>
 <body>
-<p style="position:fixed;left:16px;bottom:16px;z-index:80;margin:0;max-width:min(340px,calc(100vw - 32px));padding:.6rem .85rem;border-radius:12px;background:#ebff76;color:#101010;box-shadow:0 8px 24px -10px rgba(16,16,16,.45);font:500 .74rem/1.45 Jost,system-ui,sans-serif">Translation in progress. This page still shows the French text where the English is missing. (345)</p>
+<p style="position:fixed;left:16px;bottom:16px;z-index:80;margin:0;max-width:min(340px,calc(100vw - 32px));padding:.6rem .85rem;border-radius:12px;background:#ebff76;color:#101010;box-shadow:0 8px 24px -10px rgba(16,16,16,.45);font:500 .74rem/1.45 Jost,system-ui,sans-serif">Translation in progress. This page still shows the French text where the English is missing. (355)</p>
 
 <!-- Los bloques marcados shell:* no se editan aca: salen de index.html y los
      copia tools/sync_shell.py. -->
@@ -407,7 +407,7 @@
               <ul>
                 <li><a href="#gestion-visa">Visa visiteur<span>Séjour sans activité professionnelle</span></a></li>
                 <li><a href="#gestion-visa">Visa étudiant<span>Inscription, VLS-TS, renouvellement</span></a></li>
-                <li><a href="#gestion-visa">Profession libérale et entrepreneur<span>Création et reprise d'activité</span></a></li>
+                <li><a href="#freelances">Profession libérale et entrepreneur<span>Création et reprise d'activité</span></a></li>
                 <li><a href="#gestion-visa">Visa famille<span>Regroupement et vie privée familiale</span></a></li>
               </ul>
             </div>
@@ -552,47 +552,72 @@
      clienta antes de dar la pagina por buena. -->
 <section class="band svcs sec" id="services">
   <div class="wrap">
-    <div class="sec-head rv">
+    <div class="sec-head ways-head rv">
       <p class="label">Nos services</p>
       <h2>Deux façons de travailler ensemble</h2>
     </div>
 
-    <!-- Dos filas y nada mas. Antes habia dos paneles enormes, cada uno con su
-         propio acordeon de dos prestaciones y un selector de pestanas por
-         encima: tres niveles de jerarquia para decir dos cosas. Ahora es un
-         solo acordeon de dos filas, el mismo componente que la landing de
-         empresas, y el texto de cada modo esta resumido en dos parrafos.
-         El atributo name lo hace exclusivo sin una linea de JavaScript.
-         Los id se conservan: #gestion-visa lo usan el mega menu y el pie. -->
-    <div class="svc-list rv">
-      <details class="svc" id="conseil" name="svcs-pt" open>
-        <summary>
-          <span class="svc-n">01</span>
-          <span class="svc-t" role="heading" aria-level="3">Conseil et guide</span>
-          <span class="svc-more"><span class="svc-more-t">Voir plus</span><span class="svc-less-t">Voir moins</span>
-            <svg class="svc-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5.25L7 9.25l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-        </summary>
-        <div class="svc-b">
-          <p>Vous souhaitez réaliser vos démarches d'immigration et d'installation en France en toute autonomie&nbsp;? Nous vous conseillons dans la définition de votre projet, vous aidons à choisir le visa le plus adapté et vous guidons dans le pas à pas de la procédure.</p>
-          <p>Nous vérifions également votre dossier avant son dépôt ou après un refus, afin de vous aider à présenter une demande complète et conforme, et d'optimiser vos chances de succès.</p>
-          <a class="svc-cta" href="#contact">Faire le point sur mon projet <span class="arw">&rsaquo;</span></a>
-        </div>
-      </details>
-      <details class="svc" id="gestion-visa" name="svcs-pt">
-        <summary>
-          <span class="svc-n">02</span>
-          <span class="svc-t" role="heading" aria-level="3">Gestion et prise en charge</span>
-          <span class="svc-more"><span class="svc-more-t">Voir plus</span><span class="svc-less-t">Voir moins</span>
-            <svg class="svc-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5.25L7 9.25l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-        </summary>
-        <div class="svc-b">
-          <p>Confiez-nous l'ensemble de vos démarches administratives. Nous prenons en charge la préparation du dossier, les formulaires, les demandes préalables, la prise de rendez-vous et le suivi jusqu'à l'obtention du visa ou de votre titre de séjour.</p>
-          <p>Pour les freelances et créateurs d'entreprise, nous vous accompagnons également dans la conception du projet, l'élaboration du business plan et l'obtention de l'avis favorable de l'administration française.</p>
-          <a class="svc-cta" href="#contact">Confier mon dossier <span class="arw">&rsaquo;</span></a>
-        </div>
-      </details>
+    <!-- Selector de dos opciones en vez de dos columnas llenas de texto: se
+         ve un modo a la vez, y dentro de cada modo las prestaciones son filas
+         plegables (titulo a la vista, detalle al abrir). Sin JavaScript el
+         selector no aparece y los dos modos quedan uno al lado del otro, como
+         antes. El modo que abre por defecto es el que marca data-ways. -->
+    <div class="ways rv" data-ways="2">
+      <div class="ways-sw" role="tablist" aria-label="Deux façons de travailler ensemble" hidden>
+        <button class="ways-tab" type="button" role="tab" id="ways-t1" aria-controls="ways-p1">
+          <span class="ways-k">Autonomie</span>
+          <span class="ways-s">Vous menez les démarches</span>
+        </button>
+        <button class="ways-tab" type="button" role="tab" id="ways-t2" aria-controls="ways-p2">
+          <span class="ways-k">Clés en main</span>
+          <span class="ways-s">Vous nous confiez le dossier</span>
+        </button>
+        <span class="ways-ind" aria-hidden="true"></span>
+      </div>
+
+      <div class="mode-grid">
+        <article class="mode" id="ways-p1" aria-labelledby="ways-t1">
+          <div class="mode-main">
+            <div class="mode-h">
+              <span class="mode-k">Autonomie</span>
+              <h3>Conseil et guide</h3>
+            </div>
+            <p>Vous êtes aventurier et vous voulez faire les démarches d'immigration et d'installation en France en toute indépendance ? Nous vous donnons les éléments et les outils pour naviguer l'administration française en tranquillité.</p>
+            <a class="btn btn-primary" href="#contact">Faire le point sur mon projet <span class="arw">&rsaquo;</span></a>
+          </div>
+          <div class="mode-list">
+            <details class="mode-it" id="conseil" name="ways-1" open>
+              <summary><span class="mode-n">01</span><b>Conseil, diagnostic du projet et guide sur les démarches à effectuer</b><svg class="mode-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+              <p>Vous souhaitez réaliser vos démarches d'immigration et d'installation en France en toute autonomie&nbsp;? Nous vous conseillons dans la définition de votre projet, vous aidons à choisir le visa le plus adapté et vous guidons dans le pas à pas de la procédure.</p>
+            </details>
+            <details class="mode-it" id="verification" name="ways-1">
+              <summary><span class="mode-n">02</span><b>Vérification du dossier</b><svg class="mode-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+              <p>Nous vérifions également votre dossier avant son dépôt ou après un refus, afin de vous aider à présenter une demande complète et conforme, et d'optimiser vos chances de succès.</p>
+            </details>
+          </div>
+        </article>
+
+        <article class="mode" id="ways-p2" aria-labelledby="ways-t2">
+          <div class="mode-main">
+            <div class="mode-h">
+              <span class="mode-k">Clés en main</span>
+              <h3>Gestion et prise en charge</h3>
+            </div>
+            <p>Laissez-vous porter par une équipe d'experts qui gérera toutes les étapes, pour un résultat positif et en temps record.</p>
+            <a class="btn btn-primary" href="#contact">Confier mon dossier <span class="arw">&rsaquo;</span></a>
+          </div>
+          <div class="mode-list">
+            <details class="mode-it" id="gestion-visa" name="ways-2" open>
+              <summary><span class="mode-n">01</span><b>Gestion de la demande de visa</b><svg class="mode-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+              <p>Confiez-nous l'ensemble de vos démarches administratives. Nous prenons en charge la préparation du dossier, les formulaires, les demandes préalables, la prise de rendez-vous et le suivi jusqu'à l'obtention du visa ou de votre titre de séjour.</p>
+            </details>
+            <details class="mode-it" id="freelances" name="ways-2">
+              <summary><span class="mode-n">02</span><b>Visa pour les freelances et créateurs d'entreprise</b><svg class="mode-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+              <p>Pour les freelances et créateurs d'entreprise, nous vous accompagnons également dans la conception du projet, l'élaboration du business plan et l'obtention de l'avis favorable de l'administration française.</p>
+            </details>
+          </div>
+        </article>
+      </div>
     </div>
   </div>
 </section>
