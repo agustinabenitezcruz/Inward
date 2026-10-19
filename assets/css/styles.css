@@ -990,10 +990,23 @@ form>*,.two>*,.fld>*{min-width:0}
 .b2c-media{position:relative;align-self:stretch;min-height:380px;background:var(--surface);overflow:hidden}
 .b2c-media img{
   position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 34%;
-  opacity:0;filter:blur(6px);
-  transition:opacity 420ms ease,filter 420ms ease;
+  opacity:0;transition:opacity 480ms ease;
 }
-.b2c-media img.is-on{opacity:1;filter:blur(0)}
+.b2c-media img.is-on{opacity:1}
+/* Home, particuliers: todo tiene que entrar en pantalla aun con una fila
+   abierta. Antes la foto se estiraba al alto de la columna, y al abrir una
+   fila la columna crecia, la foto se reencuadraba (efecto zoom) y el CTA
+   quedaba fuera. Ahora la foto tiene alto propio y no cambia nunca, y el
+   bloque es mas compacto: menos aire arriba, filas mas bajas y la respuesta
+   con menos relleno. Sin desenfoque al cambiar de foto: solo fundido. */
+#particuliers.sec{padding-top:clamp(2.4rem,5.5vh,4rem)}
+#particuliers .b2c-grid{align-items:start}
+#particuliers .b2c-media{align-self:start;min-height:0;height:clamp(380px,calc(100svh - 230px),560px)}
+#particuliers .sec-head{margin-bottom:clamp(1rem,2.2vh,1.5rem)}
+#particuliers .row-btn{padding-block:clamp(.55rem,1.05vw,.7rem)}
+#particuliers .row-body p{padding-bottom:.35rem;line-height:1.58}
+#particuliers .row-more{margin-bottom:.75rem}
+#particuliers .b2c-cta{margin-top:clamp(.9rem,1.8vh,1.3rem)}
 .b2c-cta{margin-top:1.7rem;display:flex;flex-wrap:wrap;gap:.9rem;align-items:center}
 /* En una columna la foto cae despues del acordeon, o sea al final de una lista
    larga y plegable: queda fuera de pantalla y casi nadie llega. Ademas su unica
