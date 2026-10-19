@@ -11,7 +11,7 @@ Salida, para cada página de tools/pages.py:
     es/<pagina>/index.html
 
 Los originales en francés no se tocan nunca: son los que se editan a mano.
-Cuando cambie el francés, correr antes tools/extract_strings.py para que el CSV
+Cuando cambie el francés, correr antes tools/extract_strings.py (y despues tools/stamp.py) para que el CSV
 recoja los textos nuevos.
 
 Una página cuyo idioma no esté completo se marca con noindex y muestra una
