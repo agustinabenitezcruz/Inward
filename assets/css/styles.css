@@ -663,7 +663,7 @@ form>*,.two>*,.fld>*{min-width:0}
 .kpi + .kpi{border-left:1px solid var(--line)}
 .kpi-n{
   font-family:var(--font-display);font-weight:400;color:var(--accent);
-  font-size:clamp(2.4rem,4.4vw,3.8rem);line-height:.95;letter-spacing:-.04em;
+  font-size:clamp(2rem,3.1vw,2.75rem);line-height:1;letter-spacing:-.03em;
   font-variant-numeric:tabular-nums;white-space:nowrap;
 }
 .kpi-bar{position:relative;display:block;height:3px;border-radius:3px;background:var(--surface);overflow:hidden}
@@ -671,7 +671,7 @@ form>*,.two>*,.fld>*{min-width:0}
   content:"";position:absolute;inset:0;border-radius:inherit;background:var(--tint-1);
   transform-origin:left;transform:scaleX(var(--p));
 }
-.kpi-l{font-size:clamp(.9rem,1.1vw,1rem);line-height:1.4;color:var(--text-2);max-width:22ch}
+.kpi-l{font-size:clamp(1.05rem,1.4vw,1.25rem);line-height:1.38;color:var(--text-2);max-width:26ch}
 /* En telefono siguen siendo tres columnas: apiladas ocupaban una pantalla
    entera antes de llegar a las opiniones. */
 @media (max-width:640px){
