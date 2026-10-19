@@ -768,8 +768,12 @@ form>*,.two>*,.fld>*{min-width:0}
 .clients-ref .sec-head{justify-items:center;text-align:center}
 /* Propuesta B: cada marca en su color pero apagada, para que se reconozca
    sin pelearse con el resto de la pagina. Al pasar por encima, a pleno. */
-.logos-color img{filter:none;opacity:.5}
-@media (hover:hover) and (pointer:fine){.logos-color li:hover img{opacity:1}}
+/* Propuesta B: logos en su color pero a media saturacion; el hover los lleva
+   al color original de la imagen. Sin transparencia. */
+.logos-color img{filter:saturate(.5);opacity:1}
+@media (hover:hover) and (pointer:fine){.logos-color li:hover img{filter:saturate(1);opacity:1}}
+/* El rotulo de Références va centrado sobre el titulo. */
+.clients .sec-head .label{justify-self:center;margin-inline:auto}
 
 /* ============================================================
    B2B - texto a la izquierda, listado de servicios a la derecha
