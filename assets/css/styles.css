@@ -1042,9 +1042,12 @@ form>*,.two>*,.fld>*{min-width:0}
   font-family:var(--font-display);font-weight:500;
   font-size:clamp(3.5rem,7vw,6.5rem);line-height:1;
   /* Relleno y no contorno: a 1px el contorno se veia como un dibujo a mano
-     alzada. Solido y al 14% del violeta pesa lo justo para ser marca de agua
-     sin competir con la declaracion. */
-  color:color-mix(in srgb,var(--accent) 14%,transparent);
+     alzada. Y en verde agua de marca, no en un violeta desteñido: el numero
+     repite el de la pastilla activa de arriba, asi que compartir color ata
+     las dos piezas. Sobre blanco el verde da 1,26:1, que como texto seria
+     ilegible y como marca de agua es exactamente el peso que se busca: se ve
+     el color, no compite con la declaracion. */
+  color:var(--tint-1);
   animation:engNum 800ms var(--ease-out) both;
 }
 @media (max-width:760px){.eng-pane::before{display:none}}

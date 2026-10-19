@@ -2072,3 +2072,15 @@ usa.
 
 Comprobado con el navegador: las cuatro rutas de la home a una landing
 aterrizan en `scrollY = 0`.
+
+---
+
+## La marca de agua de engagements, en verde agua (19/10)
+
+El número grande del panel pasa del violeta al 14 % al verde agua de marca.
+Repite el número de la pastilla activa de arriba, así que compartir color ata
+las dos piezas en vez de dejar una gris y otra de color.
+
+Sobre blanco el verde da 1,26:1 — ilegible como texto y exactamente el peso
+que busca una marca de agua: se ve el color, no compite con la declaración.
+Es el `--tint-1` de la paleta, sin derivar ningún tono.
