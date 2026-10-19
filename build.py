@@ -101,8 +101,10 @@ def rewrite_paths(doc):
 
     No importa a qué profundidad esté la página: /en/ está un nivel por debajo
     de la raíz y /en/entreprises/ un nivel por debajo de /entreprises/, así que
-    en los dos casos alcanza con anteponer UN ../ a lo que ya hubiera."""
-    return re.sub(r'\b(href|src|poster)="((?:\.\./)*)(assets/|favicon\.svg|favicon\.ico|apple-touch-icon\.png|site\.webmanifest)',
+    en los dos casos alcanza con anteponer UN ../ a lo que ya hubiera.
+    data-api y api/ entran por el endpoint de las opiniones: sin ellos /en/ y
+    /es/ pedian en/api/avis.php, que no existe (404)."""
+    return re.sub(r'\b(href|src|poster|data-api)="((?:\.\./)*)(assets/|api/|favicon\.svg|favicon\.ico|apple-touch-icon\.png|site\.webmanifest)',
                   lambda m: '%s="../%s%s' % (m.group(1), m.group(2), m.group(3)), doc)
 
 

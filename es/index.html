@@ -35,7 +35,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..600&family=Jost:wght@300..600&display=swap">
 <link rel="stylesheet" href="../assets/css/styles.css?v=a685afec">
-<link rel="preload" as="image" href="../assets/img/fondatrices-inward-palais-garnier-paris.webp" fetchpriority="high">
+<!-- Se precarga el poster del video del hero, que es lo primero que se pinta.
+     Antes se precargaba una foto que la pagina no usa. -->
+<link rel="preload" as="image" href="../assets/img/video-inward-palais-garnier-poster.webp" fetchpriority="high">
 
 <!-- FICHA ESTRUCTURADA (JSON-LD).
      Un solo @graph por pagina con @id compartidos: la organizacion se declara
@@ -732,7 +734,7 @@
 <!-- Los datos llegan de api/avis.php, que consulta la Places API con la clave
      del lado del servidor. Sin fiche ni clave configuradas, la seccion muestra
      el aviso de pendiente y ninguna opinion inventada. -->
-<section class="band band-top sec" id="avis" data-state="empty" data-api="api/avis.php">
+<section class="band band-top sec" id="avis" data-state="empty" data-api="../api/avis.php">
   <!-- Las cifras vivian sobre el video del hero, chicas y en blanco. Aca van
        junto a las opiniones, que es la otra prueba de resultados, y a tamano de
        titular. El HTML trae el valor final: sin JavaScript o con movimiento

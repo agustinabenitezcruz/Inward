@@ -317,10 +317,18 @@
       burger.setAttribute("aria-expanded", open ? "true" : "false");
       burger.setAttribute("aria-label", open ? "Fermer le menu" : "Ouvrir le menu");
       /* Bloquear el scroll del fondo: sin esto el dedo arrastra la pagina
-         detras del panel y al cerrar aparecemos en otra parte del sitio. */
-      document.documentElement.style.overflow = open ? "hidden" : "";
+         detras del panel y al cerrar aparecemos en otra parte del sitio.
+         Firefox vuelve el documento arriba de todo al quitar el overflow de
+         <html>, asi que se guarda la posicion al abrir y se repone al cerrar,
+         sin animar (el html tiene scroll-behavior:smooth). */
+      var root = document.documentElement;
+      if (open && root.style.overflow !== "hidden") menuY = scrollY;
+      var estaba = root.style.overflow === "hidden";
+      root.style.overflow = open ? "hidden" : "";
+      if (!open && estaba && Math.abs(scrollY - menuY) > 1) scrollTo({ top: menuY, behavior: "instant" });
       if (!open) closeGroups();
     }
+    var menuY = 0;
 
     burger.addEventListener("click", function () {
       setMenu(menu.getAttribute("data-open") !== "true");
