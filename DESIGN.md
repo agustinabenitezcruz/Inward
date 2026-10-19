@@ -2164,3 +2164,40 @@ trae `data-img`, que son únicamente las de la home.
 Los tres enlaces del mega menú (Visa visiteur, étudiant, famille) pasan de
 apuntar a `#gestion-visa` a su fila exacta, que ahora existe. `abreDestino()`
 la abre al llegar.
+
+---
+
+## Soutien au nouvel arrivant: acordeón horizontal (19/10)
+
+Rediseñada a partir de una referencia que mandó la clienta: panel oscuro con
+columnas que se abren **de costado**. Cerradas son una franja angosta con la
+cruz arriba y el nombre al pie; la abierta se ensancha y muestra el texto.
+
+**El ancho se anima con `grid-template-columns`**, no con un `width` por
+columna. La condición para que el navegador interpole es que los dos estados
+declaren la misma cantidad de pistas, y por eso cada `data-open` escribe las
+cuatro (`2.6fr 1fr 1fr 1fr`, `1fr 2.6fr 1fr 1fr`…). El JavaScript sólo escribe
+qué número está abierto: la animación vive entera en la hoja de estilos.
+
+El cuerpo de una columna cerrada **sigue en el DOM** —el buscador lo ve— y se
+oculta con opacidad, no con `display:none`, que haría saltar la rejilla al
+reaparecer. Se saca del tabulador con `inert`.
+
+La marca +/× son dos barras y una rotación: ningún icono que cargar.
+
+El botón cubre la columna entera con un `::after`; en una franja de 200 px
+obligar a apuntar al círculo es pedir puntería. El círculo queda como señal,
+no como blanco.
+
+En teléfono la rejilla de cuatro columnas no existe: pasa a lista vertical con
+el mismo gesto, el nombre al lado del botón y el cuerpo abriéndose hacia abajo
+con `grid-template-rows: 0fr → 1fr`.
+
+Es el **tercer** lenguaje de lista de la página, a propósito: los visas
+enumeran (pastilla con número), este recorre. Y el panel oscuro corta el
+blanco justo antes de la F&Q.
+
+**Un detalle que mordió:** la clienta había cambiado `.label` a pastilla azul
+con texto blanco, así que sobre este panel —también azul— desaparecía. Existía
+ya una regla que le pone un filete blanco sobre fondos oscuros
+(`.lp-hero`, `.hero`, `.ft`); se le añadió `.hacc`.

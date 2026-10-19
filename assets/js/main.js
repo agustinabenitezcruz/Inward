@@ -478,6 +478,34 @@
     requestAnimationFrame(function () { ways.setAttribute("data-ready", ""); });
   }
 
+  /* ---------- Acordeon horizontal (soutien au nouvel arrivant) ----------
+     Una columna abierta por vez. El ancho lo reparte el CSS a partir de
+     data-open en el contenedor: aca solo se escribe que numero esta abierto,
+     asi la animacion vive entera en la hoja de estilos y el JavaScript no
+     toca ni un pixel.
+     El cuerpo de una columna cerrada sigue en el DOM —el buscador lo ve— pero
+     se saca del tabulador con inert: si no, se tabula a un texto invisible. */
+  var hacc = document.querySelector(".hacc");
+  if (hacc) {
+    var hcols = [].slice.call(hacc.querySelectorAll(".hcol"));
+    function abreCol(i) {
+      hacc.setAttribute("data-open", i === null ? "0" : String(i + 1));
+      hcols.forEach(function (c, k) {
+        var on = k === i;
+        c.toggleAttribute("data-on", on);
+        c.querySelector(".hcol-btn").setAttribute("aria-expanded", on ? "true" : "false");
+        var cuerpo = c.querySelector(".hcol-body");
+        cuerpo.inert = !on;
+      });
+    }
+    hcols.forEach(function (c, k) {
+      c.querySelector(".hcol-btn").addEventListener("click", function () {
+        abreCol(c.hasAttribute("data-on") ? null : k);
+      });
+    });
+    abreCol(null);
+  }
+
   /* ---------- Avis Google ----------
      Los datos vienen de api/avis.php, que habla con la Places API del lado del
      servidor: la clave nunca llega al navegador y no se carga ningun script de

@@ -904,36 +904,69 @@
 </section>
 
 <!-- ======================= SOUTIEN AU NOUVEL ARRIVANT ======================= -->
-<!-- Filas .rows, las mismas de la seccion de particulares de la home: sin
-     numero, con la cruz que gira y el filete verde agua al pie de la fila
-     abierta. -->
+<!-- Acordeon HORIZONTAL dentro de un panel oscuro: las columnas cerradas son
+     una franja angosta con la cruz arriba y el nombre al pie, y la abierta se
+     ensancha y muestra el texto. El ancho se anima con grid-template-columns
+     —misma cantidad de pistas en los dos estados, que es la condicion para
+     que interpole— y no con width por columna, que obligaria a posicionar
+     cada una a mano.
+     Es el tercer lenguaje de lista de la pagina y a proposito: arriba los
+     visas enumeran (pastilla con numero) y aqui la cosa es recorrer, no
+     contar. El panel oscuro ademas corta el blanco de la pagina justo antes
+     de la F&Q. -->
 <section class="band sec" id="soutien">
   <div class="wrap">
-    <div class="sec-head rv">
-      <p class="label">Après l'arrivée</p>
-      <h2>Soutien au nouvel arrivant</h2>
-    </div>
-    <div class="rows rv">
-        <div class="row" id="sante" data-open="true">
-          <button class="row-btn" aria-expanded="true"><h3>Inscription au système de santé français</h3></button>
-          <svg class="mk" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-          <div class="row-body"><div><p>Nous effectuons les démarches pour vous.</p></div></div>
-        </div>
-        <div class="row" id="carte-vitale" data-open="false">
-          <button class="row-btn" aria-expanded="false"><h3>Demande de carte Vitale</h3></button>
-          <svg class="mk" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-          <div class="row-body"><div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div></div>
-        </div>
-        <div class="row" id="soutien-3" data-open="false">
-          <button class="row-btn" aria-expanded="false"><h3>Lorem ipsum</h3></button>
-          <svg class="mk" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-          <div class="row-body"><div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div></div>
-        </div>
-        <div class="row" id="soutien-4" data-open="false">
-          <button class="row-btn" aria-expanded="false"><h3>Lorem ipsum</h3></button>
-          <svg class="mk" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-          <div class="row-body"><div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div></div>
-        </div>
+    <div class="hacc rv" data-open="0">
+      <div class="hacc-head">
+        <p class="label">Après l'arrivée</p>
+        <h2>Soutien au nouvel arrivant</h2>
+      </div>
+      <div class="hacc-cols">
+        <article class="hcol" id="sante">
+          <button class="hcol-btn" type="button" aria-expanded="false" aria-controls="sante-p">
+            <span class="hcol-mk" aria-hidden="true"></span>
+            <span class="sr">Inscription au système de santé français</span>
+          </button>
+          <div class="hcol-body" id="sante-p">
+            <h3>Inscription au système de santé français</h3>
+            <p>Nous effectuons les démarches pour vous.</p>
+          </div>
+          <span class="hcol-k" aria-hidden="true">Inscription au système de santé français</span>
+        </article>
+        <article class="hcol" id="carte-vitale">
+          <button class="hcol-btn" type="button" aria-expanded="false" aria-controls="carte-vitale-p">
+            <span class="hcol-mk" aria-hidden="true"></span>
+            <span class="sr">Demande de carte Vitale</span>
+          </button>
+          <div class="hcol-body" id="carte-vitale-p">
+            <h3>Demande de carte Vitale</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <span class="hcol-k" aria-hidden="true">Demande de carte Vitale</span>
+        </article>
+        <article class="hcol" id="soutien-3">
+          <button class="hcol-btn" type="button" aria-expanded="false" aria-controls="soutien-3-p">
+            <span class="hcol-mk" aria-hidden="true"></span>
+            <span class="sr">Lorem ipsum</span>
+          </button>
+          <div class="hcol-body" id="soutien-3-p">
+            <h3>Lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <span class="hcol-k" aria-hidden="true">Lorem ipsum</span>
+        </article>
+        <article class="hcol" id="soutien-4">
+          <button class="hcol-btn" type="button" aria-expanded="false" aria-controls="soutien-4-p">
+            <span class="hcol-mk" aria-hidden="true"></span>
+            <span class="sr">Lorem ipsum</span>
+          </button>
+          <div class="hcol-body" id="soutien-4-p">
+            <h3>Lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <span class="hcol-k" aria-hidden="true">Lorem ipsum</span>
+        </article>
+      </div>
     </div>
   </div>
 </section>
