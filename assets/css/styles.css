@@ -581,7 +581,7 @@ form>*,.two>*,.fld>*{min-width:0}
 /* Un formulario con seis campos ya es alto de por si; el respiro de la seccion
    se ajusta para que entre entero en un portatil de 768. */
 #contact{padding-block:clamp(2.4rem,5.6vh,4.2rem) var(--pb,clamp(2.4rem,5.6vh,4.2rem))}
-#faq{padding-block:clamp(2.8rem,6vh,4.4rem) var(--pb,clamp(2.8rem,6vh,4.4rem))}
+#faq,#faq-2,#faq-3{padding-block:clamp(2.8rem,6vh,4.4rem) var(--pb,clamp(2.8rem,6vh,4.4rem))}
 /* La ultima seccion antes del pie necesita mas aire abajo que en medio de la
    pagina: ahi el corte al negro es duro y sin ese respiro el contenido queda
    apoyado contra el pie.
@@ -1301,6 +1301,13 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
   transition:background-color 420ms var(--ease-soft),color 420ms var(--ease-soft);
 }
 .qa[open] .qa-n{background:var(--tint-1);color:var(--tint-ink)}
+/* Propuestas de color del circulo de numero (solo home, para elegir).
+   A: verde agua; abierto pasa al violeta oscuro para que se note el cambio.
+   B: lila (el de siempre). C: verde-amarillo; abierto, verde agua. */
+.qn-green .qa-n{background:var(--tint-1);color:var(--tint-ink)}
+.qn-green .qa[open] .qa-n{background:var(--fill);color:var(--fill-ink)}
+.qn-lilac .qa-n{background:var(--tint-3);color:var(--accent)}
+.qn-yellow .qa-n{background:var(--tint-2);color:var(--tint-ink)}
 /* La barra de acento: siempre esta, escalada a cero. Al abrir crece desde el
    centro y recorre la fila entera, pregunta y respuesta. */
 .qa::before{
@@ -1594,14 +1601,14 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
        Los topes siguen la misma cuenta de siempre: en el instante en que el
        CTA asoma por abajo la ultima fila esta al 8,6 % de su paso por la
        ventana, asi que nada sigue animandose cuando el boton ya se ve. */
-    #faq .qas{animation-name:calmIn;animation-range:cover 0% cover 12%}
-    #faq .qa summary{animation:fadeIn linear both;animation-timeline:view()}
-    #faq .qa:nth-child(1) summary{animation-range:cover 0% cover 11%}
-    #faq .qa:nth-child(2) summary{animation-range:cover 0% cover 10.4%}
-    #faq .qa:nth-child(3) summary{animation-range:cover 0% cover 9.8%}
-    #faq .qa:nth-child(4) summary{animation-range:cover 0% cover 9.2%}
-    #faq .qa:nth-child(5) summary{animation-range:cover 0% cover 8.6%}
-    #faq .qa:nth-child(6) summary{animation-range:cover 0% cover 8%}
+    .faq .qas{animation-name:calmIn;animation-range:cover 0% cover 12%}
+    .faq .qa summary{animation:fadeIn linear both;animation-timeline:view()}
+    .faq .qa:nth-child(1) summary{animation-range:cover 0% cover 11%}
+    .faq .qa:nth-child(2) summary{animation-range:cover 0% cover 10.4%}
+    .faq .qa:nth-child(3) summary{animation-range:cover 0% cover 9.8%}
+    .faq .qa:nth-child(4) summary{animation-range:cover 0% cover 9.2%}
+    .faq .qa:nth-child(5) summary{animation-range:cover 0% cover 8.6%}
+    .faq .qa:nth-child(6) summary{animation-range:cover 0% cover 8%}
 
     /* --- Contact : un seul bloc ---
        Un formulario que aparece campo por campo se siente inestable. Entra

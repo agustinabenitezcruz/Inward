@@ -33,7 +33,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..600&family=Jost:wght@300..600&display=swap">
-<link rel="stylesheet" href="assets/css/styles.css?v=1db03276">
+<link rel="stylesheet" href="assets/css/styles.css?v=a685afec">
 <link rel="preload" as="image" href="assets/img/fondatrices-inward-palais-garnier-paris.webp" fetchpriority="high">
 
 <!-- FICHA ESTRUCTURADA (JSON-LD).
@@ -1501,16 +1501,24 @@
 <!-- ============================ FAQ ============================ -->
 <!-- <details> nativo: se abre y se cierra sin JavaScript, el contenido esta en
      el DOM para el buscador y el teclado funciona solo. -->
+<!-- Tres propuestas del FAQ para la clienta, identicas salvo por el color
+     del circulo de numero (.qn-*). La primera conserva id="faq" (ancla del
+     rail y del pie); cada copia usa su propio name en los <details> para
+     que abrir una pregunta no cierre la de otra propuesta. Cuando elija
+     queda una sola: tres H2 iguales no se publican. -->
+
+<!-- Proposition A -->
 <section class="band faq sec" id="faq">
   <div class="wrap">
     <div class="sec-head rv">
       <p class="label">Questions fréquentes</p>
+      <p class="todo" title="Variante a comparer : choisir une des trois propositions">Proposition A : numéros sur fond vert d'eau</p>
       <h2>Ce qu'on nous demande le plus souvent</h2>
     </div>
 
     <!-- El atributo name hace el acordeon exclusivo sin una linea de
          JavaScript: abrir una cierra la anterior. -->
-    <div class="qas rv">
+    <div class="qas qn-green rv">
         <details class="qa" name="faq">
           <summary>
             <span class="qa-n">01</span>
@@ -1552,6 +1560,142 @@
           <div class="qa-a"><p class="body-2"><span class="todo" title="Reponse a rediger avec la cliente">Réponse à rédiger</span>.</p></div>
         </details>
         <details class="qa" name="faq">
+          <summary>
+            <span class="qa-n">06</span>
+            <span class="qa-q">Qu'est-ce que le Passeport Talent et qui peut en bénéficier ?</span>
+            <svg class="qa-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5.25L7 9.25l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="qa-a"><p class="body-2"><span class="todo" title="Reponse a rediger avec la cliente">Réponse à rédiger</span>.</p></div>
+        </details>
+    </div>
+
+    <div class="faq-act rv">
+      <a class="btn btn-primary" href="#contact">Contactez une experte <span class="arw">&rsaquo;</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- Proposition B -->
+<section class="band faq sec" id="faq-2">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="label">Questions fréquentes</p>
+      <p class="todo" title="Variante a comparer : choisir une des trois propositions">Proposition B : numéros sur fond lilas (actuel)</p>
+      <h2>Ce qu'on nous demande le plus souvent</h2>
+    </div>
+
+    <!-- El atributo name hace el acordeon exclusivo sin una linea de
+         JavaScript: abrir una cierra la anterior. -->
+    <div class="qas qn-lilac rv">
+        <details class="qa" name="faq-b">
+          <summary>
+            <span class="qa-n">01</span>
+            <span class="qa-q">Comment INWARD optimise-t-il les chances de succès de votre demande de visa ?</span>
+            <svg class="qa-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5.25L7 9.25l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="qa-a"><p class="body-2"><span class="todo" title="Texte provisoire fourni en lorem ipsum : a remplacer par la reponse reelle">Texte provisoire</span>. Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum.</p></div>
+        </details>
+        <details class="qa" name="faq-b">
+          <summary>
+            <span class="qa-n">02</span>
+            <span class="qa-q">Quels sont les tarifs d'INWARD ?</span>
+            <svg class="qa-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5.25L7 9.25l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="qa-a"><p class="body-2"><span class="todo" title="Reponse a rediger avec la cliente">Réponse à rédiger</span>.</p></div>
+        </details>
+        <details class="qa" name="faq-b">
+          <summary>
+            <span class="qa-n">03</span>
+            <span class="qa-q">Pourquoi faire appel à une agence de mobilité internationale plutôt que de tout gérer en interne ?</span>
+            <svg class="qa-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5.25L7 9.25l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="qa-a"><p class="body-2"><span class="todo" title="Reponse a rediger avec la cliente">Réponse à rédiger</span>.</p></div>
+        </details>
+        <details class="qa" name="faq-b">
+          <summary>
+            <span class="qa-n">04</span>
+            <span class="qa-q">Comment recruter un salarié étranger hors Union européenne ?</span>
+            <svg class="qa-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5.25L7 9.25l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="qa-a"><p class="body-2"><span class="todo" title="Reponse a rediger avec la cliente">Réponse à rédiger</span>.</p></div>
+        </details>
+        <details class="qa" name="faq-b">
+          <summary>
+            <span class="qa-n">05</span>
+            <span class="qa-q">Combien de temps prend l'obtention d'un visa de travail pour la France ?</span>
+            <svg class="qa-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5.25L7 9.25l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="qa-a"><p class="body-2"><span class="todo" title="Reponse a rediger avec la cliente">Réponse à rédiger</span>.</p></div>
+        </details>
+        <details class="qa" name="faq-b">
+          <summary>
+            <span class="qa-n">06</span>
+            <span class="qa-q">Qu'est-ce que le Passeport Talent et qui peut en bénéficier ?</span>
+            <svg class="qa-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5.25L7 9.25l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="qa-a"><p class="body-2"><span class="todo" title="Reponse a rediger avec la cliente">Réponse à rédiger</span>.</p></div>
+        </details>
+    </div>
+
+    <div class="faq-act rv">
+      <a class="btn btn-primary" href="#contact">Contactez une experte <span class="arw">&rsaquo;</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- Proposition C -->
+<section class="band faq sec" id="faq-3">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="label">Questions fréquentes</p>
+      <p class="todo" title="Variante a comparer : choisir une des trois propositions">Proposition C : numéros sur fond vert-jaune</p>
+      <h2>Ce qu'on nous demande le plus souvent</h2>
+    </div>
+
+    <!-- El atributo name hace el acordeon exclusivo sin una linea de
+         JavaScript: abrir una cierra la anterior. -->
+    <div class="qas qn-yellow rv">
+        <details class="qa" name="faq-c">
+          <summary>
+            <span class="qa-n">01</span>
+            <span class="qa-q">Comment INWARD optimise-t-il les chances de succès de votre demande de visa ?</span>
+            <svg class="qa-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5.25L7 9.25l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="qa-a"><p class="body-2"><span class="todo" title="Texte provisoire fourni en lorem ipsum : a remplacer par la reponse reelle">Texte provisoire</span>. Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum.</p></div>
+        </details>
+        <details class="qa" name="faq-c">
+          <summary>
+            <span class="qa-n">02</span>
+            <span class="qa-q">Quels sont les tarifs d'INWARD ?</span>
+            <svg class="qa-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5.25L7 9.25l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="qa-a"><p class="body-2"><span class="todo" title="Reponse a rediger avec la cliente">Réponse à rédiger</span>.</p></div>
+        </details>
+        <details class="qa" name="faq-c">
+          <summary>
+            <span class="qa-n">03</span>
+            <span class="qa-q">Pourquoi faire appel à une agence de mobilité internationale plutôt que de tout gérer en interne ?</span>
+            <svg class="qa-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5.25L7 9.25l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="qa-a"><p class="body-2"><span class="todo" title="Reponse a rediger avec la cliente">Réponse à rédiger</span>.</p></div>
+        </details>
+        <details class="qa" name="faq-c">
+          <summary>
+            <span class="qa-n">04</span>
+            <span class="qa-q">Comment recruter un salarié étranger hors Union européenne ?</span>
+            <svg class="qa-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5.25L7 9.25l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="qa-a"><p class="body-2"><span class="todo" title="Reponse a rediger avec la cliente">Réponse à rédiger</span>.</p></div>
+        </details>
+        <details class="qa" name="faq-c">
+          <summary>
+            <span class="qa-n">05</span>
+            <span class="qa-q">Combien de temps prend l'obtention d'un visa de travail pour la France ?</span>
+            <svg class="qa-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5.25L7 9.25l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="qa-a"><p class="body-2"><span class="todo" title="Reponse a rediger avec la cliente">Réponse à rédiger</span>.</p></div>
+        </details>
+        <details class="qa" name="faq-c">
           <summary>
             <span class="qa-n">06</span>
             <span class="qa-q">Qu'est-ce que le Passeport Talent et qui peut en bénéficier ?</span>
