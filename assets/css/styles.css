@@ -1764,15 +1764,186 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
 }
 
 /* ============================================================
-   LANDING PARTICULIERS — las dos formas de trabajar
-   Vivian en un bloque propio de unas 180 lineas: dos paneles grandes lado a
-   lado, cada uno con su acordeon interno, y por encima un selector de
-   pestanas con indicador deslizante. Tres niveles de jerarquia para decir
-   dos cosas, y un componente que solo se usaba aqui.
-   Ahora son dos filas del mismo acordeon .svc que usa la landing de
-   empresas, asi que no necesitan ni una regla propia. Lo que habia (.ways*,
-   .mode*) se borro entero junto con su JavaScript.
+   LANDING PARTICULIERS — dos modos de acompanamiento
+   No son dos servicios equivalentes: son dos formas de trabajar, y la pagina
+   tiene que dejar claro cual es cual de un vistazo. Por eso van lado a lado y
+   no en una lista. Las dos van en la misma caja blanca: el selector de arriba
+   ya dice cual se esta mirando, asi que pintar una de verde agua era una
+   segunda senal para lo mismo y encima metia un bloque de color del tamanio
+   de media pantalla, justo lo contrario del color como detalle.
+   El lenguaje de caja es el mismo del resto: fondo, filete y redondeo.
    ============================================================ */
+.mode-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:start}
+.mode{
+  display:grid;align-content:start;gap:1.2rem;min-width:0;
+  background:var(--panel);border:1px solid var(--line-card);
+  border-radius:var(--r);padding:clamp(1.4rem,2.6vw,2rem);
+}
+.mode-main{display:grid;gap:.9rem;align-content:start}
+.mode-h{display:grid;gap:.5rem}
+.mode-k{
+  font-family:var(--font-body);font-size:.68rem;font-weight:500;
+  text-transform:uppercase;letter-spacing:.16em;color:var(--text-3);
+}
+.mode h3{font-weight:500;font-size:clamp(1.15rem,1.7vw,1.5rem);line-height:1.24}
+.mode-main > p{color:var(--text-2);font-size:.95rem;line-height:1.62;max-width:46ch}
+.mode .svc-cta{margin-top:.2rem}
+.mode-main .btn{justify-self:start;margin-top:.4rem}
+@media (hover:hover) and (pointer:fine){
+  .mode-main .svc-cta:hover{background-size:100% 1px;transition:background-size 520ms var(--ease-out)}
+  .mode-main .svc-cta:hover .arw{translate:4px 0}
+}
+
+/* Prestaciones: filas plegables. Cerradas son solo el titulo; el parrafo
+   largo aparece al abrir. Mismo lenguaje que la F&Q (filete, numero, marca
+   que gira) en version compacta, porque viven dentro de un panel. */
+.mode-list{display:grid;align-content:start;min-width:0;border-top:1px solid var(--line)}
+.mode-it{border-bottom:1px solid var(--line)}
+.mode-it > summary{
+  list-style:none;cursor:pointer;
+  display:grid;grid-template-columns:auto 1fr auto;gap:.85rem;align-items:baseline;
+  padding:1rem .1rem;
+}
+.mode-it > summary::-webkit-details-marker{display:none}
+.mode-it > summary::marker{content:""}
+.mode-it > summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+.mode-n{
+  padding:.2em .5em;border-radius:999px;
+  background:var(--tint-1);color:var(--tint-ink);
+  font-family:var(--font-body);font-size:.68rem;letter-spacing:.06em;
+}
+.mode-it b{
+  font-family:var(--font-display);font-weight:500;font-size:1rem;line-height:1.32;
+  transition:color 420ms var(--ease-soft);
+}
+.mode-mk{
+  width:13px;height:13px;align-self:center;color:var(--text-3);
+  transition:rotate 520ms var(--ease-out),color 420ms var(--ease-soft);
+}
+.mode-it[open] .mode-mk{rotate:45deg;color:var(--accent)}
+.mode-it[open] b{color:var(--accent)}
+@media (hover:hover) and (pointer:fine){
+  .mode-it:not([open]) > summary:hover b,.mode-it:not([open]) > summary:hover .mode-mk{color:var(--accent);opacity:1}
+}
+.mode-it > p{
+  color:var(--text-2);font-size:.92rem;line-height:1.62;
+  padding:0 1.8rem 1.1rem 1.75rem;
+}
+@supports (interpolate-size:allow-keywords){
+  @media (prefers-reduced-motion:no-preference){
+    .mode-it::details-content{
+      block-size:0;overflow:clip;opacity:0;
+      transition:block-size 480ms var(--ease-io),opacity 380ms var(--ease-soft),
+                 content-visibility 480ms allow-discrete;
+    }
+    .mode-it[open]::details-content{block-size:auto;opacity:1}
+  }
+}
+@media (max-width:860px){.mode-grid{grid-template-columns:1fr}}
+
+/* ---------- Selector de modo ----------
+   Solo existe con JavaScript (main.js quita el hidden y pone data-on).
+   Version suave: riel gris claro y una pastilla BLANCA que se desliza con
+   una sombra difusa; nada de bloques macizos. Los dos paneles ocupan la
+   misma celda de la grilla y se funden uno en otro, asi la seccion no
+   cambia de alto al alternar y no hay salto. */
+/* Titular y selector centrados; el rotulo se queda a la izquierda, alineado
+   con el de las demas secciones. */
+.ways-head h2{justify-self:center;text-align:center;max-width:none}
+.ways-sw{
+  position:relative;display:grid;grid-template-columns:1fr 1fr;
+  max-width:560px;margin:0 auto clamp(1.1rem,2.2vw,1.6rem);
+  padding:6px;border-radius:999px;
+  background:color-mix(in srgb,var(--surface) 70%,var(--panel));
+  box-shadow:inset 0 0 0 1px var(--accent-soft);
+}
+.ways-tab{
+  position:relative;z-index:1;display:grid;gap:.12rem;justify-items:center;
+  padding:.72rem 1rem;border:0;border-radius:999px;background:none;cursor:pointer;
+  color:var(--text-3);text-align:center;
+  transition:color 600ms var(--ease-soft);
+}
+.ways-k{font-family:var(--font-display);font-weight:500;font-size:.98rem;line-height:1.2}
+.ways-s{font-size:.76rem;line-height:1.3;opacity:.85}
+.ways-tab[aria-selected="true"]{color:var(--accent)}
+@media (hover:hover) and (pointer:fine){
+  .ways-tab:not([aria-selected="true"]):hover{color:var(--text-2)}
+}
+.ways-tab:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.ways-ind{
+  position:absolute;top:6px;bottom:6px;left:6px;width:calc(50% - 6px);
+  border-radius:999px;background:var(--panel);
+  box-shadow:0 1px 2px rgba(32,32,69,.08),0 10px 26px -12px rgba(32,32,69,.32);
+  transition:translate 720ms cubic-bezier(.22,1,.36,1);
+}
+.ways[data-sel="2"] .ways-ind{translate:100% 0}
+.ways:not([data-ready]) .ways-ind{transition:none}
+
+/* Paneles apilados en la misma celda */
+.ways[data-on] .mode-grid{display:grid;grid-template-columns:1fr}
+.ways[data-on] .mode{
+  grid-area:1 / 1;
+  grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);
+  gap:clamp(1.4rem,4vw,3.6rem);padding:clamp(1.6rem,3.4vw,2.8rem);
+  border-radius:calc(var(--r) + 6px);border-color:var(--accent-soft);
+  background:var(--panel);color:inherit;
+  box-shadow:0 30px 60px -40px rgba(32,32,69,.35);
+  transition:opacity 620ms var(--ease-soft),translate 720ms cubic-bezier(.22,1,.36,1),
+             filter 620ms var(--ease-soft),visibility 0s linear 0s;
+}
+.ways[data-on] .mode[aria-hidden="true"]{
+  opacity:0;translate:0 10px;filter:blur(6px);visibility:hidden;pointer-events:none;
+  transition:opacity 420ms var(--ease-soft),translate 520ms var(--ease-soft),
+             filter 420ms var(--ease-soft),visibility 0s linear 520ms;
+}
+.ways[data-on] .mode-k{display:none}
+.ways[data-on] .mode h3{font-size:clamp(1.25rem,2vw,1.7rem);letter-spacing:-.01em}
+
+/* Prestaciones como tarjetas blandas: sin filetes. Cerradas son una
+   superficie gris muy clara; la abierta se vuelve blanca y flota apenas. */
+.ways[data-on] .mode-list{border:0;gap:10px}
+.ways[data-on] .mode-it{
+  border:0;border-radius:14px;
+  background:color-mix(in srgb,var(--surface) 55%,var(--panel));
+  box-shadow:0 0 0 1px transparent;
+  transition:background-color 600ms var(--ease-soft),box-shadow 600ms var(--ease-soft);
+}
+.ways[data-on] .mode-it[open]{
+  background:var(--panel);
+  box-shadow:0 0 0 1px var(--accent-soft),0 18px 36px -24px rgba(32,32,69,.4);
+}
+@media (hover:hover) and (pointer:fine){
+  .ways[data-on] .mode-it:not([open]):hover{background:color-mix(in srgb,var(--surface) 85%,var(--panel))}
+  .ways[data-on] .mode-it:not([open]) > summary:hover b{color:var(--accent);text-decoration:none}
+}
+.ways[data-on] .mode-it > summary{padding:1rem 1.1rem;align-items:center}
+.ways[data-on] .mode-it b{color:var(--text)}
+.ways[data-on] .mode-it[open] b{color:var(--accent)}
+/* La marca vive en un circulo que se rellena al abrir. */
+.ways[data-on] .mode-mk{
+  box-sizing:content-box;width:11px;height:11px;padding:7px;border-radius:50%;
+  background:var(--panel);color:var(--text-3);opacity:1;
+  box-shadow:0 0 0 1px var(--accent-soft);
+  transition:rotate 620ms cubic-bezier(.22,1,.36,1),background-color 500ms var(--ease-soft),
+             color 500ms var(--ease-soft);
+}
+.ways[data-on] .mode-it[open] .mode-mk{
+  rotate:45deg;background:var(--accent);color:#fff;
+}
+.ways[data-on] .mode-it > p{
+  color:var(--text-2);opacity:1;padding:0 1.4rem 1.15rem 3.75rem;
+}
+/* Al cambiar de modo las tarjetas llegan una tras otra, sin rebote. */
+.ways[data-on] .mode:not([aria-hidden="true"]) .mode-it{animation:waysRow 760ms cubic-bezier(.22,1,.36,1) both}
+.ways[data-on] .mode:not([aria-hidden="true"]) .mode-it:nth-child(2){animation-delay:90ms}
+@keyframes waysRow{from{opacity:0;translate:0 8px}to{opacity:1;translate:none}}
+@media (max-width:760px){
+  .ways[data-on] .mode{grid-template-columns:1fr}
+  .ways-s{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  .ways[data-on] .mode[aria-hidden="true"]{filter:none;translate:none}
+}
 
 /* El ritmo de fondos, con la misma logica que la home y que entreprises:
    hero oscuro -> blanco (avis + approche) -> gris (servicios + contacto) ->
@@ -1782,6 +1953,11 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
 #approche{background:var(--ground)}
 #services.svcs{background:var(--ground)}
 
+@supports (animation-timeline:view()){
+  @media (prefers-reduced-motion:no-preference){
+    .ways{animation-name:calmIn;animation-range:cover 0% cover 14%}
+  }
+}
 
 /* ============================================================
    PAGINAS SIN HERO DE IMAGEN (blog, articulo, videos)
