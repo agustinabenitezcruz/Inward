@@ -652,6 +652,7 @@ form>*,.two>*,.fld>*{min-width:0}
    verticales, el numero en violeta y debajo una barra verde agua que se llena
    mientras main.js cuenta de cero al valor final. La barra arranca llena
    (--p:1) para que sin JavaScript no quede un riel vacio. */
+.avis-top{margin-bottom:clamp(1.4rem,2.6vw,2rem)}
 .kpis{
   list-style:none;margin:0 0 clamp(2.4rem,5vw,3.6rem);padding:0;
   display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
@@ -662,7 +663,7 @@ form>*,.two>*,.fld>*{min-width:0}
 .kpi + .kpi{border-left:1px solid var(--line)}
 .kpi-n{
   font-family:var(--font-display);font-weight:400;color:var(--accent);
-  font-size:clamp(3.2rem,7vw,6rem);line-height:.92;letter-spacing:-.045em;
+  font-size:clamp(2.4rem,4.4vw,3.8rem);line-height:.95;letter-spacing:-.04em;
   font-variant-numeric:tabular-nums;white-space:nowrap;
 }
 .kpi-bar{position:relative;display:block;height:3px;border-radius:3px;background:var(--surface);overflow:hidden}
