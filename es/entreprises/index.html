@@ -33,7 +33,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..600&family=Jost:wght@300..600&display=swap">
-<link rel="stylesheet" href="../../assets/css/styles.css?v=3d722567">
+<link rel="stylesheet" href="../../assets/css/styles.css?v=be7bb5ba">
 <link rel="preload" as="image" href="../../assets/img/atelier-equipe-inward-tableau-blanc.webp" fetchpriority="high">
 
 <!-- FICHA ESTRUCTURADA. La organizacion se referencia por @id a la que
@@ -443,7 +443,7 @@
 </script>
 </head>
 <body>
-<p style="position:fixed;left:16px;bottom:16px;z-index:80;margin:0;max-width:min(340px,calc(100vw - 32px));padding:.6rem .85rem;border-radius:12px;background:#ebff76;color:#101010;box-shadow:0 8px 24px -10px rgba(16,16,16,.45);font:500 .74rem/1.45 Jost,system-ui,sans-serif">Traducción en curso. Esta página muestra el texto en francés donde falta el español. (382)</p>
+<p style="position:fixed;left:16px;bottom:16px;z-index:80;margin:0;max-width:min(340px,calc(100vw - 32px));padding:.6rem .85rem;border-radius:12px;background:#ebff76;color:#101010;box-shadow:0 8px 24px -10px rgba(16,16,16,.45);font:500 .74rem/1.45 Jost,system-ui,sans-serif">Traducción en curso. Esta página muestra el texto en francés donde falta el español. (386)</p>
 
 <!-- Los bloques marcados shell:* no se editan acá: salen de index.html y los
      copia tools/sync_shell.py. Si hay que tocar la cabecera o el pie, se toca
@@ -619,16 +619,12 @@
 </section>
 <div id="hdrSentinel" aria-hidden="true" style="position:absolute;top:50vh;height:1px;width:1px"></div>
 
-<!-- ============================ LOGOS CLIENTS ============================ -->
-<!-- Seccion entera, no la franja de 86px de la home. Dos razones: aqui la
-     prueba social es argumento de venta y no una nota al pie, y van a llegar
-     mas marcas. Por eso es una rejilla con celdas de tamanio fijo y no una
-     fila: al anadir logos crece hacia abajo en filas completas, sin que haya
-     que tocar nada y sin que la ultima fila quede descolgada.
-     Cada logo conserva sus medidas propias (el equilibrio optico de la fila
-     esta en los atributos width/height de cada <img>, calculado uno a uno) y
-     la celda se encarga de centrarlo. -->
-<section class="band band-top clients clients-lg sec">
+<!-- ============================ REFERENCES ============================ -->
+<!-- Logos de clientes y avis Google en una sola seccion, bajo un solo rotulo:
+     las dos cosas dicen lo mismo (quien confia en INWARD) y juntas entran en
+     una pantalla. Lleva id="avis" porque main.js rellena las opiniones
+     buscando ese id; el rotulo visible es Références. -->
+<section class="band band-top clients clients-lg refs sec" id="avis" data-state="empty" data-api="../../api/avis.php">
   <div class="wrap">
     <div class="sec-head rv">
       <p class="label">Références</p>
@@ -643,68 +639,62 @@
       <li><img src="../../assets/img/clients/logo-de-altura.png" width="134" height="38" alt="Logo de De Altura, client d'INWARD" loading="lazy" decoding="async"></li>
       <li><img src="../../assets/img/clients/logo-las-praderas.png" width="57" height="57" alt="Logo de Las Praderas, client d'INWARD" loading="lazy" decoding="async"></li>
     </ul>
-  </div>
-</section>
-
-
-<!-- ============================ AVIS GOOGLE ============================ -->
-<!-- El mismo bloque que en la home y en la landing de particulares, con el
-     mismo endpoint. No se duplica el contenido: lo rellena api/avis.php. -->
-<section class="band sec" id="avis" data-state="empty" data-api="../../api/avis.php">
-  <div class="wrap avis-in">
-    <div class="avis-score rv">
-      <p class="label">Nos résultats</p>
-      <p class="score"><span class="score-n" data-avis="rating"><span class="todo" title="Note reelle a recuperer de la fiche Google">—</span></span><span class="score-d">/5</span></p>
-      <div class="stars" data-avis="stars" aria-hidden="true"></div>
-      <p class="body-2"><span data-avis="count">Nombre d'avis à confirmer</span></p>
-      <a class="avis-src" data-avis="src" href="https://www.google.com/maps?cid=1377371409426816352" rel="noopener nofollow" target="_blank">
-        <svg viewBox="0 0 48 48" width="16" height="16" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-2.8-.4-4H24v7.3h12.1c-.2 2-1.6 5-4.5 7l-.1.3 6.5 5 .5.1c4.2-3.8 6.6-9.5 6.6-15.7"/><path fill="#34A853" d="M24 46c5.9 0 10.9-1.9 14.5-5.3l-6.9-5.3c-1.8 1.3-4.3 2.2-7.6 2.2-5.8 0-10.7-3.8-12.5-9l-.3.1-6.7 5.2-.1.3C8 41.9 15.4 46 24 46"/><path fill="#FBBC05" d="M11.5 28.6c-.5-1.4-.7-2.9-.7-4.6s.3-3.2.7-4.6v-.3l-6.8-5.3-.2.1A22 22 0 0 0 2 24c0 3.5.9 6.9 2.5 9.9z"/><path fill="#EA4335" d="M24 9.5c4.1 0 6.9 1.8 8.5 3.3l6.2-6C34.9 3.4 29.9 1 24 1 15.4 1 8 6.1 4.5 13.5l7 5.4C13.3 13.3 18.2 9.5 24 9.5"/></svg>
-        Voir les avis sur Google
-      </a>
-    </div>
-    <div class="avis-rail rv" data-avis="rail" role="list" tabindex="0" aria-label="Avis clients">
-      <p class="avis-empty"><span class="todo" title="Dos opciones: una clave de la Places API en api/config.php (las opiniones se actualizan solas), u opiniones reales copiadas en content/avis.json. Ver README.">Avis Google à connecter</span>. Les avis positifs les plus récents s'afficheront ici automatiquement.</p>
+    <div class="avis-in refs-avis">
+      <div class="avis-score rv">
+        <p class="score"><span class="score-n" data-avis="rating"><span class="todo" title="Note reelle a recuperer de la fiche Google">—</span></span><span class="score-d">/5</span></p>
+        <div class="stars" data-avis="stars" aria-hidden="true"></div>
+        <p class="body-2"><span data-avis="count">Nombre d'avis à confirmer</span></p>
+        <a class="avis-src" data-avis="src" href="https://www.google.com/maps?cid=1377371409426816352" rel="noopener nofollow" target="_blank">
+          <svg viewBox="0 0 48 48" width="16" height="16" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-2.8-.4-4H24v7.3h12.1c-.2 2-1.6 5-4.5 7l-.1.3 6.5 5 .5.1c4.2-3.8 6.6-9.5 6.6-15.7"/><path fill="#34A853" d="M24 46c5.9 0 10.9-1.9 14.5-5.3l-6.9-5.3c-1.8 1.3-4.3 2.2-7.6 2.2-5.8 0-10.7-3.8-12.5-9l-.3.1-6.7 5.2-.1.3C8 41.9 15.4 46 24 46"/><path fill="#FBBC05" d="M11.5 28.6c-.5-1.4-.7-2.9-.7-4.6s.3-3.2.7-4.6v-.3l-6.8-5.3-.2.1A22 22 0 0 0 2 24c0 3.5.9 6.9 2.5 9.9z"/><path fill="#EA4335" d="M24 9.5c4.1 0 6.9 1.8 8.5 3.3l6.2-6C34.9 3.4 29.9 1 24 1 15.4 1 8 6.1 4.5 13.5l7 5.4C13.3 13.3 18.2 9.5 24 9.5"/></svg>
+          Voir les avis sur Google
+        </a>
+      </div>
+      <div class="avis-rail rv" data-avis="rail" role="list" tabindex="0" aria-label="Avis clients">
+        <p class="avis-empty"><span class="todo" title="Dos opciones: una clave de la Places API en api/config.php (las opiniones se actualizan solas), u opiniones reales copiadas en content/avis.json. Ver README.">Avis Google à connecter</span>. Les avis positifs les plus récents s'afficheront ici automatiquement.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ============================ AGILITE ============================ -->
-<section class="band lp-split sec" id="agilite">
-  <div class="wrap lp-split-grid">
-    <div class="lp-split-txt rv">
+<section class="band agl sec" id="agilite">
+  <div class="wrap">
+    <div class="sec-head agl-head rv">
       <p class="label">Entreprises</p>
       <h2>Vos équipes avancent, l'administration ne les retient plus</h2>
-      <p>Pour vos salariés et leurs familles, nous offrons un accompagnement premium, humain et sur mesure, garantissant une installation sereine et réussie du premier jour au dernier détail.</p>
-
-      <!-- El parrafo que habia aqui decia cuatro cosas seguidas y no se leia
-           ninguna. Las mismas cuatro, una por linea, con su titulo: es la
-           lista de beneficios y se escanea de un vistazo. -->
-      <p class="chk-h">Ce que vous y gagnez</p>
-      <ul class="chk">
-        <li>
-          <b>Agilité opérationnelle maximale</b>
-          <span>Des structures fluides pour vous adapter instantanément aux exigences du marché.</span>
-        </li>
-        <li>
-          <b>Intégration accélérée des talents</b>
-          <span>Vos nouveaux collaborateurs sont opérationnels et productifs en un temps record.</span>
-        </li>
-        <li>
-          <b>Zéro blocage administratif</b>
-          <span>Des processus simplifiés pour supprimer définitivement les goulets d'étranglement.</span>
-        </li>
-        <li>
-          <b>Focus total sur votre croissance</b>
-          <span>Du temps et des ressources libérés pour vous concentrer sur votre performance.</span>
-        </li>
-      </ul>
-      <div class="lp-split-act">
-        <a class="btn btn-primary" href="#contact">Demandez un devis <span class="arw">&rsaquo;</span></a>
-      </div>
+      <p class="lead">Pour vos salariés et leurs familles, nous offrons un accompagnement premium, humain et sur mesure, garantissant une installation sereine et réussie du premier jour au dernier détail.</p>
     </div>
-    <figure class="lp-split-media rounded rv">
-      <img src="../../assets/img/equipe-inward-echange-clients.webp" width="1280" height="853" alt="Réunion de travail entre l'équipe INWARD et une entreprise cliente" loading="lazy" decoding="async">
-    </figure>
+    <!-- Titulo y bajada centrados arriba; abajo una sola caja con la lista de
+         beneficios a la izquierda y la foto a la derecha. -->
+    <div class="agl-box rv">
+      <div class="agl-txt">
+        <p class="chk-h">Ce que vous y gagnez</p>
+        <ul class="chk">
+          <li>
+            <b>Agilité opérationnelle maximale</b>
+            <span>Des structures fluides pour vous adapter instantanément aux exigences du marché.</span>
+          </li>
+          <li>
+            <b>Intégration accélérée des talents</b>
+            <span>Vos nouveaux collaborateurs sont opérationnels et productifs en un temps record.</span>
+          </li>
+          <li>
+            <b>Zéro blocage administratif</b>
+            <span>Des processus simplifiés pour supprimer définitivement les goulets d'étranglement.</span>
+          </li>
+          <li>
+            <b>Focus total sur votre croissance</b>
+            <span>Du temps et des ressources libérés pour vous concentrer sur votre performance.</span>
+          </li>
+        </ul>
+        <div class="lp-split-act">
+          <a class="btn btn-primary" href="#contact">Demandez un devis <span class="arw">&rsaquo;</span></a>
+        </div>
+      </div>
+      <figure class="agl-media">
+        <img src="../../assets/img/equipe-inward-echange-clients.webp" width="1280" height="853" alt="Réunion de travail entre l'équipe INWARD et une entreprise cliente" loading="lazy" decoding="async">
+      </figure>
+    </div>
   </div>
 </section>
 
@@ -811,6 +801,7 @@
      QUE se puede hacer con ello. La de abajo son los tres CTA y por eso son
      las unicas cajas macizas de la pagina: la diferencia de peso dice cual es
      informacion y cual es accion, sin un solo rotulo que lo explique. -->
+<!-- Proposition A -->
 <section class="band sec" id="types-de-visa">
   <div class="wrap">
     <!-- Iconos locales: esta seccion solo existe en esta pagina. Los atributos
@@ -829,6 +820,7 @@
 
     <div class="sec-head rv">
       <p class="label">Types de visa</p>
+      <p class="todo" title="Variante a comparer : choisir une des deux propositions">Proposition A : icônes (actuel)</p>
       <h2>Obtenez&nbsp;:</h2>
     </div>
 
@@ -855,6 +847,61 @@
         </li>
     </ul>
 
+    <ul class="va-grid rv">
+        <li class="va">
+          <a href="#contact">
+            <svg class="va-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-a-obt"></use></svg>
+            <span>Obtention de visa</span>
+          </a>
+        </li>
+        <li class="va">
+          <a href="#contact">
+            <svg class="va-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-a-ren"></use></svg>
+            <span>Renouvellements</span>
+          </a>
+        </li>
+        <li class="va">
+          <a href="#contact">
+            <svg class="va-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-a-chg"></use></svg>
+            <span>Changement de statut</span>
+          </a>
+        </li>
+    </ul>
+  </div>
+</section>
+
+<!-- Proposition B: el nombre de cada visa sobre una foto, como las tarjetas
+     del blog. Las fotos son PROVISIONALES (del banco actual del sitio): hay
+     que reemplazarlas por fotos de banco de imagenes, una por visa. -->
+<section class="band sec" id="types-de-visa-b">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="label">Types de visa</p>
+      <p class="todo" title="Variante a comparer : choisir une des deux propositions. Photos provisoires : a remplacer par des photos de banque d'images.">Proposition B : photos (provisoires)</p>
+      <h2>Obtenez&nbsp;:</h2>
+    </div>
+    <ul class="vph-grid rv">
+      <li class="art vph art-ov1 rounded">
+        <figure class="art-ph"><img src="../../assets/img/fondatrices-inward-palais-garnier-paris.webp" width="1400" height="933" alt="" loading="lazy" decoding="async"></figure>
+        <div class="art-b"><span class="kd">Visa</span><h3>Visa Passeport Talent</h3></div>
+      </li>
+      <li class="art vph art-ov2 rounded">
+        <figure class="art-ph"><img src="../../assets/img/consultantes-inward-bureau-cabinet.webp" width="1400" height="933" alt="" loading="lazy" decoding="async"></figure>
+        <div class="art-b"><span class="kd">Visa</span><h3>Visa Salarié</h3></div>
+      </li>
+      <li class="art vph art-ov3 rounded">
+        <figure class="art-ph"><img src="../../assets/img/atelier-equipe-inward-tableau-blanc.webp" width="1400" height="933" alt="" loading="lazy" decoding="async"></figure>
+        <div class="art-b"><span class="kd">Visa</span><h3>Visa travailleur temporaire</h3></div>
+      </li>
+      <li class="art vph art-ov1 rounded">
+        <figure class="art-ph"><img src="../../assets/img/dossier-titre-de-sejour-en-preparation.webp" width="1400" height="933" alt="" loading="lazy" decoding="async"></figure>
+        <div class="art-b"><span class="kd">Visa</span><h3>Visa saisonnier</h3></div>
+      </li>
+      <li class="art vph art-ov2 rounded">
+        <figure class="art-ph"><img src="../../assets/img/equipe-inward-echange-clients.webp" width="1280" height="853" alt="" loading="lazy" decoding="async"></figure>
+        <div class="art-b"><span class="kd">Visa</span><h3>Visa Famille</h3></div>
+      </li>
+    </ul>
     <ul class="va-grid rv">
         <li class="va">
           <a href="#contact">
@@ -1076,7 +1123,7 @@
 <!-- ============================ RAIL ============================ -->
 <nav class="rail" aria-label="Sections de la page">
   <a href="#top" aria-label="Haut de page"><span></span></a>
-  <a href="#avis" aria-label="Nos résultats"><span></span></a>
+  <a href="#avis" aria-label="Références"><span></span></a>
   <a href="#agilite" aria-label="Notre approche"><span></span></a>
   <a href="#services" aria-label="Nos services"><span></span></a>
   <a href="#types-de-visa" aria-label="Types de visa"><span></span></a>

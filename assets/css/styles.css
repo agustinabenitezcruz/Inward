@@ -2581,3 +2581,59 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
     .hacc{animation-name:calmIn;animation-range:cover 0% cover 12%}
   }
 }
+
+
+/* ============================================================
+   LANDING EMPRESAS
+   ============================================================ */
+/* Références + avis en una seccion: los logos arriba y las opiniones debajo,
+   separados por una linea. Mas compacto que cuando eran dos secciones,
+   porque entre los dos tienen que entrar en una pantalla. */
+.refs .sec-head{justify-items:center;text-align:center}
+.refs .logos-grid{margin-bottom:0}
+.refs-avis{
+  margin-top:clamp(1.8rem,3.6vh,2.6rem);padding-top:clamp(1.6rem,3.2vh,2.4rem);
+  border-top:1px solid var(--line);
+}
+
+/* Agilite: cabecera centrada y una caja con la checklist y la foto. */
+.agl-head{justify-items:center;text-align:center}
+.agl-head h2{max-width:20em}
+.agl-head .lead{max-width:60ch}
+.agl-box{
+  display:grid;grid-template-columns:1.1fr .9fr;
+  background:var(--surface);border:1px solid var(--line-card);
+  border-radius:var(--r);overflow:hidden;
+}
+.agl-txt{padding:clamp(1.6rem,3.4vw,2.8rem)}
+.agl-txt .chk-h{margin-top:0}
+.agl-txt .lp-split-act{margin-top:clamp(1.3rem,2.4vw,1.8rem)}
+.agl-media{margin:0;min-height:100%;position:relative}
+.agl-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+@media (max-width:860px){
+  .agl-box{grid-template-columns:1fr}
+  .agl-media{min-height:0;aspect-ratio:16/10}
+}
+
+/* Types de visa, propuesta B: tarjetas de foto como las del blog. */
+.vph-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.vph-grid .art{aspect-ratio:3/4}
+.vph-grid .art h3{font-size:clamp(.98rem,1.2vw,1.1rem)}
+.vph-grid + .va-grid{margin-top:14px}
+@media (max-width:1080px){.vph-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:640px){.vph-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* Ajustes de alto: Références + avis entran juntos en una pantalla. */
+.refs .logos-grid{padding-block:clamp(.6rem,1.6vh,1.2rem);row-gap:.4rem}
+.refs .logos-grid li{aspect-ratio:auto;height:clamp(64px,9vh,84px)}
+/* Agilite: el rotulo tambien centrado, y la checklist en dos columnas para que
+   la caja no se haga mas alta que la pantalla. */
+.agl-head .label{justify-self:center}
+.agl-txt .chk{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(1.2rem,2.4vw,2rem);row-gap:1.1rem}
+.agl-head{margin-bottom:clamp(1.6rem,3.2vh,2.4rem)}
+@media (max-width:640px){.agl-txt .chk{grid-template-columns:1fr}}
+.agl-head .lead{max-width:72ch}
+.agl-box{grid-template-columns:1.35fr .65fr}
+.agl-txt{padding:clamp(1.3rem,2.6vw,2rem) clamp(1.4rem,3vw,2.4rem)}
+.agl-txt .chk{margin-top:.9rem}
+.agl-txt .lp-split-act{margin-top:clamp(1rem,2vw,1.4rem)}
+@media (max-width:860px){.agl-box{grid-template-columns:1fr}}
