@@ -502,7 +502,7 @@
 </script>
 </head>
 <body>
-<p style="position:fixed;left:16px;bottom:16px;z-index:80;margin:0;max-width:min(340px,calc(100vw - 32px));padding:.6rem .85rem;border-radius:12px;background:#ebff76;color:#101010;box-shadow:0 8px 24px -10px rgba(16,16,16,.45);font:500 .74rem/1.45 Jost,system-ui,sans-serif">Translation in progress. This page still shows the French text where the English is missing. (376)</p>
+<p style="position:fixed;left:16px;bottom:16px;z-index:80;margin:0;max-width:min(340px,calc(100vw - 32px));padding:.6rem .85rem;border-radius:12px;background:#ebff76;color:#101010;box-shadow:0 8px 24px -10px rgba(16,16,16,.45);font:500 .74rem/1.45 Jost,system-ui,sans-serif">Translation in progress. This page still shows the French text where the English is missing. (370)</p>
 
 <!-- Los bloques marcados shell:* no se editan aca: salen de index.html y los
      copia tools/sync_shell.py. -->
@@ -800,58 +800,113 @@
 </section>
 
 <!-- ============================ TYPES DE VISA ============================ -->
-<!-- Mismo componente que la lista de particulares de la home: filas que se
-     abren de a una. Aca sin la columna de foto, asi que el panel ocupa el
-     ancho entero.
-     Los cuatro ultimos cuerpos son marcadores: la clienta mando lorem ipsum.
-     No se inventa el texto, se deja marcado. -->
+<!-- Acordeon .svc, el mismo de la landing de empresas: pastilla con el numero,
+     titulo y "Voir plus". A proposito NO es el mismo componente que la
+     seccion de abajo: las dos son listas que se abren y si se vieran iguales
+     el visitante no tendria por que entender que hablan de cosas distintas.
+     Esta enumera, la de abajo acompana.
+     "Rece" se leyo como la carte de sejour recherche d'emploi ou creation
+     d'entreprise; a confirmar con la clienta.
+     Los cuerpos en lorem ipsum son los que la clienta todavia no mando. -->
 <section class="band sec" id="visas">
   <div class="wrap">
     <div class="sec-head rv">
       <p class="label">Visas</p>
       <h2>Les visas que nous accompagnons</h2>
     </div>
-    <div class="rows rv">
-        <div class="row" id="visa-visiteur" data-open="true">
-          <button class="row-btn" aria-expanded="true"><h3>Visa visiteur</h3></button>
-          <svg class="mk" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-          <div class="row-body"><div><p>Constitution du dossier, prise de rendez-vous, validation du visa.</p></div></div>
+    <div class="svc-list rv">
+      <details class="svc" id="visa-visiteur" name="visas-pt" open>
+        <summary>
+          <span class="svc-n">01</span>
+          <span class="svc-t" role="heading" aria-level="3">Visa visiteur</span>
+          <span class="svc-more"><span class="svc-more-t">Voir plus</span><span class="svc-less-t">Voir moins</span>
+            <svg class="svc-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5.25L7 9.25l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </summary>
+        <div class="svc-b">
+          <p>Constitution du dossier, prise de rendez-vous, validation du visa.</p>
         </div>
-        <div class="row" id="visa-etudiant" data-open="false">
-          <button class="row-btn" aria-expanded="false"><h3>Visa étudiant</h3></button>
-          <svg class="mk" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-          <div class="row-body"><div><p>Inscription à Campus France, prise de rendez-vous, constitution du dossier, validation du visa.</p></div></div>
+      </details>
+      <details class="svc" id="visa-etudiant" name="visas-pt">
+        <summary>
+          <span class="svc-n">02</span>
+          <span class="svc-t" role="heading" aria-level="3">Visa étudiant</span>
+          <span class="svc-more"><span class="svc-more-t">Voir plus</span><span class="svc-less-t">Voir moins</span>
+            <svg class="svc-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5.25L7 9.25l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </summary>
+        <div class="svc-b">
+          <p>Inscription à Campus France, prise de rendez-vous, constitution du dossier, validation du visa.</p>
         </div>
-        <div class="row" id="visa-famille" data-open="false">
-          <button class="row-btn" aria-expanded="false"><h3>Visa famille</h3></button>
-          <svg class="mk" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-          <div class="row-body"><div><p>Étude de cas, constitution du dossier, prise de rendez-vous, validation du visa.</p></div></div>
+      </details>
+      <details class="svc" id="visa-famille" name="visas-pt">
+        <summary>
+          <span class="svc-n">03</span>
+          <span class="svc-t" role="heading" aria-level="3">Visa famille</span>
+          <span class="svc-more"><span class="svc-more-t">Voir plus</span><span class="svc-less-t">Voir moins</span>
+            <svg class="svc-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5.25L7 9.25l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </summary>
+        <div class="svc-b">
+          <p>Étude de cas, constitution du dossier, prise de rendez-vous, validation du visa.</p>
         </div>
-        <div class="row" id="passeport-talent" data-open="false">
-          <button class="row-btn" aria-expanded="false"><h3>Passeport Talent</h3></button>
-          <svg class="mk" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-          <div class="row-body"><div><p><span class="todo" title="Détail à fournir par la cliente">Détail à venir</span></p></div></div>
+      </details>
+      <details class="svc" id="passeport-talent" name="visas-pt">
+        <summary>
+          <span class="svc-n">04</span>
+          <span class="svc-t" role="heading" aria-level="3">Passeport Talent</span>
+          <span class="svc-more"><span class="svc-more-t">Voir plus</span><span class="svc-less-t">Voir moins</span>
+            <svg class="svc-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5.25L7 9.25l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </summary>
+        <div class="svc-b">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-        <div class="row" id="visas-travail" data-open="false">
-          <button class="row-btn" aria-expanded="false"><h3>Visas de travail</h3></button>
-          <svg class="mk" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-          <div class="row-body"><div><p><span class="todo" title="Détail à fournir par la cliente">Détail à venir</span></p></div></div>
+      </details>
+      <details class="svc" id="visas-travail" name="visas-pt">
+        <summary>
+          <span class="svc-n">05</span>
+          <span class="svc-t" role="heading" aria-level="3">Visas de travail</span>
+          <span class="svc-more"><span class="svc-more-t">Voir plus</span><span class="svc-less-t">Voir moins</span>
+            <svg class="svc-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5.25L7 9.25l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </summary>
+        <div class="svc-b">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-        <div class="row" id="rece" data-open="false">
-          <button class="row-btn" aria-expanded="false"><h3>Recherche d'emploi ou création d'entreprise <span class="todo" title="Lu comme la carte de séjour RECE : à confirmer">Intitulé à confirmer</span></h3></button>
-          <svg class="mk" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-          <div class="row-body"><div><p><span class="todo" title="Détail à fournir par la cliente">Détail à venir</span></p></div></div>
+      </details>
+      <details class="svc" id="rece" name="visas-pt">
+        <summary>
+          <span class="svc-n">06</span>
+          <span class="svc-t" role="heading" aria-level="3">Recherche d'emploi ou création d'entreprise</span>
+          <span class="svc-more"><span class="svc-more-t">Voir plus</span><span class="svc-less-t">Voir moins</span>
+            <svg class="svc-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5.25L7 9.25l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </summary>
+        <div class="svc-b">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-        <div class="row" id="entrepreneur" data-open="false">
-          <button class="row-btn" aria-expanded="false"><h3>Entrepreneur</h3></button>
-          <svg class="mk" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-          <div class="row-body"><div><p><span class="todo" title="Détail à fournir par la cliente">Détail à venir</span></p></div></div>
+      </details>
+      <details class="svc" id="entrepreneur" name="visas-pt">
+        <summary>
+          <span class="svc-n">07</span>
+          <span class="svc-t" role="heading" aria-level="3">Entrepreneur</span>
+          <span class="svc-more"><span class="svc-more-t">Voir plus</span><span class="svc-less-t">Voir moins</span>
+            <svg class="svc-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5.25L7 9.25l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </summary>
+        <div class="svc-b">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
+      </details>
     </div>
   </div>
 </section>
 
 <!-- ======================= SOUTIEN AU NOUVEL ARRIVANT ======================= -->
+<!-- Filas .rows, las mismas de la seccion de particulares de la home: sin
+     numero, con la cruz que gira y el filete verde agua al pie de la fila
+     abierta. -->
 <section class="band sec" id="soutien">
   <div class="wrap">
     <div class="sec-head rv">
@@ -867,17 +922,17 @@
         <div class="row" id="carte-vitale" data-open="false">
           <button class="row-btn" aria-expanded="false"><h3>Demande de carte Vitale</h3></button>
           <svg class="mk" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-          <div class="row-body"><div><p><span class="todo" title="Détail à fournir par la cliente">Détail à venir</span></p></div></div>
+          <div class="row-body"><div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div></div>
         </div>
         <div class="row" id="soutien-3" data-open="false">
-          <button class="row-btn" aria-expanded="false"><h3><span class="todo" title="Prestation à définir avec la cliente">Prestation à définir</span></h3></button>
+          <button class="row-btn" aria-expanded="false"><h3>Lorem ipsum</h3></button>
           <svg class="mk" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-          <div class="row-body"><div><p><span class="todo" title="Détail à fournir par la cliente">Détail à venir</span></p></div></div>
+          <div class="row-body"><div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div></div>
         </div>
         <div class="row" id="soutien-4" data-open="false">
-          <button class="row-btn" aria-expanded="false"><h3><span class="todo" title="Prestation à définir avec la cliente">Prestation à définir</span></h3></button>
+          <button class="row-btn" aria-expanded="false"><h3>Lorem ipsum</h3></button>
           <svg class="mk" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-          <div class="row-body"><div><p><span class="todo" title="Détail à fournir par la cliente">Détail à venir</span></p></div></div>
+          <div class="row-body"><div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div></div>
         </div>
     </div>
   </div>
