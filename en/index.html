@@ -34,7 +34,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..600&family=Jost:wght@300..600&display=swap">
-<link rel="stylesheet" href="../assets/css/styles.css?v=ea065a44">
+<link rel="stylesheet" href="../assets/css/styles.css?v=433e22d8">
 <link rel="preload" as="image" href="../assets/img/fondatrices-inward-palais-garnier-paris.webp" fetchpriority="high">
 
 <!-- FICHA ESTRUCTURADA (JSON-LD).
@@ -550,7 +550,7 @@
      Ne rien inventer ici, Google sanctionne les données structurées fausses. -->
 </head>
 <body>
-<p style="position:fixed;left:16px;bottom:16px;z-index:80;margin:0;max-width:min(340px,calc(100vw - 32px));padding:.6rem .85rem;border-radius:12px;background:#ebff76;color:#101010;box-shadow:0 8px 24px -10px rgba(16,16,16,.45);font:500 .74rem/1.45 Jost,system-ui,sans-serif">Translation in progress. This page still shows the French text where the English is missing. (368)</p>
+<p style="position:fixed;left:16px;bottom:16px;z-index:80;margin:0;max-width:min(340px,calc(100vw - 32px));padding:.6rem .85rem;border-radius:12px;background:#ebff76;color:#101010;box-shadow:0 8px 24px -10px rgba(16,16,16,.45);font:500 .74rem/1.45 Jost,system-ui,sans-serif">Translation in progress. This page still shows the French text where the English is missing. (379)</p>
 
 <!-- shell:sprite -->
 <!-- Sprite du logo officiel INWARD. Sources vectorielles : assets/SVG/ -->
@@ -724,20 +724,6 @@
       <a class="btn btn-primary" href="entreprises/">Vous êtes une entreprise ? <span class="arw">&rsaquo;</span></a>
       <a class="btn btn-primary" href="particuliers/">Je suis un particulier <span class="arw">&rsaquo;</span></a>
     </div>
-    <div class="hero-stats">
-      <div class="hs">
-        <p class="hs-n">99 %</p>
-        <p class="hs-l">Taux de réussite des dossiers</p>
-      </div>
-      <div class="hs">
-        <p class="hs-n">+45</p>
-        <p class="hs-l">Nationalités accompagnées</p>
-      </div>
-      <div class="hs">
-        <p class="hs-n">+1000</p>
-        <p class="hs-l">Dossiers traités</p>
-      </div>
-    </div>
   </div>
 </section>
 <div id="hdrSentinel" aria-hidden="true" style="position:absolute;top:60vh;height:1px;width:1px"></div>
@@ -747,6 +733,30 @@
      del lado del servidor. Sin fiche ni clave configuradas, la seccion muestra
      el aviso de pendiente y ninguna opinion inventada. -->
 <section class="band band-top sec" id="avis" data-state="empty" data-api="api/avis.php">
+  <!-- Las cifras vivian sobre el video del hero, chicas y en blanco. Aca van
+       junto a las opiniones, que es la otra prueba de resultados, y a tamano de
+       titular. El HTML trae el valor final: sin JavaScript o con movimiento
+       reducido se lee tal cual. main.js las cuenta desde cero al entrar en
+       pantalla y la barra de abajo se llena al mismo ritmo. -->
+  <div class="wrap">
+    <ul class="kpis rv" aria-label="Chiffres clés">
+      <li class="kpi">
+        <p class="kpi-n" data-count>99 %</p>
+        <span class="kpi-bar" aria-hidden="true"></span>
+        <p class="kpi-l">Taux de réussite des dossiers</p>
+      </li>
+      <li class="kpi">
+        <p class="kpi-n" data-count>+45</p>
+        <span class="kpi-bar" aria-hidden="true"></span>
+        <p class="kpi-l">Nationalités accompagnées</p>
+      </li>
+      <li class="kpi">
+        <p class="kpi-n" data-count>+1000</p>
+        <span class="kpi-bar" aria-hidden="true"></span>
+        <p class="kpi-l">Dossiers traités</p>
+      </li>
+    </ul>
+  </div>
   <div class="wrap avis-in">
     <div class="avis-score rv">
       <p class="label">Avis Google</p>
@@ -767,12 +777,21 @@
   </div>
 </section>
 
+<!-- ================== B2B — PROPUESTAS DE ICONOS (8) ==================
+     La clienta quiere elegir el tratamiento de los iconos viendo la seccion
+     entera. Son ocho copias identicas salvo por la clase .ico-* de la lista,
+     que cambia el icono y, con el, el color del hover. La primera es la que
+     lleva id="entreprises" y el sprite de iconos; las demas lo reutilizan
+     (ids duplicados no son validos). Cuando elija, quedan una sola seccion
+     y una sola clase: ocho H2 iguales no pueden publicarse. -->
 <!-- ============================ B2B ============================ -->
+<!-- Proposition 1 -->
 <section class="band sec" id="entreprises">
   <div class="wrap b2b-grid">
     <div class="b2b-txt">
       <div class="sec-head rv">
         <p class="label">Entreprises</p>
+        <p class="todo" title="Variante a comparer : choisir une des huit propositions">Proposition 1 : icônes violet foncé, sans fond</p>
         <h2>Optimisez la mobilité internationale de vos collaborateurs</h2>
         <!-- Texto del doc de la clienta (Textos_web.md, seccion Enterprise). El H1
              corresponde a la primera de las dos opciones que propone el doc. -->
@@ -799,7 +818,7 @@
         <symbol id="i-nat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9.5" r="5.5"/><path d="M9.3 14.2L8 21.5l4-2.2 4 2.2-1.3-7.3"/></symbol>
         <symbol id="i-admin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="4" width="15" height="16.5" rx="2.5"/><rect x="9" y="2" width="6" height="3.6" rx="1.4"/><path d="M8.5 10.5h7M8.5 14h7M8.5 17.5h4"/></symbol>
     </svg>
-    <ol class="b2b-list rv">
+    <ol class="b2b-list ico-plain ico-violet rv">
       <li class="b2b-row"><a href="entreprises/">
         <svg class="b2b-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-visa"></use></svg>
         <span class="b2b-t">Visas et titres de séjour</span>
@@ -837,11 +856,373 @@
   </div>
 </section>
 
+<section class="band sec" id="entreprises-2">
+  <div class="wrap b2b-grid">
+    <div class="b2b-txt">
+      <div class="sec-head rv">
+        <p class="label">Entreprises</p>
+        <p class="todo" title="Variante a comparer : choisir une des huit propositions">Proposition 2 : icônes lilas, sans fond</p>
+        <h2>Optimisez la mobilité internationale de vos collaborateurs</h2>
+        <p class="lead">Déléguez l'ensemble des démarches de visa et de titre de séjour à une équipe d'experts. Du diagnostic initial jusqu'à l'obtention du titre, nous assurons la conformité de vos dossiers et sécurisons l'embauche et la rétention de vos talents étrangers.</p>
+      </div>
+      <div class="b2b-act rv">
+        <a class="btn btn-primary" href="#contact">Demander un devis sur-mesure <span class="arw">&rsaquo;</span></a>
+      </div>
+    </div>
+    <ol class="b2b-list ico-plain ico-lilac rv">
+      <li class="b2b-row"><a href="entreprises/">
+        <svg class="b2b-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-visa"></use></svg>
+        <span class="b2b-t">Visas et titres de séjour</span>
+        <span class="b2b-d">Passeport Talent, demandes d'autorisation de travail et suivi complet des salariés étrangers.</span>
+        <span class="b2b-a" aria-hidden="true">&rsaquo;</span>
+      </a></li>
+      <li class="b2b-row"><a href="entreprises/">
+        <svg class="b2b-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-detach"></use></svg>
+        <span class="b2b-t">Détachement de salariés</span>
+        <span class="b2b-d">Conformité aux normes de détachement et formalités de déplacement international.</span>
+        <span class="b2b-a" aria-hidden="true">&rsaquo;</span>
+      </a></li>
+      <li class="b2b-row"><a href="entreprises/">
+        <svg class="b2b-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-audit"></use></svg>
+        <span class="b2b-t">Audit et conseil</span>
+        <span class="b2b-d">Conseil juridique et vérification des titres de séjour de vos employés.</span>
+        <span class="b2b-a" aria-hidden="true">&rsaquo;</span>
+      </a></li>
+      <li class="b2b-row"><a href="entreprises/">
+        <svg class="b2b-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-nat"></use></svg>
+        <span class="b2b-t">Naturalisation et nationalité française <span class="todo" title="Le document de la cliente hesite entre ce service et le housing (voir 'DUDA: Esto o housing?')">Service à confirmer</span></span>
+        <span class="b2b-d">Accompagnement individuel de vos collaborateurs dans leur demande de nationalité.</span>
+        <span class="b2b-a" aria-hidden="true">&rsaquo;</span>
+      </a></li>
+      <li class="b2b-row"><a href="entreprises/">
+        <svg class="b2b-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-admin"></use></svg>
+        <span class="b2b-t">Aide administrative</span>
+        <span class="b2b-d">Inscription à l'assurance maladie, sécurité sociale et démarches d'installation.</span>
+        <span class="b2b-a" aria-hidden="true">&rsaquo;</span>
+      </a></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band sec" id="entreprises-3">
+  <div class="wrap b2b-grid">
+    <div class="b2b-txt">
+      <div class="sec-head rv">
+        <p class="label">Entreprises</p>
+        <p class="todo" title="Variante a comparer : choisir une des huit propositions">Proposition 3 : fond lilas, bordure grise</p>
+        <h2>Optimisez la mobilité internationale de vos collaborateurs</h2>
+        <p class="lead">Déléguez l'ensemble des démarches de visa et de titre de séjour à une équipe d'experts. Du diagnostic initial jusqu'à l'obtention du titre, nous assurons la conformité de vos dossiers et sécurisons l'embauche et la rétention de vos talents étrangers.</p>
+      </div>
+      <div class="b2b-act rv">
+        <a class="btn btn-primary" href="#contact">Demander un devis sur-mesure <span class="arw">&rsaquo;</span></a>
+      </div>
+    </div>
+    <ol class="b2b-list ico-lilac-gray rv">
+      <li class="b2b-row"><a href="entreprises/">
+        <svg class="b2b-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-visa"></use></svg>
+        <span class="b2b-t">Visas et titres de séjour</span>
+        <span class="b2b-d">Passeport Talent, demandes d'autorisation de travail et suivi complet des salariés étrangers.</span>
+        <span class="b2b-a" aria-hidden="true">&rsaquo;</span>
+      </a></li>
+      <li class="b2b-row"><a href="entreprises/">
+        <svg class="b2b-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-detach"></use></svg>
+        <span class="b2b-t">Détachement de salariés</span>
+        <span class="b2b-d">Conformité aux normes de détachement et formalités de déplacement international.</span>
+        <span class="b2b-a" aria-hidden="true">&rsaquo;</span>
+      </a></li>
+      <li class="b2b-row"><a href="entreprises/">
+        <svg class="b2b-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-audit"></use></svg>
+        <span class="b2b-t">Audit et conseil</span>
+        <span class="b2b-d">Conseil juridique et vérification des titres de séjour de vos employés.</span>
+        <span class="b2b-a" aria-hidden="true">&rsaquo;</span>
+      </a></li>
+      <li class="b2b-row"><a href="entreprises/">
+        <svg class="b2b-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-nat"></use></svg>
+        <span class="b2b-t">Naturalisation et nationalité française <span class="todo" title="Le document de la cliente hesite entre ce service et le housing (voir 'DUDA: Esto o housing?')">Service à confirmer</span></span>
+        <span class="b2b-d">Accompagnement individuel de vos collaborateurs dans leur demande de nationalité.</span>
+        <span class="b2b-a" aria-hidden="true">&rsaquo;</span>
+      </a></li>
+      <li class="b2b-row"><a href="entreprises/">
+        <svg class="b2b-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-admin"></use></svg>
+        <span class="b2b-t">Aide administrative</span>
+        <span class="b2b-d">Inscription à l'assurance maladie, sécurité sociale et démarches d'installation.</span>
+        <span class="b2b-a" aria-hidden="true">&rsaquo;</span>
+      </a></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band sec" id="entreprises-4">
+  <div class="wrap b2b-grid">
+    <div class="b2b-txt">
+      <div class="sec-head rv">
+        <p class="label">Entreprises</p>
+        <p class="todo" title="Variante a comparer : choisir une des huit propositions">Proposition 4 : fond vert d'eau, bordure grise</p>
+        <h2>Optimisez la mobilité internationale de vos collaborateurs</h2>
+        <p class="lead">Déléguez l'ensemble des démarches de visa et de titre de séjour à une équipe d'experts. Du diagnostic initial jusqu'à l'obtention du titre, nous assurons la conformité de vos dossiers et sécurisons l'embauche et la rétention de vos talents étrangers.</p>
+      </div>
+      <div class="b2b-act rv">
+        <a class="btn btn-primary" href="#contact">Demander un devis sur-mesure <span class="arw">&rsaquo;</span></a>
+      </div>
+    </div>
+    <ol class="b2b-list ico-green-gray rv">
+      <li class="b2b-row"><a href="entreprises/">
+        <svg class="b2b-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-visa"></use></svg>
+        <span class="b2b-t">Visas et titres de séjour</span>
+        <span class="b2b-d">Passeport Talent, demandes d'autorisation de travail et suivi complet des salariés étrangers.</span>
+        <span class="b2b-a" aria-hidden="true">&rsaquo;</span>
+      </a></li>
+      <li class="b2b-row"><a href="entreprises/">
+        <svg class="b2b-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-detach"></use></svg>
+        <span class="b2b-t">Détachement de salariés</span>
+        <span class="b2b-d">Conformité aux normes de détachement et formalités de déplacement international.</span>
+        <span class="b2b-a" aria-hidden="true">&rsaquo;</span>
+      </a></li>
+      <li class="b2b-row"><a href="entreprises/">
+        <svg class="b2b-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-audit"></use></svg>
+        <span class="b2b-t">Audit et conseil</span>
+        <span class="b2b-d">Conseil juridique et vérification des titres de séjour de vos employés.</span>
+        <span class="b2b-a" aria-hidden="true">&rsaquo;</span>
+      </a></li>
+      <li class="b2b-row"><a href="entreprises/">
+        <svg class="b2b-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-nat"></use></svg>
+        <span class="b2b-t">Naturalisation et nationalité française <span class="todo" title="Le document de la cliente hesite entre ce service et le housing (voir 'DUDA: Esto o housing?')">Service à confirmer</span></span>
+        <span class="b2b-d">Accompagnement individuel de vos collaborateurs dans leur demande de nationalité.</span>
+        <span class="b2b-a" aria-hidden="true">&rsaquo;</span>
+      </a></li>
+      <li class="b2b-row"><a href="entreprises/">
+        <svg class="b2b-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-admin"></use></svg>
+        <span class="b2b-t">Aide administrative</span>
+        <span class="b2b-d">Inscription à l'assurance maladie, sécurité sociale et démarches d'installation.</span>
+        <span class="b2b-a" aria-hidden="true">&rsaquo;</span>
+      </a></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band sec" id="entreprises-5">
+  <div class="wrap b2b-grid">
+    <div class="b2b-txt">
+      <div class="sec-head rv">
+        <p class="label">Entreprises</p>
+        <p class="todo" title="Variante a comparer : choisir une des huit propositions">Proposition 5 : fond vert-jaune, bordure grise</p>
+        <h2>Optimisez la mobilité internationale de vos collaborateurs</h2>
+        <p class="lead">Déléguez l'ensemble des démarches de visa et de titre de séjour à une équipe d'experts. Du diagnostic initial jusqu'à l'obtention du titre, nous assurons la conformité de vos dossiers et sécurisons l'embauche et la rétention de vos talents étrangers.</p>
+      </div>
+      <div class="b2b-act rv">
+        <a class="btn btn-primary" href="#contact">Demander un devis sur-mesure <span class="arw">&rsaquo;</span></a>
+      </div>
+    </div>
+    <ol class="b2b-list ico-yellow-gray rv">
+      <li class="b2b-row"><a href="entreprises/">
+        <svg class="b2b-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-visa"></use></svg>
+        <span class="b2b-t">Visas et titres de séjour</span>
+        <span class="b2b-d">Passeport Talent, demandes d'autorisation de travail et suivi complet des salariés étrangers.</span>
+        <span class="b2b-a" aria-hidden="true">&rsaquo;</span>
+      </a></li>
+      <li class="b2b-row"><a href="entreprises/">
+        <svg class="b2b-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-detach"></use></svg>
+        <span class="b2b-t">Détachement de salariés</span>
+        <span class="b2b-d">Conformité aux normes de détachement et formalités de déplacement international.</span>
+        <span class="b2b-a" aria-hidden="true">&rsaquo;</span>
+      </a></li>
+      <li class="b2b-row"><a href="entreprises/">
+        <svg class="b2b-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-audit"></use></svg>
+        <span class="b2b-t">Audit et conseil</span>
+        <span class="b2b-d">Conseil juridique et vérification des titres de séjour de vos employés.</span>
+        <span class="b2b-a" aria-hidden="true">&rsaquo;</span>
+      </a></li>
+      <li class="b2b-row"><a href="entreprises/">
+        <svg class="b2b-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-nat"></use></svg>
+        <span class="b2b-t">Naturalisation et nationalité française <span class="todo" title="Le document de la cliente hesite entre ce service et le housing (voir 'DUDA: Esto o housing?')">Service à confirmer</span></span>
+        <span class="b2b-d">Accompagnement individuel de vos collaborateurs dans leur demande de nationalité.</span>
+        <span class="b2b-a" aria-hidden="true">&rsaquo;</span>
+      </a></li>
+      <li class="b2b-row"><a href="entreprises/">
+        <svg class="b2b-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-admin"></use></svg>
+        <span class="b2b-t">Aide administrative</span>
+        <span class="b2b-d">Inscription à l'assurance maladie, sécurité sociale et démarches d'installation.</span>
+        <span class="b2b-a" aria-hidden="true">&rsaquo;</span>
+      </a></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band sec" id="entreprises-6">
+  <div class="wrap b2b-grid">
+    <div class="b2b-txt">
+      <div class="sec-head rv">
+        <p class="label">Entreprises</p>
+        <p class="todo" title="Variante a comparer : choisir une des huit propositions">Proposition 6 : fond violet foncé, bordure lilas</p>
+        <h2>Optimisez la mobilité internationale de vos collaborateurs</h2>
+        <p class="lead">Déléguez l'ensemble des démarches de visa et de titre de séjour à une équipe d'experts. Du diagnostic initial jusqu'à l'obtention du titre, nous assurons la conformité de vos dossiers et sécurisons l'embauche et la rétention de vos talents étrangers.</p>
+      </div>
+      <div class="b2b-act rv">
+        <a class="btn btn-primary" href="#contact">Demander un devis sur-mesure <span class="arw">&rsaquo;</span></a>
+      </div>
+    </div>
+    <ol class="b2b-list ico-violet-lilac rv">
+      <li class="b2b-row"><a href="entreprises/">
+        <svg class="b2b-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-visa"></use></svg>
+        <span class="b2b-t">Visas et titres de séjour</span>
+        <span class="b2b-d">Passeport Talent, demandes d'autorisation de travail et suivi complet des salariés étrangers.</span>
+        <span class="b2b-a" aria-hidden="true">&rsaquo;</span>
+      </a></li>
+      <li class="b2b-row"><a href="entreprises/">
+        <svg class="b2b-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-detach"></use></svg>
+        <span class="b2b-t">Détachement de salariés</span>
+        <span class="b2b-d">Conformité aux normes de détachement et formalités de déplacement international.</span>
+        <span class="b2b-a" aria-hidden="true">&rsaquo;</span>
+      </a></li>
+      <li class="b2b-row"><a href="entreprises/">
+        <svg class="b2b-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-audit"></use></svg>
+        <span class="b2b-t">Audit et conseil</span>
+        <span class="b2b-d">Conseil juridique et vérification des titres de séjour de vos employés.</span>
+        <span class="b2b-a" aria-hidden="true">&rsaquo;</span>
+      </a></li>
+      <li class="b2b-row"><a href="entreprises/">
+        <svg class="b2b-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-nat"></use></svg>
+        <span class="b2b-t">Naturalisation et nationalité française <span class="todo" title="Le document de la cliente hesite entre ce service et le housing (voir 'DUDA: Esto o housing?')">Service à confirmer</span></span>
+        <span class="b2b-d">Accompagnement individuel de vos collaborateurs dans leur demande de nationalité.</span>
+        <span class="b2b-a" aria-hidden="true">&rsaquo;</span>
+      </a></li>
+      <li class="b2b-row"><a href="entreprises/">
+        <svg class="b2b-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-admin"></use></svg>
+        <span class="b2b-t">Aide administrative</span>
+        <span class="b2b-d">Inscription à l'assurance maladie, sécurité sociale et démarches d'installation.</span>
+        <span class="b2b-a" aria-hidden="true">&rsaquo;</span>
+      </a></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band sec" id="entreprises-7">
+  <div class="wrap b2b-grid">
+    <div class="b2b-txt">
+      <div class="sec-head rv">
+        <p class="label">Entreprises</p>
+        <p class="todo" title="Variante a comparer : choisir une des huit propositions">Proposition 7 : fond violet foncé, bordure vert-jaune</p>
+        <h2>Optimisez la mobilité internationale de vos collaborateurs</h2>
+        <p class="lead">Déléguez l'ensemble des démarches de visa et de titre de séjour à une équipe d'experts. Du diagnostic initial jusqu'à l'obtention du titre, nous assurons la conformité de vos dossiers et sécurisons l'embauche et la rétention de vos talents étrangers.</p>
+      </div>
+      <div class="b2b-act rv">
+        <a class="btn btn-primary" href="#contact">Demander un devis sur-mesure <span class="arw">&rsaquo;</span></a>
+      </div>
+    </div>
+    <ol class="b2b-list ico-violet-yellow rv">
+      <li class="b2b-row"><a href="entreprises/">
+        <svg class="b2b-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-visa"></use></svg>
+        <span class="b2b-t">Visas et titres de séjour</span>
+        <span class="b2b-d">Passeport Talent, demandes d'autorisation de travail et suivi complet des salariés étrangers.</span>
+        <span class="b2b-a" aria-hidden="true">&rsaquo;</span>
+      </a></li>
+      <li class="b2b-row"><a href="entreprises/">
+        <svg class="b2b-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-detach"></use></svg>
+        <span class="b2b-t">Détachement de salariés</span>
+        <span class="b2b-d">Conformité aux normes de détachement et formalités de déplacement international.</span>
+        <span class="b2b-a" aria-hidden="true">&rsaquo;</span>
+      </a></li>
+      <li class="b2b-row"><a href="entreprises/">
+        <svg class="b2b-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-audit"></use></svg>
+        <span class="b2b-t">Audit et conseil</span>
+        <span class="b2b-d">Conseil juridique et vérification des titres de séjour de vos employés.</span>
+        <span class="b2b-a" aria-hidden="true">&rsaquo;</span>
+      </a></li>
+      <li class="b2b-row"><a href="entreprises/">
+        <svg class="b2b-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-nat"></use></svg>
+        <span class="b2b-t">Naturalisation et nationalité française <span class="todo" title="Le document de la cliente hesite entre ce service et le housing (voir 'DUDA: Esto o housing?')">Service à confirmer</span></span>
+        <span class="b2b-d">Accompagnement individuel de vos collaborateurs dans leur demande de nationalité.</span>
+        <span class="b2b-a" aria-hidden="true">&rsaquo;</span>
+      </a></li>
+      <li class="b2b-row"><a href="entreprises/">
+        <svg class="b2b-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-admin"></use></svg>
+        <span class="b2b-t">Aide administrative</span>
+        <span class="b2b-d">Inscription à l'assurance maladie, sécurité sociale et démarches d'installation.</span>
+        <span class="b2b-a" aria-hidden="true">&rsaquo;</span>
+      </a></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band sec" id="entreprises-8">
+  <div class="wrap b2b-grid">
+    <div class="b2b-txt">
+      <div class="sec-head rv">
+        <p class="label">Entreprises</p>
+        <p class="todo" title="Variante a comparer : choisir une des huit propositions">Proposition 8 : version actuelle</p>
+        <h2>Optimisez la mobilité internationale de vos collaborateurs</h2>
+        <p class="lead">Déléguez l'ensemble des démarches de visa et de titre de séjour à une équipe d'experts. Du diagnostic initial jusqu'à l'obtention du titre, nous assurons la conformité de vos dossiers et sécurisons l'embauche et la rétention de vos talents étrangers.</p>
+      </div>
+      <div class="b2b-act rv">
+        <a class="btn btn-primary" href="#contact">Demander un devis sur-mesure <span class="arw">&rsaquo;</span></a>
+      </div>
+    </div>
+    <ol class="b2b-list rv">
+      <li class="b2b-row"><a href="entreprises/">
+        <svg class="b2b-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-visa"></use></svg>
+        <span class="b2b-t">Visas et titres de séjour</span>
+        <span class="b2b-d">Passeport Talent, demandes d'autorisation de travail et suivi complet des salariés étrangers.</span>
+        <span class="b2b-a" aria-hidden="true">&rsaquo;</span>
+      </a></li>
+      <li class="b2b-row"><a href="entreprises/">
+        <svg class="b2b-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-detach"></use></svg>
+        <span class="b2b-t">Détachement de salariés</span>
+        <span class="b2b-d">Conformité aux normes de détachement et formalités de déplacement international.</span>
+        <span class="b2b-a" aria-hidden="true">&rsaquo;</span>
+      </a></li>
+      <li class="b2b-row"><a href="entreprises/">
+        <svg class="b2b-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-audit"></use></svg>
+        <span class="b2b-t">Audit et conseil</span>
+        <span class="b2b-d">Conseil juridique et vérification des titres de séjour de vos employés.</span>
+        <span class="b2b-a" aria-hidden="true">&rsaquo;</span>
+      </a></li>
+      <li class="b2b-row"><a href="entreprises/">
+        <svg class="b2b-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-nat"></use></svg>
+        <span class="b2b-t">Naturalisation et nationalité française <span class="todo" title="Le document de la cliente hesite entre ce service et le housing (voir 'DUDA: Esto o housing?')">Service à confirmer</span></span>
+        <span class="b2b-d">Accompagnement individuel de vos collaborateurs dans leur demande de nationalité.</span>
+        <span class="b2b-a" aria-hidden="true">&rsaquo;</span>
+      </a></li>
+      <li class="b2b-row"><a href="entreprises/">
+        <svg class="b2b-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-admin"></use></svg>
+        <span class="b2b-t">Aide administrative</span>
+        <span class="b2b-d">Inscription à l'assurance maladie, sécurité sociale et démarches d'installation.</span>
+        <span class="b2b-a" aria-hidden="true">&rsaquo;</span>
+      </a></li>
+    </ol>
+  </div>
+</section>
+
 <!-- ============================ LOGOS CLIENTS ============================ -->
-<section class="band clients">
+<!-- Dos propuestas para la clienta, identicas salvo por el color de los
+     logos: A los deja en gris como hasta ahora, B en su color con
+     transparencia. Cuando elija se borra una (dos H2 iguales no se publican). -->
+<section class="band clients clients-ref">
   <div class="wrap clients-in">
-    <p class="clients-h">Ils nous font confiance</p>
+    <div class="sec-head rv">
+      <p class="label">Références</p>
+      <p class="todo" title="Variante a comparer : choisir une des deux propositions">Proposition A : logos en gris (actuel)</p>
+      <h2>Ils nous font confiance</h2>
+    </div>
     <ul class="logos rv">
+      <li><img src="../assets/img/clients/logo-beytours.png" width="112" height="42" alt="Logo de Bey tours, DMC Europe, client d'INWARD" loading="lazy" decoding="async"></li>
+      <li><img src="../assets/img/clients/logo-mouve.png" width="154" height="36" alt="Logo de Mouve, client d'INWARD" loading="lazy" decoding="async"></li>
+      <li><img src="../assets/img/clients/logo-superprof.png" width="52" height="57" alt="Logo de Superprof, client d'INWARD" loading="lazy" decoding="async"></li>
+      <li><img src="../assets/img/clients/logo-biondi.png" width="153" height="36" alt="Logo de Biondi, client d'INWARD" loading="lazy" decoding="async"></li>
+      <li><img src="../assets/img/clients/logo-prolenser.png" width="66" height="57" alt="Logo de Prolenser, client d'INWARD" loading="lazy" decoding="async"></li>
+      <li><img src="../assets/img/clients/logo-de-altura.png" width="130" height="42" alt="Logo de De Altura, client d'INWARD" loading="lazy" decoding="async"></li>
+      <li><img src="../assets/img/clients/logo-las-praderas.png" width="62" height="57" alt="Logo de Las Praderas, client d'INWARD" loading="lazy" decoding="async"></li>
+    </ul>
+  </div>
+</section>
+
+<section class="band clients clients-ref clients-color">
+  <div class="wrap clients-in">
+    <div class="sec-head rv">
+      <p class="label">Références</p>
+      <p class="todo" title="Variante a comparer : choisir une des deux propositions">Proposition B : logos en couleur, avec transparence</p>
+      <h2>Ils nous font confiance</h2>
+    </div>
+    <ul class="logos logos-color rv">
       <li><img src="../assets/img/clients/logo-beytours.png" width="112" height="42" alt="Logo de Bey tours, DMC Europe, client d'INWARD" loading="lazy" decoding="async"></li>
       <li><img src="../assets/img/clients/logo-mouve.png" width="154" height="36" alt="Logo de Mouve, client d'INWARD" loading="lazy" decoding="async"></li>
       <li><img src="../assets/img/clients/logo-superprof.png" width="52" height="57" alt="Logo de Superprof, client d'INWARD" loading="lazy" decoding="async"></li>
@@ -861,7 +1242,6 @@
         <div class="sec-head rv">
           <p class="label">Particuliers</p>
           <h2>Simplifiez votre installation et vos démarches en France</h2>
-          <p class="lead">Projet d'études, de travail salarié, de travail indépendant, de visite ou de regroupement familial : vous n'êtes pas seul face à l'administration française.</p>
         </div>
         <!-- Los seis servicios son los del doc de la clienta (seccion particulares).
              Cada uno termina en "voir plus" hacia la landing Particuliers, que
@@ -986,9 +1366,9 @@
       </div>
     </div>
 
-    <!-- Sin enlace hasta que exista /qui-sommes-nous/: un boton que no lleva a
-         ningun sitio es peor que ninguno. -->
-    <div class="about-act rv"><span class="todo" title="Page Qui sommes-nous a creer">L'histoire d'Inward</span></div>
+    <!-- CTA hacia la landing Qui sommes-nous. OJO: la pagina todavia no existe
+         (ver "Pendientes" en tools/pages.py); hasta que se cree, el enlace da 404. -->
+    <div class="about-act rv"><a class="btn btn-primary" href="qui-sommes-nous/">L'histoire d'Inward <span class="arw">&rsaquo;</span></a></div>
   </div>
 </section>
 
@@ -1047,7 +1427,7 @@
     <div class="rv">
       <p class="label">Contact</p>
       <h2>Parlons de votre dossier</h2>
-      <p class="lead" style="margin-top:1.2rem">Quelques questions pour cerner votre situation, puis un rendez-vous avec la personne qui suivra votre dossier.</p>
+      <p class="lead">Quelques questions pour cerner votre situation, puis un rendez-vous avec la personne qui suivra votre dossier.</p>
       <!-- Sin direccion: el despacho no tiene sede publica. Dos telefonos y un
            mail, los tres a confirmar por la clienta. -->
       <div class="ct-info">
@@ -1263,6 +1643,6 @@
   <a href="#faq" aria-label="Questions fréquentes"><span></span></a>
 </nav>
 
-<script src="../assets/js/main.js?v=01e35f6a" defer></script>
+<script src="../assets/js/main.js?v=d5dbb0d8" defer></script>
 </body>
 </html>

@@ -284,6 +284,16 @@ estructuras distintas.
 Las cabeceras de sección van apiladas (label, titular, párrafo) y el CTA de la
 sección va **después** del contenido, nunca en la cabecera.
 
+**Tres espacios, iguales en todo el sitio**, definidos una sola vez en `:root`:
+
+| Token | Valor | Entre |
+|---|---|---|
+| `--label-gap` | 1 rem | rótulo y titular |
+| `--lead-gap` | 1,25 rem | titular y bajada |
+| `--head-gap` | 1,8 a 2,6 rem | cabecera y contenido de la sección |
+
+Ninguna sección los redefine con un valor propio.
+
 Todo layout multicolumna declara su colapso a una columna antes de 900 px.
 
 ## Shapes
@@ -304,8 +314,15 @@ No hay ningún `border-radius` suelto en el CSS. Un componente nuevo usa
 
 ### Métricas
 
-Van **dentro del hero**, en una tira horizontal debajo de los CTA, separadas por
-un hairline. Números chicos (2,15 rem como máximo) con su etiqueta debajo.
+Van **al principio de la sección de avis Google**, como la otra prueba de
+resultados: tres columnas separadas por filetes verticales, el número en
+violeta a tamaño de titular (hasta 6 rem, peso 400) y debajo una barra verde
+agua y la etiqueta. Al entrar en pantalla `main.js` cuenta de cero al valor
+final y la barra se llena al mismo ritmo. El HTML trae el valor final: sin JS
+o con movimiento reducido se lee tal cual. En teléfono siguen en tres columnas.
+
+(Antes vivían en el hero, chicas y en blanco sobre el video; la clienta pidió
+que tomaran protagonismo.)
 
 Las tres cifras son **reales y confirmadas por la clienta**: 99 % de tasa de
 éxito, +45 nacionalidades acompañadas, +1000 expedientes tratados. Ninguna
@@ -661,6 +678,11 @@ inventada**: un testimonio falso en un sitio de un despacho es un problema
 legal, no una licencia de maquetado.
 
 ### Fila de logos de clientes
+
+**En la home** es una sección con cabecera completa (rótulo *Références*,
+titular *Ils nous font confiance*) sobre el gris de marca. Hay dos propuestas
+en la página esperando la elección de la clienta: logos en gris (A) o en su
+color con opacidad 0,5 (B, clase `.logos-color`).
 
 Gris al reposo con opacidad 0,72, color al hover. Cada logo lleva su propia
 altura calculada según su proporción: un mot-symbole ancho a 26 px, una marca

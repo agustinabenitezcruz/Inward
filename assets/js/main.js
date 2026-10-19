@@ -365,11 +365,47 @@
     mobile.addEventListener("change", function (e) { if (!e.matches) setMenu(false); });
   }
 
+  /* ---------- Cifras clave : cuenta de cero al valor final ----------
+     El numero se lee del propio texto, asi sirve igual en FR, EN y ES: lo que
+     va antes ("+") y despues (" %") se conserva tal cual. Arranca al entrar
+     en pantalla, una sola vez, y la barra de abajo avanza al mismo ritmo. */
+  var kpis = [].slice.call(document.querySelectorAll("[data-count]"));
+  if (kpis.length && !reduce && "IntersectionObserver" in window) {
+    kpis.forEach(function (el) {
+      var txt = el.textContent.trim();
+      var m = txt.match(/\d+(?:[\s., ]\d{3})*/);
+      if (!m) return;
+      var fin = parseInt(m[0].replace(/\D/g, ""), 10);
+      var pre = txt.slice(0, m.index), post = txt.slice(m.index + m[0].length);
+      var kpi = el.closest(".kpi") || el;
+      var DUR = 1800;
+      function pinta(p) {
+        el.textContent = pre + Math.round(fin * p) + post;
+        kpi.style.setProperty("--p", p.toFixed(3));
+      }
+      pinta(0);
+      var io = new IntersectionObserver(function (e) {
+        if (!e[0].isIntersecting) return;
+        io.disconnect();
+        var t0 = performance.now();
+        (function paso(now) {
+          var t = Math.min((now - t0) / DUR, 1);
+          /* Sale rapido y frena al llegar: la cifra se asienta, no choca. */
+          pinta(1 - Math.pow(1 - t, 3));
+          if (t < 1) requestAnimationFrame(paso);
+          else el.textContent = txt;
+        })(t0);
+      }, { threshold: 0.6 });
+      io.observe(el);
+    });
+  }
+
   /* ---------- Engagements : pestanas con avance automatico ----------
-     El avance se para para siempre en cuanto el usuario toca, enfoca o pasa
-     por encima: una animacion que insiste despues de que alguien la
-     interrumpio es una animacion que molesta. Tambien se para si la seccion
-     no esta a la vista, para no gastar bateria animando algo que nadie ve. */
+     Las etapas pasan solas. Pasar el mouse por encima o enfocar con el
+     teclado solo PAUSA (para poder leer con calma) y al salir sigue desde la
+     misma etapa. Elegir una pestana a mano la muestra y el avance continua
+     desde ahi. Tambien se detiene si la seccion no esta a la vista, para no
+     gastar bateria animando algo que nadie ve. */
   var eng = document.querySelector(".eng");
   if (eng) {
     var tabs = [].slice.call(eng.querySelectorAll(".eng-tab"));
@@ -397,16 +433,24 @@
       t0 = performance.now();
       if (foco) tabs[idx].focus();
     }
+    /* Pausa: el tiempo ya corrido se guarda y al reanudar se descuenta,
+       asi la barra sigue desde donde quedo y no vuelve a cero. */
+    var pausa = false, corrido = 0;
     function para() {
-      if (!auto) return;
-      auto = false;
-      eng.setAttribute("data-auto", "off");
-      eng.style.setProperty("--ind-p", 1);
-      cancelAnimationFrame(raf);
+      if (!auto || pausa) return;
+      pausa = true;
+      corrido = performance.now() - t0;
+    }
+    function sigue() {
+      if (!auto || !pausa) return;
+      pausa = false;
+      t0 = performance.now() - corrido;
     }
     function late(now) {
       if (!auto) return;
-      if (visible) {
+      if (pausa) {
+        /* quieto */
+      } else if (visible) {
         var p = (now - t0) / DUR;
         if (p >= 1) { muestra(idx + 1); p = 0; }
         eng.style.setProperty("--ind-p", p.toFixed(3));
@@ -417,16 +461,22 @@
     }
 
     tabs.forEach(function (t, k) {
-      t.addEventListener("click", function () { para(); muestra(k); });
+      t.addEventListener("click", function () {
+        muestra(k); corrido = 0;
+        eng.style.setProperty("--ind-p", 0);
+      });
       t.addEventListener("keydown", function (e) {
         var d = e.key === "ArrowDown" || e.key === "ArrowRight" ? 1
               : e.key === "ArrowUp"   || e.key === "ArrowLeft"  ? -1 : 0;
         if (!d) return;
-        e.preventDefault(); para(); muestra(k + d, true);
+        e.preventDefault(); muestra(k + d, true); corrido = 0;
+        eng.style.setProperty("--ind-p", 0);
       });
     });
-    eng.addEventListener("pointerenter", para);
-    eng.addEventListener("focusin", para);
+    eng.addEventListener("pointerenter", function (e) { if (e.pointerType === "mouse") para(); });
+    eng.addEventListener("pointerleave", function (e) { if (e.pointerType === "mouse") sigue(); });
+    eng.addEventListener("focusin", function () { if (eng.querySelector(":focus-visible")) para(); });
+    eng.addEventListener("focusout", function (e) { if (!eng.contains(e.relatedTarget)) sigue(); });
 
     muestra(0);
     eng.setAttribute("data-auto", auto ? "on" : "off");
