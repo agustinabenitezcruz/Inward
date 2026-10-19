@@ -2050,3 +2050,25 @@ evita JavaScript y el caso —cambiar de tema con la pestaña abierta— es raro
 
 `favicon.ico` sigue siendo el de respaldo para motores sin soporte de SVG, y
 va en violeta fijo.
+
+---
+
+## Los enlaces de contenido llevan al principio de la landing (19/10)
+
+Las cinco filas de servicios de empresas y los seis "Voir plus" de
+particulares apuntaban a un ancla dentro de la landing
+(`entreprises/#audit`, `particuliers/#services`). El efecto era que el
+visitante caía a mitad de página, encima del mismo servicio que acababa de
+leer en la home: saltaba el hero, el contexto y los otros cuatro servicios.
+Ahora apuntan a `entreprises/` y `particuliers/` a secas.
+
+**El mega menú y el pie conservan el ancla a propósito.** Ahí no estás
+leyendo nada: estás eligiendo un destino concreto de una lista, y caer en él
+es lo que pediste. Además esos dos son bloques compartidos: quitarles el
+fragmento haría que, estando ya en la landing, el ítem del menú se convirtiera
+en un enlace a `#top` (`sync_shell.py` reescribe los enlaces a la propia
+página como ancla), o sea que el menú dejaría de servir justo donde más se
+usa.
+
+Comprobado con el navegador: las cuatro rutas de la home a una landing
+aterrizan en `scrollY = 0`.

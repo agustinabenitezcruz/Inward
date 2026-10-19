@@ -23,3 +23,10 @@ __pycache__/
 ._*
 .Spotlight-V100
 .Trashes
+
+# ---- Vistas previas ----
+# Zips que empaqueto para mirar el sitio renderizado desde el contenedor.
+# No son parte del proyecto.
+_preview.zip
+_p*.zip
+zi??????
