@@ -277,10 +277,17 @@
     setRow(row, row.getAttribute("data-open") === "true");
     row.querySelector(".row-btn").addEventListener("click", function () {
       var wasOpen = row.getAttribute("data-open") === "true";
-      rows.forEach(function (r) { setRow(r, false); });
+      /* Se cierran las hermanas del MISMO panel, no todas las de la pagina.
+         En la home habia un solo .rows y daba igual; la landing de
+         particulares tiene dos (tipos de visa y soutien) y con el criterio
+         viejo abrir una fila cerraba la que estuviera abierta en la otra
+         seccion, que no tienen nada que ver entre si. */
+      var panel = row.closest(".rows") || document;
+      [].slice.call(panel.querySelectorAll(".row")).forEach(function (r) { setRow(r, false); });
       if (!wasOpen) {
         setRow(row, true);
-        showShot(row.getAttribute("data-img"));
+        /* Solo las filas de la home llevan foto asociada. */
+        if (row.hasAttribute("data-img")) showShot(row.getAttribute("data-img"));
       }
       /* Si on ferme, l'apercu reste sur la derniere image : le bloc ne se vide pas. */
     });

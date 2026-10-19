@@ -2129,3 +2129,40 @@ cambia es el texto.
 Se conservan los rótulos del selector (Autonomie / Clés en main), las frases
 de entrada de cada panel y los dos CTA: la clienta mandó el texto de los
 servicios, no el del envoltorio.
+
+---
+
+## Particuliers: dos secciones nuevas (19/10)
+
+Entran entre "Nos services" y la F&Q, con el mismo componente de filas
+plegables que la sección de particulares de la home (`.rows` / `.row`), pero
+sin la columna de foto: el panel ocupa el ancho entero.
+
+**Les visas que nous accompagnons** — siete filas: visiteur, étudiant,
+famille, Passeport Talent, visas de travail, RECE y entrepreneur. 771 px.
+
+**Soutien au nouvel arrivant** — cuatro filas: système de santé, carte
+Vitale y dos por definir. 553 px.
+
+**Lo que está marcado como pendiente**, porque la clienta mandó lorem ipsum o
+texto de relleno y no se inventa:
+
+- los cuerpos de Passeport Talent, visas de travail, RECE y entrepreneur;
+- el cuerpo de "Demande de carte Vitale";
+- las dos últimas filas de soutien, que llegaron como `Sfhziu` y `zuiefiguiye`:
+  van como "Prestation à définir";
+- el intitulado de la fila RECE: "Rece" se leyó como la carte de séjour
+  *recherche d'emploi ou création d'entreprise*, y lleva su marca de duda.
+
+Los dos H2 los puse yo: la clienta nombró la segunda sección ("Soutien al
+recién llegado") pero no la primera.
+
+**Un arreglo que hizo falta:** el acordeón de `.row` cerraba *todas* las filas
+de la página al abrir una. Con un solo panel en la home daba igual; aquí hay
+dos y abrir un visa cerraba la fila abierta de soutien, que no tienen nada que
+ver. Ahora sólo se cierran las hermanas del mismo `.rows`. De paso, `showShot`
+solo corre si la fila trae `data-img`, que son únicamente las de la home.
+
+Los tres enlaces del mega menú (Visa visiteur, Visa étudiant, Visa famille)
+pasan de apuntar a `#gestion-visa` a su fila exacta, que ahora existe.
+`abreDestino()` la abre al llegar (comprobado).
