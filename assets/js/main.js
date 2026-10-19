@@ -37,7 +37,7 @@
   var cssDetails = window.CSS && CSS.supports &&
     CSS.supports("interpolate-size: allow-keywords") && CSS.supports("selector(::details-content)");
   if (!reduce && !cssDetails && Element.prototype.animate) {
-    var acc = [].slice.call(document.querySelectorAll("details.qa,details.svc,details.mode-it"));
+    var acc = [].slice.call(document.querySelectorAll("details.qa,details.svc"));
     acc.forEach(function (d) {
       d.setAttribute("data-group", d.getAttribute("name") || "");
       d.removeAttribute("name");
@@ -433,44 +433,6 @@
     if (auto) raf = requestAnimationFrame(late);
   }
 
-  /* ---------- Particuliers : selector de modo ----------
-     Sin JavaScript los dos modos se ven lado a lado. Con JavaScript aparece
-     el selector y se muestra uno por vez. Pestanas ARIA de libro: flechas
-     para moverse, y solo la activa entra en el orden de tabulacion. */
-  var ways = document.querySelector(".ways");
-  if (ways) {
-    var wTabs = [].slice.call(ways.querySelectorAll(".ways-tab"));
-    var wPanes = wTabs.map(function (t) { return document.getElementById(t.getAttribute("aria-controls")); });
-    function elige(i, foco) {
-      wTabs.forEach(function (t, k) {
-        var on = k === i;
-        t.setAttribute("aria-selected", on ? "true" : "false");
-        t.tabIndex = on ? 0 : -1;
-        /* No se usa hidden: los dos paneles comparten celda y el inactivo se
-           funde. aria-hidden + inert lo sacan del lector y del tabulador. */
-        wPanes[k].setAttribute("aria-hidden", on ? "false" : "true");
-        wPanes[k].inert = !on;
-        wPanes[k].setAttribute("role", "tabpanel");
-      });
-      ways.setAttribute("data-sel", String(i + 1));
-      if (foco) wTabs[i].focus();
-    }
-    wTabs.forEach(function (t, k) {
-      t.addEventListener("click", function () { elige(k); });
-      t.addEventListener("keydown", function (e) {
-        var d = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
-        if (!d) return;
-        e.preventDefault();
-        elige((k + d + wTabs.length) % wTabs.length, true);
-      });
-    });
-    ways.querySelector(".ways-sw").hidden = false;
-    ways.setAttribute("data-on", "");
-    elige(Math.max(0, (parseInt(ways.getAttribute("data-ways"), 10) || 1) - 1));
-    /* La pastilla nace ya en su sitio: sin esto se veria deslizarse al cargar. */
-    requestAnimationFrame(function () { ways.setAttribute("data-ready", ""); });
-  }
-
   /* ---------- Avis Google ----------
      Los datos vienen de api/avis.php, que habla con la Places API del lado del
      servidor: la clave nunca llega al navegador y no se carga ningun script de
@@ -631,14 +593,11 @@
   /* ---------- Enlaces del menu a una prestacion concreta ----------
      El menu apunta a filas y acordeones (#gestion-visa, #changement-de-statut,
      #audit...). Llegar a una fila cerrada obliga a buscarla y abrirla a mano:
-     aca se abre sola, en el modo que corresponda si vive en el selector de
-     particuliers, y se vuelve a centrar porque al abrirse cambia el alto. */
+     aca se abre sola y se vuelve a centrar, porque al abrirse cambia el alto. */
   function abreDestino() {
     var id = decodeURIComponent(location.hash.slice(1));
     var el = id && document.getElementById(id);
     if (!el) return;
-    var pane = el.closest(".mode");
-    if (pane && ways && wPanes.indexOf(pane) >= 0) elige(wPanes.indexOf(pane));
     if (el.tagName === "DETAILS" && !el.open) el.open = true;
     if (el.classList.contains("row") && el.getAttribute("data-open") !== "true") {
       el.querySelector(".row-btn").click();

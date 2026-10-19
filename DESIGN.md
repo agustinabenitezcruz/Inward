@@ -2107,3 +2107,35 @@ mínimo. Así que esto es el tope.
 
 De paso: el hero de landing ya no lleva rótulo, así que el texto más exigente
 pasó a ser la bajada. Antes era el rótulo, que es más chico.
+
+---
+
+## Particuliers: dos servicios y nada más (19/10)
+
+La sección tenía dos paneles grandes lado a lado, cada uno con su acordeón
+interno de dos prestaciones, y por encima un selector de pestañas con
+indicador deslizante. Tres niveles de jerarquía para decir dos cosas.
+
+Ahora son **dos filas** del mismo acordeón `.svc` que usa la landing de
+empresas: cerrado se ve sólo el número y el título, y al abrir aparece el
+texto resumido que mandó la clienta. Ocupa el ancho entero de la sección.
+591 px.
+
+Se borró el bloque `.ways*` / `.mode*` entero —unas 180 líneas de CSS que solo
+servían aquí— y las 35 de JavaScript del selector de pestañas. La sección
+nueva no necesita ni una regla propia.
+
+Los dos `id` se conservan a propósito: `#gestion-visa` lo usan el mega menú y
+el pie, y `abreDestino()` sigue abriendo la fila al llegar por el ancla
+(comprobado). `#freelances` y `#verification` desaparecen porque sus dos
+prestaciones quedaron fusionadas en los textos nuevos; el único enlace que
+apuntaba a `#freelances` (el menú, "Profession libérale et entrepreneur") se
+repunta a `#gestion-visa`, que es donde ahora vive ese contenido.
+
+**Una decisión de redacción:** la clienta escribió el segundo título como
+"gestion / Prise en charge". Una barra en un título queda rara, así que va
+como "Gestion et prise en charge" — cambiar la conjunción es una palabra.
+
+Los dos CTA ("Faire le point sur mon projet" / "Confier mon dossier") se
+mantienen dentro de cada fila abierta: son texto ya aprobado y sin ellos la
+sección de servicios se quedaba sin salida a contacto.
