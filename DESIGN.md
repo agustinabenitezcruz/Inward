@@ -2084,3 +2084,26 @@ las dos piezas en vez de dejar una gris y otra de color.
 Sobre blanco el verde da 1,26:1 — ilegible como texto y exactamente el peso
 que busca una marca de agua: se ve el color, no compite con la declaración.
 Es el `--tint-1` de la paleta, sin derivar ningún tono.
+
+---
+
+## Más luz en los banners de las landings (19/10)
+
+El velo del hero baja de `.74/.64/.54/.46/.42` a `.60/.50/.40/.32/.28`, y el
+refuerzo lateral de `.50` a `.40`. Las dos landings comparten la regla, así
+que el límite lo fija la foto más clara, que es la de empresas.
+
+Medido ocultando el texto y muestreando el **peor píxel** del fondo bajo cada
+bloque, en las dos páginas:
+
+| | empresas | particulares | mínimo |
+|---|---|---|---|
+| titular | 3,89:1 | 4,96:1 | 3 (texto grande) |
+| bajada | **4,73:1** | 6,25:1 | 4,5 |
+| botones | 12,9:1 | 7,8:1 | 4,5 |
+
+Un escalón más de luz y la bajada de empresas cae a 3,83:1, por debajo del
+mínimo. Así que esto es el tope.
+
+De paso: el hero de landing ya no lleva rótulo, así que el texto más exigente
+pasó a ser la bajada. Antes era el rótulo, que es más chico.
