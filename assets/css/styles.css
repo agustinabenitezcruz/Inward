@@ -2637,3 +2637,19 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
 .agl-txt .chk{margin-top:.9rem}
 .agl-txt .lp-split-act{margin-top:clamp(1rem,2vw,1.4rem)}
 @media (max-width:860px){.agl-box{grid-template-columns:1fr}}
+
+/* ---------- Entradas por reloj (ver main.js, "Entradas por reloj") ----------
+   Los elementos que el CSS anima con view() pasan a una animacion de tiempo,
+   en pausa hasta que entran en pantalla; desde ahi terminan solos en 0,76 s,
+   sigas o no scrolleando. Las keyframes de cada seccion no cambian. */
+@supports (animation-timeline:view()){
+  @media (prefers-reduced-motion:no-preference){
+    [data-rev]{
+      animation-timeline:auto!important;animation-range:normal!important;
+      animation-duration:760ms!important;animation-timing-function:cubic-bezier(.23,1,.32,1)!important;
+      animation-fill-mode:both!important;animation-delay:var(--rd,0ms)!important;
+      animation-play-state:paused!important;
+    }
+    [data-rev="in"]{animation-play-state:running!important}
+  }
+}

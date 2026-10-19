@@ -755,6 +755,47 @@
       }, 80);
     }
   }
+  /* ---------- Entradas por reloj, no por scroll ----------
+     Las entradas estaban atadas al scroll (animation-timeline:view()): avanzaban
+     solo mientras el usuario movia la rueda, y si algo quedaba abajo de todo
+     de la pantalla se quedaba a medio aparecer. Pedido de la clienta: que cada
+     animacion termine sola una vez que el elemento entro en pantalla.
+     Se buscan los elementos cuya animacion usa view() (asi no hay que mantener
+     una lista a mano: el CSS sigue diciendo que gesto hace cada uno), se
+     marcan con data-rev y el CSS los pasa al reloj, en pausa. Al entrar en la
+     ventana, el observer los pone en marcha; los que entran juntos se
+     escalonan 70 ms, con tope de 420 ms. No toca el rail ni el hero, que son
+     efectos ligados al scroll a proposito (timeline con nombre o scroll()). */
+  if (!reduce && scrollTimeline && "IntersectionObserver" in window) {
+    var revs = [].filter.call(document.querySelectorAll("body *"), function (el) {
+      if (el.hasAttribute("data-onload")) return false;
+      var t = getComputedStyle(el).animationTimeline || "";
+      return t.indexOf("view(") > -1;
+    });
+    /* Los logos del carrusel se mueven en horizontal y muchos estan fuera de
+       la franja visible: para el observer nunca "entran". Por eso lo que se
+       observa es el carrusel entero (.marq) y al entrar se encienden todos. */
+    var grupos = new Map();
+    revs.forEach(function (el) {
+      el.setAttribute("data-rev", "");
+      var t = el.closest(".marq") || el;
+      if (!grupos.has(t)) grupos.set(t, []);
+      grupos.get(t).push(el);
+    });
+    var ioRev = new IntersectionObserver(function (entries) {
+      var n = 0;
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        (grupos.get(e.target) || []).forEach(function (el) {
+          el.style.setProperty("--rd", Math.min(n++ * 70, 420) + "ms");
+          el.setAttribute("data-rev", "in");
+        });
+        ioRev.unobserve(e.target);
+      });
+    }, { rootMargin: "0px 0px -6% 0px" });
+    grupos.forEach(function (_, t) { ioRev.observe(t); });
+  }
+
   abreDestino();
   addEventListener("hashchange", abreDestino);
 
