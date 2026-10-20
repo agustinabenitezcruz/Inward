@@ -2698,3 +2698,16 @@ body:has(.cat-t:target) .cats a[href="#articles"] .cats-n{background:var(--surfa
 #cat-actualite:target ~ .arts:not(:has(.art[data-cat~="actualite"])) .cats-empty,
 #cat-guides:target ~ .arts:not(:has(.art[data-cat~="guides"])) .cats-empty,
 #cat-delais:target ~ .arts:not(:has(.art[data-cat~="delais"])) .cats-empty{display:block}
+
+/* ---------- Qui sommes-nous ---------- */
+.qsn-team-sec{padding-top:clamp(.6rem,2vh,1.4rem)}
+.qsn-team{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(1.4rem,3.4vw,3rem)}
+.qsn-p{display:grid;align-content:start;gap:.35rem}
+.qsn-ph{margin:0 0 .9rem;overflow:hidden;aspect-ratio:16/9;background:var(--surface)}
+.qsn-ph img{width:100%;height:100%;object-fit:cover;object-position:50% 22%}
+.qsn-n{font-size:clamp(1.3rem,2vw,1.7rem);line-height:1.2}
+.qsn-r{justify-self:start;padding:.3em .8em;border-radius:999px;background:var(--tint-1);color:var(--tint-ink);
+  font-size:.72rem;font-weight:500;text-transform:uppercase;letter-spacing:.15em}
+.qsn-b{margin-top:.5rem;color:var(--text-2);max-width:52ch}
+.qsn-hist-ph{aspect-ratio:4/3}
+@media (max-width:760px){.qsn-team{grid-template-columns:1fr}}

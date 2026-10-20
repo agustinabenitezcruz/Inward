@@ -24,7 +24,8 @@ PAGES = [
     {"dir": "videos",       "title": "Vidéos"},
     {"dir": "videos/presentation-inward-palais-garnier",
      "title": "Vidéo : INWARD devant le Palais Garnier"},
-    # Pendientes: qui-sommes-nous, mentions-legales
+    {"dir": "qui-sommes-nous", "title": "Qui sommes-nous"},
+    # Pendiente: mentions-legales
 ]
 
 # Prioridad y frecuencia del sitemap. No son una orden para Google, son una

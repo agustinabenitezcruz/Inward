@@ -50,4 +50,12 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/videos/presentation-inward-palais-garnier/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/videos/presentation-inward-palais-garnier/"/>
   </url>
+  <url>
+    <loc>https://inwardpro.com/qui-sommes-nous/</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/qui-sommes-nous/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/qui-sommes-nous/"/>
+  </url>
 </urlset>
