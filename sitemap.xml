@@ -4,7 +4,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://inwardpro.com/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/"/>
@@ -12,7 +12,7 @@
   </url>
   <url>
     <loc>https://inwardpro.com/entreprises/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/entreprises/"/>
@@ -20,7 +20,7 @@
   </url>
   <url>
     <loc>https://inwardpro.com/particuliers/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/particuliers/"/>
@@ -28,7 +28,7 @@
   </url>
   <url>
     <loc>https://inwardpro.com/blog/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/blog/"/>
@@ -36,7 +36,7 @@
   </url>
   <url>
     <loc>https://inwardpro.com/videos/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/videos/"/>
@@ -44,7 +44,7 @@
   </url>
   <url>
     <loc>https://inwardpro.com/videos/presentation-inward-palais-garnier/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/videos/presentation-inward-palais-garnier/"/>

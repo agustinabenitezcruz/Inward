@@ -31,7 +31,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..600&family=Jost:wght@300..600&display=swap">
-<link rel="stylesheet" href="../assets/css/styles.css?v=610133bd">
+<link rel="stylesheet" href="../assets/css/styles.css?v=130d6c24">
 
 <script type="application/ld+json">
 {
@@ -243,10 +243,30 @@
 <!-- ============================ ARTICLES ============================ -->
 <section class="band res sec" id="articles">
   <div class="wrap">
+    <!-- Categorias. Son enlaces <a href> de verdad y el filtro es solo CSS
+         (:target), sin JavaScript: pedido SEO de la clienta (HTML limpio, los
+         robots siguen enlaces y no ejecutan scripts). Cada enlace apunta a un
+         ancla vacia que esta justo antes de la grilla; el CSS esconde las
+         tarjetas de otra categoria mientras esa ancla es el :target.
+         Las tres categorias salen de la bajada ("guides, délais et
+         actualité"): a confirmar con la clienta. -->
+    <nav class="cats rv" aria-label="Catégories du blog">
+      <p class="cats-h">Catégories <span class="todo" title="Catégories à valider avec la cliente">à valider</span></p>
+      <ul>
+        <li><a href="#articles">Tous les articles <span class="cats-n">3</span></a></li>
+        <li><a href="#cat-guides">Guides <span class="cats-n">1</span></a></li>
+        <li><a href="#cat-delais">Délais <span class="cats-n">1</span></a></li>
+        <li><a href="#cat-actualite">Actualité <span class="cats-n">0</span></a></li>
+      </ul>
+    </nav>
+    <span class="cat-t" id="cat-guides"></span>
+    <span class="cat-t" id="cat-delais"></span>
+    <span class="cat-t" id="cat-actualite"></span>
     <!-- Las fotos son provisionales: salen del banco actual y habra que
          cambiarlas por las del articulo real cuando existan. -->
     <div class="arts">
-      <article class="art art-ov1 rounded rv">
+      <p class="cats-empty">Aucun article dans cette catégorie pour le moment.</p>
+      <article class="art art-ov1 rounded rv" data-cat="guides">
         <figure class="art-ph"><img src="../assets/img/dossier-titre-de-sejour-en-preparation.webp" width="1400" height="933" alt="Dossier de demande de titre de séjour en préparation" loading="lazy" decoding="async"></figure>
         <div class="art-b">
           <span class="kd">Guide</span>
@@ -255,7 +275,7 @@
           <span class="rd-meta">Lecture 8 min <span class="arw">&rsaquo;</span></span>
         </div>
       </article>
-      <article class="art art-ov2 rounded rv">
+      <article class="art art-ov2 rounded rv" data-cat="delais">
         <figure class="art-ph"><img src="../assets/img/rendez-vous-consultante-inward-client.webp" width="1100" height="733" alt="Rendez-vous de suivi avec une consultante INWARD" loading="lazy" decoding="async"></figure>
         <div class="art-b">
           <span class="kd">Délais</span>
@@ -267,7 +287,7 @@
       <!-- Tercer articulo: la clienta todavia no eligio el tema. Sin enlace a
            proposito: una tarjeta que no lleva a ningun sitio es peor que una
            tarjeta que se ve claramente pendiente. -->
-      <article class="art art-ov3 rounded rv">
+      <article class="art art-ov3 rounded rv" data-cat="">
         <figure class="art-ph"><img src="../assets/img/equipe-inward-echange-clients.webp" width="1280" height="853" alt="Échange informel entre l'équipe INWARD et des clients" loading="lazy" decoding="async"></figure>
         <div class="art-b">
           <span class="kd">À produire</span>
