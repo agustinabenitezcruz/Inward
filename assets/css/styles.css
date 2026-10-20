@@ -2465,7 +2465,9 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
   margin-top:clamp(1.6rem,3.4vw,2.6rem);
   display:grid;grid-template-columns:repeat(4,1fr);
   border-top:1px solid var(--line);
-  min-height:clamp(260px,30vh,320px);
+  /* --hacc-h lo pone main.js: el alto del estado mas alto de los cinco, para
+     que abrir una columna no estire la seccion. Sin JS queda el piso. */
+  min-height:var(--hacc-h,clamp(260px,30vh,320px));
   transition:grid-template-columns 720ms var(--ease-out);
 }
 .hacc[data-open="1"] .hacc-cols{grid-template-columns:2.6fr 1fr 1fr 1fr}
@@ -2566,14 +2568,25 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
   .hcol-btn{grid-row:1;grid-column:1}
   .hcol-k{grid-row:1;grid-column:2;align-self:center;opacity:1;font-size:clamp(1rem,3.6vw,1.12rem)}
   .hcol[data-on] .hcol-k{opacity:1;color:var(--text)}
+  /* Dos pistas porque el cuerpo tiene dos hijos (titulo y parrafo). Con una
+     sola, el parrafo caia en una fila implicita que nunca se plegaba: cada
+     item cerrado ocupaba el alto de su texto invisible y al abrir solo
+     aparecia el margen, de golpe. El titulo va en una pista que queda en 0fr
+     en los dos estados (abierto ya lo dice el nombre de la fila). */
   .hcol-body{
     grid-row:2;grid-column:2;margin-top:0;
-    display:grid;grid-template-rows:0fr;
-    transition:grid-template-rows 520ms var(--ease-io),opacity 420ms var(--ease-soft);
+    display:grid;grid-template-rows:0fr 0fr;
+    transition:grid-template-rows 520ms var(--ease-io),opacity 420ms var(--ease-soft),
+               margin-top 520ms var(--ease-io);
   }
-  .hcol-body > *{overflow:hidden}
-  .hcol[data-on] .hcol-body{grid-template-rows:1fr;margin-top:.9rem}
-  .hcol[data-on] .hcol-body h3{display:none}
+  .hcol-body > *{overflow:hidden;min-height:0}
+  /* La transicion se repite aca: la regla de escritorio .hcol[data-on]
+     .hcol-body pesa mas y dejaba solo la de opacidad, asi que el item se
+     abria de golpe. */
+  .hcol[data-on] .hcol-body{grid-template-rows:0fr 1fr;margin-top:.9rem;
+    transition:grid-template-rows 520ms var(--ease-io),opacity 620ms var(--ease-out) 120ms,
+               margin-top 520ms var(--ease-io)}
+  .hcol-body p{margin-top:0}
 }
 
 @supports (animation-timeline:view()){

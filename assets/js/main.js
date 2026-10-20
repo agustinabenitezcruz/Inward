@@ -575,6 +575,42 @@
       c.addEventListener("mouseleave", function () { clearTimeout(reloj); });
     });
     abreCol(null);
+
+    /* Alto fijo en escritorio. Los textos de las columnas cerradas son
+       invisibles pero siguen ocupando lugar: al abrir una, las otras se
+       angostan, esos textos se parten en mas lineas y la seccion crecia de
+       golpe (285 -> 386px a 1440px, con solo pasar el mouse). Se mide una
+       copia oculta en los cinco estados —todo cerrado y cada columna abierta—
+       y la rejilla toma el alto del mayor, asi abrir o cambiar de columna ya
+       no mueve nada. En telefono es una lista que se despliega hacia abajo y
+       ahi si tiene que crecer; lo hace con la transicion del CSS. */
+    var haccCols = hacc.querySelector(".hacc-cols");
+    var ancho = window.matchMedia("(min-width:861px)");
+    function fijaAlto() {
+      haccCols.style.removeProperty("--hacc-h");
+      if (!ancho.matches) return;
+      var copia = hacc.cloneNode(true);
+      copia.removeAttribute("id");
+      [].slice.call(copia.querySelectorAll("[id]")).forEach(function (el) { el.removeAttribute("id"); });
+      copia.style.cssText = "position:absolute;left:-9999px;top:0;visibility:hidden;pointer-events:none;animation:none;width:" + hacc.offsetWidth + "px";
+      var cc = copia.querySelector(".hacc-cols");
+      cc.style.transition = "none";
+      var cs = [].slice.call(copia.querySelectorAll(".hcol"));
+      hacc.parentNode.appendChild(copia);
+      var max = 0;
+      for (var i = 0; i <= cs.length; i++) {
+        copia.setAttribute("data-open", String(i));
+        cs.forEach(function (c, k) { c.toggleAttribute("data-on", k === i - 1); });
+        max = Math.max(max, cc.offsetHeight);
+      }
+      copia.remove();
+      haccCols.style.setProperty("--hacc-h", Math.ceil(max) + "px");
+    }
+    fijaAlto();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fijaAlto);
+    addEventListener("load", fijaAlto);
+    var relojAlto = null;
+    addEventListener("resize", function () { clearTimeout(relojAlto); relojAlto = setTimeout(fijaAlto, 150); });
   }
 
   /* ---------- Avis Google ----------
