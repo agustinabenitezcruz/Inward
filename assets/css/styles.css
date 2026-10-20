@@ -2653,22 +2653,3 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
     [data-rev="in"]{animation-play-state:running!important}
   }
 }
-
-/* ---------- Contacto: mejor uso del espacio ----------
-   El formulario gana ancho, las dos columnas se centran entre si (antes la
-   izquierda dejaba un hueco grande abajo),
-   el campo de mensaje crece y desaparece el hueco entre la primera y la
-   segunda fila: el error del email ya no reserva un renglon, se muestra
-   debajo del campo sin empujar nada (por eso el espacio entre filas sube un
-   poco, para que el aviso entre ahi). */
-.ct-grid{grid-template-columns:.82fr 1.18fr;align-items:center}
-.ct h2{max-width:16ch}
-.ct-info{gap:1.1rem;margin-top:clamp(1.6rem,3vh,2.2rem)}
-.ct-info div{align-content:start}
-#contact form{gap:1.05rem;padding:clamp(1.4rem,2.8vw,2.2rem)}
-#contact .two{gap:1.05rem}
-.fld{position:relative}
-.fld:has(.fld-err){grid-template-rows:auto auto}
-.fld .fld-err{position:absolute;left:0;top:100%;margin-top:.15rem}
-#contact .fld textarea{min-height:clamp(110px,16vh,150px)}
-@media (max-width:900px){.ct-grid{grid-template-columns:1fr}}
