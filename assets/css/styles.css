@@ -352,10 +352,9 @@ form>*,.two>*,.fld>*{min-width:0}
 }
 @media (hover:hover){.mega li a:hover{color:var(--text);background:var(--accent-soft);transform:translateX(3px)}}
 .mega li a span{display:block;font-size:.78rem;color:var(--text-3);margin-top:.1rem}
-/* Caja de llamada del menu: violeta oscuro con el boton verde agua (antes
-   era al reves). */
-.mega-cta{background:var(--fill);border:1px solid var(--fill);padding:1.5rem;--r:14px;align-self:start;color:var(--fill-ink)}
-.mega-cta p{font-size:.88rem;margin-bottom:1rem;color:var(--fill-ink)}
+/* Caja de llamada del menu: gris con el boton verde agua. */
+.mega-cta{background:var(--surface);border:1px solid var(--line-card);padding:1.5rem;--r:14px;align-self:start;color:var(--text)}
+.mega-cta p{font-size:.88rem;margin-bottom:1rem;color:var(--text)}
 .mega-cta .btn-primary{background:var(--tint-1);color:var(--tint-ink);border-color:var(--tint-1)}
 .nav-item:hover .mega li,.nav-item:focus-within .mega li{animation:megaIn 320ms var(--ease-out) both}
 .mega li:nth-child(2){animation-delay:40ms}
@@ -2858,9 +2857,4 @@ body:has(.cat-t:target) .cats a[href="#articles"] .cats-n{background:var(--surfa
 @media (max-width:860px){
   .stabs.is-js .stp-n{background:var(--tint-3);color:var(--accent)}
   .stabs.is-js .stp[data-open] .stp-n{background:var(--fill);color:var(--fill-ink)}
-}
-/* Sobre el violeta, el borde negro del hover no se ve: ahi el borde queda
-   blanco. */
-@media (hover:hover) and (pointer:fine){
-  .mega-cta .btn-primary:hover{border-color:#fff}
 }
