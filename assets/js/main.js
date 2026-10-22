@@ -430,8 +430,28 @@
       });
       colocaInd();
       t0 = performance.now();
-      if (foco) tabs[idx].focus();
+      if (foco) tabs[idx].focus({ preventScroll: true });
+      /* En tablet y celular la fila de titulos se desplaza de costado: la
+         pestana activa se centra en la tira, asi el titulo del texto que se
+         esta leyendo siempre esta a la vista. Se mueve solo la tira, nunca la
+         pagina. */
+      var lista = tabs[idx].parentNode;
+      if (lista.scrollWidth > lista.clientWidth + 2) {
+        var t = tabs[idx];
+        lista.scrollTo({ left: t.offsetLeft - (lista.clientWidth - t.offsetWidth) / 2,
+                         behavior: reduce ? "auto" : "smooth" });
+      }
     }
+    /* Bordes desvanecidos solo del lado donde hay mas titulos. */
+    var engList = eng.querySelector(".eng-list");
+    function bordes() {
+      var max = engList.scrollWidth - engList.clientWidth;
+      engList.setAttribute("data-l", engList.scrollLeft > 4 ? "1" : "0");
+      engList.setAttribute("data-r", engList.scrollLeft < max - 4 ? "1" : "0");
+    }
+    engList.addEventListener("scroll", bordes, { passive: true });
+    window.addEventListener("resize", bordes);
+    bordes();
     /* Pausa: el tiempo ya corrido se guarda y al reanudar se descuenta,
        asi la barra sigue desde donde quedo y no vuelve a cero. */
     var pausa = false, corrido = 0;

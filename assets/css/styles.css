@@ -1143,8 +1143,15 @@ form>*,.two>*,.fld>*{min-width:0}
 
 @media (max-width:900px){
   /* Seis columnas no entran: la fila se vuelve una tira que se arrastra. */
+  /* Cada titulo ocupa un poco menos de la mitad: siempre asoma uno cortado,
+     que es lo que dice "hay mas para el costado". */
   .eng-list{grid-template-columns:none;grid-auto-flow:column;
-    grid-auto-columns:minmax(148px,1fr);overflow-x:auto;scrollbar-width:none}
+    grid-auto-columns:minmax(132px,40%);overflow-x:auto;scrollbar-width:none;
+    scroll-snap-type:x proximity}
+  .eng-tab{scroll-snap-align:center}
+  .eng-list[data-r="1"]{-webkit-mask-image:linear-gradient(to right,#000 82%,transparent);mask-image:linear-gradient(to right,#000 82%,transparent)}
+  .eng-list[data-l="1"]{-webkit-mask-image:linear-gradient(to right,transparent,#000 18%);mask-image:linear-gradient(to right,transparent,#000 18%)}
+  .eng-list[data-l="1"][data-r="1"]{-webkit-mask-image:linear-gradient(to right,transparent,#000 18%,#000 82%,transparent);mask-image:linear-gradient(to right,transparent,#000 18%,#000 82%,transparent)}
   .eng-list::-webkit-scrollbar{display:none}
   .eng-panes{min-height:0}
 }
