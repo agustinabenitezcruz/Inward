@@ -112,7 +112,7 @@ p{margin:0}
    bloquifica y se estira a todo el ancho. */
 /* Un solo espacio entre el rotulo y el titular en todo el sitio. Antes cada
    bloque tenia el suyo (13, 14, 15px y 0 en Contacto). */
-:root{--label-gap:1rem}
+:root{--label-gap:1.6rem}
 /* LOS TRES ESPACIOS DEL ENCABEZADO, iguales en todo el sitio:
      --label-gap  rotulo   -> titular
      --lead-gap   titular  -> bajada
@@ -2163,7 +2163,7 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
   width:fit-content;padding:.42em .95em;border-radius:999px;
   background:var(--fill);color:var(--fill-ink);
 }
-.chk{list-style:none;margin:var(--label-gap) 0 0;padding:0;display:grid;gap:.75rem}
+.chk{list-style:none;margin:1rem 0 0;padding:0;display:grid;gap:.75rem}
 .chk li{position:relative;padding-left:2.1rem}
 /* El tilde va en negro dentro de un circulo verde agua: el tilde verde sobre
    blanco, a 2px, era invisible. */
@@ -2724,3 +2724,20 @@ body:has(.cat-t:target) .cats a[href="#articles"] .cats-n{background:var(--surfa
 .qsn-b{margin-top:.5rem;color:var(--text-2);max-width:52ch}
 .qsn-hist-ph{aspect-ratio:4/3}
 @media (max-width:760px){.qsn-team{grid-template-columns:1fr}}
+
+/* ---------- Contacto: columna izquierda a la altura del formulario ----------
+   El titular ocupa el mismo ancho que la bajada (antes se cortaba a 14
+   caracteres y quedaba angosto sobre un parrafo ancho), y la columna se
+   estira al alto del formulario: rotulo y titular arriba, a la altura del
+   borde superior del formulario; telefonos y mail abajo, alineados con su
+   borde inferior y separados por una linea. Asi los dos bloques empiezan y
+   terminan juntos. */
+.ct-grid{align-items:stretch}
+.ct-grid > .rv:first-child{display:flex;flex-direction:column;padding-top:clamp(.4rem,1vw,.8rem)}
+.ct h2{max-width:none;text-wrap:balance}
+.ct .lead{max-width:none}
+.ct-info{margin-top:auto;padding-top:clamp(1.4rem,2.6vw,2rem);border-top:1px solid var(--line);
+  grid-template-columns:repeat(2,minmax(0,1fr));column-gap:1.4rem}
+.ct-grid > .rv:first-child > .lead{margin-bottom:clamp(1.6rem,3vw,2.4rem)}
+@media (max-width:900px){.ct-info{margin-top:clamp(1.6rem,3vw,2.2rem)}}
+@media (max-width:560px){.ct-info{grid-template-columns:1fr}}
