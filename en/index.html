@@ -1422,79 +1422,6 @@
   </div>
 </section>
 
-<!-- ============================ CONTACT ============================ -->
-<!-- shell:contact -->
-<section class="band ct sec band-alt" id="contact">
-  <div class="wrap ct-grid">
-    <div class="rv">
-      <p class="label">Contact</p>
-      <h2>Parlons de votre dossier</h2>
-      <p class="lead">Quelques questions pour cerner votre situation, puis un rendez-vous avec la personne qui suivra votre dossier.</p>
-      <!-- Sin direccion: el despacho no tiene sede publica. Dos telefonos y un
-           mail, los tres a confirmar por la clienta. -->
-      <ul class="ct-list">
-        <li><svg class="ct-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.2 3.6h3.1l1.6 4.2-2.2 1.5a11.6 11.6 0 0 0 7 7l1.5-2.2 4.2 1.6v3.1a1.7 1.7 0 0 1-1.8 1.7A16.8 16.8 0 0 1 3.5 5.4a1.7 1.7 0 0 1 1.7-1.8z"/></svg><span class="ct-k">Téléphone</span><span class="ct-v"><span class="todo" title="Premier numéro public a confirmer">Premier numéro à confirmer</span></span></li>
-        <li><svg class="ct-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.2 3.6h3.1l1.6 4.2-2.2 1.5a11.6 11.6 0 0 0 7 7l1.5-2.2 4.2 1.6v3.1a1.7 1.7 0 0 1-1.8 1.7A16.8 16.8 0 0 1 3.5 5.4a1.7 1.7 0 0 1 1.7-1.8z"/></svg><span class="ct-k">Téléphone</span><span class="ct-v"><span class="todo" title="Second numéro public a confirmer">Second numéro à confirmer</span></span></li>
-        <li><svg class="ct-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.2" width="18" height="13.6" rx="2.4"/><path d="M3.6 6.6l8.4 6.2 8.4-6.2"/></svg><span class="ct-k">Email</span><span class="ct-v"><span class="todo" title="Adresse de contact publique a confirmer : le Brand Book indique le domaine inwardimmigration.com alors que le site est inwardpro.com">Adresse de contact à confirmer</span></span></li>
-      </ul>
-    </div>
-
-    <form class="rounded rv" id="ctForm" data-profil="entreprise" novalidate>
-      <div class="seg" role="radiogroup" aria-label="Votre profil">
-        <label><input type="radio" name="profil" value="entreprise" checked><span>Entreprise</span></label>
-        <label><input type="radio" name="profil" value="particulier"><span>Particulier</span></label>
-      </div>
-      <div class="two">
-        <div class="fld">
-          <label for="nom">Nom et prénom</label>
-          <input id="nom" type="text" autocomplete="name" required>
-        </div>
-        <div class="fld">
-          <label for="mail">Email</label>
-          <input id="mail" type="email" autocomplete="email" required aria-describedby="mail-err">
-          <p class="fld-err" id="mail-err" role="alert" hidden></p>
-        </div>
-      </div>
-      <!-- Solo para empresas. Se oculta con hidden, no con display:none por
-           CSS: asi el campo sale del formulario y de la navegacion por
-           teclado, en vez de quedar invisible pero enfocable. -->
-      <div class="fld" data-only="entreprise" hidden>
-        <label for="societe">Nom de l'entreprise</label>
-        <input id="societe" type="text" autocomplete="organization">
-      </div>
-      <div class="two">
-        <div class="fld">
-          <label for="dem">Votre démarche</label>
-          <select id="dem">
-            <option>Visa ou titre de séjour</option>
-            <option>Changement de statut ou renouvellement</option>
-            <option>Naturalisation et nationalité</option>
-            <option>Aide administrative</option>
-            <option>Mobilité internationale (entreprise)</option>
-            <option>Je ne sais pas encore</option>
-          </select>
-        </div>
-        <div class="fld">
-          <label for="canal">Comment nous avez-vous connus ?</label>
-          <select id="canal" required>
-            <option value="" selected disabled>Choisir…</option>
-            <option>Réseaux sociaux (LinkedIn, Instagram)</option>
-            <option>Recommandation</option>
-            <option>Recherche (Google, IA…)</option>
-            <option>Autre</option>
-          </select>
-        </div>
-      </div>
-      <div class="fld">
-        <label for="msg">Votre situation en quelques lignes</label>
-        <textarea id="msg" placeholder="Nationalité, statut actuel, échéance..."></textarea>
-      </div>
-      <button class="btn btn-primary" type="submit" style="justify-content:center">Envoyer et choisir un créneau</button>
-    </form>
-  </div>
-</section>
-<!-- /shell:contact -->
-
 <!-- ============================ FAQ ============================ -->
 <!-- <details> nativo: se abre y se cierra sin JavaScript, el contenido esta en
      el DOM para el buscador y el teclado funciona solo. -->
@@ -1709,6 +1636,80 @@
 </section>
 
 <!-- ============================ FOOTER ============================ -->
+
+<!-- ============================ CONTACT ============================ -->
+<!-- shell:contact -->
+<section class="band ct sec band-alt" id="contact">
+  <div class="wrap ct-grid">
+    <div class="rv">
+      <p class="label">Contact</p>
+      <h2>Parlons de votre dossier</h2>
+      <p class="lead">Quelques questions pour cerner votre situation, puis un rendez-vous avec la personne qui suivra votre dossier.</p>
+      <!-- Sin direccion: el despacho no tiene sede publica. Dos telefonos y un
+           mail, los tres a confirmar por la clienta. -->
+      <ul class="ct-list">
+        <li><svg class="ct-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.2 3.6h3.1l1.6 4.2-2.2 1.5a11.6 11.6 0 0 0 7 7l1.5-2.2 4.2 1.6v3.1a1.7 1.7 0 0 1-1.8 1.7A16.8 16.8 0 0 1 3.5 5.4a1.7 1.7 0 0 1 1.7-1.8z"/></svg><span class="ct-k">Téléphone</span><span class="ct-v"><span class="todo" title="Premier numéro public a confirmer">Premier numéro à confirmer</span></span></li>
+        <li><svg class="ct-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.2 3.6h3.1l1.6 4.2-2.2 1.5a11.6 11.6 0 0 0 7 7l1.5-2.2 4.2 1.6v3.1a1.7 1.7 0 0 1-1.8 1.7A16.8 16.8 0 0 1 3.5 5.4a1.7 1.7 0 0 1 1.7-1.8z"/></svg><span class="ct-k">Téléphone</span><span class="ct-v"><span class="todo" title="Second numéro public a confirmer">Second numéro à confirmer</span></span></li>
+        <li><svg class="ct-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.2" width="18" height="13.6" rx="2.4"/><path d="M3.6 6.6l8.4 6.2 8.4-6.2"/></svg><span class="ct-k">Email</span><span class="ct-v"><span class="todo" title="Adresse de contact publique a confirmer : le Brand Book indique le domaine inwardimmigration.com alors que le site est inwardpro.com">Adresse de contact à confirmer</span></span></li>
+      </ul>
+    </div>
+
+    <form class="rounded rv" id="ctForm" data-profil="entreprise" novalidate>
+      <div class="seg" role="radiogroup" aria-label="Votre profil">
+        <label><input type="radio" name="profil" value="entreprise" checked><span>Entreprise</span></label>
+        <label><input type="radio" name="profil" value="particulier"><span>Particulier</span></label>
+      </div>
+      <div class="two">
+        <div class="fld">
+          <label for="nom">Nom et prénom</label>
+          <input id="nom" type="text" autocomplete="name" required>
+        </div>
+        <div class="fld">
+          <label for="mail">Email</label>
+          <input id="mail" type="email" autocomplete="email" required aria-describedby="mail-err">
+          <p class="fld-err" id="mail-err" role="alert" hidden></p>
+        </div>
+      </div>
+      <!-- Solo para empresas. Se oculta con hidden, no con display:none por
+           CSS: asi el campo sale del formulario y de la navegacion por
+           teclado, en vez de quedar invisible pero enfocable. -->
+      <div class="fld" data-only="entreprise" hidden>
+        <label for="societe">Nom de l'entreprise</label>
+        <input id="societe" type="text" autocomplete="organization">
+      </div>
+      <div class="two">
+        <div class="fld">
+          <label for="dem">Votre démarche</label>
+          <select id="dem">
+            <option>Visa ou titre de séjour</option>
+            <option>Changement de statut ou renouvellement</option>
+            <option>Naturalisation et nationalité</option>
+            <option>Aide administrative</option>
+            <option>Mobilité internationale (entreprise)</option>
+            <option>Je ne sais pas encore</option>
+          </select>
+        </div>
+        <div class="fld">
+          <label for="canal">Comment nous avez-vous connus ?</label>
+          <select id="canal" required>
+            <option value="" selected disabled>Choisir…</option>
+            <option>Réseaux sociaux (LinkedIn, Instagram)</option>
+            <option>Recommandation</option>
+            <option>Recherche (Google, IA…)</option>
+            <option>Autre</option>
+          </select>
+        </div>
+      </div>
+      <div class="fld">
+        <label for="msg">Votre situation en quelques lignes</label>
+        <textarea id="msg" placeholder="Nationalité, statut actuel, échéance..."></textarea>
+      </div>
+      <button class="btn btn-primary" type="submit" style="justify-content:center">Envoyer et choisir un créneau</button>
+    </form>
+  </div>
+</section>
+<!-- /shell:contact -->
+
 <!-- shell:footer -->
 <footer class="band ft">
   <div class="wrap">
@@ -1778,8 +1779,8 @@
   <a href="#particuliers" aria-label="Particuliers"><span></span></a>
   <a href="#about" aria-label="Qui sommes-nous"><span></span></a>
   <a href="#ressources" aria-label="Ressources"><span></span></a>
-  <a href="#contact" aria-label="Contact"><span></span></a>
   <a href="#faq" aria-label="Questions fréquentes"><span></span></a>
+  <a href="#contact" aria-label="Contact"><span></span></a>
 </nav>
 
 <script src="../assets/js/main.js?v=a756c3aa" defer></script>
