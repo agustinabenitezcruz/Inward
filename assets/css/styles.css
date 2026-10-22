@@ -2701,7 +2701,7 @@ body:has(.cat-t:target) .cats a[href="#articles"]{background:none;border-color:v
 .cats a[href="#articles"] .cats-n,
 body:has(#cat-guides:target) .cats a[href="#cat-guides"] .cats-n,
 body:has(#cat-delais:target) .cats a[href="#cat-delais"] .cats-n,
-body:has(#cat-actualite:target) .cats a[href="#cat-actualite"] .cats-n{background:var(--tint-3);color:var(--tint-ink)}
+body:has(#cat-actualite:target) .cats a[href="#cat-actualite"] .cats-n{background:var(--tint-1);color:var(--tint-ink)}
 body:has(.cat-t:target) .cats a[href="#articles"] .cats-n{background:var(--surface);color:var(--text-2)}
 /* El ancla no ocupa lugar; el salto deja la fila de categorias a la vista. */
 .cat-t{display:block;height:0;scroll-margin-top:calc(var(--hdr-h,72px) + 7rem)}
