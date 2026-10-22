@@ -2748,10 +2748,12 @@ body:has(.cat-t:target) .cats a[href="#articles"] .cats-n{background:var(--surfa
 /* ---------- Contacto: datos en lista ----------
    Una fila por dato, con su icono en circulo verde agua (tinta negra, como el
    tilde de las checklists), justo debajo de la bajada. */
-.ct-list{list-style:none;margin:clamp(1.6rem,3vw,2.2rem) 0 0;padding:0;display:grid;gap:.9rem}
-.ct-list li{display:grid;grid-template-columns:2.5rem 1fr;column-gap:.85rem;align-items:center}
-.ct-i{grid-row:1/3;width:2.5rem;height:2.5rem;padding:.62rem;border-radius:50%;box-sizing:border-box;
-  background:var(--tint-1);color:var(--tint-ink)}
+.ct-list{list-style:none;margin:clamp(1.6rem,3vw,2.2rem) 0 0;padding:0;display:grid;gap:1.4rem}
+.ct-list li{display:grid;grid-template-columns:33px 1fr;column-gap:.85rem;align-items:center}
+/* Mismo tamanio que los iconos de la home (circulo de 33px, trazo de 17px)
+   y fondo lila con trazo violeta oscuro. */
+.ct-i{grid-row:1/3;width:33px;height:33px;padding:8px;border-radius:50%;box-sizing:border-box;
+  background:var(--tint-3);color:var(--accent)}
 .ct-k{font-size:.68rem;text-transform:uppercase;letter-spacing:.17em;color:var(--text-3);line-height:1.3}
 .ct-v{font-size:1.02rem;line-height:1.35}
 .ct-grid > .rv:first-child > .lead{margin-bottom:0}
