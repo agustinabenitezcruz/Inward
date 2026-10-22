@@ -816,8 +816,18 @@
       });
       if (foco) sBtns[i].focus();
     };
+    /* En escritorio alcanza con pasar el mouse por el servicio. Retardo
+       corto para que cruzar la lista hacia el panel no vaya cambiando de
+       servicio por el camino. */
+    var sHover = window.matchMedia("(hover:hover) and (pointer:fine)"), sReloj = null;
     sBtns.forEach(function (b, k) {
-      b.addEventListener("click", function () { eligeServicio(k); });
+      b.addEventListener("click", function () { clearTimeout(sReloj); eligeServicio(k); });
+      b.addEventListener("mouseenter", function () {
+        if (!sHover.matches || b.getAttribute("aria-selected") === "true") return;
+        clearTimeout(sReloj);
+        sReloj = setTimeout(function () { eligeServicio(k); }, 110);
+      });
+      b.addEventListener("mouseleave", function () { clearTimeout(sReloj); });
       b.addEventListener("keydown", function (e) {
         var i = null, n = sBtns.length;
         if (e.key === "ArrowDown" || e.key === "ArrowRight") i = (k + 1) % n;
