@@ -1184,8 +1184,8 @@ form>*,.two>*,.fld>*{min-width:0}
 .art .rd-meta{margin-top:.15rem;font-size:.8rem;color:rgba(255,255,255,.8);display:flex;align-items:center;gap:.4rem}
 .art .todo{color:#fff;border-bottom-color:rgba(255,255,255,.6)}
 /* Un color por tarjeta, de la paleta, usado solo en el rotulo y en el borde. */
-.art{--ov:var(--tint-3)}
-.art-ov1{--ov:var(--tint-3)}
+.art{--ov:var(--tint-1)}
+.art-ov1{--ov:var(--tint-1)}
 .art-ov2{--ov:var(--tint-3)}
 .art-ov3{--ov:var(--tint-2)}
 .art .kd{font-size:.7rem;text-transform:uppercase;letter-spacing:.17em;color:var(--ov)}
