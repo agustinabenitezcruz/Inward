@@ -415,3 +415,16 @@ Deux limites à connaître : l'API renvoie **5 avis au maximum** par fiche, et l
 politique Places **interdit** de conserver le contenu des avis au-delà de ce
 qu'exige la performance — donc pas d'archive locale qui grossirait avec le
 temps. Le place ID, lui, peut être conservé sans limite.
+
+## Publicar en O2Switch
+
+    python3 tools/sync_shell.py
+    python3 tools/extract_strings.py
+    python3 build.py
+    python3 tools/stamp.py
+    python3 tools/dist.py
+
+`tools/dist.py` arma `dist/`: la copia que se sube al servidor. Lleva solo lo
+que el navegador necesita, con HTML, CSS y JS sin comentarios. No se versiona
+(está en `.gitignore`). Los logos originales de clientes y de INWARD están en
+`_fuentes/` y tampoco se publican.
