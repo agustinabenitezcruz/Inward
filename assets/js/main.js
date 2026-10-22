@@ -813,7 +813,7 @@
      los cinco estan en el HTML. En telefono el CSS muestra los cinco seguidos
      y esconde la lista, asi que esto no interviene. */
   var stabs = document.querySelector(".stabs");
-  var eligeServicio = null;
+  var eligeServicio = null, abrePanel = null;
   if (stabs) {
     var sBtns = [].slice.call(stabs.querySelectorAll(".stb"));
     var sPanes = sBtns.map(function (b) { return document.getElementById(b.getAttribute("aria-controls")); });
@@ -852,6 +852,30 @@
     });
     eligeServicio(0);
     stabs.__panes = sPanes;
+
+    /* Tablet y celular: las cinco cajas se ven juntas y la flecha de cada
+       una la despliega. Una abierta por vez. En escritorio el boton del
+       titulo no hace nada y queda fuera del tabulador. */
+    var sMovil = window.matchMedia("(max-width:860px)");
+    var sTogs = sPanes.map(function (pn) { return pn.querySelector(".stp-tog"); });
+    abrePanel = function (pn, abrir) {
+      sPanes.forEach(function (o, k) {
+        var on = abrir && o === pn;
+        o.toggleAttribute("data-open", on);
+        sTogs[k].setAttribute("aria-expanded", on ? "true" : "false");
+      });
+    };
+    sTogs.forEach(function (tg, k) {
+      tg.addEventListener("click", function () {
+        if (!sMovil.matches) return;
+        abrePanel(sPanes[k], !sPanes[k].hasAttribute("data-open"));
+      });
+    });
+    function modoServicios() {
+      sTogs.forEach(function (tg) { tg.tabIndex = sMovil.matches ? 0 : -1; });
+    }
+    sMovil.addEventListener("change", modoServicios);
+    modoServicios();
   }
 
   function abreDestino() {
@@ -860,6 +884,7 @@
     if (!el) return;
     if (stabs && el.classList.contains("stp") && eligeServicio) {
       eligeServicio(stabs.__panes.indexOf(el));
+      if (abrePanel && window.matchMedia("(max-width:860px)").matches) abrePanel(el, true);
       setTimeout(function () {
         stabs.scrollIntoView({ block: "start", behavior: reduce ? "auto" : "smooth" });
       }, 80);

@@ -2932,3 +2932,46 @@ body:has(.cat-t:target) .cats a[href="#articles"] .cats-n{background:var(--surfa
    que ensanchaba toda la pagina y el navegador la mostraba achicada. */
 .stabs,.stabs-panes,.stp{min-width:0}
 .stp .btn{white-space:normal;max-width:100%;text-align:left}
+
+/* ---------- Servicios de empresas: acordeon en tablet y celular ----------
+   En escritorio siguen siendo pestanas. Por debajo de 860px se ven las cinco
+   cajas juntas, cerradas, con numero, nombre y flecha: de un vistazo se sabe
+   cuantas son. La flecha abre la caja a su tamanio completo (texto y CTA
+   debajo). Una abierta por vez. */
+.stp-b > div{display:grid;gap:1rem;align-content:start}
+.stp-tog{
+  all:unset;box-sizing:border-box;display:block;width:100%;
+  font:inherit;color:inherit;text-align:left;pointer-events:none;cursor:default;
+}
+.stp-chev{display:none}
+@media (max-width:860px){
+  .stabs .stabs-panes{gap:8px}
+  .stabs.is-js .stp{
+    grid-template-columns:auto minmax(0,1fr);column-gap:.85rem;row-gap:0;align-items:center;
+    padding:.95rem 1.05rem;min-height:0;
+  }
+  .stabs.is-js .stp-n{
+    display:grid;place-items:center;width:2.1rem;height:2.1rem;border-radius:50%;
+    background:var(--panel);color:var(--text-2);font-family:var(--font-body);font-size:.74rem;font-weight:500;line-height:1;
+    transition:background-color 420ms var(--ease-soft),color 420ms var(--ease-soft);
+  }
+  .stabs.is-js .stp-h{font-size:clamp(1rem,4vw,1.12rem);line-height:1.3}
+  .stabs.is-js .stp-tog{
+    pointer-events:auto;cursor:pointer;display:grid;grid-template-columns:minmax(0,1fr) auto;
+    align-items:center;gap:.8rem;padding-block:.15rem;
+  }
+  .stabs.is-js .stp-tog:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
+  .stabs.is-js .stp-chev{
+    display:block;width:30px;height:30px;padding:8px;box-sizing:border-box;border-radius:50%;
+    border:1px solid var(--line-strong);color:var(--text);transition:transform 320ms var(--ease-out),background-color 320ms var(--ease-soft);
+  }
+  .stabs.is-js .stp-b{
+    grid-column:1 / -1;display:grid;grid-template-rows:0fr;opacity:0;
+    transition:grid-template-rows 480ms var(--ease-io),opacity 380ms var(--ease-soft),margin-top 480ms var(--ease-io);
+  }
+  .stabs.is-js .stp-b > div{overflow:hidden;min-height:0}
+  .stabs.is-js .stp[data-open] .stp-b{grid-template-rows:1fr;opacity:1;margin-top:1rem}
+  .stabs.is-js .stp[data-open] .stp-chev{transform:rotate(180deg);background:var(--panel)}
+  .stabs.is-js .stp[data-open] .stp-n{background:var(--tint-3);color:var(--accent)}
+  .stabs.is-js .stp .btn{margin-top:.2rem;margin-bottom:.2rem}
+}
