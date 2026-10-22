@@ -565,7 +565,11 @@ form>*,.two>*,.fld>*{min-width:0}
    BANDES
    ============================================================ */
 .band{position:relative;z-index:2;background:var(--ground)}
-.band-top{border-radius:var(--r-band) var(--r-band) 0 0;margin-top:-1px}
+/* La banda sube su propio radio sobre el hero: asi detras de las esquinas
+   redondeadas queda la foto o el video y no el fondo blanco de la pagina.
+   En escritorio la home ya lo lograba porque el hero es sticky; en las
+   landings y en tablet/celular (hero sin sticky) las esquinas no se veian. */
+.band-top{border-radius:var(--r-band) var(--r-band) 0 0;margin-top:calc(-1 * var(--r-band))}
 /* El padding no es igual en todas: un ritmo identico seccion tras seccion es
    parte de lo que las hace leer como bloques sueltos. */
 .sec{padding-block:clamp(4.5rem,10vh,7.5rem)}
