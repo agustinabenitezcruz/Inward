@@ -2975,3 +2975,9 @@ body:has(.cat-t:target) .cats a[href="#articles"] .cats-n{background:var(--surfa
   .stabs.is-js .stp[data-open] .stp-n{background:var(--tint-3);color:var(--accent)}
   .stabs.is-js .stp .btn{margin-top:.2rem;margin-bottom:.2rem}
 }
+/* Numeros de las cajas de servicios (tablet y celular) sobre lila; la caja
+   abierta pasa su numero al violeta oscuro para que se distinga. */
+@media (max-width:860px){
+  .stabs.is-js .stp-n{background:var(--tint-3);color:var(--accent)}
+  .stabs.is-js .stp[data-open] .stp-n{background:var(--fill);color:var(--fill-ink)}
+}
