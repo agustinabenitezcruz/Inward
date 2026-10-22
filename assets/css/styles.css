@@ -792,7 +792,8 @@ form>*,.two>*,.fld>*{min-width:0}
 .b2b-grid>*{min-width:0}
 .b2b-txt{display:flex;flex-direction:column;justify-content:space-between;gap:clamp(1.6rem,3vw,2.4rem)}
 .b2b-txt .sec-head{margin-bottom:0}
-.b2b-txt h2{font-weight:300;font-size:clamp(2.1rem,3.9vw,3.4rem);line-height:1.04;letter-spacing:-.03em}
+/* El titular de Entreprises usa el h2 comun (peso, cuerpo e interlineado),
+   igual que el resto de las secciones: antes era mas grande y mas fino. */
 .b2b-txt .lead{font-size:clamp(1.05rem,1.3vw,1.2rem);line-height:1.62}
 .b2b-act{display:grid;gap:1rem;justify-items:start}
 
