@@ -30,3 +30,7 @@ __pycache__/
 _preview.zip
 _p*.zip
 zi??????
+
+# ---- Version para publicar ----
+# La arma tools/dist.py a partir de las fuentes; no se versiona.
+dist/
