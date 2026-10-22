@@ -645,8 +645,30 @@
        cuan hondo esta la pagina y eso no se puede deducir de la URL sin saber
        cuales son carpetas de idioma y cuales de pagina. */
     var api = avis.getAttribute("data-api") || "api/avis.php";
-    fetch(api, { headers: { Accept: "application/json" } })
-      .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+    /* Vista previa para la clienta: con ?avis=demo en la URL se pintan
+       opiniones de EJEMPLO, para ver como queda la franja antes de conectar
+       la cuenta de Google. Llevan un aviso visible ("Aperçu : avis fictifs")
+       y nunca aparecen sin el parametro: en el sitio publicado no hay forma de
+       que se muestren por accidente. */
+    var demo = /(?:^|[?&])avis=demo(?:&|$)/.test(location.search.slice(1));
+    var DEMO = {
+      rating: 4.9, count: 38, mapsUri: "https://www.google.com/maps?cid=1377371409426816352",
+      reviews: [
+        { author: "Camila R.", when: "il y a 2 semaines", rating: 5, text: "Accompagnement impeccable pour mon visa Passeport Talent. Réponses rapides, dossier clair, aucune mauvaise surprise." },
+        { author: "Thomas L.", when: "il y a 1 mois", rating: 5, text: "Nous avons confié à INWARD l'arrivée de trois collaborateurs. Tout a été géré dans les délais, avec un vrai suivi." },
+        { author: "Lucía M.", when: "il y a 1 mois", rating: 5, text: "Équipe humaine et très professionnelle. Elles m'ont guidée pour le changement de statut sans que je stresse une seule fois." },
+        { author: "Ahmed B.", when: "il y a 2 mois", rating: 5, text: "Renouvellement de titre de séjour traité très vite. Je recommande pour leur réactivité." },
+        { author: "Sofia P.", when: "il y a 3 mois", rating: 4, text: "Très bon accompagnement pour l'installation de ma famille, de la CPAM jusqu'à l'école des enfants." }
+      ]
+    };
+    if (demo) {
+      var aviso = document.createElement("p");
+      aviso.className = "avis-demo";
+      aviso.textContent = "Aperçu : avis fictifs, pour visualiser la mise en page";
+      avis.querySelector(".avis-in").insertAdjacentElement("beforebegin", aviso);
+    }
+    (demo ? Promise.resolve(DEMO) : fetch(api, { headers: { Accept: "application/json" } })
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); }))
       .then(function (d) {
         if (!d || !d.reviews || !d.reviews.length) return;
 
@@ -775,10 +797,53 @@
      #audit...). Llegar a una fila cerrada obliga a buscarla y abrirla a mano:
      aca se abre sola, en el modo que corresponda si vive en el selector de
      particuliers, y se vuelve a centrar porque al abrirse cambia el alto. */
+  /* ---------- Servicios de empresas: pestanas verticales ----------
+     Clic, flechas arriba/abajo, Inicio y Fin. Solo cambia que panel se ve:
+     los cinco estan en el HTML. En telefono el CSS muestra los cinco seguidos
+     y esconde la lista, asi que esto no interviene. */
+  var stabs = document.querySelector(".stabs");
+  var eligeServicio = null;
+  if (stabs) {
+    var sBtns = [].slice.call(stabs.querySelectorAll(".stb"));
+    var sPanes = sBtns.map(function (b) { return document.getElementById(b.getAttribute("aria-controls")); });
+    stabs.classList.add("is-js");
+    eligeServicio = function (i, foco) {
+      sBtns.forEach(function (b, k) {
+        var on = k === i;
+        b.setAttribute("aria-selected", on ? "true" : "false");
+        b.tabIndex = on ? 0 : -1;
+        sPanes[k].hidden = !on;
+      });
+      if (foco) sBtns[i].focus();
+    };
+    sBtns.forEach(function (b, k) {
+      b.addEventListener("click", function () { eligeServicio(k); });
+      b.addEventListener("keydown", function (e) {
+        var i = null, n = sBtns.length;
+        if (e.key === "ArrowDown" || e.key === "ArrowRight") i = (k + 1) % n;
+        else if (e.key === "ArrowUp" || e.key === "ArrowLeft") i = (k - 1 + n) % n;
+        else if (e.key === "Home") i = 0;
+        else if (e.key === "End") i = n - 1;
+        if (i === null) return;
+        e.preventDefault();
+        eligeServicio(i, true);
+      });
+    });
+    eligeServicio(0);
+    stabs.__panes = sPanes;
+  }
+
   function abreDestino() {
     var id = decodeURIComponent(location.hash.slice(1));
     var el = id && document.getElementById(id);
     if (!el) return;
+    if (stabs && el.classList.contains("stp") && eligeServicio) {
+      eligeServicio(stabs.__panes.indexOf(el));
+      setTimeout(function () {
+        stabs.scrollIntoView({ block: "start", behavior: reduce ? "auto" : "smooth" });
+      }, 80);
+      return;
+    }
     var pane = el.closest(".mode");
     if (pane && ways && wPanes.indexOf(pane) >= 0) elige(wPanes.indexOf(pane));
     if (el.tagName === "DETAILS" && !el.open) el.open = true;

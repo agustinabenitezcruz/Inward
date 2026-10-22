@@ -33,7 +33,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..600&family=Jost:wght@300..600&display=swap">
-<link rel="stylesheet" href="../../assets/css/styles.css?v=131ea43e">
+<link rel="stylesheet" href="../../assets/css/styles.css?v=938a8638">
 <link rel="preload" as="image" href="../../assets/img/atelier-equipe-inward-tableau-blanc.webp" fetchpriority="high">
 
 <!-- FICHA ESTRUCTURADA. La organizacion se referencia por @id a la que
@@ -443,7 +443,7 @@
 </script>
 </head>
 <body>
-<p style="position:fixed;left:16px;bottom:16px;z-index:80;margin:0;max-width:min(340px,calc(100vw - 32px));padding:.6rem .85rem;border-radius:12px;background:#ebff76;color:#101010;box-shadow:0 8px 24px -10px rgba(16,16,16,.45);font:500 .74rem/1.45 Jost,system-ui,sans-serif">Translation in progress. This page still shows the French text where the English is missing. (407)</p>
+<p style="position:fixed;left:16px;bottom:16px;z-index:80;margin:0;max-width:min(340px,calc(100vw - 32px));padding:.6rem .85rem;border-radius:12px;background:#ebff76;color:#101010;box-shadow:0 8px 24px -10px rgba(16,16,16,.45);font:500 .74rem/1.45 Jost,system-ui,sans-serif">Translation in progress. This page still shows the French text where the English is missing. (406)</p>
 
 <!-- Los bloques marcados shell:* no se editan acá: salen de index.html y los
      copia tools/sync_shell.py. Si hay que tocar la cabecera o el pie, se toca
@@ -711,88 +711,70 @@
       <h2>Cinq prestations, un seul interlocuteur</h2>
     </div>
 
-    <!-- Acordeon nativo <details>, como la F&Q. Cerrado se ve el titulo y UNA
-         linea de texto; "Voir plus" abre el resto y el CTA del servicio. El
-         atributo name hace el acordeon exclusivo sin una linea de JavaScript.
-         Todo el texto esta en el DOM aunque este cerrado, asi que el buscador
-         lo ve igual: esto es presentacion, no contenido oculto. -->
-    <div class="svc-list rv">
-      <details class="svc" id="visas" name="svcs">
-        <summary>
-          <span class="svc-n">01</span>
-          <span class="svc-t" role="heading" aria-level="3">Gestion des visas et titres de séjour</span>
-          <span class="svc-one">Notre équipe pilote l'intégralité du parcours d'immigration : de la demande préalable d'autorisation de travail jusqu'à la délivrance finale du visa ou de la carte de séjour.</span>
-          <span class="svc-more"><span class="svc-more-t">Voir plus</span><span class="svc-less-t">Voir moins</span>
-            <svg class="svc-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5.25L7 9.25l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-        </summary>
-        <div class="svc-b">
-          <p>Notre équipe pilote l'intégralité du parcours d'immigration : de la demande préalable d'autorisation de travail jusqu'à la délivrance finale du visa ou de la carte de séjour.</p>
-          <p>Nous garantissons des dossiers 100&nbsp;% conformes afin de réduire les délais d'instruction et d'éliminer les risques de refus. Expertise complète : Passeport Talent, visas Salarié, Travailleur temporaire, Saisonnier, Stagiaire et Entrepreneur ou profession libérale.</p>
-          <a class="svc-cta" href="#contact">Confiez vos dossiers à nos experts <span class="arw">&rsaquo;</span></a>
-        </div>
-      </details>
-      <details class="svc" id="detachement" name="svcs">
-        <summary>
-          <span class="svc-n">02</span>
-          <span class="svc-t" role="heading" aria-level="3">Détachement de salariés</span>
-          <span class="svc-one">Déployez vos équipes en France en toute simplicité, de l'obtention des visas de détachement jusqu'à la finalisation des formalités administratives.</span>
-          <span class="svc-more"><span class="svc-more-t">Voir plus</span><span class="svc-less-t">Voir moins</span>
-            <svg class="svc-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5.25L7 9.25l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-        </summary>
-        <div class="svc-b">
-          <p>Déployez vos équipes en France en toute simplicité, de l'obtention des visas de détachement jusqu'à la finalisation des formalités administratives.</p>
-          <p>Nous prenons en charge l'intégralité du parcours : déclarations SIPSI, couverture sociale adaptée, vérification des rémunérations et rédaction des conventions de prestation. Nous fluidifions l'arrivée de vos salariés détachés pour vous garantir des missions réussies, sans retard ni risque de blocage administratif lors de vos déplacements internationaux.</p>
-          <a class="svc-cta" href="#contact">Sécurisez une mission en France <span class="arw">&rsaquo;</span></a>
-        </div>
-      </details>
-      <details class="svc" id="audit" name="svcs">
-        <summary>
-          <span class="svc-n">03</span>
-          <span class="svc-t" role="heading" aria-level="3">Audit et conseil</span>
-          <span class="svc-one">Anticipez les blocages administratifs et fiabilisez les dossiers de vos collaborateurs.</span>
-          <span class="svc-more"><span class="svc-more-t">Voir plus</span><span class="svc-less-t">Voir moins</span>
-            <svg class="svc-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5.25L7 9.25l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-        </summary>
-        <div class="svc-b">
-          <p>Anticipez les blocages administratifs et fiabilisez les dossiers de vos collaborateurs.</p>
-          <p>Nous auditons vos dossiers en cours, vérifions la conformité des pièces auprès des préfectures et résolvons vos doutes techniques en temps réel. Un véritable partenaire au quotidien pour sécuriser vos recrutements et piloter votre politique RH en toute sérénité.</p>
-          <a class="svc-cta" href="#contact">Posez une question à un expert <span class="arw">&rsaquo;</span></a>
-        </div>
-      </details>
-      <details class="svc" id="installation" name="svcs">
-        <summary>
-          <span class="svc-n">04</span>
-          <span class="svc-t" role="heading" aria-level="3">Aide administrative et intégration</span>
-          <span class="svc-one">Le succès d'un recrutement international repose aussi sur une installation réussie.</span>
-          <span class="svc-more"><span class="svc-more-t">Voir plus</span><span class="svc-less-t">Voir moins</span>
-            <svg class="svc-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5.25L7 9.25l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-        </summary>
-        <div class="svc-b">
-          <p>Le succès d'un recrutement international repose aussi sur une installation réussie.</p>
-          <p>Nous accompagnons pas à pas vos salariés dans toutes leurs démarches de vie quotidienne en France : de l'affiliation à l'Assurance Maladie (CPAM) et l'obtention de leur numéro de sécurité sociale jusqu'à la conversion de leur permis de conduire. Assurez un onboarding premium et garantissez la sérénité de vos collaborateurs et de leurs proches.</p>
-          <a class="svc-cta" href="#contact">Faciliter l'installation de vos talents <span class="arw">&rsaquo;</span></a>
-        </div>
-      </details>
-      <details class="svc" id="naturalisation" name="svcs">
-        <summary>
-          <span class="svc-n">05</span>
-          <span class="svc-t" role="heading" aria-level="3">Naturalisation et nationalité française <span class="todo" title="Le document de la cliente hesite entre ce service et le housing (« DUDA: Esto o housing? »)">Service à confirmer</span></span>
-          <span class="svc-one">Offrez un accompagnement d'exception à vos cadres et dirigeants installés durablement en France.</span>
-          <span class="svc-more"><span class="svc-more-t">Voir plus</span><span class="svc-less-t">Voir moins</span>
-            <svg class="svc-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5.25L7 9.25l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-        </summary>
-        <div class="svc-b">
-          <p>Offrez un accompagnement d'exception à vos cadres et dirigeants installés durablement en France.</p>
-          <p>Pour vos collaborateurs clés, l'accès à la nationalité française constitue une étape décisive. Nous proposons un accompagnement sur mesure pour la constitution et le suivi des dossiers de naturalisation, par décret ou par mariage. De la vérification rigoureuse des actes d'état civil et de la complétude du dossier jusqu'à la préparation aux entretiens en préfecture, nous maximisons les chances d'obtention de la nationalité française.</p>
-          <a class="svc-cta" href="#contact">Contacter un expert <span class="arw">&rsaquo;</span></a>
-        </div>
-      </details>
+    <!-- Pestanas verticales y no acordeon: el acordeon era igual a la F&Q y se
+         confundian. A la izquierda la lista de los cinco servicios, a la
+         derecha el servicio elegido entero, con su CTA. Los cinco textos estan
+         siempre en el DOM (los paneles ocultos llevan hidden), asi que el
+         buscador los ve todos. Sin JavaScript, o en telefono, se ven los cinco
+         uno debajo del otro. Los enlaces del menu (#visas, #detachement...)
+         abren su pestana. -->
+    <div class="stabs rv">
+      <div class="stabs-list" role="tablist" aria-label="Nos services" aria-orientation="vertical">
+        <button class="stb" role="tab" id="stb-visas" aria-controls="visas" aria-selected="true" tabindex="0">
+          <span class="stb-n">01</span><span class="stb-t">Gestion des visas et titres de séjour</span>
+        </button>
+        <button class="stb" role="tab" id="stb-detachement" aria-controls="detachement" aria-selected="false" tabindex="-1">
+          <span class="stb-n">02</span><span class="stb-t">Détachement de salariés</span>
+        </button>
+        <button class="stb" role="tab" id="stb-audit" aria-controls="audit" aria-selected="false" tabindex="-1">
+          <span class="stb-n">03</span><span class="stb-t">Audit et conseil</span>
+        </button>
+        <button class="stb" role="tab" id="stb-installation" aria-controls="installation" aria-selected="false" tabindex="-1">
+          <span class="stb-n">04</span><span class="stb-t">Aide administrative et intégration</span>
+        </button>
+        <button class="stb" role="tab" id="stb-naturalisation" aria-controls="naturalisation" aria-selected="false" tabindex="-1">
+          <span class="stb-n">05</span><span class="stb-t">Naturalisation et nationalité française</span>
+        </button>
+      </div>
+      <div class="stabs-panes">
+      <div class="stp" role="tabpanel" id="visas" aria-labelledby="stb-visas">
+        <span class="stp-n" aria-hidden="true">01</span>
+        <h3>Gestion des visas et titres de séjour</h3>
+        <p class="stp-lead">Notre équipe pilote l'intégralité du parcours d'immigration : de la demande préalable d'autorisation de travail jusqu'à la délivrance finale du visa ou de la carte de séjour.</p>
+        <p>Nous garantissons des dossiers 100&nbsp;% conformes afin de réduire les délais d'instruction et d'éliminer les risques de refus. Expertise complète : Passeport Talent, visas Salarié, Travailleur temporaire, Saisonnier, Stagiaire et Entrepreneur ou profession libérale.</p>
+        <a class="btn btn-primary" href="#contact">Confiez vos dossiers à nos experts <span class="arw">&rsaquo;</span></a>
+      </div>
+      <div class="stp" role="tabpanel" id="detachement" aria-labelledby="stb-detachement" hidden>
+        <span class="stp-n" aria-hidden="true">02</span>
+        <h3>Détachement de salariés</h3>
+        <p class="stp-lead">Déployez vos équipes en France en toute simplicité, de l'obtention des visas de détachement jusqu'à la finalisation des formalités administratives.</p>
+        <p>Nous prenons en charge l'intégralité du parcours : déclarations SIPSI, couverture sociale adaptée, vérification des rémunérations et rédaction des conventions de prestation. Nous fluidifions l'arrivée de vos salariés détachés pour vous garantir des missions réussies, sans retard ni risque de blocage administratif lors de vos déplacements internationaux.</p>
+        <a class="btn btn-primary" href="#contact">Sécurisez une mission en France <span class="arw">&rsaquo;</span></a>
+      </div>
+      <div class="stp" role="tabpanel" id="audit" aria-labelledby="stb-audit" hidden>
+        <span class="stp-n" aria-hidden="true">03</span>
+        <h3>Audit et conseil</h3>
+        <p class="stp-lead">Anticipez les blocages administratifs et fiabilisez les dossiers de vos collaborateurs.</p>
+        <p>Nous auditons vos dossiers en cours, vérifions la conformité des pièces auprès des préfectures et résolvons vos doutes techniques en temps réel. Un véritable partenaire au quotidien pour sécuriser vos recrutements et piloter votre politique RH en toute sérénité.</p>
+        <a class="btn btn-primary" href="#contact">Posez une question à un expert <span class="arw">&rsaquo;</span></a>
+      </div>
+      <div class="stp" role="tabpanel" id="installation" aria-labelledby="stb-installation" hidden>
+        <span class="stp-n" aria-hidden="true">04</span>
+        <h3>Aide administrative et intégration</h3>
+        <p class="stp-lead">Le succès d'un recrutement international repose aussi sur une installation réussie.</p>
+        <p>Nous accompagnons pas à pas vos salariés dans toutes leurs démarches de vie quotidienne en France : de l'affiliation à l'Assurance Maladie (CPAM) et l'obtention de leur numéro de sécurité sociale jusqu'à la conversion de leur permis de conduire. Assurez un onboarding premium et garantissez la sérénité de vos collaborateurs et de leurs proches.</p>
+        <a class="btn btn-primary" href="#contact">Faciliter l'installation de vos talents <span class="arw">&rsaquo;</span></a>
+      </div>
+      <div class="stp" role="tabpanel" id="naturalisation" aria-labelledby="stb-naturalisation" hidden>
+        <span class="stp-n" aria-hidden="true">05</span>
+        <h3>Naturalisation et nationalité française <span class="todo" title="Le document de la cliente hesite entre ce service et le housing (« DUDA: Esto o housing? »)">Service à confirmer</span></h3>
+        <p class="stp-lead">Offrez un accompagnement d'exception à vos cadres et dirigeants installés durablement en France.</p>
+        <p>Pour vos collaborateurs clés, l'accès à la nationalité française constitue une étape décisive. Nous proposons un accompagnement sur mesure pour la constitution et le suivi des dossiers de naturalisation, par décret ou par mariage. De la vérification rigoureuse des actes d'état civil et de la complétude du dossier jusqu'à la préparation aux entretiens en préfecture, nous maximisons les chances d'obtention de la nationalité française.</p>
+        <a class="btn btn-primary" href="#contact">Contacter un expert <span class="arw">&rsaquo;</span></a>
+      </div>
+      </div>
     </div>
+  </div>
 </section>
 
 
@@ -1125,6 +1107,6 @@
   <a href="#contact" aria-label="Contact"><span></span></a>
 </nav>
 
-<script src="../../assets/js/main.js?v=b20628a2" defer></script>
+<script src="../../assets/js/main.js?v=a756c3aa" defer></script>
 </body>
 </html>
