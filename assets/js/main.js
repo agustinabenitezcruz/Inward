@@ -304,11 +304,8 @@
     function closeGroups() {
       menu.querySelectorAll('.nav-item[data-open="true"]').forEach(function (it) {
         it.setAttribute("data-open", "false");
-        var b = it.querySelector(".nav-btn");
-        /* aria-expanded solo en los que son boton: los nombres de grupo que
-           llevan a una landing son enlaces, y en un enlace ese atributo no
-           significa nada. */
-        if (b.tagName === "BUTTON") b.setAttribute("aria-expanded", "false");
+        var tg = it.querySelector(".nav-tog");
+        if (tg) tg.setAttribute("aria-expanded", "false");
       });
     }
 
@@ -334,31 +331,25 @@
       setMenu(menu.getAttribute("data-open") !== "true");
     });
 
-    /* Un grupo por vez: dos mega menus abiertos en una pantalla de telefono
-       obligan a desplazarse para encontrar el segundo titulo. */
-    menu.querySelectorAll(".nav-btn").forEach(function (btn) {
-      btn.addEventListener("click", function (e) {
-        if (!mobile.matches) return;
-        /* En telefono no hay hover: el primer toque despliega el grupo en vez
-           de irse a la landing. El enlace sigue estando ahi —dentro del panel
-           hay un acceso directo— pero el toque sobre el nombre no puede
-           sacarte de la pagina sin haber visto el menu. */
-        e.preventDefault();
-        var item = btn.closest(".nav-item"), open = item.getAttribute("data-open") === "true";
+    /* Telefono y tablet: el nombre del grupo (Entreprises, Particuliers,
+       Ressources) es un enlace normal y lleva a su pagina. El submenu se abre
+       SOLO con la flecha de al lado (.nav-tog). Un grupo por vez: dos
+       abiertos en una pantalla chica obligan a buscar el segundo titulo. */
+    menu.querySelectorAll(".nav-tog").forEach(function (tog) {
+      tog.addEventListener("click", function () {
+        var item = tog.closest(".nav-item"), open = item.getAttribute("data-open") === "true";
         closeGroups();
         if (!open) {
           item.setAttribute("data-open", "true");
-          if (btn.tagName === "BUTTON") btn.setAttribute("aria-expanded", "true");
+          tog.setAttribute("aria-expanded", "true");
         }
       });
     });
 
-    /* Al elegir un destino el menu se va: si no, el ancla salta detras del
-       panel. Los nombres de grupo quedan fuera: ahora tambien son enlaces, y
-       en telefono su primer toque despliega el grupo —cerrar el panel entero
-       ahi deshace justo lo que el usuario acaba de pedir. */
+    /* Al elegir cualquier destino el menu se cierra: si no, el ancla salta
+       detras del panel. */
     menu.addEventListener("click", function (e) {
-      if (e.target.closest("a") && !e.target.closest(".nav-btn")) setMenu(false);
+      if (e.target.closest("a")) setMenu(false);
     });
 
     document.addEventListener("keydown", function (e) {
