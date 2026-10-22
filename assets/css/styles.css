@@ -2729,15 +2729,17 @@ body:has(.cat-t:target) .cats a[href="#articles"] .cats-n{background:var(--surfa
 /* ---------- Contacto: columna izquierda a la altura del formulario ----------
    El titular ocupa el mismo ancho que la bajada (antes se cortaba a 14
    caracteres y quedaba angosto sobre un parrafo ancho), y la columna se
-   estira al alto del formulario: rotulo y titular arriba, a la altura del
-   borde superior del formulario; telefonos y mail abajo, alineados con su
-   borde inferior y separados por una linea. Asi los dos bloques empiezan y
-   terminan juntos. */
+   estira al alto del formulario: el titular arranca a la altura del borde
+   superior del formulario y telefonos y mail quedan centrados en el espacio
+   que hay entre la bajada y el final del formulario, con una linea arriba. */
 .ct-grid{align-items:stretch}
-.ct-grid > .rv:first-child{display:flex;flex-direction:column;padding-top:clamp(.4rem,1vw,.8rem)}
+.ct-grid > .rv:first-child{display:flex;flex-direction:column}
+/* El formulario arranca a la altura del titular, no del rotulo: se baja lo
+   que miden el rotulo y su espacio. */
+#contact form{margin-top:calc(var(--ct-lbl,1.72rem) + var(--label-gap))}
 .ct h2{max-width:none;text-wrap:balance}
 .ct .lead{max-width:none}
-.ct-info{margin-top:auto;padding-top:clamp(1.4rem,2.6vw,2rem);border-top:1px solid var(--line);
+.ct-info{margin-block:auto;padding-top:clamp(1.4rem,2.6vw,2rem);border-top:1px solid var(--line);
   grid-template-columns:repeat(2,minmax(0,1fr));column-gap:1.4rem}
 .ct-grid > .rv:first-child > .lead{margin-bottom:clamp(1.6rem,3vw,2.4rem)}
 @media (max-width:900px){.ct-info{margin-top:clamp(1.6rem,3vw,2.2rem)}}
