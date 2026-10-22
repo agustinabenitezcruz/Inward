@@ -2158,11 +2158,11 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
    su titulo y su linea: se escanea sin leerlo entero, que es para lo que
    sirve una lista. La marca es un tilde dibujado con dos bordes, no un
    caracter: un ✓ de texto cambia de forma con la fuente y no se alinea. */
+/* Subtitulo de la lista, no rotulo: la pastilla oscura se reserva para el
+   nombre de cada seccion y esta lista es parte de la seccion Entreprises. */
 .chk-h{
-  margin-top:1.5rem;font-family:var(--font-body);font-size:.7rem;font-weight:500;
-  text-transform:uppercase;letter-spacing:.19em;
-  width:fit-content;padding:.42em .95em;border-radius:999px;
-  background:var(--fill);color:var(--fill-ink);
+  margin-top:1.5rem;font-family:var(--font-display);font-weight:500;
+  font-size:clamp(1.2rem,1.6vw,1.4rem);line-height:1.25;color:var(--text);
 }
 .chk{list-style:none;margin:1rem 0 0;padding:0;display:grid;gap:.75rem}
 .chk li{position:relative;padding-left:2.1rem}
