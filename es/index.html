@@ -34,7 +34,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..600&family=Jost:wght@300..600&display=swap">
-<link rel="stylesheet" href="../assets/css/styles.css?v=d253e325">
+<link rel="stylesheet" href="../assets/css/styles.css?v=19d7b400">
 <!-- Se precarga el poster del video del hero, que es lo primero que se pinta.
      Antes se precargaba una foto que la pagina no usa. -->
 <link rel="preload" as="image" href="../assets/img/video-inward-palais-garnier-poster.webp" fetchpriority="high">
@@ -1432,17 +1432,11 @@
       <p class="lead">Quelques questions pour cerner votre situation, puis un rendez-vous avec la personne qui suivra votre dossier.</p>
       <!-- Sin direccion: el despacho no tiene sede publica. Dos telefonos y un
            mail, los tres a confirmar por la clienta. -->
-      <div class="ct-info">
-        <div>
-          <span>Téléphone</span>
-          <p><span class="todo" title="Premier numéro public a confirmer">Premier numéro à confirmer</span></p>
-          <p><span class="todo" title="Second numéro public a confirmer">Second numéro à confirmer</span></p>
-        </div>
-        <div>
-          <span>Email</span>
-          <p><span class="todo" title="Adresse de contact publique a confirmer : le Brand Book indique le domaine inwardimmigration.com alors que le site est inwardpro.com">Adresse de contact à confirmer</span></p>
-        </div>
-      </div>
+      <ul class="ct-list">
+        <li><svg class="ct-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.2 3.6h3.1l1.6 4.2-2.2 1.5a11.6 11.6 0 0 0 7 7l1.5-2.2 4.2 1.6v3.1a1.7 1.7 0 0 1-1.8 1.7A16.8 16.8 0 0 1 3.5 5.4a1.7 1.7 0 0 1 1.7-1.8z"/></svg><span class="ct-k">Téléphone</span><span class="ct-v"><span class="todo" title="Premier numéro public a confirmer">Premier numéro à confirmer</span></span></li>
+        <li><svg class="ct-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.2 3.6h3.1l1.6 4.2-2.2 1.5a11.6 11.6 0 0 0 7 7l1.5-2.2 4.2 1.6v3.1a1.7 1.7 0 0 1-1.8 1.7A16.8 16.8 0 0 1 3.5 5.4a1.7 1.7 0 0 1 1.7-1.8z"/></svg><span class="ct-k">Téléphone</span><span class="ct-v"><span class="todo" title="Second numéro public a confirmer">Second numéro à confirmer</span></span></li>
+        <li><svg class="ct-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.2" width="18" height="13.6" rx="2.4"/><path d="M3.6 6.6l8.4 6.2 8.4-6.2"/></svg><span class="ct-k">Email</span><span class="ct-v"><span class="todo" title="Adresse de contact publique a confirmer : le Brand Book indique le domaine inwardimmigration.com alors que le site est inwardpro.com">Adresse de contact à confirmer</span></span></li>
+      </ul>
     </div>
 
     <form class="rounded rv" id="ctForm" data-profil="entreprise" novalidate>
