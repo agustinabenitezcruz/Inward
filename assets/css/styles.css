@@ -2850,10 +2850,8 @@ body:has(.cat-t:target) .cats a[href="#articles"] .cats-n{background:var(--surfa
   .stabs .stp[hidden]{display:grid!important}
 }
 
-/* Blog (home y pagina del blog): el titular de cada tarjeta lleva el color de
-   la tarjeta —verde agua, lila, verde-amarillo— y el rotulo pasa a blanco
-   para no repetir el mismo color dos veces seguidas. Solo en .arts: las
-   tarjetas de visas de empresas usan las mismas clases y siguen en blanco. */
-.arts .art h3{color:var(--ov)}
-.arts .art h3 .todo{color:inherit;border-bottom-color:currentColor}
-.arts .art .kd{color:rgba(255,255,255,.82)}
+/* Blog (home y pagina del blog): el rotulo de cada tarjeta (Guide, Délais,
+   À produire) va en el color de la tarjeta, verde agua, lila y
+   verde-amarillo; el titular queda en blanco. Un poco mas grande y con mas
+   peso para que el color se lea sobre la foto. */
+.arts .art .kd{color:var(--ov);font-size:.76rem;font-weight:600}
