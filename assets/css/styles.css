@@ -2855,3 +2855,33 @@ body:has(.cat-t:target) .cats a[href="#articles"] .cats-n{background:var(--surfa
    verde-amarillo; el titular queda en blanco. Un poco mas grande y con mas
    peso para que el color se lea sobre la foto. */
 .arts .art .kd{color:var(--ov);font-size:.76rem;font-weight:600}
+
+/* ---------- Celular: el CTA de cada seccion va al final ----------
+   En escritorio el boton vive en la columna de texto, al lado del contenido.
+   En una sola columna eso lo dejaba en el medio de la seccion, antes de la
+   lista o de la foto. Se "abre" la columna de texto con display:contents
+   para que sus piezas pasen a ser hijas directas de la grilla y el boton se
+   manda al final con order. */
+@media (max-width:980px){
+  .b2b-txt{display:contents}
+  .b2b-act{order:1}
+}
+@media (max-width:900px){
+  .lp-split-grid{row-gap:0}
+  .lp-split-txt{display:contents}
+  .lp-split-media{margin-top:clamp(1.6rem,4vw,2.2rem)}
+  .lp-split-grid > .lp-split-act,.lp-split-txt > .lp-split-act{order:1;margin-top:clamp(1.6rem,4vw,2.2rem)}
+}
+@media (max-width:860px){
+  /* Blog de la home: "Tous les articles" despues de las tarjetas. */
+  .res > .wrap{display:flex;flex-direction:column}
+  .res-head{display:contents}
+  .res-head .sec-head{margin-bottom:var(--head-gap)!important}
+  .res-head > .btn{order:1;align-self:flex-start;margin-top:clamp(1.4rem,4vw,2rem)}
+  /* Caja de beneficios (empresas): la foto arriba, la lista y el boton abajo. */
+  .agl-media{order:-1}
+  /* Servicios de particulares: el boton del modo despues de la lista. */
+  .ways[data-on] .mode,.mode{grid-template-columns:1fr;row-gap:1.1rem}
+  .mode-main{display:contents}
+  .mode-main .btn{order:1}
+}
