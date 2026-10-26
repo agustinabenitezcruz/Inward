@@ -3010,3 +3010,22 @@ form .btn[disabled]{opacity:.6;pointer-events:none}
 /* Home, Particuliers: mas aire arriba y abajo, para que las secciones grises
    de alrededor no la aprieten. */
 #particuliers.sec{padding-block:clamp(4.5rem,10vh,7rem)}
+
+/* Entreprises, Ce que vous y gagnez: solo los titulos, mas grandes, con el
+   tilde mas grande y centrado en la linea. */
+.agl-txt .chk{row-gap:1.4rem;margin-top:1.4rem}
+.agl-txt .chk li{padding-left:2.9rem;min-height:1.9rem;display:flex;align-items:center}
+.agl-txt .chk b{font-size:clamp(1.25rem,1.9vw,1.6rem);line-height:1.22;margin:0}
+.agl-txt .chk li::after{width:1.9rem;height:1.9rem;top:50%;margin-top:-.95rem}
+.agl-txt .chk li::before{left:.6rem;top:50%;margin-top:-.32rem;width:.68rem;height:.36rem}
+.agl-txt .chk-h{font-size:clamp(1.35rem,2vw,1.7rem)}
+/* Sin las leyendas la lista es mas corta: se centra en el alto de la caja
+   y los titulos se separan mas, asi la caja no queda vacia abajo. */
+.agl-txt{display:flex;flex-direction:column;justify-content:center}
+.agl-txt .chk{row-gap:clamp(1.4rem,3.2vh,2.2rem)}
+.agl-media{min-height:440px}
+@media (max-width:860px){
+  .agl-box{grid-template-columns:1fr}
+  .agl-media{order:-1;min-height:0;aspect-ratio:16/10}
+  .agl-txt .chk b{font-size:clamp(1.15rem,4.6vw,1.35rem)}
+}
