@@ -23,7 +23,10 @@ DIST = ROOT / "dist"
 # Lo que NO se publica: herramientas, documentos, fuentes y ruido.
 EXCLUIR_DIR = {".git", "dist", "tools", "_fuentes", "__pycache__", ".claude", ".vscode"}
 EXCLUIR_ARCH = {"DESIGN.md", "README.md", "build.py", "skills-lock.json", ".gitignore",
-                "strings.csv", "config.php"}
+                "strings.csv"}
+# api/config.php SI va a dist/: el servidor lo necesita (destinatario del
+# formulario, clave de Google). No se versiona y api/.htaccess bloquea que se
+# pueda abrir desde el navegador.
 EXCLUIR_SUF = {".md", ".py", ".pyc", ".zip"}
 
 def html_min(s):

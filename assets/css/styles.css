@@ -832,7 +832,7 @@ form>*,.two>*,.fld>*{min-width:0}
    menos aire, misma caja total. */
 .ico-plain .b2b-i{width:23px;height:23px;padding:3px}
 .ico-violet{--ico-bg:transparent;--ico-ink:var(--accent)}
-.ico-lilac{--ico-bg:transparent;--ico-ink:var(--tint-3);--hov:var(--tint-3);--hov-bg:rgba(210,210,255,.32)}
+.ico-lilac{--ico-bg:transparent;--ico-ink:var(--accent);--hov:var(--tint-3);--hov-bg:rgba(210,210,255,.32)}
 .ico-lilac-gray{--ico-bg:var(--tint-3);--ico-ink:var(--accent);--hov:var(--tint-3);--hov-bg:rgba(210,210,255,.32)}
 .ico-green-gray{--ico-bg:var(--tint-1);--ico-ink:var(--accent);--hov:var(--tint-1);--hov-bg:rgba(85,255,210,.14)}
 .ico-yellow-gray{--ico-bg:var(--tint-2);--ico-ink:var(--accent);--hov:var(--tint-2);--hov-bg:rgba(235,255,118,.28)}
