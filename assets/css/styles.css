@@ -3007,3 +3007,6 @@ form .btn[disabled]{opacity:.6;pointer-events:none}
 .agl-act{display:flex;justify-content:center;margin-top:clamp(1.4rem,3vw,2.2rem)}
 @media (max-width:860px){.agl-media{min-height:0}}
 #avis.refs.clients-ref{background:var(--surface);padding-block:0}
+/* Home, Particuliers: mas aire arriba y abajo, para que las secciones grises
+   de alrededor no la aprieten. */
+#particuliers.sec{padding-block:clamp(4.5rem,10vh,7rem)}
