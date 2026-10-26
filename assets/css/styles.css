@@ -2990,3 +2990,20 @@ form .btn[disabled]{opacity:.6;pointer-events:none}
 /* ---------- Après l'arrivée: CTA en cada caja ---------- */
 .hcol-cta{justify-self:start;margin-top:1rem}
 @media (max-width:860px){.hcol[data-on] .hcol-body .hcol-cta{margin-bottom:.4rem}}
+
+/* ---------- Entreprises: Références como en la home ----------
+   Franja gris con titulo centrado y logos en carrusel a media saturacion;
+   las opiniones siguen debajo, dentro de la misma seccion. */
+.refs.clients-ref .refs-avis{width:100%;margin-top:clamp(1.6rem,3vh,2.4rem);text-align:left}
+.refs.clients-ref .clients-in{gap:0}
+
+/* ---------- Entreprises: caja de beneficios mas alta y angosta ----------
+   La lista va en una sola columna (los cuatro titulos uno debajo del otro),
+   la caja se angosta y crece en alto, y el CTA sale de la caja, centrado. */
+.agl-box{max-width:1000px;margin-inline:auto;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr)}
+.agl-txt{padding:clamp(1.6rem,3.4vw,2.8rem)}
+.agl-txt .chk{grid-template-columns:1fr;row-gap:1.25rem;margin-top:1.1rem}
+.agl-media{min-height:480px}
+.agl-act{display:flex;justify-content:center;margin-top:clamp(1.4rem,3vw,2.2rem)}
+@media (max-width:860px){.agl-media{min-height:0}}
+#avis.refs.clients-ref{background:var(--surface);padding-block:0}

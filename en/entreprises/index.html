@@ -33,7 +33,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..600&family=Jost:wght@300..600&display=swap">
-<link rel="stylesheet" href="../../assets/css/styles.css?v=15e9b425">
+<link rel="stylesheet" href="../../assets/css/styles.css?v=9a7ba7d4">
 <link rel="preload" as="image" href="../../assets/img/atelier-equipe-inward-tableau-blanc.webp" fetchpriority="high">
 
 <!-- FICHA ESTRUCTURADA. La organizacion se referencia por @id a la que
@@ -443,7 +443,7 @@
 </script>
 </head>
 <body>
-<p style="position:fixed;left:16px;bottom:16px;z-index:80;margin:0;max-width:min(340px,calc(100vw - 32px));padding:.6rem .85rem;border-radius:12px;background:#ebff76;color:#101010;box-shadow:0 8px 24px -10px rgba(16,16,16,.45);font:500 .74rem/1.45 Jost,system-ui,sans-serif">Translation in progress. This page still shows the French text where the English is missing. (400)</p>
+<p style="position:fixed;left:16px;bottom:16px;z-index:80;margin:0;max-width:min(340px,calc(100vw - 32px));padding:.6rem .85rem;border-radius:12px;background:#ebff76;color:#101010;box-shadow:0 8px 24px -10px rgba(16,16,16,.45);font:500 .74rem/1.45 Jost,system-ui,sans-serif">Translation in progress. This page still shows the French text where the English is missing. (399)</p>
 
 <!-- Los bloques marcados shell:* no se editan acá: salen de index.html y los
      copia tools/sync_shell.py. Si hay que tocar la cabecera o el pie, se toca
@@ -607,16 +607,19 @@
 <!-- Misma familia que el hero de la home (foto a sangre, velo, titular sobre
      la imagen) pero a media altura: es una pagina interior, el titular tiene
      que entrar junto con el arranque del contenido. -->
-<section class="lp-hero">
-  <div class="lp-hero-media">
-    <img src="../../assets/img/atelier-equipe-inward-tableau-blanc.webp" width="1440" height="960" alt="L'équipe INWARD en session de travail avec une entreprise cliente" fetchpriority="high" decoding="async">
+<section class="hero hero-v">
+  <!-- Mismo hero que la home: fondo violeta de la paleta con resplandores
+       difusos, texto centrado. Sin foto. -->
+  <div class="hero-bg" aria-hidden="true">
+    <span class="hero-glow hero-glow-1"></span>
+    <span class="hero-glow hero-glow-2"></span>
+    <span class="hero-glow hero-glow-3"></span>
   </div>
-  <div class="wrap lp-hero-in">
+  <div class="wrap hero-in">
     <h1>Accompagnement sur mesure pour vos salariés de nationalité étrangère</h1>
-    <p class="lead">Start-up, PME ou multinationale : nous simplifions et sécurisons la venue de vos talents en France.</p>
-    <div class="lp-hero-ctas">
-      <!-- Sin "Prendre rendez-vous": ya esta en el header. -->
-      <a class="btn btn-ghost" href="#services">Voir nos services <span class="arw">&rsaquo;</span></a>
+    <p class="lead hero-sub">Start-up, PME ou multinationale : nous simplifions et sécurisons la venue de vos talents en France.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="#services">Voir nos services <span class="arw">&rsaquo;</span></a>
     </div>
   </div>
 </section>
@@ -717,13 +720,13 @@
      las dos cosas dicen lo mismo (quien confia en INWARD) y juntas entran en
      una pantalla. Lleva id="avis" porque main.js rellena las opiniones
      buscando ese id; el rotulo visible es Références. -->
-<section class="band clients clients-lg refs sec" id="avis" data-state="empty" data-api="../../api/avis.php">
-  <div class="wrap">
+<section class="band clients clients-ref refs" id="avis" data-state="empty" data-api="../../api/avis.php">
+  <div class="wrap clients-in">
     <div class="sec-head rv">
       <p class="label">Références</p>
       <h2>Ils nous font confiance</h2>
     </div>
-    <ul class="logos logos-grid rv">
+    <ul class="logos logos-color rv">
       <li><img src="../../assets/img/clients/logo-beytours.png" width="112" height="42" alt="Logo de Bey tours, DMC Europe, client d'INWARD" loading="lazy" decoding="async"></li>
       <li><img src="../../assets/img/clients/logo-mouve.png" width="154" height="36" alt="Logo de Mouve, client d'INWARD" loading="lazy" decoding="async"></li>
       <li><img src="../../assets/img/clients/logo-superprof.png" width="52" height="57" alt="Logo de Superprof, client d'INWARD" loading="lazy" decoding="async"></li>
@@ -780,13 +783,13 @@
             <span>Du temps et des ressources libérés pour vous concentrer sur votre performance.</span>
           </li>
         </ul>
-        <div class="lp-split-act">
-          <a class="btn btn-primary" href="#contact">Demandez un devis <span class="arw">&rsaquo;</span></a>
-        </div>
       </div>
       <figure class="agl-media">
         <img src="../../assets/img/equipe-inward-echange-clients.webp" width="1280" height="853" alt="Réunion de travail entre l'équipe INWARD et une entreprise cliente" loading="lazy" decoding="async">
       </figure>
+    </div>
+    <div class="agl-act rv">
+      <a class="btn btn-primary" href="#contact">Demandez un devis <span class="arw">&rsaquo;</span></a>
     </div>
   </div>
 </section>
@@ -798,8 +801,8 @@
      informacion y cual es accion, sin un solo rotulo que lo explique. -->
 <!-- El nombre de cada visa sobre una foto, como las tarjetas
      del blog. Fotos de Unsplash (licencia libre, sin atribucion obligatoria):
-     TourBox, LinkedIn Sales Solutions, SMKN 1 Gantar, Kurt van Krieken,
-     Noah Katz. -->
+     TourBox, LinkedIn Sales Solutions, Rodrigo Rodrigues (WOLF ART), Kurt van Krieken,
+     Allen Taylor. -->
 <section class="band sec" id="types-de-visa">
   <div class="wrap">
     <!-- Iconos locales: esta seccion solo existe en esta pagina. Los atributos
@@ -830,7 +833,7 @@
         <div class="art-b"><h3>Visa Salarié</h3></div>
       </li>
       <li class="art vph art-ov3 rounded">
-        <figure class="art-ph"><img src="../../assets/img/visa-travailleur-temporaire-chantier.webp" width="800" height="1066" alt="Travailleurs en casque et gilet de sécurité sur un chantier" loading="lazy" decoding="async"></figure>
+        <figure class="art-ph"><img src="../../assets/img/visa-travailleur-temporaire-entrepot.webp" width="800" height="1066" alt="Salarié consultant une tablette dans un entrepôt" loading="lazy" decoding="async"></figure>
         <div class="art-b"><h3>Visa travailleur temporaire</h3></div>
       </li>
       <li class="art vph art-ov1 rounded">
@@ -838,7 +841,7 @@
         <div class="art-b"><h3>Visa saisonnier</h3></div>
       </li>
       <li class="art vph art-ov2 rounded">
-        <figure class="art-ph"><img src="../../assets/img/visa-famille-parent-et-enfants.webp" width="800" height="1066" alt="Parent marchant dans la rue avec deux enfants" loading="lazy" decoding="async"></figure>
+        <figure class="art-ph"><img src="../../assets/img/visa-famille-parents-et-enfants.webp" width="800" height="1066" alt="Famille avec deux enfants se promenant sous les arbres" loading="lazy" decoding="async"></figure>
         <div class="art-b"><h3>Visa Famille</h3></div>
       </li>
     </ul>
