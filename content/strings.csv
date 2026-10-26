@@ -1,395 +1,395 @@
 ﻿key,fr,en,es
-meta-title,INWARD | Expert en immigration et mobilité internationale en France,,
-meta-description,"Cabinet de conseil en immigration en France. Visas, titres de séjour, changement de statut, naturalisation et mobilité internationale, pour les particuliers et les entreprises.",,
-meta-og-description,Accompagnement sur-mesure pour les particuliers et les entreprises dans toutes leurs démarches administratives et de visa.,,
-logo-de-bey-tours-dmc-europe-client-d-inward,"Logo de Bey tours, DMC Europe, client d'INWARD",,
-logo-de-mouve-client-d-inward,"Logo de Mouve, client d'INWARD",,
-logo-de-superprof-client-d-inward,"Logo de Superprof, client d'INWARD",,
-logo-de-biondi-client-d-inward,"Logo de Biondi, client d'INWARD",,
-logo-de-prolenser-client-d-inward,"Logo de Prolenser, client d'INWARD",,
-logo-de-de-altura-client-d-inward,"Logo de De Altura, client d'INWARD",,
-logo-de-las-praderas-client-d-inward,"Logo de Las Praderas, client d'INWARD",,
-deux-consultantes-inward-dans-les-bureaux-du,Deux consultantes INWARD dans les bureaux du cabinet,,
-rendez-vous-individuel-entre-une-consultante,Rendez-vous individuel entre une consultante et un client,,
-r-union-informelle-entre-l-quipe-inward-et-d,Réunion informelle entre l'équipe INWARD et des clients,,
-atelier-de-travail-de-l-quipe-inward-autour,Atelier de travail de l'équipe INWARD autour d'un tableau blanc,,
-dossier-de-demande-de-titre-de-s-jour-en-pr,Dossier de demande de titre de séjour en préparation,,
-rendez-vous-de-suivi-avec-une-consultante-in,Rendez-vous de suivi avec une consultante INWARD,,
-change-informel-entre-l-quipe-inward-et-des,Échange informel entre l'équipe INWARD et des clients,,
-nationalit-statut-actuel-ch-ance,"Nationalité, statut actuel, échéance...",,
-note-reelle-a-recuperer-de-la-fiche-google,Note reelle a recuperer de la fiche Google,,
-deux-possibilites-une-cle-places-api-dans-ap,"Deux possibilites : une cle Places API dans api/config.php (les avis se mettent a jour tout seuls), ou des avis reels recopies dans content/avis.json. Voir README.",,
-le-document-de-la-cliente-hesite-entre-ce-se,Le document de la cliente hesite entre ce service et le housing (voir 'DUDA: Esto o housing?'),,
-le-document-annonce-12-h-ici-et-moins-de-24,Le document annonce -12 h ici et 'moins de 24 heures' dans la page Qui sommes-nous : un seul delai a retenir,,
-troisi-me-article-d-finir-avec-la-cliente,Troisième article à définir avec la cliente,,
-texte-provisoire-fourni-en-lorem-ipsum-a-rem,Texte provisoire fourni en lorem ipsum : a remplacer par la reponse reelle,,
-reponse-a-rediger-avec-la-cliente,Reponse a rediger avec la cliente,,
-premier-num-ro-public-a-confirmer,Premier numéro public a confirmer,,
-second-num-ro-public-a-confirmer,Second numéro public a confirmer,,
-adresse-de-contact-publique-a-confirmer-le-b,Adresse de contact publique a confirmer : le Brand Book indique le domaine inwardimmigration.com alors que le site est inwardpro.com,,
-page-mentions-legales-a-rediger,Page mentions legales a rediger,,
-politique-de-confidentialite-a-rediger,Politique de confidentialite a rediger,,
-cgv-a-rediger,CGV a rediger,,
-inward-accueil,"INWARD, accueil",,
-principal,Principal,,
-afficher-le-menu-entreprises,Afficher le menu Entreprises,,
-afficher-le-menu-particuliers,Afficher le menu Particuliers,,
-afficher-le-menu-ressources,Afficher le menu Ressources,,
-langue,Langue,,
-ouvrir-le-menu,Ouvrir le menu,,
-chiffres-cl-s,Chiffres clés,,
-avis-clients,Avis clients,,
-nos-engagements,Nos engagements,,
-votre-profil,Votre profil,,
-mentions-l-gales,Mentions légales,,
-sections-de-la-page,Sections de la page,,
-accueil,Accueil,,
-nos-r-sultats,Nos résultats,,
-entreprises,Entreprises,,
-particuliers,Particuliers,,
-qui-sommes-nous,Qui sommes-nous,,
-ressources,Ressources,,
-questions-fr-quentes,Questions fréquentes,,
-contact,Contact,,
-mobilit-internationale,Mobilité internationale,,
-cadres-chercheurs-fondateurs,"Cadres, chercheurs, fondateurs",,
-autorisation-de-travail,Autorisation de travail,,
-d-p-t-et-suivi-des-demandes,Dépôt et suivi des demandes,,
-d-tachement-de-salari-s,Détachement de salariés,,
-conformit-et-formalit-s,Conformité et formalités,,
-conseil-et-conformit,Conseil et conformité,,
-audit-et-conseil,Audit et conseil,,
-v-rification-des-titres-de-s-jour,Vérification des titres de séjour,,
-naturalisation-des-collaborateurs,Naturalisation des collaborateurs,,
-accompagnement-individuel,Accompagnement individuel,,
-aide-administrative,Aide administrative,,
-installation-des-collaborateurs,Installation des collaborateurs,,
-un-projet-de-mobilit-pour-vos-quipes,Un projet de mobilité pour vos équipes ?,,
-demander-un-devis,Demander un devis,,
-visas-et-titres-de-s-jour,Visas et titres de séjour,,
-visa-visiteur,Visa visiteur,,
-s-jour-sans-activit-professionnelle,Séjour sans activité professionnelle,,
-visa-tudiant,Visa étudiant,,
-inscription-vls-ts-renouvellement,"Inscription, VLS-TS, renouvellement",,
-profession-lib-rale-et-entrepreneur,Profession libérale et entrepreneur,,
-cr-ation-et-reprise-d-activit,Création et reprise d'activité,,
-visa-famille,Visa famille,,
-regroupement-et-vie-priv-e-familiale,Regroupement et vie privée familiale,,
-d-marches-et-statuts,Démarches et statuts,,
-changement-de-statut,Changement de statut,,
-salari-tudiant-entrepreneur,"Salarié, étudiant, entrepreneur",,
-renouvellement-de-titre,Renouvellement de titre,,
-accompagnement-en-pr-fecture,Accompagnement en préfecture,,
-naturalisation-et-nationalit,Naturalisation et nationalité,,
-constitution-du-dossier,Constitution du dossier,,
-assurance-maladie-s-curit-sociale,"Assurance maladie, sécurité sociale",,
-vous-ne-savez-pas-quelle-d-marche-vous-conce,Vous ne savez pas quelle démarche vous concerne ?,,
-valuer-mon-dossier,Évaluer mon dossier,,
-centre-de-ressources,Centre de ressources,,
-derniers-articles,Derniers articles,,
-guides-d-lais-et-actualit-du-droit-des-trang,"Guides, délais et actualité du droit des étrangers",,
-vid-os,Vidéos,,
-chaque-vid-o-sur-sa-propre-page,Chaque vidéo sur sa propre page,,
-d-lais-pi-ces-recours,"Délais, pièces, recours",,
-le-cabinet,Le cabinet,,
-quipe-parcours-valeurs,"Équipe, parcours, valeurs",,
-nous-contacter,Nous contacter,,
-rendez-vous-et-coordonnees,Rendez-vous et coordonnees,,
-les-articles-les-plus-consult-s-cette-semain,Les articles les plus consultés cette semaine.,,
-voir-le-blog,Voir le blog,,
-prendre-rendez-vous,Prendre rendez-vous,,
-votre-expert-en-immigration,Votre expert en immigration,,
-en-france,en France,,
-vous-tes-une-entreprise,Vous êtes une entreprise ?,,
-je-suis-un-particulier,Je suis un particulier,,
-taux-de-r-ussite-des-dossiers,Taux de réussite des dossiers,,
-nationalit-s-accompagn-es,Nationalités accompagnées,,
-dossiers-trait-s,Dossiers traités,,
-nombre-d-avis-confirmer,Nombre d'avis à confirmer,,
-voir-les-avis-sur-google,Voir les avis sur Google,,
-avis-google-connecter,Avis Google à connecter,,
-les-avis-positifs-les-plus-r-cents-s-affich,. Les avis positifs les plus récents s'afficheront ici automatiquement.,,
-optimisez-la-mobilit-internationale-de-vos-c,Optimisez la mobilité internationale de vos collaborateurs,,
-d-l-guez-l-ensemble-des-d-marches-de-visa-et,"Déléguez l'ensemble des démarches de visa et de titre de séjour à une équipe d'experts. Du diagnostic initial jusqu'à l'obtention du titre, nous assurons la conformité de vos dossiers et sécurisons l'embauche et la rétention de vos talents étrangers.",,
-demander-un-devis-sur-mesure,Demander un devis sur-mesure,,
-passeport-talent-demandes-d-autorisation-de,"Passeport Talent, demandes d'autorisation de travail et suivi complet des salariés étrangers.",,
-conformit-aux-normes-de-d-tachement-et-forma,Conformité aux normes de détachement et formalités de déplacement international.,,
-conseil-juridique-et-v-rification-des-titres,Conseil juridique et vérification des titres de séjour de vos employés.,,
-naturalisation-et-nationalit-fran-aise,Naturalisation et nationalité française,,
-service-confirmer,Service à confirmer,,
-accompagnement-individuel-de-vos-collaborate,Accompagnement individuel de vos collaborateurs dans leur demande de nationalité.,,
-inscription-l-assurance-maladie-s-curit-soci,"Inscription à l'assurance maladie, sécurité sociale et démarches d'installation.",,
-r-f-rences,Références,,
-ils-nous-font-confiance,Ils nous font confiance,,
-simplifiez-votre-installation-et-vos-d-march,Simplifiez votre installation et vos démarches en France,,
-demandes-de-visa-depuis-votre-pays,Demandes de visa depuis votre pays,,
-visa-tudiant-salari-travailleur-temporaire-v,"Visa étudiant, salarié, travailleur temporaire, visiteur, talent création d'entreprise, talent profession artistique ou vie privée et familiale.",,
-voir-plus,Voir plus,,
-renouvellements-depuis-la-france,Renouvellements depuis la France,,
-prise-de-rendez-vous-constitution-et-v-rific,"Prise de rendez-vous, constitution et vérification du dossier, dépôt sur l'ANEF et Démarches Simplifiées, contact avec la préfecture.",,
-changements-de-statut,Changements de statut,,
-d-tudiant-salari-rece-ou-carte-talent-de-vvt,"D'étudiant à salarié, à RECE ou à carte Talent, de VVT à salarié : la voie adaptée à votre situation.",,
-r-vision-de-dossier,Révision de dossier,,
-apr-s-un-refus-ou-avant-de-d-poser-votre-dem,"Après un refus, ou avant de déposer votre demande de visa ou de titre de séjour.",,
-carte-de-r-sident-et-naturalisation,Carte de résident et naturalisation,,
-soutien-pour-acc-der-une-carte-de-r-sident-d,Soutien pour accéder à une carte de résident de dix ans ou à la nationalité française.,,
-d-marches-d-installation-en-france,Démarches d'installation en France,,
-assurance-maladie-change-de-permis-de-condui,"Assurance maladie, échange de permis de conduire, recherche de logement, inscription à l'Urssaf.",,
-contactez-un-expert,Contactez un expert,,
-nos-engagements-votre-garantie,"Nos engagements, votre garantie",,
-une-agence-sp-cialis-e-pour-simplifier-vos-d,Une agence spécialisée pour simplifier vos démarches d'immigration,,
-on-ne-l-che-rien,On ne lâche rien,,
-une-r-activit-toute-preuve,Une réactivité à toute épreuve,,
-une-dimension-humaine,Une dimension humaine,,
-une-clart-absolue,Une clarté absolue,,
-un-suivi-sur-mesure,Un suivi sur-mesure,,
-z-ro-risque,Zéro risque,,
-nous-portons-votre-dossier-jusqu-la-r-ussite,Nous portons votre dossier jusqu'à la réussite complète de la démarche.,,
-pas-de-temps-perdu-vos-priorit-s-sont-les-n,"Pas de temps perdu, vos priorités sont les nôtres. Réponse en moins de douze heures.",,
-d-lai-unifier,Délai à unifier,,
-nous-prenons-soin-de-vos-collaborateurs-comm,Nous prenons soin de vos collaborateurs comme de vos équipes RH.,,
-z-ro-jargon-z-ro-mauvaise-surprise-sur-les-c,"Zéro jargon, zéro mauvaise surprise sur les coûts ou les délais.",,
-un-interlocuteur-unique-d-di-l-ensemble-de-v,Un interlocuteur unique dédié à l'ensemble de vos projets.,,
-une-conformit-r-glementaire-irr-prochable-su,Une conformité réglementaire irréprochable sur chaque procédure.,,
-l-histoire-d-inward,L'histoire d'Inward,,
-blog,Blog,,
-guides-d-lais-et-actualit-du-droit-des-trang-2,"Guides, délais et actualité du droit des étrangers, mis à jour par l'équipe.",,
-tous-les-articles,Tous les articles,,
-guide,Guide,,
-comment-faire-un-changement-de-statut-de-sal,Comment faire un changement de statut de salarié à entrepreneur,,
-les-conditions-les-pi-ces-a-r-unir-et-l-ordr,"Les conditions, les pièces a réunir et l'ordre des démarches en préfecture.",,
-lecture-8-min,Lecture 8 min,,
-d-lais,Délais,,
-d-lais-pr-fecture-carte-de-s-jour-2026,Délais préfecture carte de séjour 2026,,
-ce-qui-a-chang-cette-ann-e-et-comment-antici,Ce qui a changé cette année et comment anticiper le renouvellement.,,
-lecture-6-min,Lecture 6 min,,
-produire,À produire,,
-troisi-me-article-d-finir,Troisième article à définir,,
-le-brief-donn-deux-exemples-de-requ-tes-le-t,Le brief donné deux exemples de requêtes. Le troisième sujet reste à choisir selon les priorités SEO.,,
-sujet-valider,Sujet à valider,,
-ce-qu-on-nous-demande-le-plus-souvent,Ce qu'on nous demande le plus souvent,,
-comment-inward-optimise-t-il-les-chances-de,Comment INWARD optimise-t-il les chances de succès de votre demande de visa ?,,
-texte-provisoire,Texte provisoire,,
-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-i,. Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum.,,
-quels-sont-les-tarifs-d-inward,Quels sont les tarifs d'INWARD ?,,
-r-ponse-r-diger,Réponse à rédiger,,
-pourquoi-faire-appel-une-agence-de-mobilit-i,Pourquoi faire appel à une agence de mobilité internationale plutôt que de tout gérer en interne ?,,
-comment-recruter-un-salari-tranger-hors-unio,Comment recruter un salarié étranger hors Union européenne ?,,
-combien-de-temps-prend-l-obtention-d-un-visa,Combien de temps prend l'obtention d'un visa de travail pour la France ?,,
-qu-est-ce-que-le-passeport-talent-et-qui-peu,Qu'est-ce que le Passeport Talent et qui peut en bénéficier ?,,
-contactez-une-experte,Contactez une experte,,
-parlons-de-votre-dossier,Parlons de votre dossier,,
-quelques-questions-pour-cerner-votre-situati,"Quelques questions pour cerner votre situation, puis un rendez-vous avec la personne qui suivra votre dossier.",,
-t-l-phone,Téléphone,,
-premier-num-ro-confirmer,Premier numéro à confirmer,,
-second-num-ro-confirmer,Second numéro à confirmer,,
-email,Email,,
-adresse-de-contact-confirmer,Adresse de contact à confirmer,,
-entreprise,Entreprise,,
-particulier,Particulier,,
-nom-et-pr-nom,Nom et prénom,,
-nom-de-l-entreprise,Nom de l'entreprise,,
-votre-d-marche,Votre démarche,,
-visa-ou-titre-de-s-jour,Visa ou titre de séjour,,
-changement-de-statut-ou-renouvellement,Changement de statut ou renouvellement,,
-mobilit-internationale-entreprise,Mobilité internationale (entreprise),,
-je-ne-sais-pas-encore,Je ne sais pas encore,,
-comment-nous-avez-vous-connus,Comment nous avez-vous connus ?,,
-choisir,Choisir…,,
-r-seaux-sociaux-linkedin-instagram,"Réseaux sociaux (LinkedIn, Instagram)",,
-recommandation,Recommandation,,
-recherche-google-ia,"Recherche (Google, IA…)",,
-autre,Autre,,
-votre-situation-en-quelques-lignes,Votre situation en quelques lignes,,
-site-web,Site web,,
-envoyer-et-choisir-un-cr-neau,Envoyer et choisir un créneau,,
-cabinet-de-conseil-en-immigration-et-mobilit,Cabinet de conseil en immigration et mobilité internationale en France. Particuliers et entreprises.,,
-services-entreprises,Services entreprises,,
-services-particuliers,Services particuliers,,
-naturalisation,Naturalisation,,
-soci-t,Société,,
-2026-inward-tous-droits-r-serv-s,© 2026 INWARD. Tous droits réservés.,,
-politique-de-confidentialit-rgpd,Politique de confidentialité (RGPD),,
-meta-title,Mobilité internationale en entreprise | INWARD,,
-meta-description,"Visas, titres de séjour, détachement de salariés, audit et installation : INWARD pilote l'immigration de vos collaborateurs étrangers, de la demande d'autorisation de travail à la carte de séjour.",,
-meta-og-description,"Start-up, PME ou multinationale : nous simplifions et sécurisons la venue de vos talents en France.",,
-cr-atrice-travaillant-sur-une-tablette-graph,Créatrice travaillant sur une tablette graphique dans son atelier,,
-salari-e-travaillant-sur-son-ordinateur-au-b,Salariée travaillant sur son ordinateur au bureau,,
-salari-consultant-une-tablette-dans-un-entre,Salarié consultant une tablette dans un entrepôt,,
-cueillette-du-raisin-pendant-les-vendanges,Cueillette du raisin pendant les vendanges,,
-silhouette-d-un-p-re-marchant-main-dans-la-m,Silhouette d'un père marchant main dans la main avec son enfant au bord de la mer,,
-r-union-de-travail-entre-l-quipe-inward-et-u,Réunion de travail entre l'équipe INWARD et une entreprise cliente,,
-dos-opciones-una-clave-de-la-places-api-en-a,"Dos opciones: una clave de la Places API en api/config.php (las opiniones se actualizan solas), u opiniones reales copiadas en content/avis.json. Ver README.",,
-le-document-de-la-cliente-hesite-entre-ce-se,Le document de la cliente hesite entre ce service et le housing (« DUDA: Esto o housing? »),,
-nos-services,Nos services,,
-haut-de-page,Haut de page,,
-types-de-visa,Types de visa,,
-notre-approche,Notre approche,,
-accompagnement-sur-mesure-pour-vos-salari-s,Accompagnement sur mesure pour vos salariés de nationalité étrangère,,
-voir-nos-services,Voir nos services,,
-visa-passeport-talent,Visa Passeport Talent,,
-visa-salari,Visa Salarié,,
-visa-travailleur-temporaire,Visa travailleur temporaire,,
-visa-saisonnier,Visa saisonnier,,
-visa-famille-2,Visa Famille,,
-obtention-de-visa,Obtention de visa,,
-renouvellements,Renouvellements,,
-vos-quipes-avancent-l-administration-ne-les,"Vos équipes avancent, l'administration ne les retient plus",,
-pour-vos-salari-s-et-leurs-familles-nous-off,"Pour vos salariés et leurs familles, nous offrons un accompagnement premium, humain et sur mesure, garantissant une installation sereine et réussie du premier jour au dernier détail.",,
-ce-que-vous-y-gagnez,Ce que vous y gagnez,,
-agilit-op-rationnelle-maximale,Agilité opérationnelle maximale,,
-int-gration-acc-l-r-e-des-talents,Intégration accélérée des talents,,
-z-ro-blocage-administratif,Zéro blocage administratif,,
-focus-total-sur-votre-croissance,Focus total sur votre croissance,,
-demandez-un-devis,Demandez un devis,,
-cinq-prestations-un-seul-interlocuteur,"Cinq prestations, un seul interlocuteur",,
-gestion-des-visas-et-titres-de-s-jour,Gestion des visas et titres de séjour,,
-aide-administrative-et-int-gration,Aide administrative et intégration,,
-notre-quipe-pilote-l-int-gralit-du-parcours,Notre équipe pilote l'intégralité du parcours d'immigration : de la demande préalable d'autorisation de travail jusqu'à la délivrance finale du visa ou de la carte de séjour.,,
-nous-garantissons-des-dossiers-100-conformes,"Nous garantissons des dossiers 100 % conformes afin de réduire les délais d'instruction et d'éliminer les risques de refus. Expertise complète : Passeport Talent, visas Salarié, Travailleur temporaire, Saisonnier, Stagiaire et Entrepreneur ou profession libérale.",,
-confiez-vos-dossiers-nos-experts,Confiez vos dossiers à nos experts,,
-d-ployez-vos-quipes-en-france-en-toute-simpl,"Déployez vos équipes en France en toute simplicité, de l'obtention des visas de détachement jusqu'à la finalisation des formalités administratives.",,
-nous-prenons-en-charge-l-int-gralit-du-parco,"Nous prenons en charge l'intégralité du parcours : déclarations SIPSI, couverture sociale adaptée, vérification des rémunérations et rédaction des conventions de prestation. Nous fluidifions l'arrivée de vos salariés détachés pour vous garantir des missions réussies, sans retard ni risque de blocage administratif lors de vos déplacements internationaux.",,
-s-curisez-une-mission-en-france,Sécurisez une mission en France,,
-anticipez-les-blocages-administratifs-et-fia,Anticipez les blocages administratifs et fiabilisez les dossiers de vos collaborateurs.,,
-nous-auditons-vos-dossiers-en-cours-v-rifion,"Nous auditons vos dossiers en cours, vérifions la conformité des pièces auprès des préfectures et résolvons vos doutes techniques en temps réel. Un véritable partenaire au quotidien pour sécuriser vos recrutements et piloter votre politique RH en toute sérénité.",,
-posez-une-question-un-expert,Posez une question à un expert,,
-le-succ-s-d-un-recrutement-international-rep,Le succès d'un recrutement international repose aussi sur une installation réussie.,,
-nous-accompagnons-pas-pas-vos-salari-s-dans,Nous accompagnons pas à pas vos salariés dans toutes leurs démarches de vie quotidienne en France : de l'affiliation à l'Assurance Maladie (CPAM) et l'obtention de leur numéro de sécurité sociale jusqu'à la conversion de leur permis de conduire. Assurez un onboarding premium et garantissez la sérénité de vos collaborateurs et de leurs proches.,,
-faciliter-l-installation-de-vos-talents,Faciliter l'installation de vos talents,,
-offrez-un-accompagnement-d-exception-vos-cad,Offrez un accompagnement d'exception à vos cadres et dirigeants installés durablement en France.,,
-pour-vos-collaborateurs-cl-s-l-acc-s-la-nati,"Pour vos collaborateurs clés, l'accès à la nationalité française constitue une étape décisive. Nous proposons un accompagnement sur mesure pour la constitution et le suivi des dossiers de naturalisation, par décret ou par mariage. De la vérification rigoureuse des actes d'état civil et de la complétude du dossier jusqu'à la préparation aux entretiens en préfecture, nous maximisons les chances d'obtention de la nationalité française.",,
-contacter-un-expert,Contacter un expert,,
-ce-que-les-entreprises-nous-demandent,Ce que les entreprises nous demandent,,
-meta-title,Visas et titres de séjour pour les particuliers | INWARD,,
-meta-description,"Étudiant, salarié, freelance, retraité ou conjoint : INWARD vous accompagne dans vos démarches de visa, de titre de séjour et d'installation en France, du conseil à la gestion complète du dossier.",,
-meta-og-description,"Quelle que soit votre situation, nous sommes là pour rendre votre installation en France possible.",,
-change-entre-une-consultante-inward-et-des,Échange entre une consultante INWARD et des clients,,
-reponse-redigee-a-partir-des-textes-du-site,Reponse redigee a partir des textes du site : a valider avec la cliente,,
-deux-fa-ons-de-travailler-ensemble,Deux façons de travailler ensemble,,
-visas,Visas,,
-soutien-au-nouvel-arrivant,Soutien au nouvel arrivant,,
-service-de-mobilit-internationale-pour-les-p,Service de mobilité internationale pour les particuliers,,
-tudiant-retrait-freelance-salari-conjoint-d,"Étudiant, retraité, freelance, salarié, conjoint de Français, conjoint d'Européen, mineur scolarisé, employé détaché… Quelle que soit votre situation et votre motivation pour vivre en France, nous sommes là pour le rendre possible.",,
-les-visas-que-nous-accompagnons,Les visas que nous accompagnons,,
-constitution-du-dossier-prise-de-rendez-vous,"Constitution du dossier, prise de rendez-vous, validation du visa.",,
-inscription-campus-france-prise-de-rendez-vo,"Inscription à Campus France, prise de rendez-vous, constitution du dossier, validation du visa.",,
-tude-de-cas-constitution-du-dossier-prise-d,"Étude de cas, constitution du dossier, prise de rendez-vous, validation du visa.",,
-visas-de-travail,Visas de travail,,
-recherche-d-emploi-ou-cr-ation-d-entreprise,Recherche d'emploi ou création d'entreprise,,
-entrepreneur,Entrepreneur,,
-des-quatre-coins-du-monde-jusqu-chez-vous-en,"Des quatre coins du monde jusqu'à chez vous, en France",,
-nous-accompagnons-les-personnes-venant-des-q,"Nous accompagnons les personnes venant des quatre coins du monde dans les démarches administratives nécessaires pour venir en France, pour une courte ou une longue durée.",,
-nous-proposons-des-services-d-accompagnement,Nous proposons des services d'accompagnement et de gestion des différentes démarches administratives liées à votre installation en France.,,
-dites-nous-plus-sur-votre-projet,Dites-nous plus sur votre projet,,
-autonomie,Autonomie,,
-vous-menez-les-d-marches,Vous menez les démarches,,
-cl-s-en-main,Clés en main,,
-vous-nous-confiez-le-dossier,Vous nous confiez le dossier,,
-conseil-et-guide,Conseil et guide,,
-vous-tes-aventurier-et-vous-voulez-faire-les,Vous êtes aventurier et vous voulez faire les démarches d'immigration et d'installation en France en toute indépendance ? Nous vous donnons les éléments et les outils pour naviguer l'administration française en tranquillité.,,
-conseil-diagnostic-du-projet-et-guide-sur-le,"Conseil, diagnostic du projet et guide sur les démarches à effectuer",,
-vous-souhaitez-r-aliser-vos-d-marches-d-immi,"Vous souhaitez réaliser vos démarches d'immigration et d'installation en France en toute autonomie ? Nous vous conseillons dans la définition de votre projet, vous aidons à choisir le visa le plus adapté et vous guidons dans le pas à pas de la procédure.",,
-v-rification-du-dossier,Vérification du dossier,,
-nous-v-rifions-galement-votre-dossier-avant,"Nous vérifions également votre dossier avant son dépôt ou après un refus, afin de vous aider à présenter une demande complète et conforme, et d'optimiser vos chances de succès.",,
-gestion-et-prise-en-charge,Gestion et prise en charge,,
-laissez-vous-porter-par-une-quipe-d-experts,"Laissez-vous porter par une équipe d'experts qui gérera toutes les étapes, pour un résultat positif et en temps record.",,
-gestion-de-la-demande-de-visa,Gestion de la demande de visa,,
-confiez-nous-l-ensemble-de-vos-d-marches-adm,"Confiez-nous l'ensemble de vos démarches administratives. Nous prenons en charge la préparation du dossier, les formulaires, les demandes préalables, la prise de rendez-vous et le suivi jusqu'à l'obtention du visa ou de votre titre de séjour.",,
-visa-pour-les-freelances-et-cr-ateurs-d-entr,Visa pour les freelances et créateurs d'entreprise,,
-pour-les-freelances-et-cr-ateurs-d-entrepris,"Pour les freelances et créateurs d'entreprise, nous vous accompagnons également dans la conception du projet, l'élaboration du business plan et l'obtention de l'avis favorable de l'administration française.",,
-faire-le-point-sur-mon-projet,Faire le point sur mon projet,,
-confier-mon-dossier,Confier mon dossier,,
-apr-s-l-arriv-e,Après l'arrivée,,
-inscription-au-syst-me-de-sant-fran-ais,Inscription au système de santé français,,
-nous-effectuons-les-d-marches-pour-vous,Nous effectuons les démarches pour vous.,,
-demande-de-carte-vitale,Demande de carte Vitale,,
-lorem-ipsum-dolor-sit-amet-consectetur-adipi,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",,
-lorem-ipsum,Lorem ipsum,,
-ce-que-les-particuliers-nous-demandent,Ce que les particuliers nous demandent,,
-quelle-est-la-diff-rence-entre-l-accompagnem,Quelle est la différence entre l'accompagnement Autonomie et Clés en main ?,,
-texte-valider,Texte à valider,,
-avec-autonomie-vous-menez-vous-m-me-vos-d-m,". Avec Autonomie, vous menez vous-même vos démarches : nous analysons votre projet, identifions le visa adapté et vous guidons étape par étape. Avec Clés en main, notre équipe prend en charge l'ensemble du dossier, de la prise de rendez-vous jusqu'à la validation du visa ou la demande de carte de séjour à votre arrivée.",,
-pour-quels-visas-et-titres-de-s-jour-pouvez,Pour quels visas et titres de séjour pouvez-vous m'accompagner ?,,
-visa-visiteur-visa-tudiant-profession-lib-r,". Visa visiteur, visa étudiant, profession libérale et création d'entreprise, visa famille, mais aussi changement de statut, renouvellement de titre de séjour et naturalisation.",,
-pouvez-vous-v-rifier-mon-dossier-avant-le-d,"Pouvez-vous vérifier mon dossier avant le dépôt, ou après un refus ?",,
-oui-avant-le-d-p-t-de-votre-demande-ou-avan,". Oui. Avant le dépôt de votre demande, ou avant un nouveau dépôt après un refus, nous vérifions votre dossier pour mettre toutes les chances de votre côté.",,
-accompagnez-vous-les-freelances-et-les-cr-at,Accompagnez-vous les freelances et les créateurs d'entreprise ?,,
-oui-d-s-la-conception-du-projet-business-pl,". Oui, dès la conception du projet : business plan, obtention de l'avis favorable auprès de l'administration française, constitution du dossier, prise de rendez-vous, puis validation du visa ou demande de carte de séjour.",,
-m-accompagnez-vous-aussi-une-fois-arriv-en-f,M'accompagnez-vous aussi une fois arrivé en France ?,,
-oui-validation-du-visa-ou-demande-de-carte,". Oui : validation du visa ou demande de carte de séjour à votre arrivée, puis démarches d'installation comme l'assurance maladie et la sécurité sociale.",,
-combien-co-te-un-accompagnement,Combien coûte un accompagnement ?,,
-meta-title,Blog : guides et actualité du droit des étrangers | INWARD,,
-meta-description,"Guides, délais de préfecture et actualité du droit des étrangers en France, par les experts en immigration d'INWARD.",,
-cat-gories-valider-avec-la-cliente,Catégories à valider avec la cliente,,
-cat-gories-du-blog,Catégories du blog,,
-articles,Articles,,
-cat-gories,Catégories,,
-valider,à valider,,
-guides,Guides,,
-actualit,Actualité,,
-aucun-article-dans-cette-cat-gorie-pour-le-m,Aucun article dans cette catégorie pour le moment.,,
-avant-de-nous-contacter,Avant de nous contacter,,
-comment-se-d-roule-le-premier-rendez-vous,Comment se déroule le premier rendez-vous ?,,
-quelques-questions-pour-cerner-votre-situat,". Quelques questions pour cerner votre situation, puis un rendez-vous avec la personne qui suivra votre dossier.",,
-quelles-informations-pr-parer-avant-notre-pr,Quelles informations préparer avant notre premier échange ?,,
-votre-nationalit-votre-statut-actuel-en-fra,". Votre nationalité, votre statut actuel en France ou à l'étranger, et vos échéances : date d'arrivée souhaitée, expiration de votre titre ou date de début de contrat.",,
-vous-accompagnez-aussi-les-personnes-d-j-ins,Vous accompagnez aussi les personnes déjà installées en France ?,,
-oui-renouvellement-de-titre-de-s-jour-chang,". Oui : renouvellement de titre de séjour, changement de statut, carte de résident et naturalisation.",,
-que-faire-apr-s-un-refus-de-visa,Que faire après un refus de visa ?,,
-avant-de-red-poser-faites-v-rifier-votre-do,". Avant de redéposer, faites vérifier votre dossier : nous identifions ce qui a pu bloquer et préparons un nouveau dépôt solide.",,
-combien-de-temps-prennent-les-d-marches-en-p,Combien de temps prennent les démarches en préfecture ?,,
-en-attendant-voir-notre-article,". En attendant, voir notre article",,
-sur-les-d-lais-en-pr-fecture,sur les délais en préfecture,,
-dans-quelles-langues-pouvez-vous-m-accompagn,Dans quelles langues pouvez-vous m'accompagner ?,,
-meta-title,Comment faire un changement de statut de salarié à entrepreneur | INWARD,,
-texte-de-l-article-a-fournir-par-la-cliente,Texte de l'article a fournir par la cliente,,
-fil-d-ariane,Fil d'Ariane,,
-article,Article,,
-texte-de-l-article-r-diger,Texte de l'article à rédiger,,
-cette-page-existe-pour-fixer-l-url-le-titre,"Cette page existe pour fixer l'URL, le titre et le fil d'Ariane. Le contenu sera publié dès que la cliente l'aura fourni.",,
-tous-les-articles,‹ Tous les articles,,
-meta-title,Délais préfecture carte de séjour 2026 | INWARD,,
-meta-title,Vidéos | INWARD,,
-meta-description,"Les vidéos publiées par INWARD, cabinet de conseil en immigration et mobilité internationale en France.",,
-les-fondatrices-d-inward-devant-le-palais-ga,"Les fondatrices d'INWARD devant le Palais Garnier, à Paris",,
-chaque-vid-o-publi-e-sur-le-site-a-sa-propre,"Chaque vidéo publiée sur le site a sa propre page, avec son titre, sa description et sa fiche structurée, pour qu'elle puisse être indexée.",,
-inward-devant-le-palais-garnier,INWARD devant le Palais Garnier,,
-s-quence-d-accueil-du-site-les-fondatrices-d,"Séquence d'accueil du site : les fondatrices d'INWARD, Delfina Benitez Cruz et Marina Biedma, devant le Palais Garnier, à Paris.",,
-meta-title,INWARD devant le Palais Garnier | INWARD,,
-date-de-mise-en-ligne-a-confirmer-par-la-cli,Date de mise en ligne a confirmer par la cliente,,
-lecture,Lecture,,
-vid-o,Vidéo,,
-votre-navigateur-ne-lit-pas-cette-vid-o,Votre navigateur ne lit pas cette vidéo.,,
-t-l-charger-la-vid-o-mp4,Télécharger la vidéo (MP4),,
-dur-e,Durée,,
-20-secondes,20 secondes,,
-format,Format,,
-mp4-et-webm-1440-810,"MP4 et WebM, 1440 × 810",,
-lieu,Lieu,,
-palais-garnier-paris,"Palais Garnier, Paris",,
-date-de-publication,Date de publication,,
-confirmer,À confirmer,,
-toutes-les-vid-os,‹ Toutes les vidéos,,
-meta-title,Qui sommes-nous · L'histoire d'INWARD,,
-meta-description,"INWARD, agence de mobilité internationale fondée en 2020 à Paris par Delfina Benitez Cruz et Marina Biedma, deux expatriées. Notre histoire et notre mission.",,
-delfina-benitez-cruz-et-marina-biedma-fondat,"Delfina Benitez Cruz et Marina Biedma, fondatrices d'INWARD",,
-portrait-de-delfina-benitez-cruz-cofondatric,"Portrait de Delfina Benitez Cruz, cofondatrice d'INWARD",,
-portrait-de-marina-biedma-cofondatrice-d-inw,"Portrait de Marina Biedma, cofondatrice d'INWARD",,
-comment-nous-travaillons,Comment nous travaillons,,
-notre-histoire,Notre histoire,,
-en-2020-nous-avons-fond-inward-avec-une-conv,"En 2020, nous avons fondé INWARD avec une conviction claire : la gestion des démarches administratives et l'installation ne devaient plus jamais être un frein au recrutement des meilleurs talents.",,
-tant-nous-m-mes-expatri-es-nous-avons-v-cu,"Étant nous-mêmes expatriées, nous avons vécu ce parcours du combattant de l'intérieur. Après avoir traversé seules le labyrinthe administratif français, nous avons décidé de mettre notre expérience et notre expertise au service des autres pour rendre ce processus simple, humain et fluide.",,
-fortes-de-notre-expertise-r-glementaire-et-d,"Fortes de notre expertise réglementaire et de notre approche de terrain, nous agissons comme un véritable partenaire RH stratégique pour les startups, PME et grands groupes. Notre mission ? Transformer la complexité des démarches d'immigration en un parcours simple, fluide et sécurisé pour vos équipes et vos collaborateurs internationaux.",,
-l-quipe,L'équipe,,
-cofondatrice,Cofondatrice,,
-lorem-ipsum-dolor-sit-amet-consectetur-adipi,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",,
-notre-m-thode,Notre méthode,,
-premier-contact-r-actif,Premier contact réactif,,
-vous-nous-faites-part-de-vos-besoins-notre-q,Vous nous faites part de vos besoins. Notre équipe vous recontacte en moins de 24 heures pour cadrer votre demande.,,
-diagnostic-devis-sur-mesure,Diagnostic & devis sur mesure,,
-nous-analysons-la-situation-de-votre-entrepr,"Nous analysons la situation de votre entreprise et de vos futurs collaborateurs pour définir la feuille de route idéale. Vous recevez un devis clair et personnalisé, adapté à vos enjeux.",,
-prise-en-charge-d-ploiement,Prise en charge & déploiement,,
-nous-prenons-imm-diatement-le-relais-sur-le,"Nous prenons immédiatement le relais sur le dossier. Grâce à un suivi proactif et réactif, nous évitons les ralentissements administratifs et sécurisons l'ensemble de la procédure.",,
-obtention-finalisation,Obtention & finalisation,,
-vos-visas-titres-de-s-jour-ou-d-marches-d-in,"Vos visas, titres de séjour ou démarches d'installation sont validés. Vos collaborateurs internationaux peuvent démarrer leur activité en toute sérénité.",,
+meta-title,INWARD | Expert en immigration et mobilité internationale en France,INWARD | Immigration and international mobility experts in France,INWARD | Expertos en inmigración y movilidad internacional en Francia
+meta-description,"Cabinet de conseil en immigration en France. Visas, titres de séjour, changement de statut, naturalisation et mobilité internationale, pour les particuliers et les entreprises.","Immigration consultancy in France. Visas, residence permits, change of status, naturalisation and international mobility, for individuals and companies.","Consultoría de inmigración en Francia. Visas, permisos de residencia, cambio de estatus, naturalización y movilidad internacional, para particulares y empresas."
+meta-og-description,Accompagnement sur-mesure pour les particuliers et les entreprises dans toutes leurs démarches administratives et de visa.,Tailored support for individuals and companies through every administrative and visa procedure.,Acompañamiento a medida para particulares y empresas en todos sus trámites administrativos y de visa.
+logo-de-bey-tours-dmc-europe-client-d-inward,"Logo de Bey tours, DMC Europe, client d'INWARD","Logo of Bey tours, DMC Europe, an INWARD client","Logo de Bey tours, DMC Europe, cliente de INWARD"
+logo-de-mouve-client-d-inward,"Logo de Mouve, client d'INWARD","Logo of Mouve, an INWARD client","Logo de Mouve, cliente de INWARD"
+logo-de-superprof-client-d-inward,"Logo de Superprof, client d'INWARD","Logo of Superprof, an INWARD client","Logo de Superprof, cliente de INWARD"
+logo-de-biondi-client-d-inward,"Logo de Biondi, client d'INWARD","Logo of Biondi, an INWARD client","Logo de Biondi, cliente de INWARD"
+logo-de-prolenser-client-d-inward,"Logo de Prolenser, client d'INWARD","Logo of Prolenser, an INWARD client","Logo de Prolenser, cliente de INWARD"
+logo-de-de-altura-client-d-inward,"Logo de De Altura, client d'INWARD","Logo of De Altura, an INWARD client","Logo de De Altura, cliente de INWARD"
+logo-de-las-praderas-client-d-inward,"Logo de Las Praderas, client d'INWARD","Logo of Las Praderas, an INWARD client","Logo de Las Praderas, cliente de INWARD"
+deux-consultantes-inward-dans-les-bureaux-du,Deux consultantes INWARD dans les bureaux du cabinet,Two INWARD consultants in the firm's office,Dos consultoras de INWARD en la oficina
+rendez-vous-individuel-entre-une-consultante,Rendez-vous individuel entre une consultante et un client,One-to-one meeting between a consultant and a client,Reunión individual entre una consultora y un cliente
+r-union-informelle-entre-l-quipe-inward-et-d,Réunion informelle entre l'équipe INWARD et des clients,Informal meeting between the INWARD team and clients,Reunión informal entre el equipo de INWARD y clientes
+atelier-de-travail-de-l-quipe-inward-autour,Atelier de travail de l'équipe INWARD autour d'un tableau blanc,INWARD team workshop around a whiteboard,Taller de trabajo del equipo de INWARD frente a una pizarra
+dossier-de-demande-de-titre-de-s-jour-en-pr,Dossier de demande de titre de séjour en préparation,Residence permit application being prepared,Expediente de solicitud de permiso de residencia en preparación
+rendez-vous-de-suivi-avec-une-consultante-in,Rendez-vous de suivi avec une consultante INWARD,Follow-up meeting with an INWARD consultant,Reunión de seguimiento con una consultora de INWARD
+change-informel-entre-l-quipe-inward-et-des,Échange informel entre l'équipe INWARD et des clients,Informal conversation between the INWARD team and clients,Conversación informal entre el equipo de INWARD y clientes
+nationalit-statut-actuel-ch-ance,"Nationalité, statut actuel, échéance...","Nationality, current status, deadline...","Nacionalidad, situación actual, plazos..."
+note-reelle-a-recuperer-de-la-fiche-google,Note reelle a recuperer de la fiche Google,Actual rating to be taken from the Google listing,Nota real a tomar de la ficha de Google
+deux-possibilites-une-cle-places-api-dans-ap,"Deux possibilites : une cle Places API dans api/config.php (les avis se mettent a jour tout seuls), ou des avis reels recopies dans content/avis.json. Voir README.","Two options: a Places API key in api/config.php (reviews update automatically), or real reviews copied into content/avis.json. See README.","Dos opciones: una clave de la Places API en api/config.php (las opiniones se actualizan solas), u opiniones reales copiadas en content/avis.json. Ver README."
+le-document-de-la-cliente-hesite-entre-ce-se,Le document de la cliente hesite entre ce service et le housing (voir 'DUDA: Esto o housing?'),The client's document hesitates between this service and housing,El documento de la clienta duda entre este servicio y el de vivienda
+le-document-annonce-12-h-ici-et-moins-de-24,Le document annonce -12 h ici et 'moins de 24 heures' dans la page Qui sommes-nous : un seul delai a retenir,The document says under 12 h here and under 24 hours on the About page: one single response time to be chosen,El documento dice menos de 12 h aquí y menos de 24 horas en Quiénes somos: hay que elegir un solo plazo
+troisi-me-article-d-finir-avec-la-cliente,Troisième article à définir avec la cliente,Third article to be defined with the client,Tercer artículo a definir con la clienta
+texte-provisoire-fourni-en-lorem-ipsum-a-rem,Texte provisoire fourni en lorem ipsum : a remplacer par la reponse reelle,Placeholder text in lorem ipsum: to be replaced by the real answer,Texto provisorio en lorem ipsum: reemplazar por la respuesta real
+reponse-a-rediger-avec-la-cliente,Reponse a rediger avec la cliente,Answer to be written with the client,Respuesta a redactar con la clienta
+premier-num-ro-public-a-confirmer,Premier numéro public a confirmer,First public phone number to be confirmed,Primer número público a confirmar
+second-num-ro-public-a-confirmer,Second numéro public a confirmer,Second public phone number to be confirmed,Segundo número público a confirmar
+adresse-de-contact-publique-a-confirmer-le-b,Adresse de contact publique a confirmer : le Brand Book indique le domaine inwardimmigration.com alors que le site est inwardpro.com,Public contact address to be confirmed: the Brand Book uses the inwardimmigration.com domain while the site is inwardpro.com,Dirección de contacto pública a confirmar: el Brand Book usa el dominio inwardimmigration.com y el sitio es inwardpro.com
+page-mentions-legales-a-rediger,Page mentions legales a rediger,Legal notice page to be written,Página de aviso legal a redactar
+politique-de-confidentialite-a-rediger,Politique de confidentialite a rediger,Privacy policy to be written,Política de privacidad a redactar
+cgv-a-rediger,CGV a rediger,Terms and conditions to be written,Condiciones generales a redactar
+inward-accueil,"INWARD, accueil","INWARD, home","INWARD, inicio"
+principal,Principal,Main,Principal
+afficher-le-menu-entreprises,Afficher le menu Entreprises,Show the Companies menu,Mostrar el menú Empresas
+afficher-le-menu-particuliers,Afficher le menu Particuliers,Show the Individuals menu,Mostrar el menú Particulares
+afficher-le-menu-ressources,Afficher le menu Ressources,Show the Resources menu,Mostrar el menú Recursos
+langue,Langue,Language,Idioma
+ouvrir-le-menu,Ouvrir le menu,Open the menu,Abrir el menú
+chiffres-cl-s,Chiffres clés,Key figures,Cifras clave
+avis-clients,Avis clients,Client reviews,Opiniones de clientes
+nos-engagements,Nos engagements,Our commitments,Nuestros compromisos
+votre-profil,Votre profil,Your profile,Su perfil
+mentions-l-gales,Mentions légales,Legal notice,Aviso legal
+sections-de-la-page,Sections de la page,Page sections,Secciones de la página
+accueil,Accueil,Home,Inicio
+nos-r-sultats,Nos résultats,Our results,Nuestros resultados
+entreprises,Entreprises,Companies,Empresas
+particuliers,Particuliers,Individuals,Particulares
+qui-sommes-nous,Qui sommes-nous,About us,Quiénes somos
+ressources,Ressources,Resources,Recursos
+questions-fr-quentes,Questions fréquentes,FAQ,Preguntas frecuentes
+contact,Contact,Contact,Contacto
+mobilit-internationale,Mobilité internationale,International mobility,Movilidad internacional
+cadres-chercheurs-fondateurs,"Cadres, chercheurs, fondateurs","Executives, researchers, founders","Directivos, investigadores, fundadores"
+autorisation-de-travail,Autorisation de travail,Work permit,Autorización de trabajo
+d-p-t-et-suivi-des-demandes,Dépôt et suivi des demandes,Filing and follow-up of applications,Presentación y seguimiento de solicitudes
+d-tachement-de-salari-s,Détachement de salariés,Posting of employees,Desplazamiento de trabajadores
+conformit-et-formalit-s,Conformité et formalités,Compliance and formalities,Cumplimiento y trámites
+conseil-et-conformit,Conseil et conformité,Advice and compliance,Asesoría y cumplimiento
+audit-et-conseil,Audit et conseil,Audit and advice,Auditoría y asesoría
+v-rification-des-titres-de-s-jour,Vérification des titres de séjour,Residence permit checks,Verificación de permisos de residencia
+naturalisation-des-collaborateurs,Naturalisation des collaborateurs,Naturalisation of employees,Naturalización de empleados
+accompagnement-individuel,Accompagnement individuel,Individual support,Acompañamiento individual
+aide-administrative,Aide administrative,Administrative assistance,Ayuda administrativa
+installation-des-collaborateurs,Installation des collaborateurs,Settling in your employees,Instalación de los empleados
+un-projet-de-mobilit-pour-vos-quipes,Un projet de mobilité pour vos équipes ?,A mobility project for your teams?,¿Un proyecto de movilidad para sus equipos?
+demander-un-devis,Demander un devis,Request a quote,Solicitar un presupuesto
+visas-et-titres-de-s-jour,Visas et titres de séjour,Visas and residence permits,Visas y permisos de residencia
+visa-visiteur,Visa visiteur,Visitor visa,Visa de visitante
+s-jour-sans-activit-professionnelle,Séjour sans activité professionnelle,Stay without professional activity,Estancia sin actividad profesional
+visa-tudiant,Visa étudiant,Student visa,Visa de estudiante
+inscription-vls-ts-renouvellement,"Inscription, VLS-TS, renouvellement","Enrolment, VLS-TS, renewal","Inscripción, VLS-TS, renovación"
+profession-lib-rale-et-entrepreneur,Profession libérale et entrepreneur,Self-employed and entrepreneurs,Profesión liberal y emprendedores
+cr-ation-et-reprise-d-activit,Création et reprise d'activité,Starting or taking over a business,Creación o adquisición de un negocio
+visa-famille,Visa famille,Family visa,Visa familiar
+regroupement-et-vie-priv-e-familiale,Regroupement et vie privée familiale,Family reunification and private and family life,Reagrupación y vida privada y familiar
+d-marches-et-statuts,Démarches et statuts,Procedures and statuses,Trámites y estatus
+changement-de-statut,Changement de statut,Change of status,Cambio de estatus
+salari-tudiant-entrepreneur,"Salarié, étudiant, entrepreneur","Employee, student, entrepreneur","Asalariado, estudiante, emprendedor"
+renouvellement-de-titre,Renouvellement de titre,Permit renewal,Renovación del permiso
+accompagnement-en-pr-fecture,Accompagnement en préfecture,Support at the prefecture,Acompañamiento en la prefectura
+naturalisation-et-nationalit,Naturalisation et nationalité,Naturalisation and citizenship,Naturalización y nacionalidad
+constitution-du-dossier,Constitution du dossier,Preparing the application,Preparación del expediente
+assurance-maladie-s-curit-sociale,"Assurance maladie, sécurité sociale","Health insurance, social security","Seguro médico, seguridad social"
+vous-ne-savez-pas-quelle-d-marche-vous-conce,Vous ne savez pas quelle démarche vous concerne ?,Not sure which procedure applies to you?,¿No sabe qué trámite le corresponde?
+valuer-mon-dossier,Évaluer mon dossier,Assess my case,Evaluar mi caso
+centre-de-ressources,Centre de ressources,Resource centre,Centro de recursos
+derniers-articles,Derniers articles,Latest articles,Últimos artículos
+guides-d-lais-et-actualit-du-droit-des-trang,"Guides, délais et actualité du droit des étrangers","Guides, processing times and news on immigration law","Guías, plazos y novedades del derecho de extranjería"
+vid-os,Vidéos,Videos,Videos
+chaque-vid-o-sur-sa-propre-page,Chaque vidéo sur sa propre page,Each video on its own page,Cada video en su propia página
+d-lais-pi-ces-recours,"Délais, pièces, recours","Processing times, documents, appeals","Plazos, documentos, recursos"
+le-cabinet,Le cabinet,The firm,La agencia
+quipe-parcours-valeurs,"Équipe, parcours, valeurs","Team, background, values","Equipo, trayectoria, valores"
+nous-contacter,Nous contacter,Contact us,Contáctenos
+rendez-vous-et-coordonnees,Rendez-vous et coordonnees,Appointments and contact details,Citas y datos de contacto
+les-articles-les-plus-consult-s-cette-semain,Les articles les plus consultés cette semaine.,The most read articles this week.,Los artículos más leídos de la semana.
+voir-le-blog,Voir le blog,See the blog,Ver el blog
+prendre-rendez-vous,Prendre rendez-vous,Book an appointment,Pedir una cita
+votre-expert-en-immigration,Votre expert en immigration,Your immigration expert,Su experto en inmigración
+en-france,en France,in France,en Francia
+vous-tes-une-entreprise,Vous êtes une entreprise ?,Are you a company?,¿Es usted una empresa?
+je-suis-un-particulier,Je suis un particulier,I'm an individual,Soy un particular
+taux-de-r-ussite-des-dossiers,Taux de réussite des dossiers,Application success rate,Tasa de éxito de los expedientes
+nationalit-s-accompagn-es,Nationalités accompagnées,Nationalities supported,Nacionalidades acompañadas
+dossiers-trait-s,Dossiers traités,Applications handled,Expedientes tramitados
+nombre-d-avis-confirmer,Nombre d'avis à confirmer,Number of reviews to be confirmed,Número de opiniones a confirmar
+voir-les-avis-sur-google,Voir les avis sur Google,See the reviews on Google,Ver las opiniones en Google
+avis-google-connecter,Avis Google à connecter,Google reviews to be connected,Opiniones de Google a conectar
+les-avis-positifs-les-plus-r-cents-s-affich,. Les avis positifs les plus récents s'afficheront ici automatiquement.,. The most recent positive reviews will appear here automatically.,. Las opiniones positivas más recientes aparecerán aquí automáticamente.
+optimisez-la-mobilit-internationale-de-vos-c,Optimisez la mobilité internationale de vos collaborateurs,Optimise your employees' international mobility,Optimice la movilidad internacional de sus empleados
+d-l-guez-l-ensemble-des-d-marches-de-visa-et,"Déléguez l'ensemble des démarches de visa et de titre de séjour à une équipe d'experts. Du diagnostic initial jusqu'à l'obtention du titre, nous assurons la conformité de vos dossiers et sécurisons l'embauche et la rétention de vos talents étrangers.","Hand over all your visa and residence permit procedures to a team of experts. From the initial assessment to the permit being issued, we keep your applications compliant and secure the hiring and retention of your international talent.","Delegue todos los trámites de visa y permiso de residencia en un equipo de expertos. Desde el diagnóstico inicial hasta la obtención del permiso, garantizamos la conformidad de sus expedientes y aseguramos la contratación y la retención de su talento extranjero."
+demander-un-devis-sur-mesure,Demander un devis sur-mesure,Request a tailored quote,Solicitar un presupuesto a medida
+passeport-talent-demandes-d-autorisation-de,"Passeport Talent, demandes d'autorisation de travail et suivi complet des salariés étrangers.","Passeport Talent, work permit applications and complete follow-up of foreign employees.","Passeport Talent, solicitudes de autorización de trabajo y seguimiento completo de los empleados extranjeros."
+conformit-aux-normes-de-d-tachement-et-forma,Conformité aux normes de détachement et formalités de déplacement international.,Compliance with posting rules and international travel formalities.,Cumplimiento de las normas de desplazamiento y trámites de viaje internacional.
+conseil-juridique-et-v-rification-des-titres,Conseil juridique et vérification des titres de séjour de vos employés.,Legal advice and checks on your employees' residence permits.,Asesoría jurídica y verificación de los permisos de residencia de sus empleados.
+naturalisation-et-nationalit-fran-aise,Naturalisation et nationalité française,Naturalisation and French citizenship,Naturalización y nacionalidad francesa
+service-confirmer,Service à confirmer,Service to be confirmed,Servicio a confirmar
+accompagnement-individuel-de-vos-collaborate,Accompagnement individuel de vos collaborateurs dans leur demande de nationalité.,Individual support for your employees in their citizenship application.,Acompañamiento individual de sus empleados en su solicitud de nacionalidad.
+inscription-l-assurance-maladie-s-curit-soci,"Inscription à l'assurance maladie, sécurité sociale et démarches d'installation.","Health insurance registration, social security and settling-in procedures.","Inscripción en el seguro médico, seguridad social y trámites de instalación."
+r-f-rences,Références,References,Referencias
+ils-nous-font-confiance,Ils nous font confiance,They trust us,Confían en nosotros
+simplifiez-votre-installation-et-vos-d-march,Simplifiez votre installation et vos démarches en France,Simplify your move and your procedures in France,Simplifique su instalación y sus trámites en Francia
+demandes-de-visa-depuis-votre-pays,Demandes de visa depuis votre pays,Visa applications from your home country,Solicitudes de visa desde su país
+visa-tudiant-salari-travailleur-temporaire-v,"Visa étudiant, salarié, travailleur temporaire, visiteur, talent création d'entreprise, talent profession artistique ou vie privée et familiale.","Student, employee, temporary worker, visitor, talent business creation, talent artistic profession or private and family life visas.","Visa de estudiante, asalariado, trabajador temporal, visitante, talento creación de empresa, talento profesión artística o vida privada y familiar."
+voir-plus,Voir plus,See more,Ver más
+renouvellements-depuis-la-france,Renouvellements depuis la France,Renewals from France,Renovaciones desde Francia
+prise-de-rendez-vous-constitution-et-v-rific,"Prise de rendez-vous, constitution et vérification du dossier, dépôt sur l'ANEF et Démarches Simplifiées, contact avec la préfecture.","Booking appointments, preparing and checking the application, filing on ANEF and Démarches Simplifiées, liaising with the prefecture.","Toma de cita, preparación y revisión del expediente, presentación en ANEF y Démarches Simplifiées, contacto con la prefectura."
+changements-de-statut,Changements de statut,Changes of status,Cambios de estatus
+d-tudiant-salari-rece-ou-carte-talent-de-vvt,"D'étudiant à salarié, à RECE ou à carte Talent, de VVT à salarié : la voie adaptée à votre situation.","From student to employee, to RECE or to a Talent card, from working holiday to employee: the right route for your situation.","De estudiante a asalariado, a RECE o a tarjeta Talento, de vacaciones-trabajo a asalariado: la vía adecuada para su situación."
+r-vision-de-dossier,Révision de dossier,Application review,Revisión del expediente
+apr-s-un-refus-ou-avant-de-d-poser-votre-dem,"Après un refus, ou avant de déposer votre demande de visa ou de titre de séjour.","After a refusal, or before filing your visa or residence permit application.","Tras una denegación, o antes de presentar su solicitud de visa o de permiso de residencia."
+carte-de-r-sident-et-naturalisation,Carte de résident et naturalisation,Resident card and naturalisation,Tarjeta de residente y naturalización
+soutien-pour-acc-der-une-carte-de-r-sident-d,Soutien pour accéder à une carte de résident de dix ans ou à la nationalité française.,Support to obtain a ten-year resident card or French citizenship.,Apoyo para obtener una tarjeta de residente de diez años o la nacionalidad francesa.
+d-marches-d-installation-en-france,Démarches d'installation en France,Settling in France,Trámites de instalación en Francia
+assurance-maladie-change-de-permis-de-condui,"Assurance maladie, échange de permis de conduire, recherche de logement, inscription à l'Urssaf.","Health insurance, driving licence exchange, house hunting, Urssaf registration.","Seguro médico, canje del permiso de conducir, búsqueda de vivienda, inscripción en la Urssaf."
+contactez-un-expert,Contactez un expert,Contact an expert,Contacte a un experto
+nos-engagements-votre-garantie,"Nos engagements, votre garantie","Our commitments, your guarantee","Nuestros compromisos, su garantía"
+une-agence-sp-cialis-e-pour-simplifier-vos-d,Une agence spécialisée pour simplifier vos démarches d'immigration,A specialist agency to simplify your immigration procedures,Una agencia especializada para simplificar sus trámites de inmigración
+on-ne-l-che-rien,On ne lâche rien,We never give up,No bajamos los brazos
+une-r-activit-toute-preuve,Une réactivité à toute épreuve,Unfailing responsiveness,Una reactividad a toda prueba
+une-dimension-humaine,Une dimension humaine,A human approach,Una dimensión humana
+une-clart-absolue,Une clarté absolue,Complete clarity,Claridad absoluta
+un-suivi-sur-mesure,Un suivi sur-mesure,Tailored follow-up,Un seguimiento a medida
+z-ro-risque,Zéro risque,Zero risk,Riesgo cero
+nous-portons-votre-dossier-jusqu-la-r-ussite,Nous portons votre dossier jusqu'à la réussite complète de la démarche.,We see your application through until the procedure is fully successful.,Llevamos su expediente hasta el éxito completo del trámite.
+pas-de-temps-perdu-vos-priorit-s-sont-les-n,"Pas de temps perdu, vos priorités sont les nôtres. Réponse en moins de douze heures.","No time wasted, your priorities are ours. A reply in under twelve hours.","Sin perder tiempo, sus prioridades son las nuestras. Respuesta en menos de doce horas."
+d-lai-unifier,Délai à unifier,Response time to be aligned,Plazo a unificar
+nous-prenons-soin-de-vos-collaborateurs-comm,Nous prenons soin de vos collaborateurs comme de vos équipes RH.,We look after your employees as well as your HR teams.,Cuidamos de sus empleados como de sus equipos de RR. HH.
+z-ro-jargon-z-ro-mauvaise-surprise-sur-les-c,"Zéro jargon, zéro mauvaise surprise sur les coûts ou les délais.","No jargon, no unpleasant surprises on costs or timelines.","Cero tecnicismos, cero sorpresas en costos o plazos."
+un-interlocuteur-unique-d-di-l-ensemble-de-v,Un interlocuteur unique dédié à l'ensemble de vos projets.,A single point of contact for all your projects.,Un único interlocutor para todos sus proyectos.
+une-conformit-r-glementaire-irr-prochable-su,Une conformité réglementaire irréprochable sur chaque procédure.,Flawless regulatory compliance on every procedure.,Un cumplimiento normativo impecable en cada trámite.
+l-histoire-d-inward,L'histoire d'Inward,The INWARD story,La historia de INWARD
+blog,Blog,Blog,Blog
+guides-d-lais-et-actualit-du-droit-des-trang-2,"Guides, délais et actualité du droit des étrangers, mis à jour par l'équipe.","Guides, processing times and news on immigration law, kept up to date by the team.","Guías, plazos y novedades del derecho de extranjería, actualizados por el equipo."
+tous-les-articles,Tous les articles,All articles,Todos los artículos
+guide,Guide,Guide,Guía
+comment-faire-un-changement-de-statut-de-sal,Comment faire un changement de statut de salarié à entrepreneur,How to change status from employee to entrepreneur,Cómo pasar de asalariado a emprendedor
+les-conditions-les-pi-ces-a-r-unir-et-l-ordr,"Les conditions, les pièces a réunir et l'ordre des démarches en préfecture.","The conditions, the documents to gather and the order of the steps at the prefecture.","Las condiciones, los documentos necesarios y el orden de los trámites en la prefectura."
+lecture-8-min,Lecture 8 min,8 min read,Lectura de 8 min
+d-lais,Délais,Processing times,Plazos
+d-lais-pr-fecture-carte-de-s-jour-2026,Délais préfecture carte de séjour 2026,Prefecture processing times for residence permits in 2026,Plazos de prefectura para el permiso de residencia en 2026
+ce-qui-a-chang-cette-ann-e-et-comment-antici,Ce qui a changé cette année et comment anticiper le renouvellement.,What changed this year and how to plan your renewal ahead.,Qué cambió este año y cómo anticipar la renovación.
+lecture-6-min,Lecture 6 min,6 min read,Lectura de 6 min
+produire,À produire,To be produced,Por producir
+troisi-me-article-d-finir,Troisième article à définir,Third article to be defined,Tercer artículo a definir
+le-brief-donn-deux-exemples-de-requ-tes-le-t,Le brief donné deux exemples de requêtes. Le troisième sujet reste à choisir selon les priorités SEO.,The brief gives two example queries. The third topic is still to be chosen according to SEO priorities.,El brief da dos ejemplos de búsquedas. El tercer tema queda por elegir según las prioridades de SEO.
+sujet-valider,Sujet à valider,Topic to be approved,Tema a validar
+ce-qu-on-nous-demande-le-plus-souvent,Ce qu'on nous demande le plus souvent,The questions we are asked most often,Lo que más nos preguntan
+comment-inward-optimise-t-il-les-chances-de,Comment INWARD optimise-t-il les chances de succès de votre demande de visa ?,How does INWARD maximise the chances of your visa application succeeding?,¿Cómo optimiza INWARD las posibilidades de éxito de su solicitud de visa?
+texte-provisoire,Texte provisoire,Placeholder text,Texto provisorio
+lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-i,. Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum.,. Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum.,. Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum.
+quels-sont-les-tarifs-d-inward,Quels sont les tarifs d'INWARD ?,What are INWARD's fees?,¿Cuáles son las tarifas de INWARD?
+r-ponse-r-diger,Réponse à rédiger,Answer to be written,Respuesta a redactar
+pourquoi-faire-appel-une-agence-de-mobilit-i,Pourquoi faire appel à une agence de mobilité internationale plutôt que de tout gérer en interne ?,Why use an international mobility agency rather than handling everything in-house?,¿Por qué recurrir a una agencia de movilidad internacional en lugar de gestionarlo todo internamente?
+comment-recruter-un-salari-tranger-hors-unio,Comment recruter un salarié étranger hors Union européenne ?,How do you recruit an employee from outside the European Union?,¿Cómo contratar a un empleado de fuera de la Unión Europea?
+combien-de-temps-prend-l-obtention-d-un-visa,Combien de temps prend l'obtention d'un visa de travail pour la France ?,How long does it take to get a work visa for France?,¿Cuánto tiempo lleva obtener una visa de trabajo para Francia?
+qu-est-ce-que-le-passeport-talent-et-qui-peu,Qu'est-ce que le Passeport Talent et qui peut en bénéficier ?,What is the Passeport Talent and who is eligible?,¿Qué es el Passeport Talent y quién puede beneficiarse?
+contactez-une-experte,Contactez une experte,Contact an expert,Contacte a una experta
+parlons-de-votre-dossier,Parlons de votre dossier,Let's talk about your case,Hablemos de su caso
+quelques-questions-pour-cerner-votre-situati,"Quelques questions pour cerner votre situation, puis un rendez-vous avec la personne qui suivra votre dossier.","A few questions to understand your situation, then a meeting with the person who will handle your case.",Unas preguntas para entender su situación y luego una cita con la persona que llevará su expediente.
+t-l-phone,Téléphone,Phone,Teléfono
+premier-num-ro-confirmer,Premier numéro à confirmer,First number to be confirmed,Primer número a confirmar
+second-num-ro-confirmer,Second numéro à confirmer,Second number to be confirmed,Segundo número a confirmar
+email,Email,Email,Email
+adresse-de-contact-confirmer,Adresse de contact à confirmer,Contact address to be confirmed,Dirección de contacto a confirmar
+entreprise,Entreprise,Company,Empresa
+particulier,Particulier,Individual,Particular
+nom-et-pr-nom,Nom et prénom,Full name,Nombre y apellido
+nom-de-l-entreprise,Nom de l'entreprise,Company name,Nombre de la empresa
+votre-d-marche,Votre démarche,Your procedure,Su trámite
+visa-ou-titre-de-s-jour,Visa ou titre de séjour,Visa or residence permit,Visa o permiso de residencia
+changement-de-statut-ou-renouvellement,Changement de statut ou renouvellement,Change of status or renewal,Cambio de estatus o renovación
+mobilit-internationale-entreprise,Mobilité internationale (entreprise),International mobility (company),Movilidad internacional (empresa)
+je-ne-sais-pas-encore,Je ne sais pas encore,I don't know yet,Todavía no lo sé
+comment-nous-avez-vous-connus,Comment nous avez-vous connus ?,How did you hear about us?,¿Cómo nos conoció?
+choisir,Choisir…,Choose…,Elegir…
+r-seaux-sociaux-linkedin-instagram,"Réseaux sociaux (LinkedIn, Instagram)","Social media (LinkedIn, Instagram)","Redes sociales (LinkedIn, Instagram)"
+recommandation,Recommandation,Recommendation,Recomendación
+recherche-google-ia,"Recherche (Google, IA…)","Search (Google, AI…)","Búsqueda (Google, IA…)"
+autre,Autre,Other,Otro
+votre-situation-en-quelques-lignes,Votre situation en quelques lignes,Your situation in a few lines,Su situación en pocas líneas
+site-web,Site web,Website,Sitio web
+envoyer-et-choisir-un-cr-neau,Envoyer et choisir un créneau,Send and choose a time slot,Enviar y elegir un horario
+cabinet-de-conseil-en-immigration-et-mobilit,Cabinet de conseil en immigration et mobilité internationale en France. Particuliers et entreprises.,Immigration and international mobility consultancy in France. Individuals and companies.,Consultoría de inmigración y movilidad internacional en Francia. Particulares y empresas.
+services-entreprises,Services entreprises,Services for companies,Servicios para empresas
+services-particuliers,Services particuliers,Services for individuals,Servicios para particulares
+naturalisation,Naturalisation,Naturalisation,Naturalización
+soci-t,Société,Company,Empresa
+2026-inward-tous-droits-r-serv-s,© 2026 INWARD. Tous droits réservés.,© 2026 INWARD. All rights reserved.,© 2026 INWARD. Todos los derechos reservados.
+politique-de-confidentialit-rgpd,Politique de confidentialité (RGPD),Privacy policy (GDPR),Política de privacidad (RGPD)
+meta-title,Mobilité internationale en entreprise | INWARD,International mobility for companies | INWARD,Movilidad internacional para empresas | INWARD
+meta-description,"Visas, titres de séjour, détachement de salariés, audit et installation : INWARD pilote l'immigration de vos collaborateurs étrangers, de la demande d'autorisation de travail à la carte de séjour.","Visas, residence permits, posting of employees, audit and settling in: INWARD manages the immigration of your foreign employees, from the work permit application to the residence card.","Visas, permisos de residencia, desplazamiento de trabajadores, auditoría e instalación: INWARD gestiona la inmigración de sus empleados extranjeros, desde la solicitud de autorización de trabajo hasta la tarjeta de residencia."
+meta-og-description,"Start-up, PME ou multinationale : nous simplifions et sécurisons la venue de vos talents en France.","Start-up, SME or multinational: we simplify and secure your talent's move to France.","Start-up, pyme o multinacional: simplificamos y aseguramos la llegada de su talento a Francia."
+cr-atrice-travaillant-sur-une-tablette-graph,Créatrice travaillant sur une tablette graphique dans son atelier,Designer working on a graphics tablet in her studio,Creadora trabajando con una tableta gráfica en su taller
+salari-e-travaillant-sur-son-ordinateur-au-b,Salariée travaillant sur son ordinateur au bureau,Employee working on her computer at the office,Empleada trabajando con su computadora en la oficina
+salari-consultant-une-tablette-dans-un-entre,Salarié consultant une tablette dans un entrepôt,Employee checking a tablet in a warehouse,Empleado consultando una tableta en un almacén
+cueillette-du-raisin-pendant-les-vendanges,Cueillette du raisin pendant les vendanges,Picking grapes during the harvest,Recogida de uva durante la vendimia
+silhouette-d-un-p-re-marchant-main-dans-la-m,Silhouette d'un père marchant main dans la main avec son enfant au bord de la mer,Silhouette of a father walking hand in hand with his child by the sea,Silueta de un padre caminando de la mano de su hijo a orillas del mar
+r-union-de-travail-entre-l-quipe-inward-et-u,Réunion de travail entre l'équipe INWARD et une entreprise cliente,Working session between the INWARD team and a client company,Reunión de trabajo entre el equipo de INWARD y una empresa cliente
+dos-opciones-una-clave-de-la-places-api-en-a,"Dos opciones: una clave de la Places API en api/config.php (las opiniones se actualizan solas), u opiniones reales copiadas en content/avis.json. Ver README.","Two options: a Places API key in api/config.php (reviews update automatically), or real reviews copied into content/avis.json. See README.","Dos opciones: una clave de la Places API en api/config.php (las opiniones se actualizan solas), u opiniones reales copiadas en content/avis.json. Ver README."
+le-document-de-la-cliente-hesite-entre-ce-se,Le document de la cliente hesite entre ce service et le housing (« DUDA: Esto o housing? »),The client's document hesitates between this service and housing,El documento de la clienta duda entre este servicio y el de vivienda
+nos-services,Nos services,Our services,Nuestros servicios
+haut-de-page,Haut de page,Top of page,Inicio de la página
+types-de-visa,Types de visa,Visa types,Tipos de visa
+notre-approche,Notre approche,Our approach,Nuestro enfoque
+accompagnement-sur-mesure-pour-vos-salari-s,Accompagnement sur mesure pour vos salariés de nationalité étrangère,Tailored support for your foreign employees,Acompañamiento a medida para sus empleados extranjeros
+voir-nos-services,Voir nos services,See our services,Ver nuestros servicios
+visa-passeport-talent,Visa Passeport Talent,Passeport Talent visa,Visa Passeport Talent
+visa-salari,Visa Salarié,Employee visa,Visa de asalariado
+visa-travailleur-temporaire,Visa travailleur temporaire,Temporary worker visa,Visa de trabajador temporal
+visa-saisonnier,Visa saisonnier,Seasonal worker visa,Visa de temporada
+visa-famille-2,Visa Famille,Family visa,Visa familiar
+obtention-de-visa,Obtention de visa,Obtaining a visa,Obtención de la visa
+renouvellements,Renouvellements,Renewals,Renovaciones
+vos-quipes-avancent-l-administration-ne-les,"Vos équipes avancent, l'administration ne les retient plus","Your teams move forward, red tape no longer holds them back","Sus equipos avanzan, la administración ya no los frena"
+pour-vos-salari-s-et-leurs-familles-nous-off,"Pour vos salariés et leurs familles, nous offrons un accompagnement premium, humain et sur mesure, garantissant une installation sereine et réussie du premier jour au dernier détail.","For your employees and their families, we offer premium, human and tailored support, ensuring a smooth and successful move from the first day down to the last detail.","Para sus empleados y sus familias, ofrecemos un acompañamiento premium, humano y a medida, que garantiza una instalación tranquila y exitosa desde el primer día hasta el último detalle."
+ce-que-vous-y-gagnez,Ce que vous y gagnez,What you gain,Lo que usted gana
+agilit-op-rationnelle-maximale,Agilité opérationnelle maximale,Maximum operational agility,Máxima agilidad operativa
+int-gration-acc-l-r-e-des-talents,Intégration accélérée des talents,Faster talent onboarding,Integración acelerada del talento
+z-ro-blocage-administratif,Zéro blocage administratif,Zero administrative roadblocks,Cero bloqueos administrativos
+focus-total-sur-votre-croissance,Focus total sur votre croissance,Full focus on your growth,Foco total en su crecimiento
+demandez-un-devis,Demandez un devis,Request a quote,Solicite un presupuesto
+cinq-prestations-un-seul-interlocuteur,"Cinq prestations, un seul interlocuteur","Five services, one single point of contact","Cinco servicios, un único interlocutor"
+gestion-des-visas-et-titres-de-s-jour,Gestion des visas et titres de séjour,Visa and residence permit management,Gestión de visas y permisos de residencia
+aide-administrative-et-int-gration,Aide administrative et intégration,Administrative assistance and integration,Ayuda administrativa e integración
+notre-quipe-pilote-l-int-gralit-du-parcours,Notre équipe pilote l'intégralité du parcours d'immigration : de la demande préalable d'autorisation de travail jusqu'à la délivrance finale du visa ou de la carte de séjour.,Our team runs the entire immigration process: from the initial work permit application to the final issue of the visa or residence card.,Nuestro equipo gestiona todo el proceso de inmigración: desde la solicitud previa de autorización de trabajo hasta la entrega final de la visa o de la tarjeta de residencia.
+nous-garantissons-des-dossiers-100-conformes,"Nous garantissons des dossiers 100 % conformes afin de réduire les délais d'instruction et d'éliminer les risques de refus. Expertise complète : Passeport Talent, visas Salarié, Travailleur temporaire, Saisonnier, Stagiaire et Entrepreneur ou profession libérale.","We guarantee 100% compliant applications to cut processing times and eliminate the risk of refusal. Full expertise: Passeport Talent, Employee, Temporary worker, Seasonal, Intern and Entrepreneur or self-employed visas.","Garantizamos expedientes 100 % conformes para reducir los plazos de tramitación y eliminar el riesgo de denegación. Experiencia completa: Passeport Talent, visas de asalariado, trabajador temporal, temporada, prácticas y emprendedor o profesión liberal."
+confiez-vos-dossiers-nos-experts,Confiez vos dossiers à nos experts,Hand your applications to our experts,Confíe sus expedientes a nuestros expertos
+d-ployez-vos-quipes-en-france-en-toute-simpl,"Déployez vos équipes en France en toute simplicité, de l'obtention des visas de détachement jusqu'à la finalisation des formalités administratives.","Deploy your teams in France with ease, from obtaining posting visas to completing the administrative formalities.","Despliegue sus equipos en Francia con total sencillez, desde la obtención de las visas de desplazamiento hasta la finalización de los trámites administrativos."
+nous-prenons-en-charge-l-int-gralit-du-parco,"Nous prenons en charge l'intégralité du parcours : déclarations SIPSI, couverture sociale adaptée, vérification des rémunérations et rédaction des conventions de prestation. Nous fluidifions l'arrivée de vos salariés détachés pour vous garantir des missions réussies, sans retard ni risque de blocage administratif lors de vos déplacements internationaux.","We handle the whole process: SIPSI declarations, appropriate social cover, pay checks and drafting service agreements. We make your posted employees' arrival smooth so your assignments succeed, with no delays or risk of administrative hold-ups during your international travel.","Nos ocupamos de todo el proceso: declaraciones SIPSI, cobertura social adecuada, verificación de salarios y redacción de los contratos de prestación. Facilitamos la llegada de sus trabajadores desplazados para que sus misiones salgan bien, sin retrasos ni riesgo de bloqueo administrativo en sus desplazamientos internacionales."
+s-curisez-une-mission-en-france,Sécurisez une mission en France,Secure an assignment in France,Asegure una misión en Francia
+anticipez-les-blocages-administratifs-et-fia,Anticipez les blocages administratifs et fiabilisez les dossiers de vos collaborateurs.,Anticipate administrative roadblocks and make your employees' applications watertight.,Anticípese a los bloqueos administrativos y asegure los expedientes de sus empleados.
+nous-auditons-vos-dossiers-en-cours-v-rifion,"Nous auditons vos dossiers en cours, vérifions la conformité des pièces auprès des préfectures et résolvons vos doutes techniques en temps réel. Un véritable partenaire au quotidien pour sécuriser vos recrutements et piloter votre politique RH en toute sérénité.","We audit your ongoing applications, check that documents meet prefecture requirements and resolve your technical questions in real time. A true day-to-day partner to secure your hiring and run your HR policy with peace of mind.","Auditamos sus expedientes en curso, verificamos la conformidad de los documentos ante las prefecturas y resolvemos sus dudas técnicas en tiempo real. Un verdadero socio en el día a día para asegurar sus contrataciones y gestionar su política de RR. HH. con total tranquilidad."
+posez-une-question-un-expert,Posez une question à un expert,Ask an expert a question,Pregunte a un experto
+le-succ-s-d-un-recrutement-international-rep,Le succès d'un recrutement international repose aussi sur une installation réussie.,A successful international hire also depends on a successful move.,El éxito de una contratación internacional también depende de una buena instalación.
+nous-accompagnons-pas-pas-vos-salari-s-dans,Nous accompagnons pas à pas vos salariés dans toutes leurs démarches de vie quotidienne en France : de l'affiliation à l'Assurance Maladie (CPAM) et l'obtention de leur numéro de sécurité sociale jusqu'à la conversion de leur permis de conduire. Assurez un onboarding premium et garantissez la sérénité de vos collaborateurs et de leurs proches.,We guide your employees step by step through all their everyday procedures in France: from registering with the national health insurance (CPAM) and getting their social security number to converting their driving licence. Offer a premium onboarding and peace of mind to your employees and their families.,Acompañamos paso a paso a sus empleados en todos sus trámites de la vida cotidiana en Francia: desde la afiliación al seguro de salud (CPAM) y la obtención de su número de seguridad social hasta el canje de su permiso de conducir. Ofrezca un onboarding premium y garantice la tranquilidad de sus empleados y de sus familias.
+faciliter-l-installation-de-vos-talents,Faciliter l'installation de vos talents,Make settling in easy for your talent,Facilite la instalación de su talento
+offrez-un-accompagnement-d-exception-vos-cad,Offrez un accompagnement d'exception à vos cadres et dirigeants installés durablement en France.,Offer exceptional support to your executives and managers settled in France for the long term.,Ofrezca un acompañamiento excepcional a sus directivos instalados de forma duradera en Francia.
+pour-vos-collaborateurs-cl-s-l-acc-s-la-nati,"Pour vos collaborateurs clés, l'accès à la nationalité française constitue une étape décisive. Nous proposons un accompagnement sur mesure pour la constitution et le suivi des dossiers de naturalisation, par décret ou par mariage. De la vérification rigoureuse des actes d'état civil et de la complétude du dossier jusqu'à la préparation aux entretiens en préfecture, nous maximisons les chances d'obtention de la nationalité française.","For your key employees, access to French citizenship is a decisive step. We offer tailored support to prepare and follow up naturalisation applications, by decree or through marriage. From thorough checks of civil status records and the completeness of the file to preparing for prefecture interviews, we maximise the chances of obtaining French citizenship.","Para sus empleados clave, el acceso a la nacionalidad francesa es un paso decisivo. Ofrecemos un acompañamiento a medida para preparar y seguir los expedientes de naturalización, por decreto o por matrimonio. Desde la verificación rigurosa de las actas de estado civil y de la integridad del expediente hasta la preparación de las entrevistas en la prefectura, maximizamos las posibilidades de obtener la nacionalidad francesa."
+contacter-un-expert,Contacter un expert,Contact an expert,Contactar a un experto
+ce-que-les-entreprises-nous-demandent,Ce que les entreprises nous demandent,What companies ask us,Lo que nos preguntan las empresas
+meta-title,Visas et titres de séjour pour les particuliers | INWARD,Visas and residence permits for individuals | INWARD,Visas y permisos de residencia para particulares | INWARD
+meta-description,"Étudiant, salarié, freelance, retraité ou conjoint : INWARD vous accompagne dans vos démarches de visa, de titre de séjour et d'installation en France, du conseil à la gestion complète du dossier.","Student, employee, freelancer, retiree or spouse: INWARD supports you with your visa, residence permit and settling-in procedures in France, from advice to full management of your application.","Estudiante, asalariado, freelance, jubilado o cónyuge: INWARD le acompaña en sus trámites de visa, permiso de residencia e instalación en Francia, desde el asesoramiento hasta la gestión completa del expediente."
+meta-og-description,"Quelle que soit votre situation, nous sommes là pour rendre votre installation en France possible.","Whatever your situation, we are here to make your move to France possible.","Sea cual sea su situación, estamos aquí para hacer posible su instalación en Francia."
+change-entre-une-consultante-inward-et-des,Échange entre une consultante INWARD et des clients,Conversation between an INWARD consultant and clients,Conversación entre una consultora de INWARD y clientes
+reponse-redigee-a-partir-des-textes-du-site,Reponse redigee a partir des textes du site : a valider avec la cliente,Answer written from the site's content: to be approved with the client,Respuesta redactada a partir de los textos del sitio: a validar con la clienta
+deux-fa-ons-de-travailler-ensemble,Deux façons de travailler ensemble,Two ways to work together,Dos formas de trabajar juntos
+visas,Visas,Visas,Visas
+soutien-au-nouvel-arrivant,Soutien au nouvel arrivant,Support for newcomers,Apoyo al recién llegado
+service-de-mobilit-internationale-pour-les-p,Service de mobilité internationale pour les particuliers,International mobility services for individuals,Servicio de movilidad internacional para particulares
+tudiant-retrait-freelance-salari-conjoint-d,"Étudiant, retraité, freelance, salarié, conjoint de Français, conjoint d'Européen, mineur scolarisé, employé détaché… Quelle que soit votre situation et votre motivation pour vivre en France, nous sommes là pour le rendre possible.","Student, retiree, freelancer, employee, spouse of a French or EU citizen, school-age child, posted worker… Whatever your situation and your reasons for living in France, we are here to make it happen.","Estudiante, jubilado, freelance, asalariado, cónyuge de francés o de europeo, menor escolarizado, trabajador desplazado… Sea cual sea su situación y su motivación para vivir en Francia, estamos aquí para hacerlo posible."
+les-visas-que-nous-accompagnons,Les visas que nous accompagnons,The visas we support,Las visas que acompañamos
+constitution-du-dossier-prise-de-rendez-vous,"Constitution du dossier, prise de rendez-vous, validation du visa.","Preparing the application, booking the appointment, validating the visa.","Preparación del expediente, toma de cita, validación de la visa."
+inscription-campus-france-prise-de-rendez-vo,"Inscription à Campus France, prise de rendez-vous, constitution du dossier, validation du visa.","Campus France registration, booking the appointment, preparing the application, validating the visa.","Inscripción en Campus France, toma de cita, preparación del expediente, validación de la visa."
+tude-de-cas-constitution-du-dossier-prise-d,"Étude de cas, constitution du dossier, prise de rendez-vous, validation du visa.","Case review, preparing the application, booking the appointment, validating the visa.","Estudio del caso, preparación del expediente, toma de cita, validación de la visa."
+visas-de-travail,Visas de travail,Work visas,Visas de trabajo
+recherche-d-emploi-ou-cr-ation-d-entreprise,Recherche d'emploi ou création d'entreprise,Job search or business creation,Búsqueda de empleo o creación de empresa
+entrepreneur,Entrepreneur,Entrepreneur,Emprendedor
+des-quatre-coins-du-monde-jusqu-chez-vous-en,"Des quatre coins du monde jusqu'à chez vous, en France",From all over the world to your new home in France,"De todos los rincones del mundo hasta su casa, en Francia"
+nous-accompagnons-les-personnes-venant-des-q,"Nous accompagnons les personnes venant des quatre coins du monde dans les démarches administratives nécessaires pour venir en France, pour une courte ou une longue durée.","We support people from all over the world through the administrative procedures needed to come to France, for a short or a long stay.","Acompañamos a personas de todos los rincones del mundo en los trámites administrativos necesarios para venir a Francia, por una estancia corta o larga."
+nous-proposons-des-services-d-accompagnement,Nous proposons des services d'accompagnement et de gestion des différentes démarches administratives liées à votre installation en France.,We offer support and management services for the various administrative procedures involved in settling in France.,Ofrecemos servicios de acompañamiento y gestión de los distintos trámites administrativos vinculados a su instalación en Francia.
+dites-nous-plus-sur-votre-projet,Dites-nous plus sur votre projet,Tell us more about your project,Cuéntenos más sobre su proyecto
+autonomie,Autonomie,Self-guided,Autonomía
+vous-menez-les-d-marches,Vous menez les démarches,You handle the procedures,Usted lleva los trámites
+cl-s-en-main,Clés en main,Turnkey,Llave en mano
+vous-nous-confiez-le-dossier,Vous nous confiez le dossier,You hand us your case,Usted nos confía el expediente
+conseil-et-guide,Conseil et guide,Advice and guidance,Asesoramiento y guía
+vous-tes-aventurier-et-vous-voulez-faire-les,Vous êtes aventurier et vous voulez faire les démarches d'immigration et d'installation en France en toute indépendance ? Nous vous donnons les éléments et les outils pour naviguer l'administration française en tranquillité.,Adventurous and keen to handle your immigration and settling-in procedures in France on your own? We give you the information and tools to navigate French administration with peace of mind.,¿Es aventurero y quiere hacer sus trámites de inmigración e instalación en Francia por su cuenta? Le damos los elementos y las herramientas para moverse en la administración francesa con tranquilidad.
+conseil-diagnostic-du-projet-et-guide-sur-le,"Conseil, diagnostic du projet et guide sur les démarches à effectuer","Advice, project assessment and guidance on the steps to take","Asesoramiento, diagnóstico del proyecto y guía sobre los trámites a realizar"
+vous-souhaitez-r-aliser-vos-d-marches-d-immi,"Vous souhaitez réaliser vos démarches d'immigration et d'installation en France en toute autonomie ? Nous vous conseillons dans la définition de votre projet, vous aidons à choisir le visa le plus adapté et vous guidons dans le pas à pas de la procédure.","Want to handle your immigration and settling-in procedures in France on your own? We advise you as you define your project, help you choose the most suitable visa and guide you step by step through the procedure.","¿Quiere realizar sus trámites de inmigración e instalación en Francia de forma autónoma? Le asesoramos en la definición de su proyecto, le ayudamos a elegir la visa más adecuada y le guiamos paso a paso en el procedimiento."
+v-rification-du-dossier,Vérification du dossier,Application check,Revisión del expediente
+nous-v-rifions-galement-votre-dossier-avant,"Nous vérifions également votre dossier avant son dépôt ou après un refus, afin de vous aider à présenter une demande complète et conforme, et d'optimiser vos chances de succès.","We also check your application before it is filed or after a refusal, to help you submit a complete and compliant request and maximise your chances of success.","También revisamos su expediente antes de presentarlo o tras una denegación, para ayudarle a presentar una solicitud completa y conforme y aumentar sus posibilidades de éxito."
+gestion-et-prise-en-charge,Gestion et prise en charge,Full management,Gestión y acompañamiento integral
+laissez-vous-porter-par-une-quipe-d-experts,"Laissez-vous porter par une équipe d'experts qui gérera toutes les étapes, pour un résultat positif et en temps record.","Let a team of experts handle every step for you, for a positive result in record time.","Déjese llevar por un equipo de expertos que gestionará todas las etapas, para un resultado positivo y en tiempo récord."
+gestion-de-la-demande-de-visa,Gestion de la demande de visa,Visa application management,Gestión de la solicitud de visa
+confiez-nous-l-ensemble-de-vos-d-marches-adm,"Confiez-nous l'ensemble de vos démarches administratives. Nous prenons en charge la préparation du dossier, les formulaires, les demandes préalables, la prise de rendez-vous et le suivi jusqu'à l'obtention du visa ou de votre titre de séjour.","Hand us all your administrative procedures. We take care of preparing the application, the forms, the preliminary requests, booking appointments and following up until your visa or residence permit is obtained.","Confíenos todos sus trámites administrativos. Nos ocupamos de preparar el expediente, los formularios, las solicitudes previas, la toma de cita y el seguimiento hasta obtener la visa o su permiso de residencia."
+visa-pour-les-freelances-et-cr-ateurs-d-entr,Visa pour les freelances et créateurs d'entreprise,Visas for freelancers and business founders,Visa para freelances y creadores de empresa
+pour-les-freelances-et-cr-ateurs-d-entrepris,"Pour les freelances et créateurs d'entreprise, nous vous accompagnons également dans la conception du projet, l'élaboration du business plan et l'obtention de l'avis favorable de l'administration française.","For freelancers and business founders, we also help you shape the project, draft the business plan and obtain the favourable opinion of the French authorities.","Para freelances y creadores de empresa, también le acompañamos en la concepción del proyecto, la elaboración del plan de negocio y la obtención del dictamen favorable de la administración francesa."
+faire-le-point-sur-mon-projet,Faire le point sur mon projet,Review my project,Hacer un balance de mi proyecto
+confier-mon-dossier,Confier mon dossier,Hand over my case,Confiar mi expediente
+apr-s-l-arriv-e,Après l'arrivée,After arrival,Después de la llegada
+inscription-au-syst-me-de-sant-fran-ais,Inscription au système de santé français,Registering with the French health system,Inscripción en el sistema de salud francés
+nous-effectuons-les-d-marches-pour-vous,Nous effectuons les démarches pour vous.,We handle the procedures for you.,Hacemos los trámites por usted.
+demande-de-carte-vitale,Demande de carte Vitale,Carte Vitale application,Solicitud de la carte Vitale
+lorem-ipsum-dolor-sit-amet-consectetur-adipi,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+lorem-ipsum,Lorem ipsum,Lorem ipsum,Lorem ipsum
+ce-que-les-particuliers-nous-demandent,Ce que les particuliers nous demandent,What individuals ask us,Lo que nos preguntan los particulares
+quelle-est-la-diff-rence-entre-l-accompagnem,Quelle est la différence entre l'accompagnement Autonomie et Clés en main ?,What is the difference between Self-guided and Turnkey support?,¿Qué diferencia hay entre el acompañamiento Autonomía y Llave en mano?
+texte-valider,Texte à valider,Text to be approved,Texto a validar
+avec-autonomie-vous-menez-vous-m-me-vos-d-m,". Avec Autonomie, vous menez vous-même vos démarches : nous analysons votre projet, identifions le visa adapté et vous guidons étape par étape. Avec Clés en main, notre équipe prend en charge l'ensemble du dossier, de la prise de rendez-vous jusqu'à la validation du visa ou la demande de carte de séjour à votre arrivée.",". With Self-guided, you handle the procedures yourself: we analyse your project, identify the right visa and guide you step by step. With Turnkey, our team takes care of the whole application, from booking the appointment to validating the visa or applying for the residence card on arrival.",". Con Autonomía, usted lleva sus propios trámites: analizamos su proyecto, identificamos la visa adecuada y le guiamos paso a paso. Con Llave en mano, nuestro equipo se ocupa de todo el expediente, desde la toma de cita hasta la validación de la visa o la solicitud de la tarjeta de residencia a su llegada."
+pour-quels-visas-et-titres-de-s-jour-pouvez,Pour quels visas et titres de séjour pouvez-vous m'accompagner ?,Which visas and residence permits can you help me with?,¿Con qué visas y permisos de residencia pueden acompañarme?
+visa-visiteur-visa-tudiant-profession-lib-r,". Visa visiteur, visa étudiant, profession libérale et création d'entreprise, visa famille, mais aussi changement de statut, renouvellement de titre de séjour et naturalisation.",". Visitor visa, student visa, self-employed and business creation, family visa, as well as change of status, residence permit renewal and naturalisation.",". Visa de visitante, visa de estudiante, profesión liberal y creación de empresa, visa familiar, y también cambio de estatus, renovación del permiso de residencia y naturalización."
+pouvez-vous-v-rifier-mon-dossier-avant-le-d,"Pouvez-vous vérifier mon dossier avant le dépôt, ou après un refus ?","Can you check my application before filing it, or after a refusal?","¿Pueden revisar mi expediente antes de presentarlo, o tras una denegación?"
+oui-avant-le-d-p-t-de-votre-demande-ou-avan,". Oui. Avant le dépôt de votre demande, ou avant un nouveau dépôt après un refus, nous vérifions votre dossier pour mettre toutes les chances de votre côté.",". Yes. Before you file your application, or before refiling after a refusal, we check your file to give you the best possible chance.",". Sí. Antes de presentar su solicitud, o antes de volver a presentarla tras una denegación, revisamos su expediente para que tenga todas las posibilidades de su lado."
+accompagnez-vous-les-freelances-et-les-cr-at,Accompagnez-vous les freelances et les créateurs d'entreprise ?,Do you support freelancers and business founders?,¿Acompañan a freelances y creadores de empresa?
+oui-d-s-la-conception-du-projet-business-pl,". Oui, dès la conception du projet : business plan, obtention de l'avis favorable auprès de l'administration française, constitution du dossier, prise de rendez-vous, puis validation du visa ou demande de carte de séjour.",". Yes, from the very start of the project: business plan, obtaining the favourable opinion of the French authorities, preparing the application, booking the appointment, then validating the visa or applying for the residence card.",". Sí, desde la concepción del proyecto: plan de negocio, obtención del dictamen favorable de la administración francesa, preparación del expediente, toma de cita y luego validación de la visa o solicitud de la tarjeta de residencia."
+m-accompagnez-vous-aussi-une-fois-arriv-en-f,M'accompagnez-vous aussi une fois arrivé en France ?,Do you also support me once I've arrived in France?,¿También me acompañan una vez que llegue a Francia?
+oui-validation-du-visa-ou-demande-de-carte,". Oui : validation du visa ou demande de carte de séjour à votre arrivée, puis démarches d'installation comme l'assurance maladie et la sécurité sociale.",". Yes: validating the visa or applying for the residence card on arrival, then settling-in procedures such as health insurance and social security.",". Sí: validación de la visa o solicitud de la tarjeta de residencia a su llegada, y luego los trámites de instalación como el seguro médico y la seguridad social."
+combien-co-te-un-accompagnement,Combien coûte un accompagnement ?,How much does support cost?,¿Cuánto cuesta un acompañamiento?
+meta-title,Blog : guides et actualité du droit des étrangers | INWARD,Blog: guides and news on immigration law | INWARD,Blog: guías y novedades del derecho de extranjería | INWARD
+meta-description,"Guides, délais de préfecture et actualité du droit des étrangers en France, par les experts en immigration d'INWARD.","Guides, prefecture processing times and news on immigration law in France, by INWARD's immigration experts.","Guías, plazos de prefectura y novedades del derecho de extranjería en Francia, por los expertos en inmigración de INWARD."
+cat-gories-valider-avec-la-cliente,Catégories à valider avec la cliente,Categories to be approved with the client,Categorías a validar con la clienta
+cat-gories-du-blog,Catégories du blog,Blog categories,Categorías del blog
+articles,Articles,Articles,Artículos
+cat-gories,Catégories,Categories,Categorías
+valider,à valider,to be approved,a validar
+guides,Guides,Guides,Guías
+actualit,Actualité,News,Actualidad
+aucun-article-dans-cette-cat-gorie-pour-le-m,Aucun article dans cette catégorie pour le moment.,No articles in this category yet.,Todavía no hay artículos en esta categoría.
+avant-de-nous-contacter,Avant de nous contacter,Before you contact us,Antes de contactarnos
+comment-se-d-roule-le-premier-rendez-vous,Comment se déroule le premier rendez-vous ?,How does the first meeting work?,¿Cómo es la primera cita?
+quelques-questions-pour-cerner-votre-situat,". Quelques questions pour cerner votre situation, puis un rendez-vous avec la personne qui suivra votre dossier.",". A few questions to understand your situation, then a meeting with the person who will handle your case.",. Unas preguntas para entender su situación y luego una cita con la persona que llevará su expediente.
+quelles-informations-pr-parer-avant-notre-pr,Quelles informations préparer avant notre premier échange ?,What information should I prepare before our first conversation?,¿Qué información preparar antes de nuestra primera conversación?
+votre-nationalit-votre-statut-actuel-en-fra,". Votre nationalité, votre statut actuel en France ou à l'étranger, et vos échéances : date d'arrivée souhaitée, expiration de votre titre ou date de début de contrat.",". Your nationality, your current status in France or abroad, and your deadlines: preferred arrival date, permit expiry date or contract start date.",". Su nacionalidad, su situación actual en Francia o en el extranjero y sus plazos: fecha de llegada deseada, vencimiento de su permiso o fecha de inicio del contrato."
+vous-accompagnez-aussi-les-personnes-d-j-ins,Vous accompagnez aussi les personnes déjà installées en France ?,Do you also support people already living in France?,¿También acompañan a personas que ya viven en Francia?
+oui-renouvellement-de-titre-de-s-jour-chang,". Oui : renouvellement de titre de séjour, changement de statut, carte de résident et naturalisation.",". Yes: residence permit renewal, change of status, resident card and naturalisation.",". Sí: renovación del permiso de residencia, cambio de estatus, tarjeta de residente y naturalización."
+que-faire-apr-s-un-refus-de-visa,Que faire après un refus de visa ?,What should I do after a visa refusal?,¿Qué hacer tras una denegación de visa?
+avant-de-red-poser-faites-v-rifier-votre-do,". Avant de redéposer, faites vérifier votre dossier : nous identifions ce qui a pu bloquer et préparons un nouveau dépôt solide.",". Before refiling, have your application checked: we identify what may have gone wrong and prepare a solid new application.",". Antes de volver a presentarla, haga revisar su expediente: identificamos lo que pudo fallar y preparamos una nueva solicitud sólida."
+combien-de-temps-prennent-les-d-marches-en-p,Combien de temps prennent les démarches en préfecture ?,How long do prefecture procedures take?,¿Cuánto tardan los trámites en la prefectura?
+en-attendant-voir-notre-article,". En attendant, voir notre article",". In the meantime, see our article",". Mientras tanto, vea nuestro artículo"
+sur-les-d-lais-en-pr-fecture,sur les délais en préfecture,on prefecture processing times,sobre los plazos de prefectura
+dans-quelles-langues-pouvez-vous-m-accompagn,Dans quelles langues pouvez-vous m'accompagner ?,In which languages can you support me?,¿En qué idiomas pueden acompañarme?
+meta-title,Comment faire un changement de statut de salarié à entrepreneur | INWARD,How to change status from employee to entrepreneur | INWARD,Cómo pasar de asalariado a emprendedor | INWARD
+texte-de-l-article-a-fournir-par-la-cliente,Texte de l'article a fournir par la cliente,Article text to be provided by the client,Texto del artículo a proporcionar por la clienta
+fil-d-ariane,Fil d'Ariane,Breadcrumb,Ruta de navegación
+article,Article,Article,Artículo
+texte-de-l-article-r-diger,Texte de l'article à rédiger,Article text to be written,Texto del artículo a redactar
+cette-page-existe-pour-fixer-l-url-le-titre,"Cette page existe pour fixer l'URL, le titre et le fil d'Ariane. Le contenu sera publié dès que la cliente l'aura fourni.","This page exists to set the URL, the title and the breadcrumb. The content will be published as soon as the client provides it.","Esta página existe para fijar la URL, el título y la ruta de navegación. El contenido se publicará en cuanto la clienta lo proporcione."
+tous-les-articles,‹ Tous les articles,‹ All articles,‹ Todos los artículos
+meta-title,Délais préfecture carte de séjour 2026 | INWARD,Prefecture processing times for residence permits in 2026 | INWARD,Plazos de prefectura para el permiso de residencia en 2026 | INWARD
+meta-title,Vidéos | INWARD,Videos | INWARD,Videos | INWARD
+meta-description,"Les vidéos publiées par INWARD, cabinet de conseil en immigration et mobilité internationale en France.","Videos published by INWARD, immigration and international mobility consultancy in France.","Los videos publicados por INWARD, consultoría de inmigración y movilidad internacional en Francia."
+les-fondatrices-d-inward-devant-le-palais-ga,"Les fondatrices d'INWARD devant le Palais Garnier, à Paris","The INWARD founders in front of the Palais Garnier, Paris","Las fundadoras de INWARD frente al Palais Garnier, en París"
+chaque-vid-o-publi-e-sur-le-site-a-sa-propre,"Chaque vidéo publiée sur le site a sa propre page, avec son titre, sa description et sa fiche structurée, pour qu'elle puisse être indexée.","Each video published on the site has its own page, with its title, description and structured data, so that it can be indexed.","Cada video publicado en el sitio tiene su propia página, con su título, su descripción y su ficha estructurada, para que pueda indexarse."
+inward-devant-le-palais-garnier,INWARD devant le Palais Garnier,INWARD in front of the Palais Garnier,INWARD frente al Palais Garnier
+s-quence-d-accueil-du-site-les-fondatrices-d,"Séquence d'accueil du site : les fondatrices d'INWARD, Delfina Benitez Cruz et Marina Biedma, devant le Palais Garnier, à Paris.","The site's welcome sequence: INWARD's founders, Delfina Benitez Cruz and Marina Biedma, in front of the Palais Garnier, Paris.","Secuencia de bienvenida del sitio: las fundadoras de INWARD, Delfina Benitez Cruz y Marina Biedma, frente al Palais Garnier, en París."
+meta-title,INWARD devant le Palais Garnier | INWARD,INWARD in front of the Palais Garnier | INWARD,INWARD frente al Palais Garnier | INWARD
+date-de-mise-en-ligne-a-confirmer-par-la-cli,Date de mise en ligne a confirmer par la cliente,Upload date to be confirmed by the client,Fecha de publicación a confirmar por la clienta
+lecture,Lecture,Play,Reproducir
+vid-o,Vidéo,Video,Video
+votre-navigateur-ne-lit-pas-cette-vid-o,Votre navigateur ne lit pas cette vidéo.,Your browser cannot play this video.,Su navegador no puede reproducir este video.
+t-l-charger-la-vid-o-mp4,Télécharger la vidéo (MP4),Download the video (MP4),Descargar el video (MP4)
+dur-e,Durée,Duration,Duración
+20-secondes,20 secondes,20 seconds,20 segundos
+format,Format,Format,Formato
+mp4-et-webm-1440-810,"MP4 et WebM, 1440 × 810","MP4 and WebM, 1440 × 810","MP4 y WebM, 1440 × 810"
+lieu,Lieu,Location,Lugar
+palais-garnier-paris,"Palais Garnier, Paris","Palais Garnier, Paris","Palais Garnier, París"
+date-de-publication,Date de publication,Publication date,Fecha de publicación
+confirmer,À confirmer,To be confirmed,A confirmar
+toutes-les-vid-os,‹ Toutes les vidéos,‹ All videos,‹ Todos los videos
+meta-title,Qui sommes-nous · L'histoire d'INWARD,About us · The INWARD story,Quiénes somos · La historia de INWARD
+meta-description,"INWARD, agence de mobilité internationale fondée en 2020 à Paris par Delfina Benitez Cruz et Marina Biedma, deux expatriées. Notre histoire et notre mission.","INWARD, an international mobility agency founded in Paris in 2020 by Delfina Benitez Cruz and Marina Biedma, two expats. Our story and our mission.","INWARD, agencia de movilidad internacional fundada en 2020 en París por Delfina Benitez Cruz y Marina Biedma, dos expatriadas. Nuestra historia y nuestra misión."
+delfina-benitez-cruz-et-marina-biedma-fondat,"Delfina Benitez Cruz et Marina Biedma, fondatrices d'INWARD","Delfina Benitez Cruz and Marina Biedma, founders of INWARD","Delfina Benitez Cruz y Marina Biedma, fundadoras de INWARD"
+portrait-de-delfina-benitez-cruz-cofondatric,"Portrait de Delfina Benitez Cruz, cofondatrice d'INWARD","Portrait of Delfina Benitez Cruz, co-founder of INWARD","Retrato de Delfina Benitez Cruz, cofundadora de INWARD"
+portrait-de-marina-biedma-cofondatrice-d-inw,"Portrait de Marina Biedma, cofondatrice d'INWARD","Portrait of Marina Biedma, co-founder of INWARD","Retrato de Marina Biedma, cofundadora de INWARD"
+comment-nous-travaillons,Comment nous travaillons,How we work,Cómo trabajamos
+notre-histoire,Notre histoire,Our story,Nuestra historia
+en-2020-nous-avons-fond-inward-avec-une-conv,"En 2020, nous avons fondé INWARD avec une conviction claire : la gestion des démarches administratives et l'installation ne devaient plus jamais être un frein au recrutement des meilleurs talents.","In 2020, we founded INWARD with a clear conviction: administrative procedures and relocation should never again stand in the way of hiring the best talent.",En 2020 fundamos INWARD con una convicción clara: la gestión de los trámites administrativos y la instalación nunca más debían ser un freno para contratar a los mejores talentos.
+tant-nous-m-mes-expatri-es-nous-avons-v-cu,"Étant nous-mêmes expatriées, nous avons vécu ce parcours du combattant de l'intérieur. Après avoir traversé seules le labyrinthe administratif français, nous avons décidé de mettre notre expérience et notre expertise au service des autres pour rendre ce processus simple, humain et fluide.","As expats ourselves, we went through this obstacle course first-hand. After making our own way through the French administrative maze, we decided to put our experience and expertise at the service of others, to make the process simple, human and smooth.","Como expatriadas, vivimos esta carrera de obstáculos desde adentro. Después de atravesar solas el laberinto administrativo francés, decidimos poner nuestra experiencia y nuestros conocimientos al servicio de los demás para que este proceso fuera simple, humano y fluido."
+fortes-de-notre-expertise-r-glementaire-et-d,"Fortes de notre expertise réglementaire et de notre approche de terrain, nous agissons comme un véritable partenaire RH stratégique pour les startups, PME et grands groupes. Notre mission ? Transformer la complexité des démarches d'immigration en un parcours simple, fluide et sécurisé pour vos équipes et vos collaborateurs internationaux.","Drawing on our regulatory expertise and hands-on approach, we act as a true strategic HR partner for start-ups, SMEs and large groups. Our mission? To turn the complexity of immigration procedures into a simple, smooth and secure journey for your teams and your international employees.","Con nuestra experiencia normativa y nuestro enfoque de terreno, actuamos como un verdadero socio estratégico de RR. HH. para start-ups, pymes y grandes grupos. ¿Nuestra misión? Transformar la complejidad de los trámites de inmigración en un recorrido simple, fluido y seguro para sus equipos y sus empleados internacionales."
+l-quipe,L'équipe,The team,El equipo
+cofondatrice,Cofondatrice,Co-founder,Cofundadora
+lorem-ipsum-dolor-sit-amet-consectetur-adipi,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
+notre-m-thode,Notre méthode,Our method,Nuestro método
+premier-contact-r-actif,Premier contact réactif,A quick first contact,Un primer contacto rápido
+vous-nous-faites-part-de-vos-besoins-notre-q,Vous nous faites part de vos besoins. Notre équipe vous recontacte en moins de 24 heures pour cadrer votre demande.,You tell us what you need. Our team gets back to you within 24 hours to scope your request.,Nos cuenta sus necesidades. Nuestro equipo le vuelve a contactar en menos de 24 horas para definir su solicitud.
+diagnostic-devis-sur-mesure,Diagnostic & devis sur mesure,Assessment & tailored quote,Diagnóstico y presupuesto a medida
+nous-analysons-la-situation-de-votre-entrepr,"Nous analysons la situation de votre entreprise et de vos futurs collaborateurs pour définir la feuille de route idéale. Vous recevez un devis clair et personnalisé, adapté à vos enjeux.","We analyse the situation of your company and your future employees to define the ideal roadmap. You receive a clear, personalised quote tailored to your needs.","Analizamos la situación de su empresa y de sus futuros empleados para definir la hoja de ruta ideal. Recibe un presupuesto claro y personalizado, adaptado a sus necesidades."
+prise-en-charge-d-ploiement,Prise en charge & déploiement,Handling & roll-out,Gestión y despliegue
+nous-prenons-imm-diatement-le-relais-sur-le,"Nous prenons immédiatement le relais sur le dossier. Grâce à un suivi proactif et réactif, nous évitons les ralentissements administratifs et sécurisons l'ensemble de la procédure.","We take over the case straight away. With proactive, responsive follow-up, we avoid administrative delays and secure the whole procedure.","Tomamos el expediente de inmediato. Gracias a un seguimiento proactivo y reactivo, evitamos demoras administrativas y aseguramos todo el procedimiento."
+obtention-finalisation,Obtention & finalisation,Approval & completion,Obtención y finalización
+vos-visas-titres-de-s-jour-ou-d-marches-d-in,"Vos visas, titres de séjour ou démarches d'installation sont validés. Vos collaborateurs internationaux peuvent démarrer leur activité en toute sérénité.","Your visas, residence permits or settling-in procedures are approved. Your international employees can start work with complete peace of mind.","Sus visas, permisos de residencia o trámites de instalación quedan validados. Sus empleados internacionales pueden empezar su actividad con total tranquilidad."

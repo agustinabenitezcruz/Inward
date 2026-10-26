@@ -8,6 +8,28 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/en/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/es/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/"/>
   </url>
   <url>
@@ -16,6 +38,28 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/entreprises/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/entreprises/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/entreprises/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/entreprises/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/en/entreprises/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/entreprises/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/entreprises/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/entreprises/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/entreprises/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/es/entreprises/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/entreprises/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/entreprises/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/entreprises/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/entreprises/"/>
   </url>
   <url>
@@ -24,6 +68,28 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/particuliers/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/particuliers/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/particuliers/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/particuliers/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/en/particuliers/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/particuliers/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/particuliers/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/particuliers/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/particuliers/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/es/particuliers/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/particuliers/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/particuliers/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/particuliers/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/particuliers/"/>
   </url>
   <url>
@@ -32,6 +98,28 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/blog/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/en/blog/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/blog/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/es/blog/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/blog/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/blog/"/>
   </url>
   <url>
@@ -40,6 +128,28 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/videos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/videos/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/videos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/videos/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/en/videos/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/videos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/videos/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/videos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/videos/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/es/videos/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/videos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/videos/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/videos/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/videos/"/>
   </url>
   <url>
@@ -48,6 +158,28 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/videos/presentation-inward-palais-garnier/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/videos/presentation-inward-palais-garnier/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/videos/presentation-inward-palais-garnier/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/videos/presentation-inward-palais-garnier/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/en/videos/presentation-inward-palais-garnier/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/videos/presentation-inward-palais-garnier/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/videos/presentation-inward-palais-garnier/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/videos/presentation-inward-palais-garnier/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/videos/presentation-inward-palais-garnier/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/es/videos/presentation-inward-palais-garnier/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/videos/presentation-inward-palais-garnier/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/videos/presentation-inward-palais-garnier/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/videos/presentation-inward-palais-garnier/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/videos/presentation-inward-palais-garnier/"/>
   </url>
   <url>
@@ -56,6 +188,28 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/qui-sommes-nous/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/qui-sommes-nous/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/qui-sommes-nous/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/qui-sommes-nous/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/en/qui-sommes-nous/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/qui-sommes-nous/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/qui-sommes-nous/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/qui-sommes-nous/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/qui-sommes-nous/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/es/qui-sommes-nous/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/qui-sommes-nous/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/qui-sommes-nous/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/qui-sommes-nous/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/qui-sommes-nous/"/>
   </url>
 </urlset>

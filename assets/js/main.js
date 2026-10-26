@@ -1,6 +1,35 @@
 (function(){
   var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  /* Textos que arma el JavaScript (formulario, opiniones). El HTML se traduce
+     con build.py; esto no pasa por ahi, asi que lleva su propio diccionario
+     segun el idioma de la pagina. */
+  var LANG = (document.documentElement.lang || "fr").slice(0, 2);
+  var TXT = {
+    fr: { invalid: "Adresse email invalide.", pro: "Merci d'utiliser une adresse professionnelle.",
+          empty: "Merci d'indiquer une adresse email.", reviews: [" avis vérifié", " avis vérifiés"], of5: " sur 5",
+          demo: "Aperçu : avis fictifs, pour visualiser la mise en page",
+          doneH: "Merci, votre demande a bien été envoyée.",
+          doneP: "Dernière étape : choisissez le créneau qui vous convient pour échanger avec la personne qui suivra votre dossier.",
+          doneB: "Choisir un créneau",
+          fail: "L'envoi n'a pas abouti. Réessayez dans un instant, ou réservez directement votre créneau ", failL: "sur Calendly" },
+    en: { invalid: "Invalid email address.", pro: "Please use a business email address.",
+          empty: "Please enter an email address.", reviews: [" verified review", " verified reviews"], of5: " out of 5",
+          demo: "Preview: sample reviews, to show the layout",
+          doneH: "Thank you, your request has been sent.",
+          doneP: "Last step: choose a time slot to talk with the person who will handle your case.",
+          doneB: "Choose a time slot",
+          fail: "Your message could not be sent. Please try again in a moment, or book your slot directly ", failL: "on Calendly" },
+    es: { invalid: "Dirección de email no válida.", pro: "Utilice una dirección de email profesional.",
+          empty: "Indique una dirección de email.", reviews: [" opinión verificada", " opiniones verificadas"], of5: " de 5",
+          demo: "Vista previa: opiniones de ejemplo, para ver el diseño",
+          doneH: "Gracias, su solicitud fue enviada.",
+          doneP: "Último paso: elija el horario que le convenga para hablar con la persona que llevará su expediente.",
+          doneB: "Elegir un horario",
+          fail: "No se pudo enviar. Vuelva a intentarlo en un momento, o reserve directamente su horario ", failL: "en Calendly" }
+  };
+  var T = TXT[LANG] || TXT.fr;
+
   /* ---------- Logos clientes en carrusel ----------
      Va primero: la copia tiene que existir antes de que el bloque "lo que ya
      se ve al cargar" recorra los .logos li, o la mitad del carril se quedaria
@@ -680,7 +709,7 @@
     if (demo) {
       var aviso = document.createElement("p");
       aviso.className = "avis-demo";
-      aviso.textContent = "Aperçu : avis fictifs, pour visualiser la mise en page";
+      aviso.textContent = T.demo;
       avis.querySelector(".avis-in").insertAdjacentElement("beforebegin", aviso);
     }
     (demo ? Promise.resolve(DEMO) : fetch(api, { headers: { Accept: "application/json" } })
@@ -693,7 +722,7 @@
         avis.querySelector('[data-avis="stars"]').innerHTML = stars(d.rating || 0);
         if (d.count != null) {
           avis.querySelector('[data-avis="count"]').textContent =
-            d.count + (d.count > 1 ? " avis vérifiés" : " avis vérifié");
+            d.count + T.reviews[d.count > 1 ? 1 : 0];
         }
         var src = avis.querySelector('[data-avis="src"]');
         if (d.mapsUri) src.setAttribute("href", d.mapsUri);
@@ -709,7 +738,7 @@
             + '<span class="avis-head">' + av
             + '<span class="avis-who"><span class="avis-nm">' + esc(r.author) + '</span>'
             + '<span class="avis-when">' + esc(r.when) + '</span></span></span>'
-            + '<span class="stars" aria-label="' + (r.rating || "") + ' sur 5">' + stars(r.rating || 0) + '</span>'
+            + '<span class="stars" aria-label="' + (r.rating || "") + T.of5 + '">' + stars(r.rating || 0) + '</span>'
             + '<span class="avis-txt">' + esc(r.text) + '</span></a>';
         }).join("");
 
@@ -756,11 +785,11 @@
       var v = mail.value.trim();
       if (!v) return "";                       // el campo vacio lo avisa el submit
       var d = domainOf(v);
-      if (!d) return "Adresse email invalide.";
+      if (!d) return T.invalid;
       if (form.dataset.profil === "entreprise" && PERSO.indexOf(d) !== -1) {
         /* Corto a proposito: el aviso tiene un renglon reservado debajo del
            campo y si ocupa dos, empuja el resto del formulario al aparecer. */
-        return "Merci d'utiliser une adresse professionnelle.";
+        return T.pro;
       }
       return "";
     }
@@ -787,7 +816,7 @@
     form.addEventListener("submit", function (e) {
       var err = checkMail();
       var first = null;
-      if (!mail.value.trim()) { err = "Merci d'indiquer une adresse email."; }
+      if (!mail.value.trim()) { err = T.empty; }
       showErr(err);
       if (err) first = mail;
 
@@ -841,16 +870,16 @@
           if (!d || !d.ok) throw new Error("envio");
           var url = enlaceCalendly();
           form.innerHTML = '<div class="ct-done" role="status">'
-            + '<h3>Merci, votre demande a bien été envoyée.</h3>'
-            + '<p>Dernière étape : choisissez le créneau qui vous convient pour échanger avec la personne qui suivra votre dossier.</p>'
-            + '<a class="btn btn-primary" target="_blank" rel="noopener" href="' + url.replace(/"/g, "&quot;") + '">Choisir un créneau <span class="arw">&rsaquo;</span></a>'
+            + '<h3>' + T.doneH + '</h3>'
+            + '<p>' + T.doneP + '</p>'
+            + '<a class="btn btn-primary" target="_blank" rel="noopener" href="' + url.replace(/"/g, "&quot;") + '">' + T.doneB + ' <span class="arw">&rsaquo;</span></a>'
             + '</div>';
         })
         .catch(function () {
           boton.disabled = false;
           msgBox.hidden = false;
-          msgBox.innerHTML = "L'envoi n'a pas abouti. Réessayez dans un instant, ou réservez directement votre créneau "
-            + '<a href="' + enlaceCalendly().replace(/"/g, "&quot;") + '" target="_blank" rel="noopener">sur Calendly</a>.';
+          msgBox.innerHTML = T.fail
+            + '<a href="' + enlaceCalendly().replace(/"/g, "&quot;") + '" target="_blank" rel="noopener">' + T.failL + '</a>.';
         });
     }
 

@@ -72,15 +72,21 @@ def translate(doc, mapping):
             return lead + html.escape(mapping[key], quote=False) + tail
         return text
 
+    # Las zonas protegidas se recalculan en cada pasada: cada sustitucion
+    # cambia el largo del documento y las posiciones viejas ya no sirven
+    # (antes se calculaban una sola vez y se salteaban textos al azar).
+    # Se mira m.start()+1 y no m.start(): el ">" del patron es el ultimo
+    # caracter de la etiqueta anterior, que puede ser el cierre de un <svg>.
     def on_text(m):
-        if inside(m.start(), spans):
+        if inside(m.start() + 1, spans):
             return m.group(0)
         return ">" + swap(m.group(1)) + "<"
 
     doc = re.sub(r">([^<>]+)<", on_text, doc)
 
     for attr in ATTRS + ("content",):
-        def on_attr(m, attr=attr):
+        spans = protected_spans(doc)
+        def on_attr(m, attr=attr, spans=spans):
             if inside(m.start(), spans):
                 return m.group(0)
             val = norm(m.group(1))
@@ -225,10 +231,12 @@ def main():
             mapping = {r["fr"]: (r.get(code) or "").strip() for r in rows}
             missing = sum(1 for v in mapping.values() if not v)
 
-            doc, replaced = translate(src, mapping)
+            # El selector de idioma se reescribe ANTES de traducir: lo ubica por
+            # su aria-label en frances ("Langue"), que la traduccion cambia.
+            doc = rewrite_lang_nav(src, code, d)
+            doc, replaced = translate(doc, mapping)
             doc = rewrite_paths(doc)
             doc = rewrite_head(doc, code, cfg, d)
-            doc = rewrite_lang_nav(doc, code, d)
             if missing:
                 doc = add_notice(doc, cfg, missing)
 
