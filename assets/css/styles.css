@@ -2968,3 +2968,25 @@ body:has(.cat-t:target) .cats a[href="#articles"] .cats-n{background:var(--surfa
 #contact form .fld input,#contact form .fld select,#contact form .fld textarea{padding-block:.5em}
 #contact form .fld:has(.fld-err){grid-template-rows:auto auto}
 #contact form #msg{min-height:3.4em}
+
+/* ---------- Contacto: iconos sin fondo ---------- */
+.ct-i{background:none;padding:6px;color:var(--accent)}
+/* Campo trampa para robots: fuera de la vista, sin display:none (algunos
+   robots se saltean los campos ocultos asi). */
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+/* Aviso despues de enviar: confirmacion con el enlace a Calendly, o error. */
+.ct-msg{font-size:.92rem;line-height:1.55;color:var(--text-2)}
+.ct-done{display:grid;gap:1rem;justify-items:start;padding:clamp(.4rem,1vw,.8rem) 0}
+.ct-done h3{font-size:clamp(1.2rem,1.8vw,1.45rem)}
+.ct-done p{color:var(--text-2)}
+form .btn[disabled]{opacity:.6;pointer-events:none}
+
+/* ---------- Particuliers: CTA de servicios fuera de la caja ---------- */
+.ways-act{display:flex;justify-content:center;flex-wrap:wrap;gap:.8rem;margin-top:clamp(1.4rem,3vw,2.2rem)}
+.ways[data-on] ~ .ways-act .btn,.ways-act .btn{display:inline-flex}
+.svcs:has(.ways[data-sel="1"]) .ways-act .btn[data-for="2"],
+.svcs:has(.ways[data-sel="2"]) .ways-act .btn[data-for="1"]{display:none}
+
+/* ---------- Après l'arrivée: CTA en cada caja ---------- */
+.hcol-cta{justify-self:start;margin-top:1rem}
+@media (max-width:860px){.hcol[data-on] .hcol-body .hcol-cta{margin-bottom:.4rem}}

@@ -800,10 +800,59 @@
         f.addEventListener("input", function () { f.classList.remove("is-bad"); }, { once: true });
       });
 
-      if (first) { e.preventDefault(); first.focus(); return; }
-      /* TODO produccion: aca se conecta Calendly o Typeform. */
       e.preventDefault();
+      if (first) { first.focus(); return; }
+      envia();
     });
+
+    /* Envio: api/contact.php manda la consulta por mail al equipo y despues
+       se ofrece el Calendly para reservar el turno, con nombre y mail ya
+       cargados. La ruta al endpoint sale de donde esta main.js, asi funciona
+       igual en la home, en las landings y en /en/ y /es/. */
+    var CALENDLY = "https://calendly.com/inwardimmigration/15min";
+    var abierto = Date.now();
+    var base = (document.querySelector('script[src*="assets/js/main.js"]') || {}).src || "";
+    base = base.split("assets/js/main.js")[0];
+    var msgBox = form.querySelector(".ct-msg");
+    var boton = form.querySelector('button[type="submit"]');
+    function val(id) { var el = form.querySelector("#" + id); return el && !el.disabled ? el.value.trim() : ""; }
+    function enlaceCalendly() {
+      var q = new URLSearchParams();
+      if (val("nom")) q.set("name", val("nom"));
+      if (val("mail")) q.set("email", val("mail"));
+      if (val("msg")) q.set("a1", val("msg"));
+      return CALENDLY + "?" + q.toString();
+    }
+    function envia() {
+      boton.disabled = true;
+      msgBox.hidden = true;
+      var datos = {
+        nom: val("nom"), mail: val("mail"), societe: val("societe"),
+        dem: val("dem"), canal: val("canal"), msg: val("msg"),
+        profil: form.dataset.profil, site: (form.querySelector("#site") || {}).value || "",
+        t: Date.now() - abierto, page: location.pathname
+      };
+      fetch(base + "api/contact.php", {
+        method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(datos)
+      })
+        .then(function (r) { return r.json().catch(function () { return { ok: false }; }); })
+        .then(function (d) {
+          if (!d || !d.ok) throw new Error("envio");
+          var url = enlaceCalendly();
+          form.innerHTML = '<div class="ct-done" role="status">'
+            + '<h3>Merci, votre demande a bien été envoyée.</h3>'
+            + '<p>Dernière étape : choisissez le créneau qui vous convient pour échanger avec la personne qui suivra votre dossier.</p>'
+            + '<a class="btn btn-primary" target="_blank" rel="noopener" href="' + url.replace(/"/g, "&quot;") + '">Choisir un créneau <span class="arw">&rsaquo;</span></a>'
+            + '</div>';
+        })
+        .catch(function () {
+          boton.disabled = false;
+          msgBox.hidden = false;
+          msgBox.innerHTML = "L'envoi n'a pas abouti. Réessayez dans un instant, ou réservez directement votre créneau "
+            + '<a href="' + enlaceCalendly().replace(/"/g, "&quot;") + '" target="_blank" rel="noopener">sur Calendly</a>.';
+        });
+    }
 
     if (canal) canal.addEventListener("change", function () { canal.classList.remove("is-bad"); });
   }

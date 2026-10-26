@@ -16,6 +16,12 @@
  * note_min : note minimale affichée. 4 = on ne relaie que les avis positifs.
  * max      : nombre d'avis affichés. L'API en renvoie 5 au maximum.
  * ttl      : secondes de cache. Court volontairement (politique Places).
+ *
+ * Formulaire de contact (api/contact.php) :
+ * contact_to   : adresse(s) qui reçoivent les demandes, séparées par des
+ *                virgules.
+ * contact_from : adresse d'expédition sur le domaine du site (à créer dans
+ *                O2Switch, ex. no-reply@inwardpro.com).
  */
 return [
     'place_id' => '',
@@ -24,4 +30,6 @@ return [
     'language' => 'fr',
     'note_min' => 4,
     'max'      => 6,
+    'contact_to'   => '',
+    'contact_from' => '',
 ];

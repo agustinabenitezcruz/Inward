@@ -61,7 +61,8 @@ def main():
         rel = p.relative_to(ROOT)
         if any(part in EXCLUIR_DIR for part in rel.parts) or not p.is_file():
             continue
-        if p.name in EXCLUIR_ARCH or p.suffix in EXCLUIR_SUF or p.name.startswith((".", "_p")):
+        if p.name in EXCLUIR_ARCH or p.suffix in EXCLUIR_SUF or p.name.startswith("_p") \
+                or (p.name.startswith(".") and p.name != ".htaccess"):
             continue
         if rel.parts[0] == "assets" and rel.parts[1:2] == ("Videos",):
             continue

@@ -33,7 +33,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..600&family=Jost:wght@300..600&display=swap">
-<link rel="stylesheet" href="../../assets/css/styles.css?v=172ed21a">
+<link rel="stylesheet" href="../../assets/css/styles.css?v=15e9b425">
 <link rel="preload" as="image" href="../../assets/img/rendez-vous-consultante-inward-client.webp" fetchpriority="high">
 
 <!-- FICHA ESTRUCTURADA. La organizacion se referencia por @id a la que
@@ -662,16 +662,19 @@
 <!-- /shell:header -->
 
 <!-- ============================ HERO ============================ -->
-<section class="lp-hero">
-  <div class="lp-hero-media">
-    <img src="../../assets/img/rendez-vous-consultante-inward-client.webp" width="1100" height="733" alt="Rendez-vous individuel entre une consultante INWARD et un client" fetchpriority="high" decoding="async">
+<section class="hero hero-v">
+  <!-- Mismo hero que la home: fondo violeta de la paleta con resplandores
+       difusos, texto centrado. Sin foto. -->
+  <div class="hero-bg" aria-hidden="true">
+    <span class="hero-glow hero-glow-1"></span>
+    <span class="hero-glow hero-glow-2"></span>
+    <span class="hero-glow hero-glow-3"></span>
   </div>
-  <div class="wrap lp-hero-in">
+  <div class="wrap hero-in">
     <h1>Service de mobilité internationale pour les particuliers</h1>
-    <p class="lead">Étudiant, retraité, freelance, salarié, conjoint de Français, conjoint d'Européen, mineur scolarisé, employé détaché… Quelle que soit votre situation et votre motivation pour vivre en France, nous sommes là pour le rendre possible.</p>
-    <div class="lp-hero-ctas">
-      <!-- Sin "Prendre rendez-vous": ya esta en el header. -->
-      <a class="btn btn-ghost" href="#services">Voir nos services <span class="arw">&rsaquo;</span></a>
+    <p class="lead hero-sub">Étudiant, retraité, freelance, salarié, conjoint de Français, conjoint d'Européen, mineur scolarisé, employé détaché… Quelle que soit votre situation et votre motivation pour vivre en France, nous sommes là pour le rendre possible.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="#services">Voir nos services <span class="arw">&rsaquo;</span></a>
     </div>
   </div>
 </section>
@@ -700,104 +703,6 @@
       </div>
     </div>
   </section>
-
-<!-- ============================ APPROCHE ============================ -->
-<section class="band lp-split sec" id="approche">
-  <div class="wrap lp-split-grid">
-    <div class="lp-split-txt rv">
-      <p class="label">Particuliers</p>
-      <h2>Des quatre coins du monde jusqu'à chez vous, en France</h2>
-      <p class="lead">Nous accompagnons les personnes venant des quatre coins du monde dans les démarches administratives nécessaires pour venir en France, pour une courte ou une longue durée.</p>
-      <p>Nous proposons des services d'accompagnement et de gestion des différentes démarches administratives liées à votre installation en France.</p>
-      <div class="lp-split-act">
-        <a class="btn btn-primary" href="#contact">Dites-nous plus sur votre projet <span class="arw">&rsaquo;</span></a>
-      </div>
-    </div>
-    <figure class="lp-split-media rounded rv">
-      <img src="../../assets/img/equipe-inward-echange-clients.webp" width="1280" height="853" alt="Échange entre une consultante INWARD et des clients" loading="lazy" decoding="async">
-    </figure>
-  </div>
-</section>
-
-<!-- ============================ SERVICES ============================ -->
-<!-- El documento lista, en este orden: dos modos de acompanamiento (conseil /
-     gestion), dos servicios numerados (demande de visa, freelances) y un
-     recuadro con dos prestaciones (diagnostic, verification du dossier).
-     Aca los dos servicios numerados cuelgan de "Gestion des demarches" y las
-     dos del recuadro de "Conseil et guide", que es la lectura que hace
-     coherente la lista. ES UNA INTERPRETACION: hay que confirmarla con la
-     clienta antes de dar la pagina por buena. -->
-<section class="band svcs sec" id="services">
-  <div class="wrap">
-    <div class="sec-head ways-head rv">
-      <p class="label">Nos services</p>
-      <h2>Deux façons de travailler ensemble</h2>
-    </div>
-
-    <!-- Selector de dos opciones en vez de dos columnas llenas de texto: se
-         ve un modo a la vez, y dentro de cada modo las prestaciones son filas
-         plegables (titulo a la vista, detalle al abrir). Sin JavaScript el
-         selector no aparece y los dos modos quedan uno al lado del otro, como
-         antes. El modo que abre por defecto es el que marca data-ways. -->
-    <div class="ways rv" data-ways="2">
-      <div class="ways-sw" role="tablist" aria-label="Deux façons de travailler ensemble" hidden>
-        <button class="ways-tab" type="button" role="tab" id="ways-t1" aria-controls="ways-p1">
-          <span class="ways-k">Autonomie</span>
-          <span class="ways-s">Vous menez les démarches</span>
-        </button>
-        <button class="ways-tab" type="button" role="tab" id="ways-t2" aria-controls="ways-p2">
-          <span class="ways-k">Clés en main</span>
-          <span class="ways-s">Vous nous confiez le dossier</span>
-        </button>
-        <span class="ways-ind" aria-hidden="true"></span>
-      </div>
-
-      <div class="mode-grid">
-        <article class="mode" id="ways-p1" aria-labelledby="ways-t1">
-          <div class="mode-main">
-            <div class="mode-h">
-              <span class="mode-k">Autonomie</span>
-              <h3>Conseil et guide</h3>
-            </div>
-            <p>Vous êtes aventurier et vous voulez faire les démarches d'immigration et d'installation en France en toute indépendance ? Nous vous donnons les éléments et les outils pour naviguer l'administration française en tranquillité.</p>
-            <a class="btn btn-primary" href="#contact">Faire le point sur mon projet <span class="arw">&rsaquo;</span></a>
-          </div>
-          <div class="mode-list">
-            <details class="mode-it" id="conseil" name="ways-1" open>
-              <summary><span class="mode-n">01</span><b>Conseil, diagnostic du projet et guide sur les démarches à effectuer</b><svg class="mode-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
-              <p>Vous souhaitez réaliser vos démarches d'immigration et d'installation en France en toute autonomie&nbsp;? Nous vous conseillons dans la définition de votre projet, vous aidons à choisir le visa le plus adapté et vous guidons dans le pas à pas de la procédure.</p>
-            </details>
-            <details class="mode-it" id="verification" name="ways-1">
-              <summary><span class="mode-n">02</span><b>Vérification du dossier</b><svg class="mode-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
-              <p>Nous vérifions également votre dossier avant son dépôt ou après un refus, afin de vous aider à présenter une demande complète et conforme, et d'optimiser vos chances de succès.</p>
-            </details>
-          </div>
-        </article>
-
-        <article class="mode" id="ways-p2" aria-labelledby="ways-t2">
-          <div class="mode-main">
-            <div class="mode-h">
-              <span class="mode-k">Clés en main</span>
-              <h3>Gestion et prise en charge</h3>
-            </div>
-            <p>Laissez-vous porter par une équipe d'experts qui gérera toutes les étapes, pour un résultat positif et en temps record.</p>
-            <a class="btn btn-primary" href="#contact">Confier mon dossier <span class="arw">&rsaquo;</span></a>
-          </div>
-          <div class="mode-list">
-            <details class="mode-it" id="gestion-visa" name="ways-2" open>
-              <summary><span class="mode-n">01</span><b>Gestion de la demande de visa</b><svg class="mode-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
-              <p>Confiez-nous l'ensemble de vos démarches administratives. Nous prenons en charge la préparation du dossier, les formulaires, les demandes préalables, la prise de rendez-vous et le suivi jusqu'à l'obtention du visa ou de votre titre de séjour.</p>
-            </details>
-            <details class="mode-it" id="freelances" name="ways-2">
-              <summary><span class="mode-n">02</span><b>Visa pour les freelances et créateurs d'entreprise</b><svg class="mode-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
-              <p>Pour les freelances et créateurs d'entreprise, nous vous accompagnons également dans la conception du projet, l'élaboration du business plan et l'obtention de l'avis favorable de l'administration française.</p>
-            </details>
-          </div>
-        </article>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ============================ TYPES DE VISA ============================ -->
 <!-- Acordeon .svc, el mismo de la landing de empresas: pastilla con el numero,
@@ -868,6 +773,108 @@
   </div>
 </section>
 
+<!-- ============================ APPROCHE ============================ -->
+<section class="band lp-split sec" id="approche">
+  <div class="wrap lp-split-grid">
+    <div class="lp-split-txt rv">
+      <p class="label">Particuliers</p>
+      <h2>Des quatre coins du monde jusqu'à chez vous, en France</h2>
+      <p class="lead">Nous accompagnons les personnes venant des quatre coins du monde dans les démarches administratives nécessaires pour venir en France, pour une courte ou une longue durée.</p>
+      <p>Nous proposons des services d'accompagnement et de gestion des différentes démarches administratives liées à votre installation en France.</p>
+      <div class="lp-split-act">
+        <a class="btn btn-primary" href="#contact">Dites-nous plus sur votre projet <span class="arw">&rsaquo;</span></a>
+      </div>
+    </div>
+    <figure class="lp-split-media rounded rv">
+      <img src="../../assets/img/equipe-inward-echange-clients.webp" width="1280" height="853" alt="Échange entre une consultante INWARD et des clients" loading="lazy" decoding="async">
+    </figure>
+  </div>
+</section>
+
+<!-- ============================ SERVICES ============================ -->
+<!-- El documento lista, en este orden: dos modos de acompanamiento (conseil /
+     gestion), dos servicios numerados (demande de visa, freelances) y un
+     recuadro con dos prestaciones (diagnostic, verification du dossier).
+     Aca los dos servicios numerados cuelgan de "Gestion des demarches" y las
+     dos del recuadro de "Conseil et guide", que es la lectura que hace
+     coherente la lista. ES UNA INTERPRETACION: hay que confirmarla con la
+     clienta antes de dar la pagina por buena. -->
+<section class="band svcs sec" id="services">
+  <div class="wrap">
+    <div class="sec-head ways-head rv">
+      <p class="label">Nos services</p>
+      <h2>Deux façons de travailler ensemble</h2>
+    </div>
+
+    <!-- Selector de dos opciones en vez de dos columnas llenas de texto: se
+         ve un modo a la vez, y dentro de cada modo las prestaciones son filas
+         plegables (titulo a la vista, detalle al abrir). Sin JavaScript el
+         selector no aparece y los dos modos quedan uno al lado del otro, como
+         antes. El modo que abre por defecto es el que marca data-ways. -->
+    <div class="ways rv" data-ways="2">
+      <div class="ways-sw" role="tablist" aria-label="Deux façons de travailler ensemble" hidden>
+        <button class="ways-tab" type="button" role="tab" id="ways-t1" aria-controls="ways-p1">
+          <span class="ways-k">Autonomie</span>
+          <span class="ways-s">Vous menez les démarches</span>
+        </button>
+        <button class="ways-tab" type="button" role="tab" id="ways-t2" aria-controls="ways-p2">
+          <span class="ways-k">Clés en main</span>
+          <span class="ways-s">Vous nous confiez le dossier</span>
+        </button>
+        <span class="ways-ind" aria-hidden="true"></span>
+      </div>
+
+      <div class="mode-grid">
+        <article class="mode" id="ways-p1" aria-labelledby="ways-t1">
+          <div class="mode-main">
+            <div class="mode-h">
+              <span class="mode-k">Autonomie</span>
+              <h3>Conseil et guide</h3>
+            </div>
+            <p>Vous êtes aventurier et vous voulez faire les démarches d'immigration et d'installation en France en toute indépendance ? Nous vous donnons les éléments et les outils pour naviguer l'administration française en tranquillité.</p>
+          </div>
+          <div class="mode-list">
+            <details class="mode-it" id="conseil" name="ways-1" open>
+              <summary><span class="mode-n">01</span><b>Conseil, diagnostic du projet et guide sur les démarches à effectuer</b><svg class="mode-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+              <p>Vous souhaitez réaliser vos démarches d'immigration et d'installation en France en toute autonomie&nbsp;? Nous vous conseillons dans la définition de votre projet, vous aidons à choisir le visa le plus adapté et vous guidons dans le pas à pas de la procédure.</p>
+            </details>
+            <details class="mode-it" id="verification" name="ways-1">
+              <summary><span class="mode-n">02</span><b>Vérification du dossier</b><svg class="mode-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+              <p>Nous vérifions également votre dossier avant son dépôt ou après un refus, afin de vous aider à présenter une demande complète et conforme, et d'optimiser vos chances de succès.</p>
+            </details>
+          </div>
+        </article>
+
+        <article class="mode" id="ways-p2" aria-labelledby="ways-t2">
+          <div class="mode-main">
+            <div class="mode-h">
+              <span class="mode-k">Clés en main</span>
+              <h3>Gestion et prise en charge</h3>
+            </div>
+            <p>Laissez-vous porter par une équipe d'experts qui gérera toutes les étapes, pour un résultat positif et en temps record.</p>
+          </div>
+          <div class="mode-list">
+            <details class="mode-it" id="gestion-visa" name="ways-2" open>
+              <summary><span class="mode-n">01</span><b>Gestion de la demande de visa</b><svg class="mode-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+              <p>Confiez-nous l'ensemble de vos démarches administratives. Nous prenons en charge la préparation du dossier, les formulaires, les demandes préalables, la prise de rendez-vous et le suivi jusqu'à l'obtention du visa ou de votre titre de séjour.</p>
+            </details>
+            <details class="mode-it" id="freelances" name="ways-2">
+              <summary><span class="mode-n">02</span><b>Visa pour les freelances et créateurs d'entreprise</b><svg class="mode-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 2v10M2 7h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+              <p>Pour les freelances et créateurs d'entreprise, nous vous accompagnons également dans la conception du projet, l'élaboration du business plan et l'obtention de l'avis favorable de l'administration française.</p>
+            </details>
+          </div>
+        </article>
+      </div>
+    </div>
+    <!-- CTA fuera de la caja y centrado. Con el selector activo se ve el del
+         modo elegido; sin JavaScript se ven los dos. -->
+    <div class="ways-act rv">
+      <a class="btn btn-primary" href="#contact" data-for="1">Faire le point sur mon projet <span class="arw">&rsaquo;</span></a>
+      <a class="btn btn-primary" href="#contact" data-for="2">Confier mon dossier <span class="arw">&rsaquo;</span></a>
+    </div>
+  </div>
+</section>
+
 <!-- ======================= SOUTIEN AU NOUVEL ARRIVANT ======================= -->
 <!-- Acordeon HORIZONTAL dentro de un panel oscuro: las columnas cerradas son
      una franja angosta con la cruz arriba y el nombre al pie, y la abierta se
@@ -895,6 +902,7 @@
           <div class="hcol-body" id="sante-p">
             <h3>Inscription au système de santé français</h3>
             <p>Nous effectuons les démarches pour vous.</p>
+            <a class="btn btn-primary hcol-cta" href="#contact">Nous contacter <span class="arw">&rsaquo;</span></a>
           </div>
           <span class="hcol-k" aria-hidden="true">Inscription au système de santé français</span>
         </article>
@@ -906,6 +914,7 @@
           <div class="hcol-body" id="carte-vitale-p">
             <h3>Demande de carte Vitale</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a class="btn btn-primary hcol-cta" href="#contact">Nous contacter <span class="arw">&rsaquo;</span></a>
           </div>
           <span class="hcol-k" aria-hidden="true">Demande de carte Vitale</span>
         </article>
@@ -917,6 +926,7 @@
           <div class="hcol-body" id="soutien-3-p">
             <h3>Lorem ipsum</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a class="btn btn-primary hcol-cta" href="#contact">Nous contacter <span class="arw">&rsaquo;</span></a>
           </div>
           <span class="hcol-k" aria-hidden="true">Lorem ipsum</span>
         </article>
@@ -928,6 +938,7 @@
           <div class="hcol-body" id="soutien-4-p">
             <h3>Lorem ipsum</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a class="btn btn-primary hcol-cta" href="#contact">Nous contacter <span class="arw">&rsaquo;</span></a>
           </div>
           <span class="hcol-k" aria-hidden="true">Lorem ipsum</span>
         </article>
@@ -1067,7 +1078,10 @@
         <label for="msg">Votre situation en quelques lignes</label>
         <textarea id="msg" placeholder="Nationalité, statut actuel, échéance..."></textarea>
       </div>
+      <!-- Campo trampa para robots: invisible para las personas. -->
+      <p class="hp" aria-hidden="true"><label>Site web <input id="site" type="text" tabindex="-1" autocomplete="off"></label></p>
       <button class="btn btn-primary" type="submit" style="justify-content:center">Envoyer et choisir un créneau</button>
+      <p class="ct-msg" role="status" aria-live="polite" hidden></p>
     </form>
   </div>
 </section>
@@ -1138,14 +1152,14 @@
 <nav class="rail" aria-label="Sections de la page">
   <a href="#top" aria-label="Haut de page"><span></span></a>
   <a href="#avis" aria-label="Nos résultats"><span></span></a>
+  <a href="#visas" aria-label="Visas"><span></span></a>
   <a href="#approche" aria-label="Notre approche"><span></span></a>
   <a href="#services" aria-label="Nos services"><span></span></a>
-  <a href="#visas" aria-label="Types de visa"><span></span></a>
   <a href="#soutien" aria-label="Soutien au nouvel arrivant"><span></span></a>
   <a href="#faq" aria-label="Questions fréquentes"><span></span></a>
   <a href="#contact" aria-label="Contact"><span></span></a>
 </nav>
 
-<script src="../../assets/js/main.js?v=594dadd6" defer></script>
+<script src="../../assets/js/main.js?v=07585a3a" defer></script>
 </body>
 </html>
