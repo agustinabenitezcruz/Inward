@@ -1006,7 +1006,11 @@ form>*,.two>*,.fld>*{min-width:0}
 /* Foto mas grande: la columna pasa de .62fr a .95fr (de unos 385 a casi
    590px de ancho a 1440) y el alto sube a 620px como tope. */
 #particuliers .b2c-grid{grid-template-columns:1fr .95fr}
-#particuliers .b2c-media{align-self:start;min-height:0;height:clamp(420px,calc(100svh - 200px),620px)}
+/* La foto acompania el alto de la columna: al abrir una fila para leer
+   mas, la respuesta se despliega en 520ms, la columna crece de a poco y la
+   foto crece con ella, sin saltos. Pedido de la clienta. */
+#particuliers .b2c-grid{align-items:stretch}
+#particuliers .b2c-media{align-self:stretch;min-height:420px;height:auto}
 #particuliers .sec-head{margin-bottom:clamp(1rem,2.2vh,1.5rem)}
 #particuliers .row-btn{padding-block:clamp(.55rem,1.05vw,.7rem)}
 #particuliers .row-body p{padding-bottom:.35rem;line-height:1.58}
