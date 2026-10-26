@@ -3029,3 +3029,17 @@ form .btn[disabled]{opacity:.6;pointer-events:none}
   .agl-media{order:-1;min-height:0;aspect-ratio:16/10}
   .agl-txt .chk b{font-size:clamp(1.15rem,4.6vw,1.35rem)}
 }
+
+/* ---------- Mas aire entre secciones (pedido de la clienta) ----------
+   Un solo valor para el espacio arriba y abajo de cada seccion, en todas
+   las paginas. Pisa los ajustes compactos de antes (que buscaban que cada
+   seccion entrara en una pantalla). La ultima antes del pie conserva su
+   respiro extra (--pb). */
+:root{--sec-y:clamp(5.5rem,12vh,9rem)}
+.sec,#entreprises,#particuliers,#particuliers.sec,#about,.res,#avis,#agilite,#services,#faq,#faq-2,#faq-3,#contact{
+  padding-top:var(--sec-y);padding-bottom:var(--pb,var(--sec-y))}
+.clients-ref .clients-in{padding-block:var(--sec-y)}
+#avis.refs.clients-ref{padding-block:0}
+.pg-head + .sec{padding-top:clamp(1.2rem,3vh,2.4rem)}
+@media (max-width:760px){:root{--sec-y:clamp(4rem,10vh,5.5rem)}}
+.qsn-first{padding-top:calc(var(--nav-h) + clamp(2rem,5vh,3.6rem))}
