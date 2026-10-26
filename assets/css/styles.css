@@ -1003,7 +1003,10 @@ form>*,.two>*,.fld>*{min-width:0}
    con menos relleno. Sin desenfoque al cambiar de foto: solo fundido. */
 #particuliers.sec{padding-top:clamp(2.4rem,5.5vh,4rem)}
 #particuliers .b2c-grid{align-items:start}
-#particuliers .b2c-media{align-self:start;min-height:0;height:clamp(380px,calc(100svh - 230px),560px)}
+/* Foto mas grande: la columna pasa de .62fr a .95fr (de unos 385 a casi
+   590px de ancho a 1440) y el alto sube a 620px como tope. */
+#particuliers .b2c-grid{grid-template-columns:1fr .95fr}
+#particuliers .b2c-media{align-self:start;min-height:0;height:clamp(420px,calc(100svh - 200px),620px)}
 #particuliers .sec-head{margin-bottom:clamp(1rem,2.2vh,1.5rem)}
 #particuliers .row-btn{padding-block:clamp(.55rem,1.05vw,.7rem)}
 #particuliers .row-body p{padding-bottom:.35rem;line-height:1.58}
@@ -2533,7 +2536,7 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
 /* Types de visa, propuesta B: tarjetas de foto como las del blog. */
 .vph-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
 .vph-grid .art{aspect-ratio:3/4}
-.vph-grid .art h3{font-size:clamp(.98rem,1.2vw,1.1rem)}
+.vph-grid .art h3{font-size:clamp(1.15rem,1.55vw,1.45rem);font-weight:700;line-height:1.2}
 .vph-grid + .va-grid{margin-top:14px}
 @media (max-width:1080px){.vph-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (max-width:640px){.vph-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -2941,3 +2944,23 @@ body:has(.cat-t:target) .cats a[href="#articles"] .cats-n{background:var(--surfa
   .hero-glow-2{width:70vw;height:70vw}
   .hero-glow-3{width:60vw;height:60vw;left:20vw}
 }
+
+/* ---------- Contacto: formulario del mismo alto que el texto ----------
+   El formulario arranca arriba, a la altura del rotulo, y la rejilla lo
+   estira hasta el final de la columna izquierda: los dos bloques miden lo
+   mismo. El alto que sobra lo toma el campo de mensaje, no los espacios
+   entre campos. */
+#contact form{margin-top:0;display:flex;flex-direction:column}
+#contact form .fld:has(#msg){flex:1;display:flex;flex-direction:column}
+#contact form #msg{flex:1;min-height:64px}
+/* Formulario mas compacto, para que mida casi lo mismo que la columna de
+   texto y los dos bloques se lean como un solo rectangulo, sin un hueco
+   grande a la izquierda: menos relleno y aire entre campos, campos algo mas
+   bajos, mensaje de dos lineas y sin el renglon reservado para el error del
+   email (el aviso aparece debajo cuando hace falta). */
+#contact form{padding:clamp(1rem,1.8vw,1.35rem);gap:.6rem}
+#contact form .seg label{padding-block:.45em}
+#contact form .fld{gap:.25rem}
+#contact form .fld input,#contact form .fld select,#contact form .fld textarea{padding-block:.5em}
+#contact form .fld:has(.fld-err){grid-template-rows:auto auto}
+#contact form #msg{min-height:3.4em}

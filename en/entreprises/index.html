@@ -443,7 +443,7 @@
 </script>
 </head>
 <body>
-<p style="position:fixed;left:16px;bottom:16px;z-index:80;margin:0;max-width:min(340px,calc(100vw - 32px));padding:.6rem .85rem;border-radius:12px;background:#ebff76;color:#101010;box-shadow:0 8px 24px -10px rgba(16,16,16,.45);font:500 .74rem/1.45 Jost,system-ui,sans-serif">Translation in progress. This page still shows the French text where the English is missing. (420)</p>
+<p style="position:fixed;left:16px;bottom:16px;z-index:80;margin:0;max-width:min(340px,calc(100vw - 32px));padding:.6rem .85rem;border-radius:12px;background:#ebff76;color:#101010;box-shadow:0 8px 24px -10px rgba(16,16,16,.45);font:500 .74rem/1.45 Jost,system-ui,sans-serif">Translation in progress. This page still shows the French text where the English is missing. (400)</p>
 
 <!-- Los bloques marcados shell:* no se editan acá: salen de index.html y los
      copia tools/sync_shell.py. Si hay que tocar la cabecera o el pie, se toca
@@ -613,7 +613,7 @@
   </div>
   <div class="wrap lp-hero-in">
     <h1>Accompagnement sur mesure pour vos salariés de nationalité étrangère</h1>
-    <p class="lead">Start-up, PME ou multinationale : nous simplifions et sécurisons la venue de vos talents en France. Bien plus qu'un simple service administratif, nous devenons votre partenaire stratégique pour piloter l'ensemble de vos besoins en immigration et autorisations de travail.</p>
+    <p class="lead">Start-up, PME ou multinationale : nous simplifions et sécurisons la venue de vos talents en France.</p>
     <div class="lp-hero-ctas">
       <!-- Sin "Prendre rendez-vous": ya esta en el header. -->
       <a class="btn btn-ghost" href="#services">Voir nos services <span class="arw">&rsaquo;</span></a>
@@ -622,92 +622,13 @@
 </section>
 <div id="hdrSentinel" aria-hidden="true" style="position:absolute;top:50vh;height:1px;width:1px"></div>
 
-<!-- ============================ REFERENCES ============================ -->
-<!-- Logos de clientes y avis Google en una sola seccion, bajo un solo rotulo:
-     las dos cosas dicen lo mismo (quien confia en INWARD) y juntas entran en
-     una pantalla. Lleva id="avis" porque main.js rellena las opiniones
-     buscando ese id; el rotulo visible es Références. -->
-<section class="band band-top clients clients-lg refs sec" id="avis" data-state="empty" data-api="../../api/avis.php">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <p class="label">Références</p>
-      <h2>Ils nous font confiance</h2>
-    </div>
-    <ul class="logos logos-grid rv">
-      <li><img src="../../assets/img/clients/logo-beytours.png" width="112" height="42" alt="Logo de Bey tours, DMC Europe, client d'INWARD" loading="lazy" decoding="async"></li>
-      <li><img src="../../assets/img/clients/logo-mouve.png" width="154" height="36" alt="Logo de Mouve, client d'INWARD" loading="lazy" decoding="async"></li>
-      <li><img src="../../assets/img/clients/logo-superprof.png" width="52" height="57" alt="Logo de Superprof, client d'INWARD" loading="lazy" decoding="async"></li>
-      <li><img src="../../assets/img/clients/logo-biondi.png" width="153" height="36" alt="Logo de Biondi, client d'INWARD" loading="lazy" decoding="async"></li>
-      <li><img src="../../assets/img/clients/logo-prolenser.png" width="66" height="57" alt="Logo de Prolenser, client d'INWARD" loading="lazy" decoding="async"></li>
-      <li><img src="../../assets/img/clients/logo-de-altura.png" width="134" height="38" alt="Logo de De Altura, client d'INWARD" loading="lazy" decoding="async"></li>
-      <li><img src="../../assets/img/clients/logo-las-praderas.png" width="57" height="57" alt="Logo de Las Praderas, client d'INWARD" loading="lazy" decoding="async"></li>
-    </ul>
-    <div class="avis-in refs-avis">
-      <div class="avis-score rv">
-        <p class="score"><span class="score-n" data-avis="rating"><span class="todo" title="Note reelle a recuperer de la fiche Google">—</span></span><span class="score-d">/5</span></p>
-        <div class="stars" data-avis="stars" aria-hidden="true"></div>
-        <p class="body-2"><span data-avis="count">Nombre d'avis à confirmer</span></p>
-        <a class="avis-src" data-avis="src" href="https://www.google.com/maps?cid=1377371409426816352" rel="noopener nofollow" target="_blank">
-          <svg viewBox="0 0 48 48" width="16" height="16" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-2.8-.4-4H24v7.3h12.1c-.2 2-1.6 5-4.5 7l-.1.3 6.5 5 .5.1c4.2-3.8 6.6-9.5 6.6-15.7"/><path fill="#34A853" d="M24 46c5.9 0 10.9-1.9 14.5-5.3l-6.9-5.3c-1.8 1.3-4.3 2.2-7.6 2.2-5.8 0-10.7-3.8-12.5-9l-.3.1-6.7 5.2-.1.3C8 41.9 15.4 46 24 46"/><path fill="#FBBC05" d="M11.5 28.6c-.5-1.4-.7-2.9-.7-4.6s.3-3.2.7-4.6v-.3l-6.8-5.3-.2.1A22 22 0 0 0 2 24c0 3.5.9 6.9 2.5 9.9z"/><path fill="#EA4335" d="M24 9.5c4.1 0 6.9 1.8 8.5 3.3l6.2-6C34.9 3.4 29.9 1 24 1 15.4 1 8 6.1 4.5 13.5l7 5.4C13.3 13.3 18.2 9.5 24 9.5"/></svg>
-          Voir les avis sur Google
-        </a>
-      </div>
-      <div class="avis-rail rv" data-avis="rail" role="list" tabindex="0" aria-label="Avis clients">
-        <p class="avis-empty"><span class="todo" title="Dos opciones: una clave de la Places API en api/config.php (las opiniones se actualizan solas), u opiniones reales copiadas en content/avis.json. Ver README.">Avis Google à connecter</span>. Les avis positifs les plus récents s'afficheront ici automatiquement.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================ AGILITE ============================ -->
-<section class="band agl sec" id="agilite">
-  <div class="wrap">
-    <div class="sec-head agl-head rv">
-      <p class="label">Entreprises</p>
-      <h2>Vos équipes avancent, l'administration ne les retient plus</h2>
-      <p class="lead">Pour vos salariés et leurs familles, nous offrons un accompagnement premium, humain et sur mesure, garantissant une installation sereine et réussie du premier jour au dernier détail.</p>
-    </div>
-    <!-- Titulo y bajada centrados arriba; abajo una sola caja con la lista de
-         beneficios a la izquierda y la foto a la derecha. -->
-    <div class="agl-box rv">
-      <div class="agl-txt">
-        <h3 class="chk-h">Ce que vous y gagnez</h3>
-        <ul class="chk">
-          <li>
-            <b>Agilité opérationnelle maximale</b>
-            <span>Des structures fluides pour vous adapter instantanément aux exigences du marché.</span>
-          </li>
-          <li>
-            <b>Intégration accélérée des talents</b>
-            <span>Vos nouveaux collaborateurs sont opérationnels et productifs en un temps record.</span>
-          </li>
-          <li>
-            <b>Zéro blocage administratif</b>
-            <span>Des processus simplifiés pour supprimer définitivement les goulets d'étranglement.</span>
-          </li>
-          <li>
-            <b>Focus total sur votre croissance</b>
-            <span>Du temps et des ressources libérés pour vous concentrer sur votre performance.</span>
-          </li>
-        </ul>
-        <div class="lp-split-act">
-          <a class="btn btn-primary" href="#contact">Demandez un devis <span class="arw">&rsaquo;</span></a>
-        </div>
-      </div>
-      <figure class="agl-media">
-        <img src="../../assets/img/equipe-inward-echange-clients.webp" width="1280" height="853" alt="Réunion de travail entre l'équipe INWARD et une entreprise cliente" loading="lazy" decoding="async">
-      </figure>
-    </div>
-  </div>
-</section>
-
 <!-- ============================ SERVICES ============================ -->
 <!-- <details> nativo, como la F&Q de la home: se abre sin JavaScript, el texto
      completo esta en el DOM para el buscador y el teclado funciona solo.
      Cerrado se ve el titulo y la primera frase con el pie difuminado; abierto
      aparece el resto y el CTA propio del servicio. Es la segunda de las dos
      opciones que propone el documento de la clienta. -->
-<section class="band svcs sec" id="services">
+<section class="band band-top svcs sec" id="services">
   <div class="wrap">
     <div class="sec-head rv">
       <p class="label">Nos services</p>
@@ -791,12 +712,94 @@
 </section>
 
 
+<!-- ============================ REFERENCES ============================ -->
+<!-- Logos de clientes y avis Google en una sola seccion, bajo un solo rotulo:
+     las dos cosas dicen lo mismo (quien confia en INWARD) y juntas entran en
+     una pantalla. Lleva id="avis" porque main.js rellena las opiniones
+     buscando ese id; el rotulo visible es Références. -->
+<section class="band clients clients-lg refs sec" id="avis" data-state="empty" data-api="../../api/avis.php">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="label">Références</p>
+      <h2>Ils nous font confiance</h2>
+    </div>
+    <ul class="logos logos-grid rv">
+      <li><img src="../../assets/img/clients/logo-beytours.png" width="112" height="42" alt="Logo de Bey tours, DMC Europe, client d'INWARD" loading="lazy" decoding="async"></li>
+      <li><img src="../../assets/img/clients/logo-mouve.png" width="154" height="36" alt="Logo de Mouve, client d'INWARD" loading="lazy" decoding="async"></li>
+      <li><img src="../../assets/img/clients/logo-superprof.png" width="52" height="57" alt="Logo de Superprof, client d'INWARD" loading="lazy" decoding="async"></li>
+      <li><img src="../../assets/img/clients/logo-biondi.png" width="153" height="36" alt="Logo de Biondi, client d'INWARD" loading="lazy" decoding="async"></li>
+      <li><img src="../../assets/img/clients/logo-prolenser.png" width="66" height="57" alt="Logo de Prolenser, client d'INWARD" loading="lazy" decoding="async"></li>
+      <li><img src="../../assets/img/clients/logo-de-altura.png" width="134" height="38" alt="Logo de De Altura, client d'INWARD" loading="lazy" decoding="async"></li>
+      <li><img src="../../assets/img/clients/logo-las-praderas.png" width="57" height="57" alt="Logo de Las Praderas, client d'INWARD" loading="lazy" decoding="async"></li>
+    </ul>
+    <div class="avis-in refs-avis">
+      <div class="avis-score rv">
+        <p class="score"><span class="score-n" data-avis="rating"><span class="todo" title="Note reelle a recuperer de la fiche Google">—</span></span><span class="score-d">/5</span></p>
+        <div class="stars" data-avis="stars" aria-hidden="true"></div>
+        <p class="body-2"><span data-avis="count">Nombre d'avis à confirmer</span></p>
+        <a class="avis-src" data-avis="src" href="https://www.google.com/maps?cid=1377371409426816352" rel="noopener nofollow" target="_blank">
+          <svg viewBox="0 0 48 48" width="16" height="16" aria-hidden="true"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-2.8-.4-4H24v7.3h12.1c-.2 2-1.6 5-4.5 7l-.1.3 6.5 5 .5.1c4.2-3.8 6.6-9.5 6.6-15.7"/><path fill="#34A853" d="M24 46c5.9 0 10.9-1.9 14.5-5.3l-6.9-5.3c-1.8 1.3-4.3 2.2-7.6 2.2-5.8 0-10.7-3.8-12.5-9l-.3.1-6.7 5.2-.1.3C8 41.9 15.4 46 24 46"/><path fill="#FBBC05" d="M11.5 28.6c-.5-1.4-.7-2.9-.7-4.6s.3-3.2.7-4.6v-.3l-6.8-5.3-.2.1A22 22 0 0 0 2 24c0 3.5.9 6.9 2.5 9.9z"/><path fill="#EA4335" d="M24 9.5c4.1 0 6.9 1.8 8.5 3.3l6.2-6C34.9 3.4 29.9 1 24 1 15.4 1 8 6.1 4.5 13.5l7 5.4C13.3 13.3 18.2 9.5 24 9.5"/></svg>
+          Voir les avis sur Google
+        </a>
+      </div>
+      <div class="avis-rail rv" data-avis="rail" role="list" tabindex="0" aria-label="Avis clients">
+        <p class="avis-empty"><span class="todo" title="Dos opciones: una clave de la Places API en api/config.php (las opiniones se actualizan solas), u opiniones reales copiadas en content/avis.json. Ver README.">Avis Google à connecter</span>. Les avis positifs les plus récents s'afficheront ici automatiquement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ AGILITE ============================ -->
+<section class="band agl sec" id="agilite">
+  <div class="wrap">
+    <div class="sec-head agl-head rv">
+      <p class="label">Entreprises</p>
+      <h2>Vos équipes avancent, l'administration ne les retient plus</h2>
+      <p class="lead">Pour vos salariés et leurs familles, nous offrons un accompagnement premium, humain et sur mesure, garantissant une installation sereine et réussie du premier jour au dernier détail.</p>
+    </div>
+    <!-- Titulo y bajada centrados arriba; abajo una sola caja con la lista de
+         beneficios a la izquierda y la foto a la derecha. -->
+    <div class="agl-box rv">
+      <div class="agl-txt">
+        <h3 class="chk-h">Ce que vous y gagnez</h3>
+        <ul class="chk">
+          <li>
+            <b>Agilité opérationnelle maximale</b>
+            <span>Des structures fluides pour vous adapter instantanément aux exigences du marché.</span>
+          </li>
+          <li>
+            <b>Intégration accélérée des talents</b>
+            <span>Vos nouveaux collaborateurs sont opérationnels et productifs en un temps record.</span>
+          </li>
+          <li>
+            <b>Zéro blocage administratif</b>
+            <span>Des processus simplifiés pour supprimer définitivement les goulets d'étranglement.</span>
+          </li>
+          <li>
+            <b>Focus total sur votre croissance</b>
+            <span>Du temps et des ressources libérés pour vous concentrer sur votre performance.</span>
+          </li>
+        </ul>
+        <div class="lp-split-act">
+          <a class="btn btn-primary" href="#contact">Demandez un devis <span class="arw">&rsaquo;</span></a>
+        </div>
+      </div>
+      <figure class="agl-media">
+        <img src="../../assets/img/equipe-inward-echange-clients.webp" width="1280" height="853" alt="Réunion de travail entre l'équipe INWARD et une entreprise cliente" loading="lazy" decoding="async">
+      </figure>
+    </div>
+  </div>
+</section>
+
 <!-- ============================ TYPES DE VISA ============================ -->
 <!-- Dos filas con dos trabajos distintos: arriba QUE se puede obtener, abajo
      QUE se puede hacer con ello. La de abajo son los tres CTA y por eso son
      las unicas cajas macizas de la pagina: la diferencia de peso dice cual es
      informacion y cual es accion, sin un solo rotulo que lo explique. -->
-<!-- Proposition A -->
+<!-- El nombre de cada visa sobre una foto, como las tarjetas
+     del blog. Fotos de Unsplash (licencia libre, sin atribucion obligatoria):
+     TourBox, LinkedIn Sales Solutions, SMKN 1 Gantar, Kurt van Krieken,
+     Noah Katz. -->
 <section class="band sec" id="types-de-visa">
   <div class="wrap">
     <!-- Iconos locales: esta seccion solo existe en esta pagina. Los atributos
@@ -815,65 +818,6 @@
 
     <div class="sec-head rv">
       <p class="label">Types de visa</p>
-      <p class="todo" title="Variante a comparer : choisir une des deux propositions">Proposition A : icônes (actuel)</p>
-      <h2>Obtenez&nbsp;:</h2>
-    </div>
-
-    <ul class="vt-grid rv">
-        <li class="vt">
-          <svg class="vt-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-v-talent"></use></svg>
-          <span>Visa Passeport Talent</span>
-        </li>
-        <li class="vt">
-          <svg class="vt-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-v-salarie"></use></svg>
-          <span>Visa Salarié</span>
-        </li>
-        <li class="vt">
-          <svg class="vt-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-v-temp"></use></svg>
-          <span>Visa travailleur temporaire</span>
-        </li>
-        <li class="vt">
-          <svg class="vt-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-v-saison"></use></svg>
-          <span>Visa saisonnier</span>
-        </li>
-        <li class="vt">
-          <svg class="vt-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-v-famille"></use></svg>
-          <span>Visa Famille</span>
-        </li>
-    </ul>
-
-    <ul class="va-grid rv">
-        <li class="va">
-          <a href="#contact">
-            <svg class="va-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-a-obt"></use></svg>
-            <span>Obtention de visa</span>
-          </a>
-        </li>
-        <li class="va">
-          <a href="#contact">
-            <svg class="va-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-a-ren"></use></svg>
-            <span>Renouvellements</span>
-          </a>
-        </li>
-        <li class="va">
-          <a href="#contact">
-            <svg class="va-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-a-chg"></use></svg>
-            <span>Changement de statut</span>
-          </a>
-        </li>
-    </ul>
-  </div>
-</section>
-
-<!-- Proposition B: el nombre de cada visa sobre una foto, como las tarjetas
-     del blog. Fotos de Unsplash (licencia libre, sin atribucion obligatoria):
-     TourBox, LinkedIn Sales Solutions, SMKN 1 Gantar, Kurt van Krieken,
-     Noah Katz. -->
-<section class="band sec" id="types-de-visa-b">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <p class="label">Types de visa</p>
-      <p class="todo" title="Variante a comparer : choisir une des deux propositions.">Proposition B : photos</p>
       <h2>Obtenez&nbsp;:</h2>
     </div>
     <ul class="vph-grid rv">
@@ -1112,9 +1056,9 @@
 <!-- ============================ RAIL ============================ -->
 <nav class="rail" aria-label="Sections de la page">
   <a href="#top" aria-label="Haut de page"><span></span></a>
+  <a href="#services" aria-label="Nos services"><span></span></a>
   <a href="#avis" aria-label="Références"><span></span></a>
   <a href="#agilite" aria-label="Notre approche"><span></span></a>
-  <a href="#services" aria-label="Nos services"><span></span></a>
   <a href="#types-de-visa" aria-label="Types de visa"><span></span></a>
   <a href="#faq" aria-label="Questions fréquentes"><span></span></a>
   <a href="#contact" aria-label="Contact"><span></span></a>
