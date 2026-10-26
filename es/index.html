@@ -35,10 +35,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..600&family=Jost:wght@300..600&display=swap">
 <link rel="stylesheet" href="../assets/css/styles.css?v=94f68843">
-<!-- Se precarga el poster del video del hero, que es lo primero que se pinta.
-     Antes se precargaba una foto que la pagina no usa. -->
-<link rel="preload" as="image" href="../assets/img/video-inward-palais-garnier-poster.webp" fetchpriority="high">
-
 <!-- FICHA ESTRUCTURADA (JSON-LD).
      Un solo @graph por pagina con @id compartidos: la organizacion se declara
      una vez, aqui, y el resto de las paginas la referencian por @id en vez de
@@ -709,15 +705,13 @@
 <!-- /shell:header -->
 
 <!-- ============================ HERO ============================ -->
-<section class="hero">
-  <div class="hero-media">
-    <video id="heroVideo" class="hero-video" autoplay muted loop playsinline preload="auto"
-           poster="../assets/img/video-inward-palais-garnier-poster.webp" aria-hidden="true" tabindex="-1">
-      <source src="../assets/video/inward-palais-garnier-presentation.mp4" type="video/mp4">
-      <source src="../assets/video/inward-palais-garnier-presentation.webm" type="video/webm">
-      <img src="../assets/img/video-inward-palais-garnier-poster.webp" width="1600" height="900"
-           alt="Les fondatrices d'INWARD devant le Palais Garnier, à Paris">
-    </video>
+<section class="hero hero-v">
+  <!-- Fondo estatico: violeta de la paleta con tres resplandores difusos
+       (verde agua y lila). Sin video y sin animacion. Decorativo. -->
+  <div class="hero-bg" aria-hidden="true">
+    <span class="hero-glow hero-glow-1"></span>
+    <span class="hero-glow hero-glow-2"></span>
+    <span class="hero-glow hero-glow-3"></span>
   </div>
   <div class="wrap hero-in">
     <h1>

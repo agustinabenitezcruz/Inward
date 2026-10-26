@@ -1492,6 +1492,15 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
   .rail{transition:translate 620ms var(--ease-out),opacity 620ms var(--ease-out)}
   .rail[data-lift="true"]{translate:0 -190px;opacity:0}
 }
+/* Oculto sobre los heros (main.js pone data-hero). filter:opacity y no
+   opacity: la opacidad ya la usa la animacion que levanta el rail al llegar
+   al pie, y las dos se pisarian. visibility saca los enlaces del tabulador. */
+.rail{transition:filter 520ms var(--ease-soft),visibility 0s linear 0s}
+.rail[data-hero="true"]{filter:opacity(0);visibility:hidden;pointer-events:none;
+  transition:filter 360ms var(--ease-soft),visibility 0s linear 360ms}
+@supports not (animation-timeline:view()){
+  .rail{transition:translate 620ms var(--ease-out),opacity 620ms var(--ease-out),filter 520ms var(--ease-soft),visibility 0s linear 0s}
+}
 @media (max-width:1240px){.rail{display:none}}
 
 /* ---------- REVEAL ---------- */
@@ -2907,3 +2916,28 @@ body:has(.cat-t:target) .cats a[href="#articles"] .cats-n{background:var(--surfa
    achicada. Cada banda recorta lo que se sale por los costados; 'clip' y no
    'hidden' para no crear un contenedor de scroll. */
 .band{overflow-x:clip}
+
+/* ============================================================
+   HOME — HERO VIOLETA CON GLOW, CENTRADO
+   Sin video: fondo estatico en el violeta de la paleta con tres resplandores
+   difusos, dos en verde agua y uno en lila, que no se mueven. El contenido va
+   centrado en los dos ejes. La seccion de abajo sigue montandose sobre el
+   hero con sus esquinas redondeadas: detras de ellas queda el violeta.
+   ============================================================ */
+.hero-v{background:var(--accent);justify-content:center;text-align:center}
+.hero-v .hero-in{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center}
+.hero-v h1{font-size:clamp(2.3rem,5.4vw,4.9rem);margin-inline:auto}
+.hero-v .hero-sub{max-width:52ch;margin-inline:auto}
+.hero-v .hero-ctas{justify-content:center}
+
+.hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.hero-glow{position:absolute;border-radius:50%;filter:blur(80px)}
+.hero-glow-1{width:46vw;height:46vw;left:-8vw;top:-14vw;background:rgba(85,255,210,.22)}
+.hero-glow-2{width:40vw;height:40vw;right:-10vw;top:6vh;background:rgba(210,210,255,.26)}
+.hero-glow-3{width:34vw;height:34vw;left:30vw;bottom:-18vw;background:rgba(85,255,210,.14)}
+@media (max-width:900px){
+  .hero-glow{filter:blur(56px)}
+  .hero-glow-1{width:80vw;height:80vw}
+  .hero-glow-2{width:70vw;height:70vw}
+  .hero-glow-3{width:60vw;height:60vw;left:20vw}
+}

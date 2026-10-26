@@ -182,6 +182,11 @@
     var sobreHero = !!heroSticky;
     function pinta() {
       railNav.setAttribute("data-dark", (overDark.length || sobreHero) ? "true" : "false");
+      /* Sobre el hero el rail no se muestra: no hay secciones que recorrer
+         todavia y competia con el titular. Aparece cuando la primera seccion
+         llega al centro de la ventana. */
+      var enHero = sobreHero || overDark.some(function (d) { return d.classList.contains("lp-hero"); });
+      railNav.setAttribute("data-hero", enHero ? "true" : "false");
     }
     if (heroSticky) {
       alCambiarSeccion = function (href) {
