@@ -32,7 +32,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..600&family=Jost:wght@300..600&display=swap">
-<link rel="stylesheet" href="../../assets/css/styles.css?v=fd9af8c9">
+<link rel="stylesheet" href="../../assets/css/styles.css?v=38e2fcdb">
 <link rel="preload" as="image" href="../../assets/img/atelier-equipe-inward-tableau-blanc.webp" fetchpriority="high">
 
 <!-- FICHA ESTRUCTURADA. La organizacion se referencia por @id a la que
@@ -824,6 +824,58 @@
 </section>
 
 
+<!-- ============================ FORMULES ============================ -->
+<!-- Mismo recurso que "Deux façons de travailler ensemble" de particuliers:
+     selector de dos opciones y un panel por opcion. Sin JavaScript se ven
+     las dos lado a lado. -->
+<section class="band svcs sec" id="formules">
+  <div class="wrap">
+    <div class="sec-head ways-head rv">
+      <p class="label">Nuestras modalidades</p>
+      <h2>Dos formas de trabajar juntos</h2>
+    </div>
+    <div class="ways ways-solo rv" data-ways="1">
+      <div class="ways-sw" role="tablist" aria-label="Nuestras modalidades" hidden>
+        <button class="ways-tab" type="button" role="tab" id="ways-t1" aria-controls="ways-p1">
+          <span class="ways-k">Caso por caso</span>
+          <span class="ways-s">Una necesidad puntual</span>
+        </button>
+        <button class="ways-tab" type="button" role="tab" id="ways-t2" aria-controls="ways-p2">
+          <span class="ways-k">Paquete mensual</span>
+          <span class="ways-s">Un seguimiento mensual</span>
+        </button>
+        <span class="ways-ind" aria-hidden="true"></span>
+      </div>
+
+      <div class="mode-grid">
+        <article class="mode" id="ways-p1" aria-labelledby="ways-t1">
+          <div class="mode-main">
+            <div class="mode-h">
+              <span class="mode-k">Caso por caso</span>
+              <h3>Un presupuesto personalizado</h3>
+            </div>
+            <p>¿Quiere contratar a uno o varios empleados extranjeros, o aclarar su situación administrativa? Le proponemos un presupuesto personalizado para su necesidad puntual.</p>
+            <p>Benefíciese de una tarifa decreciente a partir de cinco expedientes confiados al mismo tiempo.</p>
+          </div>
+        </article>
+        <article class="mode" id="ways-p2" aria-labelledby="ways-t2">
+          <div class="mode-main">
+            <div class="mode-h">
+              <span class="mode-k">Paquete mensual</span>
+              <h3>Un paquete mensual</h3>
+            </div>
+            <p>¿Emplea a un número importante de empleados extranjeros y necesita con frecuencia asesoramiento o acompañamiento administrativo? Nuestro paquete mensual le ofrece un seguimiento regular de sus expedientes, con un interlocutor dedicado a su lado, como un miembro más de su equipo.</p>
+            <p>Diseñado totalmente a medida, este paquete es una solución completa y duradera.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="ways-act rv">
+      <a class="btn btn-primary" href="#contact">Hablemos de sus necesidades <span class="arw">&rsaquo;</span></a>
+    </div>
+  </div>
+</section>
+
 <!-- ============================ FAQ ============================ -->
 <!-- Las cuatro preguntas del documento que son de empresa, no las seis de la
      home: repetir la lista entera en dos paginas es contenido duplicado y
@@ -1023,6 +1075,7 @@
   <a href="#avis" aria-label="Referencias"><span></span></a>
   <a href="#agilite" aria-label="Nuestro enfoque"><span></span></a>
   <a href="#services" aria-label="Nuestros servicios"><span></span></a>
+  <a href="#formules" aria-label="Nuestras modalidades"><span></span></a>
   <a href="#faq" aria-label="Preguntas frecuentes"><span></span></a>
   <a href="#contact" aria-label="Contacto"><span></span></a>
 </nav>

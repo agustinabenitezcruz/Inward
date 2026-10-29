@@ -3061,3 +3061,11 @@ form .btn[disabled]{opacity:.6;pointer-events:none}
 /* Beneficios de empresas: un poco mas chicos y sin negrita. */
 .agl-txt .chk b{font-weight:400;font-size:clamp(1.1rem,1.6vw,1.35rem)}
 .agl-txt .chk-h{font-weight:400;font-size:clamp(1.2rem,1.7vw,1.45rem)}
+
+/* Formules (empresas): mismo selector que particuliers, pero el panel no
+   tiene lista de prestaciones, asi que el texto ocupa todo el ancho y se
+   lee centrado y comodo. */
+.ways-solo .mode,.ways-solo[data-on] .mode{grid-template-columns:1fr}
+.ways-solo .mode-main{max-width:760px;margin-inline:auto;text-align:center;justify-items:center}
+.ways-solo .mode-main > p{max-width:none;font-size:clamp(1rem,1.25vw,1.1rem)}
+.ways-solo .mode-main > p + p{color:var(--text)}

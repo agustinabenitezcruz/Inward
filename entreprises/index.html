@@ -32,7 +32,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..600&family=Jost:wght@300..600&display=swap">
-<link rel="stylesheet" href="../assets/css/styles.css?v=fd9af8c9">
+<link rel="stylesheet" href="../assets/css/styles.css?v=38e2fcdb">
 <link rel="preload" as="image" href="../assets/img/atelier-equipe-inward-tableau-blanc.webp" fetchpriority="high">
 
 <!-- FICHA ESTRUCTURADA. La organizacion se referencia por @id a la que
@@ -824,6 +824,58 @@
 </section>
 
 
+<!-- ============================ FORMULES ============================ -->
+<!-- Mismo recurso que "Deux façons de travailler ensemble" de particuliers:
+     selector de dos opciones y un panel por opcion. Sin JavaScript se ven
+     las dos lado a lado. -->
+<section class="band svcs sec" id="formules">
+  <div class="wrap">
+    <div class="sec-head ways-head rv">
+      <p class="label">Nos formules</p>
+      <h2>Deux façons de travailler ensemble</h2>
+    </div>
+    <div class="ways ways-solo rv" data-ways="1">
+      <div class="ways-sw" role="tablist" aria-label="Nos formules" hidden>
+        <button class="ways-tab" type="button" role="tab" id="ways-t1" aria-controls="ways-p1">
+          <span class="ways-k">Cas par cas</span>
+          <span class="ways-s">Un besoin ponctuel</span>
+        </button>
+        <button class="ways-tab" type="button" role="tab" id="ways-t2" aria-controls="ways-p2">
+          <span class="ways-k">Forfait</span>
+          <span class="ways-s">Un suivi mensuel</span>
+        </button>
+        <span class="ways-ind" aria-hidden="true"></span>
+      </div>
+
+      <div class="mode-grid">
+        <article class="mode" id="ways-p1" aria-labelledby="ways-t1">
+          <div class="mode-main">
+            <div class="mode-h">
+              <span class="mode-k">Cas par cas</span>
+              <h3>Un devis personnalisé</h3>
+            </div>
+            <p>Vous souhaitez recruter un ou plusieurs collaborateurs de nationalité étrangère, ou clarifier leur situation administrative&nbsp;? Nous vous proposons un devis personnalisé pour répondre à votre besoin ponctuel.</p>
+            <p>Bénéficiez d'un tarif dégressif à partir de cinq dossiers confiés simultanément.</p>
+          </div>
+        </article>
+        <article class="mode" id="ways-p2" aria-labelledby="ways-t2">
+          <div class="mode-main">
+            <div class="mode-h">
+              <span class="mode-k">Forfait</span>
+              <h3>Un forfait mensuel</h3>
+            </div>
+            <p>Vous employez un nombre important de salariés de nationalité étrangère et avez régulièrement besoin de conseils ou d'un accompagnement administratif&nbsp;? Notre forfait mensuel vous offre un suivi régulier de vos dossiers, avec un interlocuteur dédié à vos côtés, comme un membre de votre équipe.</p>
+            <p>Entièrement conçu sur mesure, ce forfait constitue une solution complète et durable.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="ways-act rv">
+      <a class="btn btn-primary" href="#contact">Parlons de vos besoins <span class="arw">&rsaquo;</span></a>
+    </div>
+  </div>
+</section>
+
 <!-- ============================ FAQ ============================ -->
 <!-- Las cuatro preguntas del documento que son de empresa, no las seis de la
      home: repetir la lista entera en dos paginas es contenido duplicado y
@@ -1023,6 +1075,7 @@
   <a href="#avis" aria-label="Références"><span></span></a>
   <a href="#agilite" aria-label="Notre approche"><span></span></a>
   <a href="#services" aria-label="Nos services"><span></span></a>
+  <a href="#formules" aria-label="Nos formules"><span></span></a>
   <a href="#faq" aria-label="Questions fréquentes"><span></span></a>
   <a href="#contact" aria-label="Contact"><span></span></a>
 </nav>
