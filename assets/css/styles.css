@@ -3092,3 +3092,17 @@ form .btn[disabled]{opacity:.6;pointer-events:none}
   .qsn-ln:hover .qsn-li{background:var(--fill);color:var(--fill-ink)}
 }
 .qsn-ln:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:inherit}
+
+/* Particuliers, visas con foto (propuesta B): nueve tarjetas. 5 + 4 en
+   computadora (las de la segunda fila se ensanchan para completar), 3 por
+   fila en tablet y 2 en celular. Alto fijo y no proporcion, para que las de
+   la segunda fila no queden mas altas al ensancharse. */
+.vph-grid.vph-9{display:flex;flex-wrap:wrap;gap:14px}
+.vph-9 .art{flex:1 1 calc(20% - 12px);aspect-ratio:auto;height:clamp(260px,24vw,330px);min-width:0}
+.vph-9 .art-ph img{object-position:50% 30%}
+@media (max-width:1080px){.vph-9 .art{flex-basis:calc(33.333% - 10px);height:clamp(240px,34vw,320px)}}
+@media (max-width:640px){.vph-9 .art{flex-basis:calc(50% - 7px);height:clamp(200px,58vw,260px)}
+  .vph-9 .art h3{font-size:.98rem}}
+/* En tablet y celular la ultima fila queda con una sola tarjeta: no se
+   estira a todo el ancho, se centra con el mismo tamanio que las demas. */
+@media (max-width:1080px){.vph-grid.vph-9{justify-content:center}.vph-9 .art{flex-grow:0}}
