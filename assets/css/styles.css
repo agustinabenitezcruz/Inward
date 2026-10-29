@@ -3043,3 +3043,10 @@ form .btn[disabled]{opacity:.6;pointer-events:none}
 .pg-head + .sec{padding-top:clamp(1.2rem,3vh,2.4rem)}
 @media (max-width:760px){:root{--sec-y:clamp(4rem,10vh,5.5rem)}}
 .qsn-first{padding-top:calc(var(--nav-h) + clamp(2rem,5vh,3.6rem))}
+
+/* Respuestas largas de la FAQ: parrafos y listas con vinetas. */
+.qa-a p + p,.qa-a p + ul,.qa-a ul + p{margin-top:.7rem}
+.qa-l{margin:.5rem 0 0;padding-left:1.15rem;display:grid;gap:.55rem;color:var(--text-2);font-size:.96rem;line-height:1.62}
+.qa-l li::marker{color:var(--accent)}
+.qa-l b{color:var(--text);font-weight:500}
+.qa-sub{font-weight:500;color:var(--text)!important}
