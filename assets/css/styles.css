@@ -3050,3 +3050,10 @@ form .btn[disabled]{opacity:.6;pointer-events:none}
 .qa-l li::marker{color:var(--accent)}
 .qa-l b{color:var(--text);font-weight:500}
 .qa-sub{font-weight:500;color:var(--text)!important}
+
+/* Visas et titres de séjour: seis tarjetas en una fila (3 en tablet, 2 en
+   celular). */
+.vph-grid{grid-template-columns:repeat(6,minmax(0,1fr))}
+.vph-grid .art h3{font-size:clamp(.95rem,1.15vw,1.08rem)}
+@media (max-width:1080px){.vph-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:640px){.vph-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}

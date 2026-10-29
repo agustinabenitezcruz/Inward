@@ -32,7 +32,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..600&family=Jost:wght@300..600&display=swap">
-<link rel="stylesheet" href="../assets/css/styles.css?v=7c32e826">
+<link rel="stylesheet" href="../assets/css/styles.css?v=9b28d150">
 <link rel="preload" as="image" href="../assets/img/atelier-equipe-inward-tableau-blanc.webp" fetchpriority="high">
 
 <!-- FICHA ESTRUCTURADA. La organizacion se referencia por @id a la que
@@ -629,69 +629,37 @@
      las unicas cajas macizas de la pagina: la diferencia de peso dice cual es
      informacion y cual es accion, sin un solo rotulo que lo explique. -->
 <!-- El nombre de cada visa sobre una foto, como las tarjetas
-     del blog. Fotos de Unsplash (licencia libre, sin atribucion obligatoria):
-     TourBox, LinkedIn Sales Solutions, Rodrigo Rodrigues (WOLF ART), Kurt van Krieken,
-     Tim Mossholder. -->
+     del blog. Fotos de Unsplash (licencia libre, sin atribucion obligatoria): TourBox, Rodrigo Rodrigues (WOLF ART), Kurt van Krieken, Blackcreek Corporate, Filipp Romanovski, Tim Mossholder. -->
 <section class="band band-top sec" id="types-de-visa">
   <div class="wrap">
-    <!-- Iconos locales: esta seccion solo existe en esta pagina. Los atributos
-         de trazo van en cada <symbol>, no en un <g> que los envuelva: un <g>
-         del sprite no se clona con <use> y los iconos salen negros macizos. -->
-    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-      <symbol id="i-v-talent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.6-4.8 2.6.9-5.4L4.2 8.9l5.4-.8L12 3.2z"/></symbol>
-      <symbol id="i-v-salarie" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="7" width="18.4" height="13" rx="2.5"/><path d="M9 7V5.2a1.6 1.6 0 0 1 1.6-1.6h2.8A1.6 1.6 0 0 1 15 5.2V7M2.8 12.5h18.4"/></symbol>
-      <symbol id="i-v-temp" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.6"/><path d="M12 6.8V12l3.4 2"/></symbol>
-      <symbol id="i-v-saison" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.6"/><path d="M12 2.8v2.4M12 18.8v2.4M2.8 12h2.4M18.8 12h2.4M5.5 5.5l1.7 1.7M16.8 16.8l1.7 1.7M18.5 5.5l-1.7 1.7M7.2 16.8l-1.7 1.7"/></symbol>
-      <symbol id="i-v-famille" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="7.8" r="2.9"/><circle cx="16.4" cy="9.2" r="2.3"/><path d="M2.6 19.4c0-3 2.4-5.4 5.4-5.4s5.4 2.4 5.4 5.4M15 14.2c3 0 5.4 2.3 5.4 5.2"/></symbol>
-      <symbol id="i-a-obt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.4 11.3a8.5 8.5 0 1 1-2.6-5.6"/><path d="M20.8 4.2v4.4h-4.4"/></symbol>
-      <symbol id="i-a-ren" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.8 12a8.2 8.2 0 0 1 13.9-5.9l2.5 2.3"/><path d="M20.2 12a8.2 8.2 0 0 1-13.9 5.9l-2.5-2.3"/><path d="M20.4 3.6v4.8h-4.8M3.6 20.4v-4.8h4.8"/></symbol>
-      <symbol id="i-a-chg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3.6v16.8M8 3.6L4.6 7.2M8 3.6l3.4 3.6M16 20.4V3.6M16 20.4l3.4-3.6M16 20.4l-3.4-3.6"/></symbol>
-    </svg>
-
     <div class="sec-head rv">
-      <p class="label">Types de visa</p>
+      <p class="label">Visas et titres de séjour</p>
     </div>
     <ul class="vph-grid rv">
       <li class="art vph art-ov1 rounded">
         <figure class="art-ph"><img src="../assets/img/visa-passeport-talent-artiste-en-studio.webp" width="800" height="1066" alt="Créatrice travaillant sur une tablette graphique dans son atelier" loading="lazy" decoding="async"></figure>
-        <div class="art-b"><h3>Visa Passeport Talent</h3></div>
+        <div class="art-b"><h3>Talent</h3></div>
       </li>
       <li class="art vph art-ov2 rounded">
-        <figure class="art-ph"><img src="../assets/img/visa-salarie-employee-au-bureau.webp" width="800" height="1066" alt="Salariée travaillant sur son ordinateur au bureau" loading="lazy" decoding="async"></figure>
-        <div class="art-b"><h3>Visa Salarié</h3></div>
+        <figure class="art-ph"><img src="../assets/img/visa-travailleur-temporaire-entrepot.webp" width="800" height="1066" alt="Salarié consultant une tablette dans un entrepôt" loading="lazy" decoding="async"></figure>
+        <div class="art-b"><h3>Salarié / Travailleur temporaire</h3></div>
       </li>
       <li class="art vph art-ov3 rounded">
-        <figure class="art-ph"><img src="../assets/img/visa-travailleur-temporaire-entrepot.webp" width="800" height="1066" alt="Salarié consultant une tablette dans un entrepôt" loading="lazy" decoding="async"></figure>
-        <div class="art-b"><h3>Visa travailleur temporaire</h3></div>
+        <figure class="art-ph"><img src="../assets/img/visa-saisonnier-vendanges.webp" width="800" height="1066" alt="Cueillette du raisin pendant les vendanges" loading="lazy" decoding="async"></figure>
+        <div class="art-b"><h3>Saisonnier</h3></div>
       </li>
       <li class="art vph art-ov1 rounded">
-        <figure class="art-ph"><img src="../assets/img/visa-saisonnier-vendanges.webp" width="800" height="1066" alt="Cueillette du raisin pendant les vendanges" loading="lazy" decoding="async"></figure>
-        <div class="art-b"><h3>Visa saisonnier</h3></div>
+        <figure class="art-ph"><img src="../assets/img/visa-stagiaire-tuteur.webp" width="800" height="1066" alt="Stagiaire accompagné par son tuteur devant un ordinateur portable" loading="lazy" decoding="async"></figure>
+        <div class="art-b"><h3>Stagiaire</h3></div>
       </li>
       <li class="art vph art-ov2 rounded">
-        <figure class="art-ph"><img src="../assets/img/visa-famille-pere-et-enfant-plage.webp" width="800" height="1066" alt="Silhouette d'un père marchant main dans la main avec son enfant au bord de la mer" loading="lazy" decoding="async"></figure>
-        <div class="art-b"><h3>Visa Famille</h3></div>
+        <figure class="art-ph"><img src="../assets/img/visa-entrepreneur-atelier.webp" width="800" height="1066" alt="Créatrice d'entreprise travaillant dans son atelier" loading="lazy" decoding="async"></figure>
+        <div class="art-b"><h3>Entrepreneur / Création d'entreprise</h3></div>
       </li>
-    </ul>
-    <ul class="va-grid rv">
-        <li class="va">
-          <a href="#contact">
-            <svg class="va-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-a-obt"></use></svg>
-            <span>Obtention de visa</span>
-          </a>
-        </li>
-        <li class="va">
-          <a href="#contact">
-            <svg class="va-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-a-ren"></use></svg>
-            <span>Renouvellements</span>
-          </a>
-        </li>
-        <li class="va">
-          <a href="#contact">
-            <svg class="va-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-a-chg"></use></svg>
-            <span>Changement de statut</span>
-          </a>
-        </li>
+      <li class="art vph art-ov3 rounded">
+        <figure class="art-ph"><img src="../assets/img/visa-famille-pere-et-enfant-plage.webp" width="800" height="1066" alt="Silhouette d'un père marchant main dans la main avec son enfant au bord de la mer" loading="lazy" decoding="async"></figure>
+        <div class="art-b"><h3>Famille</h3></div>
+      </li>
     </ul>
   </div>
 </section>
@@ -1056,7 +1024,7 @@
 <!-- ============================ RAIL ============================ -->
 <nav class="rail" aria-label="Sections de la page">
   <a href="#top" aria-label="Haut de page"><span></span></a>
-  <a href="#types-de-visa" aria-label="Types de visa"><span></span></a>
+  <a href="#types-de-visa" aria-label="Visas et titres de séjour"><span></span></a>
   <a href="#avis" aria-label="Références"><span></span></a>
   <a href="#agilite" aria-label="Notre approche"><span></span></a>
   <a href="#services" aria-label="Nos services"><span></span></a>
