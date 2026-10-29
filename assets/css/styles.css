@@ -3069,3 +3069,8 @@ form .btn[disabled]{opacity:.6;pointer-events:none}
 .ways-solo .mode-main{max-width:760px;margin-inline:auto;text-align:center;justify-items:center}
 .ways-solo .mode-main > p{max-width:none;font-size:clamp(1rem,1.25vw,1.1rem)}
 .ways-solo .mode-main > p + p{color:var(--text)}
+
+/* Particuliers, Quel visa recherchez-vous: nueve tarjetas, solo nombre:
+   tres por fila. */
+#visas .vt-flow .vt{flex:1 1 calc(33.333% - 10px)}
+@media (max-width:760px){#visas .vt-flow .vt{flex:1 1 calc(50% - 7px)}}
