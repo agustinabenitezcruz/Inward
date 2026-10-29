@@ -3136,3 +3136,21 @@ form .btn[disabled]{opacity:.6;pointer-events:none}
    lineas: el contenido se centra en la tarjeta. */
 .vt-flow .vt{min-height:9.5rem;align-content:center}
 @media (max-width:760px){.vt-flow .vt{min-height:11.5rem}}
+
+/* ---------- Rendimiento ----------
+   1. Los resplandores del hero eran circulos enormes con filter:blur(80px):
+      desenfocar algo de medio ancho de pantalla es de lo mas caro que hay
+      para la placa de video, y se recalculaba al cargar y al scrollear. Un
+      degradado radial da el mismo halo sin ningun desenfoque.
+   2. La barra fija desenfocaba lo que pasaba por debajo en cada cuadro del
+      scroll (backdrop-filter). Ya casi opaca, el desenfoque no se notaba:
+      ahora es blanca solida y solo desenfoca sobre el hero.
+   3. El carrusel de logos se pausa cuando no esta en pantalla. */
+.hero-glow{filter:none!important}
+.hero-glow{scale:1.7}
+.hero-glow-1{background:radial-gradient(closest-side,rgba(85,255,210,.22) 0%,rgba(85,255,210,.16) 35%,rgba(85,255,210,.05) 70%,rgba(85,255,210,0))}
+.hero-glow-2{background:radial-gradient(closest-side,rgba(210,210,255,.26) 0%,rgba(210,210,255,.19) 35%,rgba(210,210,255,.06) 70%,rgba(210,210,255,0))}
+.hero-glow-3{background:radial-gradient(closest-side,rgba(85,255,210,.14) 0%,rgba(85,255,210,.10) 35%,rgba(85,255,210,.03) 70%,rgba(85,255,210,0))}
+.hdr.is-solid{-webkit-backdrop-filter:none;backdrop-filter:none;background:rgba(255,255,255,.97)}
+.marq-track{will-change:transform}
+.marq.is-off .marq-track{animation-play-state:paused}

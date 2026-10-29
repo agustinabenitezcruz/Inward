@@ -54,6 +54,13 @@
       function vel() { track.style.setProperty("--marq-dur", Math.max(ul.offsetWidth / 38, 12) + "s"); }
       vel();
       addEventListener("load", vel);
+      /* Pausada mientras no se ve: la animacion infinita sigue costando
+         cuadros aunque este fuera de pantalla. */
+      if ("IntersectionObserver" in window) {
+        new IntersectionObserver(function (e) {
+          marq.classList.toggle("is-off", !e[0].isIntersecting);
+        }).observe(marq);
+      }
     });
   }
 
@@ -506,9 +513,12 @@
       } else if (visible) {
         var p = (now - t0) / DUR;
         if (p >= 1) { muestra(idx + 1); p = 0; }
-        eng.style.setProperty("--ind-p", p.toFixed(3));
+        ind.style.setProperty("--ind-p", p.toFixed(3));
       } else {
-        t0 = now;
+        /* Fuera de pantalla el bucle se detiene: no se gasta un cuadro por
+           segundo en algo que nadie ve. Lo reanuda el observer. */
+        raf = 0;
+        return;
       }
       raf = requestAnimationFrame(late);
     }
@@ -516,14 +526,14 @@
     tabs.forEach(function (t, k) {
       t.addEventListener("click", function () {
         muestra(k); corrido = 0;
-        eng.style.setProperty("--ind-p", 0);
+        ind.style.setProperty("--ind-p", 0);
       });
       t.addEventListener("keydown", function (e) {
         var d = e.key === "ArrowDown" || e.key === "ArrowRight" ? 1
               : e.key === "ArrowUp"   || e.key === "ArrowLeft"  ? -1 : 0;
         if (!d) return;
         e.preventDefault(); muestra(k + d, true); corrido = 0;
-        eng.style.setProperty("--ind-p", 0);
+        ind.style.setProperty("--ind-p", 0);
       });
     });
     eng.addEventListener("pointerenter", function (e) { if (e.pointerType === "mouse") para(); });
@@ -533,11 +543,15 @@
 
     muestra(0);
     eng.setAttribute("data-auto", auto ? "on" : "off");
-    if (!auto) eng.style.setProperty("--ind-p", 1);
+    if (!auto) ind.style.setProperty("--ind-p", 1);
     addEventListener("resize", colocaInd);
 
     if ("IntersectionObserver" in window) {
-      new IntersectionObserver(function (e) { visible = e[0].isIntersecting; },
+      new IntersectionObserver(function (e) {
+        visible = e[0].isIntersecting;
+        if (visible && auto && !raf) { t0 = performance.now() - corrido; raf = requestAnimationFrame(late); }
+        if (!visible) corrido = 0;
+      },
         { threshold: 0.35 }).observe(eng);
     } else { visible = true; }
     if (auto) raf = requestAnimationFrame(late);
