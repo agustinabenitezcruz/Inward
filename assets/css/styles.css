@@ -3074,3 +3074,7 @@ form .btn[disabled]{opacity:.6;pointer-events:none}
    tres por fila. */
 #visas .vt-flow .vt{flex:1 1 calc(33.333% - 10px)}
 @media (max-width:760px){#visas .vt-flow .vt{flex:1 1 calc(50% - 7px)}}
+
+/* Prestacion unica (siempre abierta): sin cruz ni cursor de boton. */
+.mode-solo > summary{cursor:default}
+.mode-solo .mode-mk{display:none}

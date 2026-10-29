@@ -961,6 +961,12 @@
     modoServicios();
   }
 
+  /* Una prestacion sola en su lista: queda siempre abierta, no se pliega. */
+  [].slice.call(document.querySelectorAll("details.mode-solo")).forEach(function (d) {
+    d.open = true;
+    d.querySelector("summary").addEventListener("click", function (e) { e.preventDefault(); });
+  });
+
   function abreDestino() {
     var id = decodeURIComponent(location.hash.slice(1));
     var el = id && document.getElementById(id);
