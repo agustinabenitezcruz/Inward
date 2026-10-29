@@ -3078,3 +3078,17 @@ form .btn[disabled]{opacity:.6;pointer-events:none}
 /* Prestacion unica (siempre abierta): sin cruz ni cursor de boton. */
 .mode-solo > summary{cursor:default}
 .mode-solo .mode-mk{display:none}
+
+/* Fotos de las fundadoras: llevan a su LinkedIn. Icono chico en la esquina
+   para que se note que es un enlace; al pasar el mouse la foto se acerca un
+   poco y el icono pasa a violeta. */
+.qsn-ln{position:relative;display:block;width:100%;height:100%}
+.qsn-ph img{transition:scale 700ms var(--ease-soft)}
+.qsn-li{position:absolute;right:.6rem;bottom:.6rem;width:30px;height:30px;padding:7px;box-sizing:border-box;
+  border-radius:8px;background:#fff;color:var(--accent);box-shadow:0 4px 12px -6px rgba(16,16,16,.35);
+  transition:background-color 380ms var(--ease-soft),color 380ms var(--ease-soft)}
+@media (hover:hover) and (pointer:fine){
+  .qsn-ln:hover img{scale:1.04;transition:scale 900ms var(--ease-out)}
+  .qsn-ln:hover .qsn-li{background:var(--fill);color:var(--fill-ink)}
+}
+.qsn-ln:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:inherit}
