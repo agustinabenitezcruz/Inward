@@ -1006,6 +1006,7 @@ form>*,.two>*,.fld>*{min-width:0}
 /* Foto mas grande: la columna pasa de .62fr a .95fr (de unos 385 a casi
    590px de ancho a 1440) y el alto sube a 620px como tope. */
 #particuliers .b2c-grid{grid-template-columns:1fr .95fr}
+@media (max-width:900px){#particuliers .b2c-grid{grid-template-columns:1fr}}
 /* La foto acompania el alto de la columna: al abrir una fila para leer
    mas, la respuesta se despliega en 520ms, la columna crece de a poco y la
    foto crece con ella, sin saltos. Pedido de la clienta. */
@@ -2485,7 +2486,7 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
      en los dos estados (abierto ya lo dice el nombre de la fila). */
   .hcol-body{
     grid-row:2;grid-column:2;margin-top:0;
-    display:grid;grid-template-rows:0fr 0fr 0fr;
+    display:grid;grid-template-rows:0fr 0fr;
     transition:grid-template-rows 520ms var(--ease-io),opacity 420ms var(--ease-soft),
                margin-top 520ms var(--ease-io);
   }
@@ -2493,7 +2494,7 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
   /* La transicion se repite aca: la regla de escritorio .hcol[data-on]
      .hcol-body pesa mas y dejaba solo la de opacidad, asi que el item se
      abria de golpe. */
-  .hcol[data-on] .hcol-body{grid-template-rows:0fr 1fr 1fr;margin-top:.9rem;
+  .hcol[data-on] .hcol-body{grid-template-rows:0fr 1fr;margin-top:.9rem;
     transition:grid-template-rows 520ms var(--ease-io),opacity 620ms var(--ease-out) 120ms,
                margin-top 520ms var(--ease-io)}
   .hcol-body p{margin-top:0}
@@ -3106,3 +3107,32 @@ form .btn[disabled]{opacity:.6;pointer-events:none}
 /* En tablet y celular la ultima fila queda con una sola tarjeta: no se
    estira a todo el ancho, se centra con el mismo tamanio que las demas. */
 @media (max-width:1080px){.vph-grid.vph-9{justify-content:center}.vph-9 .art{flex-grow:0}}
+
+/* ---------- Ajustes de adaptacion (celular y tablet) ---------- */
+/* Un boton nunca se estira: ni en alto ni deformado en una celda. */
+.hcol-txt{display:grid;justify-items:start;align-content:start}
+.btn{align-self:start;flex-grow:0;height:auto}
+.hero-ctas .btn,.ways-act .btn,.agl-act .btn,.faq-act .btn{align-self:center}
+
+/* Selector de dos modos: el panel que no se ve ya no reserva su alto. Antes
+   los dos compartian celda y la caja medía lo del mas alto, lo que dejaba un
+   hueco grande entre la caja y el boton. */
+.ways[data-on] .mode-grid{position:relative}
+.ways[data-on] .mode[aria-hidden="true"]{position:absolute;inset:0 0 auto 0}
+
+/* Tarjetas en grilla (visas): todas del mismo ancho y centradas en su fila,
+   tambien la ultima si queda sola. */
+.vt-grid.vt-flow,.vph-grid.vph-9{justify-content:center}
+.vt-flow .vt,.vph-9 .art{flex-grow:0!important}
+
+/* Menos aire en celular entre secciones, entre la caja y su boton, y en los
+   encabezados. */
+@media (max-width:760px){
+  :root{--sec-y:clamp(3rem,8vh,4rem);--head-gap:1.4rem}
+  .ways-act,.agl-act,.faq-act,.b2c-cta,.about-act{margin-top:1.1rem!important}
+}
+@media (max-width:400px){.stp .btn{font-size:.86rem;padding-inline:1.1em}}
+/* Mismo alto para todas las tarjetas de visas, aunque un nombre ocupe mas
+   lineas: el contenido se centra en la tarjeta. */
+.vt-flow .vt{min-height:9.5rem;align-content:center}
+@media (max-width:760px){.vt-flow .vt{min-height:11.5rem}}
