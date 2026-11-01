@@ -1147,6 +1147,26 @@
       addEventListener("pointermove", function (e) { if (!down) return; var dx = e.clientX - x0; if (Math.abs(dx) > 4) { moved = true; tr.classList.add("is-drag"); } tr.scrollLeft = s0 - dx; });
       addEventListener("pointerup", function () { if (!down) return; down = false; tr.classList.remove("is-drag");
         if (moved) { var st = step(); tr.scrollTo({ left: Math.round(tr.scrollLeft / st) * st, behavior: "smooth" }); } });
+      /* Avance automatico cada 3,5 s; al llegar al final vuelve al principio.
+         Se pausa con el mouse encima, con foco adentro, mientras se arrastra
+         y fuera de pantalla. Con movimiento reducido no corre. */
+      if (!reduceM && "IntersectionObserver" in window) {
+        var auto = null, hover = false, focus = false, vis = false;
+        function tick() {
+          if (hover || focus || down) return;
+          var max = tr.scrollWidth - tr.clientWidth;
+          if (tr.scrollLeft >= max - 2) tr.scrollTo({ left: 0, behavior: "smooth" });
+          else tr.scrollBy({ left: step(), behavior: "smooth" });
+        }
+        function run() { if (!auto && vis) auto = setInterval(tick, 3500); }
+        function halt() { clearInterval(auto); auto = null; }
+        tr.addEventListener("mouseenter", function () { hover = true; });
+        tr.addEventListener("mouseleave", function () { hover = false; });
+        sec.addEventListener("focusin", function () { focus = true; });
+        sec.addEventListener("focusout", function () { focus = false; });
+        [prev, next].forEach(function (b) { b.addEventListener("click", function () { halt(); run(); }); });
+        new IntersectionObserver(function (es) { vis = es[0].isIntersecting; if (vis) run(); else halt(); }, { threshold: 0.3 }).observe(tr);
+      }
     });
     /* D: contador 0 -> 7 al entrar en pantalla */
     [].slice.call(document.querySelectorAll("[data-vld-count]")).forEach(function (el) {
