@@ -3228,7 +3228,7 @@ form .btn[disabled]{opacity:.6;pointer-events:none}
 }
 .vl-svc li::before{
   content:"";position:absolute;left:0;top:50%;width:1.5rem;height:1.5rem;margin-top:-.75rem;border-radius:50%;
-  background:var(--tint-1) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M6 4l4 4-4 4' fill='none' stroke='%23101010' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/70% no-repeat;
+  background:var(--tint-3) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M6 4l4 4-4 4' fill='none' stroke='%23101010' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/70% no-repeat;
 }
 @media (max-width:700px){.vl-svc{grid-template-columns:1fr}}
 #services.tinted{background:var(--surface)}
@@ -3265,3 +3265,9 @@ form .btn[disabled]{opacity:.6;pointer-events:none}
 .vl-adv-list span{font-family:var(--font-display);font-weight:400;font-size:clamp(1.1rem,1.6vw,1.4rem);line-height:1.3;color:var(--text)}
 .vl-li-i{width:30px;height:30px;color:var(--accent)}
 @media (max-width:860px){.vl-adv{grid-template-columns:1fr}.vl-adv-head{position:static}}
+
+/* Seccion alineada a la izquierda (titulo, lista y CTA). */
+.vl-left .vl-head{justify-items:start;text-align:left}
+.vl-left .vl-head .label{justify-self:start}
+.vl-left .vl-svc{margin-inline:0}
+.vl-left .vl-act{justify-content:flex-start}
