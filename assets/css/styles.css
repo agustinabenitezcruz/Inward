@@ -3255,3 +3255,20 @@ form .btn[disabled]{opacity:.6;pointer-events:none}
 @media (max-width:440px){.vl-type{grid-template-columns:2.4rem minmax(0,1fr)}}
 .vl-steps li{grid-template-columns:2.4rem minmax(0,1fr)}
 .vl-avis .avis-in{padding-top:0}
+/* Landing visa: ventajas en bento de 4 x 2. */
+.vl-bento{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.vl-b{
+  min-width:0;min-height:clamp(170px,17vw,220px);display:flex;flex-direction:column;justify-content:space-between;gap:1.4rem;
+  padding:clamp(1.2rem,2vw,1.6rem);border-radius:var(--r);color:var(--text);
+}
+.vl-b p{font-family:var(--font-display);font-weight:500;font-size:clamp(1.05rem,1.4vw,1.25rem);line-height:1.28;text-wrap:balance;margin:0}
+.vl-bi{width:34px;height:34px;color:var(--accent)}
+.vl-b-sf{background:var(--surface)}
+.vl-b-t1{background:var(--tint-1)}
+.vl-b-t2{background:var(--tint-2)}
+.vl-b-t3{background:var(--tint-3)}
+.vl-b-cta{background:var(--fill);color:var(--fill-ink);justify-content:flex-end;gap:1.1rem}
+.vl-b-cta p{color:var(--fill-ink);font-size:clamp(1.2rem,1.7vw,1.5rem)}
+.vl-b-cta .btn{align-self:flex-start}
+@media (max-width:980px){.vl-bento{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.vl-bento{grid-template-columns:1fr}.vl-b{min-height:0;flex-direction:row;align-items:center;justify-content:flex-start;gap:1rem}.vl-bi{flex:none}.vl-b-cta{flex-direction:column;align-items:flex-start}}
