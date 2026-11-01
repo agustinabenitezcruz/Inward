@@ -3286,3 +3286,44 @@ form .btn[disabled]{opacity:.6;pointer-events:none}
 @media (max-width:440px){.vl-sg{grid-template-columns:1fr}.vl-s{grid-template-columns:46px minmax(0,1fr);align-items:center;gap:1rem}}
 /* Formulario de contacto: el boton de envio va centrado. */
 form .btn[type="submit"]{align-self:center;justify-self:center}
+
+/* ---------- Landing visa: ventajas con mas vida ----------
+   Cada fila tiene un fondo lila que entra desde la izquierda al pasar el
+   mouse; el tilde pasa a violeta y el texto se corre un poco. Al entrar en
+   pantalla las filas aparecen en cascada y el tilde hace "pop". */
+.vl-adv-list li{position:relative;isolation:isolate;padding-inline:.9rem;margin-inline:-.9rem;border-radius:12px;
+  transition:border-color 400ms var(--ease-soft)}
+.vl-adv-list li::before{content:"";position:absolute;inset:4px 0;z-index:-1;border-radius:12px;background:var(--accent-soft);
+  transform:scaleX(0);transform-origin:left;transition:transform 520ms var(--ease-out)}
+.vl-adv-list span:not(.vl-tk){transition:translate 520ms var(--ease-out)}
+.vl-tk{transition:background-color 360ms var(--ease-soft),scale 420ms var(--ease-out)}
+.vl-tk::before{transition:border-color 360ms var(--ease-soft)}
+@media (hover:hover){
+  .vl-adv-list li:hover::before{transform:scaleX(1)}
+  .vl-adv-list li:hover span:not(.vl-tk){translate:8px 0}
+  .vl-adv-list li:hover .vl-tk{background:var(--accent);scale:1.12}
+  .vl-adv-list li:hover .vl-tk::before{border-color:var(--on-accent)}
+}
+@keyframes vlRow{from{opacity:0;transform:translateY(14px)}}
+@keyframes vlTk{0%{scale:0}70%{scale:1.25}100%{scale:1}}
+.vl-adv-list.is-play li{animation:vlRow 620ms var(--ease-out) backwards}
+.vl-adv-list.is-play .vl-tk{animation:vlTk 520ms var(--ease-out) backwards}
+.vl-adv-list.is-play li:nth-child(1),.vl-adv-list.is-play li:nth-child(1) .vl-tk{animation-delay:.05s}
+.vl-adv-list.is-play li:nth-child(2),.vl-adv-list.is-play li:nth-child(2) .vl-tk{animation-delay:.17s}
+.vl-adv-list.is-play li:nth-child(3),.vl-adv-list.is-play li:nth-child(3) .vl-tk{animation-delay:.29s}
+.vl-adv-list.is-play li:nth-child(4),.vl-adv-list.is-play li:nth-child(4) .vl-tk{animation-delay:.41s}
+.vl-adv-list.is-play li:nth-child(5),.vl-adv-list.is-play li:nth-child(5) .vl-tk{animation-delay:.53s}
+.vl-adv-list.is-play li:nth-child(6),.vl-adv-list.is-play li:nth-child(6) .vl-tk{animation-delay:.65s}
+.vl-adv-list.is-play li:nth-child(7),.vl-adv-list.is-play li:nth-child(7) .vl-tk{animation-delay:.77s}
+.vl-adv-list.is-play .vl-tk{animation-delay:inherit}
+
+/* Hover de las tarjetas de tipos y de servicios: suben, se marca el borde y
+   el circulo pasa a violeta oscuro. */
+.vl-type,.vl-s{transition:translate 620ms var(--ease-soft),box-shadow 720ms var(--ease-soft),border-color 560ms var(--ease-soft),background-color 560ms var(--ease-soft)}
+.vl-num,.vl-s-i{transition:background-color 460ms var(--ease-soft),color 460ms var(--ease-soft),scale 560ms var(--ease-out)}
+@media (hover:hover){
+  .vl-type:hover,.vl-s:hover{translate:0 -6px;border-color:var(--accent);box-shadow:0 22px 40px -24px var(--shadow-a)}
+  .vl-type:hover{background:var(--panel)}
+  .vl-type:hover .vl-num,.vl-s:hover .vl-s-i{background:var(--accent);color:var(--on-accent);scale:1.08}
+}
+@media (prefers-reduced-motion:reduce){.vl-adv-list.is-play *,.vl-adv-list.is-play li{animation:none!important}}
