@@ -3375,3 +3375,6 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
 .vld-big span{color:var(--text-3)}
 .vld-list li{color:var(--text);border-bottom-color:var(--line-card)}
 .vld-tk{background:var(--tint-3)}
+/* B: tarjetas mas bajas; numeros lila macizos, sin filete. */
+.vlb-c{min-height:0;gap:clamp(1.2rem,2vw,1.6rem);justify-content:flex-start}
+.vlb-n{color:var(--tint-3);-webkit-text-stroke:0;font-weight:400}
