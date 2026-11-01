@@ -31,7 +31,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..600&family=Jost:wght@300..600&display=swap">
-<link rel="stylesheet" href="../../../assets/css/styles.css?v=71890714">
+<link rel="stylesheet" href="../../../assets/css/styles.css?v=9be03a08">
 
 <script type="application/ld+json">
 {
@@ -427,28 +427,135 @@
 </section>
 
 <!-- ============================ CARACTERISTIQUES ============================ -->
+<!-- Ventajas, version A: selector + foto. Se recorre solo cada 4 s hasta
+     que la persona toca una; se pausa fuera de pantalla. -->
 <section class="band sec" id="avantages">
-  <!-- Dos columnas: a la izquierda el titulo y el CTA, a la derecha las siete
-       ventajas como lista con filetes. Todas pesan lo mismo. -->
-  <div class="wrap vl-adv">
-    <div class="vl-adv-head rv">
-      <div class="sec-head">
-        <p class="label">Visa features</p>
-        <h2>The benefits of the Talent card</h2>
-      </div>
-      <a class="btn btn-primary" href="#contact">Book an appointment <span class="arw">&rsaquo;</span></a>
+  <div class="wrap">
+    <div class="sec-head vl-head rv">
+      <p class="label">Visa features</p>
+      <h2>The benefits of the Talent card</h2>
     </div>
-    <!-- Siete ventajas = siete hexagonos en panal (uno al centro y seis
-         alrededor): el hexagono es la forma del isotipo. -->
-    <ul class="vl-hc">
-      <li class="vl-hx-c vl-p-c"><span class="vl-hx-in"><span class="vl-tk" aria-hidden="true"></span><span class="vl-hx-t">Simplified, priority procedure</span></span></li>
-      <li class="vl-hx-c vl-p-tl"><span class="vl-hx-in"><span class="vl-tk" aria-hidden="true"></span><span class="vl-hx-t">Eligible for 4 years from the first application</span></span></li>
-      <li class="vl-hx-c vl-p-tr"><span class="vl-hx-in"><span class="vl-tk" aria-hidden="true"></span><span class="vl-hx-t">No labour market test</span></span></li>
-      <li class="vl-hx-c vl-p-r"><span class="vl-hx-in"><span class="vl-tk" aria-hidden="true"></span><span class="vl-hx-t">Renewable multi-year permit</span></span></li>
-      <li class="vl-hx-c vl-p-br"><span class="vl-hx-in"><span class="vl-tk" aria-hidden="true"></span><span class="vl-hx-t">Your family can join you through the simplified Passeport Talent – Family procedure</span></span></li>
-      <li class="vl-hx-c vl-p-bl"><span class="vl-hx-in"><span class="vl-tk" aria-hidden="true"></span><span class="vl-hx-t">Access to the 10-year resident card (subject to conditions)</span></span></li>
-      <li class="vl-hx-c vl-p-l"><span class="vl-hx-in"><span class="vl-tk" aria-hidden="true"></span><span class="vl-hx-t">Opens the way to applying for French citizenship</span></span></li>
+    <div class="vla" data-vla>
+      <div class="vla-list" role="tablist" aria-label="Benefits of the Talent card">
+        <button class="vla-tab" type="button" role="tab" id="vla-t0" aria-controls="vla-p" aria-selected="true" tabindex="0" data-i="0"><span class="vla-n">01</span><span class="vla-l">Simplified, priority procedure</span></button>
+        <button class="vla-tab" type="button" role="tab" id="vla-t1" aria-controls="vla-p" aria-selected="false" tabindex="-1" data-i="1"><span class="vla-n">02</span><span class="vla-l">Eligible for 4 years from the first application</span></button>
+        <button class="vla-tab" type="button" role="tab" id="vla-t2" aria-controls="vla-p" aria-selected="false" tabindex="-1" data-i="2"><span class="vla-n">03</span><span class="vla-l">No labour market test</span></button>
+        <button class="vla-tab" type="button" role="tab" id="vla-t3" aria-controls="vla-p" aria-selected="false" tabindex="-1" data-i="3"><span class="vla-n">04</span><span class="vla-l">Renewable multi-year permit</span></button>
+        <button class="vla-tab" type="button" role="tab" id="vla-t4" aria-controls="vla-p" aria-selected="false" tabindex="-1" data-i="4"><span class="vla-n">05</span><span class="vla-l">Your family can join you through the simplified Passeport Talent – Family procedure</span></button>
+        <button class="vla-tab" type="button" role="tab" id="vla-t5" aria-controls="vla-p" aria-selected="false" tabindex="-1" data-i="5"><span class="vla-n">06</span><span class="vla-l">Access to the 10-year resident card (subject to conditions)</span></button>
+        <button class="vla-tab" type="button" role="tab" id="vla-t6" aria-controls="vla-p" aria-selected="false" tabindex="-1" data-i="6"><span class="vla-n">07</span><span class="vla-l">Opens the way to applying for French citizenship</span></button>
+      </div>
+      <div class="vla-ph" id="vla-p" role="tabpanel">
+        <img class="vla-img is-on" src="../../../assets/img/rendez-vous-consultante-inward-client.webp" width="1100" height="733" alt="One-to-one meeting between a consultant and a client" loading="lazy" decoding="async">
+        <img class="vla-img" src="../../../assets/img/visa-passeport-talent-artiste-en-studio.webp" width="800" height="1066" alt="Designer working on a graphics tablet in her studio" loading="lazy" decoding="async">
+        <img class="vla-img" src="../../../assets/img/equipe-inward-echange-clients.webp" width="1280" height="853" alt="Informal meeting between the INWARD team and clients" loading="lazy" decoding="async">
+        <img class="vla-img" src="../../../assets/img/dossier-titre-de-sejour-en-preparation.webp" width="1280" height="960" alt="INWARD consultant reviewing a mobility project with a client" loading="lazy" decoding="async">
+        <img class="vla-img" src="../../../assets/img/visa-famille-pere-et-enfant-plage.webp" width="800" height="1066" alt="Silhouette of a father walking hand in hand with his child by the sea" loading="lazy" decoding="async">
+        <img class="vla-img" src="../../../assets/img/visa-visiteur-paris.webp" width="800" height="1066" alt="Paris street with the Eiffel Tower in the background" loading="lazy" decoding="async">
+        <img class="vla-img" src="../../../assets/img/consultantes-inward-bureau-cabinet.webp" width="900" height="1200" alt="Two INWARD consultants in the firm&#x27;s office" loading="lazy" decoding="async">
+        <div class="vla-caps">
+        <p class="vla-cap is-on" data-i="0" aria-hidden="false">Simplified, priority procedure</p>
+        <p class="vla-cap" data-i="1" aria-hidden="true">Eligible for 4 years from the first application</p>
+        <p class="vla-cap" data-i="2" aria-hidden="true">No labour market test</p>
+        <p class="vla-cap" data-i="3" aria-hidden="true">Renewable multi-year permit</p>
+        <p class="vla-cap" data-i="4" aria-hidden="true">Your family can join you through the simplified Passeport Talent – Family procedure</p>
+        <p class="vla-cap" data-i="5" aria-hidden="true">Access to the 10-year resident card (subject to conditions)</p>
+        <p class="vla-cap" data-i="6" aria-hidden="true">Opens the way to applying for French citizenship</p>
+        </div>
+      </div>
+    </div>
+    <div class="vl-act rv"><a class="btn btn-primary" href="#contact">Book an appointment <span class="arw">&rsaquo;</span></a></div>
+  </div>
+</section>
+
+<!-- Ventajas, version B: carrusel horizontal con flechas y arrastre. -->
+<section class="band tinted sec" id="avantages-b">
+  <div class="wrap">
+    <div class="vlb-top">
+    <div class="sec-head vl-head rv">
+      <p class="label">Visa features</p>
+      <h2>The benefits of the Talent card</h2>
+    </div>
+      <div class="vlb-nav">
+        <button class="vlb-arw" type="button" data-dir="-1" aria-label="Previous"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3.5L5.5 8l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <button class="vlb-arw" type="button" data-dir="1" aria-label="Next"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5L10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+    </div>
+    <ul class="vlb-track" tabindex="0" aria-label="Benefits of the Talent card">
+        <li class="vlb-c"><span class="vlb-n">01</span><p>Simplified, priority procedure</p></li>
+        <li class="vlb-c"><span class="vlb-n">02</span><p>Eligible for 4 years from the first application</p></li>
+        <li class="vlb-c"><span class="vlb-n">03</span><p>No labour market test</p></li>
+        <li class="vlb-c"><span class="vlb-n">04</span><p>Renewable multi-year permit</p></li>
+        <li class="vlb-c"><span class="vlb-n">05</span><p>Your family can join you through the simplified Passeport Talent – Family procedure</p></li>
+        <li class="vlb-c"><span class="vlb-n">06</span><p>Access to the 10-year resident card (subject to conditions)</p></li>
+        <li class="vlb-c"><span class="vlb-n">07</span><p>Opens the way to applying for French citizenship</p></li>
     </ul>
+    <div class="vlb-bar" aria-hidden="true"><span></span></div>
+    <div class="vl-act rv"><a class="btn btn-primary" href="#contact">Book an appointment <span class="arw">&rsaquo;</span></a></div>
+  </div>
+</section>
+
+<!-- Ventajas, version C: tarjetas con foto. -->
+<section class="band sec" id="avantages-c">
+  <div class="wrap">
+    <div class="sec-head vl-head rv">
+      <p class="label">Visa features</p>
+      <h2>The benefits of the Talent card</h2>
+    </div>
+    <ul class="vlc rv">
+      <li class="art vlc-c art-ov1 rounded">
+        <figure class="art-ph"><img src="../../../assets/img/rendez-vous-consultante-inward-client.webp" width="1100" height="733" alt="One-to-one meeting between a consultant and a client" loading="lazy" decoding="async"></figure>
+        <div class="art-b"><span class="vlc-n">01</span><h3>Simplified, priority procedure</h3></div>
+      </li>
+      <li class="art vlc-c art-ov2 rounded">
+        <figure class="art-ph"><img src="../../../assets/img/visa-passeport-talent-artiste-en-studio.webp" width="800" height="1066" alt="Designer working on a graphics tablet in her studio" loading="lazy" decoding="async"></figure>
+        <div class="art-b"><span class="vlc-n">02</span><h3>Eligible for 4 years from the first application</h3></div>
+      </li>
+      <li class="art vlc-c art-ov3 rounded">
+        <figure class="art-ph"><img src="../../../assets/img/equipe-inward-echange-clients.webp" width="1280" height="853" alt="Informal meeting between the INWARD team and clients" loading="lazy" decoding="async"></figure>
+        <div class="art-b"><span class="vlc-n">03</span><h3>No labour market test</h3></div>
+      </li>
+      <li class="art vlc-c art-ov1 rounded">
+        <figure class="art-ph"><img src="../../../assets/img/dossier-titre-de-sejour-en-preparation.webp" width="1280" height="960" alt="INWARD consultant reviewing a mobility project with a client" loading="lazy" decoding="async"></figure>
+        <div class="art-b"><span class="vlc-n">04</span><h3>Renewable multi-year permit</h3></div>
+      </li>
+      <li class="art vlc-c art-ov2 rounded">
+        <figure class="art-ph"><img src="../../../assets/img/visa-famille-pere-et-enfant-plage.webp" width="800" height="1066" alt="Silhouette of a father walking hand in hand with his child by the sea" loading="lazy" decoding="async"></figure>
+        <div class="art-b"><span class="vlc-n">05</span><h3>Your family can join you through the simplified Passeport Talent – Family procedure</h3></div>
+      </li>
+      <li class="art vlc-c art-ov3 rounded">
+        <figure class="art-ph"><img src="../../../assets/img/visa-visiteur-paris.webp" width="800" height="1066" alt="Paris street with the Eiffel Tower in the background" loading="lazy" decoding="async"></figure>
+        <div class="art-b"><span class="vlc-n">06</span><h3>Access to the 10-year resident card (subject to conditions)</h3></div>
+      </li>
+      <li class="art vlc-c art-ov1 rounded">
+        <figure class="art-ph"><img src="../../../assets/img/consultantes-inward-bureau-cabinet.webp" width="900" height="1200" alt="Two INWARD consultants in the firm&#x27;s office" loading="lazy" decoding="async"></figure>
+        <div class="art-b"><span class="vlc-n">07</span><h3>Opens the way to applying for French citizenship</h3></div>
+      </li>
+    </ul>
+    <div class="vl-act rv"><a class="btn btn-primary" href="#contact">Book an appointment <span class="arw">&rsaquo;</span></a></div>
+  </div>
+</section>
+
+<!-- Ventajas, version D: caja violeta con contador. -->
+<section class="band tinted sec" id="avantages-d">
+  <div class="wrap">
+    <div class="sec-head vl-head rv">
+      <p class="label">Visa features</p>
+      <h2>The benefits of the Talent card</h2>
+    </div>
+    <div class="vld rv">
+      <div class="vld-big"><strong data-vld-count>7</strong><span>benefits</span></div>
+      <ul class="vld-list">
+          <li><span class="vld-tk" aria-hidden="true"></span>Simplified, priority procedure</li>
+          <li><span class="vld-tk" aria-hidden="true"></span>Eligible for 4 years from the first application</li>
+          <li><span class="vld-tk" aria-hidden="true"></span>No labour market test</li>
+          <li><span class="vld-tk" aria-hidden="true"></span>Renewable multi-year permit</li>
+          <li><span class="vld-tk" aria-hidden="true"></span>Your family can join you through the simplified Passeport Talent – Family procedure</li>
+          <li><span class="vld-tk" aria-hidden="true"></span>Access to the 10-year resident card (subject to conditions)</li>
+          <li><span class="vld-tk" aria-hidden="true"></span>Opens the way to applying for French citizenship</li>
+      </ul>
+    </div>
+    <div class="vl-act rv"><a class="btn btn-primary" href="#contact">Book an appointment <span class="arw">&rsaquo;</span></a></div>
   </div>
 </section>
 
@@ -772,6 +879,6 @@
   <a href="#contact" aria-label="Contact"><span></span></a>
 </nav>
 
-<script src="../../../assets/js/main.js?v=3a7be0c9" defer></script>
+<script src="../../../assets/js/main.js?v=2a102e7e" defer></script>
 </body>
 </html>

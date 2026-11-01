@@ -3298,54 +3298,80 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
 }
 
 
-/* ---------- Landing visa: ventajas en panal de hexagonos ----------
-   Hexagonos de punta arriba: ancho --w, alto --h = --w * 1.1547. El panal
-   mide 3w x 2.5h; cada celda se ubica por su centro. El borde es un hexagono
-   violeta y adentro otro blanco 1.5px mas chico (clip-path no tiene borde). */
-.vl-adv{align-items:center}
-.vl-hc{--w:212px;--h:calc(var(--w) * 1.1547);--g:.955;
-  list-style:none;margin:0 auto;padding:0;position:relative;width:calc(var(--w) * 3);height:calc(var(--h) * 2.5);max-width:100%}
-.vl-hx-c{position:absolute;width:var(--w);height:var(--h);margin:calc(var(--h) / -2) 0 0 calc(var(--w) / -2);
-  clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);background:var(--line-strong);
-  scale:var(--g);transition:scale 520ms var(--ease-out),background-color 400ms var(--ease-soft)}
-.vl-hx-in{position:absolute;inset:1.5px;clip-path:inherit;background:var(--panel);
-  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.7rem;padding:0 14%;text-align:center;
-  transition:background-color 400ms var(--ease-soft)}
-.vl-hx-t{font-family:var(--font-display);font-weight:500;font-size:.95rem;line-height:1.28;color:var(--text);text-wrap:balance;transition:color 400ms var(--ease-soft)}
-.vl-hx-c .vl-tk{flex:none}
-.vl-p-c {left:50%;top:50%}
-.vl-p-l {left:16.667%;top:50%}
-.vl-p-r {left:83.333%;top:50%}
-.vl-p-tl{left:33.333%;top:20%}
-.vl-p-tr{left:66.667%;top:20%}
-.vl-p-bl{left:33.333%;top:80%}
-.vl-p-br{left:66.667%;top:80%}
-.vl-p-c .vl-hx-in{background:var(--surface)}
-@media (hover:hover){
-  .vl-hc:hover .vl-hx-c{scale:.92}
-  .vl-hc .vl-hx-c:hover{scale:1;background:var(--accent)}
-  .vl-hx-c:hover .vl-hx-in{background:var(--accent)}
-  .vl-hx-c:hover .vl-hx-t{color:var(--on-accent)}
-  .vl-hx-c:hover .vl-tk{background:var(--tint-1)}
-}
-@keyframes vlHex{from{opacity:0;scale:.55}}
-.vl-hc.is-play .vl-hx-c{animation:vlHex 700ms var(--ease-out) backwards}
-.vl-hc.is-play .vl-p-c{animation-delay:.05s}
-.vl-hc.is-play .vl-p-tl{animation-delay:.25s}
-.vl-hc.is-play .vl-p-tr{animation-delay:.35s}
-.vl-hc.is-play .vl-p-r{animation-delay:.45s}
-.vl-hc.is-play .vl-p-br{animation-delay:.55s}
-.vl-hc.is-play .vl-p-bl{animation-delay:.65s}
-.vl-hc.is-play .vl-p-l{animation-delay:.75s}
-@media (prefers-reduced-motion:reduce){.vl-hc.is-play .vl-hx-c{animation:none!important}}
-@media (max-width:1240px){.vl-hc{--w:186px}.vl-hx-t{font-size:.88rem}}
-@media (max-width:1060px){.vl-adv{grid-template-columns:1fr;justify-items:center}.vl-adv-head{justify-items:center;text-align:center}.vl-adv-head .sec-head{justify-items:center}.vl-adv-head .label{justify-self:center}.vl-hc{--w:200px}}
-/* Celular: el panal no entra; los hexagonos pasan a filas con tilde. */
-@media (max-width:640px){
-  .vl-hc{width:auto;height:auto;display:grid;gap:10px}
-  .vl-hx-c{position:static;width:auto;height:auto;margin:0;clip-path:none;scale:1;background:none;border:1px solid var(--line-card);border-radius:var(--r)}
-  .vl-hx-in{position:static;clip-path:none;flex-direction:row;justify-content:flex-start;gap:1rem;padding:1rem 1.1rem;text-align:left;border-radius:inherit}
-  .vl-hx-t{font-size:1rem}
-  .vl-hc.is-play .vl-hx-c{animation-name:vlRowIn}
-}
-@keyframes vlRowIn{from{opacity:0;transform:translateY(12px)}}
+
+
+/* =========== Landing visa: cuatro propuestas para las ventajas =========== */
+/* A: selector + foto */
+.vla{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(1.4rem,3.5vw,3rem);align-items:stretch}
+.vla-list{display:grid;align-content:center;gap:4px}
+.vla-tab{all:unset;box-sizing:border-box;cursor:pointer;display:grid;grid-template-columns:2.6rem minmax(0,1fr);gap:.9rem;align-items:center;
+  padding:.85rem 1rem;border-radius:14px;position:relative;transition:background-color 360ms var(--ease-soft)}
+.vla-tab::after{content:"";position:absolute;left:1rem;right:1rem;bottom:0;height:2px;border-radius:2px;background:var(--accent);
+  transform:scaleX(0);transform-origin:left}
+.vla-n{font-family:var(--font-display);font-size:.8rem;font-weight:600;color:var(--text-3);transition:color 360ms var(--ease-soft)}
+.vla-l{font-family:var(--font-display);font-weight:400;font-size:clamp(1rem,1.3vw,1.15rem);line-height:1.3;color:var(--text-2);transition:color 360ms var(--ease-soft)}
+.vla-tab:hover{background:var(--accent-soft)}
+.vla-tab[aria-selected="true"]{background:var(--surface)}
+.vla-tab[aria-selected="true"] .vla-n{color:var(--accent)}
+.vla-tab[aria-selected="true"] .vla-l{color:var(--text);font-weight:500}
+.vla.is-auto .vla-tab[aria-selected="true"]::after{animation:vlaBar 4s linear forwards}
+@keyframes vlaBar{to{transform:scaleX(1)}}
+.vla-tab:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.vla-ph{position:relative;border-radius:var(--r);overflow:hidden;min-height:440px;background:var(--surface-2);isolation:isolate}
+.vla-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;scale:1.06;transition:opacity 700ms var(--ease-soft),scale 1400ms var(--ease-out)}
+.vla-img.is-on{opacity:1;scale:1}
+.vla-ph::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(8,8,18,.9) 0%,rgba(8,8,18,.55) 35%,rgba(8,8,18,0) 70%)}
+.vla-caps{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:clamp(1.4rem,3vw,2.4rem);display:grid}
+.vla-cap{grid-area:1/1;margin:0;color:#fff;font-family:var(--font-display);font-weight:500;font-size:clamp(1.4rem,2.4vw,2.1rem);line-height:1.15;letter-spacing:-.015em;text-wrap:balance;
+  opacity:0;translate:0 14px;transition:opacity 500ms var(--ease-soft),translate 600ms var(--ease-out)}
+.vla-cap.is-on{opacity:1;translate:0 0;transition-delay:120ms}
+@media (max-width:900px){.vla{grid-template-columns:1fr}.vla-ph{order:-1;min-height:0;aspect-ratio:4/3}}
+
+/* B: carrusel */
+.vlb-top{display:flex;align-items:end;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.vlb-top .vl-head{justify-items:start;text-align:left}
+.vlb-top .vl-head .label{justify-self:start}
+.vlb-nav{display:flex;gap:10px;margin-bottom:var(--head-gap)}
+.vlb-arw{all:unset;cursor:pointer;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;border:1px solid var(--line-strong);color:var(--accent);background:var(--panel);transition:background-color 300ms var(--ease-soft),color 300ms var(--ease-soft),opacity 300ms}
+.vlb-arw svg{width:18px;height:18px}
+.vlb-arw:hover{background:var(--accent);color:var(--on-accent)}
+.vlb-arw:disabled{opacity:.35;pointer-events:none}
+.vlb-arw:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.vlb-track{list-style:none;margin:0;padding:0 0 .4rem;display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;cursor:grab;overscroll-behavior-x:contain}
+.vlb-track::-webkit-scrollbar{display:none}
+.vlb-track.is-drag{cursor:grabbing;scroll-snap-type:none}
+.vlb-track.is-drag *{user-select:none;pointer-events:none}
+.vlb-c{flex:0 0 clamp(250px,26vw,330px);scroll-snap-align:start;min-height:clamp(280px,26vw,340px);display:flex;flex-direction:column;justify-content:space-between;gap:2rem;
+  padding:clamp(1.4rem,2.4vw,2rem);border-radius:var(--r);background:var(--panel);border:1px solid var(--line-card);transition:translate 600ms var(--ease-soft),border-color 500ms var(--ease-soft)}
+.vlb-n{font-family:var(--font-display);font-weight:300;font-size:clamp(3.4rem,6vw,5rem);line-height:.9;letter-spacing:-.05em;color:var(--tint-3);-webkit-text-stroke:1px var(--accent)}
+.vlb-c p{margin:0;font-family:var(--font-display);font-weight:500;font-size:clamp(1.1rem,1.5vw,1.3rem);line-height:1.28;color:var(--text);text-wrap:balance}
+@media (hover:hover){.vlb-c:hover{translate:0 -6px;border-color:var(--accent)}}
+.vlb-bar{height:3px;border-radius:3px;background:var(--line);margin-top:1.4rem;overflow:hidden}
+.vlb-bar span{display:block;height:100%;width:30%;background:var(--accent);border-radius:inherit;transform-origin:left;transition:translate 200ms linear}
+
+/* C: tarjetas con foto */
+.vlc{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:14px}
+.vlc-c{flex:0 0 calc((100% - 3 * 14px) / 4);aspect-ratio:4/5}
+.vlc-c h3{font-size:clamp(1.05rem,1.4vw,1.25rem);font-weight:600;line-height:1.25;text-wrap:balance}
+.vlc-n{display:inline-grid;place-items:center;width:2.2rem;height:2.2rem;border-radius:50%;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.5);color:#fff;font-size:.75rem;font-weight:600;letter-spacing:.04em;margin-bottom:.2rem;backdrop-filter:blur(4px)}
+@media (max-width:1000px){.vlc-c{flex-basis:calc((100% - 2 * 14px) / 3)}}
+@media (max-width:700px){.vlc-c{flex-basis:calc((100% - 14px) / 2)}}
+@media (max-width:420px){.vlc-c{flex-basis:100%;aspect-ratio:16/10}}
+
+/* D: caja violeta con contador */
+.vld{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(1.6rem,5vw,4.5rem);align-items:center;
+  background:var(--fill);color:var(--fill-ink);border-radius:var(--r);padding:clamp(1.8rem,4.5vw,3.6rem);position:relative;overflow:hidden;isolation:isolate}
+.vld::before{content:"";position:absolute;right:-8%;top:-30%;width:55%;aspect-ratio:1;z-index:-1;border-radius:50%;
+  background:radial-gradient(closest-side,rgba(85,255,210,.16),rgba(85,255,210,0))}
+.vld::after{content:"";position:absolute;left:-10%;bottom:-40%;width:50%;aspect-ratio:1;z-index:-1;border-radius:50%;
+  background:radial-gradient(closest-side,rgba(210,210,255,.18),rgba(210,210,255,0))}
+.vld-big{display:grid;justify-items:center;text-align:center}
+.vld-big strong{font-family:var(--font-display);font-weight:300;font-size:clamp(6rem,14vw,11rem);line-height:.85;letter-spacing:-.06em;color:var(--tint-1);font-variant-numeric:tabular-nums}
+.vld-big span{margin-top:.6rem;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--tint-3)}
+.vld-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(1.4rem,3vw,2.6rem);row-gap:1.1rem}
+.vld-list li{display:grid;grid-template-columns:1.6rem minmax(0,1fr);gap:.9rem;align-items:center;font-family:var(--font-display);font-size:clamp(1rem,1.3vw,1.12rem);line-height:1.3;color:#fff;
+  padding-bottom:1.1rem;border-bottom:1px solid rgba(210,210,255,.18)}
+.vld-tk{position:relative;width:1.6rem;height:1.6rem;border-radius:50%;background:var(--tint-1)}
+.vld-tk::before{content:"";position:absolute;left:50%;top:46%;width:.55rem;height:.3rem;border-left:2px solid var(--tint-ink);border-bottom:2px solid var(--tint-ink);translate:-50% -50%;rotate:-45deg}
+@media (max-width:860px){.vld{grid-template-columns:1fr}.vld-big{justify-items:start;text-align:left;grid-template-columns:auto auto;align-items:end;gap:1rem}.vld-big strong{font-size:6rem}}
+@media (max-width:620px){.vld-list{grid-template-columns:1fr}}
