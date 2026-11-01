@@ -3274,3 +3274,13 @@ form .btn[disabled]{opacity:.6;pointer-events:none}
 .vl-left .vl-head .label{justify-self:start}
 .vl-left .vl-svc{margin-inline:0}
 .vl-left .vl-act{justify-content:flex-start}
+/* Landing visa: servicios en tarjetas con icono (familia de las tarjetas de visas). */
+.vl-sg{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.vl-s{min-width:0;display:grid;align-content:start;gap:1.1rem;padding:clamp(1.2rem,2vw,1.5rem);
+  background:var(--panel);border:1px solid var(--line-card);border-radius:var(--r);
+  box-shadow:0 1px 2px rgba(32,32,69,.06),0 14px 30px -22px var(--shadow-a)}
+.vl-s-i{box-sizing:content-box;width:24px;height:24px;padding:11px;border-radius:50%;background:var(--tint-3);color:var(--tint-ink)}
+.vl-s span{font-family:var(--font-display);font-weight:500;font-size:1rem;line-height:1.32;color:var(--text);text-wrap:balance}
+@media (max-width:1180px){.vl-sg{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:760px){.vl-sg{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:440px){.vl-sg{grid-template-columns:1fr}.vl-s{grid-template-columns:46px minmax(0,1fr);align-items:center;gap:1rem}}
