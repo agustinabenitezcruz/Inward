@@ -1058,14 +1058,17 @@
     var tls = [].slice.call(document.querySelectorAll(".vl-tl"));
     if (!tls.length || !("IntersectionObserver" in window)) return;
     if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    /* Se observa la seccion entera, no el panel: asi el hexagono arranca en
+       el mismo momento en que aparecen el rotulo y el titulo. */
     var io = new IntersectionObserver(function (es) {
       es.forEach(function (e) {
         if (!e.isIntersecting) return;
         io.unobserve(e.target);
-        e.target.classList.add("is-play");
+        var t = e.target.querySelector(".vl-tl");
+        if (t) t.classList.add("is-play");
       });
-    }, { threshold: 0.45 });
-    tls.forEach(function (t) { io.observe(t); });
+    }, { threshold: 0.2 });
+    tls.forEach(function (t) { io.observe(t.closest("section") || t); });
   })();
 
 })();

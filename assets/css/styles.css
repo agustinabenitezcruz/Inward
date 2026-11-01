@@ -3205,7 +3205,7 @@ form .btn[disabled]{opacity:.6;pointer-events:none}
 @keyframes vlDraw{from{stroke-dashoffset:100}}
 @keyframes vlUp{from{opacity:0;transform:translateY(10px)}}
 @keyframes vlLight{from{opacity:.2;transform:translateX(-8px)}}
-.vl-tl.is-play .vl-hd{animation:vlDraw 3.2s cubic-bezier(.45,0,.3,1) backwards}
+.vl-tl.is-play .vl-hd{animation:vlDraw 3.2s linear backwards}
 .vl-tl.is-play .vl-steps li{animation:vlLight 520ms var(--ease-out) backwards}
 .vl-tl.is-play .vl-steps li:nth-child(1){animation-delay:.8s}
 .vl-tl.is-play .vl-steps li:nth-child(2){animation-delay:1.6s}
