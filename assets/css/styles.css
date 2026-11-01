@@ -3366,3 +3366,12 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
 .vld-tk::before{content:"";position:absolute;left:50%;top:46%;width:.55rem;height:.3rem;border-left:2px solid var(--tint-ink);border-bottom:2px solid var(--tint-ink);translate:-50% -50%;rotate:-45deg}
 @media (max-width:860px){.vld{grid-template-columns:1fr}.vld-big{justify-items:start;text-align:left;grid-template-columns:auto auto;align-items:end;gap:1rem}.vld-big strong{font-size:6rem}}
 @media (max-width:620px){.vld-list{grid-template-columns:1fr}}
+/* D: caja blanca; todo lo que no es CTA en lila (el 7 lleva filete violeta
+   para que se lea sobre blanco). */
+.vld{background:var(--panel);color:var(--text);border:1px solid var(--line-card)}
+.vld::before{background:radial-gradient(closest-side,rgba(210,210,255,.35),rgba(210,210,255,0))}
+.vld::after{background:radial-gradient(closest-side,rgba(210,210,255,.28),rgba(210,210,255,0))}
+.vld-big strong{color:var(--tint-3);-webkit-text-stroke:1.5px var(--accent)}
+.vld-big span{color:var(--text-3)}
+.vld-list li{color:var(--text);border-bottom-color:var(--line-card)}
+.vld-tk{background:var(--tint-3)}
