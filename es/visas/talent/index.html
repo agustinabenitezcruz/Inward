@@ -31,7 +31,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..600&family=Jost:wght@300..600&display=swap">
-<link rel="stylesheet" href="../../../assets/css/styles.css?v=57e2befd">
+<link rel="stylesheet" href="../../../assets/css/styles.css?v=ca02fea3">
 
 <script type="application/ld+json">
 {
@@ -340,32 +340,7 @@
 <div id="hdrSentinel" aria-hidden="true" style="position:absolute;top:50vh;height:1px;width:1px"></div>
 
 <!-- ============================ AVIS GOOGLE ============================ -->
-<section class="band band-top sec" id="avis" data-state="empty" data-api="../../../api/avis.php">
-  <!-- Las cifras vivian sobre el video del hero, chicas y en blanco. Aca van
-       junto a las opiniones, que es la otra prueba de resultados, y a tamano de
-       titular. El HTML trae el valor final: sin JavaScript o con movimiento
-       reducido se lee tal cual. main.js las cuenta desde cero al entrar en
-       pantalla y la barra de abajo se llena al mismo ritmo. -->
-  <div class="wrap">
-    <p class="label rv avis-top">Nuestros resultados</p>
-    <ul class="kpis rv" aria-label="Cifras clave">
-      <li class="kpi">
-        <p class="kpi-n" data-count>99 %</p>
-        <span class="kpi-bar" aria-hidden="true"></span>
-        <p class="kpi-l">Tasa de éxito de los expedientes</p>
-      </li>
-      <li class="kpi">
-        <p class="kpi-n" data-count>+45</p>
-        <span class="kpi-bar" aria-hidden="true"></span>
-        <p class="kpi-l">Nacionalidades acompañadas</p>
-      </li>
-      <li class="kpi">
-        <p class="kpi-n" data-count>+1000</p>
-        <span class="kpi-bar" aria-hidden="true"></span>
-        <p class="kpi-l">Expedientes tramitados</p>
-      </li>
-    </ul>
-  </div>
+<section class="band band-top sec vl-avis" id="avis" data-state="empty" data-api="../../../api/avis.php">
   <div class="wrap avis-in">
     <div class="avis-score rv">
       <p class="score"><span class="score-n" data-avis="rating">—</span><span class="score-d">/5</span></p>
@@ -387,13 +362,18 @@
 
 <!-- ============================ INTRO ============================ -->
 <section class="band tinted sec vl-intro" id="carte-talent">
-  <div class="wrap">
-    <div class="sec-head vl-head rv">
-      <p class="label">Passeport Talent</p>
-      <h2>La mejor opción para contratar o instalarse en Francia</h2>
-      <p class="lead">Un permiso de residencia de excelencia válido hasta 4 años, con un procedimiento acelerado y la posibilidad de viajar con su familia.</p>
+  <div class="wrap vl-split">
+    <div class="vl-split-txt rv">
+      <div class="sec-head">
+        <p class="label">Passeport Talent</p>
+        <h2>La mejor opción para contratar o instalarse en Francia</h2>
+        <p class="lead">Un permiso de residencia de excelencia válido hasta 4 años, con un procedimiento acelerado y la posibilidad de viajar con su familia.</p>
+      </div>
+      <a class="btn btn-primary" href="#contact">Verificar mi elegibilidad <span class="arw">&rsaquo;</span></a>
     </div>
-    <div class="vl-act rv"><a class="btn btn-primary" href="#contact">Verificar mi elegibilidad <span class="arw">&rsaquo;</span></a></div>
+    <figure class="vl-split-ph rv">
+      <img src="../../../assets/img/dossier-titre-de-sejour-en-preparation.webp" width="1280" height="960" alt="Consultora de INWARD analizando un proyecto de movilidad con un cliente" loading="lazy" decoding="async">
+    </figure>
   </div>
 </section>
 
@@ -405,13 +385,13 @@
       <h2>Tipos de tarjetas Talento</h2>
     </div>
     <ul class="vl-types rv">
-      <li class="vl-type"><svg class="vl-hx" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l8.2 4.75v9.5L12 21.5l-8.2-4.75v-9.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M10 8.6l5 3.4-5 3.4z" fill="currentColor"/></svg><h3>Asalariado altamente calificado – Tarjeta Azul UE</h3></li>
-      <li class="vl-type"><svg class="vl-hx" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l8.2 4.75v9.5L12 21.5l-8.2-4.75v-9.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M10 8.6l5 3.4-5 3.4z" fill="currentColor"/></svg><h3>Asalariado calificado / Contratación en una Joven Empresa Innovadora (JEI)</h3></li>
-      <li class="vl-type"><svg class="vl-hx" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l8.2 4.75v9.5L12 21.5l-8.2-4.75v-9.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M10 8.6l5 3.4-5 3.4z" fill="currentColor"/></svg><h3>Asalariado en misión (movilidad intragrupo)</h3></li>
-      <li class="vl-type"><svg class="vl-hx" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l8.2 4.75v9.5L12 21.5l-8.2-4.75v-9.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M10 8.6l5 3.4-5 3.4z" fill="currentColor"/></svg><h3>Investigador / Docente-investigador</h3></li>
-      <li class="vl-type"><svg class="vl-hx" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l8.2 4.75v9.5L12 21.5l-8.2-4.75v-9.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M10 8.6l5 3.4-5 3.4z" fill="currentColor"/></svg><h3>Mandatario social / Directivo de empresa</h3></li>
-      <li class="vl-type"><svg class="vl-hx" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l8.2 4.75v9.5L12 21.5l-8.2-4.75v-9.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M10 8.6l5 3.4-5 3.4z" fill="currentColor"/></svg><h3>Creador de empresa / Inversor</h3></li>
-      <li class="vl-type"><svg class="vl-hx" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l8.2 4.75v9.5L12 21.5l-8.2-4.75v-9.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M10 8.6l5 3.4-5 3.4z" fill="currentColor"/></svg><h3>Profesión artística y cultural</h3></li>
+      <li class="vl-type"><span class="vl-num">01</span><h3>Asalariado altamente calificado – Tarjeta Azul UE</h3></li>
+      <li class="vl-type"><span class="vl-num">02</span><h3>Asalariado calificado / Contratación en una Joven Empresa Innovadora (JEI)</h3></li>
+      <li class="vl-type"><span class="vl-num">03</span><h3>Asalariado en misión (movilidad intragrupo)</h3></li>
+      <li class="vl-type"><span class="vl-num">04</span><h3>Investigador / Docente-investigador</h3></li>
+      <li class="vl-type"><span class="vl-num">05</span><h3>Mandatario social / Directivo de empresa</h3></li>
+      <li class="vl-type"><span class="vl-num">06</span><h3>Creador de empresa / Inversor</h3></li>
+      <li class="vl-type"><span class="vl-num">07</span><h3>Profesión artística y cultural</h3></li>
     </ul>
     <div class="vl-act rv"><a class="btn btn-primary" href="#contact">Encontrar mi categoría <span class="arw">&rsaquo;</span></a></div>
   </div>
@@ -436,10 +416,10 @@
         <div class="vl-mid"><strong>3–6</strong><span>semanas</span></div>
       </div>
       <ol class="vl-steps">
-          <li><span class="vl-n">01</span><span><span class="vl-st">Diagnóstico</span><span class="vl-sd">Análisis de su situación y elección de la visa.</span></span><span class="vl-wk">S1</span></li>
-          <li><span class="vl-n">02</span><span><span class="vl-st">Expediente</span><span class="vl-sd">Preparación y verificación de los documentos.</span></span><span class="vl-wk">S1–2</span></li>
-          <li><span class="vl-n">03</span><span><span class="vl-st">Presentación</span><span class="vl-sd">Cita y presentación de la solicitud.</span></span><span class="vl-wk">S2–3</span></li>
-          <li><span class="vl-n">04</span><span><span class="vl-st">Visa obtenida</span><span class="vl-sd">Tramitación por el consulado y entrega.</span></span><span class="vl-wk">S3–6</span></li>
+          <li><span class="vl-n">01</span><span><span class="vl-st">Diagnóstico</span><span class="vl-sd">Análisis de su situación y elección de la visa.</span></span></li>
+          <li><span class="vl-n">02</span><span><span class="vl-st">Expediente</span><span class="vl-sd">Preparación y verificación de los documentos.</span></span></li>
+          <li><span class="vl-n">03</span><span><span class="vl-st">Presentación</span><span class="vl-sd">Cita y presentación de la solicitud.</span></span></li>
+          <li><span class="vl-n">04</span><span><span class="vl-st">Visa obtenida</span><span class="vl-sd">Tramitación por el consulado y entrega.</span></span></li>
       </ol>
     </div>
     <div class="vl-act rv"><a class="btn btn-primary" href="#contact">Iniciar mi trámite <span class="arw">&rsaquo;</span></a></div>
@@ -568,48 +548,79 @@
       <p class="label">Preguntas frecuentes</p>
       <h2>Lo que más nos preguntan</h2>
     </div>
+
+    <!-- El atributo name hace el acordeon exclusivo sin una linea de
+         JavaScript: abrir una cierra la anterior. -->
     <div class="qas qn-lilac rv">
         <details class="qa" name="faq">
           <summary>
             <span class="qa-n">01</span>
-            <span class="qa-q">Lorem ipsum dolor sit amet, consectetur adipiscing elit ?</span>
+            <span class="qa-q">¿Cómo optimiza INWARD las posibilidades de éxito de su solicitud de visa?</span>
             <svg class="qa-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5.25L7 9.25l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </summary>
-          <div class="qa-a"><p class="body-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
+          <div class="qa-a">
+            <p class="body-2">Maximizamos la tasa de aceptación de su expediente gracias a una metodología en 4 etapas clave:</p>
+            <ul class="qa-l">
+              <li><b>Auditoría de elegibilidad a medida:</b> analizamos su situación en detalle para elegir la categoría de visa más adecuada.</li>
+              <li><b>Un expediente sin errores:</b> reunimos, verificamos y ordenamos todos los justificantes y formularios administrativos para cumplir exactamente con las exigencias de la administración francesa.</li>
+              <li><b>Acompañamiento estratégico:</b> redacción de su plan de negocio, formalización de las promesas de contratación o solicitud de autorización de trabajo: aseguramos las etapas decisivas de su procedimiento.</li>
+              <li><b>Seguimiento riguroso hasta la obtención:</b> anticipamos los posibles bloqueos, le preparamos para las citas consulares o en la prefectura y hacemos el seguimiento administrativo hasta la entrega efectiva de su permiso de residencia.</li>
+            </ul>
+          </div>
         </details>
         <details class="qa" name="faq">
           <summary>
             <span class="qa-n">02</span>
-            <span class="qa-q">Sed do eiusmod tempor incididunt ut labore et dolore ?</span>
+            <span class="qa-q">¿Cuáles son las tarifas de INWARD?</span>
             <svg class="qa-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5.25L7 9.25l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </summary>
-          <div class="qa-a"><p class="body-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
+          <div class="qa-a">
+            <p class="body-2">Nuestros precios son 100 % transparentes y se comunican desde el inicio de la prestación, sin ningún costo adicional. Ofrecemos un acompañamiento caso por caso para necesidades puntuales, y también planes por paquete para las empresas que quieren un seguimiento regular y continuo de sus empleados extranjeros. Así tiene una visibilidad total del presupuesto de principio a fin.</p>
+          </div>
         </details>
         <details class="qa" name="faq">
           <summary>
             <span class="qa-n">03</span>
-            <span class="qa-q">Ut enim ad minim veniam, quis nostrud exercitation ?</span>
+            <span class="qa-q">¿Por qué recurrir a una agencia de movilidad internacional en lugar de gestionarlo todo internamente?</span>
             <svg class="qa-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5.25L7 9.25l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </summary>
-          <div class="qa-a"><p class="body-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
+          <div class="qa-a">
+            <p class="body-2">Los trámites de inmigración y de visa son el 100 % de nuestro trabajo. Las normas administrativas en Francia cambian constantemente: como expertos, nos enteramos en tiempo real de cada actualización y cambio de práctica de las autoridades. Confiar sus trámites a INWARD le evita errores, acelera los plazos de tramitación y libera a sus equipos de RR. HH. de la complejidad administrativa, con un acompañamiento sin errores.</p>
+          </div>
         </details>
         <details class="qa" name="faq">
           <summary>
             <span class="qa-n">04</span>
-            <span class="qa-q">Duis aute irure dolor in reprehenderit in voluptate ?</span>
+            <span class="qa-q">¿Cuánto tiempo lleva obtener una visa de trabajo para Francia?</span>
             <svg class="qa-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5.25L7 9.25l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </summary>
-          <div class="qa-a"><p class="body-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
+          <div class="qa-a">
+            <ul class="qa-l">
+              <li><b>Passeport Talent (plazo de 3 a 6 semanas):</b> accesible para titulados en Francia o salarios a partir de 59 000 €. Es la vía preferida para una contratación rápida.</li>
+              <li><b>Visa de asalariado / trabajador temporal (plazo de 4 a 6 meses):</b> para los demás perfiles con contrato indefinido o temporal, que requieren obtener antes una autorización de trabajo ante la administración.</li>
+            </ul>
+            <p class="body-2">Analizamos el perfil de su candidato desde el primer intercambio para optimizar los plazos de incorporación.</p>
+          </div>
         </details>
         <details class="qa" name="faq">
           <summary>
             <span class="qa-n">05</span>
-            <span class="qa-q">Excepteur sint occaecat cupidatat non proident ?</span>
+            <span class="qa-q">¿Qué es el Passeport Talent y quién puede beneficiarse?</span>
             <svg class="qa-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5.25L7 9.25l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </summary>
-          <div class="qa-a"><p class="body-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
+          <div class="qa-a">
+            <p class="body-2">Es un permiso de residencia plurianual (válido hasta 4 años, renovable) pensado para facilitar la instalación en Francia de perfiles altamente calificados.</p>
+            <p class="body-2 qa-sub">¿Quién puede beneficiarse?</p>
+            <ul class="qa-l">
+              <li><b>Empleados calificados y titulados:</b> recién titulados en Francia, empleados en misión o empleados con un salario a partir de 59 000 € al año.</li>
+              <li><b>Directivos y mandatarios sociales:</b> representantes legales de empresas establecidas en Francia.</li>
+              <li><b>Emprendedores y promotores de proyectos:</b> creadores de empresas innovadoras o inversores económicos.</li>
+              <li><b>Investigadores y artistas:</b> profesores, investigadores y perfiles artísticos o culturales.</li>
+            </ul>
+          </div>
         </details>
     </div>
+
     <div class="faq-act rv">
       <a class="btn btn-primary" href="#contact">Contacte a una experta <span class="arw">&rsaquo;</span></a>
     </div>

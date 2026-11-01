@@ -3243,3 +3243,15 @@ form .btn[disabled]{opacity:.6;pointer-events:none}
 .card-a::after{content:"";position:absolute;inset:0;z-index:3;border-radius:inherit}
 .card-a:focus-visible{outline:none}
 .vt:has(.card-a:focus-visible),.art:has(.card-a:focus-visible){outline:2px solid var(--accent);outline-offset:3px}
+/* Landing visa: intro a la izquierda con foto a la derecha; numeros en tipos. */
+.vl-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(1.8rem,5vw,4.5rem);align-items:center}
+.vl-split-txt{display:grid;justify-items:start}
+.vl-split-txt .sec-head{margin-bottom:clamp(1.4rem,2.6vw,2rem)}
+.vl-split-ph{margin:0;border-radius:var(--r);overflow:hidden;aspect-ratio:4/3;max-width:100%}
+.vl-split-ph img{width:100%;height:100%;object-fit:cover;display:block}
+@media (max-width:860px){.vl-split{grid-template-columns:1fr}}
+.vl-num{font-family:var(--font-display);font-weight:500;font-size:1rem;letter-spacing:.02em;color:var(--accent);
+  display:grid;place-items:center;width:2.4rem;height:2.4rem;border-radius:50%;background:var(--tint-3)}
+@media (max-width:440px){.vl-type{grid-template-columns:2.4rem minmax(0,1fr)}}
+.vl-steps li{grid-template-columns:2.4rem minmax(0,1fr)}
+.vl-avis .avis-in{padding-top:0}

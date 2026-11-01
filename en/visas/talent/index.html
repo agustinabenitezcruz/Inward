@@ -31,7 +31,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..600&family=Jost:wght@300..600&display=swap">
-<link rel="stylesheet" href="../../../assets/css/styles.css?v=57e2befd">
+<link rel="stylesheet" href="../../../assets/css/styles.css?v=ca02fea3">
 
 <script type="application/ld+json">
 {
@@ -340,32 +340,7 @@
 <div id="hdrSentinel" aria-hidden="true" style="position:absolute;top:50vh;height:1px;width:1px"></div>
 
 <!-- ============================ AVIS GOOGLE ============================ -->
-<section class="band band-top sec" id="avis" data-state="empty" data-api="../../../api/avis.php">
-  <!-- Las cifras vivian sobre el video del hero, chicas y en blanco. Aca van
-       junto a las opiniones, que es la otra prueba de resultados, y a tamano de
-       titular. El HTML trae el valor final: sin JavaScript o con movimiento
-       reducido se lee tal cual. main.js las cuenta desde cero al entrar en
-       pantalla y la barra de abajo se llena al mismo ritmo. -->
-  <div class="wrap">
-    <p class="label rv avis-top">Our results</p>
-    <ul class="kpis rv" aria-label="Key figures">
-      <li class="kpi">
-        <p class="kpi-n" data-count>99 %</p>
-        <span class="kpi-bar" aria-hidden="true"></span>
-        <p class="kpi-l">Application success rate</p>
-      </li>
-      <li class="kpi">
-        <p class="kpi-n" data-count>+45</p>
-        <span class="kpi-bar" aria-hidden="true"></span>
-        <p class="kpi-l">Nationalities supported</p>
-      </li>
-      <li class="kpi">
-        <p class="kpi-n" data-count>+1000</p>
-        <span class="kpi-bar" aria-hidden="true"></span>
-        <p class="kpi-l">Applications handled</p>
-      </li>
-    </ul>
-  </div>
+<section class="band band-top sec vl-avis" id="avis" data-state="empty" data-api="../../../api/avis.php">
   <div class="wrap avis-in">
     <div class="avis-score rv">
       <p class="score"><span class="score-n" data-avis="rating">—</span><span class="score-d">/5</span></p>
@@ -387,13 +362,18 @@
 
 <!-- ============================ INTRO ============================ -->
 <section class="band tinted sec vl-intro" id="carte-talent">
-  <div class="wrap">
-    <div class="sec-head vl-head rv">
-      <p class="label">Passeport Talent</p>
-      <h2>The best option to recruit or settle in France</h2>
-      <p class="lead">A premium residence permit valid for up to 4 years, with a fast-track procedure and the option to travel with your family.</p>
+  <div class="wrap vl-split">
+    <div class="vl-split-txt rv">
+      <div class="sec-head">
+        <p class="label">Passeport Talent</p>
+        <h2>The best option to recruit or settle in France</h2>
+        <p class="lead">A premium residence permit valid for up to 4 years, with a fast-track procedure and the option to travel with your family.</p>
+      </div>
+      <a class="btn btn-primary" href="#contact">Check my eligibility <span class="arw">&rsaquo;</span></a>
     </div>
-    <div class="vl-act rv"><a class="btn btn-primary" href="#contact">Check my eligibility <span class="arw">&rsaquo;</span></a></div>
+    <figure class="vl-split-ph rv">
+      <img src="../../../assets/img/dossier-titre-de-sejour-en-preparation.webp" width="1280" height="960" alt="INWARD consultant reviewing a mobility project with a client" loading="lazy" decoding="async">
+    </figure>
   </div>
 </section>
 
@@ -405,13 +385,13 @@
       <h2>Types of Talent cards</h2>
     </div>
     <ul class="vl-types rv">
-      <li class="vl-type"><svg class="vl-hx" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l8.2 4.75v9.5L12 21.5l-8.2-4.75v-9.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M10 8.6l5 3.4-5 3.4z" fill="currentColor"/></svg><h3>Highly qualified employee – EU Blue Card</h3></li>
-      <li class="vl-type"><svg class="vl-hx" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l8.2 4.75v9.5L12 21.5l-8.2-4.75v-9.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M10 8.6l5 3.4-5 3.4z" fill="currentColor"/></svg><h3>Qualified employee / Hiring by a Young Innovative Company (JEI)</h3></li>
-      <li class="vl-type"><svg class="vl-hx" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l8.2 4.75v9.5L12 21.5l-8.2-4.75v-9.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M10 8.6l5 3.4-5 3.4z" fill="currentColor"/></svg><h3>Employee on assignment (intra-group mobility)</h3></li>
-      <li class="vl-type"><svg class="vl-hx" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l8.2 4.75v9.5L12 21.5l-8.2-4.75v-9.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M10 8.6l5 3.4-5 3.4z" fill="currentColor"/></svg><h3>Researcher / Lecturer-researcher</h3></li>
-      <li class="vl-type"><svg class="vl-hx" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l8.2 4.75v9.5L12 21.5l-8.2-4.75v-9.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M10 8.6l5 3.4-5 3.4z" fill="currentColor"/></svg><h3>Corporate officer / Company executive</h3></li>
-      <li class="vl-type"><svg class="vl-hx" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l8.2 4.75v9.5L12 21.5l-8.2-4.75v-9.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M10 8.6l5 3.4-5 3.4z" fill="currentColor"/></svg><h3>Business founder / Investor</h3></li>
-      <li class="vl-type"><svg class="vl-hx" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l8.2 4.75v9.5L12 21.5l-8.2-4.75v-9.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M10 8.6l5 3.4-5 3.4z" fill="currentColor"/></svg><h3>Artistic and cultural profession</h3></li>
+      <li class="vl-type"><span class="vl-num">01</span><h3>Highly qualified employee – EU Blue Card</h3></li>
+      <li class="vl-type"><span class="vl-num">02</span><h3>Qualified employee / Hiring by a Young Innovative Company (JEI)</h3></li>
+      <li class="vl-type"><span class="vl-num">03</span><h3>Employee on assignment (intra-group mobility)</h3></li>
+      <li class="vl-type"><span class="vl-num">04</span><h3>Researcher / Lecturer-researcher</h3></li>
+      <li class="vl-type"><span class="vl-num">05</span><h3>Corporate officer / Company executive</h3></li>
+      <li class="vl-type"><span class="vl-num">06</span><h3>Business founder / Investor</h3></li>
+      <li class="vl-type"><span class="vl-num">07</span><h3>Artistic and cultural profession</h3></li>
     </ul>
     <div class="vl-act rv"><a class="btn btn-primary" href="#contact">Find my category <span class="arw">&rsaquo;</span></a></div>
   </div>
@@ -436,10 +416,10 @@
         <div class="vl-mid"><strong>3–6</strong><span>weeks</span></div>
       </div>
       <ol class="vl-steps">
-          <li><span class="vl-n">01</span><span><span class="vl-st">Assessment</span><span class="vl-sd">Review of your situation and choice of visa.</span></span><span class="vl-wk">S1</span></li>
-          <li><span class="vl-n">02</span><span><span class="vl-st">Application</span><span class="vl-sd">Gathering and checking the documents.</span></span><span class="vl-wk">S1–2</span></li>
-          <li><span class="vl-n">03</span><span><span class="vl-st">Submission</span><span class="vl-sd">Appointment and submission of the application.</span></span><span class="vl-wk">S2–3</span></li>
-          <li><span class="vl-n">04</span><span><span class="vl-st">Visa granted</span><span class="vl-sd">Processing by the consulate and issuance.</span></span><span class="vl-wk">S3–6</span></li>
+          <li><span class="vl-n">01</span><span><span class="vl-st">Assessment</span><span class="vl-sd">Review of your situation and choice of visa.</span></span></li>
+          <li><span class="vl-n">02</span><span><span class="vl-st">Application</span><span class="vl-sd">Gathering and checking the documents.</span></span></li>
+          <li><span class="vl-n">03</span><span><span class="vl-st">Submission</span><span class="vl-sd">Appointment and submission of the application.</span></span></li>
+          <li><span class="vl-n">04</span><span><span class="vl-st">Visa granted</span><span class="vl-sd">Processing by the consulate and issuance.</span></span></li>
       </ol>
     </div>
     <div class="vl-act rv"><a class="btn btn-primary" href="#contact">Start my application <span class="arw">&rsaquo;</span></a></div>
@@ -568,48 +548,79 @@
       <p class="label">FAQ</p>
       <h2>The questions we are asked most often</h2>
     </div>
+
+    <!-- El atributo name hace el acordeon exclusivo sin una linea de
+         JavaScript: abrir una cierra la anterior. -->
     <div class="qas qn-lilac rv">
         <details class="qa" name="faq">
           <summary>
             <span class="qa-n">01</span>
-            <span class="qa-q">Lorem ipsum dolor sit amet, consectetur adipiscing elit ?</span>
+            <span class="qa-q">How does INWARD maximise the chances of your visa application succeeding?</span>
             <svg class="qa-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5.25L7 9.25l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </summary>
-          <div class="qa-a"><p class="body-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
+          <div class="qa-a">
+            <p class="body-2">We maximise your application's acceptance rate with a method built on 4 key steps:</p>
+            <ul class="qa-l">
+              <li><b>Tailored eligibility audit:</b> we analyse your situation in detail to select the most suitable visa category.</li>
+              <li><b>A zero-defect application:</b> we gather, check and organise every supporting document and administrative form to meet the exact requirements of the French authorities.</li>
+              <li><b>Strategic support:</b> writing your business plan, formalising job offers or applying for a work permit: we secure the decisive steps of your procedure.</li>
+              <li><b>Rigorous follow-up until approval:</b> we anticipate potential roadblocks, prepare you for consulate or prefecture appointments and handle the administrative follow-up until your residence permit is actually issued.</li>
+            </ul>
+          </div>
         </details>
         <details class="qa" name="faq">
           <summary>
             <span class="qa-n">02</span>
-            <span class="qa-q">Sed do eiusmod tempor incididunt ut labore et dolore ?</span>
+            <span class="qa-q">What are INWARD's fees?</span>
             <svg class="qa-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5.25L7 9.25l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </summary>
-          <div class="qa-a"><p class="body-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
+          <div class="qa-a">
+            <p class="body-2">Our prices are 100% transparent and given at the start of the service, with no additional costs. We offer case-by-case support for one-off needs, as well as packages for companies that want regular, ongoing follow-up of their foreign employees. You get full budget visibility from start to finish.</p>
+          </div>
         </details>
         <details class="qa" name="faq">
           <summary>
             <span class="qa-n">03</span>
-            <span class="qa-q">Ut enim ad minim veniam, quis nostrud exercitation ?</span>
+            <span class="qa-q">Why use an international mobility agency rather than handling everything in-house?</span>
             <svg class="qa-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5.25L7 9.25l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </summary>
-          <div class="qa-a"><p class="body-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
+          <div class="qa-a">
+            <p class="body-2">Immigration and visa procedures are all we do. Administrative regulations in France change constantly: as experts, we are informed in real time of every update and every change in the authorities' practices. Entrusting your procedures to INWARD avoids mistakes, speeds up processing times and frees your HR teams from administrative complexity, for zero-defect support.</p>
+          </div>
         </details>
         <details class="qa" name="faq">
           <summary>
             <span class="qa-n">04</span>
-            <span class="qa-q">Duis aute irure dolor in reprehenderit in voluptate ?</span>
+            <span class="qa-q">How long does it take to get a work visa for France?</span>
             <svg class="qa-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5.25L7 9.25l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </summary>
-          <div class="qa-a"><p class="body-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
+          <div class="qa-a">
+            <ul class="qa-l">
+              <li><b>Passeport Talent (3 to 6 weeks):</b> available to graduates from French institutions or for salaries from €59,000. It is the preferred route for fast hiring.</li>
+              <li><b>Employee / Temporary worker visa (4 to 6 months):</b> for other profiles on permanent or fixed-term contracts, requiring a work permit from the authorities beforehand.</li>
+            </ul>
+            <p class="body-2">We analyse your candidate's profile from the very first conversation to optimise their start date.</p>
+          </div>
         </details>
         <details class="qa" name="faq">
           <summary>
             <span class="qa-n">05</span>
-            <span class="qa-q">Excepteur sint occaecat cupidatat non proident ?</span>
+            <span class="qa-q">What is the Passeport Talent and who is eligible?</span>
             <svg class="qa-mk" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 5.25L7 9.25l4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </summary>
-          <div class="qa-a"><p class="body-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
+          <div class="qa-a">
+            <p class="body-2">It is a multi-year residence permit (valid for up to 4 years, renewable) designed to make it easier for highly qualified profiles to settle in France.</p>
+            <p class="body-2 qa-sub">Who is eligible?</p>
+            <ul class="qa-l">
+              <li><b>Qualified employees and graduates:</b> recent graduates from French institutions, employees on assignment or employees earning from €59,000 a year.</li>
+              <li><b>Executives and corporate officers:</b> legal representatives of companies established in France.</li>
+              <li><b>Entrepreneurs and project founders:</b> founders of innovative companies or economic investors.</li>
+              <li><b>Researchers and artists:</b> lecturers, researchers and artistic or cultural profiles.</li>
+            </ul>
+          </div>
         </details>
     </div>
+
     <div class="faq-act rv">
       <a class="btn btn-primary" href="#contact">Contact an expert <span class="arw">&rsaquo;</span></a>
     </div>
