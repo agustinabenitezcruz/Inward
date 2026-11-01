@@ -3284,3 +3284,5 @@ form .btn[disabled]{opacity:.6;pointer-events:none}
 @media (max-width:1180px){.vl-sg{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (max-width:760px){.vl-sg{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:440px){.vl-sg{grid-template-columns:1fr}.vl-s{grid-template-columns:46px minmax(0,1fr);align-items:center;gap:1rem}}
+/* Formulario de contacto: el boton de envio va centrado. */
+form .btn[type="submit"]{align-self:center;justify-self:center}
