@@ -3235,3 +3235,11 @@ form .btn[disabled]{opacity:.6;pointer-events:none}
 @media (max-width:440px){
   .vl-type{grid-template-columns:34px minmax(0,1fr);align-items:center;gap:.9rem}
 }
+
+/* Tarjeta entera como enlace: el <a> va en el titulo y su ::after cubre la
+   tarjeta, asi se puede apretar en cualquier parte (icono, foto o texto). */
+.vt:has(.card-a),.art:has(.card-a){position:relative;cursor:pointer}
+.card-a{color:inherit;text-decoration:none}
+.card-a::after{content:"";position:absolute;inset:0;z-index:3;border-radius:inherit}
+.card-a:focus-visible{outline:none}
+.vt:has(.card-a:focus-visible),.art:has(.card-a:focus-visible){outline:2px solid var(--accent);outline-offset:3px}
