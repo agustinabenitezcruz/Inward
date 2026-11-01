@@ -1049,4 +1049,23 @@
   abreDestino();
   addEventListener("hashchange", abreDestino);
 
+
+  /* ---------- Landing de visa: linea de tiempo del hexagono ----------
+     Corre una sola vez al entrar en pantalla y termina sola. En reposo el
+     hexagono ya esta completo, asi que sin JS o con movimiento reducido se lee
+     igual. */
+  (function () {
+    var tls = [].slice.call(document.querySelectorAll(".vl-tl"));
+    if (!tls.length || !("IntersectionObserver" in window)) return;
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        io.unobserve(e.target);
+        e.target.classList.add("is-play");
+      });
+    }, { threshold: 0.45 });
+    tls.forEach(function (t) { io.observe(t); });
+  })();
+
 })();

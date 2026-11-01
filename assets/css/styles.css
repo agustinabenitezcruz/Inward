@@ -3154,3 +3154,84 @@ form .btn[disabled]{opacity:.6;pointer-events:none}
 .hdr.is-solid{-webkit-backdrop-filter:none;backdrop-filter:none;background:rgba(255,255,255,.97)}
 .marq-track{will-change:transform}
 .marq.is-off .marq-track{animation-play-state:paused}
+
+/* =========================================================
+   Landings de visa (visas/*)
+   ========================================================= */
+.vl-head{justify-items:center;text-align:center}
+.vl-head .label{justify-self:center}
+.vl-head h2{max-width:22em}
+.vl-head h2 b{font-weight:600}
+.vl-head .lead{max-width:60ch}
+.vl-intro .vl-head{margin-bottom:0}
+.vl-act{display:flex;justify-content:center;margin-top:clamp(1.6rem,3.2vw,2.4rem)}
+
+/* Tipos: tarjetas iguales, la ultima fila centrada. */
+.vl-types{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:14px}
+.vl-type{
+  flex:0 0 calc((100% - 3 * 14px) / 4);min-width:0;
+  display:grid;align-content:start;gap:1rem;min-height:170px;
+  padding:clamp(1.2rem,2vw,1.6rem);border-radius:var(--r);
+  background:var(--surface);border:1px solid var(--line-card);
+}
+.vl-type h3{font-family:var(--font-display);font-weight:500;font-size:clamp(1.05rem,1.35vw,1.2rem);line-height:1.3;color:var(--text)}
+.vl-hx{width:34px;height:34px;color:var(--accent)}
+@media (max-width:1080px){.vl-type{flex-basis:calc((100% - 2 * 14px) / 3)}}
+@media (max-width:760px){.vl-type{flex-basis:calc((100% - 14px) / 2);min-height:150px}}
+@media (max-width:440px){.vl-type{flex-basis:100%;min-height:0}}
+
+/* Linea de tiempo: el hexagono del isotipo como anillo de progreso. */
+.vl-tl{
+  display:grid;grid-template-columns:minmax(200px,300px) minmax(0,1fr);gap:clamp(1.6rem,4vw,3.4rem);align-items:center;
+  max-width:1000px;margin-inline:auto;background:var(--panel);border:1px solid var(--line-card);
+  border-radius:var(--r);padding:clamp(1.4rem,3.4vw,2.6rem);
+}
+.vl-hex{position:relative;width:100%;max-width:300px;aspect-ratio:1;justify-self:center}
+.vl-hex svg{width:100%;height:100%;display:block;overflow:visible}
+.vl-hb{fill:none;stroke:var(--surface-2);stroke-width:7;stroke-linejoin:round}
+.vl-hd{fill:none;stroke:var(--accent);stroke-width:7;stroke-linejoin:round;stroke-linecap:round;stroke-dasharray:100;stroke-dashoffset:0}
+.vl-mid{position:absolute;inset:0;display:grid;place-content:center;text-align:center}
+.vl-mid strong{font-family:var(--font-display);font-weight:400;font-size:clamp(2.6rem,6vw,3.6rem);line-height:1;letter-spacing:-.04em;color:var(--accent)}
+.vl-mid span{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text-3);margin-top:.3rem}
+.vl-steps{list-style:none;margin:0;padding:0;display:grid;gap:.2rem}
+.vl-steps li{display:grid;grid-template-columns:2.4rem minmax(0,1fr) auto;gap:.9rem;align-items:center;padding:.85rem 0;border-bottom:1px solid var(--line)}
+.vl-steps li:last-child{border-bottom:0}
+.vl-n{display:grid;place-items:center;width:2.2rem;height:2.2rem;border-radius:50%;background:var(--tint-3);color:var(--accent);font-size:.75rem;font-weight:600;letter-spacing:.04em}
+.vl-steps li:last-child .vl-n{background:var(--tint-2);color:var(--text)}
+.vl-st{display:block;font-family:var(--font-display);font-weight:500;font-size:1.05rem;line-height:1.25;color:var(--text)}
+.vl-sd{display:block;font-size:.9rem;line-height:1.5;color:var(--text-2)}
+.vl-wk{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-3);font-variant-numeric:tabular-nums;white-space:nowrap}
+@media (max-width:720px){.vl-tl{grid-template-columns:1fr}.vl-hex{max-width:230px}}
+@keyframes vlDraw{from{stroke-dashoffset:100}}
+@keyframes vlUp{from{opacity:0;transform:translateY(10px)}}
+@keyframes vlLight{from{opacity:.2;transform:translateX(-8px)}}
+.vl-tl.is-play .vl-hd{animation:vlDraw 3.2s cubic-bezier(.45,0,.3,1) backwards}
+.vl-tl.is-play .vl-steps li{animation:vlLight 520ms var(--ease-out) backwards}
+.vl-tl.is-play .vl-steps li:nth-child(1){animation-delay:.8s}
+.vl-tl.is-play .vl-steps li:nth-child(2){animation-delay:1.6s}
+.vl-tl.is-play .vl-steps li:nth-child(3){animation-delay:2.4s}
+.vl-tl.is-play .vl-steps li:nth-child(4){animation-delay:3.2s}
+.vl-tl.is-play .vl-mid{animation:vlUp 700ms var(--ease-out) 3.3s backwards}
+@media (prefers-reduced-motion:reduce){.vl-tl.is-play *{animation:none!important}}
+
+/* Caracteristicas: la caja de la checklist de Entreprises, con siete items. */
+.vl-box .chk{row-gap:1.15rem!important;margin-top:0!important}
+.vl-box .chk b{font-size:clamp(1.05rem,1.45vw,1.25rem)!important}
+.vl-box .agl-media{min-height:520px}
+@media (max-width:860px){.vl-box .agl-media{min-height:0;aspect-ratio:4/3}}
+
+/* Servicios: dos columnas de filas con flecha. */
+.vl-svc{list-style:none;margin:0 auto;padding:0;max-width:1000px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(1.4rem,4vw,3.4rem)}
+.vl-svc li{
+  position:relative;padding:1.05rem 0 1.05rem 2.4rem;border-bottom:1px solid var(--line-card);
+  font-family:var(--font-display);font-weight:500;font-size:clamp(1rem,1.3vw,1.15rem);line-height:1.35;color:var(--text);
+}
+.vl-svc li::before{
+  content:"";position:absolute;left:0;top:50%;width:1.5rem;height:1.5rem;margin-top:-.75rem;border-radius:50%;
+  background:var(--tint-1) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M6 4l4 4-4 4' fill='none' stroke='%23101010' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/70% no-repeat;
+}
+@media (max-width:700px){.vl-svc{grid-template-columns:1fr}}
+#services.tinted{background:var(--surface)}
+@media (max-width:440px){
+  .vl-type{grid-template-columns:34px minmax(0,1fr);align-items:center;gap:.9rem}
+}

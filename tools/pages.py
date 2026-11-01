@@ -25,6 +25,7 @@ PAGES = [
     {"dir": "videos/presentation-inward-palais-garnier",
      "title": "Vidéo : INWARD devant le Palais Garnier"},
     {"dir": "qui-sommes-nous", "title": "Qui sommes-nous"},
+    {"dir": "visas/talent", "title": "Landing Visa Talent"},
     # Pendiente: mentions-legales
 ]
 
