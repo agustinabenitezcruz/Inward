@@ -3287,36 +3287,6 @@ form .btn[disabled]{opacity:.6;pointer-events:none}
 /* Formulario de contacto: el boton de envio va centrado. */
 form .btn[type="submit"]{align-self:center;justify-self:center}
 
-/* ---------- Landing visa: ventajas con mas vida ----------
-   Cada fila tiene un fondo lila que entra desde la izquierda al pasar el
-   mouse; el tilde pasa a violeta y el texto se corre un poco. Al entrar en
-   pantalla las filas aparecen en cascada y el tilde hace "pop". */
-.vl-adv-list li{position:relative;isolation:isolate;padding-inline:.9rem;margin-inline:-.9rem;border-radius:12px;
-  transition:border-color 400ms var(--ease-soft)}
-.vl-adv-list li::before{content:"";position:absolute;inset:4px 0;z-index:-1;border-radius:12px;background:var(--accent-soft);
-  transform:scaleX(0);transform-origin:left;transition:transform 520ms var(--ease-out)}
-.vl-adv-list span:not(.vl-tk){transition:translate 520ms var(--ease-out)}
-.vl-tk{transition:background-color 360ms var(--ease-soft),scale 420ms var(--ease-out)}
-.vl-tk::before{transition:border-color 360ms var(--ease-soft)}
-@media (hover:hover){
-  .vl-adv-list li:hover::before{transform:scaleX(1)}
-  .vl-adv-list li:hover span:not(.vl-tk){translate:8px 0}
-  .vl-adv-list li:hover .vl-tk{background:var(--accent);scale:1.12}
-  .vl-adv-list li:hover .vl-tk::before{border-color:var(--on-accent)}
-}
-@keyframes vlRow{from{opacity:0;transform:translateY(14px)}}
-@keyframes vlTk{0%{scale:0}70%{scale:1.25}100%{scale:1}}
-.vl-adv-list.is-play li{animation:vlRow 620ms var(--ease-out) backwards}
-.vl-adv-list.is-play .vl-tk{animation:vlTk 520ms var(--ease-out) backwards}
-.vl-adv-list.is-play li:nth-child(1),.vl-adv-list.is-play li:nth-child(1) .vl-tk{animation-delay:.05s}
-.vl-adv-list.is-play li:nth-child(2),.vl-adv-list.is-play li:nth-child(2) .vl-tk{animation-delay:.17s}
-.vl-adv-list.is-play li:nth-child(3),.vl-adv-list.is-play li:nth-child(3) .vl-tk{animation-delay:.29s}
-.vl-adv-list.is-play li:nth-child(4),.vl-adv-list.is-play li:nth-child(4) .vl-tk{animation-delay:.41s}
-.vl-adv-list.is-play li:nth-child(5),.vl-adv-list.is-play li:nth-child(5) .vl-tk{animation-delay:.53s}
-.vl-adv-list.is-play li:nth-child(6),.vl-adv-list.is-play li:nth-child(6) .vl-tk{animation-delay:.65s}
-.vl-adv-list.is-play li:nth-child(7),.vl-adv-list.is-play li:nth-child(7) .vl-tk{animation-delay:.77s}
-.vl-adv-list.is-play .vl-tk{animation-delay:inherit}
-
 /* Hover de las tarjetas de tipos y de servicios: suben, se marca el borde y
    el circulo pasa a violeta oscuro. */
 .vl-type,.vl-s{transition:translate 620ms var(--ease-soft),box-shadow 720ms var(--ease-soft),border-color 560ms var(--ease-soft),background-color 560ms var(--ease-soft)}
@@ -3326,4 +3296,56 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
   .vl-type:hover{background:var(--panel)}
   .vl-type:hover .vl-num,.vl-s:hover .vl-s-i{background:var(--accent);color:var(--on-accent);scale:1.08}
 }
-@media (prefers-reduced-motion:reduce){.vl-adv-list.is-play *,.vl-adv-list.is-play li{animation:none!important}}
+
+
+/* ---------- Landing visa: ventajas en panal de hexagonos ----------
+   Hexagonos de punta arriba: ancho --w, alto --h = --w * 1.1547. El panal
+   mide 3w x 2.5h; cada celda se ubica por su centro. El borde es un hexagono
+   violeta y adentro otro blanco 1.5px mas chico (clip-path no tiene borde). */
+.vl-adv{align-items:center}
+.vl-hc{--w:212px;--h:calc(var(--w) * 1.1547);--g:.955;
+  list-style:none;margin:0 auto;padding:0;position:relative;width:calc(var(--w) * 3);height:calc(var(--h) * 2.5);max-width:100%}
+.vl-hx-c{position:absolute;width:var(--w);height:var(--h);margin:calc(var(--h) / -2) 0 0 calc(var(--w) / -2);
+  clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);background:var(--line-strong);
+  scale:var(--g);transition:scale 520ms var(--ease-out),background-color 400ms var(--ease-soft)}
+.vl-hx-in{position:absolute;inset:1.5px;clip-path:inherit;background:var(--panel);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.7rem;padding:0 14%;text-align:center;
+  transition:background-color 400ms var(--ease-soft)}
+.vl-hx-t{font-family:var(--font-display);font-weight:500;font-size:.95rem;line-height:1.28;color:var(--text);text-wrap:balance;transition:color 400ms var(--ease-soft)}
+.vl-hx-c .vl-tk{flex:none}
+.vl-p-c {left:50%;top:50%}
+.vl-p-l {left:16.667%;top:50%}
+.vl-p-r {left:83.333%;top:50%}
+.vl-p-tl{left:33.333%;top:20%}
+.vl-p-tr{left:66.667%;top:20%}
+.vl-p-bl{left:33.333%;top:80%}
+.vl-p-br{left:66.667%;top:80%}
+.vl-p-c .vl-hx-in{background:var(--surface)}
+@media (hover:hover){
+  .vl-hc:hover .vl-hx-c{scale:.92}
+  .vl-hc .vl-hx-c:hover{scale:1;background:var(--accent)}
+  .vl-hx-c:hover .vl-hx-in{background:var(--accent)}
+  .vl-hx-c:hover .vl-hx-t{color:var(--on-accent)}
+  .vl-hx-c:hover .vl-tk{background:var(--tint-1)}
+}
+@keyframes vlHex{from{opacity:0;scale:.55}}
+.vl-hc.is-play .vl-hx-c{animation:vlHex 700ms var(--ease-out) backwards}
+.vl-hc.is-play .vl-p-c{animation-delay:.05s}
+.vl-hc.is-play .vl-p-tl{animation-delay:.25s}
+.vl-hc.is-play .vl-p-tr{animation-delay:.35s}
+.vl-hc.is-play .vl-p-r{animation-delay:.45s}
+.vl-hc.is-play .vl-p-br{animation-delay:.55s}
+.vl-hc.is-play .vl-p-bl{animation-delay:.65s}
+.vl-hc.is-play .vl-p-l{animation-delay:.75s}
+@media (prefers-reduced-motion:reduce){.vl-hc.is-play .vl-hx-c{animation:none!important}}
+@media (max-width:1240px){.vl-hc{--w:186px}.vl-hx-t{font-size:.88rem}}
+@media (max-width:1060px){.vl-adv{grid-template-columns:1fr;justify-items:center}.vl-adv-head{justify-items:center;text-align:center}.vl-adv-head .sec-head{justify-items:center}.vl-adv-head .label{justify-self:center}.vl-hc{--w:200px}}
+/* Celular: el panal no entra; los hexagonos pasan a filas con tilde. */
+@media (max-width:640px){
+  .vl-hc{width:auto;height:auto;display:grid;gap:10px}
+  .vl-hx-c{position:static;width:auto;height:auto;margin:0;clip-path:none;scale:1;background:none;border:1px solid var(--line-card);border-radius:var(--r)}
+  .vl-hx-in{position:static;clip-path:none;flex-direction:row;justify-content:flex-start;gap:1rem;padding:1rem 1.1rem;text-align:left;border-radius:inherit}
+  .vl-hx-t{font-size:1rem}
+  .vl-hc.is-play .vl-hx-c{animation-name:vlRowIn}
+}
+@keyframes vlRowIn{from{opacity:0;transform:translateY(12px)}}

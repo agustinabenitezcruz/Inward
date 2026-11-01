@@ -1076,7 +1076,7 @@
      Al entrar en pantalla las filas aparecen una tras otra y cada tilde se
      enciende. Una sola vez; termina sola. */
   (function () {
-    var ls = [].slice.call(document.querySelectorAll(".vl-adv-list"));
+    var ls = [].slice.call(document.querySelectorAll(".vl-hc"));
     if (!ls.length || !("IntersectionObserver" in window)) return;
     if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     var io = new IntersectionObserver(function (es) {
