@@ -3349,15 +3349,6 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
 .vlb-bar{height:3px;border-radius:3px;background:var(--line);margin-top:1.4rem;overflow:hidden}
 .vlb-bar span{display:block;height:100%;width:30%;background:var(--accent);border-radius:inherit;transform-origin:left;transition:translate 200ms linear}
 
-/* C: tarjetas con foto */
-.vlc{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:14px}
-.vlc-c{flex:0 0 calc((100% - 3 * 14px) / 4);aspect-ratio:4/5}
-.vlc-c h3{font-size:clamp(1.05rem,1.4vw,1.25rem);font-weight:600;line-height:1.25;text-wrap:balance}
-.vlc-n{display:inline-grid;place-items:center;width:2.2rem;height:2.2rem;border-radius:50%;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.5);color:#fff;font-size:.75rem;font-weight:600;letter-spacing:.04em;margin-bottom:.2rem;backdrop-filter:blur(4px)}
-@media (max-width:1000px){.vlc-c{flex-basis:calc((100% - 2 * 14px) / 3)}}
-@media (max-width:700px){.vlc-c{flex-basis:calc((100% - 14px) / 2)}}
-@media (max-width:420px){.vlc-c{flex-basis:100%;aspect-ratio:16/10}}
-
 /* D: caja violeta con contador */
 .vld{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(1.6rem,5vw,4.5rem);align-items:center;
   background:var(--fill);color:var(--fill-ink);border-radius:var(--r);padding:clamp(1.8rem,4.5vw,3.6rem);position:relative;overflow:hidden;isolation:isolate}
