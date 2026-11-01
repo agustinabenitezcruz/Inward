@@ -3378,3 +3378,4 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
 /* B: tarjetas mas bajas; numeros lila macizos, sin filete. */
 .vlb-c{min-height:0;gap:clamp(1.2rem,2vw,1.6rem);justify-content:flex-start}
 .vlb-n{color:var(--tint-3);-webkit-text-stroke:0;font-weight:400}
+.vld-big strong{-webkit-text-stroke:0}
