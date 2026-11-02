@@ -3327,28 +3327,6 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
 .vla-cap.is-on{opacity:1;translate:0 0;transition-delay:120ms}
 @media (max-width:900px){.vla{grid-template-columns:1fr}.vla-ph{order:-1;min-height:0;aspect-ratio:4/3}}
 
-/* B: carrusel */
-.vlb-top{display:flex;align-items:end;justify-content:space-between;gap:1rem;flex-wrap:wrap}
-.vlb-top .vl-head{justify-items:start;text-align:left}
-.vlb-top .vl-head .label{justify-self:start}
-.vlb-nav{display:flex;gap:10px;margin-bottom:var(--head-gap)}
-.vlb-arw{all:unset;cursor:pointer;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;border:1px solid var(--line-strong);color:var(--accent);background:var(--panel);transition:background-color 300ms var(--ease-soft),color 300ms var(--ease-soft),opacity 300ms}
-.vlb-arw svg{width:18px;height:18px}
-.vlb-arw:hover{background:var(--accent);color:var(--on-accent)}
-.vlb-arw:disabled{opacity:.35;pointer-events:none}
-.vlb-arw:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.vlb-track{list-style:none;margin:0;padding:0 0 .4rem;display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;cursor:grab;overscroll-behavior-x:contain}
-.vlb-track::-webkit-scrollbar{display:none}
-.vlb-track.is-drag{cursor:grabbing;scroll-snap-type:none}
-.vlb-track.is-drag *{user-select:none;pointer-events:none}
-.vlb-c{flex:0 0 clamp(250px,26vw,330px);scroll-snap-align:start;min-height:clamp(280px,26vw,340px);display:flex;flex-direction:column;justify-content:space-between;gap:2rem;
-  padding:clamp(1.4rem,2.4vw,2rem);border-radius:var(--r);background:var(--panel);border:1px solid var(--line-card);transition:translate 600ms var(--ease-soft),border-color 500ms var(--ease-soft)}
-.vlb-n{font-family:var(--font-display);font-weight:300;font-size:clamp(3.4rem,6vw,5rem);line-height:.9;letter-spacing:-.05em;color:var(--tint-3);-webkit-text-stroke:1px var(--accent)}
-.vlb-c p{margin:0;font-family:var(--font-display);font-weight:500;font-size:clamp(1.1rem,1.5vw,1.3rem);line-height:1.28;color:var(--text);text-wrap:balance}
-@media (hover:hover){.vlb-c:hover{translate:0 -6px;border-color:var(--accent)}}
-.vlb-bar{height:3px;border-radius:3px;background:var(--line);margin-top:1.4rem;overflow:hidden}
-.vlb-bar span{display:block;height:100%;width:30%;background:var(--accent);border-radius:inherit;transform-origin:left;transition:translate 200ms linear}
-
 /* D: caja violeta con contador */
 .vld{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(1.6rem,5vw,4.5rem);align-items:center;
   background:var(--fill);color:var(--fill-ink);border-radius:var(--r);padding:clamp(1.8rem,4.5vw,3.6rem);position:relative;overflow:hidden;isolation:isolate}
@@ -3375,9 +3353,9 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
 .vld-big span{color:var(--text-3)}
 .vld-list li{color:var(--text);border-bottom-color:var(--line-card)}
 .vld-tk{background:var(--tint-3)}
-/* B: tarjetas mas bajas; numeros lila macizos, sin filete. */
-.vlb-c{min-height:0;gap:clamp(1.2rem,2vw,1.6rem);justify-content:flex-start}
-.vlb-n{color:var(--tint-3);-webkit-text-stroke:0;font-weight:400}
 .vld-big strong{-webkit-text-stroke:0}
 .vld::before,.vld::after{display:none}
 .vld-big strong{-webkit-text-stroke:0 transparent!important}
+
+/* Nos services: la caja de lista sin el numero grande. */
+.vld-solo{grid-template-columns:1fr;max-width:1100px;margin-inline:auto}

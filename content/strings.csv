@@ -416,8 +416,6 @@ meta-title,Visa et carte de séjour Talent | INWARD,Talent visa and residence pe
 meta-description,"Passeport Talent : un titre de séjour valable jusqu'à 4 ans, procédure accélérée et famille incluse. INWARD vous accompagne de A à Z, de l'éligibilité à la carte de séjour.","Passeport Talent: a residence permit valid for up to 4 years, with a fast-track procedure and your family included. INWARD supports you from A to Z, from eligibility to your residence card.","Passeport Talent: un permiso de residencia válido hasta 4 años, con procedimiento acelerado y la familia incluida. INWARD le acompaña de principio a fin, desde la elegibilidad hasta la tarjeta de residencia."
 consultante-inward-tudiant-un-projet-de-mobi,Consultante INWARD étudiant un projet de mobilité avec un client,INWARD consultant reviewing a mobility project with a client,Consultora de INWARD analizando un proyecto de movilidad con un cliente
 avantages-de-la-carte-talent,Avantages de la carte Talent,Benefits of the Talent card,Ventajas de la tarjeta Talento
-pr-c-dent,Précédent,Previous,Anterior
-suivant,Suivant,Next,Siguiente
 types-de-cartes,Types de cartes,Card types,Tipos de tarjeta
 caract-ristiques,Caractéristiques,Features,Características
 visa-et-carte-de-s-jour-talent,Visa et carte de séjour Talent,Talent visa and residence permit,Visa y permiso de residencia Talento
@@ -436,6 +434,15 @@ mandataire-social-dirigeant-d-entreprise,Mandataire social / Dirigeant d'entrepr
 cr-ateur-d-entreprise-investisseur,Créateur d'entreprise / Investisseur,Business founder / Investor,Creador de empresa / Inversor
 profession-artistique-et-culturelle,Profession artistique et culturelle,Artistic and cultural profession,Profesión artística y cultural
 trouver-ma-cat-gorie,Trouver ma catégorie,Find my category,Encontrar mi categoría
+caract-ristiques-du-visa,Caractéristiques du visa,Visa features,Características de la visa
+les-avantages-de-la-carte-talent,Les avantages de la carte Talent,The benefits of the Talent card,Las ventajas de la tarjeta Talento
+proc-dure-simplifi-e-et-prioritaire,Procédure simplifiée et prioritaire,"Simplified, priority procedure",Procedimiento simplificado y prioritario
+ligibilit-4-ans-d-s-la-premi-re-demande,Éligibilité à 4 ans dès la première demande,Eligible for 4 years from the first application,Elegibilidad a 4 años desde la primera solicitud
+absence-d-opposabilit-de-la-situation-de-l-e,Absence d'opposabilité de la situation de l'emploi,No labour market test,Sin oponibilidad de la situación del empleo
+titre-pluriannuel-renouvelable,Titre pluriannuel renouvelable,Renewable multi-year permit,Permiso plurianual renovable
+accompagnement-de-la-famille-travers-la-proc,Accompagnement de la famille à travers la procédure simplifiée Passeport Talent – Famille,Your family can join you through the simplified Passeport Talent – Family procedure,Acompañamiento de la familia mediante el procedimiento simplificado Passeport Talent – Familia
+acc-s-la-carte-de-r-sident-de-10-ans-sous-co,Accès à la carte de résident de 10 ans (sous conditions),Access to the 10-year resident card (subject to conditions),Acceso a la tarjeta de residente de 10 años (bajo condiciones)
+ouvre-la-voie-la-demande-de-nationalit-fran,Ouvre la voie à la demande de nationalité française,Opens the way to applying for French citizenship,Abre el camino para solicitar la nacionalidad francesa
 d-lais-estimatifs,Délais estimatifs,Estimated timeframes,Plazos estimados
 3-6-semaines-pour-l-obtention-du-visa,3 à 6 semaines pour l'obtention du visa,3 to 6 weeks to obtain the visa,3 a 6 semanas para obtener la visa
 semaines,semaines,weeks,semanas
@@ -448,16 +455,6 @@ rendez-vous-et-d-p-t-de-la-demande,Rendez-vous et dépôt de la demande.,Appoint
 visa-obtenu,Visa obtenu,Visa granted,Visa obtenida
 instruction-par-le-consulat-et-d-livrance,Instruction par le consulat et délivrance.,Processing by the consulate and issuance.,Tramitación por el consulado y entrega.
 lancer-ma-d-marche,Lancer ma démarche,Start my application,Iniciar mi trámite
-caract-ristiques-du-visa,Caractéristiques du visa,Visa features,Características de la visa
-les-avantages-de-la-carte-talent,Les avantages de la carte Talent,The benefits of the Talent card,Las ventajas de la tarjeta Talento
-proc-dure-simplifi-e-et-prioritaire,Procédure simplifiée et prioritaire,"Simplified, priority procedure",Procedimiento simplificado y prioritario
-ligibilit-4-ans-d-s-la-premi-re-demande,Éligibilité à 4 ans dès la première demande,Eligible for 4 years from the first application,Elegibilidad a 4 años desde la primera solicitud
-absence-d-opposabilit-de-la-situation-de-l-e,Absence d'opposabilité de la situation de l'emploi,No labour market test,Sin oponibilidad de la situación del empleo
-titre-pluriannuel-renouvelable,Titre pluriannuel renouvelable,Renewable multi-year permit,Permiso plurianual renovable
-accompagnement-de-la-famille-travers-la-proc,Accompagnement de la famille à travers la procédure simplifiée Passeport Talent – Famille,Your family can join you through the simplified Passeport Talent – Family procedure,Acompañamiento de la familia mediante el procedimiento simplificado Passeport Talent – Familia
-acc-s-la-carte-de-r-sident-de-10-ans-sous-co,Accès à la carte de résident de 10 ans (sous conditions),Access to the 10-year resident card (subject to conditions),Acceso a la tarjeta de residente de 10 años (bajo condiciones)
-ouvre-la-voie-la-demande-de-nationalit-fran,Ouvre la voie à la demande de nationalité française,Opens the way to applying for French citizenship,Abre el camino para solicitar la nacionalidad francesa
-avantages,avantages,benefits,ventajas
 ce-que-nous-prenons-en-charge,Ce que nous prenons en charge,What we take care of,De qué nos encargamos
 prise-de-rendez-vous-au-consulat-ou-en-pr-fe,Prise de rendez-vous au consulat ou en préfecture,Booking appointments at the consulate or prefecture,Toma de cita en el consulado o en la prefectura
 obtention-d-avis-sur-le-projet,Obtention d'avis sur le projet,Obtaining an opinion on the project,Obtención de dictamen sobre el proyecto

@@ -31,7 +31,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..600&family=Jost:wght@300..600&display=swap">
-<link rel="stylesheet" href="../../../assets/css/styles.css?v=1ea98ae1">
+<link rel="stylesheet" href="../../../assets/css/styles.css?v=937a2e39">
 
 <script type="application/ld+json">
 {
@@ -398,7 +398,7 @@
 </section>
 
 <!-- ============================ CARACTERISTIQUES ============================ -->
-<!-- Ventajas, version A: selector + foto. Se recorre solo cada 4 s hasta
+<!-- Ventajas: selector + foto. Se recorre solo cada 4 s hasta
      que la persona toca una; se pausa fuera de pantalla. -->
 <section class="band tinted sec" id="avantages">
   <div class="wrap">
@@ -439,61 +439,11 @@
   </div>
 </section>
 
-<!-- Ventajas, version B: carrusel horizontal con flechas y arrastre. -->
-<section class="band sec" id="avantages-b">
-  <div class="wrap">
-    <div class="vlb-top">
-    <div class="sec-head vl-head rv">
-      <p class="label">Características de la visa</p>
-      <h2>Las ventajas de la tarjeta Talento</h2>
-    </div>
-      <div class="vlb-nav">
-        <button class="vlb-arw" type="button" data-dir="-1" aria-label="Anterior"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3.5L5.5 8l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-        <button class="vlb-arw" type="button" data-dir="1" aria-label="Siguiente"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3.5L10.5 8 6 12.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-      </div>
-    </div>
-    <ul class="vlb-track" tabindex="0" aria-label="Ventajas de la tarjeta Talento">
-        <li class="vlb-c"><span class="vlb-n">01</span><p>Procedimiento simplificado y prioritario</p></li>
-        <li class="vlb-c"><span class="vlb-n">02</span><p>Elegibilidad a 4 años desde la primera solicitud</p></li>
-        <li class="vlb-c"><span class="vlb-n">03</span><p>Sin oponibilidad de la situación del empleo</p></li>
-        <li class="vlb-c"><span class="vlb-n">04</span><p>Permiso plurianual renovable</p></li>
-        <li class="vlb-c"><span class="vlb-n">05</span><p>Acompañamiento de la familia mediante el procedimiento simplificado Passeport Talent – Familia</p></li>
-        <li class="vlb-c"><span class="vlb-n">06</span><p>Acceso a la tarjeta de residente de 10 años (bajo condiciones)</p></li>
-        <li class="vlb-c"><span class="vlb-n">07</span><p>Abre el camino para solicitar la nacionalidad francesa</p></li>
-    </ul>
-    <div class="vlb-bar" aria-hidden="true"><span></span></div>
-    <div class="vl-act rv"><a class="btn btn-primary" href="#contact">Pedir una cita <span class="arw">&rsaquo;</span></a></div>
-  </div>
-</section>
-
-<!-- Ventajas, version D: caja violeta con contador. -->
-<section class="band sec" id="avantages-d">
-  <div class="wrap">
-    <div class="sec-head vl-head rv">
-      <p class="label">Características de la visa</p>
-      <h2>Las ventajas de la tarjeta Talento</h2>
-    </div>
-    <div class="vld rv">
-      <div class="vld-big"><strong data-vld-count>7</strong><span>ventajas</span></div>
-      <ul class="vld-list">
-          <li><span class="vld-tk" aria-hidden="true"></span>Procedimiento simplificado y prioritario</li>
-          <li><span class="vld-tk" aria-hidden="true"></span>Elegibilidad a 4 años desde la primera solicitud</li>
-          <li><span class="vld-tk" aria-hidden="true"></span>Sin oponibilidad de la situación del empleo</li>
-          <li><span class="vld-tk" aria-hidden="true"></span>Permiso plurianual renovable</li>
-          <li><span class="vld-tk" aria-hidden="true"></span>Acompañamiento de la familia mediante el procedimiento simplificado Passeport Talent – Familia</li>
-          <li><span class="vld-tk" aria-hidden="true"></span>Acceso a la tarjeta de residente de 10 años (bajo condiciones)</li>
-          <li><span class="vld-tk" aria-hidden="true"></span>Abre el camino para solicitar la nacionalidad francesa</li>
-      </ul>
-    </div>
-    <div class="vl-act rv"><a class="btn btn-primary" href="#contact">Pedir una cita <span class="arw">&rsaquo;</span></a></div>
-  </div>
-</section>
-
 <!-- ============================ DELAIS ============================ -->
 <!-- Linea de tiempo: el hexagono del isotipo se dibuja de 0 al final y cada
      etapa se enciende a su turno. Corre una vez al entrar en pantalla y
      termina sola; en reposo (sin JS o con movimiento reducido) se ve completa. -->
-<section class="band tinted sec" id="delais">
+<section class="band sec" id="delais">
   <div class="wrap">
     <div class="sec-head vl-head rv">
       <p class="label">Plazos estimados</p>
@@ -519,24 +469,26 @@
 </section>
 
 <!-- ============================ SERVICES ============================ -->
-<section class="band sec" id="services">
+<section class="band tinted sec" id="services">
   <div class="wrap">
     <div class="sec-head vl-head rv">
       <p class="label">Nuestros servicios</p>
       <h2>De qué nos encargamos</h2>
     </div>
-    <ul class="vl-sg rv">
-      <li class="vl-s"><svg class="vl-s-i" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.5 9.5h17M8 3v4M16 3v4M8 13.5h3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Toma de cita en el consulado o en la prefectura</span></li>
-      <li class="vl-s"><svg class="vl-s-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16v10H10l-4.5 3.5v-3.5H4z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 10.5h8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Obtención de dictamen sobre el proyecto</span></li>
-      <li class="vl-s"><svg class="vl-s-i" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3.5" width="14" height="17" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 8h7M8.5 12h7M8.5 16h4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Llenado de formularios</span></li>
-      <li class="vl-s"><svg class="vl-s-i" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Redacción de cartas</span></li>
-      <li class="vl-s"><svg class="vl-s-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h8M8 4v2M10.5 6c-.6 3.6-3 6.4-6 7.6M6.5 9c1 2 2.6 3.6 4.5 4.4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.5 20l3.5-8.5 3.5 8.5M13.8 17h4.4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Traducción de documentos por traductor jurado</span></li>
-      <li class="vl-s"><svg class="vl-s-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16M6.5 16.5v-4M11 16.5V8M15.5 16.5v-6M20 4l-4 4-3-2.5-4.5 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Supervisión en la elaboración del plan de negocio</span></li>
-      <li class="vl-s"><svg class="vl-s-i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="17" cy="9.5" r="2.4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 19.5c0-3.3 2.7-6 6-6s6 2.7 6 6M15.5 14c2.9 0 5.3 2.2 5.3 5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Solicitudes agrupadas</span></li>
-      <li class="vl-s"><svg class="vl-s-i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 7.5A2 2 0 0 1 5.5 5.5h4l2 2h7a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.5 13.5l2 2 3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Preparación completa del expediente de solicitud de visa</span></li>
-      <li class="vl-s"><svg class="vl-s-i" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2.2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8.5" cy="11" r="2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.8 15.5c.5-1.3 1.6-2 2.7-2s2.2.7 2.7 2M14 10h4M14 13h3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Solicitud de permiso de residencia</span></li>
-      <li class="vl-s"><svg class="vl-s-i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 7v5l3.5 2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Seguimiento hasta la obtención del permiso de residencia</span></li>
-    </ul>
+    <div class="vld vld-solo rv">
+      <ul class="vld-list">
+          <li><span class="vld-tk" aria-hidden="true"></span>Toma de cita en el consulado o en la prefectura</li>
+          <li><span class="vld-tk" aria-hidden="true"></span>Obtención de dictamen sobre el proyecto</li>
+          <li><span class="vld-tk" aria-hidden="true"></span>Llenado de formularios</li>
+          <li><span class="vld-tk" aria-hidden="true"></span>Redacción de cartas</li>
+          <li><span class="vld-tk" aria-hidden="true"></span>Traducción de documentos por traductor jurado</li>
+          <li><span class="vld-tk" aria-hidden="true"></span>Supervisión en la elaboración del plan de negocio</li>
+          <li><span class="vld-tk" aria-hidden="true"></span>Solicitudes agrupadas</li>
+          <li><span class="vld-tk" aria-hidden="true"></span>Preparación completa del expediente de solicitud de visa</li>
+          <li><span class="vld-tk" aria-hidden="true"></span>Solicitud de permiso de residencia</li>
+          <li><span class="vld-tk" aria-hidden="true"></span>Seguimiento hasta la obtención del permiso de residencia</li>
+      </ul>
+    </div>
     <div class="vl-act rv"><a class="btn btn-primary" href="#contact">Solicitar un presupuesto <span class="arw">&rsaquo;</span></a></div>
   </div>
 </section>
