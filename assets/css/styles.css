@@ -3453,3 +3453,6 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
 @media (min-width:861px){
   .hcol:not([data-on]) .hcol-body{height:0;overflow:hidden}
 }
+/* Particuliers, Visas (fotos): nombres mas grandes en cada tarjeta. */
+.vph-9 .art h3{font-size:clamp(1.25rem,1.75vw,1.6rem)!important;line-height:1.18}
+@media (max-width:640px){.vph-9 .art h3{font-size:1.15rem!important}}

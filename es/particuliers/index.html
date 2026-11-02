@@ -32,7 +32,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..600&family=Jost:wght@300..600&display=swap">
-<link rel="stylesheet" href="../../assets/css/styles.css?v=9b071a28">
+<link rel="stylesheet" href="../../assets/css/styles.css?v=6317b871">
 <link rel="preload" as="image" href="../../assets/img/rendez-vous-consultante-inward-client.webp" fetchpriority="high">
 
 <!-- FICHA ESTRUCTURADA. La organizacion se referencia por @id a la que
@@ -608,125 +608,49 @@
   </section>
 
 <!-- ============================ TYPES DE VISA ============================ -->
-<!-- Acordeon .svc, el mismo de la landing de empresas: pastilla con el numero,
-     titulo y "Voir plus". A proposito NO es el mismo componente que la
-     seccion de abajo: las dos son listas que se abren y si se vieran iguales
-     el visitante no tendria por que entender que hablan de cosas distintas.
-     Esta enumera, la de abajo acompana.
-     "Rece" se leyo como la carte de sejour recherche d'emploi ou creation
-     d'entreprise; a confirmar con la clienta.
-     Los cuerpos en lorem ipsum son los que la clienta todavia no mando. -->
-<section class="band sec" id="visas">
-  <div class="wrap">
-    <!-- Iconos locales de esta seccion. Los atributos de trazo van en cada
-         <symbol>: un <g> que los envuelva no se clona con <use> y los iconos
-         salen negros macizos. -->
-    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-      <symbol id="i-p-visiteur" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.8"/><path d="M3.2 12h17.6M12 3.2c2.2 2.4 3.4 5.5 3.4 8.8S14.2 18.4 12 20.8c-2.2-2.4-3.4-5.5-3.4-8.8S9.8 5.6 12 3.2z"/></symbol>
-      <symbol id="i-p-etudiant" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4.2l9 4.4-9 4.4-9-4.4 9-4.4z"/><path d="M6.6 10.6v4.6c0 1.6 2.4 2.9 5.4 2.9s5.4-1.3 5.4-2.9v-4.6M21 8.6v5"/></symbol>
-      <symbol id="i-p-famille" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="7.8" r="2.9"/><circle cx="16.4" cy="9.2" r="2.3"/><path d="M2.6 19.4c0-3 2.4-5.4 5.4-5.4s5.4 2.4 5.4 5.4M15 14.2c3 0 5.4 2.3 5.4 5.2"/></symbol>
-      <symbol id="i-p-talent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.6-4.8 2.6.9-5.4L4.2 8.9l5.4-.8L12 3.2z"/></symbol>
-      <symbol id="i-p-travail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="7" width="18.4" height="13" rx="2.5"/><path d="M9 7V5.2a1.6 1.6 0 0 1 1.6-1.6h2.8A1.6 1.6 0 0 1 15 5.2V7M2.8 12.5h18.4"/></symbol>
-      <symbol id="i-p-rece" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.6" cy="10.6" r="6.4"/><path d="M15.2 15.2l5 5"/></symbol>
-      <symbol id="i-p-entre" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13.8 3.4c3.4.6 6.2 3.4 6.8 6.8l-7.4 7.4-3.4-1.4-2.4-2.4-1.4-3.4 7.8-7z"/><circle cx="14.6" cy="9.4" r="1.7"/><path d="M7.4 16.6c-1.2 1.2-1.4 4-1.4 4s2.8-.2 4-1.4"/></symbol>
-      <symbol id="i-p-stage" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="3.5" width="15" height="17" rx="2.2"/><path d="M9 3.5v2.2h6V3.5M8.2 10.5h7.6M8.2 14h7.6M8.2 17.4h4.6"/></symbol>
-      <symbol id="i-p-pvt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7.2V5.6A1.6 1.6 0 0 1 9.6 4h4.8A1.6 1.6 0 0 1 16 5.6v1.6"/><rect x="5" y="7.2" width="14" height="13" rx="3"/><path d="M5 12.4h14M10 12.4v2.2h4v-2.2"/></symbol>
-    </svg>
-
-    <div class="sec-head rv">
-      <p class="label">Visas</p>
-      <h2>¿Qué visa busca?</h2>
-    </div>
-
-    <!-- Misma familia visual que "Obtenez :" de la landing de empresas.
-         Flex en vez de grid: siete tarjetas en una rejilla de cuatro
-         columnas dejarian la segunda fila coja, asi las tres de abajo
-         se reparten el ancho completo. -->
-    <ul class="vt-grid vt-flow rv">
-        <li class="vt" id="visa-visiteur">
-          <svg class="vt-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-p-visiteur"></use></svg>
-          <span class="vt-n" role="heading" aria-level="3">Visa de visitante</span>
-        </li>
-        <li class="vt" id="visa-etudiant">
-          <svg class="vt-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-p-etudiant"></use></svg>
-          <span class="vt-n" role="heading" aria-level="3">Visa de estudiante</span>
-        </li>
-        <li class="vt" id="visa-famille">
-          <svg class="vt-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-p-famille"></use></svg>
-          <span class="vt-n" role="heading" aria-level="3">Visa familiar</span>
-        </li>
-        <li class="vt" id="passeport-talent">
-          <svg class="vt-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-p-talent"></use></svg>
-          <span class="vt-n" role="heading" aria-level="3"><a class="card-a" href="../visas/talent/">Passeport Talent</a></span>
-        </li>
-        <li class="vt" id="visas-travail">
-          <svg class="vt-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-p-travail"></use></svg>
-          <span class="vt-n" role="heading" aria-level="3">Visas de trabajo</span>
-        </li>
-        <li class="vt" id="rece">
-          <svg class="vt-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-p-rece"></use></svg>
-          <span class="vt-n" role="heading" aria-level="3">Búsqueda de empleo o creación de empresa</span>
-        </li>
-        <li class="vt" id="entrepreneur">
-          <svg class="vt-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-p-entre"></use></svg>
-          <span class="vt-n" role="heading" aria-level="3">Emprendedor</span>
-        </li>
-        <li class="vt" id="visa-stagiaire">
-          <svg class="vt-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-p-stage"></use></svg>
-          <span class="vt-n" role="heading" aria-level="3">Visa de pasante</span>
-        </li>
-        <li class="vt" id="pvt">
-          <svg class="vt-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-p-pvt"></use></svg>
-          <span class="vt-n" role="heading" aria-level="3">Visa de vacaciones y trabajo (PVT)</span>
-        </li>
-    </ul>
-  </div>
-</section>
-
-<!-- Proposition B: las mismas visas con foto, como en la landing de empresas.
+<!-- Visas con foto, como en la landing de empresas.
      Fotos de Unsplash (licencia libre): cyril mzn, Oluwaseyi Akinlolu,
      Andrew Neel, engin akyurt y las ya usadas en empresas. -->
-<section class="band sec" id="visas-photos">
+<section class="band sec" id="visas">
   <div class="wrap">
     <div class="sec-head rv">
       <p class="label">Visas</p>
-      <p class="todo" title="Variante a comparar: elegir una de las dos propuestas">Propuesta B: fotos</p>
       <h2>¿Qué visa busca?</h2>
     </div>
     <ul class="vph-grid vph-9 rv">
-      <li class="art vph art-ov1 rounded">
+      <li class="art vph art-ov1 rounded" id="visa-visiteur">
         <figure class="art-ph"><img src="../../assets/img/visa-visiteur-paris.webp" width="800" height="1066" alt="Calle de París con la torre Eiffel al fondo" loading="lazy" decoding="async"></figure>
         <div class="art-b"><h3>Visa de visitante</h3></div>
       </li>
-      <li class="art vph art-ov2 rounded">
+      <li class="art vph art-ov2 rounded" id="visa-etudiant">
         <figure class="art-ph"><img src="../../assets/img/visa-etudiant-campus.webp" width="800" height="1066" alt="Estudiante sonriente con su mochila y sus cuadernos frente a la universidad" loading="lazy" decoding="async"></figure>
         <div class="art-b"><h3>Visa de estudiante</h3></div>
       </li>
-      <li class="art vph art-ov3 rounded">
+      <li class="art vph art-ov3 rounded" id="visa-famille">
         <figure class="art-ph"><img src="../../assets/img/visa-famille-pere-et-enfant-plage.webp" width="800" height="1066" alt="Silueta de un padre caminando de la mano de su hijo a orillas del mar" loading="lazy" decoding="async"></figure>
         <div class="art-b"><h3>Visa familiar</h3></div>
       </li>
-      <li class="art vph art-ov1 rounded">
+      <li class="art vph art-ov1 rounded" id="passeport-talent">
         <figure class="art-ph"><img src="../../assets/img/visa-passeport-talent-artiste-en-studio.webp" width="800" height="1066" alt="Creadora trabajando con una tableta gráfica en su taller" loading="lazy" decoding="async"></figure>
         <div class="art-b"><h3><a class="card-a" href="../visas/talent/">Passeport Talent</a></h3></div>
       </li>
-      <li class="art vph art-ov2 rounded">
+      <li class="art vph art-ov2 rounded" id="visas-travail">
         <figure class="art-ph"><img src="../../assets/img/visa-travailleur-temporaire-entrepot.webp" width="800" height="1066" alt="Empleado consultando una tableta en un almacén" loading="lazy" decoding="async"></figure>
         <div class="art-b"><h3>Visas de trabajo</h3></div>
       </li>
-      <li class="art vph art-ov3 rounded">
+      <li class="art vph art-ov3 rounded" id="rece">
         <figure class="art-ph"><img src="../../assets/img/visa-recherche-emploi-creation-entreprise.webp" width="800" height="1066" alt="Joven trabajando con su laptop junto a una ventana" loading="lazy" decoding="async"></figure>
         <div class="art-b"><h3>Búsqueda de empleo o creación de empresa</h3></div>
       </li>
-      <li class="art vph art-ov1 rounded">
+      <li class="art vph art-ov1 rounded" id="entrepreneur">
         <figure class="art-ph"><img src="../../assets/img/visa-entrepreneur-atelier.webp" width="800" height="1066" alt="Emprendedora trabajando en su taller" loading="lazy" decoding="async"></figure>
         <div class="art-b"><h3>Emprendedor</h3></div>
       </li>
-      <li class="art vph art-ov2 rounded">
+      <li class="art vph art-ov2 rounded" id="visa-stagiaire">
         <figure class="art-ph"><img src="../../assets/img/visa-stagiaire-tuteur.webp" width="800" height="1066" alt="Pasante acompañado por su tutor frente a una laptop" loading="lazy" decoding="async"></figure>
         <div class="art-b"><h3>Visa de pasante</h3></div>
       </li>
-      <li class="art vph art-ov3 rounded">
+      <li class="art vph art-ov3 rounded" id="pvt">
         <figure class="art-ph"><img src="../../assets/img/visa-pvt-voyage.webp" width="800" height="1066" alt="Viajera con su mochila frente al mar" loading="lazy" decoding="async"></figure>
         <div class="art-b"><h3>Visa de vacaciones y trabajo (PVT)</h3></div>
       </li>
