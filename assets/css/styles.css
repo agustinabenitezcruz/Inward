@@ -3447,3 +3447,9 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
   .hb4-orb{max-width:380px}
 }
 @media (max-width:640px){.hb4-orb{display:none}}
+/* Particuliers, Apres l'arrivee: caja mas baja. El texto oculto de las
+   columnas cerradas (angostas) ocupaba alto igual y estiraba toda la caja;
+   cerrado no ocupa nada. */
+@media (min-width:861px){
+  .hcol:not([data-on]) .hcol-body{height:0;overflow:hidden}
+}
