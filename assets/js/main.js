@@ -1182,4 +1182,15 @@
     });
   })();
 
+
+  /* ---------- Fondos animados de hero: pausa fuera de pantalla ---------- */
+  (function () {
+    var hs = [].slice.call(document.querySelectorAll(".hero"));
+    if (!hs.length || !("IntersectionObserver" in window)) return;
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { e.target.classList.toggle("is-off", !e.isIntersecting); });
+    }, { threshold: 0 });
+    hs.forEach(function (h) { io.observe(h); });
+  })();
+
 })();
