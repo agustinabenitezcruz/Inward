@@ -39,49 +39,32 @@ ressources,Ressources,Resources,Recursos
 questions-fr-quentes,Questions fréquentes,FAQ,Preguntas frecuentes
 contact,Contact,Contact,Contacto
 mobilit-internationale,Mobilité internationale,International mobility,Movilidad internacional
-cadres-chercheurs-fondateurs,"Cadres, chercheurs, fondateurs","Executives, researchers, founders","Directivos, investigadores, fundadores"
-autorisation-de-travail,Autorisation de travail,Work permit,Autorización de trabajo
-d-p-t-et-suivi-des-demandes,Dépôt et suivi des demandes,Filing and follow-up of applications,Presentación y seguimiento de solicitudes
+carte-talent,Carte Talent,Talent card,Tarjeta Talento
+salari-et-travailleur-temporaire,Salarié et Travailleur temporaire,Employee and Temporary worker,Asalariado y Trabajador temporal
+saisonnier,Saisonnier,Seasonal worker,Temporada
 d-tachement-de-salari-s,Détachement de salariés,Posting of employees,Desplazamiento de trabajadores
-conformit-et-formalit-s,Conformité et formalités,Compliance and formalities,Cumplimiento y trámites
 conseil-et-conformit,Conseil et conformité,Advice and compliance,Asesoría y cumplimiento
 audit-et-conseil,Audit et conseil,Audit and advice,Auditoría y asesoría
-v-rification-des-titres-de-s-jour,Vérification des titres de séjour,Residence permit checks,Verificación de permisos de residencia
 d-marches-de-s-jour,Démarches de séjour,Residence procedures,Trámites de residencia
-suivi-administratif,Suivi administratif,Administrative follow-up,Seguimiento administrativo
 aide-administrative,Aide administrative,Administrative assistance,Ayuda administrativa
-installation-des-collaborateurs,Installation des collaborateurs,Settling in your employees,Instalación de los empleados
 un-projet-de-mobilit-pour-vos-quipes,Un projet de mobilité pour vos équipes ?,A mobility project for your teams?,¿Un proyecto de movilidad para sus equipos?
 demander-un-devis,Demander un devis,Request a quote,Solicitar un presupuesto
 visas-et-titres-de-s-jour,Visas et titres de séjour,Visas and residence permits,Visas y permisos de residencia
 visa-visiteur,Visa visiteur,Visitor visa,Visa de visitante
-s-jour-sans-activit-professionnelle,Séjour sans activité professionnelle,Stay without professional activity,Estancia sin actividad profesional
 visa-tudiant,Visa étudiant,Student visa,Visa de estudiante
-inscription-vls-ts-renouvellement,"Inscription, VLS-TS, renouvellement","Enrolment, VLS-TS, renewal","Inscripción, VLS-TS, renovación"
-profession-lib-rale-et-entrepreneur,Profession libérale et entrepreneur,Self-employed and entrepreneurs,Profesión liberal y emprendedores
-cr-ation-et-reprise-d-activit,Création et reprise d'activité,Starting or taking over a business,Creación o adquisición de un negocio
 visa-famille,Visa famille,Family visa,Visa familiar
-regroupement-et-vie-priv-e-familiale,Regroupement et vie privée familiale,Family reunification and private and family life,Reagrupación y vida privada y familiar
+entrepreneur-et-profession-lib-rale,Entrepreneur et profession libérale,Entrepreneur and self-employed profession,Emprendedor y profesión liberal
 d-marches-et-statuts,Démarches et statuts,Procedures and statuses,Trámites y estatus
+carte-de-r-sident,Carte de résident,Resident card,Tarjeta de residente
 changement-de-statut,Changement de statut,Change of status,Cambio de estatus
-salari-tudiant-entrepreneur,"Salarié, étudiant, entrepreneur","Employee, student, entrepreneur","Asalariado, estudiante, emprendedor"
 renouvellement-de-titre,Renouvellement de titre,Permit renewal,Renovación del permiso
-accompagnement-en-pr-fecture,Accompagnement en préfecture,Support at the prefecture,Acompañamiento en la prefectura
-naturalisation-et-nationalit,Naturalisation et nationalité,Naturalisation and citizenship,Naturalización y nacionalidad
-constitution-du-dossier,Constitution du dossier,Preparing the application,Preparación del expediente
-assurance-maladie-s-curit-sociale,"Assurance maladie, sécurité sociale","Health insurance, social security","Seguro médico, seguridad social"
 vous-ne-savez-pas-quelle-d-marche-vous-conce,Vous ne savez pas quelle démarche vous concerne ?,Not sure which procedure applies to you?,¿No sabe qué trámite le corresponde?
 valuer-mon-dossier,Évaluer mon dossier,Assess my case,Evaluar mi caso
 centre-de-ressources,Centre de ressources,Resource centre,Centro de recursos
 derniers-articles,Derniers articles,Latest articles,Últimos artículos
-guides-d-lais-et-actualit-du-droit-des-trang,"Guides, délais et actualité du droit des étrangers","Guides, processing times and news on immigration law","Guías, plazos y novedades del derecho de extranjería"
 vid-os,Vidéos,Videos,Videos
-chaque-vid-o-sur-sa-propre-page,Chaque vidéo sur sa propre page,Each video on its own page,Cada video en su propia página
-d-lais-pi-ces-recours,"Délais, pièces, recours","Processing times, documents, appeals","Plazos, documentos, recursos"
 le-cabinet,Le cabinet,The firm,La agencia
-quipe-parcours-valeurs,"Équipe, parcours, valeurs","Team, background, values","Equipo, trayectoria, valores"
 nous-contacter,Nous contacter,Contact us,Contáctenos
-rendez-vous-et-coordonnees,Rendez-vous et coordonnees,Appointments and contact details,Citas y datos de contacto
 les-articles-les-plus-consult-s-cette-semain,Les articles les plus consultés cette semaine.,The most read articles this week.,Los artículos más leídos de la semana.
 voir-le-blog,Voir le blog,See the blog,Ver el blog
 prendre-rendez-vous,Prendre rendez-vous,Book an appointment,Pedir una cita
@@ -138,7 +121,7 @@ un-interlocuteur-unique-d-di-l-ensemble-de-v,Un interlocuteur unique dédié à 
 une-conformit-r-glementaire-irr-prochable-su,Une conformité réglementaire irréprochable sur chaque procédure.,Flawless regulatory compliance on every procedure.,Un cumplimiento normativo impecable en cada trámite.
 l-histoire-d-inward,L'histoire d'Inward,The INWARD story,La historia de INWARD
 blog,Blog,Blog,Blog
-guides-d-lais-et-actualit-du-droit-des-trang-2,"Guides, délais et actualité du droit des étrangers, mis à jour par l'équipe.","Guides, processing times and news on immigration law, kept up to date by the team.","Guías, plazos y novedades del derecho de extranjería, actualizados por el equipo."
+guides-d-lais-et-actualit-du-droit-des-trang,"Guides, délais et actualité du droit des étrangers, mis à jour par l'équipe.","Guides, processing times and news on immigration law, kept up to date by the team.","Guías, plazos y novedades del derecho de extranjería, actualizados por el equipo."
 tous-les-articles,Tous les articles,All articles,Todos los artículos
 guide,Guide,Guide,Guía
 comment-faire-un-changement-de-statut-de-sal,Comment faire un changement de statut de salarié à entrepreneur,How to change status from employee to entrepreneur,Cómo pasar de asalariado a emprendedor
@@ -168,12 +151,12 @@ nos-prix-sont-100-transparents-et-communiqu,"Nos prix sont 100 % transparents et
 pourquoi-faire-appel-une-agence-de-mobilit-i,Pourquoi faire appel à une agence de mobilité internationale plutôt que de tout gérer en interne ?,Why use an international mobility agency rather than handling everything in-house?,¿Por qué recurrir a una agencia de movilidad internacional en lugar de gestionarlo todo internamente?
 les-d-marches-d-immigration-et-de-visa-sont,"Les démarches d'immigration et de visa sont notre métier à 100 %. Les réglementations administratives en France évoluent constamment : en tant qu'experts, nous sommes informés en temps réel de chaque mise à jour et changement de pratique des autorités. Confier vos démarches à INWARD vous évite les erreurs, accélère les délais de traitement et libère vos équipes RH de la complexité administrative pour vous garantir un accompagnement zéro défaut.","Immigration and visa procedures are all we do. Administrative regulations in France change constantly: as experts, we are informed in real time of every update and every change in the authorities' practices. Entrusting your procedures to INWARD avoids mistakes, speeds up processing times and frees your HR teams from administrative complexity, for zero-defect support.","Los trámites de inmigración y de visa son el 100 % de nuestro trabajo. Las normas administrativas en Francia cambian constantemente: como expertos, nos enteramos en tiempo real de cada actualización y cambio de práctica de las autoridades. Confiar sus trámites a INWARD le evita errores, acelera los plazos de tramitación y libera a sus equipos de RR. HH. de la complejidad administrativa, con un acompañamiento sin errores."
 combien-de-temps-prend-l-obtention-d-un-visa,Combien de temps prend l'obtention d'un visa de travail pour la France ?,How long does it take to get a work visa for France?,¿Cuánto tiempo lleva obtener una visa de trabajo para Francia?
-passeport-talent-d-lais-de-3-6-semaines,Passeport Talent (délais de 3 à 6 semaines) :,Passeport Talent (3 to 6 weeks):,Passeport Talent (plazo de 3 a 6 semanas):
+carte-de-s-jour-talent-d-lais-de-3-6-semaine,Carte de séjour Talent (délais de 3 à 6 semaines) :,Talent residence permit (3 to 6 weeks):,Permiso de residencia Talento (plazo de 3 a 6 semanas):
 accessible-pour-les-dipl-m-s-en-france-ou-le,accessible pour les diplômés en France ou les rémunérations à partir de 59 000 €. C'est la voie privilégiée pour un recrutement rapide.,"available to graduates from French institutions or for salaries from €59,000. It is the preferred route for fast hiring.",accesible para titulados en Francia o salarios a partir de 59 000 €. Es la vía preferida para una contratación rápida.
 visa-salari-travailleur-temporaire-d-lais-de,Visa Salarié / Travailleur temporaire (délais de 4 à 6 mois) :,Employee / Temporary worker visa (4 to 6 months):,Visa de asalariado / trabajador temporal (plazo de 4 a 6 meses):
 pour-les-autres-profils-en-cdi-ou-cdd-n-cess,"pour les autres profils en CDI ou CDD, nécessitant l'obtention préalable d'une autorisation de travail auprès de l'administration.","for other profiles on permanent or fixed-term contracts, requiring a work permit from the authorities beforehand.","para los demás perfiles con contrato indefinido o temporal, que requieren obtener antes una autorización de trabajo ante la administración."
 nous-analysons-le-profil-de-votre-candidat-d,Nous analysons le profil de votre candidat dès le premier échange pour optimiser les délais de prise de poste.,We analyse your candidate's profile from the very first conversation to optimise their start date.,Analizamos el perfil de su candidato desde el primer intercambio para optimizar los plazos de incorporación.
-qu-est-ce-que-le-passeport-talent-et-qui-peu,Qu'est-ce que le Passeport Talent et qui peut en bénéficier ?,What is the Passeport Talent and who is eligible?,¿Qué es el Passeport Talent y quién puede beneficiarse?
+qu-est-ce-que-la-carte-de-s-jour-talent-et-q,Qu'est-ce que la carte de séjour Talent et qui peut en bénéficier ?,What is the Talent residence permit and who is eligible?,¿Qué es el permiso de residencia Talento y quién puede beneficiarse?
 c-est-un-titre-de-s-jour-pluriannuel-valable,"C'est un titre de séjour pluriannuel (valable jusqu'à 4 ans, renouvelable) conçu pour simplifier l'installation en France des profils hautement qualifiés.","It is a multi-year residence permit (valid for up to 4 years, renewable) designed to make it easier for highly qualified profiles to settle in France.","Es un permiso de residencia plurianual (válido hasta 4 años, renovable) pensado para facilitar la instalación en Francia de perfiles altamente calificados."
 qui-peut-en-b-n-ficier,Qui peut en bénéficier ?,Who is eligible?,¿Quién puede beneficiarse?
 salari-s-qualifi-s-et-dipl-m-s,Salariés qualifiés et diplômés :,Qualified employees and graduates:,Empleados calificados y titulados:
@@ -196,6 +179,7 @@ nom-de-l-entreprise,Nom de l'entreprise,Company name,Nombre de la empresa
 votre-d-marche,Votre démarche,Your procedure,Su trámite
 visa-ou-titre-de-s-jour,Visa ou titre de séjour,Visa or residence permit,Visa o permiso de residencia
 changement-de-statut-ou-renouvellement,Changement de statut ou renouvellement,Change of status or renewal,Cambio de estatus o renovación
+naturalisation-et-nationalit,Naturalisation et nationalité,Naturalisation and citizenship,Naturalización y nacionalidad
 mobilit-internationale-entreprise,Mobilité internationale (entreprise),International mobility (company),Movilidad internacional (empresa)
 je-ne-sais-pas-encore,Je ne sais pas encore,I don't know yet,Todavía no lo sé
 comment-nous-avez-vous-connus,Comment nous avez-vous connus ?,How did you hear about us?,¿Cómo nos conoció?
@@ -210,7 +194,6 @@ envoyer-et-choisir-un-cr-neau,Envoyer et choisir un créneau,Send and choose a t
 cabinet-de-conseil-en-immigration-et-mobilit,Cabinet de conseil en immigration et mobilité internationale en France. Particuliers et entreprises.,Immigration and international mobility consultancy in France. Individuals and companies.,Consultoría de inmigración y movilidad internacional en Francia. Particulares y empresas.
 services-entreprises,Services entreprises,Services for companies,Servicios para empresas
 services-particuliers,Services particuliers,Services for individuals,Servicios para particulares
-naturalisation,Naturalisation,Naturalisation,Naturalización
 soci-t,Société,Company,Empresa
 2026-inward-tous-droits-r-serv-s,© 2026 INWARD. Tous droits réservés.,© 2026 INWARD. All rights reserved.,© 2026 INWARD. Todos los derechos reservados.
 politique-de-confidentialit-rgpd,Politique de confidentialité (RGPD),Privacy policy (GDPR),Política de privacidad (RGPD)
@@ -232,7 +215,6 @@ accompagnement-sur-mesure-pour-vos-salari-s,Accompagnement sur mesure pour vos s
 voir-nos-services,Voir nos services,See our services,Ver nuestros servicios
 talent,Talent,Talent,Talento
 salari-travailleur-temporaire,Salarié / Travailleur temporaire,Employee / Temporary worker,Asalariado / Trabajador temporal
-saisonnier,Saisonnier,Seasonal worker,Temporada
 stagiaire,Stagiaire,Intern,Pasante
 entrepreneur-cr-ation-d-entreprise,Entrepreneur / Création d'entreprise,Entrepreneur / Business creation,Emprendedor / Creación de empresa
 famille,Famille,Family,Familia
@@ -416,7 +398,7 @@ nous-prenons-imm-diatement-le-relais-sur-le,"Nous prenons immédiatement le rela
 obtention-finalisation,Obtention & finalisation,Approval & completion,Obtención y finalización
 vos-visas-titres-de-s-jour-ou-d-marches-d-in,"Vos visas, titres de séjour ou démarches d'installation sont validés. Vos collaborateurs internationaux peuvent démarrer leur activité en toute sérénité.","Your visas, residence permits or settling-in procedures are approved. Your international employees can start work with complete peace of mind.","Sus visas, permisos de residencia o trámites de instalación quedan validados. Sus empleados internacionales pueden empezar su actividad con total tranquilidad."
 meta-title,Carte de séjour Talent | INWARD,Talent residence permit | INWARD,Permiso de residencia Talento | INWARD
-meta-description,"Passeport Talent : un titre de séjour valable jusqu'à 4 ans, procédure accélérée et famille incluse. INWARD vous accompagne de A à Z, de l'éligibilité à la carte de séjour.","Passeport Talent: a residence permit valid for up to 4 years, with a fast-track procedure and your family included. INWARD supports you from A to Z, from eligibility to your residence card.","Passeport Talent: un permiso de residencia válido hasta 4 años, con procedimiento acelerado y la familia incluida. INWARD le acompaña de principio a fin, desde la elegibilidad hasta la tarjeta de residencia."
+meta-description,"Carte de séjour Talent : un titre de séjour valable jusqu'à 4 ans, procédure accélérée et famille incluse. INWARD vous accompagne de A à Z, de l'éligibilité à la carte de séjour.","Talent residence permit: a permit valid for up to 4 years, with a fast-track procedure and your family included. INWARD supports you from A to Z, from eligibility to your residence card.","Permiso de residencia Talento: válido hasta 4 años, con procedimiento acelerado y la familia incluida. INWARD le acompaña de principio a fin, desde la elegibilidad hasta la tarjeta de residencia."
 consultante-inward-tudiant-un-projet-de-mobi,Consultante INWARD étudiant un projet de mobilité avec un client,INWARD consultant reviewing a mobility project with a client,Consultora de INWARD analizando un proyecto de movilidad con un cliente
 l-quipe-inward-en-atelier-devant-un-tableau,L'équipe INWARD en atelier devant un tableau blanc,The INWARD team in a workshop in front of a whiteboard,El equipo de INWARD en un taller frente a una pizarra
 avantages-de-la-carte-talent,Avantages de la carte Talent,Benefits of the Talent card,Ventajas de la tarjeta Talento
@@ -428,7 +410,6 @@ parler-une-experte,Parler à une experte,Talk to an expert,Hablar con una expert
 la-carte-de-s-jour-talent-ex-passeport-talen,La carte de séjour Talent (ex Passeport Talent) est la meilleure option pour recruter ou s'installer en France,The Talent residence permit (formerly Passeport Talent) is the best option to recruit or settle in France,El permiso de residencia Talento (antes Passeport Talent) es la mejor opción para contratar o instalarse en Francia
 un-titre-de-s-jour-d-excellence-valable-jusq,"Un titre de séjour d'excellence, valable jusqu'à 4 ans, avec une procédure accélérée et la possibilité de s'installer avec sa famille.","A premium residence permit, valid for up to 4 years, with a fast-track procedure and the option to settle with your family.","Un permiso de residencia de excelencia, válido hasta 4 años, con un procedimiento acelerado y la posibilidad de instalarse con su familia."
 v-rifier-mon-ligibilit,Vérifier mon éligibilité,Check my eligibility,Verificar mi elegibilidad
-carte-talent,Carte Talent,Talent card,Tarjeta Talento
 types-de-cartes-talent,Types de cartes Talent,Types of Talent cards,Tipos de tarjetas Talento
 salari-qualifi-recrutement-dans-une-jeune-en,Salarié qualifié / Recrutement dans une Jeune Entreprise Innovante (JEI),Qualified employee / Hiring by a Young Innovative Company (JEI),Asalariado calificado / Contratación en una Joven Empresa Innovadora (JEI)
 salari-hautement-qualifi-carte-bleue-europ-e,Salarié hautement qualifié – Carte Bleue Européenne,Highly qualified employee – EU Blue Card,Asalariado altamente calificado – Tarjeta Azul UE
@@ -538,7 +519,7 @@ obtention-de-la-carte-de-s-jour-en-france,Obtention de la carte de séjour en Fr
 demande-de-titre-de-s-jour-saisonnier,Demande de titre de séjour Saisonnier,Seasonal residence permit application,Solicitud de permiso de residencia de Temporero
 qui-peut-demander-un-visa-de-travailleur-sai,Qui peut demander un visa de travailleur saisonnier en France ?,Who can apply for a seasonal worker visa in France?,¿Quién puede solicitar una visa de trabajador temporero en Francia?
 les-ressortissants-de-pays-situ-s-hors-de-l,"Les ressortissants de pays situés hors de l'Union européenne peuvent demander un visa saisonnier s'ils disposent d'un contrat de travail saisonnier d'une durée maximale de 6 mois en France, et d'une",Nationals of countries outside the European Union can apply for a seasonal visa if they have a seasonal employment contract of up to 6 months in France and a,Los ciudadanos de países fuera de la Unión Europea pueden solicitar una visa de temporero si tienen un contrato de trabajo de temporada de hasta 6 meses en Francia y una
-autorisation-de-travail-2,autorisation de travail,work permit,autorización de trabajo
+autorisation-de-travail,autorisation de travail,work permit,autorización de trabajo
 d-livr-e-par-l-administration-fran-aise,délivrée par l'administration française.,issued by the French authorities.,emitida por la administración francesa.
 quel-visa-faut-il-demander-pour-travailler-c,Quel visa faut-il demander pour travailler comme saisonnier en France ?,Which visa do you need to work as a seasonal worker in France?,¿Qué visa hay que solicitar para trabajar como temporero en Francia?
 le-type-de-visa-d-pend-de-la-dur-e-du-contra,Le type de visa dépend de la durée du contrat :,The type of visa depends on the length of the contract:,El tipo de visa depende de la duración del contrato:
