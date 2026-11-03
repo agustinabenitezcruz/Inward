@@ -3461,3 +3461,9 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
 @media (max-width:1080px){.vph-9 .art{height:clamp(170px,24vw,220px)!important}}
 @media (max-width:640px){.vph-9 .art{height:clamp(150px,42vw,190px)!important}}
 .vph-9 .art .art-b{padding:1.1rem 1.1rem 1.2rem}
+/* Etapas: cinco pasos al ritmo del hexagono (3,2 s). */
+.vl-tl.is-play .vl-steps li:nth-child(1){animation-delay:.64s}
+.vl-tl.is-play .vl-steps li:nth-child(2){animation-delay:1.28s}
+.vl-tl.is-play .vl-steps li:nth-child(3){animation-delay:1.92s}
+.vl-tl.is-play .vl-steps li:nth-child(4){animation-delay:2.56s}
+.vl-tl.is-play .vl-steps li:nth-child(5){animation-delay:3.2s}

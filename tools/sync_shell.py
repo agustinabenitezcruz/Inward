@@ -168,6 +168,9 @@ def main():
                 new = lang_nav(new, d)
             if name == "contact":
                 new = lock_profil(new, d)
+                # Una landing puede traer su propia bajada de contacto.
+                if page.get("contact_lead"):
+                    new = re.sub(r'(<p class="lead">).*?(</p>)', lambda m: m.group(1) + page["contact_lead"] + m.group(2), new, count=1, flags=re.S)
             doc = pat.sub(lambda m: m.group(1) + new.replace("\\", "\\\\") + m.group(2), doc, count=1)
             done.append(name)
         open(path, "w", encoding="utf-8").write(doc)

@@ -25,7 +25,8 @@ PAGES = [
     {"dir": "videos/presentation-inward-palais-garnier",
      "title": "Vidéo : INWARD devant le Palais Garnier"},
     {"dir": "qui-sommes-nous", "title": "Qui sommes-nous"},
-    {"dir": "visas/talent", "title": "Landing Visa Talent"},
+    {"dir": "visas/talent", "title": "Landing Visa Talent",
+     "contact_lead": "Vous souhaitez savoir si votre profil ou celui de votre collaborateur correspond à l'une des catégories de la carte de séjour «&nbsp;talent&nbsp;»&nbsp;? Contactez notre équipe pour bénéficier d'une première évaluation de votre situation."},
     # Pendiente: mentions-legales
 ]
 
