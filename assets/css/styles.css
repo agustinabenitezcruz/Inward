@@ -3506,3 +3506,10 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
 .vla-cap{pointer-events:none}
 .vla-cap.is-on{pointer-events:auto}
 .vla-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--tint-3);margin-left:.45rem;vertical-align:.2em}
+/* Particuliers, Visas: diez tarjetas = 5 + 5. En tablet siguen cinco por fila
+   (con tres por fila la decima quedaba sola). */
+@media (min-width:641px) and (max-width:1080px){
+  .vph-9 .art{flex-basis:calc(20% - 12px)!important}
+  .vph-9 .art h3{font-size:clamp(.95rem,1.7vw,1.15rem)!important}
+  .vph-9 .art .art-b{padding:.8rem .8rem .9rem}
+}
