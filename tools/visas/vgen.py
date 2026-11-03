@@ -98,9 +98,14 @@ def page(c):
     # ventajas
     if c['adv_mode']=='single':
         adv=c['adv']; ph=c['adv_ph']
-        tabs="\n".join(f'''        <button class="vla-tab" type="button" role="tab" id="vla-t{i}" aria-controls="vla-p" aria-selected="{'true' if i==0 else 'false'}" tabindex="{0 if i==0 else -1}" data-i="{i}"><span class="vla-n">{i+1:02d}</span><span class="vla-l">{nb(t)}</span></button>''' for i,t in enumerate(adv))
+        tabs="\n".join(f'''        <button class="vla-tab" type="button" role="tab" id="vla-t{i}" aria-controls="vla-p" aria-selected="{'true' if i==0 else 'false'}" tabindex="{0 if i==0 else -1}" data-i="{i}"><span class="vla-n">{i+1:02d}</span><span class="vla-l">{nb(t)}{'<span class="vla-dot" aria-hidden="true"></span>' if i in c.get('adv_wink',{}) else ''}</span></button>''' for i,t in enumerate(adv))
         imgs="\n".join(f'''        <img class="vla-img{' is-on' if i==0 else ''}" src="{P}{f}" width="{w}" height="{h}" alt="{a}" loading="lazy" decoding="async">''' for i,(f,w,h,a) in enumerate(ph))
-        caps="\n".join(f'''        <p class="vla-cap{' is-on' if i==0 else ''}" data-i="{i}" aria-hidden="{'false' if i==0 else 'true'}">{nb(t)}</p>''' for i,t in enumerate(adv))
+        wink=c.get('adv_wink',{})
+        def cap(i,t):
+            w=wink.get(i)
+            extra=f'<span class="vla-wink"><span class="vla-wink-k">Entre nous</span> {w}</span>' if w else ''
+            return f'''        <p class="vla-cap{' is-on' if i==0 else ''}" data-i="{i}" aria-hidden="{'false' if i==0 else 'true'}">{nb(t)}{extra}</p>'''
+        caps="\n".join(cap(i,t) for i,t in enumerate(adv))
         inner=f'''    <div class="vla" data-vla>
       <div class="vla-list" role="tablist" aria-label="{c['adv_h2']}">
 {tabs}

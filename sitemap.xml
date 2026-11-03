@@ -332,4 +332,34 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/visas/famille/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/visas/famille/"/>
   </url>
+  <url>
+    <loc>https://inwardpro.com/visas/entrepreneur/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/visas/entrepreneur/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/visas/entrepreneur/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/visas/entrepreneur/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/visas/entrepreneur/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/en/visas/entrepreneur/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/visas/entrepreneur/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/visas/entrepreneur/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/visas/entrepreneur/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/visas/entrepreneur/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/es/visas/entrepreneur/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/visas/entrepreneur/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/visas/entrepreneur/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/visas/entrepreneur/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/visas/entrepreneur/"/>
+  </url>
 </urlset>

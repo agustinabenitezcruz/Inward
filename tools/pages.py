@@ -30,6 +30,7 @@ PAGES = [
     {"dir": "visas/salarie-travailleur-temporaire", "title": "Landing Visa Salarié / Travailleur temporaire"},
     {"dir": "visas/saisonnier", "title": "Landing Visa Saisonnier"},
     {"dir": "visas/famille", "title": "Landing Visa Famille"},
+    {"dir": "visas/entrepreneur", "title": "Landing Visa Entrepreneur"},
     # Pendiente: mentions-legales
 ]
 
