@@ -3467,3 +3467,31 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
 .vl-tl.is-play .vl-steps li:nth-child(3){animation-delay:1.92s}
 .vl-tl.is-play .vl-steps li:nth-child(4){animation-delay:2.56s}
 .vl-tl.is-play .vl-steps li:nth-child(5){animation-delay:3.2s}
+
+/* =========== Landings de visa: selector de dos opciones =========== */
+.vl-sw{max-width:1000px;margin-inline:auto}
+.vl-sw-bar{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:5px;border-radius:999px;background:var(--surface-2);margin:0 auto clamp(1rem,2vw,1.4rem);max-width:760px}
+.tinted .vl-sw-bar{background:var(--panel);border:1px solid var(--line-card)}
+.vl-sw-bar::before{content:"";position:absolute;top:5px;bottom:5px;left:5px;width:calc(50% - 7px);border-radius:999px;background:var(--accent);
+  transform:translateX(calc(var(--sw-i,0) * (100% + 4px)));transition:transform 520ms var(--ease-out)}
+.vl-sw-b{all:unset;box-sizing:border-box;position:relative;z-index:1;cursor:pointer;display:grid;gap:.15rem;justify-items:center;text-align:center;padding:.7rem 1rem;border-radius:999px;color:var(--text-2);transition:color 360ms var(--ease-soft)}
+.vl-sw-k{font-family:var(--font-display);font-weight:500;font-size:clamp(.95rem,1.3vw,1.08rem);line-height:1.2;text-wrap:balance}
+.vl-sw-s{font-size:.78rem;color:var(--text-3);transition:color 360ms var(--ease-soft)}
+.vl-sw-b[aria-selected="true"]{color:#fff}
+.vl-sw-b[aria-selected="true"] .vl-sw-s{color:rgba(255,255,255,.72)}
+.vl-sw-b:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.vl-sw-p[hidden]{display:none}
+.vl-sw-p{animation:vlSwIn 420ms var(--ease-out)}
+@keyframes vlSwIn{from{opacity:0;transform:translateY(8px)}}
+@media (prefers-reduced-motion:reduce){.vl-sw-p{animation:none}.vl-sw-bar::before{transition:none}}
+@media (max-width:520px){.vl-sw-bar{border-radius:20px}.vl-sw-bar::before{border-radius:16px}.vl-sw-b{border-radius:16px;padding:.65rem .5rem}.vl-sw-s{display:none}}
+/* Panel de checklist dentro del selector */
+.vl-ck{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:clamp(1.4rem,4vw,3rem);align-items:start;
+  background:var(--panel);border:1px solid var(--line-card);border-radius:var(--r);padding:clamp(1.6rem,4vw,3rem)}
+.vl-ck-h{display:grid;gap:.6rem;align-content:start}
+.vl-ck-k{justify-self:start;font-size:.7rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--text-3)}
+.vl-ck-h h3{font-family:var(--font-display);font-weight:500;font-size:clamp(1.35rem,2.2vw,1.9rem);line-height:1.15;letter-spacing:-.015em;text-wrap:balance}
+.vl-ck .vld-list{grid-template-columns:1fr}
+@media (max-width:760px){.vl-ck{grid-template-columns:1fr}}
+/* Hero de titulo largo */
+.vl-hero-long h1{font-size:clamp(2rem,3.9vw,3.5rem)!important;max-width:24ch}

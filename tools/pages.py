@@ -27,6 +27,9 @@ PAGES = [
     {"dir": "qui-sommes-nous", "title": "Qui sommes-nous"},
     {"dir": "visas/talent", "title": "Landing Visa Talent",
      "contact_lead": "Vous souhaitez savoir si votre profil ou celui de votre collaborateur correspond à l'une des catégories de la carte de séjour «&nbsp;talent&nbsp;»&nbsp;? Contactez notre équipe pour bénéficier d'une première évaluation de votre situation."},
+    {"dir": "visas/salarie-travailleur-temporaire", "title": "Landing Visa Salarié / Travailleur temporaire"},
+    {"dir": "visas/saisonnier", "title": "Landing Visa Saisonnier"},
+    {"dir": "visas/famille", "title": "Landing Visa Famille"},
     # Pendiente: mentions-legales
 ]
 

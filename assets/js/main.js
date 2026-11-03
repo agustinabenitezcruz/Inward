@@ -1064,11 +1064,12 @@
       es.forEach(function (e) {
         if (!e.isIntersecting) return;
         io.unobserve(e.target);
-        var t = e.target.querySelector(".vl-tl");
+        var t = e.target.querySelector(".vl-sw-p:not([hidden]) .vl-tl") || e.target.querySelector(".vl-tl");
         if (t) t.classList.add("is-play");
       });
     }, { threshold: 0.2 });
-    tls.forEach(function (t) { io.observe(t.closest("section") || t); });
+    var secs = [];
+    tls.forEach(function (t) { var s = t.closest("section") || t; if (secs.indexOf(s) < 0) { secs.push(s); io.observe(s); } });
   })();
 
 
@@ -1192,5 +1193,31 @@
     }, { threshold: 0 });
     hs.forEach(function (h) { io.observe(h); });
   })();
+
+
+  /* ---------- Landings de visa: selector de dos opciones ----------
+     Pestanas accesibles (flechas, Inicio/Fin). Al cambiar a un panel con
+     linea de tiempo, la animacion corre de nuevo desde cero. */
+  [].slice.call(document.querySelectorAll("[data-vl-sw]")).forEach(function (sw) {
+    var bs = [].slice.call(sw.querySelectorAll(".vl-sw-b"));
+    var ps = [].slice.call(sw.querySelectorAll(".vl-sw-p"));
+    var reduceM = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    function go(i, focus) {
+      bs.forEach(function (b, k) { b.setAttribute("aria-selected", k === i ? "true" : "false"); b.tabIndex = k === i ? 0 : -1; });
+      ps.forEach(function (p, k) { p.hidden = k !== i; });
+      sw.style.setProperty("--sw-i", i);
+      var tl = ps[i].querySelector(".vl-tl");
+      if (tl && !reduceM) { tl.classList.remove("is-play"); void tl.offsetWidth; tl.classList.add("is-play"); }
+      if (focus) bs[i].focus();
+    }
+    bs.forEach(function (b, k) {
+      b.addEventListener("click", function () { go(k); });
+      b.addEventListener("keydown", function (e) {
+        var n = e.key === "ArrowRight" ? k + 1 : e.key === "ArrowLeft" ? k - 1 : e.key === "Home" ? 0 : e.key === "End" ? bs.length - 1 : null;
+        if (n === null) return; e.preventDefault(); go((n + bs.length) % bs.length, true);
+      });
+    });
+    sw.setAttribute("data-ready", "");
+  });
 
 })();
