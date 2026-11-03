@@ -1220,4 +1220,42 @@
     sw.setAttribute("data-ready", "");
   });
 
+
+  /* ---------- Menu: marca la pagina en la que esta la persona ----------
+     Un enlace es "actual" si apunta a esta misma pagina (sin ancla, o con
+     #top, que es como sync_shell escribe el enlace a uno mismo). Se subraya
+     el item y el boton de su grupo. Si la pagina no esta en el menu (un
+     articulo del blog, un video), se marca el grupo cuya ruta la contiene. */
+  (function () {
+    var norm = function (u) { return u.replace(/index\.html$/, "").replace(/\/?$/, "/"); };
+    var here = norm(location.pathname);
+    function isHere(a) {
+      var u = new URL(a.getAttribute("href"), location.href);
+      return norm(u.pathname) === here && (!u.hash || u.hash === "#top");
+    }
+    var marked = false;
+    [].slice.call(document.querySelectorAll(".nav-item")).forEach(function (it) {
+      var hit = [].slice.call(it.querySelectorAll(".mega li a")).filter(isHere);
+      hit.forEach(function (a) { a.setAttribute("aria-current", "page"); });
+      var btn = it.querySelector(".nav-btn");
+      if (btn && (isHere(btn) || (hit.length && !marked))) { btn.setAttribute("data-current", ""); marked = true; }
+    });
+    if (!marked) {
+      [].slice.call(document.querySelectorAll(".nav-item")).forEach(function (it) {
+        if (marked) return;
+        [].slice.call(it.querySelectorAll(".nav-btn, .mega li a")).some(function (a) {
+          var u = new URL(a.getAttribute("href"), location.href);
+          if (u.hash) return false;
+          var p = norm(u.pathname);
+          if (p !== here && here.indexOf(p) === 0) {
+            it.querySelector(".nav-btn").setAttribute("data-current", "");
+            if (a.closest(".mega")) a.setAttribute("aria-current", "page");
+            marked = true; return true;
+          }
+          return false;
+        });
+      });
+    }
+  })();
+
 })();

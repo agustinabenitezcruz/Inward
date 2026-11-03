@@ -3513,3 +3513,7 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
   .vph-9 .art h3{font-size:clamp(.95rem,1.7vw,1.15rem)!important}
   .vph-9 .art .art-b{padding:.8rem .8rem .9rem}
 }
+/* Menu: pagina actual subrayada (grupo e item). */
+.nav-btn[data-current]{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:7px;text-decoration-color:var(--tint-3)}
+.hdr.is-solid .nav-btn[data-current],.nav-btn[data-current]:hover{text-decoration-color:var(--accent)}
+.mega li a[aria-current="page"]{color:var(--text);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px;text-decoration-color:var(--accent)}
