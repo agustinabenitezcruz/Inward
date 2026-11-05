@@ -33,6 +33,7 @@ PAGES = [
     {"dir": "visas/entrepreneur", "title": "Landing Visa Entrepreneur"},
     {"dir": "visas/etudiant", "title": "Landing Visa Étudiant"},
     {"dir": "visas/rece", "title": "Landing Visa RECE"},
+    {"dir": "visas/pvt", "title": "Landing Visa PVT"},
     # Pendiente: mentions-legales
 ]
 

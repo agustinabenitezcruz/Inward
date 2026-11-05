@@ -3544,3 +3544,13 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
 }
 @media (hover:hover){.mega-more:hover{color:var(--text);border-color:var(--accent);background:var(--accent-soft)}}
 .vl-split-txt .sec-head .vl-more{margin-top:.2rem;color:var(--text-2);max-width:60ch}
+/* Ventaja con lista desplegable (PVT: paises). En la lista, una pista
+   "Voir les pays"; en la foto, los paises como pastillas que aparecen en cascada. */
+.vla-hint{display:inline-block;margin-left:.5rem;font-size:.74rem;font-weight:500;letter-spacing:.04em;color:var(--accent);
+  border-bottom:1px solid var(--tint-3);vertical-align:.1em;white-space:nowrap}
+.vla-more{display:flex;flex-wrap:wrap;gap:6px;margin-top:1rem;max-width:520px}
+.vla-chip{font-family:var(--font-body);font-weight:500;font-size:.8rem;letter-spacing:0;line-height:1;padding:.45em .75em;border-radius:999px;
+  background:rgba(210,210,255,.18);border:1px solid rgba(210,210,255,.45);color:#fff;opacity:0;translate:0 6px;transition:opacity 360ms var(--ease-out),translate 420ms var(--ease-out)}
+.vla-cap.is-on .vla-chip{opacity:1;translate:0 0}
+.vla-cap.is-on .vla-chip:nth-child(n){transition-delay:calc(150ms + var(--k,0) * 35ms)}
+@media (max-width:900px){.vla-chip{font-size:.74rem}}

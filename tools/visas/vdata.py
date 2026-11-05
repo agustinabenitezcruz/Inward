@@ -136,7 +136,30 @@ REC=dict(dir="visas/rece",short="Visa et carte de séjour RECE",
       ("Combien de temps faut-il pour obtenir un visa RECE ?",p("Le délai dépend du type de demande, de la complétude du dossier, de l'administration compétente et de la situation du demandeur. Il est recommandé d'anticiper la demande avant l'expiration du titre de séjour actuel.")),
       ("Que faire après avoir trouvé un emploi avec un visa RECE ?",p("Après avoir trouvé un emploi, le demandeur peut devoir effectuer une démarche de changement de statut. La procédure dépend notamment du contrat, du poste, de la qualification et des conditions applicables.")+p("Le détenteur du titre RECE n'a pas besoin d'autorisation de travail pour signer un contrat de travail mais peut en avoir besoin d'une pour son changement de statut. Il faut toujours anticiper les possibles démarches.")),
       ("Comment Inward peut-il accompagner une demande de visa RECE ?",p("Inward peut analyser votre situation, vérifier les conditions applicables, identifier la procédure adaptée et vous accompagner dans la préparation de votre dossier de visa ou de titre de séjour."))])
+
+IMG.update(pvt=("visa-pvt-sacre-coeur-montmartre.webp",800,1066,"Rue de Montmartre avec le Sacré-Cœur au fond"),sch=("visa-schengen-globe-europe.webp",800,1066,"Doigt pointant l'Europe sur un globe terrestre"))
+PVT=dict(dir="visas/pvt",short="Visa PVT (vacances-travail)",
+ title="Visa PVT France : conditions et accompagnement | INWARD",
+ desc="Visa vacances-travail (PVT) pour la France : conditions par nationalité, durée, travail pendant le séjour. INWARD prépare votre dossier jusqu'au dépôt au consulat.",
+ h1="Visa PVT France : conditions et accompagnement",
+ sub="Nous vous accompagnons dans la préparation de votre visa vacances-travail pour la France, de l'évaluation de votre situation jusqu'à la présentation de votre demande.",
+ intro_id="pvt",intro_label="Vacances-travail",
+ intro_h2="Le visa PVT, ou visa vacances-travail, permet aux jeunes ressortissants de certains pays de voyager en France et d'y travailler pendant leur séjour, sous réserve de respecter les conditions applicables à leur nationalité.",
+ intro_lead="Il s'agit d'un visa de long séjour généralement valable un an, sauf pour les ressortissants canadiens. Il permet à ses titulaires de voyager et de travailler en France sans avoir à obtenir au préalable une autorisation de travail spécifique.",
+ intro_more=["Chez Inward, nous vous accompagnons à chaque étape de votre projet : analyse de votre situation, vérification de vos documents, préparation de votre dossier et organisation de votre demande de visa auprès du Consulat français."],
+ intro_ph=IMG['pvt'],
+ adv_mode="single",adv_h2="Les caractéristiques du visa PVT",
+ adv=["Destiné aux ressortissants de pays ayant conclu un accord avec la France","Permet de combiner un projet de voyage avec la possibilité de travailler pendant le séjour","S'adresse aux jeunes de 18 à 30 ans (jusqu'à 35 ans pour l'Australie, l'Argentine, le Canada et la Corée du Sud)","Durée maximale d'un an","Non renouvelable (sauf pour les ressortissants canadiens, qui peuvent le renouveler d'un an)"],
+ adv_hint={0:"Voir les pays"},
+ adv_more={0:'<span class="vla-chip">Argentine</span><span class="vla-chip">Australie</span><span class="vla-chip">Brésil</span><span class="vla-chip">Canada</span><span class="vla-chip">Chili</span><span class="vla-chip">Colombie</span><span class="vla-chip">Corée du Sud</span><span class="vla-chip">Équateur</span><span class="vla-chip">Hong Kong</span><span class="vla-chip">Japon</span><span class="vla-chip">Mexique</span><span class="vla-chip">Nouvelle-Zélande</span><span class="vla-chip">Pérou</span><span class="vla-chip">Taïwan</span><span class="vla-chip">Uruguay</span>'},
+ adv_ph=[IMG['sch'],IMG['pvt'],IMG['et'],IMG['par'],IMG['rdv']],
+ delais=[dict(mid="2–4",unit="semaines",steps=["Étude de cas et diagnostic","Préparation et dépôt du dossier de demande de visa PVT France","Obtention du visa PVT"])],
+ svc=["Constitution intégrale et vérification du dossier","Prise de rendez-vous au consulat","Remplissage de formulaires","Rédaction de lettres","Traduction de documents par traducteur assermenté"],
+ faq=[("Qu'est-ce que le visa PVT France ?",p("Le visa PVT France, également appelé visa vacances-travail, permet aux ressortissants de certains pays de voyager en France et d'y travailler pendant leur séjour, conformément aux conditions applicables à leur nationalité.")),
+      ("Quelle est la durée du visa PVT France ?",p("Le visa PVT a une durée maximale d'un an pour toutes les nationalités bénéficiant de cet accord bilatéral, sauf pour les ressortissants canadiens qui ont la possibilité de le renouveler pour une année supplémentaire.")),
+      ("Puis-je travailler en France avec un visa PVT ?",p("Oui. Le visa PVT vous permet de travailler en France pendant toute la durée de votre séjour autorisé, afin de compléter vos ressources. Vous pouvez rechercher et exercer un emploi pendant votre séjour, dans le respect des conditions du programme et de la réglementation française applicable.")),
+      ("Dois-je avoir trouvé un emploi avant de demander le visa ?",p("Non. Il n'est pas nécessaire d'avoir trouvé un emploi avant de déposer votre demande de visa PVT. Dans le cadre du programme, le visa tient lieu d'autorisation de travail et vous permet de rechercher puis d'exercer un emploi en France pendant votre séjour, dans différents secteurs d'activité et dans le respect de la réglementation applicable."))])
 import sys as _s
 ONLY=_s.argv[1:]
-for c in (SAL,SAI,FAM,ENT,ETU,REC):
+for c in (SAL,SAI,FAM,ENT,ETU,REC,PVT):
     if not ONLY or c["dir"] in ONLY: page(c)

@@ -422,4 +422,34 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/visas/rece/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/visas/rece/"/>
   </url>
+  <url>
+    <loc>https://inwardpro.com/visas/pvt/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/visas/pvt/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/visas/pvt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/visas/pvt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/visas/pvt/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/en/visas/pvt/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/visas/pvt/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/visas/pvt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/visas/pvt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/visas/pvt/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/es/visas/pvt/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/visas/pvt/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/visas/pvt/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/visas/pvt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/visas/pvt/"/>
+  </url>
 </urlset>
