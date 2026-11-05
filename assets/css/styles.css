@@ -3517,3 +3517,15 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
 .nav-btn[data-current]{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:7px;text-decoration-color:var(--tint-3)}
 .hdr.is-solid .nav-btn[data-current],.nav-btn[data-current]:hover{text-decoration-color:var(--accent)}
 .mega li a[aria-current="page"]{color:var(--text);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px;text-decoration-color:var(--accent)}
+
+/* ---------- Menu Particuliers: dos grupos en la primera columna ----------
+   "Court séjour (Schengen)" y "Long séjour", cada uno con su lista. Debajo,
+   un recuadro chico "Voir plus" lleva al listado completo de la landing. */
+.mega .mega-h2{margin-top:1.4rem}
+.mega-more{
+  display:inline-flex;align-items:center;gap:.35em;margin-top:.7rem;
+  padding:.4em .8em;border:1px solid var(--line-strong);border-radius:8px;
+  font-size:.82rem;color:var(--text-2);text-decoration:none;
+  transition:color 160ms ease,border-color 160ms ease,background-color 160ms ease;
+}
+@media (hover:hover){.mega-more:hover{color:var(--text);border-color:var(--accent);background:var(--accent-soft)}}

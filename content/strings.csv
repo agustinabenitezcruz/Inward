@@ -42,22 +42,29 @@ mobilit-internationale,Mobilité internationale,International mobility,Movilidad
 carte-talent,Carte Talent,Talent card,Tarjeta Talento
 salari-et-travailleur-temporaire,Salarié et Travailleur temporaire,Employee and Temporary worker,Asalariado y Trabajador temporal
 saisonnier,Saisonnier,Seasonal worker,Temporada
-d-tachement-de-salari-s,Détachement de salariés,Posting of employees,Desplazamiento de trabajadores
+stagiaire,Stagiaire,Intern,Pasante
+entrepreneur-et-cr-ation-d-entreprise,Entrepreneur et création d'entreprise,,
+famille,Famille,Family,Familia
 conseil-et-conformit,Conseil et conformité,Advice and compliance,Asesoría y cumplimiento
 audit-et-conseil,Audit et conseil,Audit and advice,Auditoría y asesoría
-d-marches-de-s-jour,Démarches de séjour,Residence procedures,Trámites de residencia
-aide-administrative,Aide administrative,Administrative assistance,Ayuda administrativa
+autorisation-de-travail,Autorisation de travail,,
+premi-re-demande,Première demande,,
+renouvellement,Renouvellement,,
+changement-de-statut,Changement de statut,Change of status,Cambio de estatus
 un-projet-de-mobilit-pour-vos-quipes,Un projet de mobilité pour vos équipes ?,A mobility project for your teams?,¿Un proyecto de movilidad para sus equipos?
 demander-un-devis,Demander un devis,Request a quote,Solicitar un presupuesto
-visas-et-titres-de-s-jour,Visas et titres de séjour,Visas and residence permits,Visas y permisos de residencia
+court-s-jour-schengen,Court séjour (Schengen),,
+visa-schengen,Visa Schengen,Schengen visa,Visa Schengen
+long-s-jour,Long séjour,,
 visa-visiteur,Visa visiteur,Visitor visa,Visa de visitante
 visa-tudiant,Visa étudiant,Student visa,Visa de estudiante
 visa-famille,Visa famille,Family visa,Visa familiar
 entrepreneur-et-profession-lib-rale,Entrepreneur et profession libérale,Entrepreneur and self-employed profession,Emprendedor y profesión liberal
+voir-plus,Voir plus,,
 d-marches-et-statuts,Démarches et statuts,Procedures and statuses,Trámites y estatus
-carte-de-r-sident,Carte de résident,Resident card,Tarjeta de residente
-changement-de-statut,Changement de statut,Change of status,Cambio de estatus
+premi-re-demande-de-visa,Première demande de visa,,
 renouvellement-de-titre,Renouvellement de titre,Permit renewal,Renovación del permiso
+aide-administrative,Aide administrative,Administrative assistance,Ayuda administrativa
 vous-ne-savez-pas-quelle-d-marche-vous-conce,Vous ne savez pas quelle démarche vous concerne ?,Not sure which procedure applies to you?,¿No sabe qué trámite le corresponde?
 valuer-mon-dossier,Évaluer mon dossier,Assess my case,Evaluar mi caso
 centre-de-ressources,Centre de ressources,Resource centre,Centro de recursos
@@ -81,7 +88,9 @@ les-avis-positifs-les-plus-r-cents-s-affiche,Les avis positifs les plus récents
 optimisez-la-mobilit-internationale-de-vos-c,Optimisez la mobilité internationale de vos collaborateurs,Optimise your employees' international mobility,Optimice la movilidad internacional de sus empleados
 d-l-guez-l-ensemble-des-d-marches-de-visa-et,"Déléguez l'ensemble des démarches de visa et de titre de séjour à une équipe d'experts. Du diagnostic initial jusqu'à l'obtention du titre, nous assurons la conformité de vos dossiers et sécurisons l'embauche et la rétention de vos talents étrangers.","Hand over all your visa and residence permit procedures to a team of experts. From the initial assessment to the permit being issued, we keep your applications compliant and secure the hiring and retention of your international talent.","Delegue todos los trámites de visa y permiso de residencia en un equipo de expertos. Desde el diagnóstico inicial hasta la obtención del permiso, garantizamos la conformidad de sus expedientes y aseguramos la contratación y la retención de su talento extranjero."
 demander-un-devis-sur-mesure,Demander un devis sur-mesure,Request a tailored quote,Solicitar un presupuesto a medida
+visas-et-titres-de-s-jour,Visas et titres de séjour,Visas and residence permits,Visas y permisos de residencia
 gestion-et-accompagnement-dans-les-demandes,"Gestion et accompagnement dans les demandes, renouvellement ou changement de visas et titres de séjour, déblocage de situations compliquées et suivi complet de salariés de nationalité étrangère.","Management and support for visa and residence permit applications, renewals and changes, unblocking complex situations and complete follow-up of foreign employees.","Gestión y acompañamiento en las solicitudes, renovaciones o cambios de visas y permisos de residencia, desbloqueo de situaciones complicadas y seguimiento completo de empleados extranjeros."
+d-tachement-de-salari-s,Détachement de salariés,Posting of employees,Desplazamiento de trabajadores
 conformit-aux-normes-de-d-tachement-et-forma,Conformité aux normes de détachement et formalités de déplacement international.,Compliance with posting rules and international travel formalities.,Cumplimiento de las normas de desplazamiento y trámites de viaje internacional.
 v-rification-des-documents-de-s-jour-et-cons,Vérification des documents de séjour et conseil sur les procédures à engager pour être en conformité.,Checks on residence documents and advice on the steps to take to be compliant.,Verificación de los documentos de residencia y asesoramiento sobre los trámites necesarios para estar en regla.
 inscription-l-assurance-maladie-num-ro-fisca,"Inscription à l'assurance maladie, numéro fiscal et démarches d'installation.","Health insurance registration, tax number and settling-in procedures.","Inscripción en el seguro médico, número fiscal y trámites de instalación."
@@ -194,6 +203,7 @@ envoyer-et-choisir-un-cr-neau,Envoyer et choisir un créneau,Send and choose a t
 cabinet-de-conseil-en-immigration-et-mobilit,Cabinet de conseil en immigration et mobilité internationale en France. Particuliers et entreprises.,Immigration and international mobility consultancy in France. Individuals and companies.,Consultoría de inmigración y movilidad internacional en Francia. Particulares y empresas.
 services-entreprises,Services entreprises,Services for companies,Servicios para empresas
 services-particuliers,Services particuliers,Services for individuals,Servicios para particulares
+carte-de-r-sident,Carte de résident,Resident card,Tarjeta de residente
 soci-t,Société,Company,Empresa
 2026-inward-tous-droits-r-serv-s,© 2026 INWARD. Tous droits réservés.,© 2026 INWARD. All rights reserved.,© 2026 INWARD. Todos los derechos reservados.
 politique-de-confidentialit-rgpd,Politique de confidentialité (RGPD),Privacy policy (GDPR),Política de privacidad (RGPD)
@@ -215,9 +225,7 @@ accompagnement-sur-mesure-pour-vos-salari-s,Accompagnement sur mesure pour vos s
 voir-nos-services,Voir nos services,See our services,Ver nuestros servicios
 talent,Talent,Talent,Talento
 salari-travailleur-temporaire,Salarié / Travailleur temporaire,Employee / Temporary worker,Asalariado / Trabajador temporal
-stagiaire,Stagiaire,Intern,Pasante
 entrepreneur-cr-ation-d-entreprise,Entrepreneur / Création d'entreprise,Entrepreneur / Business creation,Emprendedor / Creación de empresa
-famille,Famille,Family,Familia
 vos-quipes-avancent-l-administration-ne-les,"Vos équipes avancent, l'administration ne les retient plus","Your teams move forward, red tape no longer holds them back","Sus equipos avanzan, la administración ya no los frena"
 pour-vos-salari-s-et-leurs-familles-nous-pro,"Pour vos salariés et leurs familles, nous proposons un accompagnement premium, humain et sur mesure, pour une installation sereine et réussie à chaque étape.","For your employees and their families, we offer premium, human and tailored support, for a smooth and successful move at every step.","Para sus empleados y sus familias, ofrecemos un acompañamiento premium, humano y a medida, para una instalación tranquila y exitosa en cada etapa."
 les-b-n-fices-pour-votre-entreprise,Les bénéfices pour votre entreprise,The benefits for your company,Los beneficios para su empresa
@@ -283,7 +291,6 @@ recherche-d-emploi-ou-cr-ation-d-entreprise,Recherche d'emploi ou création d'en
 entrepreneur,Entrepreneur,Entrepreneur,Emprendedor
 visa-stagiaire,Visa stagiaire,Intern visa,Visa de pasante
 pvt,PVT,Working Holiday Visa (PVT),Visa de vacaciones y trabajo (PVT)
-visa-schengen,Visa Schengen,Schengen visa,Visa Schengen
 s-installer-en-france-en-toute-s-r-nit,S'installer en France en toute sérénité,Settle in France with peace of mind,Instalarse en Francia con total tranquilidad
 nous-accompagnons-les-personnes-venant-des-q,"Nous accompagnons les personnes venant des quatre coins du monde dans les démarches administratives nécessaires pour venir en France, pour une courte ou une longue durée.","We support people from all over the world through the administrative procedures needed to come to France, for a short or a long stay.","Acompañamos a personas de todos los rincones del mundo en los trámites administrativos necesarios para venir a Francia, por una estancia corta o larga."
 nous-proposons-des-services-d-accompagnement,Nous proposons des services d'accompagnement et de gestion des différentes démarches administratives liées à votre installation en France.,We offer support and management services for the various administrative procedures involved in settling in France.,Ofrecemos servicios de acompañamiento y gestión de los distintos trámites administrativos vinculados a su instalación en Francia.
@@ -519,7 +526,7 @@ obtention-de-la-carte-de-s-jour-en-france,Obtention de la carte de séjour en Fr
 demande-de-titre-de-s-jour-saisonnier,Demande de titre de séjour Saisonnier,Seasonal residence permit application,Solicitud de permiso de residencia de Temporero
 qui-peut-demander-un-visa-de-travailleur-sai,Qui peut demander un visa de travailleur saisonnier en France ?,Who can apply for a seasonal worker visa in France?,¿Quién puede solicitar una visa de trabajador temporero en Francia?
 les-ressortissants-de-pays-situ-s-hors-de-l,"Les ressortissants de pays situés hors de l'Union européenne peuvent demander un visa saisonnier s'ils disposent d'un contrat de travail saisonnier d'une durée maximale de 6 mois en France, et d'une",Nationals of countries outside the European Union can apply for a seasonal visa if they have a seasonal employment contract of up to 6 months in France and a,Los ciudadanos de países fuera de la Unión Europea pueden solicitar una visa de temporero si tienen un contrato de trabajo de temporada de hasta 6 meses en Francia y una
-autorisation-de-travail,autorisation de travail,work permit,autorización de trabajo
+autorisation-de-travail-2,autorisation de travail,work permit,autorización de trabajo
 d-livr-e-par-l-administration-fran-aise,délivrée par l'administration française.,issued by the French authorities.,emitida por la administración francesa.
 quel-visa-faut-il-demander-pour-travailler-c,Quel visa faut-il demander pour travailler comme saisonnier en France ?,Which visa do you need to work as a seasonal worker in France?,¿Qué visa hay que solicitar para trabajar como temporero en Francia?
 le-type-de-visa-d-pend-de-la-dur-e-du-contra,Le type de visa dépend de la durée du contrat :,The type of visa depends on the length of the contract:,El tipo de visa depende de la duración del contrato:

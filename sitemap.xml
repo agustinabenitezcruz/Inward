@@ -4,362 +4,98 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://inwardpro.com/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/"/>
-  </url>
-  <url>
-    <loc>https://inwardpro.com/en/</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/"/>
-  </url>
-  <url>
-    <loc>https://inwardpro.com/es/</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/"/>
   </url>
   <url>
     <loc>https://inwardpro.com/entreprises/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/entreprises/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/entreprises/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/entreprises/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/entreprises/"/>
-  </url>
-  <url>
-    <loc>https://inwardpro.com/en/entreprises/</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/entreprises/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/entreprises/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/entreprises/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/entreprises/"/>
-  </url>
-  <url>
-    <loc>https://inwardpro.com/es/entreprises/</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/entreprises/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/entreprises/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/entreprises/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/entreprises/"/>
   </url>
   <url>
     <loc>https://inwardpro.com/particuliers/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/particuliers/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/particuliers/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/particuliers/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/particuliers/"/>
-  </url>
-  <url>
-    <loc>https://inwardpro.com/en/particuliers/</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/particuliers/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/particuliers/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/particuliers/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/particuliers/"/>
-  </url>
-  <url>
-    <loc>https://inwardpro.com/es/particuliers/</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/particuliers/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/particuliers/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/particuliers/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/particuliers/"/>
   </url>
   <url>
     <loc>https://inwardpro.com/blog/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/blog/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/blog/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/blog/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/blog/"/>
-  </url>
-  <url>
-    <loc>https://inwardpro.com/en/blog/</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/blog/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/blog/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/blog/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/blog/"/>
-  </url>
-  <url>
-    <loc>https://inwardpro.com/es/blog/</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/blog/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/blog/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/blog/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/blog/"/>
   </url>
   <url>
     <loc>https://inwardpro.com/videos/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/videos/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/videos/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/videos/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/videos/"/>
-  </url>
-  <url>
-    <loc>https://inwardpro.com/en/videos/</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/videos/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/videos/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/videos/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/videos/"/>
-  </url>
-  <url>
-    <loc>https://inwardpro.com/es/videos/</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/videos/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/videos/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/videos/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/videos/"/>
   </url>
   <url>
     <loc>https://inwardpro.com/videos/presentation-inward-palais-garnier/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/videos/presentation-inward-palais-garnier/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/videos/presentation-inward-palais-garnier/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/videos/presentation-inward-palais-garnier/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/videos/presentation-inward-palais-garnier/"/>
-  </url>
-  <url>
-    <loc>https://inwardpro.com/en/videos/presentation-inward-palais-garnier/</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/videos/presentation-inward-palais-garnier/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/videos/presentation-inward-palais-garnier/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/videos/presentation-inward-palais-garnier/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/videos/presentation-inward-palais-garnier/"/>
-  </url>
-  <url>
-    <loc>https://inwardpro.com/es/videos/presentation-inward-palais-garnier/</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/videos/presentation-inward-palais-garnier/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/videos/presentation-inward-palais-garnier/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/videos/presentation-inward-palais-garnier/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/videos/presentation-inward-palais-garnier/"/>
   </url>
   <url>
     <loc>https://inwardpro.com/qui-sommes-nous/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/qui-sommes-nous/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/qui-sommes-nous/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/qui-sommes-nous/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/qui-sommes-nous/"/>
-  </url>
-  <url>
-    <loc>https://inwardpro.com/en/qui-sommes-nous/</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/qui-sommes-nous/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/qui-sommes-nous/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/qui-sommes-nous/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/qui-sommes-nous/"/>
-  </url>
-  <url>
-    <loc>https://inwardpro.com/es/qui-sommes-nous/</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/qui-sommes-nous/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/qui-sommes-nous/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/qui-sommes-nous/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/qui-sommes-nous/"/>
   </url>
   <url>
     <loc>https://inwardpro.com/visas/talent/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/visas/talent/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/visas/talent/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/visas/talent/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/visas/talent/"/>
-  </url>
-  <url>
-    <loc>https://inwardpro.com/en/visas/talent/</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/visas/talent/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/visas/talent/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/visas/talent/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/visas/talent/"/>
-  </url>
-  <url>
-    <loc>https://inwardpro.com/es/visas/talent/</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/visas/talent/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/visas/talent/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/visas/talent/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/visas/talent/"/>
   </url>
   <url>
     <loc>https://inwardpro.com/visas/salarie-travailleur-temporaire/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/visas/salarie-travailleur-temporaire/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/visas/salarie-travailleur-temporaire/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/visas/salarie-travailleur-temporaire/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/visas/salarie-travailleur-temporaire/"/>
-  </url>
-  <url>
-    <loc>https://inwardpro.com/en/visas/salarie-travailleur-temporaire/</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/visas/salarie-travailleur-temporaire/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/visas/salarie-travailleur-temporaire/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/visas/salarie-travailleur-temporaire/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/visas/salarie-travailleur-temporaire/"/>
-  </url>
-  <url>
-    <loc>https://inwardpro.com/es/visas/salarie-travailleur-temporaire/</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/visas/salarie-travailleur-temporaire/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/visas/salarie-travailleur-temporaire/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/visas/salarie-travailleur-temporaire/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/visas/salarie-travailleur-temporaire/"/>
   </url>
   <url>
     <loc>https://inwardpro.com/visas/saisonnier/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/visas/saisonnier/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/visas/saisonnier/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/visas/saisonnier/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/visas/saisonnier/"/>
-  </url>
-  <url>
-    <loc>https://inwardpro.com/en/visas/saisonnier/</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/visas/saisonnier/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/visas/saisonnier/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/visas/saisonnier/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/visas/saisonnier/"/>
-  </url>
-  <url>
-    <loc>https://inwardpro.com/es/visas/saisonnier/</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/visas/saisonnier/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/visas/saisonnier/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/visas/saisonnier/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/visas/saisonnier/"/>
   </url>
   <url>
     <loc>https://inwardpro.com/visas/famille/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/visas/famille/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/visas/famille/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/visas/famille/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/visas/famille/"/>
-  </url>
-  <url>
-    <loc>https://inwardpro.com/en/visas/famille/</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/visas/famille/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/visas/famille/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/visas/famille/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/visas/famille/"/>
-  </url>
-  <url>
-    <loc>https://inwardpro.com/es/visas/famille/</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/visas/famille/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/visas/famille/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/visas/famille/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/visas/famille/"/>
   </url>
   <url>
     <loc>https://inwardpro.com/visas/entrepreneur/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/visas/entrepreneur/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/visas/entrepreneur/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/visas/entrepreneur/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/visas/entrepreneur/"/>
-  </url>
-  <url>
-    <loc>https://inwardpro.com/en/visas/entrepreneur/</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/visas/entrepreneur/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/visas/entrepreneur/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/visas/entrepreneur/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/visas/entrepreneur/"/>
-  </url>
-  <url>
-    <loc>https://inwardpro.com/es/visas/entrepreneur/</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/visas/entrepreneur/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/visas/entrepreneur/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/visas/entrepreneur/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/visas/entrepreneur/"/>
   </url>
 </urlset>
