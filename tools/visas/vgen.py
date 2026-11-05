@@ -85,7 +85,7 @@ def page(c):
       <div class="sec-head">
         <p class="label">{c['intro_label']}</p>
         <h2>{nb(c['intro_h2'])}</h2>
-        <p class="lead">{nb(c['intro_lead'])}</p>
+        <p class="lead">{nb(c['intro_lead'])}</p>{''.join(f'<p class="vl-more">{nb(x)}</p>' for x in c.get('intro_more',[]))}
       </div>
       {btn("Vérifier mon éligibilité")}
     </div>

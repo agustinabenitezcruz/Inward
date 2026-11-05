@@ -3543,3 +3543,4 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
   transition:color 160ms ease,border-color 160ms ease,background-color 160ms ease;
 }
 @media (hover:hover){.mega-more:hover{color:var(--text);border-color:var(--accent);background:var(--accent-soft)}}
+.vl-split-txt .sec-head .vl-more{margin-top:.2rem;color:var(--text-2);max-width:60ch}
