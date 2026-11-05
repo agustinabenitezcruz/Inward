@@ -452,4 +452,64 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/visas/pvt/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/visas/pvt/"/>
   </url>
+  <url>
+    <loc>https://inwardpro.com/visas/stagiaire/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/visas/stagiaire/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/visas/stagiaire/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/visas/stagiaire/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/visas/stagiaire/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/en/visas/stagiaire/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/visas/stagiaire/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/visas/stagiaire/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/visas/stagiaire/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/visas/stagiaire/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/es/visas/stagiaire/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/visas/stagiaire/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/visas/stagiaire/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/visas/stagiaire/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/visas/stagiaire/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/visas/detachement/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/visas/detachement/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/visas/detachement/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/visas/detachement/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/visas/detachement/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/en/visas/detachement/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/visas/detachement/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/visas/detachement/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/visas/detachement/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/visas/detachement/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/es/visas/detachement/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/visas/detachement/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/visas/detachement/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/visas/detachement/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/visas/detachement/"/>
+  </url>
 </urlset>

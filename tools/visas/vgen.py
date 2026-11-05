@@ -87,7 +87,7 @@ def page(c):
         <h2>{nb(c['intro_h2'])}</h2>
         <p class="lead">{nb(c['intro_lead'])}</p>{''.join(f'<p class="vl-more">{nb(x)}</p>' for x in c.get('intro_more',[]))}
       </div>
-      {btn("Vérifier mon éligibilité")}
+      {btn(c.get("intro_cta","Vérifier mon éligibilité"))}
     </div>
     <figure class="vl-split-ph rv">
       <img src="{P}{c['intro_ph'][0]}" width="{c['intro_ph'][1]}" height="{c['intro_ph'][2]}" alt="{c['intro_ph'][3]}" loading="lazy" decoding="async">
@@ -95,8 +95,24 @@ def page(c):
   </div>
 </section>
 ''')
+    # tipos (opcional, como en Talent)
+    if c.get('types'):
+        tl="\n".join(f'      <li class="vl-type"><span class="vl-num">{i+1:02d}</span><h3>{nb(t)}</h3></li>' for i,t in enumerate(c['types']))
+        b.append(f'''<!-- ============================ TYPES ============================ -->
+<section class="band tinted sec" id="types">
+  <div class="wrap">
+{head(c.get('types_label',"Types de visa"),c['types_h2'])}
+    <ul class="vl-types rv">
+{tl}
+    </ul>
+    <div class="vl-act rv">{btn(c.get('types_cta',"Trouver ma procédure"))}</div>
+  </div>
+</section>
+''')
     # ventajas
-    if c['adv_mode']=='single':
+    if not c.get('adv_mode'):
+        pass
+    elif c['adv_mode']=='single':
         adv=c['adv']; ph=c['adv_ph']
         tabs="\n".join(f'''        <button class="vla-tab" type="button" role="tab" id="vla-t{i}" aria-controls="vla-p" aria-selected="{'true' if i==0 else 'false'}" tabindex="{0 if i==0 else -1}" data-i="{i}"><span class="vla-n">{i+1:02d}</span><span class="vla-l">{nb(t)}{'<span class="vla-dot" aria-hidden="true"></span>' if i in c.get('adv_wink',{}) else ''}{f'<span class="vla-hint">{c["adv_hint"][i]}</span>' if i in c.get('adv_hint',{}) else ''}</span></button>''' for i,t in enumerate(adv))
         imgs="\n".join(f'''        <img class="vla-img{' is-on' if i==0 else ''}" src="{P}{f}" width="{w}" height="{h}" alt="{a}" loading="lazy" decoding="async">''' for i,(f,w,h,a) in enumerate(ph))
@@ -127,7 +143,7 @@ def page(c):
           </ul>
         </div>''' for (k,h,items) in c['adv_dual']]
         inner=switch('adv',c['adv_tabs'],panes,c['adv_h2'])
-    b.append(f'''<!-- ============================ CARACTERISTIQUES ============================ -->
+    if c.get('adv_mode'): b.append(f'''<!-- ============================ CARACTERISTIQUES ============================ -->
 <section class="band tinted sec" id="avantages">
   <div class="wrap">
 {head("Caractéristiques du visa",c['adv_h2'])}
@@ -191,5 +207,5 @@ def page(c):
      {"@type":"Service","@id":U+"#service","name":"Accompagnement "+c['short'],"serviceType":c['short'],"provider":{"@id":D+"/#organization"},"areaServed":{"@type":"Country","name":"France"},
       "hasOfferCatalog":{"@type":"OfferCatalog","name":"Nos services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":s}} for s in c['svc']]}},
      {"@type":"BreadcrumbList","@id":U+"#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":D+"/"},{"@type":"ListItem","position":2,"name":c['short'],"item":U}]}]},ensure_ascii=False,indent=2)
-    rail="\n".join(f'  <a href="#{a}" aria-label="{l}"><span></span></a>' for a,l in [("top","Haut de page"),("avis","Avis"),(c['intro_id'],c['intro_label']),("avantages","Caractéristiques"),("delais","Délais"),("services","Nos services"),("about","Nos engagements"),("faq","Questions fréquentes"),("contact","Contact")])
+    rail="\n".join(f'  <a href="#{a}" aria-label="{l}"><span></span></a>' for a,l in [("top","Haut de page"),("avis","Avis"),(c['intro_id'],c['intro_label'])]+([("types","Types de visa")] if c.get('types') else [])+([("avantages","Caractéristiques")] if c.get('adv_mode') else [])+[("delais","Délais"),("services","Nos services"),("about","Nos engagements"),("faq","Questions fréquentes"),("contact","Contact")])
     write(c['dir'],c['title'],c['desc'],jsonld,body,rail)

@@ -3554,3 +3554,4 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
 .vla-cap.is-on .vla-chip{opacity:1;translate:0 0}
 .vla-cap.is-on .vla-chip:nth-child(n){transition-delay:calc(150ms + var(--k,0) * 35ms)}
 @media (max-width:900px){.vla-chip{font-size:.74rem}}
+.tinted .vl-type{background:var(--panel)}

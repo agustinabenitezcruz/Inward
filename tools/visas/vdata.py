@@ -159,7 +159,46 @@ PVT=dict(dir="visas/pvt",short="Visa PVT (vacances-travail)",
       ("Quelle est la durée du visa PVT France ?",p("Le visa PVT a une durée maximale d'un an pour toutes les nationalités bénéficiant de cet accord bilatéral, sauf pour les ressortissants canadiens qui ont la possibilité de le renouveler pour une année supplémentaire.")),
       ("Puis-je travailler en France avec un visa PVT ?",p("Oui. Le visa PVT vous permet de travailler en France pendant toute la durée de votre séjour autorisé, afin de compléter vos ressources. Vous pouvez rechercher et exercer un emploi pendant votre séjour, dans le respect des conditions du programme et de la réglementation française applicable.")),
       ("Dois-je avoir trouvé un emploi avant de demander le visa ?",p("Non. Il n'est pas nécessaire d'avoir trouvé un emploi avant de déposer votre demande de visa PVT. Dans le cadre du programme, le visa tient lieu d'autorisation de travail et vous permet de rechercher puis d'exercer un emploi en France pendant votre séjour, dans différents secteurs d'activité et dans le respect de la réglementation applicable."))])
+
+STA=dict(dir="visas/stagiaire",short="Visa Stagiaire",
+ title="Visa stagiaire en France : conditions et accompagnement | INWARD",
+ desc="Effectuez votre stage en France : conditions du visa stagiaire, convention de stage tripartite et accompagnement personnalisé pour préparer votre dossier.",
+ h1="Effectuez votre stage en France en toute sérénité",
+ sub="Vous souhaitez effectuer un stage en France ? Découvrez les conditions du visa stagiaire et bénéficiez d'un accompagnement personnalisé pour préparer votre dossier.",
+ intro_id="stagiaire",intro_label="Stagiaire",
+ intro_h2="Le visa stagiaire vous permet d'effectuer un stage en France en tant qu'étudiant étranger dans le cadre de votre formation.",
+ intro_lead="Il repose sur une convention de stage signée entre l'étudiant, l'établissement de formation à l'étranger et l'organisme d'accueil en France.",
+ intro_more=["Nous vous accompagnons à chaque étape pour constituer un dossier solide, anticiper les exigences administratives et présenter votre demande de visa dans les meilleures conditions."],
+ intro_cta="Demander un accompagnement",
+ intro_ph=IMG['st'],
+ adv_mode="single",adv_h2="Les caractéristiques du visa Stagiaire",
+ adv=["Destiné aux étudiants de nationalité étrangère","Nécessite une convention de stage tripartite","Délivré selon la durée du stage en France","Renouvelable depuis la France (sous conditions)"],
+ adv_ph=[IMG['et'],IMG['dos'],IMG['st'],IMG['par']],
+ delais=[dict(mid="3–5",unit="mois",steps=["Étude de cas et diagnostic","Validation de la convention de stage auprès de l'administration française","Dépôt de la demande de visa Stagiaire au consulat français","Obtention du visa Stagiaire","Validation du visa Stagiaire"])],
+ svc=["Validation de la convention de stage","Remplissage de formulaires","Rédaction de lettres","Traduction de documents par traducteur assermenté","Prise de rendez-vous au consulat ou en préfecture","Constitution intégrale du dossier","Validation du visa Stagiaire"],
+ faq=[("La convention de stage est-elle obligatoire ?",p("Oui. La convention de stage est un document essentiel. Elle doit être conclue entre le stagiaire, l'établissement de formation situé à l'étranger, et l'entreprise ou l'organisme d'accueil en France.")),
+      ("Qui doit faire valider la convention de stage ?",p("Pour un stage de plus de 90 jours, la convention doit être préalablement validée par l'administration française. La demande est généralement effectuée par l'entreprise d'accueil ou l'établissement de formation. Inward peut s'occuper de gérer les demandes de validation de la convention de stage.")),
+      ("Puis-je effectuer un stage sans être inscrit dans un établissement de formation ?",p("Le visa stagiaire repose notamment sur l'existence d'une convention conclue avec un établissement de formation. Nous devons donc analyser votre situation avant de confirmer la procédure adaptée.")),
+      ("Quel visa faut-il demander pour effectuer un stage en France ?",p("Le visa nécessaire dépend de votre nationalité, de la durée de votre stage et de votre situation personnelle. Pour un stage de 90 jours maximum, un visa de court séjour peut être requis. Pour un stage de plus de 90 jours, un visa de long séjour est généralement nécessaire et doit être validé après votre arrivée en France lorsque la procédure l'exige."))])
+DET=dict(dir="visas/detachement",short="Détachement de salariés",
+ title="Détachement de salarié en France : accompagnement | INWARD",
+ desc="Détachement de salariés en France, de la prestation de services au transfert intragroupe ICT : INWARD identifie la procédure applicable et prépare un dossier complet.",
+ h1="Détachement de salarié en France : un accompagnement personnalisé",
+ sub="De la prestation de services au transfert intragroupe ICT, nous vous aidons à identifier la procédure applicable et à préparer un dossier complet.",
+ intro_id="detachement",intro_label="Détachement",
+ intro_h2="Votre entreprise détache un collaborateur en France ?",
+ intro_lead="Nous vous accompagnons dans ses démarches de visa et de mobilité professionnelle, afin de faciliter son arrivée et de sécuriser votre projet.",
+ intro_cta="Parlons de votre projet",
+ intro_ph=IMG['eq'],
+ types_label="Types de visa",types_h2="Types de visa possibles pour un détachement",
+ types=["Visa salarié ICT","Travailleur temporaire","Salarié en mission","Stagiaire ICT"],
+ delais=[dict(mid="4–6",unit="mois",steps=["Étude de cas et diagnostic","Publication de l'offre sur France Travail (le cas échéant)","Demande d'autorisation de travail (le cas échéant)","Préparation et dépôt du dossier","Décision du consulat","Validation du visa ou demande de carte de séjour"])],
+ svc=["Publication de l'offre sur France Travail","Obtention de l'autorisation de travail","Déclaration SIPSI","Remplissage de formulaires","Rédaction de lettres","Traduction de documents par traducteur assermenté","Prise de rendez-vous au consulat ou en préfecture","Constitution intégrale du dossier","Validation du visa","Demande de carte de séjour"],
+ faq=[("Quel visa faut-il pour travailler en France en tant que salarié détaché ?",p("Le visa dépend de la nature du détachement. Dans le cadre d'une prestation de services entre deux entreprises indépendantes, un visa de court séjour peut être requis pour une mission jusqu'à 90 jours, tandis qu'un visa de long séjour portant la mention «&nbsp;travailleur temporaire&nbsp;» peut être nécessaire au-delà de 90 jours. En cas de transfert intragroupe ICT, une procédure spécifique s'applique, avec un titre de séjour portant la mention «&nbsp;salarié détaché ICT&nbsp;», «&nbsp;stagiaire ICT&nbsp;» ou «&nbsp;salarié en mission&nbsp;» selon la durée et la nature de la mission.")),
+      ("Quelles formalités l'employeur doit-il effectuer avant le détachement ?",p("Avant le début de la mission, l'employeur établi à l'étranger doit généralement transmettre une déclaration préalable de détachement via le téléservice "+a("https://www.sipsi.travail.gouv.fr/auth/login","SIPSI")+" et désigner un représentant en France lorsque cela est requis. Dans certains cas, une autorisation de travail préalable à la demande de visa est nécessaire.")),
+      ("Une autorisation de travail est-elle nécessaire pour un salarié détaché ?",p("La nécessité d'une "+a("https://www.service-public.fr/particuliers/vosdroits/F2728","autorisation de travail")+" dépend de la durée de la mission, de l'activité exercée et de la situation du salarié. Certaines missions d'audit ou d'expertise d'une durée maximale de 90 jours peuvent bénéficier d'une dispense, sous réserve de respecter les conditions applicables. La carte de séjour Talent Salarié en mission ne nécessite pas non plus de demande d'autorisation de travail préalable.")),
+      ("Quelle est la différence entre un salarié détaché et un salarié recruté en France ?",p("Le salarié détaché est temporairement envoyé en France par une entreprise étrangère pour réaliser une mission ou une prestation. Le salarié recruté en France est, quant à lui, embauché directement par une entreprise française dans le cadre d'un contrat de travail français. La procédure administrative et le titre de séjour applicable peuvent donc être différents."))])
 import sys as _s
 ONLY=_s.argv[1:]
-for c in (SAL,SAI,FAM,ENT,ETU,REC,PVT):
+for c in (SAL,SAI,FAM,ENT,ETU,REC,PVT,STA,DET):
     if not ONLY or c["dir"] in ONLY: page(c)
