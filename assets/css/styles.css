@@ -3385,23 +3385,24 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
 /* P3: hexagonos concentricos que nacen en el centro y se expanden */
 .hb-p3{background:radial-gradient(ellipse 60% 55% at 50% 50%,#33336b 0%,var(--accent) 72%)}
 .hb-p3 svg{position:absolute;inset:0;width:100%;height:100%}
-/* Los hexagonos entran desde afuera y se cierran hacia el centro, despacio:
-   un ciclo de 40s y uno nuevo cada 6,7s. La escala baja por tramos
-   geometricos (2.4 -> 1.36 -> .775 -> .44 -> .25) y no en linea recta: asi
-   el movimiento se ve parejo de punta a punta. En linea recta, con el
-   hexagono grande avanzaba muchos pixeles por segundo y mareaba. */
-.hb3-h{fill:none;stroke-width:1.6;transform-box:fill-box;transform-origin:50% 50%;opacity:0;animation:hb3In 40s linear infinite}
+/* Los hexagonos entran desde afuera y se cierran hacia adentro, muy
+   despacio: un ciclo de 70s y uno nuevo cada 11,7s. No llegan al centro:
+   se disuelven a mitad de camino (terminan en escala .6) y empiezan a
+   apagarse antes de la mitad del recorrido. La escala baja por tramos
+   geometricos (2.4 -> 1.7 -> 1.2 -> .85 -> .6) para que el movimiento se
+   vea parejo; en linea recta el hexagono grande avanzaba rapido y mareaba. */
+.hb3-h{fill:none;stroke-width:1.6;transform-box:fill-box;transform-origin:50% 50%;opacity:0;animation:hb3In 70s linear infinite}
 .hb3-h:nth-child(odd){stroke:var(--tint-3)}
 .hb3-h:nth-child(even){stroke:var(--tint-1)}
-.hb3-1{animation-delay:0s}.hb3-2{animation-delay:-6.67s}.hb3-3{animation-delay:-13.33s}
-.hb3-4{animation-delay:-20s}.hb3-5{animation-delay:-26.67s}.hb3-6{animation-delay:-33.33s}
+.hb3-1{animation-delay:0s}.hb3-2{animation-delay:-11.67s}.hb3-3{animation-delay:-23.33s}
+.hb3-4{animation-delay:-35s}.hb3-5{animation-delay:-46.67s}.hb3-6{animation-delay:-58.33s}
 @keyframes hb3In{
   0%{transform:scale(2.4);opacity:0}
-  25%{transform:scale(1.36);opacity:.28}
-  50%{transform:scale(.775)}
-  75%{transform:scale(.44)}
-  88%{opacity:.5}
-  100%{transform:scale(.25);opacity:0}
+  25%{transform:scale(1.7);opacity:.32}
+  45%{opacity:.36}
+  50%{transform:scale(1.2)}
+  75%{transform:scale(.85);opacity:.12}
+  100%{transform:scale(.6);opacity:0}
 }
 @media (prefers-reduced-motion:reduce){.hb3-h{animation:none;opacity:.3}}
 .hb3-g{position:absolute;inset:0;background:radial-gradient(closest-side at 50% 50%,rgba(32,32,69,.85),rgba(32,32,69,0) 70%);width:70%;height:70%;left:15%;top:15%}
