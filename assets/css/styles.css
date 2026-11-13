@@ -3560,3 +3560,4 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
 .b2c-media img[data-key="team"]{object-position:28% 40%}
 /* Foto consultora + cliente con laptop: las personas al centro del recorte. */
 .vla-img[src*="dossier-titre-de-sejour-en-preparation"]{object-position:100% 50%}
+.vla-img[src*="consultantes-inward-travail-ordinateur-equipe"]{object-position:35% 45%}
