@@ -21,9 +21,9 @@ PAGES = [
      "title": "Article : changement de statut", "noindex": True},
     {"dir": "blog/delais-prefecture-carte-de-sejour-2026",
      "title": "Article : délais préfecture 2026", "noindex": True},
-    {"dir": "videos",       "title": "Vidéos"},
+    {"dir": "videos",       "title": "Vidéos", "noindex": True},  # oculta: sin enlaces, solo por URL
     {"dir": "videos/presentation-inward-palais-garnier",
-     "title": "Vidéo : INWARD devant le Palais Garnier"},
+     "title": "Vidéo : INWARD devant le Palais Garnier", "noindex": True},  # oculta
     {"dir": "qui-sommes-nous", "title": "Qui sommes-nous"},
     {"dir": "visas/talent", "title": "Landing Visa Talent",
      "contact_lead": "Vous souhaitez savoir si votre profil ou celui de votre collaborateur correspond à l'une des catégories de la carte de séjour «&nbsp;talent&nbsp;»&nbsp;? Contactez notre équipe pour bénéficier d'une première évaluation de votre situation."},
