@@ -3561,3 +3561,5 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
 /* Foto consultora + cliente con laptop: las personas al centro del recorte. */
 .vla-img[src*="dossier-titre-de-sejour-en-preparation"]{object-position:100% 50%}
 .vla-img[src*="consultantes-inward-travail-ordinateur-equipe"]{object-position:35% 45%}
+/* Visa famille: mostrar mas de la parte de arriba de la foto (la cabeza del padre). */
+.vl-split-ph img[src*="visa-famille-pere-et-enfant-plage"]{object-position:50% 12%}
