@@ -3563,3 +3563,14 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
 .vla-img[src*="consultantes-inward-travail-ordinateur-equipe"]{object-position:35% 45%}
 /* Visa famille: mostrar mas de la parte de arriba de la foto (la cabeza del padre). */
 .vl-split-ph img[src*="visa-famille-pere-et-enfant-plage"]{object-position:50% 12%}
+
+/* Boton y modal del video (qui-sommes-nous) */
+.qsn-video-btn{margin-top:1.4rem;gap:.55rem}
+.qsn-video-btn svg{flex:none}
+.vid-modal{padding:0;border:0;background:transparent;width:min(960px,calc(100vw - 32px));max-width:none;overflow:visible}
+.vid-modal::backdrop{background:rgba(16,16,16,.78)}
+.vid-frame{position:relative;aspect-ratio:16/9;background:#101010;border-radius:14px;overflow:hidden}
+.vid-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vid-close{position:absolute;top:-46px;right:0;width:38px;height:38px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.5);background:transparent;color:#fff;font-size:1.6rem;line-height:1;cursor:pointer}
+.vid-close:hover,.vid-close:focus-visible{background:#fff;color:#101010}

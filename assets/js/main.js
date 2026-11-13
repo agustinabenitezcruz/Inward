@@ -1258,4 +1258,25 @@
     }
   })();
 
+  /* Video en modal: [data-video] abre el <dialog> indicado en aria-controls */
+  (function () {
+    document.querySelectorAll('[data-video]').forEach(function (btn) {
+      var dlg = document.getElementById(btn.getAttribute('aria-controls'));
+      if (!dlg || typeof dlg.showModal !== 'function') return;
+      var box = dlg.querySelector('.vid-frame');
+      btn.addEventListener('click', function () {
+        var f = document.createElement('iframe');
+        f.src = 'https://www.youtube-nocookie.com/embed/' + btn.getAttribute('data-video') + '?autoplay=1&rel=0';
+        f.title = dlg.getAttribute('aria-label') || '';
+        f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+        f.allowFullscreen = true;
+        box.appendChild(f);
+        dlg.showModal();
+      });
+      dlg.querySelector('.vid-close').addEventListener('click', function () { dlg.close(); });
+      dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+      dlg.addEventListener('close', function () { box.innerHTML = ''; btn.focus(); });
+    });
+  })();
+
 })();
