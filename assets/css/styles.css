@@ -3557,3 +3557,4 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
 .tinted .vl-type{background:var(--panel)}
 /* Foto de la consultora con el cliente: la laptop al centro del recorte. */
 .b2c-media img[data-key="consult"]{object-position:70% 34%}
+.b2c-media img[data-key="team"]{object-position:28% 40%}
