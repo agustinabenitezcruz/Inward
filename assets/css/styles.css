@@ -1515,7 +1515,11 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
 /* El reveal va atado al scroll donde el navegador lo soporta: el elemento
    avanza con la rueda en vez de aparecer de golpe al cruzar un umbral. Eso es
    lo que hace que el scroll se sienta continuo y no por escalones.
-   El IntersectionObserver queda de reserva para los navegadores sin soporte. */
+   El IntersectionObserver queda de reserva para los navegadores sin soporte.
+   Nov 2026: en laptop el contenido tardaba demasiado en terminar de aparecer
+   (pedido de la clienta). Todos los animation-range 'cover' se acortaron:
+   arrancan al 60 % del valor anterior y duran el 55 %. Los porcentajes que
+   citan los comentarios de abajo son los de antes. */
 /* La transicion del reveal de reserva se declara SOLO en los elementos que el
    JavaScript marca con data-hidden. Estaba en .rv a secas y, dentro del
    @supports, se anulaba con transition:none — que no anula solo el reveal:
@@ -1533,7 +1537,7 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
          que mide el elemento, o sea nada, y la animacion terminaba antes de
          que estuviera bien a la vista. 'cover' mide el paso completo por la
          ventana, asi que el gesto se ve mientras el elemento sube. */
-      animation-range:cover 4% cover 20%;
+      animation-range:cover 2.4% cover 11.2%;
     }
     .rv[data-hidden="true"]{opacity:1;transform:none}
   }
@@ -1568,25 +1572,25 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
        el CTA de la seccion ya asomo por abajo. En ese instante la tuiles estan
        al 18,4 % de su propio paso por la ventana (medido a 1920x1080, que es
        el alto que da el techo mas bajo): 18 % es el tope del conjunto. */
-    .b2b-list{animation-name:calmIn;animation-range:cover 0% cover 10%}
+    .b2b-list{animation-name:calmIn;animation-range:cover 0% cover 5.5%}
     .b2b-row{animation:settleIn linear both;animation-timeline:view()}
-    .b2b-row:nth-child(1){animation-range:cover 0% cover 11%}
-    .b2b-row:nth-child(2){animation-range:cover 0% cover 13%}
-    .b2b-row:nth-child(3){animation-range:cover 0% cover 15%}
-    .b2b-row:nth-child(4){animation-range:cover 0% cover 16.5%}
-    .b2b-row:nth-child(5){animation-range:cover 0% cover 18%}
+    .b2b-row:nth-child(1){animation-range:cover 0% cover 6.1%}
+    .b2b-row:nth-child(2){animation-range:cover 0% cover 7.2%}
+    .b2b-row:nth-child(3){animation-range:cover 0% cover 8.2%}
+    .b2b-row:nth-child(4){animation-range:cover 0% cover 9.1%}
+    .b2b-row:nth-child(5){animation-range:cover 0% cover 9.9%}
 
     /* --- Clients : on fait l'appel ---
        Siete marcas heterogeneas moviendose a la vez es ruido. Solo aparecen. */
     .clients .logos{animation:none}
     .clients .logos li{animation:fadeIn linear both;animation-timeline:view()}
-    .clients .logos li:nth-child(1){animation-range:cover 6% cover 16%}
-    .clients .logos li:nth-child(2){animation-range:cover 9% cover 19%}
-    .clients .logos li:nth-child(3){animation-range:cover 12% cover 22%}
-    .clients .logos li:nth-child(4){animation-range:cover 15% cover 25%}
-    .clients .logos li:nth-child(5){animation-range:cover 18% cover 28%}
-    .clients .logos li:nth-child(6){animation-range:cover 21% cover 31%}
-    .clients .logos li:nth-child(7){animation-range:cover 24% cover 34%}
+    .clients .logos li:nth-child(1){animation-range:cover 3.6% cover 9.1%}
+    .clients .logos li:nth-child(2){animation-range:cover 5.4% cover 10.9%}
+    .clients .logos li:nth-child(3){animation-range:cover 7.2% cover 12.7%}
+    .clients .logos li:nth-child(4){animation-range:cover 9% cover 14.5%}
+    .clients .logos li:nth-child(5){animation-range:cover 10.8% cover 16.3%}
+    .clients .logos li:nth-child(6){animation-range:cover 12.6% cover 18.1%}
+    .clients .logos li:nth-child(7){animation-range:cover 14.4% cover 19.9%}
 
     /* --- B2C : el panel se arma fila por fila ---
        Ya no son renglones sueltos sobre el fondo sino un panel, asi que el
@@ -1594,15 +1598,15 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
        las filas se encienden en orden. El trazado de filetes de antes ya no
        tiene sentido —los filetes ahora son bordes internos del panel— y
        ademas pisaba el ::before del acento. */
-    #particuliers .rows{animation-name:calmIn;animation-range:cover 0% cover 14%}
+    #particuliers .rows{animation-name:calmIn;animation-range:cover 0% cover 7.7%}
     #particuliers .row-btn{animation:fadeIn linear both;animation-timeline:view()}
-    #particuliers .row:nth-of-type(1) .row-btn{animation-range:cover 0% cover 26%}
-    #particuliers .row:nth-of-type(2) .row-btn{animation-range:cover 0% cover 22%}
-    #particuliers .row:nth-of-type(3) .row-btn{animation-range:cover 0% cover 18%}
-    #particuliers .row:nth-of-type(4) .row-btn{animation-range:cover 0% cover 14%}
-    #particuliers .row:nth-of-type(5) .row-btn{animation-range:cover 0% cover 9%}
-    #particuliers .row:nth-of-type(6) .row-btn{animation-range:cover 0% cover 4.5%}
-    #particuliers .b2c-media{animation-name:wipeInRight;animation-range:cover 4% cover 22%}
+    #particuliers .row:nth-of-type(1) .row-btn{animation-range:cover 0% cover 14.3%}
+    #particuliers .row:nth-of-type(2) .row-btn{animation-range:cover 0% cover 12.1%}
+    #particuliers .row:nth-of-type(3) .row-btn{animation-range:cover 0% cover 9.9%}
+    #particuliers .row:nth-of-type(4) .row-btn{animation-range:cover 0% cover 7.7%}
+    #particuliers .row:nth-of-type(5) .row-btn{animation-range:cover 0% cover 5%}
+    #particuliers .row:nth-of-type(6) .row-btn{animation-range:cover 0% cover 2.5%}
+    #particuliers .b2c-media{animation-name:wipeInRight;animation-range:cover 2.4% cover 12.3%}
 
     /* --- A propos : rien ne bouge, tout apparait ---
        Sin foto a sangre, la seccion es una lista numerada: un fundido simple
@@ -1612,9 +1616,9 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
     /* --- Ressources : la cascade ---
        Cada tarjeta viene de mas lejos que la anterior y todas terminan a la
        vez: llegan en abanico y se emparejan. */
-    .res .art:nth-child(1){animation-name:cascade1;animation-range:cover 5% cover 21%}
-    .res .art:nth-child(2){animation-name:cascade2;animation-range:cover 5% cover 24%}
-    .res .art:nth-child(3){animation-name:cascade3;animation-range:cover 5% cover 27%}
+    .res .art:nth-child(1){animation-name:cascade1;animation-range:cover 3% cover 11.8%}
+    .res .art:nth-child(2){animation-name:cascade2;animation-range:cover 3% cover 13.5%}
+    .res .art:nth-child(3){animation-name:cascade3;animation-range:cover 3% cover 15.1%}
 
     /* --- F&Q : el panel se arma fila por fila ---
        Ya no son seis cajas sueltas, asi que no pueden entrar cada una por un
@@ -1624,19 +1628,19 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
        Los topes siguen la misma cuenta de siempre: en el instante en que el
        CTA asoma por abajo la ultima fila esta al 8,6 % de su paso por la
        ventana, asi que nada sigue animandose cuando el boton ya se ve. */
-    .faq .qas{animation-name:calmIn;animation-range:cover 0% cover 12%}
+    .faq .qas{animation-name:calmIn;animation-range:cover 0% cover 6.6%}
     .faq .qa summary{animation:fadeIn linear both;animation-timeline:view()}
-    .faq .qa:nth-child(1) summary{animation-range:cover 0% cover 11%}
-    .faq .qa:nth-child(2) summary{animation-range:cover 0% cover 10.4%}
-    .faq .qa:nth-child(3) summary{animation-range:cover 0% cover 9.8%}
-    .faq .qa:nth-child(4) summary{animation-range:cover 0% cover 9.2%}
-    .faq .qa:nth-child(5) summary{animation-range:cover 0% cover 8.6%}
-    .faq .qa:nth-child(6) summary{animation-range:cover 0% cover 8%}
+    .faq .qa:nth-child(1) summary{animation-range:cover 0% cover 6.1%}
+    .faq .qa:nth-child(2) summary{animation-range:cover 0% cover 5.7%}
+    .faq .qa:nth-child(3) summary{animation-range:cover 0% cover 5.4%}
+    .faq .qa:nth-child(4) summary{animation-range:cover 0% cover 5.1%}
+    .faq .qa:nth-child(5) summary{animation-range:cover 0% cover 4.7%}
+    .faq .qa:nth-child(6) summary{animation-range:cover 0% cover 4.4%}
 
     /* --- Contact : un seul bloc ---
        Un formulario que aparece campo por campo se siente inestable. Entra
        entero, despacio, y con el recorrido mas largo de la pagina. */
-    #contact .rv,#contact form{animation-name:calmIn;animation-range:cover 2% cover 22%}
+    #contact .rv,#contact form{animation-name:calmIn;animation-range:cover 1.2% cover 12.2%}
   }
 }
 /* Cada gesto se apoya en una propiedad distinta: escala, opacidad, eje
@@ -1823,7 +1827,7 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
    puede seguir moviendose cuando el CTA de la seccion ya esta a la vista. */
 @supports (animation-timeline:view()){
   @media (prefers-reduced-motion:no-preference){
-    .lp-split-media{animation-name:wipeInRight;animation-range:cover 4% cover 22%}
+    .lp-split-media{animation-name:wipeInRight;animation-range:cover 2.4% cover 12.3%}
     
     /* Los CTA de esta seccion viven dentro de cada ficha, asi que el limite no
        es un boton sino la lista entera a la vista: en ese instante la ficha 1
@@ -2030,7 +2034,7 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
 
 @supports (animation-timeline:view()){
   @media (prefers-reduced-motion:no-preference){
-    .ways{animation-name:calmIn;animation-range:cover 0% cover 14%}
+    .ways{animation-name:calmIn;animation-range:cover 0% cover 7.7%}
   }
 }
 
@@ -2264,14 +2268,14 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
 @supports (animation-timeline:view()){
   @media (prefers-reduced-motion:no-preference){
     /* El tope lo marca la fila de CTA: nada se mueve cuando ya esta a la vista. */
-    .vt-grid{animation-name:calmIn;animation-range:cover 0% cover 10%}
+    .vt-grid{animation-name:calmIn;animation-range:cover 0% cover 5.5%}
     .vt{animation:settleIn linear both;animation-timeline:view()}
-    .vt:nth-child(1){animation-range:cover 0% cover 10%}
-    .vt:nth-child(2){animation-range:cover 0% cover 12%}
-    .vt:nth-child(3){animation-range:cover 0% cover 14%}
-    .vt:nth-child(4){animation-range:cover 0% cover 16%}
-    .vt:nth-child(5){animation-range:cover 0% cover 18%}
-    .va-grid{animation-name:calmIn;animation-range:cover 0% cover 12%}
+    .vt:nth-child(1){animation-range:cover 0% cover 5.5%}
+    .vt:nth-child(2){animation-range:cover 0% cover 6.6%}
+    .vt:nth-child(3){animation-range:cover 0% cover 7.7%}
+    .vt:nth-child(4){animation-range:cover 0% cover 8.8%}
+    .vt:nth-child(5){animation-range:cover 0% cover 9.9%}
+    .va-grid{animation-name:calmIn;animation-range:cover 0% cover 6.6%}
   }
 }
 
@@ -2307,7 +2311,7 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
    bloque y no cada logo por su cuenta. */
 @supports (animation-timeline:view()){
   @media (prefers-reduced-motion:no-preference){
-    .logos-grid{animation-name:calmIn;animation-range:cover 0% cover 12%}
+    .logos-grid{animation-name:calmIn;animation-range:cover 0% cover 6.6%}
     .logos-grid li{animation:none}
   }
 }
@@ -2502,7 +2506,7 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
 
 @supports (animation-timeline:view()){
   @media (prefers-reduced-motion:no-preference){
-    .hacc{animation-name:calmIn;animation-range:cover 0% cover 12%}
+    .hacc{animation-name:calmIn;animation-range:cover 0% cover 6.6%}
   }
 }
 
@@ -3130,8 +3134,11 @@ form .btn[disabled]{opacity:.6;pointer-events:none}
    del boton: la clienta lo veia apretado. Valores fijos (no vh) para que no
    cambie el ritmo segun el alto del telefono ni con la barra del navegador. */
 @media (max-width:760px){
-  :root{--sec-y:5.25rem;--head-gap:2rem}
-  .ways-act,.agl-act,.faq-act,.b2c-cta,.about-act{margin-top:1.9rem!important}
+  :root{--sec-y:6.25rem;--head-gap:2.25rem}
+  .ways-act,.agl-act,.faq-act,.b2c-cta,.about-act{margin-top:2.1rem!important}
+  /* Filas del panel de Particuliers: 9px arriba y abajo era lo mas apretado
+     de la pagina en celular. */
+  #particuliers .row-btn{padding-block:.95rem}
 }
 /* Particuliers achica su encabezado para que en escritorio la foto y la
    lista entren juntas. En una sola columna eso no aplica: vuelve al mismo
