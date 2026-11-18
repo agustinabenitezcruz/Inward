@@ -1,0 +1,67 @@
+# VELOCIDAD DE CARGA (O2Switch: Apache / LiteSpeed)
+# Sin este archivo el servidor manda todo sin comprimir y sin cache: cada
+# visita y cada pagina vuelve a bajar los 200 kB de CSS, el JS, las fotos y
+# los logos. Aca van solo compresion y cache; no hay reglas de reescritura ni
+# redirecciones, asi que no cambia ninguna URL (SEO intacto).
+# tools/dist.py lo copia a dist/ y va en la raiz del sitio publicado.
+
+# ---- Compresion ----
+# Texto comprimido: el CSS pasa de ~200 kB a ~35 kB, el HTML de ~65 kB a ~12 kB.
+# LiteSpeed ademas sirve brotli por su cuenta cuando el navegador lo acepta.
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml
+  AddOutputFilterByType DEFLATE application/javascript text/javascript application/json
+  AddOutputFilterByType DEFLATE application/xml application/rss+xml application/manifest+json
+  AddOutputFilterByType DEFLATE image/svg+xml image/x-icon font/ttf font/otf
+</IfModule>
+
+# ---- Tipos que algunos servidores no conocen ----
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType video/webm .webm
+  AddType font/woff2 .woff2
+  AddType application/manifest+json .webmanifest
+</IfModule>
+
+# ---- Cache del navegador ----
+# styles.css y main.js llevan ?v=<hash> (tools/stamp.py): cuando cambian,
+# cambia la URL, asi que se pueden guardar un anio sin riesgo.
+# Fotos, video, logos y fuentes: un mes. El HTML siempre se revalida, para
+# que los cambios de textos y de SEO se vean en el acto.
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 week"
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType application/json "access plus 0 seconds"
+  ExpiresByType application/xml "access plus 1 hour"
+  ExpiresByType text/xml "access plus 1 hour"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType image/x-icon "access plus 1 month"
+  ExpiresByType video/mp4 "access plus 1 month"
+  ExpiresByType video/webm "access plus 1 month"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/manifest+json "access plus 1 week"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(css|js|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(webp|jpe?g|png|svg|ico|mp4|webm)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+  <FilesMatch "\.html?$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+  # Que los proxies no mezclen la version comprimida con la que no lo esta.
+  Header append Vary Accept-Encoding
+</IfModule>
+
+# ETag por inodo varia entre nodos del hosting; con Last-Modified alcanza.
+FileETag MTime Size

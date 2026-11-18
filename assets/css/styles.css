@@ -3125,12 +3125,18 @@ form .btn[disabled]{opacity:.6;pointer-events:none}
 .vt-grid.vt-flow,.vph-grid.vph-9{justify-content:center}
 .vt-flow .vt,.vph-9 .art{flex-grow:0!important}
 
-/* Menos aire en celular entre secciones, entre la caja y su boton, y en los
-   encabezados. */
+/* Aire en celular entre secciones, entre la caja y su boton, y en los
+   encabezados. Antes iba 64px por lado, 22px titular->contenido y 18px antes
+   del boton: la clienta lo veia apretado. Valores fijos (no vh) para que no
+   cambie el ritmo segun el alto del telefono ni con la barra del navegador. */
 @media (max-width:760px){
-  :root{--sec-y:clamp(3rem,8vh,4rem);--head-gap:1.4rem}
-  .ways-act,.agl-act,.faq-act,.b2c-cta,.about-act{margin-top:1.1rem!important}
+  :root{--sec-y:5.25rem;--head-gap:2rem}
+  .ways-act,.agl-act,.faq-act,.b2c-cta,.about-act{margin-top:1.9rem!important}
 }
+/* Particuliers achica su encabezado para que en escritorio la foto y la
+   lista entren juntas. En una sola columna eso no aplica: vuelve al mismo
+   espacio titular->contenido que el resto de las secciones. */
+@media (max-width:900px){#particuliers .sec-head{margin-bottom:var(--head-gap)}}
 @media (max-width:400px){.stp .btn{font-size:.86rem;padding-inline:1.1em}}
 /* Mismo alto para todas las tarjetas de visas, aunque un nombre ocupe mas
    lineas: el contenido se centra en la tarjeta. */
@@ -3574,3 +3580,10 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
 .vid-close{position:absolute;top:-46px;right:0;width:38px;height:38px;border-radius:50%;
   border:1px solid rgba(255,255,255,.5);background:transparent;color:#fff;font-size:1.6rem;line-height:1;cursor:pointer}
 .vid-close:hover,.vid-close:focus-visible{background:#fff;color:#101010}
+
+/* Aire en celular: mismo espacio titular->contenido en los encabezados que
+   traian su propio valor (Agilite en Entreprises y la intro de cada pagina
+   de visa). Va al final para ganarle a esas reglas. */
+@media (max-width:760px){
+  .agl-head,.vl-split-txt .sec-head,.vl-adv-head .sec-head{margin-bottom:var(--head-gap)}
+}
