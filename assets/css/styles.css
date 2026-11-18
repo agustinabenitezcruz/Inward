@@ -3595,12 +3595,13 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
   .agl-head,.vl-split-txt .sec-head,.vl-adv-head .sec-head{margin-bottom:var(--head-gap)}
 }
 
-/* ---------- Aire interno en celular (pedido de la clienta, nov 2026) ----------
+/* ---------- Aire interno en celular y tablet (pedido de la clienta, nov 2026) ----------
    Entre secciones ya estaba bien; lo que se sentia aplastado era el
    contenido de cada seccion. Solo espaciados verticales: tipografia, colores
    y layout no cambian. Mismo criterio en todos lados: lo que estaba entre
-   4 y 10px pasa a 7-16px, rellenos de tarjetas y filas suben ~30 %. */
-@media (max-width:760px){
+   4 y 10px pasa a 7-16px, rellenos de tarjetas y filas suben ~30 %.
+   Vale hasta 1080px (tablet vertical y horizontal); en escritorio no cambia. */
+@media (max-width:1080px){
   :root{--lead-gap:1.45rem}
   /* Resultados y avis */
   .kpis{margin-bottom:3rem}
@@ -3627,11 +3628,14 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
   #contact form .two{row-gap:1rem}
   .fld,#contact form .fld{row-gap:.45rem}
   /* Paginas interiores: pestanias y acordeones */
-  .stabs .stabs-panes{row-gap:.75rem}
-  .stabs.is-js .stp{padding-top:1.15rem;padding-bottom:1.15rem}
   .ways[data-on] .mode-list,.mode-list{row-gap:.9rem}
   .mode-it > summary,.ways[data-on] .mode-it > summary{padding-top:1.2rem;padding-bottom:1.2rem}
   .vla-list{row-gap:.6rem}
   .vla-tab{padding-top:1.05rem;padding-bottom:1.05rem}
   .vl-steps li{padding-top:1.05rem;padding-bottom:1.05rem}
+}
+/* Servicios de Entreprises: las tarjetas apiladas existen solo hasta 860px. */
+@media (max-width:860px){
+  .stabs .stabs-panes{row-gap:.75rem}
+  .stabs.is-js .stp{padding-top:1.15rem;padding-bottom:1.15rem}
 }
