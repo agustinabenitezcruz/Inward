@@ -3594,3 +3594,44 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
 @media (max-width:760px){
   .agl-head,.vl-split-txt .sec-head,.vl-adv-head .sec-head{margin-bottom:var(--head-gap)}
 }
+
+/* ---------- Aire interno en celular (pedido de la clienta, nov 2026) ----------
+   Entre secciones ya estaba bien; lo que se sentia aplastado era el
+   contenido de cada seccion. Solo espaciados verticales: tipografia, colores
+   y layout no cambian. Mismo criterio en todos lados: lo que estaba entre
+   4 y 10px pasa a 7-16px, rellenos de tarjetas y filas suben ~30 %. */
+@media (max-width:760px){
+  :root{--lead-gap:1.45rem}
+  /* Resultados y avis */
+  .kpis{margin-bottom:3rem}
+  .avis-score{row-gap:.8rem}
+  /* Entreprises: lista de servicios */
+  .b2b-row > a{padding-top:1.35rem;padding-bottom:1.4rem;row-gap:.5rem}
+  /* Particuliers: panel de filas */
+  #particuliers .row-body p{padding-bottom:.6rem}
+  #particuliers .row-more{margin-top:.35rem;margin-bottom:1.1rem}
+  /* Nosotras: panel de compromisos */
+  .eng-panes{padding-top:1.9rem;padding-bottom:2rem}
+  /* Recursos: tarjetas del blog */
+  .arts{gap:1.25rem}
+  .art-b{padding-top:1.6rem;padding-bottom:1.75rem;row-gap:.7rem}
+  /* F&Q */
+  .qa summary{padding-top:1.1rem;padding-bottom:1.1rem}
+  .qa-a{padding-bottom:1.4rem}
+  .qa-a p + p,.qa-a p + ul,.qa-a ul + p{margin-top:.9rem}
+  .qa-l{gap:.7rem}
+  /* Contacto */
+  .ct-grid{row-gap:2.75rem}
+  .ct-grid ul{margin-top:2rem}
+  #contact form{padding-top:1.4rem;padding-bottom:1.5rem;row-gap:1rem}
+  #contact form .two{row-gap:1rem}
+  .fld,#contact form .fld{row-gap:.45rem}
+  /* Paginas interiores: pestanias y acordeones */
+  .stabs .stabs-panes{row-gap:.75rem}
+  .stabs.is-js .stp{padding-top:1.15rem;padding-bottom:1.15rem}
+  .ways[data-on] .mode-list,.mode-list{row-gap:.9rem}
+  .mode-it > summary,.ways[data-on] .mode-it > summary{padding-top:1.2rem;padding-bottom:1.2rem}
+  .vla-list{row-gap:.6rem}
+  .vla-tab{padding-top:1.05rem;padding-bottom:1.05rem}
+  .vl-steps li{padding-top:1.05rem;padding-bottom:1.05rem}
+}
