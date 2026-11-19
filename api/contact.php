@@ -66,8 +66,10 @@ $dem     = champ($in, 'dem', 120);
 $canal   = champ($in, 'canal', 120);
 $msg     = champ($in, 'msg', 4000);
 $page    = champ($in, 'page', 200);
+$rgpd    = !empty($in['rgpd']);
+$news    = !empty($in['news']);
 
-if ($nom === '' || !filter_var($mail, FILTER_VALIDATE_EMAIL)) {
+if ($nom === '' || !filter_var($mail, FILTER_VALIDATE_EMAIL) || !$rgpd) {
     fin(422, ['ok' => false, 'error' => 'champs']);
 }
 /* Pas de retour à la ligne dans ce qui va dans les en-têtes. */
@@ -82,6 +84,8 @@ $corps = "Nouvelle demande reçue depuis le site INWARD.\n\n"
     . "Démarche : $dem\n"
     . "Comment nous avez-vous connus ? $canal\n\n"
     . "Situation :\n$msg\n\n"
+    . "Consentement au traitement des données : oui\n"
+    . "Newsletter : " . ($news ? 'oui' : 'non') . "\n"
     . "Page : $page\n"
     . "Date : " . date('d/m/Y H:i') . "\n";
 

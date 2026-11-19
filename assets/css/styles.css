@@ -3690,3 +3690,9 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
    subir 6px en hover (y su sombra). Aire arriba y abajo, compensado con
    margen negativo para que la franja no cambie de lugar. */
 .avis-rail{padding-top:12px;margin-top:-12px;padding-bottom:1.6rem;margin-bottom:-1.1rem}
+
+/* Formulario: casillas de consentimiento RGPD y newsletter */
+.ck{display:grid;grid-template-columns:18px 1fr;column-gap:.65rem;align-items:start;
+  font-size:.8rem;line-height:1.5;color:var(--text-2);cursor:pointer}
+.ck input{width:18px;height:18px;margin:.1rem 0 0;accent-color:var(--accent);cursor:pointer}
+.ck input.is-bad{outline:2px solid #b3261e;outline-offset:1px;border-radius:3px}

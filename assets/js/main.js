@@ -828,12 +828,12 @@
       if (err) first = mail;
 
       form.querySelectorAll("[required]").forEach(function (f) {
-        if (f.disabled || f.value.trim()) return;
+        if (f.disabled || (f.type === "checkbox" ? f.checked : f.value.trim())) return;
         f.classList.add("is-bad");
         if (!first) first = f;
       });
       form.querySelectorAll("[required]").forEach(function (f) {
-        f.addEventListener("input", function () { f.classList.remove("is-bad"); }, { once: true });
+        f.addEventListener(f.type === "checkbox" ? "change" : "input", function () { f.classList.remove("is-bad"); }, { once: true });
       });
 
       e.preventDefault();
@@ -858,6 +858,7 @@
       var datos = {
         nom: val("nom"), mail: val("mail"), societe: val("societe"),
         dem: val("dem"), canal: val("canal"), msg: val("msg"),
+        rgpd: !!(form.querySelector("#rgpd") || {}).checked, news: !!(form.querySelector("#news") || {}).checked,
         profil: form.dataset.profil, site: (form.querySelector("#site") || {}).value || "",
         t: Date.now() - abierto, page: location.pathname
       };
