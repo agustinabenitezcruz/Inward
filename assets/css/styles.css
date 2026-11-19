@@ -3639,3 +3639,7 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
   .stabs .stabs-panes{row-gap:.75rem}
   .stabs.is-js .stp{padding-top:1.15rem;padding-bottom:1.15rem}
 }
+
+/* Mas aire entre los resultados (kpis) y los avis (pedido de la clienta) */
+.kpis{margin-bottom:clamp(3.6rem,7vw,5.6rem)}
+@media (max-width:1080px){ .kpis{margin-bottom:4.2rem} }
