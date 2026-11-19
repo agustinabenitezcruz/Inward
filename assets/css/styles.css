@@ -3646,3 +3646,8 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
 
 /* Referencias: mas aire entre el titulo y los logos (pedido de la clienta) */
 .clients-ref .sec-head{margin-bottom:clamp(2.6rem,5vw,4rem)}
+
+/* Tablet y celular: menos aire entre secciones (pedido de la clienta).
+   Antes: tablet ~120px por lado (12vh) y celular 100px. Ahora 80 y 68px. */
+@media (max-width:1080px){ :root{--sec-y:5rem} }
+@media (max-width:760px){ :root{--sec-y:4.25rem} }
