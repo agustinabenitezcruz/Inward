@@ -3681,3 +3681,7 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
   .qsn-n,.qsn-r{grid-row:auto}
   .qsn-p > .qsn-b{grid-row:auto;margin-top:.5rem}
 }
+
+/* Qui sommes-nous: video integrado debajo de la historia */
+.qsn-video{margin-top:clamp(2.4rem,5vw,4rem)}
+.qsn-video .vid-frame{border-radius:var(--r);max-width:960px;margin-inline:auto}
