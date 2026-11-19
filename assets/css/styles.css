@@ -3642,7 +3642,8 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
 
 /* Mas aire entre los resultados (kpis) y los avis (pedido de la clienta) */
 .kpis{margin-bottom:clamp(3.6rem,7vw,5.6rem)}
-@media (max-width:1080px){ .kpis{margin-bottom:4.2rem} }
+@media (max-width:1080px){ .kpis{margin-bottom:2.6rem} }
+@media (max-width:760px){ .kpis{margin-bottom:2.2rem} }
 
 /* Referencias: mas aire entre el titulo y los logos (pedido de la clienta) */
 .clients-ref .sec-head{margin-bottom:clamp(2.6rem,5vw,4rem)}
