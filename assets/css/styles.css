@@ -2605,26 +2605,50 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
 .cats a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 /* Pastilla activa: "Tous" por defecto, o la de la categoria elegida. */
 .cats a[href="#articles"],
-body:has(#cat-guides:target) .cats a[href="#cat-guides"],
-body:has(#cat-delais:target) .cats a[href="#cat-delais"],
-body:has(#cat-actualite:target) .cats a[href="#cat-actualite"]{
+body:has(#cat-etude-de-cas:target) .cats a[href="#cat-etude-de-cas"],
+body:has(#cat-professionnel:target) .cats a[href="#cat-professionnel"],
+body:has(#cat-famille:target) .cats a[href="#cat-famille"],
+body:has(#cat-independant:target) .cats a[href="#cat-independant"],
+body:has(#cat-etudiant:target) .cats a[href="#cat-etudiant"],
+body:has(#cat-renouvellement:target) .cats a[href="#cat-renouvellement"],
+body:has(#cat-changement-de-statut:target) .cats a[href="#cat-changement-de-statut"],
+body:has(#cat-long-sejour:target) .cats a[href="#cat-long-sejour"],
+body:has(#cat-court-sejour:target) .cats a[href="#cat-court-sejour"]{
   background:var(--fill);border-color:var(--fill);color:var(--fill-ink)}
 body:has(.cat-t:target) .cats a[href="#articles"]{background:none;border-color:var(--line-strong);color:var(--text)}
 .cats a[href="#articles"] .cats-n,
-body:has(#cat-guides:target) .cats a[href="#cat-guides"] .cats-n,
-body:has(#cat-delais:target) .cats a[href="#cat-delais"] .cats-n,
-body:has(#cat-actualite:target) .cats a[href="#cat-actualite"] .cats-n{background:var(--tint-1);color:var(--tint-ink)}
+body:has(#cat-etude-de-cas:target) .cats a[href="#cat-etude-de-cas"] .cats-n,
+body:has(#cat-professionnel:target) .cats a[href="#cat-professionnel"] .cats-n,
+body:has(#cat-famille:target) .cats a[href="#cat-famille"] .cats-n,
+body:has(#cat-independant:target) .cats a[href="#cat-independant"] .cats-n,
+body:has(#cat-etudiant:target) .cats a[href="#cat-etudiant"] .cats-n,
+body:has(#cat-renouvellement:target) .cats a[href="#cat-renouvellement"] .cats-n,
+body:has(#cat-changement-de-statut:target) .cats a[href="#cat-changement-de-statut"] .cats-n,
+body:has(#cat-long-sejour:target) .cats a[href="#cat-long-sejour"] .cats-n,
+body:has(#cat-court-sejour:target) .cats a[href="#cat-court-sejour"] .cats-n{background:var(--tint-1);color:var(--tint-ink)}
 body:has(.cat-t:target) .cats a[href="#articles"] .cats-n{background:var(--surface);color:var(--text-2)}
 /* El ancla no ocupa lugar; el salto deja la fila de categorias a la vista. */
-.cat-t{display:block;height:0;scroll-margin-top:calc(var(--hdr-h,72px) + 7rem)}
-/* Filtro */
-#cat-guides:target ~ .arts .art:not([data-cat~="guides"]),
-#cat-delais:target ~ .arts .art:not([data-cat~="delais"]),
-#cat-actualite:target ~ .arts .art:not([data-cat~="actualite"]){display:none}
+.cat-t{display:block;height:0;scroll-margin-top:calc(var(--hdr-h,72px) + 11rem)}
+/* Filtro (categorias definidas por la clienta) */
+#cat-etude-de-cas:target ~ .arts .art:not([data-cat~="etude-de-cas"]),
+#cat-professionnel:target ~ .arts .art:not([data-cat~="professionnel"]),
+#cat-famille:target ~ .arts .art:not([data-cat~="famille"]),
+#cat-independant:target ~ .arts .art:not([data-cat~="independant"]),
+#cat-etudiant:target ~ .arts .art:not([data-cat~="etudiant"]),
+#cat-renouvellement:target ~ .arts .art:not([data-cat~="renouvellement"]),
+#cat-changement-de-statut:target ~ .arts .art:not([data-cat~="changement-de-statut"]),
+#cat-long-sejour:target ~ .arts .art:not([data-cat~="long-sejour"]),
+#cat-court-sejour:target ~ .arts .art:not([data-cat~="court-sejour"]){display:none}
 .cats-empty{display:none;grid-column:1/-1;color:var(--text-2);padding:1.4rem 0}
-#cat-actualite:target ~ .arts:not(:has(.art[data-cat~="actualite"])) .cats-empty,
-#cat-guides:target ~ .arts:not(:has(.art[data-cat~="guides"])) .cats-empty,
-#cat-delais:target ~ .arts:not(:has(.art[data-cat~="delais"])) .cats-empty{display:block}
+#cat-etude-de-cas:target ~ .arts:not(:has(.art[data-cat~="etude-de-cas"])) .cats-empty,
+#cat-professionnel:target ~ .arts:not(:has(.art[data-cat~="professionnel"])) .cats-empty,
+#cat-famille:target ~ .arts:not(:has(.art[data-cat~="famille"])) .cats-empty,
+#cat-independant:target ~ .arts:not(:has(.art[data-cat~="independant"])) .cats-empty,
+#cat-etudiant:target ~ .arts:not(:has(.art[data-cat~="etudiant"])) .cats-empty,
+#cat-renouvellement:target ~ .arts:not(:has(.art[data-cat~="renouvellement"])) .cats-empty,
+#cat-changement-de-statut:target ~ .arts:not(:has(.art[data-cat~="changement-de-statut"])) .cats-empty,
+#cat-long-sejour:target ~ .arts:not(:has(.art[data-cat~="long-sejour"])) .cats-empty,
+#cat-court-sejour:target ~ .arts:not(:has(.art[data-cat~="court-sejour"])) .cats-empty{display:block}
 
 /* ---------- Qui sommes-nous ---------- */
 .qsn-team{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(1.4rem,3.4vw,3rem)}
