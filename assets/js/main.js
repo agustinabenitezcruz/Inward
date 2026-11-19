@@ -10,23 +10,20 @@
           empty: "Merci d'indiquer une adresse email.", reviews: [" avis vérifié", " avis vérifiés"], of5: " sur 5",
           demo: "Aperçu : avis fictifs, pour visualiser la mise en page",
           doneH: "Merci, votre demande a bien été envoyée.",
-          doneP: "Dernière étape : choisissez le créneau qui vous convient pour échanger avec la personne qui suivra votre dossier.",
-          doneB: "Choisir un créneau",
-          fail: "L'envoi n'a pas abouti. Réessayez dans un instant, ou réservez directement votre créneau ", failL: "sur Calendly" },
+          doneP: "La personne qui suivra votre dossier vous recontactera très prochainement.",
+          fail: "L'envoi n'a pas abouti. Réessayez dans un instant ou écrivez-nous à " },
     en: { invalid: "Invalid email address.", pro: "Please use a business email address.",
           empty: "Please enter an email address.", reviews: [" verified review", " verified reviews"], of5: " out of 5",
           demo: "Preview: sample reviews, to show the layout",
           doneH: "Thank you, your request has been sent.",
-          doneP: "Last step: choose a time slot to talk with the person who will handle your case.",
-          doneB: "Choose a time slot",
-          fail: "Your message could not be sent. Please try again in a moment, or book your slot directly ", failL: "on Calendly" },
+          doneP: "The person who will handle your case will get back to you shortly.",
+          fail: "Your message could not be sent. Please try again in a moment or write to us at " },
     es: { invalid: "Dirección de email no válida.", pro: "Utilice una dirección de email profesional.",
           empty: "Indique una dirección de email.", reviews: [" opinión verificada", " opiniones verificadas"], of5: " de 5",
           demo: "Vista previa: opiniones de ejemplo, para ver el diseño",
           doneH: "Gracias, su solicitud fue enviada.",
-          doneP: "Último paso: elija el horario que le convenga para hablar con la persona que llevará su expediente.",
-          doneB: "Elegir un horario",
-          fail: "No se pudo enviar. Vuelva a intentarlo en un momento, o reserve directamente su horario ", failL: "en Calendly" }
+          doneP: "La persona que llevará su expediente se pondrá en contacto con usted muy pronto.",
+          fail: "No se pudo enviar. Vuelva a intentarlo en un momento o escríbanos a " }
   };
   var T = TXT[LANG] || TXT.fr;
 
@@ -844,24 +841,17 @@
       envia();
     });
 
-    /* Envio: api/contact.php manda la consulta por mail al equipo y despues
-       se ofrece el Calendly para reservar el turno, con nombre y mail ya
-       cargados. La ruta al endpoint sale de donde esta main.js, asi funciona
-       igual en la home, en las landings y en /en/ y /es/. */
-    var CALENDLY = "https://calendly.com/inwardimmigration/15min";
+    /* Envio: api/contact.php manda la consulta por mail al equipo. Sin
+       Calendly en el formulario (pedido de la clienta): la reserva de llamada
+       va aparte, como enlace debajo del mail en la columna de contacto. La
+       ruta al endpoint sale de donde esta main.js, asi funciona igual en la
+       home, en las landings y en /en/ y /es/. */
     var abierto = Date.now();
     var base = (document.querySelector('script[src*="assets/js/main.js"]') || {}).src || "";
     base = base.split("assets/js/main.js")[0];
     var msgBox = form.querySelector(".ct-msg");
     var boton = form.querySelector('button[type="submit"]');
     function val(id) { var el = form.querySelector("#" + id); return el && !el.disabled ? el.value.trim() : ""; }
-    function enlaceCalendly() {
-      var q = new URLSearchParams();
-      if (val("nom")) q.set("name", val("nom"));
-      if (val("mail")) q.set("email", val("mail"));
-      if (val("msg")) q.set("a1", val("msg"));
-      return CALENDLY + "?" + q.toString();
-    }
     function envia() {
       boton.disabled = true;
       msgBox.hidden = true;
@@ -878,18 +868,16 @@
         .then(function (r) { return r.json().catch(function () { return { ok: false }; }); })
         .then(function (d) {
           if (!d || !d.ok) throw new Error("envio");
-          var url = enlaceCalendly();
           form.innerHTML = '<div class="ct-done" role="status">'
             + '<h3>' + T.doneH + '</h3>'
             + '<p>' + T.doneP + '</p>'
-            + '<a class="btn btn-primary" target="_blank" rel="noopener" href="' + url.replace(/"/g, "&quot;") + '">' + T.doneB + ' <span class="arw">&rsaquo;</span></a>'
             + '</div>';
         })
         .catch(function () {
           boton.disabled = false;
           msgBox.hidden = false;
           msgBox.innerHTML = T.fail
-            + '<a href="' + enlaceCalendly().replace(/"/g, "&quot;") + '" target="_blank" rel="noopener">' + T.failL + '</a>.';
+            + '<a href="mailto:info@inwardpro.com">info@inwardpro.com</a>.';
         });
     }
 

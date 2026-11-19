@@ -3,8 +3,8 @@
  * Formulaire de contact d'INWARD.
  *
  * Reçoit la demande du formulaire (JSON), la vérifie et l'envoie par e-mail à
- * l'équipe. Le navigateur affiche ensuite le lien Calendly pour réserver le
- * créneau, avec le nom et l'e-mail déjà remplis.
+ * l'équipe. La réservation d'un appel (Calendly) est un lien séparé, dans la
+ * colonne de contact.
  *
  * Configuration dans api/config.php (non versionné) :
  *   contact_to   : adresse(s) qui reçoivent les demandes, séparées par des
@@ -83,8 +83,7 @@ $corps = "Nouvelle demande reçue depuis le site INWARD.\n\n"
     . "Comment nous avez-vous connus ? $canal\n\n"
     . "Situation :\n$msg\n\n"
     . "Page : $page\n"
-    . "Date : " . date('d/m/Y H:i') . "\n\n"
-    . "La personne va maintenant choisir un créneau sur Calendly.\n";
+    . "Date : " . date('d/m/Y H:i') . "\n";
 
 $entetes = [
     'MIME-Version: 1.0',
