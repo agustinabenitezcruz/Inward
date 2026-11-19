@@ -3649,8 +3649,8 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
 .clients-ref .sec-head{margin-bottom:clamp(2.6rem,5vw,4rem)}
 
 /* Tablet y celular: menos aire entre secciones (pedido de la clienta).
-   Antes: tablet ~120px por lado (12vh) y celular 100px. Ahora 80 y 52px. */
-@media (max-width:1080px){ :root{--sec-y:5rem} }
+   Antes: tablet ~120px por lado (12vh) y celular 100px. Ahora 64 y 52px. */
+@media (max-width:1080px){ :root{--sec-y:4rem} }
 @media (max-width:760px){ :root{--sec-y:3.25rem} }
 
 /* Tablet (601-860px): el blog de la home se ve como en laptop, con las tres
