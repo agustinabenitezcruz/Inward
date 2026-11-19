@@ -704,28 +704,22 @@
        cuan hondo esta la pagina y eso no se puede deducir de la URL sin saber
        cuales son carpetas de idioma y cuales de pagina. */
     var api = avis.getAttribute("data-api") || "api/avis.php";
-    /* Vista previa para la clienta: con ?avis=demo en la URL se pintan
-       opiniones de EJEMPLO, para ver como queda la franja antes de conectar
-       la cuenta de Google. Llevan un aviso visible ("Aperçu : avis fictifs")
-       y nunca aparecen sin el parametro: en el sitio publicado no hay forma de
-       que se muestren por accidente. */
+    /* Vista previa para la clienta: con ?avis=demo en la URL se pinta la
+       franja con contenido de RELLENO (lorem ipsum y cifras "X"), para ver el
+       espaciado antes de conectar la cuenta de Google. No hay nombres ni
+       opiniones inventadas que puedan pasar por reales, y nunca aparece sin
+       el parametro. */
     var demo = /(?:^|[?&])avis=demo(?:&|$)/.test(location.search.slice(1));
     var DEMO = {
-      rating: 4.9, count: 38, mapsUri: "https://www.google.com/maps?cid=1377371409426816352",
+      rating: "X,X", stars: 5, countText: "X", mapsUri: "https://www.google.com/maps?cid=1377371409426816352",
       reviews: [
-        { author: "Camila R.", when: "il y a 2 semaines", rating: 5, text: "Accompagnement impeccable pour mon visa Passeport Talent. Réponses rapides, dossier clair, aucune mauvaise surprise." },
-        { author: "Thomas L.", when: "il y a 1 mois", rating: 5, text: "Nous avons confié à INWARD l'arrivée de trois collaborateurs. Tout a été géré dans les délais, avec un vrai suivi." },
-        { author: "Lucía M.", when: "il y a 1 mois", rating: 5, text: "Équipe humaine et très professionnelle. Elles m'ont guidée pour le changement de statut sans que je stresse une seule fois." },
-        { author: "Ahmed B.", when: "il y a 2 mois", rating: 5, text: "Renouvellement de titre de séjour traité très vite. Je recommande pour leur réactivité." },
-        { author: "Sofia P.", when: "il y a 3 mois", rating: 4, text: "Très bon accompagnement pour l'installation de ma famille, de la CPAM jusqu'à l'école des enfants." }
+        { author: "Lorem I.", when: "Lorem ipsum", rating: 5, text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna." },
+        { author: "Dolor S.", when: "Lorem ipsum", rating: 5, text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo." },
+        { author: "Amet C.", when: "Lorem ipsum", rating: 5, text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, excepteur sint occaecat." },
+        { author: "Elit S.", when: "Lorem ipsum", rating: 5, text: "Sunt in culpa qui officia deserunt mollit anim id est laborum." },
+        { author: "Tempor I.", when: "Lorem ipsum", rating: 5, text: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores." }
       ]
     };
-    if (demo) {
-      var aviso = document.createElement("p");
-      aviso.className = "avis-demo";
-      aviso.textContent = T.demo;
-      avis.querySelector(".avis-in").insertAdjacentElement("beforebegin", aviso);
-    }
     (demo ? Promise.resolve(DEMO) : fetch(api, { headers: { Accept: "application/json" } })
       .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); }))
       .then(function (d) {
@@ -733,8 +727,10 @@
 
         var n = avis.querySelector('[data-avis="rating"]');
         if (d.rating != null) n.textContent = String(d.rating).replace(".", ",");
-        avis.querySelector('[data-avis="stars"]').innerHTML = stars(d.rating || 0);
-        if (d.count != null) {
+        avis.querySelector('[data-avis="stars"]').innerHTML = stars(d.stars || d.rating || 0);
+        if (d.countText) {
+          avis.querySelector('[data-avis="count"]').textContent = d.countText + T.reviews[1];
+        } else if (d.count != null) {
           avis.querySelector('[data-avis="count"]').textContent =
             d.count + T.reviews[d.count > 1 ? 1 : 0];
         }
