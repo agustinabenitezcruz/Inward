@@ -3685,3 +3685,8 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
 /* Qui sommes-nous: video integrado debajo de la historia */
 .qsn-video{margin-top:clamp(2.4rem,5vw,4rem)}
 .qsn-video .vid-frame{border-radius:var(--r);max-width:960px;margin-inline:auto}
+
+/* Avis: el carril tiene scroll horizontal y eso recortaba la tarjeta al
+   subir 6px en hover (y su sombra). Aire arriba y abajo, compensado con
+   margen negativo para que la franja no cambie de lugar. */
+.avis-rail{padding-top:12px;margin-top:-12px;padding-bottom:1.6rem;margin-bottom:-1.1rem}
