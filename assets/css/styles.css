@@ -3649,6 +3649,22 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
 .clients-ref .sec-head{margin-bottom:clamp(2.6rem,5vw,4rem)}
 
 /* Tablet y celular: menos aire entre secciones (pedido de la clienta).
-   Antes: tablet ~120px por lado (12vh) y celular 100px. Ahora 80 y 68px. */
+   Antes: tablet ~120px por lado (12vh) y celular 100px. Ahora 80 y 52px. */
 @media (max-width:1080px){ :root{--sec-y:5rem} }
-@media (max-width:760px){ :root{--sec-y:4.25rem} }
+@media (max-width:760px){ :root{--sec-y:3.25rem} }
+
+/* Tablet (601-860px): el blog de la home se ve como en laptop, con las tres
+   tarjetas en fila y "Tous les articles" arriba a la derecha (pedido de la
+   clienta). Tarjetas un poco mas altas que cuadradas para que entre el texto. */
+@media (min-width:601px) and (max-width:860px){
+  .arts{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+  .arts .art{aspect-ratio:3/4}
+  .arts .art-b{padding:1rem 1rem 1.1rem;gap:.45rem}
+  .arts .art h3{font-size:.98rem}
+  .res > .wrap{display:block}
+  .res-head{display:flex;flex-wrap:nowrap}
+  .res-head .sec-head{flex:1 1 auto;min-width:0}
+  .res-head > .btn{flex:none}
+  .res-head .sec-head{margin-bottom:0!important}
+  .res-head > .btn{order:0;align-self:auto;margin-top:0}
+}
