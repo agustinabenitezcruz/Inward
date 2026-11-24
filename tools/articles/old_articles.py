@@ -8,7 +8,7 @@ import sys, os, json, re, html, datetime
 sys.path.insert(0, 'tools')
 from newpage import write
 
-DOM = "https://inwardpro.com"
+DOM = "https://www.inwardpro.com"
 DATA = json.load(open(os.path.join(os.path.dirname(__file__), "articulos_viejos.json"), encoding="utf-8"))
 
 CATS = {"etude-de-cas": "Étude de cas", "professionnel": "Visa / titre de séjour professionnel",

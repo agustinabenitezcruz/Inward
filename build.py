@@ -25,7 +25,7 @@ sys.path.insert(0, os.path.join(ROOT, "tools"))
 from pages import PAGES, src_of, depth_of, prefix_of, indexable, sitemap_hint
 
 CSV = os.path.join(ROOT, "content", "strings.csv")
-DOMAIN = "https://inwardpro.com"
+DOMAIN = "https://www.inwardpro.com"
 
 LANGS = {
     "en": {"dir": "en", "locale": "en_US", "label": "English",

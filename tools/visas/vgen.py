@@ -201,7 +201,7 @@ def page(c):
   </div>
 </section>''')
     body="\n".join(b)
-    D="https://inwardpro.com"; U=f"{D}/{c['dir']}/"
+    D="https://www.inwardpro.com"; U=f"{D}/{c['dir']}/"
     jsonld=json.dumps({"@context":"https://schema.org","@graph":[
      {"@type":"WebPage","@id":U+"#webpage","url":U,"name":c['h1'],"isPartOf":{"@id":D+"/#website"},"about":{"@id":D+"/#organization"},"inLanguage":"fr","breadcrumb":{"@id":U+"#breadcrumb"}},
      {"@type":"Service","@id":U+"#service","name":"Accompagnement "+c['short'],"serviceType":c['short'],"provider":{"@id":D+"/#organization"},"areaServed":{"@type":"Country","name":"France"},

@@ -310,7 +310,7 @@ La sección **no trae ninguna opinión escrita a mano**. Los datos salen de
 3. `cp api/config.example.php api/config.php` y completar `place_id` y
    `api_key`. **`config.php` no se versiona** y el `.htaccess` de `api/` ya lo
    bloquea para accesos web.
-4. Verificar en `https://inwardpro.com/api/avis.php`: tiene que devolver JSON.
+4. Verificar en `https://www.inwardpro.com/api/avis.php`: tiene que devolver JSON.
    `{"error":"not_configured"}` significa que falta el paso 3.
 
 ### Límites que conviene saber antes de prometer nada

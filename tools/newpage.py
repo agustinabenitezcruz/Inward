@@ -15,7 +15,7 @@ cabeza y a mano eso no se sostiene.
 import argparse, os, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DOMAIN = "https://inwardpro.com"
+DOMAIN = "https://www.inwardpro.com"
 
 HEAD = """<!DOCTYPE html>
 <html lang="fr">

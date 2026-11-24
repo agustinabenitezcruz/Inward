@@ -5,16 +5,16 @@ sys.path.insert(0, 'tools')
 from newpage import write
 
 D = "mentions-legales"
-U = "https://inwardpro.com/%s/" % D
+U = "https://www.inwardpro.com/%s/" % D
 title = "Mentions légales | INWARD"
 desc = "Mentions légales du site INWARD : éditeur, directrice de la publication, hébergement, activité, propriété intellectuelle et responsabilité."
 jsonld = json.dumps({"@context": "https://schema.org", "@graph": [
     {"@type": "WebPage", "@id": U + "#webpage", "url": U, "name": "Mentions légales", "inLanguage": "fr",
-     "isPartOf": {"@id": "https://inwardpro.com/#website"}, "about": {"@id": "https://inwardpro.com/#organization"},
+     "isPartOf": {"@id": "https://www.inwardpro.com/#website"}, "about": {"@id": "https://www.inwardpro.com/#organization"},
      "dateModified": "2026-11-19",
      "breadcrumb": {"@id": U + "#breadcrumb"}},
     {"@type": "BreadcrumbList", "@id": U + "#breadcrumb", "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://inwardpro.com/"},
+        {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.inwardpro.com/"},
         {"@type": "ListItem", "position": 2, "name": "Mentions légales", "item": U}]}]},
     ensure_ascii=False, indent=2)
 

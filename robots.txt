@@ -89,4 +89,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://inwardpro.com/sitemap.xml
+Sitemap: https://www.inwardpro.com/sitemap.xml

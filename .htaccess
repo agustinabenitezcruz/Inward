@@ -1,9 +1,30 @@
 # VELOCIDAD DE CARGA (O2Switch: Apache / LiteSpeed)
 # Sin este archivo el servidor manda todo sin comprimir y sin cache: cada
 # visita y cada pagina vuelve a bajar los 200 kB de CSS, el JS, las fotos y
-# los logos. Aca van solo compresion y cache; no hay reglas de reescritura ni
-# redirecciones, asi que no cambia ninguna URL (SEO intacto).
+# los logos. Ademas: el dominio canonico es www.inwardpro.com (donde esta el
+# ranking del sitio anterior) y abajo van las 301 de URLs viejas.
 # tools/dist.py lo copia a dist/ y va en la raiz del sitio publicado.
+
+# ---- Dominio canonico: https://www.inwardpro.com ----
+# Todo lo que llegue sin www o por http se manda, en un solo salto, a la
+# version https con www. Si O2Switch ya fuerza HTTPS desde el panel no molesta.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # URLs del sitio anterior (WordPress) que ya no existen: 301 directo a su
+  # equivalente, en un solo salto aunque lleguen sin www. Los articulos viejos
+  # conservan su URL exacta y no necesitan regla.
+  # Duplicado: el sitio viejo ya redirigia esta URL al articulo original.
+  RewriteRule ^limportance-de-ladaptation-culturelle-pour-les-travailleurs-etrangers/?$ https://www.inwardpro.com/adaptation-culturelle-travailleurs-etrangers/ [R=301,L]
+  # Ofertas para empresas eliminadas (Eureka: gestion por expediente;
+  # Serenite: acompanamiento mensual): su equivalente es la landing de empresas.
+  RewriteRule ^eureka/?$ https://www.inwardpro.com/entreprises/ [R=301,L]
+  RewriteRule ^serenite/?$ https://www.inwardpro.com/entreprises/ [R=301,L]
+
+  RewriteCond %{HTTP_HOST} ^inwardpro\.com$ [NC,OR]
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://www.inwardpro.com/$1 [R=301,L]
+</IfModule>
 
 # ---- Compresion ----
 # Texto comprimido: el CSS pasa de ~200 kB a ~35 kB, el HTML de ~65 kB a ~12 kB.
@@ -65,12 +86,3 @@
 
 # ETag por inodo varia entre nodos del hosting; con Last-Modified alcanza.
 FileETag MTime Size
-
-# ---------- Redirecciones del sitio anterior (WordPress) ----------
-# Los articulos viejos conservan su URL exacta en la raiz (no necesitan regla).
-# Duplicado: el sitio viejo ya redirigia esta URL al articulo original.
-Redirect 301 /limportance-de-ladaptation-culturelle-pour-les-travailleurs-etrangers/ /adaptation-culturelle-travailleurs-etrangers/
-# Ofertas para empresas que ya no existen (Eureka: gestion por expediente;
-# Serenite: acompanamiento mensual): su equivalente es la landing de empresas.
-Redirect 301 /eureka/ /entreprises/
-Redirect 301 /serenite/ /entreprises/
