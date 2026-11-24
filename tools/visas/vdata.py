@@ -44,7 +44,7 @@ SAI=dict(dir="visas/saisonnier",short="Visa et titre de séjour Saisonnier",
       ("Combien de temps un travailleur saisonnier peut-il travailler en France ?",p("Le titre de séjour «&nbsp;travailleur saisonnier&nbsp;» permet de travailler en France pendant une durée maximale de six mois par période de douze mois. Cette durée peut être répartie sur un ou plusieurs contrats saisonniers, dans la limite autorisée par la réglementation."))])
 fam_common=["Accès immédiat aux droits de la Sécurité sociale","Accès à la carte de résident de 10 ans (sous conditions)","Ouvre la voie à la demande de nationalité française"]
 FAM=dict(dir="visas/famille",short="Visa famille et titre de séjour vie privée et familiale",
- title="Visa famille en France : conjoint de Français et vie privée et familiale | INWARD",
+ title="Visa famille en France : conjoint de Français et vie privée et familiale",
  desc="Rejoignez votre conjoint ou votre famille en France : visa conjoint de Français et titre de séjour « vie privée et familiale », avec un accompagnement personnalisé.",
  h1="Visa famille en France : visa conjoint de Français et titre de séjour « vie privée et familiale »",
  sub="Rejoignez votre conjoint ou votre famille en France avec un accompagnement personnalisé à chaque étape de votre démarche.",
@@ -66,7 +66,7 @@ FAM=dict(dir="visas/famille",short="Visa famille et titre de séjour vie privée
       ("Que se passe-t-il en cas de séparation ou de divorce ?",p("Une séparation ou un divorce peut avoir une incidence sur le renouvellement du titre de séjour, mais les conséquences dépendent de nombreux éléments : durée du mariage, durée du séjour en France, vie commune, violences conjugales, enfants ou autres attaches personnelles et familiales.")+p("Il est conseillé de faire analyser sa situation avant toute démarche, car une séparation ne produit pas automatiquement les mêmes effets dans tous les dossiers.")),
       ("Peut-on faire venir ses enfants en France avec un visa conjoint de Français ?",p("La situation des enfants dépend de leur lien familial, de leur nationalité, de leur âge et du statut du parent concerné. Le visa conjoint de Français est destiné au conjoint étranger ; les enfants peuvent relever d'une procédure différente.")+p("Une analyse familiale globale permet de déterminer quelles demandes doivent être déposées et dans quel ordre."))])
 ENT=dict(dir="visas/entrepreneur",short="Visa Entrepreneur / Profession libérale",
- title="Visa entrepreneur, freelance et créateur d'entreprise | INWARD",
+ title="Visa entrepreneur, freelance et créateur d'entreprise",
  desc="Visa et titre de séjour Entrepreneur / Profession libérale pour indépendants, freelances, consultants et créateurs d'entreprise : INWARD vous accompagne de l'avis favorable au titre de séjour.",
  h1="Visa pour les entrepreneurs, freelances et créateurs d'entreprise",sub="Développez votre activité indépendante en France.",
  intro_id="entrepreneur",intro_label="Entrepreneur · Profession libérale",
@@ -161,7 +161,7 @@ PVT=dict(dir="visas/pvt",short="Visa PVT (vacances-travail)",
       ("Dois-je avoir trouvé un emploi avant de demander le visa ?",p("Non. Il n'est pas nécessaire d'avoir trouvé un emploi avant de déposer votre demande de visa PVT. Dans le cadre du programme, le visa tient lieu d'autorisation de travail et vous permet de rechercher puis d'exercer un emploi en France pendant votre séjour, dans différents secteurs d'activité et dans le respect de la réglementation applicable."))])
 
 STA=dict(dir="visas/stagiaire",short="Visa Stagiaire",
- title="Visa stagiaire en France : conditions et accompagnement | INWARD",
+ title="Visa stagiaire en France : conditions et accompagnement",
  desc="Effectuez votre stage en France : conditions du visa stagiaire, convention de stage tripartite et accompagnement personnalisé pour préparer votre dossier.",
  h1="Effectuez votre stage en France en toute sérénité",
  sub="Vous souhaitez effectuer un stage en France ? Découvrez les conditions du visa stagiaire et bénéficiez d'un accompagnement personnalisé pour préparer votre dossier.",
