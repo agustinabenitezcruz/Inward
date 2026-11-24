@@ -542,4 +542,94 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/mentions-legales/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/mentions-legales/"/>
   </url>
+  <url>
+    <loc>https://inwardpro.com/confidentialite/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/confidentialite/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/confidentialite/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/confidentialite/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/confidentialite/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/en/confidentialite/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/confidentialite/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/confidentialite/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/confidentialite/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/confidentialite/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/es/confidentialite/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/confidentialite/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/confidentialite/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/confidentialite/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/confidentialite/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/cookies/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/cookies/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/cookies/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/cookies/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/cookies/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/en/cookies/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/cookies/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/cookies/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/cookies/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/cookies/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/es/cookies/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/cookies/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/cookies/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/cookies/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/cookies/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/cgv/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/cgv/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/cgv/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/cgv/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/cgv/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/en/cgv/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/cgv/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/cgv/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/cgv/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/cgv/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/es/cgv/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/cgv/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/cgv/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/cgv/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/cgv/"/>
+  </url>
 </urlset>
