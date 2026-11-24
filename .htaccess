@@ -24,6 +24,9 @@
   # nuevo (seccion #contact de la home). NE: que no escape el "#".
   RewriteRule ^contact-2/?$ https://www.inwardpro.com/#contact [R=301,L,NE]
   RewriteRule ^contact-in/?$ https://www.inwardpro.com/#contact [R=301,L,NE]
+  # Paginacion del blog viejo (/ressources/page/2/, /page/3/...): el blog
+  # nuevo muestra todos los articulos en una sola pagina.
+  RewriteRule ^ressources/page/[0-9]+/?$ https://www.inwardpro.com/ressources/ [R=301,L]
 
   RewriteCond %{HTTP_HOST} ^inwardpro\.com$ [NC,OR]
   RewriteCond %{HTTPS} off
