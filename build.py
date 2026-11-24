@@ -180,6 +180,32 @@ def add_notice(doc, cfg, missing):
     return doc.replace("<body>\n", "<body>\n" + banner, 1)
 
 
+def lastmod_of(page):
+    """Fecha real del ultimo cambio de la pagina, no la del dia del build:
+    - articulo migrado: su dateModified (lo que Google ya conoce);
+    - resto: fecha del ultimo commit que toco el archivo, o hoy si tiene
+      cambios sin guardar en git."""
+    import subprocess, json as _json
+    path = os.path.join(ROOT, src_of(page["dir"]))
+    try:
+        doc = open(path, encoding="utf-8").read()
+        if page.get("fr_only"):
+            m = re.search(r'"dateModified": "(\d{4}-\d{2}-\d{2})', doc)
+            if m:
+                return m.group(1)
+        rel = os.path.relpath(path, ROOT)
+        dirty = subprocess.run(["git", "status", "--porcelain", "--", rel], cwd=ROOT,
+                               capture_output=True, text=True).stdout.strip()
+        if not dirty:
+            d = subprocess.run(["git", "log", "-1", "--format=%cs", "--", rel], cwd=ROOT,
+                               capture_output=True, text=True).stdout.strip()
+            if d:
+                return d
+    except Exception:
+        pass
+    return datetime.date.today().isoformat()
+
+
 def write_sitemap(ready):
     """sitemap.xml con las tres versiones de cada pagina indexable.
 
@@ -204,6 +230,7 @@ def write_sitemap(ready):
         tail = (d + "/") if d else ""
         url_of = lambda c: "%s/%s%s" % (DOMAIN, "" if c == "fr" else LANGS[c]["dir"] + "/", tail)
         prio, freq = sitemap_hint(d)
+        today = lastmod_of(page)
         for c in langs:
             out.append("  <url>")
             out.append("    <loc>%s</loc>" % url_of(c))
