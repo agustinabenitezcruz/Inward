@@ -512,4 +512,34 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/visas/visiteur/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/visas/visiteur/"/>
   </url>
+  <url>
+    <loc>https://inwardpro.com/mentions-legales/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/mentions-legales/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/mentions-legales/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/mentions-legales/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/mentions-legales/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/en/mentions-legales/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/mentions-legales/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/mentions-legales/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/mentions-legales/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/mentions-legales/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/es/mentions-legales/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/mentions-legales/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/mentions-legales/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/mentions-legales/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/mentions-legales/"/>
+  </url>
 </urlset>

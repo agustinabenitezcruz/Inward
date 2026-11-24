@@ -38,7 +38,7 @@ PAGES = [
     {"dir": "visas/detachement", "title": "Landing Détachement"},
     {"dir": "visas/schengen", "title": "Landing Visa Schengen"},
     {"dir": "visas/visiteur", "title": "Landing Visa Visiteur"},
-    # Pendiente: mentions-legales
+    {"dir": "mentions-legales", "title": "Mentions légales"},
 ]
 
 # Prioridad y frecuencia del sitemap. No son una orden para Google, son una
@@ -49,6 +49,7 @@ SITEMAP = {
     "particuliers": (0.9, "monthly"),
     "blog":         (0.8, "weekly"),
     "videos":       (0.5, "monthly"),
+    "mentions-legales": (0.2, "yearly"),
 }
 SITEMAP_DEFAULT = (0.6, "monthly")
 
