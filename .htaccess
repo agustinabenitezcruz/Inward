@@ -20,6 +20,10 @@
   # Serenite: acompanamiento mensual): su equivalente es la landing de empresas.
   RewriteRule ^eureka/?$ https://www.inwardpro.com/entreprises/ [R=301,L]
   RewriteRule ^serenite/?$ https://www.inwardpro.com/entreprises/ [R=301,L]
+  # Dos paginas de contacto del sitio viejo, unificadas en el formulario
+  # nuevo (seccion #contact de la home). NE: que no escape el "#".
+  RewriteRule ^contact-2/?$ https://www.inwardpro.com/#contact [R=301,L,NE]
+  RewriteRule ^contact-in/?$ https://www.inwardpro.com/#contact [R=301,L,NE]
 
   RewriteCond %{HTTP_HOST} ^inwardpro\.com$ [NC,OR]
   RewriteCond %{HTTPS} off
