@@ -1243,6 +1243,20 @@
     }
   })();
 
+  /* Video con fachada: al tocar la miniatura se cambia por el reproductor
+     de YouTube (youtube-nocookie) y arranca solo. */
+  document.querySelectorAll(".vid-facade[data-yt]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var f = document.createElement("iframe");
+      f.src = "https://www.youtube-nocookie.com/embed/" + b.getAttribute("data-yt") + "?autoplay=1&rel=0";
+      f.title = b.getAttribute("aria-label") || "";
+      f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+      f.allowFullscreen = true;
+      b.replaceWith(f);
+      f.focus();
+    });
+  });
+
   /* Video en modal: [data-video] abre el <dialog> indicado en aria-controls */
   (function () {
     document.querySelectorAll('[data-video]').forEach(function (btn) {

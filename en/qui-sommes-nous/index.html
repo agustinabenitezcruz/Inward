@@ -31,7 +31,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..600&family=Jost:wght@300..600&display=swap">
-<link rel="stylesheet" href="../../assets/css/styles.css?v=ab3cdaac">
+<link rel="stylesheet" href="../../assets/css/styles.css?v=123cdc50">
 
 <script type="application/ld+json">
 {
@@ -273,12 +273,17 @@
       <img src="../../assets/img/consultantes-inward-bureau-cabinet.webp" width="1400" height="933" alt="Delfina Benitez Cruz and Marina Biedma, founders of INWARD" fetchpriority="high" decoding="async">
     </figure>
   </div>
-  <!-- Video de YouTube integrado en la pagina (pedido de la clienta).
-       youtube-nocookie: sin cookies hasta que se da play; carga diferida. -->
+  <!-- Video de YouTube con fachada: se muestra una miniatura propia y el
+       reproductor de YouTube recien se carga al tocar play (sin contacto con
+       Google antes del clic, sin banner de cookies, pagina mas liviana). -->
   <div class="wrap qsn-video rv">
     <div class="vid-frame">
-      <iframe src="https://www.youtube-nocookie.com/embed/z-BYcLvINNw?rel=0" title="INWARD presentation video" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      <button class="vid-facade" type="button" data-yt="z-BYcLvINNw" aria-label="Play the INWARD presentation video">
+        <img src="../../assets/img/video-presentation-inward-bienvenue.webp" width="1280" height="720" alt="INWARD presentation video: the founders in front of the Palais Garnier in Paris" loading="lazy" decoding="async">
+        <span class="vid-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span>
+      </button>
     </div>
+    <p class="vid-note">By playing the video, you accept YouTube's terms of use.</p>
   </div>
 </section>
 
@@ -487,6 +492,6 @@
   <a href="#contact" aria-label="Contact"><span></span></a>
 </nav>
 
-<script src="../../assets/js/main.js?v=b36b7b44" defer></script>
+<script src="../../assets/js/main.js?v=68a3991a" defer></script>
 </body>
 </html>
