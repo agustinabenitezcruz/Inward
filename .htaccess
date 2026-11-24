@@ -27,9 +27,6 @@
   # Paginacion del blog viejo (/ressources/page/2/, /page/3/...): el blog
   # nuevo muestra todos los articulos en una sola pagina.
   RewriteRule ^ressources/page/[0-9]+/?$ https://www.inwardpro.com/ressources/ [R=301,L]
-  # El blog se llamo /blog/ durante el armado del sitio: por si quedo algun
-  # enlace o marcador, va a /ressources/ (tambien en /en/ y /es/).
-  RewriteRule ^((?:en/|es/)?)blog(/.*)?$ https://www.inwardpro.com/$1ressources/ [R=301,L]
 
   RewriteCond %{HTTP_HOST} ^inwardpro\.com$ [NC,OR]
   RewriteCond %{HTTPS} off
