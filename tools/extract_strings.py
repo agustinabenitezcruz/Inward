@@ -99,6 +99,8 @@ def main():
     # una vez, no seis. Las claves se reparten por página pero el texto manda.
     rows, seen = [], set()
     for page in PAGES:
+        if page.get("fr_only"):
+            continue
         path = os.path.join(ROOT, src_of(page["dir"]))
         if not os.path.exists(path):
             continue

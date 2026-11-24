@@ -93,34 +93,34 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/particuliers/"/>
   </url>
   <url>
-    <loc>https://inwardpro.com/blog/</loc>
+    <loc>https://inwardpro.com/ressources/</loc>
     <lastmod>2026-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/blog/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/blog/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/blog/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/blog/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/ressources/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/ressources/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/ressources/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/ressources/"/>
   </url>
   <url>
-    <loc>https://inwardpro.com/en/blog/</loc>
+    <loc>https://inwardpro.com/en/ressources/</loc>
     <lastmod>2026-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/blog/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/blog/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/blog/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/blog/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/ressources/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/ressources/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/ressources/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/ressources/"/>
   </url>
   <url>
-    <loc>https://inwardpro.com/es/blog/</loc>
+    <loc>https://inwardpro.com/es/ressources/</loc>
     <lastmod>2026-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/blog/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/blog/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/blog/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/blog/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/ressources/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/ressources/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/ressources/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/ressources/"/>
   </url>
   <url>
     <loc>https://inwardpro.com/qui-sommes-nous/</loc>
@@ -511,6 +511,158 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://inwardpro.com/en/visas/visiteur/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://inwardpro.com/es/visas/visiteur/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/visas/visiteur/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/embaucher-etudiant-etranger/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/embaucher-etudiant-etranger/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/embaucher-etudiant-etranger/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/jeune-entreprise-innovante/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/jeune-entreprise-innovante/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/jeune-entreprise-innovante/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/carte-de-resident-inward/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/carte-de-resident-inward/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/carte-de-resident-inward/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/embaucher-un-etudiant-etranger/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/embaucher-un-etudiant-etranger/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/embaucher-un-etudiant-etranger/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/comment-une-entreprise-dingenierie-a-reussi-a-recruter-3-employes-etrangers-en-france/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/comment-une-entreprise-dingenierie-a-reussi-a-recruter-3-employes-etrangers-en-france/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/comment-une-entreprise-dingenierie-a-reussi-a-recruter-3-employes-etrangers-en-france/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/de-stagiaire-a-salariee-en-cdi-lhistoire-reussie-dune-start-up-francaise/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/de-stagiaire-a-salariee-en-cdi-lhistoire-reussie-dune-start-up-francaise/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/de-stagiaire-a-salariee-en-cdi-lhistoire-reussie-dune-start-up-francaise/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/la-cuisiniere-argentine-dun-restaurant-parisien/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/la-cuisiniere-argentine-dun-restaurant-parisien/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/la-cuisiniere-argentine-dun-restaurant-parisien/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/comment-une-start-up-francaise-a-securise-la-situation-de-ses-employes-etrangers/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/comment-une-start-up-francaise-a-securise-la-situation-de-ses-employes-etrangers/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/comment-une-start-up-francaise-a-securise-la-situation-de-ses-employes-etrangers/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/comment-embaucher-un-etudiant-apres-ses-etudes/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/comment-embaucher-un-etudiant-apres-ses-etudes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/comment-embaucher-un-etudiant-apres-ses-etudes/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/types-de-contrat-etidiant-etranger/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/types-de-contrat-etidiant-etranger/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/types-de-contrat-etidiant-etranger/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/embaucher-salarie-vvt/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/embaucher-salarie-vvt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/embaucher-salarie-vvt/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/comment-faire-un-chengement-de-statut-apres-un-visa-vvt/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/comment-faire-un-chengement-de-statut-apres-un-visa-vvt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/comment-faire-un-chengement-de-statut-apres-un-visa-vvt/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/comment-embaucher-un-salarie-etranger/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/comment-embaucher-un-salarie-etranger/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/comment-embaucher-un-salarie-etranger/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/erreurs-a-eviter-lors-de-lembauche-des-salaries-etrangers/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/erreurs-a-eviter-lors-de-lembauche-des-salaries-etrangers/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/erreurs-a-eviter-lors-de-lembauche-des-salaries-etrangers/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/comment-obtenir-laide-a-la-mobilite-internationale/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/comment-obtenir-laide-a-la-mobilite-internationale/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/comment-obtenir-laide-a-la-mobilite-internationale/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/guide-pour-obtenir-un-autorisation-de-travail/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/guide-pour-obtenir-un-autorisation-de-travail/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/guide-pour-obtenir-un-autorisation-de-travail/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/cout-pour-recruter-un-salarie-etranger/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/cout-pour-recruter-un-salarie-etranger/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/cout-pour-recruter-un-salarie-etranger/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/adaptation-culturelle-travailleurs-etrangers/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/adaptation-culturelle-travailleurs-etrangers/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/adaptation-culturelle-travailleurs-etrangers/"/>
+  </url>
+  <url>
+    <loc>https://inwardpro.com/avantages-dembaucher-un-salarie-etranger/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://inwardpro.com/avantages-dembaucher-un-salarie-etranger/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://inwardpro.com/avantages-dembaucher-un-salarie-etranger/"/>
   </url>
   <url>
     <loc>https://inwardpro.com/mentions-legales/</loc>

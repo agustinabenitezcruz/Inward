@@ -226,6 +226,8 @@ def main():
             print("  %-24s (todavía no existe, se salta)" % src_of(d))
             continue
         src = open(path, encoding="utf-8").read()
+        if page.get("fr_only"):
+            continue  # solo frances: sin /en/ ni /es/ (ver tools/pages.py)
 
         for code, cfg in LANGS.items():  # noqa: E501
             mapping = {r["fr"]: (r.get(code) or "").strip() for r in rows}

@@ -107,7 +107,7 @@ def lock_profil(html, page_dir):
     return html
 
 
-def lang_nav(html, page_dir):
+def lang_nav(html, page_dir, fr_only=False):
     """Reescribe los selectores de idioma para que apunten a ESTA página."""
     # Este script solo toca las paginas en frances, asi que el frances siempre
     # es la pagina misma. Los otros dos idiomas son la MISMA pagina bajo /en/ o
@@ -115,6 +115,8 @@ def lang_nav(html, page_dir):
     pre = prefix_of(page_dir)
     mine = site_path(page_dir)
     hrefs = {"fr": "./", "en": pre + "en/" + mine, "es": pre + "es/" + mine}
+    if fr_only:  # sin version traducida: EN/ES llevan al blog en ese idioma
+        hrefs.update(en=pre + "en/ressources/", es=pre + "es/ressources/")
 
     def build(cls, indent):
         out = ['<nav class="%s" aria-label="Langue">' % cls]
@@ -165,7 +167,7 @@ def main():
                 new = new.replace('<a href="#top" class="brand"',
                                   '<a href="%s" class="brand"' % (prefix_of(d) or "./"))
             if name in ("header", "footer"):
-                new = lang_nav(new, d)
+                new = lang_nav(new, d, page.get("fr_only"))
             if name == "contact":
                 new = lock_profil(new, d)
                 # Una landing puede traer su propia bajada de contacto.

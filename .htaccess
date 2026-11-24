@@ -65,3 +65,12 @@
 
 # ETag por inodo varia entre nodos del hosting; con Last-Modified alcanza.
 FileETag MTime Size
+
+# ---------- Redirecciones del sitio anterior (WordPress) ----------
+# Los articulos viejos conservan su URL exacta en la raiz (no necesitan regla).
+# Duplicado: el sitio viejo ya redirigia esta URL al articulo original.
+Redirect 301 /limportance-de-ladaptation-culturelle-pour-les-travailleurs-etrangers/ /adaptation-culturelle-travailleurs-etrangers/
+# Ofertas para empresas que ya no existen (Eureka: gestion por expediente;
+# Serenite: acompanamiento mensual): su equivalente es la landing de empresas.
+Redirect 301 /eureka/ /entreprises/
+Redirect 301 /serenite/ /entreprises/
