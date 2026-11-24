@@ -102,6 +102,9 @@ def translate(doc, mapping):
     return doc, hits[0]
 
 
+FR_ONLY = [p["dir"] for p in PAGES if p.get("fr_only")]
+
+
 def rewrite_paths(doc):
     """La versión traducida vive un nivel más abajo que el original.
 
@@ -110,6 +113,9 @@ def rewrite_paths(doc):
     en los dos casos alcanza con anteponer UN ../ a lo que ya hubiera.
     data-api y api/ entran por el endpoint de las opiniones: sin ellos /en/ y
     /es/ pedian en/api/avis.php, que no existe (404)."""
+    if FR_ONLY:  # articulos solo en frances: el enlace sube a la version francesa
+        doc = re.sub(r'\bhref="((?:\.\./)*)(%s)/' % "|".join(map(re.escape, FR_ONLY)),
+                     lambda m: 'href="../%s%s/' % (m.group(1), m.group(2)), doc)
     return re.sub(r'\b(href|src|poster|data-api)="((?:\.\./)*)(assets/|api/|favicon\.svg|favicon\.ico|apple-touch-icon\.png|site\.webmanifest)',
                   lambda m: '%s="../%s%s' % (m.group(1), m.group(2), m.group(3)), doc)
 
@@ -214,7 +220,26 @@ def write_sitemap(ready):
     print("sitemap.xml: %d URL" % n)
 
 
+def clean_stale():
+    """Borra de /en/ y /es/ las paginas que ya no estan en tools/pages.py
+    (por ejemplo al renombrar /blog/ a /ressources/): si no, quedan versiones
+    viejas publicadas con enlaces que ya no existen."""
+    import shutil
+    keep = {p["dir"] for p in PAGES if not p.get("fr_only")}
+    for cfg in LANGS.values():
+        base = os.path.join(ROOT, cfg["dir"])
+        for root, dirs, files in os.walk(base, topdown=False):
+            d = os.path.relpath(root, base)
+            d = "" if d == "." else d
+            if "index.html" in files and d not in keep:
+                os.remove(os.path.join(root, "index.html"))
+                print("  borrada pagina vieja: %s/%s" % (cfg["dir"], d))
+            if root != base and not os.listdir(root):
+                shutil.rmtree(root)
+
+
 def main():
+    clean_stale()
     rows = load_strings()
     print("%d textos en el CSV\n" % len(rows))
 

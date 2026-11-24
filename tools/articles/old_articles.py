@@ -65,6 +65,8 @@ def fdate(s):
     d = datetime.date.fromisoformat(s[:10]); return "%d %s %d" % (d.day, MOIS[d.month-1], d.year)
 
 def fix_links(h):
+    h = h.replace("https://www.inwardpro.com/passeport-talent-salarie-qualifie/", "../visas/talent/")
+    h = h.replace("https://www.inwardpro.com/tout-savoir-sur-la-vtt-visa-vacances-travail/", "../visas/pvt/")
     h = h.replace("https://www.inwardpro.com/limportance-de-ladaptation-culturelle-pour-les-travailleurs-etrangers/", "../adaptation-culturelle-travailleurs-etrangers/")
     h = re.sub(r'href="https?://(?:www\.)?inwardpro\.com/([^"]*)"', lambda m: 'href="../%s"' % m.group(1), h)
     h = re.sub(r'href="(https?://[^"]+)"', r'href="\1" target="_blank" rel="noopener"', h)

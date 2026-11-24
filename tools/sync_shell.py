@@ -175,6 +175,10 @@ def main():
                     new = re.sub(r'(<p class="lead">).*?(</p>)', lambda m: m.group(1) + page["contact_lead"] + m.group(2), new, count=1, flags=re.S)
             doc = pat.sub(lambda m: m.group(1) + new.replace("\\", "\\\\") + m.group(2), doc, count=1)
             done.append(name)
+        # Paginas sin formulario propio (legales, articulos migrados): los
+        # botones que llevan a #contact van al formulario de la home.
+        if 'id="contact"' not in doc:
+            doc = doc.replace('href="#contact"', 'href="%s#contact"' % (prefix_of(d) or "./"))
         open(path, "w", encoding="utf-8").write(doc)
         print("  %-28s %s" % (src_of(d), ", ".join(done) or "sin marcas"))
 
