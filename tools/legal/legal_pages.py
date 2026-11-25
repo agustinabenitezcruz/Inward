@@ -13,7 +13,7 @@ def p(t): return '<p>%s</p>' % t
 
 PAGES = {
 "confidentialite": dict(
-  title="Politique de confidentialité | INWARD", h1="Politique de confidentialité", crumb="Politique de confidentialité",
+  title="Politique de confidentialité", h1="Politique de confidentialité", crumb="Politique de confidentialité",
   desc="Politique de confidentialité d'INWARD : données collectées, finalités, bases juridiques, destinataires, durées de conservation et exercice de vos droits.",
   secs=[
    ("1. Responsable du traitement", [
@@ -46,7 +46,7 @@ PAGES = {
      p("INWARD met en œuvre des mesures raisonnables de sécurité et limite les accès aux personnes et prestataires qui en ont besoin. La présente politique peut être mise à jour, la date figurant en haut de la page.")]),
   ]),
 "cookies": dict(
-  title="Politique de cookies | INWARD", h1="Politique de cookies", crumb="Politique de cookies",
+  title="Politique de cookies", h1="Politique de cookies", crumb="Politique de cookies",
   desc="Politique de cookies d'INWARD : cookies nécessaires, services tiers (Google, YouTube, Calendly, LinkedIn, Mollie) et gestion de vos choix.",
   secs=[
    ("1. Fonctionnement", [
@@ -61,7 +61,7 @@ PAGES = {
      p("Une bannière permet d'accepter, de refuser ou de personnaliser les cookies non nécessaires. Un lien « Gérer mes cookies » reste disponible dans le pied de page.")]),
   ]),
 "cgv": dict(
-  title="Conditions générales de vente | INWARD", h1="Conditions générales de vente", crumb="Conditions générales de vente",
+  title="Conditions générales de vente", h1="Conditions générales de vente", crumb="Conditions générales de vente",
   desc="Conditions générales de vente d'INWARD pour les clients professionnels et les particuliers : commande, prix, paiement, rétractation, réclamations et droit applicable.",
   secs=[
    ("Clients professionnels", None),

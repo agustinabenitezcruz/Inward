@@ -6,7 +6,7 @@ from newpage import write
 
 D = "mentions-legales"
 U = "https://www.inwardpro.com/%s/" % D
-title = "Mentions légales | INWARD"
+title = "Mentions légales"
 desc = "Mentions légales du site INWARD : éditeur, directrice de la publication, hébergement, activité, propriété intellectuelle et responsabilité."
 jsonld = json.dumps({"@context": "https://schema.org", "@graph": [
     {"@type": "WebPage", "@id": U + "#webpage", "url": U, "name": "Mentions légales", "inLanguage": "fr",

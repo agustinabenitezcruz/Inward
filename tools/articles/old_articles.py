@@ -146,7 +146,7 @@ for a in DATA:
     <p class="art-back"><a href="../ressources/">&lsaquo; Tous les articles</a></p>
   </div>
 </section>''' % (h1, kd, h1, desc, dates, f, w, h, alt, body_html(a["blocks"]))
-    write(s, h1 + " | INWARD", desc, jsonld, body, '  <a href="#top" aria-label="Haut de page"><span></span></a>', ogtype="article")
+    write(s, h1, desc, jsonld, body, '  <a href="#top" aria-label="Haut de page"><span></span></a>', ogtype="article")
     p = os.path.join(s, "index.html")
     t = open(p, encoding="utf-8").read()
     t = re.sub(r'<link rel="alternate" hreflang="(en|es)"[^>]*>\n', "", t)

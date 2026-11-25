@@ -7,7 +7,7 @@ def a(href,t): return f'<a href="{href}" target="_blank" rel="noopener">{t}</a>'
 ANEF='https://administration-etrangers-en-france.interieur.gouv.fr/usagers/#/'
 common_after=["Accès immédiat aux droits de la Sécurité sociale","Ouvre la voie à la carte de résident de 10 ans (sous conditions)","Ouvre la voie à la demande de nationalité française (sous conditions)"]
 SAL=dict(dir="visas/salarie-travailleur-temporaire",short="Visa Salarié et Travailleur temporaire",
- title="Visa Salarié et Travailleur temporaire en France | INWARD",
+ title="Visa Salarié et Travailleur temporaire en France",
  desc="Recrutez des collaborateurs hors UE en CDI ou CDD : INWARD gère l'autorisation de travail et le visa ou titre de séjour Salarié ou Travailleur temporaire.",
  h1="Visa Salarié et Travailleur temporaire en France",sub="Demande de visa et autorisation de travail, en toute simplicité.",
  intro_id="salarie",intro_label="Salarié · Travailleur temporaire",
@@ -26,7 +26,7 @@ SAL=dict(dir="visas/salarie-travailleur-temporaire",short="Visa Salarié et Trav
       ("Le visa salarié permet-il au salarié de faire venir sa famille en France ?",p("Le visa salarié ne permet pas l'obtention d'un visa de famille accompagnante. Les possibilités de demande de regroupement familial dépendent du statut du salarié, de la durée de son séjour et des conditions applicables au regroupement familial ou à une autre procédure destinée aux membres de la famille.")),
       ("Comment Inward Pro peut-il aider une entreprise à recruter un salarié étranger ?",p("Inward Pro peut accompagner l'entreprise dans l'analyse de la situation du salarié, l'identification de la procédure appropriée, la préparation du dossier et le suivi des démarches liées à l'autorisation de travail et au visa. L'objectif est de sécuriser le recrutement international et de faciliter l'arrivée du collaborateur en France."))])
 SAI=dict(dir="visas/saisonnier",short="Visa et titre de séjour Saisonnier",
- title="Visa et titre de séjour Saisonnier | INWARD",
+ title="Visa et titre de séjour Saisonnier",
  desc="Recrutez des saisonniers hors UE : titre de séjour pluriannuel jusqu'à 3 ans, 6 mois de travail par an. INWARD gère l'autorisation de travail et le visa.",
  h1="Visa et titre de séjour Saisonnier",sub="Demande de visa saisonnier et d'autorisation de travail, en toute simplicité.",
  intro_id="saisonnier",intro_label="Saisonnier",
@@ -96,7 +96,7 @@ IMG=dict(et=("visa-etudiant-campus.webp",800,1066,"Étudiante souriante avec son
  par=("visa-visiteur-paris.webp",800,1066,"Rue parisienne avec la tour Eiffel au fond"),
  con=("consultantes-inward-bureau-cabinet.webp",900,1200,"Deux consultantes INWARD dans les bureaux du cabinet"))
 ETU=dict(dir="visas/etudiant",short="Visa et titre de séjour Étudiant",
- title="Visa et titre de séjour étudiant en France | INWARD",
+ title="Visa et titre de séjour étudiant en France",
  desc="Études ou cours de français en France : INWARD vous accompagne dans votre demande de visa ou titre de séjour Étudiant et vous oriente vers un centre FLE adapté.",
  h1="Visa et titre de séjour étudiant France : préparez votre arrivée et votre parcours académique",
  sub="Vous souhaitez faire des études ou suivre des cours de français en France ? Inward vous accompagne dans votre demande de visa ou titre de séjour étudiant.",
@@ -117,7 +117,7 @@ ETU=dict(dir="visas/etudiant",short="Visa et titre de séjour Étudiant",
       ("Peut-on poursuivre des études après un programme de français ?",p("Oui, un programme de français peut constituer une étape vers une formation universitaire, une école ou un autre projet académique. La poursuite des études peut vous faire bénéficier du droit à un renouvellement de carte de séjour directement en France.")),
       ("Inward peut-il m'aider à trouver un centre de français en France ?",p("Oui. Inward peut vous mettre en relation avec un centre FLE adapté à votre niveau, à vos objectifs et à la durée souhaitée de votre séjour.")+p("Nous pouvons vous orienter vers un programme de français général, intensif, académique ou préparatoire à la poursuite d'études."))])
 REC=dict(dir="visas/rece",short="Visa et carte de séjour RECE",
- title="Visa et carte de séjour RECE en France | INWARD",
+ title="Visa et carte de séjour RECE en France",
  desc="Carte de séjour « recherche d'emploi ou création d'entreprise » (RECE) : restez en France un an après vos études pour trouver un emploi ou créer votre entreprise.",
  h1="Visa et carte de séjour RECE en France : construisez votre avenir professionnel",
  sub="L'opportunité pour rechercher un emploi ou créer une entreprise après ses études en France.",
@@ -139,7 +139,7 @@ REC=dict(dir="visas/rece",short="Visa et carte de séjour RECE",
 
 IMG.update(pvt=("visa-pvt-sacre-coeur-montmartre.webp",800,1066,"Rue de Montmartre avec le Sacré-Cœur au fond"),sch=("visa-schengen-globe-europe.webp",800,1066,"Doigt pointant l'Europe sur un globe terrestre"))
 PVT=dict(dir="visas/pvt",short="Visa PVT (vacances-travail)",
- title="Visa PVT France : conditions et accompagnement | INWARD",
+ title="Visa PVT France : conditions et accompagnement",
  desc="Visa vacances-travail (PVT) pour la France : conditions par nationalité, durée, travail pendant le séjour. INWARD prépare votre dossier jusqu'au dépôt au consulat.",
  h1="Visa PVT France : conditions et accompagnement",
  sub="Nous vous accompagnons dans la préparation de votre visa vacances-travail pour la France, de l'évaluation de votre situation jusqu'à la présentation de votre demande.",
@@ -181,7 +181,7 @@ STA=dict(dir="visas/stagiaire",short="Visa Stagiaire",
       ("Puis-je effectuer un stage sans être inscrit dans un établissement de formation ?",p("Le visa stagiaire repose notamment sur l'existence d'une convention conclue avec un établissement de formation. Nous devons donc analyser votre situation avant de confirmer la procédure adaptée.")),
       ("Quel visa faut-il demander pour effectuer un stage en France ?",p("Le visa nécessaire dépend de votre nationalité, de la durée de votre stage et de votre situation personnelle. Pour un stage de 90 jours maximum, un visa de court séjour peut être requis. Pour un stage de plus de 90 jours, un visa de long séjour est généralement nécessaire et doit être validé après votre arrivée en France lorsque la procédure l'exige."))])
 DET=dict(dir="visas/detachement",short="Détachement de salariés",
- title="Détachement de salarié en France : accompagnement | INWARD",
+ title="Détachement de salarié en France : accompagnement",
  desc="Détachement de salariés en France, de la prestation de services au transfert intragroupe ICT : INWARD identifie la procédure applicable et prépare un dossier complet.",
  h1="Détachement de salarié en France : un accompagnement personnalisé",
  sub="De la prestation de services au transfert intragroupe ICT, nous vous aidons à identifier la procédure applicable et à préparer un dossier complet.",
@@ -201,7 +201,7 @@ DET=dict(dir="visas/detachement",short="Détachement de salariés",
 
 CSL=("consultante-inward-conseil-client-table-ordinateur.webp",1400,933,"Consultante INWARD conseillant un client autour d'une table avec un ordinateur portable")
 SCH=dict(dir="visas/schengen",short="Visa Schengen (court séjour)",
- title="Visa Schengen : conditions et accompagnement | INWARD",
+ title="Visa Schengen : conditions et accompagnement",
  desc="Visa Schengen pour un séjour de 90 jours maximum : tourisme, visite familiale ou voyage d'affaires. INWARD analyse votre situation et prépare votre demande.",
  h1="Visa Schengen : préparez votre voyage en Europe en toute sérénité",
  sub="Tourisme, visite familiale ou voyage d'affaires : Inward vous accompagne dans l'analyse de votre situation et la préparation de votre demande de visa Schengen.",
@@ -222,7 +222,7 @@ SCH=dict(dir="visas/schengen",short="Visa Schengen (court séjour)",
       ("Faut-il justifier ses ressources financières ?",p("Oui, le demandeur doit généralement démontrer qu'il dispose de ressources suffisantes pour couvrir les dépenses liées à son séjour, notamment le transport, l'hébergement et les dépenses quotidiennes.")+p("Les justificatifs acceptés peuvent varier selon le pays de destination et la situation personnelle du demandeur.")),
       ("Peut-on voyager dans plusieurs pays avec un visa Schengen ?",p("Oui, un visa Schengen peut permettre de voyager dans plusieurs pays de l'espace Schengen pendant sa période de validité, sous réserve de respecter les conditions du visa et les règles applicables à l'itinéraire.")+p("Le demandeur doit toutefois déposer sa demande auprès du pays responsable de son séjour principal."))])
 VIS=dict(dir="visas/visiteur",short="Visa et carte de séjour Visiteur",
- title="Visa visiteur longue durée en France : accompagnement | INWARD",
+ title="Visa visiteur longue durée en France : accompagnement",
  desc="Visa et carte de séjour visiteur pour vivre en France plus de 3 mois avec vos propres ressources : retraite, projet familial ou télétravail pour l'étranger.",
  h1="Visa visiteur longue durée",
  sub="Ressources personnelles, projet familial ou télétravail pour un employeur étranger : Inward vous aide à préparer votre demande.",
