@@ -3708,7 +3708,7 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
 
 /* Qui sommes-nous: video integrado debajo de la historia */
 .qsn-video{margin-top:clamp(2.4rem,5vw,4rem)}
-.qsn-video .vid-frame{border-radius:var(--r);max-width:960px;margin-inline:auto}
+.qsn-video .vid-frame{border-radius:var(--r);max-width:720px;margin-inline:auto}
 
 /* Avis: el carril tiene scroll horizontal y eso recortaba la tarjeta al
    subir 6px en hover (y su sombra). Aire arriba y abajo, compensado con
@@ -3747,7 +3747,7 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
 .vid-play svg{margin-left:3px}
 @media (hover:hover){.vid-facade:hover .vid-play{scale:1.08}}
 .vid-facade:focus-visible{outline:3px solid var(--tint-1);outline-offset:3px}
-.vid-note{max-width:960px;margin:.7rem auto 0;font-size:.76rem;color:var(--text-3);text-align:center}
+.vid-note{max-width:720px;margin:.7rem auto 0;font-size:.76rem;color:var(--text-3);text-align:center}
 
 /* Articulos migrados del sitio anterior */
 .art-date{font-size:.85rem;color:var(--text-3)}
@@ -3768,3 +3768,23 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
   .hcol{overflow:hidden}
   .hcol[data-on] .hcol-body{transition:opacity 480ms var(--ease-out) 520ms}
 }
+
+/* Articulos del blog (clusters): recuadros, tablas, FAQ, fuentes y enlaces
+   del mismo dossier. Solo colores de la paleta: lila para el recuadro. */
+.art-box{background:rgba(210,210,255,.35);border-left:3px solid var(--tint-3);border-radius:12px;padding:1.1rem 1.3rem;display:grid;gap:.5rem}
+.art-box-t{font-family:var(--font-display);font-weight:600;font-size:.82rem;text-transform:uppercase;letter-spacing:.12em;color:var(--accent)!important}
+.art-box p,.art-box li{color:var(--text)!important}
+.art-table{overflow-x:auto;border:1px solid var(--line-card);border-radius:12px}
+.art-table table{width:100%;border-collapse:collapse;font-size:.92rem;line-height:1.5}
+.art-table th{background:var(--surface);text-align:left;font-weight:600;color:var(--text)}
+.art-table th,.art-table td{padding:.7rem .9rem;border-bottom:1px solid var(--line);vertical-align:top;color:var(--text-2)}
+.art-table tr:last-child td{border-bottom:0}
+.art-faq{display:grid;gap:0}
+.art-refs{font-size:.9rem}
+.art-refs a{word-break:break-word}
+.art-cluster{margin-top:1.6rem;padding:1.2rem 1.3rem;border:1px solid var(--line-card);border-radius:12px;display:grid;gap:.6rem}
+.art-cluster-t{font-family:var(--font-display);font-weight:500;color:var(--text)!important}
+.art-cluster ul{list-style:none;padding:0!important}
+.art-cluster a{text-decoration:none!important}
+.art-cluster a:hover{text-decoration:underline!important}
+.art-role{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-3);margin-left:.4rem}

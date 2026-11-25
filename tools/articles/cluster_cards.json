@@ -1,0 +1,130 @@
+[
+ {
+  "url": "avantages-dembaucher-un-salarie-etranger",
+  "cl": "embaucher",
+  "clname": "Embaucher un salarié étranger",
+  "role": "pilier",
+  "h1": "Pourquoi embaucher un salarié étranger peut-il être un atout pour votre entreprise ?",
+  "desc": "Découvrez les avantages d’embaucher un salarié étranger en France : compétences spécialisées, diversité culturelle, langues étrangères et ouverture à l’international.",
+  "img": [
+   "equipe-multiculturelle-reunion-travail.webp",
+   874,
+   1200,
+   "Équipe multiculturelle en réunion de travail autour d'une table"
+  ],
+  "mins": 8,
+  "pub": "2023-08-31"
+ },
+ {
+  "url": "adaptation-culturelle-travailleurs-etrangers",
+  "cl": "embaucher",
+  "clname": "Embaucher un salarié étranger",
+  "role": "satellite",
+  "h1": "Comment faciliter l’adaptation culturelle des travailleurs étrangers en France ?",
+  "desc": "Découvrez comment faciliter l’adaptation culturelle des travailleurs étrangers en France grâce aux formations linguistiques, à l’accompagnement interculturel et à l’intégration sociale.",
+  "img": [
+   "equipe-internationale-bureau-adaptation-culturelle.webp",
+   1400,
+   788,
+   "Équipe internationale travaillant ensemble dans un bureau"
+  ],
+  "mins": 8,
+  "pub": "2023-08-31"
+ },
+ {
+  "url": "cout-pour-recruter-un-salarie-etranger",
+  "cl": "embaucher",
+  "clname": "Embaucher un salarié étranger",
+  "role": "satellite",
+  "h1": "Combien coûte le recrutement d’un salarié étranger en France en 2026 ?",
+  "desc": "Découvrez le coût pour recruter un salarié étranger en France en 2026 : taxe employeur, montants selon le contrat, exonérations, déclaration et paiement.",
+  "img": [
+   "collegues-echange-ordinateur-bureau.webp",
+   1400,
+   934,
+   "Collègues échangeant autour d'un ordinateur dans un bureau"
+  ],
+  "mins": 9,
+  "pub": "2023-08-31"
+ },
+ {
+  "url": "ressources/visa-talent-france-conditions-demarches",
+  "cl": "passeport-talent",
+  "clname": "Passeport Talent",
+  "role": "pilier",
+  "h1": "Comment obtenir un visa talent pour la France : le guide complet 2026",
+  "desc": "Comment obtenir un visa talent pour la France ? Conditions, salaire minimum, catégories, démarches France-Visas et carte de séjour : notre guide complet 2026.",
+  "img": [
+   "visa-passeport-talent-chercheurs-laboratoire.webp",
+   800,
+   1066,
+   "Deux chercheurs travaillant avec des tubes à essai dans un laboratoire"
+  ],
+  "mins": 10,
+  "pub": "2026-10-21"
+ },
+ {
+  "url": "ressources/passeport-talent-salarie-qualifie-carte-bleue-europeenne",
+  "cl": "passeport-talent",
+  "clname": "Passeport Talent",
+  "role": "satellite",
+  "h1": "Passeport Talent salarié qualifié ou Carte Bleue Européenne : quelles différences en 2026 ?",
+  "desc": "Passeport Talent salarié qualifié ou Carte Bleue Européenne : découvrez les différences de salaire, diplôme, mobilité, durée et avantages pour choisir le bon titre de séjour en 2026.",
+  "img": [
+   "signature-documents-autorisation-de-travail.webp",
+   1400,
+   934,
+   "Signature de documents de travail sur une table de réunion"
+  ],
+  "mins": 9,
+  "pub": "2026-11-16"
+ },
+ {
+  "url": "ressources/visa-vacances-travail-france",
+  "cl": "vvt",
+  "clname": "Visa vacances-travail",
+  "role": "pilier",
+  "h1": "Tout savoir sur le visa vacances-travail en France",
+  "desc": "Tout savoir sur le visa vacances-travail en France : pays concernés, âge, durée, droit au travail, assurance santé, changement de statut et renouvellement.",
+  "img": [
+   "visa-pvt-voyage.webp",
+   800,
+   1066,
+   "Voyageuse avec son sac à dos regardant le paysage"
+  ],
+  "mins": 8,
+  "pub": "2026-11-25"
+ },
+ {
+  "url": "comment-faire-un-chengement-de-statut-apres-un-visa-vvt",
+  "cl": "vvt",
+  "clname": "Visa vacances-travail",
+  "role": "satellite",
+  "h1": "Comment rester en France après un visa VVT ?",
+  "desc": "Le changement de statut après un visa VVT n’est généralement pas possible depuis la France. Découvrez comment préparer un nouveau visa salarié ou travailleur temporaire.",
+  "img": [
+   "visa-pvt-sacre-coeur-montmartre.webp",
+   800,
+   1066,
+   "Rue de Montmartre avec le Sacré-Cœur au fond"
+  ],
+  "mins": 8,
+  "pub": "2023-12-14"
+ },
+ {
+  "url": "embaucher-salarie-vvt",
+  "cl": "vvt",
+  "clname": "Visa vacances-travail",
+  "role": "satellite",
+  "h1": "Puis-je embaucher un salarié avec un visa VVT ?",
+  "desc": "Un titulaire d’un visa VVT peut-il travailler en France ? Découvrez les obligations de l’employeur, les documents à vérifier et les démarches à anticiper avant la fin du visa.",
+  "img": [
+   "consultante-inward-entretien-salarie-etranger.webp",
+   1400,
+   933,
+   "Consultante INWARD en entretien avec un salarié étranger autour d'une table"
+  ],
+  "mins": 8,
+  "pub": "2023-12-14"
+ }
+]

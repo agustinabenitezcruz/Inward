@@ -150,36 +150,6 @@
   "mins": 2
  },
  {
-  "slug": "embaucher-salarie-vvt",
-  "date": "2023-12-14T13:59:32+00:00",
-  "cats": "professionnel",
-  "kd": "Visa / titre de séjour professionnel",
-  "h1": "Puis-je embaucher un employé qui a un visa VVT ?",
-  "desc": "Pour embaucher un employé avec un visa VVT, aucune démarche d'immigration n'est nécessaire de la part de l'entreprise.",
-  "img": [
-   "entretien-deux-personnes-ordinateur-portable.webp",
-   1400,
-   934,
-   "Entretien entre deux personnes devant un ordinateur portable"
-  ],
-  "mins": 2
- },
- {
-  "slug": "comment-faire-un-chengement-de-statut-apres-un-visa-vvt",
-  "date": "2023-12-14T13:51:44+00:00",
-  "cats": "changement-de-statut long-sejour",
-  "kd": "Changement de statut",
-  "h1": "Comment faire un changement de statut après un visa VVT ?",
-  "desc": "Avec un visa vacances est travail n'est pas possible de faire un changement de statut ou un renovation depuis la France",
-  "img": [
-   "visa-pvt-voyage.webp",
-   800,
-   1066,
-   "Voyageuse avec son sac à dos regardant le paysage"
-  ],
-  "mins": 2
- },
- {
   "slug": "comment-embaucher-un-salarie-etranger",
   "date": "2023-10-03T15:54:20+00:00",
   "cats": "professionnel",
@@ -236,51 +206,6 @@
    1400,
    934,
    "Signature de documents de travail sur une table de réunion"
-  ],
-  "mins": 3
- },
- {
-  "slug": "cout-pour-recruter-un-salarie-etranger",
-  "date": "2023-08-31T15:49:37+00:00",
-  "cats": "professionnel",
-  "kd": "Visa / titre de séjour professionnel",
-  "h1": "Coût pour recruter un salarié étranger",
-  "desc": "L'employeur qui rectute un salarié étranger en France doit payer une taxe OFII et fournir un récapitulatif des embauches.",
-  "img": [
-   "collegues-echange-ordinateur-bureau.webp",
-   1400,
-   934,
-   "Collègues échangeant autour d'un ordinateur dans un bureau"
-  ],
-  "mins": 3
- },
- {
-  "slug": "adaptation-culturelle-travailleurs-etrangers",
-  "date": "2023-08-31T15:38:42+00:00",
-  "cats": "professionnel",
-  "kd": "Visa / titre de séjour professionnel",
-  "h1": "L'importance de l'adaptation culturelle pour les travailleurs étrangers",
-  "desc": "L'adaptation culturelle des employés étrangers est cruciale pour leur performance professionnelle.",
-  "img": [
-   "equipe-internationale-bureau-adaptation-culturelle.webp",
-   1400,
-   788,
-   "Équipe internationale travaillant ensemble dans un bureau"
-  ],
-  "mins": 3
- },
- {
-  "slug": "avantages-dembaucher-un-salarie-etranger",
-  "date": "2023-08-31T15:19:28+00:00",
-  "cats": "professionnel",
-  "kd": "Visa / titre de séjour professionnel",
-  "h1": "Avantages et inconvénients de l'embauche de travailleurs étrangers",
-  "desc": "Embaucher un salarié étranger offre une diversité culturelle, des compétences spécialisées et des langues étrangères.",
-  "img": [
-   "equipe-multiculturelle-reunion-travail.webp",
-   874,
-   1200,
-   "Équipe multiculturelle en réunion de travail autour d'une table"
   ],
   "mins": 3
  }

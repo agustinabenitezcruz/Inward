@@ -54,6 +54,10 @@ PAGES = [
     {"dir": "cout-pour-recruter-un-salarie-etranger", "title": "Article : Coût pour recruter un salarié étranger", "fr_only": True},
     {"dir": "adaptation-culturelle-travailleurs-etrangers", "title": "Article : L'importance de l'adaptation culturelle pour les travailleurs étrangers", "fr_only": True},
     {"dir": "avantages-dembaucher-un-salarie-etranger", "title": "Article : Avantages et inconvénients de l'embauche de travailleurs étrangers", "fr_only": True},
+    # Articulos nuevos del blog (clusters tematicos), solo en frances.
+    {"dir": "ressources/visa-talent-france-conditions-demarches", "title": "Article : visa talent", "fr_only": True},
+    {"dir": "ressources/passeport-talent-salarie-qualifie-carte-bleue-europeenne", "title": "Article : talent ou carte bleue", "fr_only": True},
+    {"dir": "ressources/visa-vacances-travail-france", "title": "Article : visa vacances-travail", "fr_only": True},
     {"dir": "mentions-legales", "title": "Mentions légales"},
     {"dir": "confidentialite", "title": "Politique de confidentialité"},
     {"dir": "cookies", "title": "Politique de cookies"},

@@ -94,9 +94,12 @@ def img_of(key):
     w, h, a = IMG[key]; return (key + ".webp", w, h, a)
 
 CARDS = []
+REWRITTEN = {"avantages-dembaucher-un-salarie-etranger", "adaptation-culturelle-travailleurs-etrangers",
+             "cout-pour-recruter-un-salarie-etranger", "comment-faire-un-chengement-de-statut-apres-un-visa-vvt",
+             "embaucher-salarie-vvt"}  # reescritos por tools/articles/clusters.py
 for a in DATA:
     s = a["slug"]
-    if s not in META: continue
+    if s not in META or s in REWRITTEN: continue
     import shutil; shutil.rmtree(s, ignore_errors=True)
     key, cats = META[s]
     f, w, h, alt = img_of(key)
