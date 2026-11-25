@@ -3757,3 +3757,14 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
 .art-old ul,.art-old ol{margin:0;padding-left:1.25rem;display:grid;gap:.45rem}
 .art-old a{color:var(--accent);text-decoration:underline;text-underline-offset:2px}
 .art-old strong{color:var(--text);font-weight:600}
+
+/* Particuliers, Apres l'arrivee (escritorio): alto FIJO. Mientras la columna
+   que se abre se ensancha (720ms), su texto todavia esta angosto y ocupa mas
+   lineas: con min-height la caja se estiraba y volvia a achicarse en cada
+   hover. Ahora el alto no se mueve, lo que sobra se recorta mientras dura la
+   animacion y el texto aparece recien cuando la columna ya tiene su ancho. */
+@media (min-width:861px){
+  .hacc-cols{height:var(--hacc-h,clamp(260px,30vh,320px));overflow:hidden}
+  .hcol{overflow:hidden}
+  .hcol[data-on] .hcol-body{transition:opacity 480ms var(--ease-out) 520ms}
+}
