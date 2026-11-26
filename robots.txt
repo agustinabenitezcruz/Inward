@@ -86,7 +86,7 @@ Disallow: /
 # ---------- Todo lo demas ----------
 # El endpoint de las resenas es una API interna, no una pagina: no se indexa.
 User-agent: *
-Allow: /
 Disallow: /api/
+Allow: /
 
 Sitemap: https://www.inwardpro.com/sitemap.xml
