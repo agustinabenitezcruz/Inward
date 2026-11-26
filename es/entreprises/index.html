@@ -29,10 +29,9 @@
 <meta property="og:image" content="https://www.inwardpro.com/assets/img/og-inward-partage.jpg">
 <meta name="twitter:card" content="summary_large_image">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..600&family=Jost:wght@300..600&display=swap">
-<link rel="stylesheet" href="../../assets/css/styles.css?v=0e3e5733">
+<link rel="preload" href="../../assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/jost-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/styles.css?v=a325e587">
 <link rel="preload" as="image" href="../../assets/img/atelier-equipe-inward-tableau-blanc.webp" fetchpriority="high">
 
 <!-- FICHA ESTRUCTURADA. La organizacion se referencia por @id a la que
@@ -658,15 +657,15 @@
     </div>
     <ul class="vph-grid rv">
       <li class="art vph art-ov1 rounded">
-        <figure class="art-ph"><img src="../../assets/img/visa-passeport-talent-chercheurs-laboratoire.webp" width="800" height="1066" alt="Dos investigadores trabajando con tubos de ensayo en un laboratorio" loading="lazy" decoding="async"></figure>
+        <figure class="art-ph"><img src="../../assets/img/visa-talent-equipe-reunion-vue-dessus.webp" width="800" height="1066" alt="Equipo en una reunión de trabajo alrededor de una mesa, visto desde arriba" loading="lazy" decoding="async"></figure>
         <div class="art-b"><span class="vph-k">Visado / permiso de residencia</span><h3><a class="card-a" href="../visas/talent/">Talento</a></h3></div>
       </li>
       <li class="art vph art-ov2 rounded">
-        <figure class="art-ph"><img src="../../assets/img/visa-travailleur-temporaire-entrepot.webp" width="800" height="1066" alt="Empleado consultando una tableta en un almacén" loading="lazy" decoding="async"></figure>
+        <figure class="art-ph"><img src="../../assets/img/visa-salarie-equipe-bureau-ordinateurs.webp" width="800" height="1066" alt="Empleadas trabajando juntas con una tableta en una oficina" loading="lazy" decoding="async"></figure>
         <div class="art-b"><span class="vph-k">Visado / permiso de residencia</span><h3><a class="card-a" href="../visas/salarie-travailleur-temporaire/">Asalariado / Trabajador temporal</a></h3></div>
       </li>
       <li class="art vph art-ov3 rounded">
-        <figure class="art-ph"><img src="../../assets/img/visa-saisonnier-vendanges.webp" width="800" height="1066" alt="Recogida de uva durante la vendimia" loading="lazy" decoding="async"></figure>
+        <figure class="art-ph"><img src="../../assets/img/visa-saisonnier-cuisinier-restaurant.webp" width="800" height="1066" alt="Cocinero emplatando bajo la mirada del chef en la cocina" loading="lazy" decoding="async"></figure>
         <div class="art-b"><span class="vph-k">Visado / permiso de residencia</span><h3><a class="card-a" href="../visas/saisonnier/">Temporada</a></h3></div>
       </li>
       <li class="art vph art-ov1 rounded">
@@ -674,7 +673,7 @@
         <div class="art-b"><span class="vph-k">Visado / permiso de residencia</span><h3><a class="card-a" href="../visas/stagiaire/">Pasante</a></h3></div>
       </li>
       <li class="art vph art-ov2 rounded">
-        <figure class="art-ph"><img src="../../assets/img/visa-entrepreneur-dirigeant-bureau.webp" width="800" height="1066" alt="Empresario de traje sentado en su escritorio" loading="lazy" decoding="async"></figure>
+        <figure class="art-ph"><img src="../../assets/img/visa-entrepreneur-creatrice-ordinateur-bureau.webp" width="800" height="1066" alt="Emprendedora sonriente trabajando con su portátil" loading="lazy" decoding="async"></figure>
         <div class="art-b"><span class="vph-k">Visado / permiso de residencia</span><h3><a class="card-a" href="../visas/entrepreneur/">Emprendedor / Creación de empresa</a></h3></div>
       </li>
       <li class="art vph art-ov3 rounded">
@@ -1096,6 +1095,7 @@
         <a href="../mentions-legales/">Aviso legal</a>
         <a href="../confidentialite/">Política de privacidad</a>
         <a href="../cookies/">Política de cookies</a>
+        <a href="../#cookies" data-cookies>Gestión de cookies</a>
         <a href="../cgv/">CGV</a>
       </nav>
     </div>
@@ -1115,6 +1115,8 @@
   <a href="#contact" aria-label="Contacto"><span></span></a>
 </nav>
 
-<script src="../../assets/js/main.js?v=c1095f37" defer></script>
+<script src="../../assets/js/consent.js?v=8af36c5a" defer></script>
+<script src="../../assets/vendor/tarteaucitron/tarteaucitron.min.js" defer></script>
+<script src="../../assets/js/main.js?v=48e288b9" defer></script>
 </body>
 </html>

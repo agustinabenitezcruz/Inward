@@ -72,7 +72,9 @@ def main():
         dst = DIST / rel
         dst.parent.mkdir(parents=True, exist_ok=True)
         antes += p.stat().st_size
-        if p.suffix == ".html":
+        if "vendor" in rel.parts:
+            shutil.copy2(p, dst)   # librerias de terceros: ya vienen minificadas
+        elif p.suffix == ".html":
             dst.write_text(html_min(p.read_text(encoding="utf-8")), encoding="utf-8")
         elif p.suffix == ".css":
             dst.write_text(css_min(p.read_text(encoding="utf-8")), encoding="utf-8")

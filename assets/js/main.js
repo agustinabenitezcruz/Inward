@@ -11,19 +11,25 @@
           demo: "Aperçu : avis fictifs, pour visualiser la mise en page",
           doneH: "Merci, votre demande a bien été envoyée.",
           doneP: "La personne qui suivra votre dossier vous recontactera très prochainement.",
-          fail: "L'envoi n'a pas abouti. Réessayez dans un instant ou écrivez-nous à " },
+          fail: "L'envoi n'a pas abouti. Réessayez dans un instant ou écrivez-nous à ",
+          ytAsk: "Cette vidéo est hébergée par YouTube, qui peut déposer des cookies. Acceptez-vous de la charger\u00a0?",
+          ytOk: "Accepter et lire la vidéo", ytMore: "Gérer mes cookies" },
     en: { invalid: "Invalid email address.", pro: "Please use a business email address.",
           empty: "Please enter an email address.", reviews: [" Google review", " Google reviews"], of5: " out of 5",
           demo: "Preview: sample reviews, to show the layout",
           doneH: "Thank you, your request has been sent.",
           doneP: "The person who will handle your case will get back to you shortly.",
-          fail: "Your message could not be sent. Please try again in a moment or write to us at " },
+          fail: "Your message could not be sent. Please try again in a moment or write to us at ",
+          ytAsk: "This video is hosted by YouTube, which may set cookies. Do you agree to load it?",
+          ytOk: "Accept and play the video", ytMore: "Manage my cookies" },
     es: { invalid: "Dirección de email no válida.", pro: "Utilice una dirección de email profesional.",
           empty: "Indique una dirección de email.", reviews: [" opinión en Google", " opiniones en Google"], of5: " de 5",
           demo: "Vista previa: opiniones de ejemplo, para ver el diseño",
           doneH: "Gracias, su solicitud fue enviada.",
           doneP: "La persona que llevará su expediente se pondrá en contacto con usted muy pronto.",
-          fail: "No se pudo enviar. Vuelva a intentarlo en un momento o escríbanos a " }
+          fail: "No se pudo enviar. Vuelva a intentarlo en un momento o escríbanos a ",
+          ytAsk: "Este video está alojado en YouTube, que puede instalar cookies. ¿Acepta cargarlo?",
+          ytOk: "Aceptar y ver el video", ytMore: "Gestionar mis cookies" }
   };
   var T = TXT[LANG] || TXT.fr;
 
@@ -723,6 +729,19 @@
      Si el endpoint no esta configurado, la seccion se queda con el aviso de
      pendiente. Nunca se inventa una opinion. */
   var avis = document.getElementById("avis");
+  function fotosAvis() {
+    if (!avis || !window.inwardConsent || !inwardConsent("inwardavis")) return;
+    [].slice.call(avis.querySelectorAll(".avis-ini[data-photo]")).forEach(function (sp) {
+      var im = document.createElement("img");
+      im.className = "avis-av"; im.alt = ""; im.width = 32; im.height = 32;
+      im.loading = "lazy"; im.referrerPolicy = "no-referrer";
+      im.src = sp.getAttribute("data-photo");
+      sp.replaceWith(im);
+    });
+  }
+  document.addEventListener("inward:consent", function (e) {
+    if (e.detail && e.detail.servicio === "inwardavis" && e.detail.ok) fotosAvis();
+  });
   if (avis) {
     var rail = avis.querySelector('[data-avis="rail"]');
 
@@ -784,9 +803,11 @@
         rail.innerHTML = d.reviews.map(function (r) {
           /* Atribucion obligatoria de Google: nombre del autor, foto, fecha
              relativa y acceso directo a la opinion original. */
-          var av = r.photo
-            ? '<img class="avis-av" src="' + esc(r.photo) + '" alt="" width="32" height="32" loading="lazy" referrerpolicy="no-referrer">'
-            : '<span class="avis-av"></span>';
+          /* La foto viene de Google: se pide recien con el consentimiento
+             (consent.js, servicio "inwardavis"). Mientras, la inicial. */
+          var ini = esc(String(r.author || "").trim().charAt(0).toUpperCase());
+          var av = '<span class="avis-av avis-ini" aria-hidden="true"'
+            + (r.photo ? ' data-photo="' + esc(r.photo) + '"' : '') + '>' + ini + '</span>';
           return '<a class="avis-card" role="listitem" href="' + esc(r.uri || d.mapsUri || "#")
             + '" target="_blank" rel="noopener nofollow">'
             + '<span class="avis-head">' + av
@@ -797,6 +818,7 @@
         }).join("");
 
         avis.setAttribute("data-state", "ok");
+        fotosAvis();
       })
       .catch(function () { /* Sin datos, queda el aviso de pendiente. */ });
   }
@@ -1292,8 +1314,31 @@
 
   /* Video con fachada: al tocar la miniatura se cambia por el reproductor
      de YouTube (youtube-nocookie) y arranca solo. */
+  /* Sin consentimiento para YouTube (consent.js) no se crea el iframe: se
+     muestra un aviso encima de la miniatura con "Accepter et lire". Si la
+     pagina no tiene CMP (vista previa sin consent.js), se reproduce igual. */
+  function pideYoutube(caja, lanza) {
+    if (!window.inwardConsent || inwardConsent("inwardyoutube")) { lanza(); return; }
+    var viejo = caja.querySelector(".yt-gate");
+    if (viejo) viejo.remove();
+    var g = document.createElement("div");
+    g.className = "yt-gate";
+    g.setAttribute("role", "group");
+    g.innerHTML = '<p>' + T.ytAsk + '</p><div class="yt-gate-act">'
+      + '<button type="button" class="btn btn-primary yt-ok">' + T.ytOk + ' <span class="arw">&rsaquo;</span></button>'
+      + '<button type="button" class="yt-more">' + T.ytMore + '</button></div>';
+    caja.appendChild(g);
+    g.querySelector(".yt-ok").addEventListener("click", function () {
+      window.inwardAllow("inwardyoutube");
+      g.remove();
+      lanza();
+    });
+    g.querySelector(".yt-more").addEventListener("click", function () { window.inwardPanel(); });
+    g.querySelector(".yt-ok").focus();
+  }
   document.querySelectorAll(".vid-facade[data-yt]").forEach(function (b) {
     b.addEventListener("click", function () {
+      pideYoutube(b.parentNode, function () {
       var f = document.createElement("iframe");
       f.src = "https://www.youtube-nocookie.com/embed/" + b.getAttribute("data-yt") + "?autoplay=1&rel=0";
       f.title = b.getAttribute("aria-label") || "";
@@ -1301,6 +1346,7 @@
       f.allowFullscreen = true;
       b.replaceWith(f);
       f.focus();
+      });
     });
   });
 
@@ -1311,13 +1357,15 @@
       if (!dlg || typeof dlg.showModal !== 'function') return;
       var box = dlg.querySelector('.vid-frame');
       btn.addEventListener('click', function () {
-        var f = document.createElement('iframe');
-        f.src = 'https://www.youtube-nocookie.com/embed/' + btn.getAttribute('data-video') + '?autoplay=1&rel=0';
-        f.title = dlg.getAttribute('aria-label') || '';
-        f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
-        f.allowFullscreen = true;
-        box.appendChild(f);
         dlg.showModal();
+        pideYoutube(box, function () {
+          var f = document.createElement('iframe');
+          f.src = 'https://www.youtube-nocookie.com/embed/' + btn.getAttribute('data-video') + '?autoplay=1&rel=0';
+          f.title = dlg.getAttribute('aria-label') || '';
+          f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+          f.allowFullscreen = true;
+          box.appendChild(f);
+        });
       });
       dlg.querySelector('.vid-close').addEventListener('click', function () { dlg.close(); });
       dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });

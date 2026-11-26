@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pone ?v=<hash> en los links a styles.css y main.js de todos los HTML.
+"""Pone ?v=<hash> en los links a styles.css, main.js y consent.js de todos los HTML.
 Asi el navegador nunca sirve una version vieja del CSS o del JS cacheada."""
 import hashlib, pathlib, re
 
@@ -11,11 +11,13 @@ def firma(rel):
 
 VCSS = firma("assets/css/styles.css")
 VJS  = firma("assets/js/main.js")
+VCON = firma("assets/js/consent.js")
 
-PAT = re.compile(r'((?:\.\./)*assets/(?:css/styles\.css|js/main\.js))(\?v=[0-9a-f]+)?')
+PAT = re.compile(r'((?:\.\./)*assets/(?:css/styles\.css|js/main\.js|js/consent\.js))(\?v=[0-9a-f]+)?')
 
 def sello(m):
-    return m.group(1) + "?v=" + (VCSS if m.group(1).endswith(".css") else VJS)
+    g = m.group(1)
+    return g + "?v=" + (VCSS if g.endswith(".css") else VCON if g.endswith("consent.js") else VJS)
 
 n = 0
 for h in RAIZ.rglob("*.html"):

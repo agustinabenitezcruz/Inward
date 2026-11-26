@@ -47,9 +47,8 @@ HEAD = """<!DOCTYPE html>
 <meta property="og:image" content="{dom}/assets/img/og-inward-partage.jpg">
 <meta name="twitter:card" content="summary_large_image">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300..600&family=Jost:wght@300..600&display=swap">
+<link rel="preload" href="{p}assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{p}assets/fonts/jost-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{p}assets/css/styles.css">
 
 <script type="application/ld+json">
@@ -74,6 +73,8 @@ HEAD = """<!DOCTYPE html>
 {rail}
 </nav>
 
+<script src="{p}assets/js/consent.js" defer></script>
+<script src="{p}assets/vendor/tarteaucitron/tarteaucitron.min.js" defer></script>
 <script src="{p}assets/js/main.js" defer></script>
 </body>
 </html>
