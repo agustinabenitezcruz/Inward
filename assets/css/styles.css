@@ -2603,52 +2603,42 @@ form{background:var(--ground);border:1px solid var(--line-card);padding:clamp(1.
   background:var(--surface);color:var(--text-2);font-family:var(--font-body);font-size:.72rem}
 @media (hover:hover) and (pointer:fine){.cats a:hover{border-color:var(--accent)}}
 .cats a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-/* Pastilla activa: "Tous" por defecto, o la de la categoria elegida. */
+/* Pastilla activa: "Tous" por defecto, o la de la categoria elegida.
+   Las seis categorias de la clienta (26/11/2026). Las que no tienen articulos
+   no se publican (tools/articles/clusters.py), pero el filtro ya las cubre. */
 .cats a[href="#articles"],
 body:has(#cat-etude-de-cas:target) .cats a[href="#cat-etude-de-cas"],
-body:has(#cat-professionnel:target) .cats a[href="#cat-professionnel"],
+body:has(#cat-travail:target) .cats a[href="#cat-travail"],
 body:has(#cat-famille:target) .cats a[href="#cat-famille"],
-body:has(#cat-independant:target) .cats a[href="#cat-independant"],
-body:has(#cat-etudiant:target) .cats a[href="#cat-etudiant"],
-body:has(#cat-renouvellement:target) .cats a[href="#cat-renouvellement"],
-body:has(#cat-changement-de-statut:target) .cats a[href="#cat-changement-de-statut"],
-body:has(#cat-long-sejour:target) .cats a[href="#cat-long-sejour"],
-body:has(#cat-court-sejour:target) .cats a[href="#cat-court-sejour"]{
+body:has(#cat-etudier:target) .cats a[href="#cat-etudier"],
+body:has(#cat-tourisme:target) .cats a[href="#cat-tourisme"],
+body:has(#cat-embaucher:target) .cats a[href="#cat-embaucher"]{
   background:var(--fill);border-color:var(--fill);color:var(--fill-ink)}
 body:has(.cat-t:target) .cats a[href="#articles"]{background:none;border-color:var(--line-strong);color:var(--text)}
 .cats a[href="#articles"] .cats-n,
 body:has(#cat-etude-de-cas:target) .cats a[href="#cat-etude-de-cas"] .cats-n,
-body:has(#cat-professionnel:target) .cats a[href="#cat-professionnel"] .cats-n,
+body:has(#cat-travail:target) .cats a[href="#cat-travail"] .cats-n,
 body:has(#cat-famille:target) .cats a[href="#cat-famille"] .cats-n,
-body:has(#cat-independant:target) .cats a[href="#cat-independant"] .cats-n,
-body:has(#cat-etudiant:target) .cats a[href="#cat-etudiant"] .cats-n,
-body:has(#cat-renouvellement:target) .cats a[href="#cat-renouvellement"] .cats-n,
-body:has(#cat-changement-de-statut:target) .cats a[href="#cat-changement-de-statut"] .cats-n,
-body:has(#cat-long-sejour:target) .cats a[href="#cat-long-sejour"] .cats-n,
-body:has(#cat-court-sejour:target) .cats a[href="#cat-court-sejour"] .cats-n{background:var(--tint-1);color:var(--tint-ink)}
+body:has(#cat-etudier:target) .cats a[href="#cat-etudier"] .cats-n,
+body:has(#cat-tourisme:target) .cats a[href="#cat-tourisme"] .cats-n,
+body:has(#cat-embaucher:target) .cats a[href="#cat-embaucher"] .cats-n{background:var(--tint-1);color:var(--tint-ink)}
 body:has(.cat-t:target) .cats a[href="#articles"] .cats-n{background:var(--surface);color:var(--text-2)}
 /* El ancla no ocupa lugar; el salto deja la fila de categorias a la vista. */
 .cat-t{display:block;height:0;scroll-margin-top:calc(var(--hdr-h,72px) + 11rem)}
-/* Filtro (categorias definidas por la clienta) */
+/* Filtro */
 #cat-etude-de-cas:target ~ .arts .art:not([data-cat~="etude-de-cas"]),
-#cat-professionnel:target ~ .arts .art:not([data-cat~="professionnel"]),
+#cat-travail:target ~ .arts .art:not([data-cat~="travail"]),
 #cat-famille:target ~ .arts .art:not([data-cat~="famille"]),
-#cat-independant:target ~ .arts .art:not([data-cat~="independant"]),
-#cat-etudiant:target ~ .arts .art:not([data-cat~="etudiant"]),
-#cat-renouvellement:target ~ .arts .art:not([data-cat~="renouvellement"]),
-#cat-changement-de-statut:target ~ .arts .art:not([data-cat~="changement-de-statut"]),
-#cat-long-sejour:target ~ .arts .art:not([data-cat~="long-sejour"]),
-#cat-court-sejour:target ~ .arts .art:not([data-cat~="court-sejour"]){display:none}
+#cat-etudier:target ~ .arts .art:not([data-cat~="etudier"]),
+#cat-tourisme:target ~ .arts .art:not([data-cat~="tourisme"]),
+#cat-embaucher:target ~ .arts .art:not([data-cat~="embaucher"]){display:none}
 .cats-empty{display:none;grid-column:1/-1;color:var(--text-2);padding:1.4rem 0}
 #cat-etude-de-cas:target ~ .arts:not(:has(.art[data-cat~="etude-de-cas"])) .cats-empty,
-#cat-professionnel:target ~ .arts:not(:has(.art[data-cat~="professionnel"])) .cats-empty,
+#cat-travail:target ~ .arts:not(:has(.art[data-cat~="travail"])) .cats-empty,
 #cat-famille:target ~ .arts:not(:has(.art[data-cat~="famille"])) .cats-empty,
-#cat-independant:target ~ .arts:not(:has(.art[data-cat~="independant"])) .cats-empty,
-#cat-etudiant:target ~ .arts:not(:has(.art[data-cat~="etudiant"])) .cats-empty,
-#cat-renouvellement:target ~ .arts:not(:has(.art[data-cat~="renouvellement"])) .cats-empty,
-#cat-changement-de-statut:target ~ .arts:not(:has(.art[data-cat~="changement-de-statut"])) .cats-empty,
-#cat-long-sejour:target ~ .arts:not(:has(.art[data-cat~="long-sejour"])) .cats-empty,
-#cat-court-sejour:target ~ .arts:not(:has(.art[data-cat~="court-sejour"])) .cats-empty{display:block}
+#cat-etudier:target ~ .arts:not(:has(.art[data-cat~="etudier"])) .cats-empty,
+#cat-tourisme:target ~ .arts:not(:has(.art[data-cat~="tourisme"])) .cats-empty,
+#cat-embaucher:target ~ .arts:not(:has(.art[data-cat~="embaucher"])) .cats-empty{display:block}
 
 /* ---------- Qui sommes-nous ---------- */
 .qsn-team{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(1.4rem,3.4vw,3rem)}
@@ -3788,3 +3778,43 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
 .art-cluster a{text-decoration:none!important}
 .art-cluster a:hover{text-decoration:underline!important}
 .art-role{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-3);margin-left:.4rem}
+
+/* ---------- Pedidos de la clienta, 26/11/2026 ---------- */
+/* Tarjetas de visa: "Visa / titre de séjour" chico arriba del nombre, para
+   que el que se lea sea el nombre. */
+.vph-k{display:block;margin-bottom:-.3rem;font-family:var(--font-display);font-weight:500;
+  font-size:.64rem;line-height:1.3;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.78)}
+@media (max-width:640px){.vph-k{font-size:.56rem;letter-spacing:.08em}}
+
+/* Particuliers, hero: las pastillas son enlaces. Al pasar el mouse se
+   destacan con el borde verde agua; no se mueven, el flote ya es suyo. */
+a.hb4-p{text-decoration:none;cursor:pointer;
+  transition:box-shadow 380ms var(--ease-soft),color 380ms var(--ease-soft)}
+@media (hover:hover) and (pointer:fine){
+  a.hb4-p:hover{color:var(--accent);box-shadow:0 0 0 2px var(--tint-3),0 14px 34px -14px rgba(0,0,0,.6)}
+}
+a.hb4-p:focus-visible{outline:2px solid var(--tint-3);outline-offset:3px}
+.hero.is-off a.hb4-p{animation-play-state:paused}
+
+/* Particuliers: las cuatro demarches de la home al principio. En pantalla
+   ancha, titular a la izquierda y panel a la derecha (como la seccion de la
+   home, sin la foto): un panel de cuatro filas a todo el ancho quedaba
+   vacio. En tablet y telefono, uno debajo del otro. */
+@media (min-width:981px){
+  .lp-demarches .wrap{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);
+    gap:clamp(2rem,5vw,5rem);align-items:start}
+  .lp-demarches .sec-head{margin-bottom:0}
+}
+
+/* Invitacion a bajar: la primera seccion despues del hero da dos saltitos
+   cuando la pagina termina de cargar, si el visitante todavia no bajo.
+   La pone main.js (.nudge) y se va sola. */
+@keyframes nudgeUp{
+  0%,100%{transform:translateY(0)}
+  18%{transform:translateY(-14px)}
+  34%{transform:translateY(0)}
+  48%{transform:translateY(-7px)}
+  62%{transform:translateY(0)}
+}
+.nudge{animation:nudgeUp 1.5s var(--ease-soft) both!important}
+@media (prefers-reduced-motion:reduce){.nudge{animation:none!important}}

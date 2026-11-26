@@ -28,6 +28,28 @@ IMG = {
  "visa-pvt-sacre-coeur-montmartre": (800, 1066, "Rue de Montmartre avec le Sacré-Cœur au fond"),
  "consultante-inward-entretien-salarie-etranger": (1400, 933, "Consultante INWARD en entretien avec un salarié étranger autour d'une table"),
 }
+# Categorias del blog (definidas por la clienta, 26/11/2026). Son distintas de
+# los clusters: el cluster es el "dossier" de cada articulo (pilar + satelites,
+# se ve dentro del articulo) y la categoria es el filtro de /ressources/.
+# Las categorias sin articulos no se muestran; el CSS ya las filtra todas, asi
+# que basta asignar un articulo para que la pastilla aparezca.
+CATS = [("etude-de-cas", "Étude de cas"),
+        ("travail", "Travail en France"),
+        ("famille", "Immigration familiale"),
+        ("etudier", "Étudier en France"),
+        ("tourisme", "Tourisme"),
+        ("embaucher", "Embaucher un salarié de nationalité étrangère")]
+CAT_DE = {  # url del articulo -> categorias (separadas por espacio)
+ "avantages-dembaucher-un-salarie-etranger": "embaucher",
+ "adaptation-culturelle-travailleurs-etrangers": "embaucher",
+ "cout-pour-recruter-un-salarie-etranger": "embaucher",
+ "ressources/visa-talent-france-conditions-demarches": "travail",
+ "ressources/passeport-talent-salarie-qualifie-carte-bleue-europeenne": "travail",
+ "ressources/visa-vacances-travail-france": "tourisme",
+ "comment-faire-un-chengement-de-statut-apres-un-visa-vvt": "travail",
+ "embaucher-salarie-vvt": "embaucher",
+}
+CAT_N = dict(CATS)
 # (archivo, cluster, rol, url, imagen, fecha de publicacion)
 ARTS = [
  ("Embaucher un salarié étranger/Pilar_.docx", "embaucher", "pilier", "avantages-dembaucher-un-salarie-etranger", "equipe-multiculturelle-reunion-travail", "2023-08-31"),
@@ -184,8 +206,9 @@ json.dump(cards, open(os.path.join(HERE, "cluster_cards.json"), "w"), ensure_asc
 
 def card(c, i, pre, cats=True):
     f, w, h, alt = c["img"]
-    dc = ' data-cat="%s"' % c["cl"] if cats else ""
-    kd = c["clname"] + (" · Guide complet" if c["role"] == "pilier" else "")
+    cs = CAT_DE[c["url"]]
+    dc = ' data-cat="%s"' % cs if cats else ""
+    kd = CAT_N[cs.split()[0]] + (" · Guide complet" if c["role"] == "pilier" else "")
     return '''      <article class="art art-ov%d rounded rv"%s>
         <figure class="art-ph"><img src="%sassets/img/%s" width="%d" height="%d" alt="%s" loading="lazy" decoding="async"></figure>
         <div class="art-b">
@@ -196,12 +219,15 @@ def card(c, i, pre, cats=True):
         </div>
       </article>''' % (i % 3 + 1, dc, pre, f, w, h, alt, kd, pre, c["url"], html.escape(c["h1"], quote=False), html.escape(c["desc"], quote=False), c["mins"])
 
-# /ressources/: categorias = clusters, articulos ordenados por cluster (pilar primero)
+# /ressources/: categorias de la clienta (solo las que tienen articulos),
+# articulos ordenados por cluster (pilar primero)
 p = "ressources/index.html"; s = open(p, encoding="utf-8").read()
+def ncat(k): return sum(1 for c in cards if k in CAT_DE[c["url"]].split())
+USADAS = [(k, n) for k, n in CATS if ncat(k)]
 nav = '      <ul>\n        <li><a href="#articles">Tous les articles <span class="cats-n">%d</span></a></li>\n%s\n      </ul>' % (
-    len(cards), "\n".join('        <li><a href="#cat-%s">%s <span class="cats-n">%d</span></a></li>' % (k, n, sum(1 for c in cards if c["cl"] == k)) for k, n in CLUSTERS))
+    len(cards), "\n".join('        <li><a href="#cat-%s">%s <span class="cats-n">%d</span></a></li>' % (k, n, ncat(k)) for k, n in USADAS))
 s = re.sub(r'      <ul>\n        <li><a href="#articles">.*?\n      </ul>', lambda m: nav, s, count=1, flags=re.S)
-spans = "\n".join('    <span class="cat-t" id="cat-%s"></span>' % k for k, _ in CLUSTERS)
+spans = "\n".join('    <span class="cat-t" id="cat-%s"></span>' % k for k, _ in USADAS)
 s = re.sub(r'(    <span class="cat-t" id="cat-[^"]+"></span>\n)+', spans + "\n", s, count=1)
 a0 = s.index('      <p class="cats-empty">'); a0 = s.index("\n", a0) + 1
 b0 = s.index('    </div>\n  </div>\n</section>', a0)

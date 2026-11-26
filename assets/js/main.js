@@ -27,6 +27,35 @@
   };
   var T = TXT[LANG] || TXT.fr;
 
+  /* ---------- Invitacion a bajar ----------
+     El hero ocupa toda la pantalla y de la seccion siguiente solo asoma el
+     borde redondeado. Si el visitante no baja, ese borde da dos saltitos
+     (.nudge en el CSS): a los 1,6 s y despues cada 5 s, tres veces como
+     maximo. Al primer scroll se corta. */
+  (function () {
+    var hero = document.querySelector(".hero");
+    if (!hero || reduce) return;
+    var sig = hero.nextElementSibling;
+    while (sig && sig.tagName !== "SECTION") sig = sig.nextElementSibling;
+    if (!sig || !sig.classList.contains("band-top")) return;
+    var veces = 0, reloj = null;
+    function salta() {
+      if (window.scrollY > 20 || veces >= 3) return;
+      veces++;
+      sig.classList.remove("nudge");
+      void sig.offsetWidth;
+      sig.classList.add("nudge");
+      reloj = setTimeout(salta, 5000);
+    }
+    sig.addEventListener("animationend", function (e) {
+      if (e.target === sig) sig.classList.remove("nudge");
+    });
+    addEventListener("scroll", function () {
+      if (window.scrollY > 20) { clearTimeout(reloj); veces = 3; }
+    }, { passive: true });
+    if (window.scrollY <= 20) reloj = setTimeout(salta, 1600);
+  })();
+
   /* ---------- Logos clientes en carrusel ----------
      Va primero: la copia tiene que existir antes de que el bloque "lo que ya
      se ve al cargar" recorra los .logos li, o la mitad del carril se quedaria
@@ -48,7 +77,21 @@
       track.appendChild(copy);
       /* Velocidad constante en px/s, no duracion fija: con mas marcas el
          carril se alarga y una duracion fija lo haria correr mas rapido. */
-      function vel() { track.style.setProperty("--marq-dur", Math.max(ul.offsetWidth / 38, 12) + "s"); }
+      /* La primera marca de la lista (Chubb, la mas importante para la
+         clienta) arranca en el centro de la pantalla, no en el borde
+         izquierdo donde el fundido la borraba: el carril empieza la vuelta
+         ya avanzada con un retardo negativo. */
+      function vel() {
+        var dur = Math.max(ul.offsetWidth / 38, 12);
+        track.style.setProperty("--marq-dur", dur + "s");
+        var li = ul.querySelector("li");
+        if (!li) return;
+        var ciclo = ul.offsetWidth;
+        var r = li.getBoundingClientRect(), u = ul.getBoundingClientRect();
+        var d = marq.offsetWidth / 2 - (r.left - u.left + r.width / 2);
+        var avance = ((ciclo - d) % ciclo + ciclo) % ciclo;
+        track.style.animationDelay = (-dur * avance / ciclo) + "s";
+      }
       vel();
       addEventListener("load", vel);
       /* Pausada mientras no se ve: la animacion infinita sigue costando
@@ -651,6 +694,10 @@
       copia.style.cssText = "position:absolute;left:-9999px;top:0;visibility:hidden;pointer-events:none;animation:none;width:" + hacc.offsetWidth + "px";
       var cc = copia.querySelector(".hacc-cols");
       cc.style.transition = "none";
+      /* La copia hereda el alto fijo del CSS (height:var(--hacc-h, piso)) y
+         con eso siempre median el piso: el boton de la columna abierta
+         quedaba cortado. Se mide con alto libre. */
+      cc.style.height = "auto";
       var cs = [].slice.call(copia.querySelectorAll(".hcol"));
       hacc.parentNode.appendChild(copia);
       var max = 0;
