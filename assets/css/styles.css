@@ -3800,7 +3800,7 @@ form .btn[type="submit"]{align-self:center;justify-self:center}
    que el que se lea sea el nombre. */
 .vph-k{display:block;margin-bottom:-.3rem;font-family:var(--font-display);font-weight:500;
   font-size:.64rem;line-height:1.3;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.78)}
-@media (max-width:640px){.vph-k{font-size:.56rem;letter-spacing:.08em}}
+@media (max-width:640px){.vph-k{font-size:.52rem;letter-spacing:.06em;white-space:nowrap}}
 
 /* Particuliers, hero: las pastillas son enlaces. Al pasar el mouse se
    destacan con el borde verde agua; no se mueven, el flote ya es suyo. */
@@ -3839,9 +3839,34 @@ a.hb4-p:focus-visible{outline:2px solid var(--tint-3);outline-offset:3px}
    Banda inferior y panel con los colores de la marca, sobre el CSS de la
    libreria. Sin el logo de tarteaucitron (removeCredit). */
 #tarteaucitronRoot,#tarteaucitronRoot *{font-family:var(--font-body)!important}
+/* Banda inferior: flex que se acomoda solo. Escritorio: texto a la izquierda
+   y los botones en la misma fila; tablet: texto arriba, botones abajo;
+   celular: "Tout accepter" y "Tout refuser" lado a lado, del mismo ancho.
+   La X va en la esquina, no en una linea propia. */
 #tarteaucitronRoot #tarteaucitronAlertBig{background:var(--fill,#202045)!important;color:#fff!important;
-  padding:1.1rem clamp(1rem,3vw,2rem)!important;box-shadow:0 -10px 40px -20px rgba(0,0,0,.5)}
-#tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronDisclaimerAlert{font-size:.92rem!important;line-height:1.55!important;color:#fff!important}
+  box-sizing:border-box!important;left:0!important;right:0!important;width:100%!important;
+  display:flex!important;flex-wrap:wrap;align-items:center;justify-content:center;gap:.6rem .6rem;
+  padding:1.05rem 3.4rem 1.1rem clamp(1rem,3vw,2rem)!important;text-align:left!important;
+  box-shadow:0 -10px 40px -20px rgba(0,0,0,.5)}
+#tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronDisclaimerAlert{display:block!important;flex:0 1 auto;
+  margin:0 .6rem 0 0!important;font-size:.92rem!important;line-height:1.5!important;color:#fff!important;text-align:left!important}
+#tarteaucitronRoot #tarteaucitronAlertBig > button{margin:0!important;white-space:nowrap;font-size:.9rem!important;line-height:1.2!important}
+#tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronPrivacyUrl{background:none!important;padding:.4em .3em!important;font-size:.85rem!important;font-weight:400!important}
+#tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronCloseCross{position:absolute!important;top:.55rem;right:.6rem;
+  width:2.2rem;height:2.2rem;padding:0!important;display:grid!important;place-items:center;background:none!important;
+  font-size:1rem!important;border-radius:50%!important}
+#tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronCloseCross:hover{background:rgba(255,255,255,.12)!important}
+@media (max-width:1180px){
+  #tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronDisclaimerAlert{flex:1 1 100%;margin:0 0 .25rem!important;text-align:center!important}
+}
+@media (max-width:640px){
+  #tarteaucitronRoot #tarteaucitronAlertBig{padding:1rem 1rem 1rem!important;gap:.55rem}
+  #tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronDisclaimerAlert{padding-right:2rem!important;text-align:left!important;font-size:.88rem!important}
+  #tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronPersonalize2,
+  #tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronAllDenied2{flex:1 1 0;min-width:0;white-space:normal;padding-inline:.7em!important}
+  #tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronCloseAlert{flex:1 1 100%}
+  #tarteaucitronRoot #tarteaucitronAlertBig #tarteaucitronCloseCross{top:.45rem;right:.35rem}
+}
 #tarteaucitronRoot #tarteaucitronAlertBig button,#tarteaucitronRoot .tarteaucitronAllow,#tarteaucitronRoot .tarteaucitronDeny{
   border-radius:999px!important;font-family:var(--font-display)!important;font-weight:500!important;padding:.55em 1.2em!important}
 /* "Tout accepter" y "Tout refuser" con el mismo peso visual (CNIL: rechazar
@@ -3851,11 +3876,31 @@ a.hb4-p:focus-visible{outline:2px solid var(--tint-3);outline-offset:3px}
 #tarteaucitronRoot #tarteaucitronPrivacyUrl,#tarteaucitronRoot #tarteaucitronCloseCross,
 #tarteaucitronRoot #tarteaucitronCloseCross span{color:#fff!important}
 #tarteaucitronRoot #tarteaucitronPrivacyUrl{text-decoration:underline!important;text-underline-offset:3px}
-#tarteaucitronRoot .tarteaucitronAllow{background:var(--tint-3)!important;color:var(--tint-ink)!important}
-#tarteaucitronRoot .tarteaucitronDeny{background:#fff!important;color:var(--text)!important;border:1px solid var(--line-strong)!important}
 #tarteaucitronRoot #tarteaucitronCloseAlert{background:transparent!important;color:#fff!important;border:1px solid rgba(255,255,255,.5)!important}
+/* Panel "Personnaliser". Por servicio, "Autoriser" e "Interdire" arrancan
+   iguales (blancos con filete); el elegido se pinta: verde agua si se
+   autorizo, violeta oscuro si se rechazo. */
+#tarteaucitronRoot .tarteaucitronAllow,#tarteaucitronRoot .tarteaucitronDeny{
+  background:#fff!important;color:var(--text)!important;border:1px solid var(--line-strong)!important}
+#tarteaucitronRoot .tarteaucitronIsAllowed .tarteaucitronAllow{background:var(--tint-3)!important;border-color:var(--tint-3)!important;color:var(--tint-ink)!important}
+#tarteaucitronRoot #tarteaucitron #tarteaucitronServices .tarteaucitronLine.tarteaucitronIsDenied .tarteaucitronDeny{background:var(--fill,#202045)!important;border-color:var(--fill,#202045)!important;color:#fff!important}
+#tarteaucitronRoot .tarteaucitronIsDenied .tarteaucitronDeny .tarteaucitronCross::before{color:#fff!important}
 #tarteaucitronRoot #tarteaucitron #tarteaucitronServices .tarteaucitronMainLine,
 #tarteaucitronRoot #tarteaucitron .tarteaucitronH1{background:var(--fill,#202045)!important}
+#tarteaucitronRoot #tarteaucitron{border-radius:16px!important;overflow:hidden}
+#tarteaucitronRoot #tarteaucitron .tarteaucitronH1{font-family:var(--font-display)!important;font-weight:500!important;
+  font-size:clamp(1.25rem,2.2vw,1.6rem)!important;color:#fff!important;line-height:1.25!important}
+#tarteaucitronRoot #tarteaucitronInfo{background:transparent!important;color:rgba(255,255,255,.86)!important;
+  border-color:rgba(255,255,255,.2)!important;font-size:.95rem!important;line-height:1.55!important}
+#tarteaucitronRoot #tarteaucitronInfo p{color:inherit!important}
+#tarteaucitronRoot #tarteaucitronPrivacyUrlDialog{background:none!important;color:#fff!important;text-decoration:underline!important;
+  text-underline-offset:3px;font-size:.9rem!important}
+#tarteaucitronRoot #tarteaucitron #tarteaucitronServices .tarteaucitronMainLine .tarteaucitronName .tarteaucitronH2{color:#fff!important}
+#tarteaucitronRoot #tarteaucitronAllAllowed,#tarteaucitronRoot #tarteaucitronAllDenied{background:#fff!important;color:var(--text)!important;border-color:#fff!important}
+#tarteaucitronRoot #tarteaucitronClosePanel{background:var(--fill,#202045)!important;color:#fff!important;
+  font-family:var(--font-display)!important;border-radius:10px 10px 0 0!important;padding:.45rem 1rem!important}
+#tarteaucitronRoot #tarteaucitronSaveButton{background:var(--fill,#202045)!important;color:#fff!important;border-radius:999px!important;font-family:var(--font-display)!important}
+#tarteaucitronRoot .tarteaucitronH3,#tarteaucitronRoot .tarteaucitronTitle button{font-family:var(--font-display)!important}
 
 /* Aviso de YouTube sobre la miniatura (sin consentimiento). */
 .yt-gate{position:absolute;inset:0;z-index:2;display:grid;align-content:center;justify-items:center;gap:1rem;
@@ -3873,3 +3918,8 @@ a.hb4-p:focus-visible{outline:2px solid var(--tint-3);outline-offset:3px}
   margin-inline:calc((100% - var(--tw)) / 2)}
 .legal .art-table table{font-size:.86rem}
 .legal .art-table td:first-child{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.8rem;color:var(--text);white-space:nowrap}
+/* En pantallas chicas la tabla se desplaza en horizontal con un ancho
+   minimo: si se aprieta a 340px, la columna Finalite queda de una palabra
+   por linea y cada fila mide 150px. */
+.legal .art-table table{min-width:940px}
+.legal .art-table td:nth-child(4){min-width:15rem}
