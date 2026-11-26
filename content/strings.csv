@@ -965,7 +965,7 @@ un-cookie-est-un-fichier-ou-identifiant-susc,Un cookie est un fichier ou identif
 2-cookies-et-services-envisag-s,2. Cookies et services envisagés,2. Cookies and planned services,2. Cookies y servicios previstos
 sous-r-serve-de-leur-activation-effective-le,"Sous réserve de leur activation effective, les services concernés peuvent inclure Google Analytics 4 et Google Tag Manager pour la mesure d'audience, YouTube pour les vidéos, Google Business Profile pour l'affichage des avis et Lorem ipsum pour la newsletter.","Subject to their actual activation, the services concerned may include Google Analytics 4 and Google Tag Manager for audience measurement, YouTube for videos, Google Business Profile for displaying reviews and Lorem ipsum for the newsletter.","Siempre que se activen, los servicios afectados pueden incluir Google Analytics 4 y Google Tag Manager para la medición de audiencia, YouTube para los videos, Google Business Profile para mostrar las opiniones y Lorem ipsum para la newsletter."
 3-tableau-des-cookies,3. Tableau des cookies,3. Cookie table,3. Tabla de cookies
-google-analytics-4-et-google-tag-manager-ne,Google Analytics 4 et Google Tag Manager ne sont déposés que s'ils sont activés sur le site et uniquement après votre consentement. Aucun cookie non nécessaire n'est déposé avant votre choix.,"Google Analytics 4 and Google Tag Manager are only set if they are enabled on the site, and only after your consent. No non-essential cookie is set before you make your choice.",Google Analytics 4 y Google Tag Manager solo se instalan si están activados en el sitio y únicamente después de su consentimiento. No se instala ninguna cookie no necesaria antes de su elección.
+google-analytics-4-et-google-tag-manager-ne,Google Analytics 4 et Google Tag Manager ne sont chargés qu'après votre consentement. Aucun cookie non nécessaire n'est déposé avant votre choix.,Google Analytics 4 and Google Tag Manager are only loaded after your consent. No non-essential cookie is set before you make your choice.,Google Analytics 4 y Google Tag Manager solo se cargan después de su consentimiento. No se instala ninguna cookie no necesaria antes de su elección.
 cookie,Cookie,Cookie,Cookie
 service,Service,Service,Servicio
 fournisseur,Fournisseur,Provider,Proveedor
@@ -981,10 +981,9 @@ strictement-n-cessaire,Strictement nécessaire,Strictly necessary,Estrictamente 
 ga,_ga,_ga,_ga
 google-analytics-4,Google Analytics 4,Google Analytics 4,Google Analytics 4
 distinguer-les-visiteurs-des-fins-de-mesure,Distinguer les visiteurs à des fins de mesure d'audience,Distinguish visitors for audience measurement,Distinguir a los visitantes para medir la audiencia
-13-mois,13 mois,13 months,13 meses
 oui,Oui,Yes,Sí
 mesure-d-audience,Mesure d'audience,Audience measurement,Medición de audiencia
-ga-id,_ga_<ID>,_ga_<ID>,_ga_<ID>
+ga-veyfjyzwxj,_ga_VEYFJYZWXJ,_ga_VEYFJYZWXJ,_ga_VEYFJYZWXJ
 conserver-l-tat-de-la-session-pour-la-mesure,Conserver l'état de la session pour la mesure d'audience,Keep the session state for audience measurement,Conservar el estado de la sesión para medir la audiencia
 aucun-cookie-propre,Aucun cookie propre,No cookie of its own,Ninguna cookie propia
 google-tag-manager,Google Tag Manager,Google Tag Manager,Google Tag Manager

@@ -8,8 +8,13 @@
      Avis Google    las opiniones salen de nuestro servidor (api/avis.php);
                     lo unico de Google son las fotos de los autores, que se
                     muestran solo con el servicio aceptado. Si no, iniciales.
-     GA4 / GTM      no instalados todavia. Para activarlos basta escribir el
-                    ID abajo: tarteaucitron los carga solo despues de "Accepter".
+     GA4 / GTM      G-VEYFJYZWXJ y GTM-NRRKVX8N, cada uno como servicio aparte.
+                    Se cargan solo despues de "Accepter" (googleConsentMode en
+                    false: en modo "avanzado" tarteaucitron cargaria gtag antes
+                    del consentimiento para mandar pings sin cookies).
+                    El contenedor GTM esta vacio (26/11/2026): GA4 va directo
+                    con gtag. Si algun dia se agrega GA4 DENTRO de GTM, sacar
+                    GA4_ID de aca o se cuentan las visitas dos veces.
 
    Orden de carga (todos con defer, se ejecutan en este orden):
    consent.js -> tarteaucitron.min.js -> main.js. Por eso aca se fijan las
@@ -24,9 +29,9 @@ var tarteaucitronExpireInDay = true;
 (function () {
   "use strict";
 
-  /* ---- Medicion de audiencia: completar para activar ---- */
-  var GA4_ID = "";   /* ej. "G-XXXXXXXXXX" */
-  var GTM_ID = "";   /* ej. "GTM-XXXXXXX"  (usar uno u otro, no los dos) */
+  /* ---- Medicion de audiencia ---- */
+  var GA4_ID = "G-VEYFJYZWXJ";
+  var GTM_ID = "GTM-NRRKVX8N";
 
   var me = document.currentScript;
   var raiz = me ? new URL("../../", me.src).href : "/";
@@ -72,7 +77,6 @@ var tarteaucitronExpireInDay = true;
       fallback: function () { avisa("inwardavis", false); }
     };
 
-    var google = !!(GA4_ID || GTM_ID);
     tarteaucitron.init({
       privacyUrl: politica,
       readmoreLink: politica,
@@ -100,7 +104,7 @@ var tarteaucitronExpireInDay = true;
       useExternalJs: false,
       mandatory: true,
       mandatoryCta: false,
-      googleConsentMode: google,
+      googleConsentMode: false,
       bingConsentMode: false,
       pianoConsentMode: false,
       piwikConsentMode: false,
@@ -113,7 +117,8 @@ var tarteaucitronExpireInDay = true;
       tarteaucitron.user.gtagUa = GA4_ID;
       tarteaucitron.user.gtagMore = function () {};
       tarteaucitron.job.push("gtag");
-    } else if (GTM_ID) {
+    }
+    if (GTM_ID) {
       tarteaucitron.user.googletagmanagerId = GTM_ID;
       tarteaucitron.job.push("googletagmanager");
     }
