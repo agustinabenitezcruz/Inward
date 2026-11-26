@@ -13,7 +13,8 @@
           doneP: "La personne qui suivra votre dossier vous recontactera très prochainement.",
           fail: "L'envoi n'a pas abouti. Réessayez dans un instant ou écrivez-nous à ",
           ytAsk: "Cette vidéo est hébergée par YouTube, qui peut déposer des cookies. Acceptez-vous de la charger\u00a0?",
-          ytOk: "Accepter et lire la vidéo", ytMore: "Gérer mes cookies" },
+          ytOk: "Accepter et lire la vidéo", ytMore: "Gérer mes cookies",
+          ytCk: "Cookies déposés par YouTube\u00a0: <code>YSC</code> (session) et <code>VISITOR_INFO1_LIVE</code> (6\u00a0mois)." },
     en: { invalid: "Invalid email address.", pro: "Please use a business email address.",
           empty: "Please enter an email address.", reviews: [" Google review", " Google reviews"], of5: " out of 5",
           demo: "Preview: sample reviews, to show the layout",
@@ -21,7 +22,8 @@
           doneP: "The person who will handle your case will get back to you shortly.",
           fail: "Your message could not be sent. Please try again in a moment or write to us at ",
           ytAsk: "This video is hosted by YouTube, which may set cookies. Do you agree to load it?",
-          ytOk: "Accept and play the video", ytMore: "Manage my cookies" },
+          ytOk: "Accept and play the video", ytMore: "Manage my cookies",
+          ytCk: "Cookies set by YouTube: <code>YSC</code> (session) and <code>VISITOR_INFO1_LIVE</code> (6 months)." },
     es: { invalid: "Dirección de email no válida.", pro: "Utilice una dirección de email profesional.",
           empty: "Indique una dirección de email.", reviews: [" opinión en Google", " opiniones en Google"], of5: " de 5",
           demo: "Vista previa: opiniones de ejemplo, para ver el diseño",
@@ -29,7 +31,8 @@
           doneP: "La persona que llevará su expediente se pondrá en contacto con usted muy pronto.",
           fail: "No se pudo enviar. Vuelva a intentarlo en un momento o escríbanos a ",
           ytAsk: "Este video está alojado en YouTube, que puede instalar cookies. ¿Acepta cargarlo?",
-          ytOk: "Aceptar y ver el video", ytMore: "Gestionar mis cookies" }
+          ytOk: "Aceptar y ver el video", ytMore: "Gestionar mis cookies",
+          ytCk: "Cookies que instala YouTube: <code>YSC</code> (sesión) y <code>VISITOR_INFO1_LIVE</code> (6 meses)." }
   };
   var T = TXT[LANG] || TXT.fr;
 
@@ -1324,7 +1327,10 @@
     var g = document.createElement("div");
     g.className = "yt-gate";
     g.setAttribute("role", "group");
-    g.innerHTML = '<p>' + T.ytAsk + '</p><div class="yt-gate-act">'
+    /* Las cookies de YouTube van en el mismo aviso (pedido de la clienta):
+       quien decide aca ve que se instala, sin ir a la politica. Mismos
+       datos que la tabla de /cookies/. */
+    g.innerHTML = '<p>' + T.ytAsk + '</p><p class="yt-ck">' + T.ytCk + '</p><div class="yt-gate-act">'
       + '<button type="button" class="btn btn-primary yt-ok">' + T.ytOk + ' <span class="arw">&rsaquo;</span></button>'
       + '<button type="button" class="yt-more">' + T.ytMore + '</button></div>';
     caja.appendChild(g);
