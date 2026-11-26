@@ -3865,3 +3865,11 @@ a.hb4-p:focus-visible{outline:2px solid var(--tint-3);outline-offset:3px}
 .yt-more{background:none;border:0;color:#fff;text-decoration:underline;text-underline-offset:3px;cursor:pointer;font:inherit;font-size:.88rem}
 /* Avis: inicial del autor mientras no se acepta la foto de Google. */
 .avis-ini{display:inline-grid;place-items:center;font-family:var(--font-display);font-weight:500;font-size:.85rem;color:var(--text-2)}
+
+/* Politica de cookies: la tabla tiene 7 columnas y en la columna de lectura
+   (72ch) quedaba apretada. Se ensancha hasta 1080px, centrada sobre el texto;
+   en pantallas chicas mantiene el scroll horizontal de .art-table. */
+.legal .art-table{--tw:min(1080px,calc(100vw - 2.5rem));width:var(--tw);max-width:none;
+  margin-inline:calc((100% - var(--tw)) / 2)}
+.legal .art-table table{font-size:.86rem}
+.legal .art-table td:first-child{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.8rem;color:var(--text);white-space:nowrap}

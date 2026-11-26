@@ -14,6 +14,7 @@ logo-de-rhapsody-portage-salarial-client-d-i,"Logo de Rhapsody Portage salarial,
 logo-de-de-altura-client-d-inward,"Logo de De Altura, client d'INWARD","Logo of De Altura, an INWARD client","Logo de De Altura, cliente de INWARD"
 logo-de-ch-teau-preuillac-client-d-inward,"Logo de Château Preuillac, client d'INWARD","Château Preuillac logo, INWARD client","Logo de Château Preuillac, cliente de INWARD"
 logo-de-elyfec-client-d-inward,"Logo de Elyfec, client d'INWARD","Elyfec logo, INWARD client","Logo de Elyfec, cliente de INWARD"
+logo-de-pivot-client-d-inward,"Logo de Pivot, client d'INWARD","Pivot logo, INWARD client","Logo de Pivot, cliente de INWARD"
 deux-consultantes-inward-dans-les-bureaux-du,Deux consultantes INWARD dans les bureaux du cabinet,Two INWARD consultants in the firm's office,Dos consultoras de INWARD en la oficina
 rendez-vous-individuel-entre-une-consultante,Rendez-vous individuel entre une consultante et un client,One-to-one meeting between a consultant and a client,Reunión individual entre una consultora y un cliente
 consultante-inward-pr-sentant-au-tableau-bla,Consultante INWARD présentant au tableau blanc devant une équipe autour d'une table,INWARD consultant presenting at a whiteboard to a team around a table,Consultora de INWARD presentando en una pizarra ante un equipo alrededor de una mesa
@@ -217,7 +218,7 @@ carte-de-r-sident,Carte de résident,Resident card,Tarjeta de residente
 soci-t,Société,Company,Empresa
 2026-inward-tous-droits-r-serv-s,© 2026 INWARD. Tous droits réservés.,© 2026 INWARD. All rights reserved.,© 2026 INWARD. Todos los derechos reservados.
 politique-de-cookies,Politique de cookies,Cookie policy,Política de cookies
-gestion-des-cookies,Gestion des cookies,Cookie settings,Gestión de cookies
+g-rer-mes-cookies,Gérer mes cookies,Manage my cookies,Gestionar mis cookies
 meta-title,Mobilité internationale en entreprise,International mobility for companies,Movilidad internacional para empresas
 meta-description,"Visas, titres de séjour, détachement de salariés, audit et installation : INWARD pilote l'immigration de vos collaborateurs étrangers, de la demande d'autorisation de travail à la carte de séjour.","Visas, residence permits, posting of employees, audit and settling in: INWARD manages the immigration of your foreign employees, from the work permit application to the residence card.","Visas, permisos de residencia, desplazamiento de trabajadores, auditoría e instalación: INWARD gestiona la inmigración de sus empleados extranjeros, desde la solicitud de autorización de trabajo hasta la tarjeta de residencia."
 meta-og-description,"Start-up, PME ou multinationale : nous simplifions et sécurisons la venue de vos talents en France.","Start-up, SME or multinational: we simplify and secure your talent's move to France.","Start-up, pyme o multinacional: simplificamos y aseguramos la llegada de su talento a Francia."
@@ -962,12 +963,56 @@ meta-description,"Politique de cookies d'INWARD : cookies nécessaires, services
 un-cookie-est-un-fichier-ou-identifiant-susc,Un cookie est un fichier ou identifiant susceptible d'être enregistré sur votre terminal. Les cookies nécessaires peuvent être utilisés sans consentement lorsqu'ils sont indispensables au fonctionnement du site. Les autres cookies nécessitent votre consentement préalable.,A cookie is a file or identifier that may be stored on your device. Necessary cookies may be used without consent when they are essential for the website to work. Other cookies require your prior consent.,Una cookie es un archivo o identificador que puede guardarse en su dispositivo. Las cookies necesarias pueden utilizarse sin consentimiento cuando son indispensables para el funcionamiento del sitio. Las demás cookies requieren su consentimiento previo.
 2-cookies-et-services-envisag-s,2. Cookies et services envisagés,2. Cookies and planned services,2. Cookies y servicios previstos
 sous-r-serve-de-leur-activation-effective-le,"Sous réserve de leur activation effective, les services concernés peuvent inclure Google Analytics 4 et Google Tag Manager pour la mesure d'audience, YouTube pour les vidéos, Google Business Profile pour l'affichage des avis et Lorem ipsum pour la newsletter.","Subject to their actual activation, the services concerned may include Google Analytics 4 and Google Tag Manager for audience measurement, YouTube for videos, Google Business Profile for displaying reviews and Lorem ipsum for the newsletter.","Siempre que se activen, los servicios afectados pueden incluir Google Analytics 4 y Google Tag Manager para la medición de audiencia, YouTube para los videos, Google Business Profile para mostrar las opiniones y Lorem ipsum para la newsletter."
-3-calendly-linkedin-et-mollie,"3. Calendly, LinkedIn et Mollie","3. Calendly, LinkedIn and Mollie","3. Calendly, LinkedIn y Mollie"
+3-tableau-des-cookies,3. Tableau des cookies,3. Cookie table,3. Tabla de cookies
+google-analytics-4-et-google-tag-manager-ne,Google Analytics 4 et Google Tag Manager ne sont déposés que s'ils sont activés sur le site et uniquement après votre consentement. Aucun cookie non nécessaire n'est déposé avant votre choix.,"Google Analytics 4 and Google Tag Manager are only set if they are enabled on the site, and only after your consent. No non-essential cookie is set before you make your choice.",Google Analytics 4 y Google Tag Manager solo se instalan si están activados en el sitio y únicamente después de su consentimiento. No se instala ninguna cookie no necesaria antes de su elección.
+cookie,Cookie,Cookie,Cookie
+service,Service,Service,Servicio
+fournisseur,Fournisseur,Provider,Proveedor
+finalit,Finalité,Purpose,Finalidad
+consentement,Consentement,Consent,Consentimiento
+cat-gorie,Catégorie,Category,Categoría
+tarteaucitron,tarteaucitron,tarteaucitron,tarteaucitron
+gestion-du-consentement-tarteaucitron-js,Gestion du consentement (tarteaucitron.js),Consent management (tarteaucitron.js),Gestión del consentimiento (tarteaucitron.js)
+enregistrer-vos-choix-en-mati-re-de-cookies,Enregistrer vos choix en matière de cookies,Store your cookie choices,Guardar sus preferencias de cookies
+12-mois,12 mois,12 months,12 meses
+non,Non,No,No
+strictement-n-cessaire,Strictement nécessaire,Strictly necessary,Estrictamente necesaria
+ga,_ga,_ga,_ga
+google-analytics-4,Google Analytics 4,Google Analytics 4,Google Analytics 4
+distinguer-les-visiteurs-des-fins-de-mesure,Distinguer les visiteurs à des fins de mesure d'audience,Distinguish visitors for audience measurement,Distinguir a los visitantes para medir la audiencia
+13-mois,13 mois,13 months,13 meses
+oui,Oui,Yes,Sí
+mesure-d-audience,Mesure d'audience,Audience measurement,Medición de audiencia
+ga-id,_ga_<ID>,_ga_<ID>,_ga_<ID>
+conserver-l-tat-de-la-session-pour-la-mesure,Conserver l'état de la session pour la mesure d'audience,Keep the session state for audience measurement,Conservar el estado de la sesión para medir la audiencia
+aucun-cookie-propre,Aucun cookie propre,No cookie of its own,Ninguna cookie propia
+google-tag-manager,Google Tag Manager,Google Tag Manager,Google Tag Manager
+charger-les-balises-dont-google-analytics-4,Charger les balises (dont Google Analytics 4) après consentement,Load tags (including Google Analytics 4) after consent,Cargar las etiquetas (incluido Google Analytics 4) después del consentimiento
+oui-via-la-banni-re,Oui (via la bannière),Yes (via the banner),Sí (mediante el banner)
+technique,Technique,Technical,Técnica
+ysc,YSC,YSC,YSC
+youtube,YouTube,YouTube,YouTube
+mesurer-les-vues-des-vid-os-int-gr-es,Mesurer les vues des vidéos intégrées,Measure views of embedded videos,Medir las visualizaciones de los videos integrados
+session,Session,Session,Sesión
+contenus-int-gr-s,Contenus intégrés,Embedded content,Contenido integrado
+visitor-info1-live,VISITOR_INFO1_LIVE,VISITOR_INFO1_LIVE,VISITOR_INFO1_LIVE
+estimer-la-bande-passante-et-adapter-la-lect,Estimer la bande passante et adapter la lecture des vidéos,Estimate bandwidth and adapt video playback,Estimar el ancho de banda y adaptar la reproducción de los videos
+6-mois,6 mois,6 months,6 meses
+aucun-cookie,Aucun cookie,No cookie,Ninguna cookie
+avis-google-business-profile,Avis Google Business Profile,Google Business Profile reviews,Opiniones de Google Business Profile
+afficher-les-avis-google-les-textes-sont-ser,"Afficher les avis Google : les textes sont servis par notre serveur, seules les photos des auteurs sont chargées depuis Google, après consentement","Display Google reviews: the texts are served by our server; only the authors' photos are loaded from Google, after consent","Mostrar las opiniones de Google: los textos los sirve nuestro servidor; solo las fotos de los autores se cargan desde Google, después del consentimiento"
+oui-photos,Oui (photos),Yes (photos),Sí (fotos)
+aucun,Aucun,None,Ninguna
+calendly-linkedin-mollie,"Calendly, LinkedIn, Mollie","Calendly, LinkedIn, Mollie","Calendly, LinkedIn, Mollie"
+tiers,Tiers,Third parties,Terceros
+redirection-vers-les-services-tiers-par-lien,Redirection vers les services tiers par lien externe,Redirection to third-party services through external links,Redirección a servicios de terceros mediante enlaces externos
+4-calendly-linkedin-et-mollie,"4. Calendly, LinkedIn et Mollie","4. Calendly, LinkedIn and Mollie","4. Calendly, LinkedIn y Mollie"
 calendly-linkedin-et-mollie-sont-actuellemen,"Calendly, LinkedIn et Mollie sont actuellement utilisés par liens ou boutons externes. Le site ne charge pas leur contenu avant le clic. Leurs propres politiques s'appliquent lorsque l'utilisateur accède à leurs services.","Calendly, LinkedIn and Mollie are currently used through external links or buttons. The website does not load their content before you click. Their own policies apply when you access their services.","Calendly, LinkedIn y Mollie se utilizan actualmente mediante enlaces o botones externos. El sitio no carga su contenido antes del clic. Sus propias políticas se aplican cuando accede a sus servicios."
-4-google-et-youtube,4. Google et YouTube,4. Google and YouTube,4. Google y YouTube
+5-google-et-youtube,5. Google et YouTube,5. Google and YouTube,5. Google y YouTube
 les-vid-os-youtube-et-les-avis-google-busine,"Les vidéos YouTube et les avis Google Business Profile peuvent impliquer une connexion à Google. Si la technologie utilisée dépose des cookies ou traite des données non nécessaires, elle est bloquée jusqu'au consentement.","YouTube videos and Google Business Profile reviews may involve a connection to Google. If the technology used sets cookies or processes non-essential data, it is blocked until consent is given.","Los videos de YouTube y las opiniones de Google Business Profile pueden implicar una conexión con Google. Si la tecnología utilizada instala cookies o trata datos no necesarios, se bloquea hasta que se otorgue el consentimiento."
-5-gestion-des-choix,5. Gestion des choix,5. Managing your choices,5. Gestión de sus preferencias
-une-banni-re-permet-d-accepter-de-refuser-ou,"Une bannière permet d'accepter, de refuser ou de personnaliser les cookies non nécessaires. Un lien « Gérer mes cookies » reste disponible dans le pied de page.","A banner lets you accept, refuse or customise non-essential cookies. A “Manage my cookies” link remains available in the footer.","Un banner le permite aceptar, rechazar o personalizar las cookies no necesarias. Un enlace «Gestionar mis cookies» permanece disponible en el pie de página."
+6-gestion-des-choix,6. Gestion des choix,6. Managing your choices,6. Gestión de sus elecciones
+une-banni-re-permet-d-accepter-de-refuser-ou,"Une bannière permet d'accepter, de refuser ou de personnaliser les cookies non nécessaires. Un lien « Gérer mes cookies » reste disponible dans le pied de page. Votre choix est conservé 12 mois ; vous pouvez le modifier à tout moment :","A banner lets you accept, refuse or customise non-essential cookies. A “Manage my cookies” link remains available in the footer. Your choice is kept for 12 months; you can change it at any time:","Un banner permite aceptar, rechazar o personalizar las cookies no necesarias. En el pie de página sigue disponible el enlace «Gestionar mis cookies». Su elección se conserva 12 meses; puede modificarla en cualquier momento:"
+modifier-mes-choix,modifier mes choix,change my choices,cambiar mis preferencias
 meta-title,Conditions générales de vente,Terms and conditions,Condiciones generales de venta
 meta-description,"Conditions générales de vente d'INWARD pour les clients professionnels et les particuliers : commande, prix, paiement, rétractation, réclamations et droit applicable.","INWARD terms and conditions for business clients and individuals: orders, prices, payment, withdrawal, complaints and governing law.","Condiciones generales de venta de INWARD para clientes profesionales y particulares: pedido, precios, pago, desistimiento, reclamaciones y derecho aplicable."
 clients-professionnels,Clients professionnels,Business clients,Clientes profesionales

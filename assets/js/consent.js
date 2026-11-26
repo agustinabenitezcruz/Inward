@@ -16,8 +16,9 @@
    variables globales que tarteaucitron lee al cargar (duracion del
    consentimiento) y el init se hace en DOMContentLoaded, cuando ya cargo. */
 
-/* Consentimiento guardado 6 meses (recomendacion CNIL: 6 a 13). */
-var tarteaucitronForceExpire = 183;
+/* Consentimiento guardado 12 meses, como dice la tabla de cookies de la
+   clienta (CNIL: maximo 13). 365 es ademas el valor por defecto. */
+var tarteaucitronForceExpire = 365;
 var tarteaucitronExpireInDay = true;
 
 (function () {
