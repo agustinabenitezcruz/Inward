@@ -180,9 +180,9 @@ def parse(path, start_marker=None):
     return meta, clean
 
 DOCS = [
- ("Embaucher un salarié étranger/Pilar_.docx", None),
- ("Embaucher un salarié étranger/Satelite 1.docx", None),
- ("Embaucher un salarié étranger/Satellite 2.docx", None),
+ ("Embaucher un salarie etranger/Pilar_.docx", None),
+ ("Embaucher un salarie etranger/Satelite 1.docx", None),
+ ("Embaucher un salarie etranger/Satellite 2.docx", None),
  ("Passeport Talent/PILIER Brief Guide visa Talent 2026.docx", "TITRE SEO"),
  ("Passeport Talent/Article satellite 2 Passeport-Talent-salarie-qualifie-ou-Carte-Bleue-Europeenne-2026.docx", None),
  ("vvt/Pilar.docx", None),

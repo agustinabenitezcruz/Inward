@@ -52,12 +52,12 @@ CAT_DE = {  # url del articulo -> categorias (separadas por espacio)
 CAT_N = dict(CATS)
 # (archivo, cluster, rol, url, imagen, fecha de publicacion)
 ARTS = [
- ("Embaucher un salarié étranger/Pilar_.docx", "embaucher", "pilier", "avantages-dembaucher-un-salarie-etranger", "equipe-multiculturelle-reunion-travail", "2023-08-31"),
- ("Embaucher un salarié étranger/Satelite 1.docx", "embaucher", "satellite", "adaptation-culturelle-travailleurs-etrangers", "equipe-internationale-bureau-adaptation-culturelle", "2023-08-31"),
- ("Embaucher un salarié étranger/Satellite 2.docx", "embaucher", "satellite", "cout-pour-recruter-un-salarie-etranger", "collegues-echange-ordinateur-bureau", "2023-08-31"),
+ ("Embaucher un salarie etranger/Pilar_.docx", "embaucher", "pilier", "avantages-dembaucher-un-salarie-etranger", "equipe-multiculturelle-reunion-travail", "2023-08-31"),
+ ("Embaucher un salarie etranger/Satelite 1.docx", "embaucher", "satellite", "adaptation-culturelle-travailleurs-etrangers", "equipe-internationale-bureau-adaptation-culturelle", "2023-08-31"),
+ ("Embaucher un salarie etranger/Satellite 2.docx", "embaucher", "satellite", "cout-pour-recruter-un-salarie-etranger", "collegues-echange-ordinateur-bureau", "2023-08-31"),
  ("Passeport Talent/PILIER Brief Guide visa Talent 2026.docx", "passeport-talent", "pilier", "ressources/visa-talent-france-conditions-demarches", "visa-passeport-talent-chercheurs-laboratoire", "2026-10-21"),
  ("Passeport Talent/Article satellite 2 Passeport-Talent-salarie-qualifie-ou-Carte-Bleue-Europeenne-2026.docx", "passeport-talent", "satellite", "ressources/passeport-talent-salarie-qualifie-carte-bleue-europeenne", "signature-documents-autorisation-de-travail", "2026-11-16"),
- ("vvt/Pilar.docx", "vvt", "pilier", "ressources/visa-vacances-travail-france", "visa-pvt-voyage", TODAY),
+ ("vvt/Pilar.docx", "vvt", "pilier", "ressources/visa-vacances-travail-france", "visa-pvt-voyage", "2026-11-25"),
  ("vvt/satelite 1.docx", "vvt", "satellite", "comment-faire-un-chengement-de-statut-apres-un-visa-vvt", "visa-pvt-sacre-coeur-montmartre", "2023-12-14"),
  ("vvt/Satellite 2.docx", "vvt", "satellite", "embaucher-salarie-vvt", "consultante-inward-entretien-salarie-etranger", "2023-12-14"),
 ]
