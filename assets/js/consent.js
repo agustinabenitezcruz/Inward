@@ -26,6 +26,17 @@
 var tarteaucitronForceExpire = 365;
 var tarteaucitronExpireInDay = true;
 
+/* Textos del banner: los del documento legal de la clienta ("Textes courts
+   pour le site", 19/11/2026), en lugar de los que trae tarteaucitron. */
+var tarteaucitronCustomText = ({
+  fr: { alertBigPrivacy: "Nous utilisons des cookies nécessaires au fonctionnement du site et, avec votre accord, des cookies de mesure d'audience et de contenus intégrés. Vous pouvez accepter, refuser ou personnaliser vos choix.",
+        acceptAll: "Accepter", denyAll: "Refuser", personalize: "Personnaliser" },
+  en: { alertBigPrivacy: "We use cookies that are necessary for the website to work and, with your consent, audience measurement cookies and embedded content cookies. You can accept, refuse or customise your choices.",
+        acceptAll: "Accept", denyAll: "Refuse", personalize: "Customise" },
+  es: { alertBigPrivacy: "Utilizamos cookies necesarias para el funcionamiento del sitio y, con su consentimiento, cookies de medición de audiencia y de contenidos integrados. Puede aceptar, rechazar o personalizar sus preferencias.",
+        acceptAll: "Aceptar", denyAll: "Rechazar", personalize: "Personalizar" }
+})[(document.documentElement.lang || "fr").slice(0, 2)] || "";
+
 (function () {
   "use strict";
 
