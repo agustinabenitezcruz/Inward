@@ -198,6 +198,7 @@ def page(c):
     <div class="faq-act rv">
       {btn("Contactez une experte")}
     </div>
+    <p class="disc-legal rv">INWARD vous accompagne dans la préparation et le suivi administratif de vos démarches. Les décisions finales appartiennent aux autorités compétentes et aucune issue administrative ne peut être garantie.</p>
   </div>
 </section>''')
     body="\n".join(b)

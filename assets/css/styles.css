@@ -3931,3 +3931,7 @@ a.hb4-p:focus-visible{outline:2px solid var(--tint-3);outline-offset:3px}
    por linea y cada fila mide 150px. */
 .legal .art-table table{min-width:940px}
 .legal .art-table td:nth-child(4){min-width:15rem}
+
+/* Aviso legal corto al pie de la FAQ (landings de visas, Entreprises y
+   Particuliers): letra chica, gris, sin competir con el boton. */
+.disc-legal{margin-top:clamp(1.6rem,3vw,2.2rem);max-width:68ch;font-size:.8rem;line-height:1.55;color:var(--text-3)}
