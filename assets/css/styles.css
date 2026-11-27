@@ -3935,3 +3935,16 @@ a.hb4-p:focus-visible{outline:2px solid var(--tint-3);outline-offset:3px}
 /* Aviso legal corto al pie de la FAQ (landings de visas, Entreprises y
    Particuliers): letra chica, gris, sin competir con el boton. */
 .disc-legal{margin-top:clamp(1.6rem,3vw,2.2rem);max-width:68ch;font-size:.8rem;line-height:1.55;color:var(--text-3)}
+
+/* Nota metodologica del 99 %: asterisco en la etiqueta y la nota al pie de
+   las tres cifras (en la columna angosta del celular ocupaba 7 lineas). */
+.kpi-ast{margin-left:.1em;color:var(--accent)}
+.kpis-note{margin-top:clamp(1rem,2vw,1.4rem);max-width:70ch;font-size:.78rem;line-height:1.5;color:var(--text-3)}
+@media (max-width:760px){.kpis-note{font-size:.72rem}}
+/* La nota va pegada a las cifras y el aire que separaba las cifras de las
+   opiniones pasa a estar debajo de la nota (si no, la nota parecia de las
+   opiniones). Mismos valores que .kpis en cada ancho. */
+.kpis:has(+ .kpis-note){margin-bottom:0!important}
+.kpis + .kpis-note{margin-bottom:clamp(3.6rem,7vw,5.6rem)}
+@media (max-width:1080px){ .kpis + .kpis-note{margin-bottom:2.6rem} }
+@media (max-width:760px){ .kpis + .kpis-note{margin-bottom:2.2rem} }

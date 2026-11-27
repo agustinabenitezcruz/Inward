@@ -32,7 +32,7 @@
 
 <link rel="preload" href="../assets/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/fonts/jost-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="../assets/css/styles.css?v=f3aed08c">
+<link rel="stylesheet" href="../assets/css/styles.css?v=72b65166">
 <!-- FICHA ESTRUCTURADA (JSON-LD).
      Un solo @graph por pagina con @id compartidos: la organizacion se declara
      una vez, aqui, y el resto de las paginas la referencian por @id en vez de
@@ -309,6 +309,7 @@
           "item": {
             "@type": "QuantitativeValue",
             "name": "Taux de réussite des dossiers",
+            "description": "Taux calculé sur les dossiers déposés par INWARD entre janvier 2025 et novembre 2026 (325 décisions reçues).",
             "value": 99,
             "unitText": "%",
             "unitCode": "PERCENT"
@@ -749,7 +750,7 @@
       <li class="kpi">
         <p class="kpi-n" data-count>99 %</p>
         <span class="kpi-bar" aria-hidden="true"></span>
-        <p class="kpi-l">Tasa de éxito de los expedientes</p>
+        <p class="kpi-l">Tasa de éxito de los expedientes<span class="kpi-ast" aria-hidden="true">*</span></p>
       </li>
       <li class="kpi">
         <p class="kpi-n" data-count>+45</p>
@@ -762,6 +763,7 @@
         <p class="kpi-l">Expedientes tramitados</p>
       </li>
     </ul>
+    <p class="kpis-note rv"><span aria-hidden="true">* </span>Tasa calculada sobre los expedientes presentados por INWARD entre enero de 2025 y noviembre de 2026 (325 resoluciones recibidas).</p>
   </div>
   <div class="wrap avis-in">
     <div class="avis-score rv">
@@ -975,7 +977,7 @@
         </button>
         <button class="eng-tab" role="tab" id="eng-t6" aria-controls="eng-p6" aria-selected="false" tabindex="-1">
           <span class="eng-n">06</span>
-          <span class="eng-t-l">Riesgo cero</span>
+          <span class="eng-t-l">Una vigilancia permanente</span>
         </button>
         <span class="eng-ind" aria-hidden="true"></span>
       </div>
